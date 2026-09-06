@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人类传播与社群增长引擎 · Human Communication & Community Growth Engine</title>
+<meta name="description" content="基于证据的传播方法论 Skill：216 个机制节点、13 个平台适配器、16 层行为链。让 AI 学会诊断传播，而不是背诵爆款技巧。由「谁是专家」构建。">
+<meta property="og:title" content="人类传播与社群增长引擎">
+<meta property="og:description" content="把认知科学与传播学的可靠证据，蒸馏成 AI Agent 可调用的方法论。216 机制节点 · 13 平台适配器 · 每条建议带证据等级。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='8' cy='10' r='3' fill='%2322d3ee'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%238b5cf6'/%3E%3Ccircle cx='16' cy='22' r='3' fill='%23ec4899'/%3E%3Cpath d='M8 10L24 8M8 10L16 22M24 8L16 22' stroke='%23475669' stroke-width='1.5'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg0:#04060d; --bg1:#0a0e1f; --bg2:#0d1226;
+  --cyan:#22d3ee; --violet:#8b5cf6; --pink:#ec4899; --gold:#fbbf24; --green:#34d399;
+  --ink:#e6ebf5; --ink-dim:#94a3b8; --ink-faint:#5b6b85;
+  --line:rgba(148,163,184,.14);
+  --card:rgba(148,163,184,.055);
+  --mono:"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg0); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  line-height:1.75; overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(139,92,246,.4)}
+a{color:inherit;text-decoration:none}
+
+/* ============ canvas bg ============ */
+#net{position:fixed;inset:0;z-index:0;opacity:.9}
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(60% 45% at 18% 8%, rgba(34,211,238,.10), transparent 60%),
+    radial-gradient(50% 40% at 85% 20%, rgba(139,92,246,.12), transparent 60%),
+    radial-gradient(55% 45% at 70% 90%, rgba(236,72,153,.08), transparent 60%);
+}
+main{position:relative;z-index:1}
+
+/* ============ shared ============ */
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+section{padding:110px 0;position:relative}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
+.kicker::before{content:"◈ "}
+h2{font-size:clamp(28px,4.4vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.25;margin-bottom:18px}
+.lead{color:var(--ink-dim);font-size:17px;max-width:640px}
+.grad{background:linear-gradient(100deg,var(--cyan),var(--violet) 45%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ nav ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(4,6,13,.55);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:26px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:.02em}
+.logo svg{flex:none}
+.nav-links{margin-left:auto;display:flex;gap:24px;font-size:13.5px;color:var(--ink-dim)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-gh{border:1px solid rgba(34,211,238,.35);color:var(--cyan)!important;padding:6px 14px;border-radius:99px;font-family:var(--mono);font-size:12px;transition:all .25s}
+.nav-gh:hover{background:rgba(34,211,238,.1);box-shadow:0 0 18px rgba(34,211,238,.25)}
+@media(max-width:760px){.nav-links a:not(.nav-gh){display:none}}
+
+/* ============ hero ============ */
+.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  color:var(--ink-dim);border:1px solid var(--line);border-radius:99px;padding:7px 16px;margin-bottom:34px;background:rgba(10,14,31,.5)}
+.hero-tag b{color:var(--gold);font-weight:600}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:8px}
+.hero-en{font-family:var(--mono);font-size:clamp(11px,1.6vw,15px);letter-spacing:.42em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:30px}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--ink-dim);max-width:660px;margin-bottom:44px}
+.hero-sub b{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;font-size:15px;font-weight:600;transition:all .25s;position:relative}
+.btn-pri{background:linear-gradient(100deg,var(--cyan),var(--violet));color:#04060d;box-shadow:0 8px 30px rgba(80,120,255,.35)}
+.btn-pri:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(80,120,255,.5)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(10,14,31,.4)}
+.btn-ghost:hover{border-color:rgba(34,211,238,.5);color:var(--cyan);transform:translateY(-2px)}
+.hero-meta{margin-top:52px;display:flex;gap:26px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.08em}
+.hero-meta span b{color:var(--ink-dim);font-weight:500}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.3em;animation:hint 2.2s infinite}
+@keyframes hint{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,8px);opacity:1}}
+
+/* ============ stats ============ */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,14,31,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.stats-in{max-width:1120px;margin:0 auto;padding:44px 28px;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+@media(max-width:900px){.stats-in{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.stats-in{grid-template-columns:repeat(2,1fr)}}
+.stat .num{font-family:var(--mono);font-size:clamp(26px,3.4vw,38px);font-weight:700;background:linear-gradient(120deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .lbl{font-size:12.5px;color:var(--ink-dim);margin-top:2px}
+.stat .en{font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:.14em;text-transform:uppercase}
+
+/* ============ axiom / layers ============ */
+.axiom-quote{font-size:clamp(24px,3.8vw,40px);font-weight:800;letter-spacing:-.01em;line-height:1.5;max-width:820px;margin-bottom:14px}
+.axiom-quote em{font-style:normal;background:linear-gradient(100deg,var(--gold),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.axiom-sub{color:var(--ink-dim);margin-bottom:60px;max-width:640px}
+.layers{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:900px){.layers{grid-template-columns:1fr}}
+.stack{display:flex;flex-direction:column;gap:12px;perspective:900px}
+.layer{border:1px solid var(--line);border-radius:14px;padding:18px 22px;background:var(--card);cursor:pointer;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,background .3s,box-shadow .3s;position:relative;overflow:hidden}
+.layer::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.06));opacity:0;transition:opacity .3s}
+.layer:hover::before{opacity:1}
+.layer .t{display:flex;align-items:baseline;gap:12px}
+.layer .no{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
+.layer .nm{font-weight:700;font-size:16.5px}
+.layer .en{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-left:auto}
+.layer p{font-size:13.5px;color:var(--ink-dim);margin-top:8px;display:none}
+.layer.active p{display:block}
+.layer.active{transform:translateX(10px) rotateX(2deg)}
+.layer[data-c="0"].active{border-color:rgba(236,72,153,.55);box-shadow:0 0 34px rgba(236,72,153,.16)}
+.layer[data-c="1"].active{border-color:rgba(139,92,246,.55);box-shadow:0 0 34px rgba(139,92,246,.16)}
+.layer[data-c="2"].active{border-color:rgba(34,211,238,.55);box-shadow:0 0 34px rgba(34,211,238,.16)}
+.layer[data-c="3"].active{border-color:rgba(52,211,153,.55);box-shadow:0 0 34px rgba(52,211,153,.16)}
+.layer-demo{border:1px dashed var(--line);border-radius:14px;padding:24px;background:rgba(10,14,31,.35)}
+.layer-demo h4{font-size:14px;margin-bottom:14px;color:var(--ink-dim);font-weight:600}
+.demo-io{font-family:var(--mono);font-size:12.5px;line-height:2.1;background:#070b16;border:1px solid var(--line);border-radius:10px;padding:18px 20px;color:var(--ink-dim);white-space:pre-wrap}
+.demo-io .k{color:var(--cyan)}
+.demo-io .g{color:var(--gold)}
+.demo-io .p{color:var(--pink)}
+.demo-io .v{color:var(--green)}
+
+/* ============ chain ============ */
+.chain-wrap{overflow-x:auto;padding:26px 4px 18px;-webkit-overflow-scrolling:touch}
+.chain{display:flex;gap:10px;align-items:center;min-width:max-content;position:relative}
+.node{flex:none;text-align:center}
+.node .b{width:64px;height:64px;border-radius:16px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;
+  font-size:24px;transition:all .3s}
+.node .s{font-size:12.5px;margin-top:8px;color:var(--ink-dim)}
+.node .e{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:.06em;text-transform:uppercase}
+.node.hit .b{border-color:var(--cyan);box-shadow:0 0 22px rgba(34,211,238,.4);transform:translateY(-4px)}
+.node.hit .s{color:var(--cyan)}
+.arr{flex:none;color:var(--ink-faint);font-size:15px;padding:0 2px}
+.chain-note{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.1em}
+
+/* ============ mechanism ticker ============ */
+.ticker-zone{padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(7,10,20,.5);overflow:hidden}
+.ticker-head{max-width:1120px;margin:0 auto 30px;padding:0 28px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.ticker-head h3{font-size:20px;font-weight:800}
+.ticker-head span{font-size:13px;color:var(--ink-dim)}
+.marquee{display:flex;overflow:hidden;user-select:none;gap:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee+.marquee{margin-top:14px}
+.mrow{display:flex;gap:14px;flex:none;animation:scroll 46s linear infinite}
+.marquee:last-child .mrow{animation-direction:reverse;animation-duration:54s}
+.marquee:hover .mrow{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.chip{flex:none;border:1px solid var(--line);background:rgba(148,163,184,.05);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--ink-dim);white-space:nowrap}
+.chip b{color:var(--ink);font-weight:600}
+.chip i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-left:7px}
+
+/* ============ evidence ============ */
+.ev-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:44px 0 60px}
+@media(max-width:900px){.ev-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.ev-grid{grid-template-columns:repeat(2,1fr)}}
+.grade{border:1px solid var(--line);border-radius:14px;padding:20px 18px;background:var(--card);transition:all .3s}
+.grade:hover{transform:translateY(-5px)}
+.grade .g{font-family:var(--mono);font-size:26px;font-weight:700}
+.grade .n{font-size:13.5px;font-weight:600;margin:6px 0 4px}
+.grade .d{font-size:12px;color:var(--ink-dim);line-height:1.6}
+.grade[data-g="A"] .g{color:var(--green)} .grade[data-g="A"]:hover{border-color:rgba(52,211,153,.5);box-shadow:0 8px 30px rgba(52,211,153,.12)}
+.grade[data-g="B"] .g{color:var(--cyan)} .grade[data-g="B"]:hover{border-color:rgba(34,211,238,.5);box-shadow:0 8px 30px rgba(34,211,238,.12)}
+.grade[data-g="C"] .g{color:var(--violet)} .grade[data-g="C"]:hover{border-color:rgba(139,92,246,.5);box-shadow:0 8px 30px rgba(139,92,246,.12)}
+.grade[data-g="D"] .g{color:var(--gold)} .grade[data-g="D"]:hover{border-color:rgba(251,191,36,.5);box-shadow:0 8px 30px rgba(251,191,36,.12)}
+.grade[data-g="E"] .g{color:var(--pink)} .grade[data-g="E"]:hover{border-color:rgba(236,72,153,.5);box-shadow:0 8px 30px rgba(236,72,153,.12)}
+.no-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.no-grid{grid-template-columns:1fr}}
+.no-card{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(236,72,153,.22);background:rgba(236,72,153,.05);border-radius:14px;padding:18px 20px}
+.no-card .x{flex:none;width:26px;height:26px;border-radius:50%;border:1px solid rgba(236,72,153,.5);color:var(--pink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:2px}
+.no-card .t{font-size:14.5px;font-weight:700;margin-bottom:3px}
+.no-card .d{font-size:12.5px;color:var(--ink-dim);line-height:1.65}
+
+/* ============ modes ============ */
+.mode-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+@media(max-width:1000px){.mode-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.mode-grid{grid-template-columns:1fr}}
+.mode{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--card);transition:all .3s;position:relative}
+.mode:hover{transform:translateY(-5px);border-color:rgba(139,92,246,.5);box-shadow:0 10px 34px rgba(139,92,246,.14)}
+.mode .id{font-family:var(--mono);font-size:11px;color:var(--violet);letter-spacing:.18em}
+.mode .t{font-size:16px;font-weight:700;margin:8px 0 6px}
+.mode .d{font-size:12.5px;color:var(--ink-dim);line-height:1.65}
+.mode .q{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-top:12px;line-height:1.7}
+
+/* ============ evals ============ */
+.eval-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;margin-top:44px;align-items:center}
+@media(max-width:900px){.eval-grid{grid-template-columns:1fr}}
+.bars{display:flex;flex-direction:column;gap:18px}
+.bar-row .bt{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px}
+.bar-row .bt b{font-weight:600}
+.bar-row .bt span{font-family:var(--mono);color:var(--ink-dim);font-size:12px}
+.bar{height:8px;border-radius:99px;background:rgba(148,163,184,.12);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1);
+  background:linear-gradient(90deg,var(--cyan),var(--violet))}
+.bar.gold i{background:linear-gradient(90deg,var(--gold),var(--pink))}
+.eval-card{border:1px solid var(--line);border-radius:16px;padding:26px;background:rgba(10,14,31,.5)}
+.eval-card h4{font-size:15px;font-weight:700;margin-bottom:10px}
+.eval-card p{font-size:13px;color:var(--ink-dim);line-height:1.8}
+.eval-card .hl{color:var(--gold)}
+.honest{margin-top:16px;border-left:2px solid var(--gold);padding:10px 16px;font-size:12.5px;color:var(--ink-dim);background:rgba(251,191,36,.05);border-radius:0 10px 10px 0}
+
+/* ============ author ============ */
+.author{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:
+  radial-gradient(55% 60% at 80% 30%, rgba(251,191,36,.07), transparent 60%),rgba(7,10,20,.6)}
+.author-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:52px;align-items:center;margin-top:44px}
+@media(max-width:880px){.author-grid{grid-template-columns:1fr}}
+.author-name{font-size:clamp(30px,4.5vw,46px);font-weight:900;background:linear-gradient(100deg,var(--gold),var(--pink) 60%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.author-desc{color:var(--ink-dim);font-size:15px;margin:14px 0 28px;max-width:480px}
+.socials{display:flex;flex-direction:column;gap:12px;max-width:420px}
+.soc{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:12px;padding:13px 18px;background:var(--card);transition:all .25s}
+.soc:hover{transform:translateX(6px);border-color:rgba(251,191,36,.45)}
+.soc .ic{flex:none;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;background:rgba(148,163,184,.1)}
+.soc .n{font-size:14px;font-weight:600}
+.soc .m{font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-top:1px}
+.soc .go{margin-left:auto;color:var(--ink-faint);font-size:13px}
+.qr-side{display:flex;flex-direction:column;align-items:center;gap:14px}
+.qr-img{max-width:340px;width:100%;border-radius:18px;border:1px solid rgba(251,191,36,.3);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(251,191,36,.08);transition:transform .4s}
+.qr-img:hover{transform:scale(1.03) rotate(-.5deg)}
+.qr-cap{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.12em;text-align:center}
+
+/* ============ final cta / footer ============ */
+.final{text-align:center;padding:130px 0}
+.final h2{font-size:clamp(30px,5vw,52px);max-width:760px;margin:0 auto 20px}
+.final .lead{margin:0 auto 44px}
+footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:var(--ink-faint)}
+.foot-in{max-width:1120px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-in a{color:var(--ink-dim)}
+.foot-in a:hover{color:var(--cyan)}
+</style>
+</head>
+<body>
+<canvas id="net"></canvas>
+<div class="aurora"></div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#top">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="8" cy="10" r="3.4" fill="#22d3ee"/><circle cx="24" cy="8" r="3.4" fill="#8b5cf6"/><circle cx="16" cy="23" r="3.4" fill="#ec4899"/><path d="M8 10L24 8M8 10L16 23M24 8L16 23" stroke="#475569" stroke-width="1.6"/></svg>
+      传播与社群增长引擎
+    </a>
+    <div class="nav-links">
+      <a href="#axiom">架构</a>
+      <a href="#chain">行为链</a>
+      <a href="#evidence">证据体系</a>
+      <a href="#modes">能力</a>
+      <a href="#author">作者</a>
+      <a class="nav-gh" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GITHUB ↗</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-tag"><span class="dot"></span> EVIDENCE-AWARE METHODOLOGY · <b>v1.1.9</b> · OPEN SOURCE</div>
+    <h1>让 AI 学会<span class="grad">诊断传播</span>，<br>而不是背诵爆款技巧。</h1>
+    <div class="hero-en">Human Communication &amp; Community Growth Engine</div>
+    <p class="hero-sub">
+      把认知科学、社会心理学、传播学、网络科学中<b>当前最可靠的证据</b>，蒸馏成 AI Agent 可直接调用的方法论——
+      每条建议都携带<b>机制依据、证据等级与适用边界</b>。
+    </p>
+    <div class="cta">
+      <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub 仓库
+      </a>
+      <a class="btn btn-ghost" href="#axiom">看看它是怎么工作的 ↓</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>216</b> MECHANISM NODES</span>
+      <span><b>13</b> PLATFORM ADAPTERS</span>
+      <span><b>160</b> EVAL CASES</span>
+      <span><b>BLIND TEST</b> 32/32 × 3</span>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL ↓</div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats reveal">
+  <div class="stats-in">
+    <div class="stat"><div class="num" data-to="216">0</div><div class="lbl">机制节点</div><div class="en">Mechanisms</div></div>
+    <div class="stat"><div class="num" data-to="32">0</div><div class="lbl">知识域</div><div class="en">Domains</div></div>
+    <div class="stat"><div class="num" data-to="1155">0</div><div class="lbl">关系边 · 全图单连通</div><div class="en">Graph Edges</div></div>
+    <div class="stat"><div class="num" data-to="13">0</div><div class="lbl">平台适配器</div><div class="en">Adapters</div></div>
+    <div class="stat"><div class="num" data-to="160">0</div><div class="lbl">评测案例</div><div class="en">Eval Cases</div></div>
+    <div class="stat"><div class="num" data-to="100">0</div><div class="lbl">经典来源全入库</div><div class="en">Seed Sources</div></div>
+  </div>
+</div>
+
+<!-- ================= AXIOM / ARCHITECTURE ================= -->
+<section id="axiom">
+  <div class="wrap">
+    <div class="kicker reveal">Core Axiom · 核心公理</div>
+    <p class="axiom-quote reveal"><em>底层人类机制稳定，</em><br>平台机制变化。</p>
+    <p class="axiom-sub reveal">理论只存在于机制层；抖音、小红书、公众号都只是适配器。平台改版，理论不动；新平台出现，只需新增 adapter。</p>
+
+    <div class="layers">
+      <div class="stack reveal">
+        <div class="layer active" data-c="3">
+          <div class="t"><span class="no">L4</span><span class="nm">实践引擎</span><span class="en">Practice Engine</span></div>
+          <p>11 个工作流：内容诊断 · 标题优化 · 改写 · 社群诊断 · 活动设计 · 复盘 + 长文链（分析 → 重构 → 证据审计 → 逐句编辑）</p>
+        </div>
+        <div class="layer" data-c="2">
+          <div class="t"><span class="no">L3</span><span class="nm">平台适配层</span><span class="en">Platform Adapter</span></div>
+          <p>13 个 adapter × 27 字段；平台事实四级标注（官方规则 / 可验证观察 / 行业共识 / 经验推测）+ last_updated 时效化</p>
+        </div>
+        <div class="layer" data-c="1">
+          <div class="t"><span class="no">L2</span><span class="nm">传播机制层</span><span class="en">Mechanism Graph</span></div>
+          <p>216 机制节点 · 32 域 · 1155 条边（全图单连通）· 11 种关系语义，机制之间支持 / 冲突 / 调节 / 中介</p>
+        </div>
+        <div class="layer" data-c="0">
+          <div class="t"><span class="no">L1</span><span class="nm">人类机制核心</span><span class="en">Human Mechanism Core</span></div>
+          <p>注意 / 认知负荷 / 记忆 / 情绪 / 动机 / 身份 / 规范 / 信任——与平台无关、与时代无关的底层机制</p>
+        </div>
+      </div>
+      <div class="layer-demo reveal">
+        <h4>一次请求如何穿过四层 ——「优化这篇小红书标题」</h4>
+        <div class="demo-io"><span class="k">→ 任务判定</span>   M1/M3 · 加载标题优化工作流
+<span class="k">→ 按需加载</span>   xiaohongshu adapter + <span class="v">curiosity_gap</span> <span class="g">(B+)</span>
+  <span class="v">specificity_effect</span> <span class="g">(B)</span> · <span class="v">processing_fluency</span> <span class="g">(A-)</span>
+<span class="k">→ 诊断引擎</span>   11 步定位瓶颈
+<span class="k">→ 输出</span>   <span class="p">诊断</span> → 核心问题 → 为什么 → 修改建议
+  → 机制依据<span class="g">（等级 + 边界）</span> → 平台注意 → 下一步选项</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEHAVIOR CHAIN ================= -->
+<section id="chain" style="padding-top:40px">
+  <div class="wrap">
+    <div class="kicker reveal">16-Layer Behavior Chain · 十六层行为链</div>
+    <h2 class="reveal">不笼统说<span class="grad">"互动率"</span>，<br>逐层定位行为瓶颈。</h2>
+    <p class="lead reveal">曝光高点击低？点击高停留低？收藏高分享低？——不同的断点，指向完全不同的机制。禁止把所有传播目标混为一谈。</p>
+    <div class="chain-wrap reveal">
+      <div class="chain" id="chainEl">
+        <div class="node"><div class="b">👁</div><div class="s">注意</div><div class="e">Attention</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🖱</div><div class="s">点击</div><div class="e">Click</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">📖</div><div class="s">阅读</div><div class="e">Read</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">💡</div><div class="s">理解</div><div class="e">Comprehend</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🧠</div><div class="s">记忆</div><div class="e">Remember</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🤝</div><div class="s">信任</div><div class="e">Trust</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">⚖️</div><div class="s">态度</div><div class="e">Attitude</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">👍</div><div class="s">互动</div><div class="e">Engage</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🔖</div><div class="s">收藏</div><div class="e">Save</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🔁</div><div class="s">转发</div><div class="e">Share</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">➕</div><div class="s">关注</div><div class="e">Follow</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🚪</div><div class="s">入群</div><div class="e">Join</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🙋</div><div class="s">参与</div><div class="e">Participate</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">✍️</div><div class="s">贡献</div><div class="e">Contribute</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">🛒</div><div class="s">转化</div><div class="e">Convert</div></div><div class="arr">→</div>
+        <div class="node"><div class="b">♾️</div><div class="s">留存</div><div class="e">Retain</div></div>
+      </div>
+    </div>
+    <p class="chain-note reveal">// Virality ≠ Community —— 病毒传播不等于社群，六个目标严格区分：REACH / VIRALITY / ENGAGEMENT / COMMUNITY / CONVERSION / RETENTION</p>
+  </div>
+</section>
+
+<!-- ================= MECHANISM TICKER ================= -->
+<div class="ticker-zone">
+  <div class="ticker-head reveal">
+    <h3>蒸馏自 <span class="grad">100 部经典</span>，无一书一摘要</h3>
+    <span>跨来源合并 → 术语归一 → 冲突登记 → 证据定级 → 机制入图</span>
+  </div>
+  <div class="marquee">
+    <div class="mrow">
+      <span class="chip"><b>Daniel Kahneman</b><i>Thinking, Fast and Slow</i></span>
+      <span class="chip"><b>Robert Cialdini</b><i>Influence · Pre-Suasion</i></span>
+      <span class="chip"><b>Richard Thaler</b><i>Nudge · Misbehaving</i></span>
+      <span class="chip"><b>Chip &amp; Dan Heath</b><i>Made to Stick</i></span>
+      <span class="chip"><b>Jonah Berger</b><i>Contagious · Catalyst</i></span>
+      <span class="chip"><b>Damon Centola</b><i>How Behavior Spreads</i></span>
+      <span class="chip"><b>Duncan Watts</b><i>Six Degrees</i></span>
+      <span class="chip"><b>Albert-László Barabási</b><i>Linked</i></span>
+      <span class="chip"><b>Everett Rogers</b><i>Diffusion of Innovations</i></span>
+      <span class="chip"><b>George Lakoff</b><i>Metaphors We Live By</i></span>
+      <span class="chip"><b>Elliot Aronson</b><i>The Social Animal</i></span>
+      <span class="chip"><b>Jonathan Haidt</b><i>The Righteous Mind</i></span>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="mrow">
+      <span class="chip"><b>Cristina Bicchieri</b><i>Norms in the Wild</i></span>
+      <span class="chip"><b>Richard Petty</b><i>Communication and Persuasion</i></span>
+      <span class="chip"><b>Erving Goffman</b><i>The Presentation of Self</i></span>
+      <span class="chip"><b>Stanley Milgram</b><i>Obedience to Authority</i></span>
+      <span class="chip"><b>Byron Sharp</b><i>How Brands Grow</i></span>
+      <span class="chip"><b>Kevin Keller</b><i>Strategic Brand Management</i></span>
+      <span class="chip"><b>Seth Godin</b><i>Tribes · Permission Marketing</i></span>
+      <span class="chip"><b>Andrew Chen</b><i>The Cold Start Problem</i></span>
+      <span class="chip"><b>Sinan Aral</b><i>The Hype Machine</i></span>
+      <span class="chip"><b>Tim Wu</b><i>The Attention Merchants</i></span>
+      <span class="chip"><b>Nancy Duarte</b><i>Resonate</i></span>
+      <span class="chip"><b>Henry Jenkins</b><i>Spreadable Media</i></span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= EVIDENCE ================= -->
+<section id="evidence">
+  <div class="wrap">
+    <div class="kicker reveal">Evidence System · 证据体系</div>
+    <h2 class="reveal">每个机制都有<span class="grad">证据等级</span>，<br>每条建议都有适用边界。</h2>
+    <p class="lead reveal">复制危机是这个行业的照妖镜。A/B 级机制占 84%；E 级（复制失败）永久隔离；无法核实出处的断言，一律不得入库。</p>
+
+    <div class="ev-grid reveal">
+      <div class="grade" data-g="A"><div class="g">A</div><div class="n">强证据</div><div class="d">多独立团队 · Meta-analysis · 高质量复制。可作强建议核心依据。</div></div>
+      <div class="grade" data-g="B"><div class="g">B</div><div class="n">中等证据</div><div class="d">效应存在但边界明显。可作主要依据，必须携带边界条件。</div></div>
+      <div class="grade" data-g="C"><div class="g">C</div><div class="n">新兴证据</div><div class="d">样本或情境有限（多为 AI 时代新现象）。必须明示"证据尚新"。</div></div>
+      <div class="grade" data-g="D"><div class="g">D</div><div class="n">从业者经验</div><div class="d">无系统检验。必须标注"实践经验，非实证结论"。</div></div>
+      <div class="grade" data-g="E"><div class="g">E</div><div class="n">有争议 / 复制失败</div><div class="d">不得作为强建议依据。仅在解释"为什么不可靠"时引用。</div></div>
+    </div>
+
+    <div class="kicker reveal">Anti-Folklore · 我们敢说不</div>
+    <h2 class="reveal" style="font-size:clamp(24px,3.4vw,34px)">内置一张<span class="grad">反玄学清单</span></h2>
+    <div class="no-grid" style="margin-top:34px">
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"人类注意力只有 8 秒"</div><div class="d">无原始研究支持的媒体讹传，金鱼比较纯属营销谣言。真实机制：attention_capacity_limits 与情境性注意。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"所有爆款都要制造焦虑"</div><div class="d">高唤醒促进分享有证据（B+），但 manufactured outrage 属反模式——信任损耗与平台风险明确。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">Ego Depletion · 意志力耗竭</div><div class="d">大规模预注册复制失败（E 级）。禁入建议依据，与 power posing、行为层启动一起进隔离区。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">刷量 · 编造好评 · 虚假稀缺</div><div class="d">反模式库明令拒绝：说明为什么短期有效、为什么长期损害信任与账号。Useful ≠ Manipulative。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"数据不好 = 文案不好"</div><div class="d">先排除分发、受众错配、时机与网络结构，再归因内容。有时"不要改"才是正确答案。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"小红书标题一定要有数字"</div><div class="d">数字提供具体性（B），但在身份共鸣型标题中可能削弱情绪连续性——按内容类型给条件化建议。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODES ================= -->
+<section id="modes" style="padding-top:30px">
+  <div class="wrap">
+    <div class="kicker reveal">Capabilities · 七种调用模式</div>
+    <h2 class="reveal">从一个标题，到一篇万字长文，<br>到<span class="grad">整个社群</span>。</h2>
+    <div class="mode-grid">
+      <div class="mode reveal"><div class="id">M1 · QUICK</div><div class="t">快速诊断</div><div class="d">逐要素拆解内容，定位最短板。</div><div class="q">"帮我看看这个标题行不行"</div></div>
+      <div class="mode reveal"><div class="id">M2 · DEEP</div><div class="t">机制级分析</div><div class="d">为什么传播不动？机制组合归因。</div><div class="q">"机制级分析这篇为什么没人转"</div></div>
+      <div class="mode reveal"><div class="id">M3 · REWRITE</div><div class="t">标题与改写</div><div class="d">标题两道门检验，候选 + 优劣 + 推荐。</div><div class="q">"给我几个新标题"</div></div>
+      <div class="mode reveal"><div class="id">M4 · RESEARCH</div><div class="t">传播研究</div><div class="d">知识库检索 + 理论冲突登记。</div><div class="q">"研究一下XX传播现象"</div></div>
+      <div class="mode reveal"><div class="id">M5 · COMMUNITY</div><div class="t">社群诊断与设计</div><div class="d">Identity / Norm / Status / Ritual 十层结构。</div><div class="q">"800 人的群只有 20 人说话"</div></div>
+      <div class="mode reveal"><div class="id">M6 · POSTMORTEM</div><div class="t">传播复盘</div><div class="d">先排除外生变量，再漏斗定位归因。</div><div class="q">"曝光 20 万完播 2%，复盘一下"</div></div>
+      <div class="mode reveal"><div class="id">M7 · LONGFORM</div><div class="t">长文深度优化</div><div class="d">论证地图 · 认知负荷曲线 · 语义压缩 · 结构重排。先结构后逐句。</div><div class="q">"优化这篇 6000 字文章"</div></div>
+      <div class="mode reveal"><div class="id">×13</div><div class="t">平台适配</div><div class="d">公众号 / 小红书 / 抖音 / B站 / 知乎 / 微博 / X / TikTok / YouTube…</div><div class="q">"改成抖音口播稿"</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVALS ================= -->
+<section id="evals" style="padding-top:30px">
+  <div class="wrap">
+    <div class="kicker reveal">Evaluation · 透明评测</div>
+    <h2 class="reveal">自己说好不算数，<br><span class="grad">盲测数据</span>放这里。</h2>
+    <div class="eval-grid">
+      <div class="bars reveal">
+        <div class="bar-row"><div class="bt"><b>Self-eval · 160 案通过率</b><span>160 / 160</span></div><div class="bar"><i data-w="100"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>Self-eval · 基础集均值</b><span>17.71 / 18</span></div><div class="bar"><i data-w="98.4"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>盲测 · 三轮通过</b><span>32/32 × 3</span></div><div class="bar"><i data-w="100"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>盲测 · 最新轮均值（隔离环境）</b><span>17.53 / 18</span></div><div class="bar gold"><i data-w="97.4"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>长文实跑 · 15 类埋设缺陷命中</b><span>15 / 15</span></div><div class="bar"><i data-w="100"></i></div></div>
+      </div>
+      <div class="reveal">
+        <div class="eval-card">
+          <h4>三角色盲测协议</h4>
+          <p><span class="hl">R1</span> 作答者不可见答案 · <span class="hl">R2</span> 独立评分 · <span class="hl">R3</span> 审计。
+          三轮环境隔离盲测全部通过、红线为零；均值 17.19 → 17.66 → 17.53，与 self-eval 的差距收敛至噪声级。</p>
+        </div>
+        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只能证明"知识库可支撑合格应答"；所以我们补做了环境隔离盲测，协议与全部评分留痕公开在仓库中。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUTHOR ================= -->
+<section class="author" id="author">
+  <div class="wrap">
+    <div class="kicker reveal" style="color:var(--gold)">Author · 作者</div>
+    <div class="author-grid">
+      <div class="reveal">
+        <div class="author-name">谁是专家</div>
+        <p class="author-desc">
+          本方法论由「谁是专家」研究并构建——从 100 部经典与原始文献出发，拒绝"一本书一个摘要"，
+          以机制为单元跨来源蒸馏，全程携带证据意识与伦理边界。
+          同名创作 IP 持续分享传播科学、社群增长与 AI 时代的知识工作方法。
+        </p>
+        <div class="socials">
+          <a class="soc" href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener">
+            <span class="ic" style="background:rgba(254,44,85,.15);color:#fe2c55">书</span>
+            <span><span class="n">小红书 · 谁是专家</span><br><span class="m">RED ID: 9945310245</span></span>
+            <span class="go">↗</span>
+          </a>
+          <a class="soc" href="https://x.com/dboy_yi2025" target="_blank" rel="noopener">
+            <span class="ic" style="background:rgba(255,255,255,.12);color:#fff">𝕏</span>
+            <span><span class="n">X (Twitter) · @dboy_yi2025</span><br><span class="m">Communication science in the AI era</span></span>
+            <span class="go">↗</span>
+          </a>
+          <a class="soc" href="#author" onclick="return false">
+            <span class="ic" style="background:rgba(52,211,153,.14);color:#34d399">微</span>
+            <span><span class="n">微信公众号 · 谁是专家</span><br><span class="m">微信搜一搜，或扫码 →</span></span>
+            <span class="go" style="opacity:.4">◦</span>
+          </a>
+        </div>
+      </div>
+      <div class="qr-side reveal">
+        <img class="qr-img" src="wechat-qrcode.png" alt="微信公众号「谁是专家」二维码">
+        <div class="qr-cap">WECHAT · SCAN TO FOLLOW</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">理论有依据，建议有边界，<br><span class="grad">方法可进化。</span></h2>
+    <p class="lead reveal" style="text-align:center">开源 · 可部署 · 可扩展。把它放进你的 Agent，让下一次传播决策有据可依。</p>
+    <div class="cta reveal" style="justify-content:center">
+      <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">⭐ Star on GitHub</a>
+      <a class="btn btn-ghost" href="https://github.com/mizzlelover/communication-science-skill#quick-start" target="_blank" rel="noopener">三分钟部署指南</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div>© 2026 谁是专家 · Human Communication &amp; Community Growth Engine v1.1.9</div>
+    <div><a href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub</a> · Code: MIT · Knowledge: CC BY 4.0</div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+/* ---------- canvas network ---------- */
+const cv=document.getElementById('net'),cx=cv.getContext('2d');
+let W,H,pts=[],mouse={x:-999,y:-999};
+const DPR=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';cx.setTransform(DPR,0,0,DPR,0,0);
+  const n=Math.min(90,Math.floor(W*H/16000));pts=[];
+  for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,
+    r:Math.random()*1.6+.8,c:['34,211,238','139,92,246','236,72,153'][Math.floor(Math.random()*3)]});
+}
+size();addEventListener('resize',size);
+addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+function pulseFrom(node,i,depth){ /* occasionally fire a pulse */
+  if(depth>2)return; node.fire=0;
+}
+function tick(){
+  cx.clearRect(0,0,W,H);
+  const R=Math.min(150,W/9);
+  for(const p of pts){
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+    cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fillStyle=`rgba(${p.c},.75)`;cx.fill();
+  }
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+    const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+    if(d<R){cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);
+      cx.strokeStyle=`rgba(99,120,180,${(1-d/R)*.32})`;cx.lineWidth=.7;cx.stroke();}
+  }
+  // mouse link
+  for(const p of pts){const d=Math.hypot(p.x-mouse.x,p.y-mouse.y);
+    if(d<170){cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);
+      cx.strokeStyle=`rgba(34,211,238,${(1-d/170)*.35})`;cx.lineWidth=.8;cx.stroke();}}
+  requestAnimationFrame(tick);
+}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)tick();
+else{cx.clearRect(0,0,W,H)}
+
+/* ---------- reveal on scroll ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- counters ---------- */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,to=+el.dataset.to,t0=performance.now(),dur=1600;
+  (function f(t){const k=Math.min(1,(t-t0)/dur),v=Math.floor(to*(1-Math.pow(1-k,3)));
+    el.textContent=v.toLocaleString();if(k<1)requestAnimationFrame(f);else el.textContent=to.toLocaleString();})(t0);
+}),{threshold:.6});
+document.querySelectorAll('.num').forEach(el=>cio.observe(el));
+
+/* ---------- bars ---------- */
+const bio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;bio.unobserve(e.target);
+  e.target.querySelectorAll('i[data-w]').forEach((b,i)=>setTimeout(()=>b.style.width=b.dataset.w+'%',i*160));
+}),{threshold:.4});
+const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
+
+/* ---------- chain pulse ---------- */
+const chain=document.getElementById('chainEl');
+if(chain){const wrap=chain.parentElement,nodes=[...chain.querySelectorAll('.node')];let idx=0;
+  setInterval(()=>{nodes.forEach(n=>n.classList.remove('hit'));
+    const n1=nodes[idx%nodes.length],n2=nodes[(idx+1)%nodes.length];
+    n1.classList.add('hit');n2.classList.add('hit');
+    const target=n2.offsetLeft-wrap.clientWidth/2+n2.offsetWidth/2;
+    wrap.scrollTo({left:Math.max(0,target),behavior:'smooth'});
+    idx++;},900);}
+
+/* ---------- layer stack ---------- */
+document.querySelectorAll('.layer').forEach(l=>l.addEventListener('click',()=>{
+  document.querySelectorAll('.layer').forEach(x=>x.classList.remove('active'));l.classList.add('active');
+}));
+</script>
+</body>
+</html>

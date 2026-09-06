@@ -7,11 +7,16 @@
 <meta name="description" content="基于证据的传播方法论 Skill：216 个机制节点、13 个平台适配器、16 层行为链。让 AI 学会诊断传播，而不是背诵爆款技巧。由「谁是专家」构建。">
 <meta property="og:title" content="人类传播与社群增长引擎">
 <meta property="og:description" content="把认知科学与传播学的可靠证据，蒸馏成 AI Agent 可调用的方法论。216 机制节点 · 13 平台适配器 · 每条建议带证据等级。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://skill.mizzlelover.xyz/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='8' cy='10' r='3' fill='%2322d3ee'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%238b5cf6'/%3E%3Ccircle cx='16' cy='22' r='3' fill='%23ec4899'/%3E%3Cpath d='M8 10L24 8M8 10L16 22M24 8L16 22' stroke='%23475669' stroke-width='1.5'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"人类传播与社群增长引擎","alternateName":"Human Communication & Community Growth Engine","applicationCategory":"DeveloperApplication","operatingSystem":"Any","author":{"@type":"Person","name":"谁是专家"},"license":"https://creativecommons.org/licenses/by/4.0/","codeRepository":"https://github.com/mizzlelover/communication-science-skill"}
+</script>
 <style>
 :root{
   --bg0:#04060d; --bg1:#0a0e1f; --bg2:#0d1226;
-  --cyan:#22d3ee; --violet:#8b5cf6; --pink:#ec4899; --gold:#fbbf24; --green:#34d399;
+  --cyan:#22d3ee; --violet:#8b5cf6; --pink:#ec4899; --gold:#fbbf24; --green:#34d399; --orange:#f97316; --blue:#60a5fa;
   --ink:#e6ebf5; --ink-dim:#94a3b8; --ink-faint:#5b6b85;
   --line:rgba(148,163,184,.14);
   --card:rgba(148,163,184,.055);
@@ -28,7 +33,9 @@ body{
 ::selection{background:rgba(139,92,246,.4)}
 a{color:inherit;text-decoration:none}
 
-/* ============ canvas bg ============ */
+/* ============ chrome ============ */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:80;
+  background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink))}
 #net{position:fixed;inset:0;z-index:0;opacity:.9}
 .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
@@ -44,10 +51,15 @@ section{padding:110px 0;position:relative}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
 .kicker::before{content:"◈ "}
 h2{font-size:clamp(28px,4.4vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.25;margin-bottom:18px}
-.lead{color:var(--ink-dim);font-size:17px;max-width:640px}
-.grad{background:linear-gradient(100deg,var(--cyan),var(--violet) 45%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.lead{color:var(--ink-dim);font-size:17px;max-width:680px}
+.grad{background:linear-gradient(100deg,var(--cyan),var(--violet) 45%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:180% auto;animation:shimmer 7s linear infinite}
+@keyframes shimmer{to{background-position:180% center}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .grad{animation:none}
+}
 
 /* ============ nav ============ */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
@@ -55,15 +67,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);-w
 .nav-in{max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:26px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:.02em}
 .logo svg{flex:none}
-.nav-links{margin-left:auto;display:flex;gap:24px;font-size:13.5px;color:var(--ink-dim)}
+.nav-links{margin-left:auto;display:flex;gap:22px;font-size:13.5px;color:var(--ink-dim)}
 .nav-links a{transition:color .2s}
 .nav-links a:hover{color:var(--cyan)}
 .nav-gh{border:1px solid rgba(34,211,238,.35);color:var(--cyan)!important;padding:6px 14px;border-radius:99px;font-family:var(--mono);font-size:12px;transition:all .25s}
 .nav-gh:hover{background:rgba(34,211,238,.1);box-shadow:0 0 18px rgba(34,211,238,.25)}
-@media(max-width:760px){.nav-links a:not(.nav-gh){display:none}}
+@media(max-width:820px){.nav-links a:not(.nav-gh){display:none}}
 
 /* ============ hero ============ */
-.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px}
+.hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 90px;position:relative;overflow:hidden}
+.halo{position:absolute;left:50%;top:38%;width:640px;height:640px;transform:translate(-50%,-50%);
+  border-radius:50%;filter:blur(80px);opacity:.5;pointer-events:none;
+  background:conic-gradient(from 0deg,rgba(34,211,238,.16),rgba(139,92,246,.18),rgba(236,72,153,.14),rgba(34,211,238,.16));
+  animation:spin 26s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;
   color:var(--ink-dim);border:1px solid var(--line);border-radius:99px;padding:7px 16px;margin-bottom:34px;background:rgba(10,14,31,.5)}
 .hero-tag b{color:var(--gold);font-weight:600}
@@ -71,7 +88,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);-w
 @keyframes pulse{50%{opacity:.4}}
 h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:8px}
 .hero-en{font-family:var(--mono);font-size:clamp(11px,1.6vw,15px);letter-spacing:.42em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:30px}
-.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--ink-dim);max-width:660px;margin-bottom:44px}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--ink-dim);max-width:680px;margin-bottom:44px}
 .hero-sub b{color:var(--ink);font-weight:600}
 .cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;font-size:15px;font-weight:600;transition:all .25s;position:relative}
@@ -123,8 +140,64 @@ h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-h
 .demo-io .p{color:var(--pink)}
 .demo-io .v{color:var(--green)}
 
+/* ============ atlas ============ */
+.atlas-shell{margin-top:48px;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  background:radial-gradient(80% 100% at 50% 0%,rgba(139,92,246,.07),transparent 55%),rgba(6,9,18,.72);position:relative}
+#atlasCv{display:block;width:100%;height:600px;cursor:grab;touch-action:none}
+#atlasCv.grabbing{cursor:grabbing}
+@media(max-width:760px){#atlasCv{height:440px}}
+.atlas-hud{position:absolute;left:16px;top:14px;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
+  letter-spacing:.14em;line-height:2;pointer-events:none;
+  background:rgba(6,9,18,.6);padding:8px 14px;border-radius:10px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.atlas-hud b{color:var(--ink-dim);font-weight:600}
+#tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;
+  background:rgba(7,10,20,.92);border:1px solid rgba(34,211,238,.4);border-radius:12px;padding:12px 16px;
+  max-width:280px;box-shadow:0 14px 40px rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#tip .tz{font-size:14.5px;font-weight:700}
+#tip .te{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.04em;margin:2px 0 6px}
+#tip .tm{font-size:11.5px;color:var(--ink-dim)}
+#tip .tm b{color:var(--gold);font-weight:600}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;align-items:center}
+.fchip{font-family:var(--mono);font-size:12px;letter-spacing:.06em;border:1px solid var(--line);border-radius:99px;
+  padding:7px 15px;color:var(--ink-dim);background:var(--card);cursor:pointer;transition:all .22s;user-select:none}
+.fchip:hover{border-color:rgba(148,163,184,.4);color:var(--ink)}
+.fchip .n{opacity:.55;font-size:10.5px;margin-left:5px}
+.fchip.on{color:#04060d;font-weight:700;border-color:transparent}
+.fchip[data-f="all"].on{background:linear-gradient(100deg,var(--cyan),var(--violet))}
+.fchip[data-f="cog"].on{background:var(--cyan)}
+.fchip[data-f="mot"].on{background:var(--violet)}
+.fchip[data-f="soc"].on{background:var(--pink)}
+.fchip[data-f="per"].on{background:var(--orange)}
+.fchip[data-f="net"].on{background:var(--blue)}
+.fchip[data-f="com"].on{background:var(--green)}
+.fchip[data-f="plt"].on{background:var(--gold)}
+.atlas-note{margin-top:16px;font-size:12.5px;color:var(--ink-faint)}
+.atlas-note b{color:var(--ink-dim);font-weight:600}
+.atlas-note a{color:var(--cyan)}
+
+/* ============ ticker ============ */
+.ticker-zone{padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(7,10,20,.5);overflow:hidden}
+.ticker-head{max-width:1120px;margin:0 auto 30px;padding:0 28px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.ticker-head h3{font-size:20px;font-weight:800}
+.ticker-head span{font-size:13px;color:var(--ink-dim)}
+.marquee{display:flex;overflow:hidden;user-select:none;gap:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee+.marquee{margin-top:14px}
+.mrow{display:flex;gap:14px;flex:none;animation:scroll 60s linear infinite}
+.marquee:last-child .mrow{animation-direction:reverse;animation-duration:70s}
+.marquee:hover .mrow{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mrow{animation:none}}
+.chip{flex:none;border:1px solid var(--line);background:rgba(148,163,184,.05);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--ink-dim);white-space:nowrap}
+.chip b{color:var(--ink);font-weight:600}
+.chip i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-left:7px}
+.gv{color:var(--green)} .cv{color:var(--cyan)} .cv2{color:var(--violet)} .dv{color:var(--gold)}
+
 /* ============ chain ============ */
-.chain-wrap{overflow-x:auto;padding:26px 4px 18px;-webkit-overflow-scrolling:touch}
+.chain-wrap{overflow-x:auto;padding:26px 4px 18px;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.3) transparent}
+.chain-wrap::-webkit-scrollbar{height:6px}
+.chain-wrap::-webkit-scrollbar-track{background:transparent}
+.chain-wrap::-webkit-scrollbar-thumb{background:rgba(148,163,184,.28);border-radius:99px}
 .chain{display:flex;gap:10px;align-items:center;min-width:max-content;position:relative}
 .node{flex:none;text-align:center}
 .node .b{width:64px;height:64px;border-radius:16px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;
@@ -135,21 +208,27 @@ h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-h
 .node.hit .s{color:var(--cyan)}
 .arr{flex:none;color:var(--ink-faint);font-size:15px;padding:0 2px}
 .chain-note{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.1em}
+.funnels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
+@media(max-width:820px){.funnels{grid-template-columns:1fr}}
+.funnel{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--card);font-size:13.5px;color:var(--ink-dim)}
+.funnel b{color:var(--ink);font-weight:600;font-family:var(--mono);font-size:13px}
+.funnel .arr2{color:var(--pink);font-family:var(--mono)}
+.funnel .dx{display:block;margin-top:6px}
+.funnel .dx em{font-style:normal;color:var(--cyan)}
 
-/* ============ mechanism ticker ============ */
-.ticker-zone{padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(7,10,20,.5);overflow:hidden}
-.ticker-head{max-width:1120px;margin:0 auto 30px;padding:0 28px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-.ticker-head h3{font-size:20px;font-weight:800}
-.ticker-head span{font-size:13px;color:var(--ink-dim)}
-.marquee{display:flex;overflow:hidden;user-select:none;gap:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee+.marquee{margin-top:14px}
-.mrow{display:flex;gap:14px;flex:none;animation:scroll 46s linear infinite}
-.marquee:last-child .mrow{animation-direction:reverse;animation-duration:54s}
-.marquee:hover .mrow{animation-play-state:paused}
-@keyframes scroll{to{transform:translateX(-50%)}}
-.chip{flex:none;border:1px solid var(--line);background:rgba(148,163,184,.05);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--ink-dim);white-space:nowrap}
-.chip b{color:var(--ink);font-weight:600}
-.chip i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-left:7px}
+/* ============ showdown ============ */
+.vs-grid{display:flex;flex-direction:column;gap:14px;margin-top:48px}
+.vs-row{display:grid;grid-template-columns:1fr 44px 1.35fr;gap:14px;align-items:stretch}
+@media(max-width:820px){.vs-row{grid-template-columns:1fr}.vs-mid{transform:rotate(90deg);margin:-4px auto}}
+.vs-bad{border:1px solid rgba(236,72,153,.25);background:rgba(236,72,153,.045);border-radius:14px;padding:16px 20px;
+  color:var(--ink-dim);font-size:14px;position:relative}
+.vs-bad::before{content:"“";position:absolute;left:14px;top:2px;font-size:34px;color:rgba(236,72,153,.35);font-family:Georgia,serif}
+.vs-bad .q{display:block;padding-left:18px;font-weight:600;color:#c9b6d8}
+.vs-mid{display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-family:var(--mono);font-size:13px}
+.vs-good{border:1px solid rgba(52,211,153,.28);background:rgba(52,211,153,.05);border-radius:14px;padding:16px 20px;font-size:13.5px;color:var(--ink-dim);line-height:1.7}
+.vs-good b{color:var(--ink);font-weight:600}
+.vs-good .mech{font-family:var(--mono);font-size:11.5px;color:var(--cyan)}
+.vs-good .gr{font-family:var(--mono);font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid rgba(52,211,153,.45);color:var(--green);margin-left:6px}
 
 /* ============ evidence ============ */
 .ev-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:44px 0 60px}
@@ -200,6 +279,33 @@ h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-h
 .eval-card .hl{color:var(--gold)}
 .honest{margin-top:16px;border-left:2px solid var(--gold);padding:10px 16px;font-size:12.5px;color:var(--ink-dim);background:rgba(251,191,36,.05);border-radius:0 10px 10px 0}
 
+/* ============ install ============ */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:44px 0 0}
+.tab{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;border:1px solid var(--line);border-radius:10px 10px 0 0;
+  padding:10px 18px;color:var(--ink-dim);background:rgba(10,14,31,.4);cursor:pointer;transition:all .22s;border-bottom:none}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--cyan);border-color:rgba(34,211,238,.45);background:rgba(34,211,238,.07);box-shadow:0 -6px 20px rgba(34,211,238,.08)}
+.tab .sub{display:block;font-size:9.5px;color:var(--ink-faint);letter-spacing:.12em;margin-top:2px}
+.codebox{border:1px solid var(--line);border-radius:0 14px 14px 14px;background:#070b16;position:relative}
+.codebox .cp{position:absolute;right:12px;top:12px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);
+  border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer;transition:all .2s;background:rgba(10,14,31,.7)}
+.codebox .cp:hover{color:var(--cyan);border-color:rgba(34,211,238,.5)}
+.codebox .cp.ok{color:var(--green);border-color:rgba(52,211,153,.5)}
+.codebox pre{padding:24px 26px;overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:2;color:var(--ink-dim)}
+.codebox pre .c{color:var(--ink-faint)}
+.codebox pre .k{color:var(--cyan)}
+.codebox pre .s{color:var(--gold)}
+.codebox[hidden]{display:none}
+.inst-note{margin-top:18px;font-size:13px;color:var(--ink-dim)}
+.inst-note code{font-family:var(--mono);font-size:12px;color:var(--cyan);background:rgba(34,211,238,.08);padding:2px 8px;border-radius:6px}
+
+/* ============ principles ============ */
+.prin{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+.prin span{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;border:1px solid var(--line);
+  border-radius:99px;padding:9px 18px;color:var(--ink-dim);background:var(--card);transition:all .25s}
+.prin span:hover{color:var(--cyan);border-color:rgba(34,211,238,.45);transform:translateY(-2px)}
+.prin span b{color:var(--pink);font-weight:700}
+
 /* ============ author ============ */
 .author{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:
   radial-gradient(55% 60% at 80% 30%, rgba(251,191,36,.07), transparent 60%),rgba(7,10,20,.6)}
@@ -219,9 +325,9 @@ h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-h
 .qr-img:hover{transform:scale(1.03) rotate(-.5deg)}
 .qr-cap{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.12em;text-align:center}
 
-/* ============ final cta / footer ============ */
+/* ============ final / footer ============ */
 .final{text-align:center;padding:130px 0}
-.final h2{font-size:clamp(30px,5vw,52px);max-width:760px;margin:0 auto 20px}
+.final h2{font-size:clamp(30px,5vw,52px);max-width:820px;margin:0 auto 20px}
 .final .lead{margin:0 auto 44px}
 footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:var(--ink-faint)}
 .foot-in{max-width:1120px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
@@ -230,6 +336,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
 </style>
 </head>
 <body>
+<div id="prog"></div>
 <canvas id="net"></canvas>
 <div class="aurora"></div>
 
@@ -241,9 +348,11 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
     </a>
     <div class="nav-links">
       <a href="#axiom">架构</a>
+      <a href="#atlas">机制星图</a>
       <a href="#chain">行为链</a>
       <a href="#evidence">证据体系</a>
       <a href="#modes">能力</a>
+      <a href="#install">安装</a>
       <a href="#author">作者</a>
       <a class="nav-gh" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GITHUB ↗</a>
     </div>
@@ -254,6 +363,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
 
 <!-- ================= HERO ================= -->
 <header class="hero">
+  <div class="halo"></div>
   <div class="wrap">
     <div class="hero-tag"><span class="dot"></span> EVIDENCE-AWARE METHODOLOGY · <b>v1.1.9</b> · OPEN SOURCE</div>
     <h1>让 AI 学会<span class="grad">诊断传播</span>，<br>而不是背诵爆款技巧。</h1>
@@ -267,7 +377,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
         <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         GitHub 仓库
       </a>
-      <a class="btn btn-ghost" href="#axiom">看看它是怎么工作的 ↓</a>
+      <a class="btn btn-ghost" href="#atlas">探索机制星图 ↓</a>
     </div>
     <div class="hero-meta">
       <span><b>216</b> MECHANISM NODES</span>
@@ -297,133 +407,136 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
     <div class="kicker reveal">Core Axiom · 核心公理</div>
     <p class="axiom-quote reveal"><em>底层人类机制稳定，</em><br>平台机制变化。</p>
     <p class="axiom-sub reveal">理论只存在于机制层；抖音、小红书、公众号都只是适配器。平台改版，理论不动；新平台出现，只需新增 adapter。</p>
-
     <div class="layers">
       <div class="stack reveal">
-        <div class="layer active" data-c="3">
+        <div class="layer active" data-c="0">
           <div class="t"><span class="no">L4</span><span class="nm">实践引擎</span><span class="en">Practice Engine</span></div>
-          <p>11 个工作流：内容诊断 · 标题优化 · 改写 · 社群诊断 · 活动设计 · 复盘 + 长文链（分析 → 重构 → 证据审计 → 逐句编辑）</p>
-        </div>
-        <div class="layer" data-c="2">
-          <div class="t"><span class="no">L3</span><span class="nm">平台适配层</span><span class="en">Platform Adapter</span></div>
-          <p>13 个 adapter × 27 字段；平台事实四级标注（官方规则 / 可验证观察 / 行业共识 / 经验推测）+ last_updated 时效化</p>
+          <p>11 个工作流：内容诊断 · 标题优化 · 改写 · 社群诊断 · 活动设计 · 复盘，外加长文链（analysis → optimization → restructure / evidence_audit / line_edit）。</p>
         </div>
         <div class="layer" data-c="1">
-          <div class="t"><span class="no">L2</span><span class="nm">传播机制层</span><span class="en">Mechanism Graph</span></div>
-          <p>216 机制节点 · 32 域 · 1155 条边（全图单连通）· 11 种关系语义，机制之间支持 / 冲突 / 调节 / 中介</p>
+          <div class="t"><span class="no">L3</span><span class="nm">平台适配层</span><span class="en">Platform Adapter</span></div>
+          <p>13 个平台 × 27 字段，平台事实四级标注（官方规则 / 可验证观察 / 行业共识 / 经验推测）+ last_updated，永远与理论层物理隔离。</p>
         </div>
-        <div class="layer" data-c="0">
+        <div class="layer" data-c="2">
+          <div class="t"><span class="no">L2</span><span class="nm">传播机制层</span><span class="en">Communication Layer</span></div>
+          <p>216 个机制节点 · 32 个域 · 1155 条关系边，全图单连通；11 种关系语义（SUPPORTS / CONTRADICTS / MODERATES…）。</p>
+        </div>
+        <div class="layer" data-c="3">
           <div class="t"><span class="no">L1</span><span class="nm">人类机制核心</span><span class="en">Human Mechanism Core</span></div>
-          <p>注意 / 认知负荷 / 记忆 / 情绪 / 动机 / 身份 / 规范 / 信任——与平台无关、与时代无关的底层机制</p>
+          <p>注意 / 认知负荷 / 记忆 / 情绪 / 动机 / 身份 / 规范 / 信任——与平台无关、与时代无关的底层机制。</p>
         </div>
       </div>
       <div class="layer-demo reveal">
-        <h4>一次请求如何穿过四层 ——「优化这篇小红书标题」</h4>
-        <div class="demo-io"><span class="k">→ 任务判定</span>   M1/M3 · 加载标题优化工作流
-<span class="k">→ 按需加载</span>   xiaohongshu adapter + <span class="v">curiosity_gap</span> <span class="g">(B+)</span>
-  <span class="v">specificity_effect</span> <span class="g">(B)</span> · <span class="v">processing_fluency</span> <span class="g">(A-)</span>
-<span class="k">→ 诊断引擎</span>   11 步定位瓶颈
-<span class="k">→ 输出</span>   <span class="p">诊断</span> → 核心问题 → 为什么 → 修改建议
-  → 机制依据<span class="g">（等级 + 边界）</span> → 平台注意 → 下一步选项</div>
+        <h4>一次请求如何穿过四层 ·「优化这篇小红书标题」</h4>
+        <div class="demo-io"><span class="k">1 任务判定</span>      → M1/M3，加载标题优化工作流
+<span class="k">2 按需加载</span>      → xiaohongshu adapter
+  → curiosity_gap <span class="g">(B)</span> · specificity_effect <span class="g">(B)</span>
+  → processing_fluency <span class="g">(A-)</span> · identity_signaling
+<span class="k">3 诊断引擎</span>      → <span class="v">11 步</span> → 定位瓶颈
+<span class="k">4 结构化输出</span>    → <span class="p">诊断 → 建议 → 机制+等级+边界</span>
+  → 平台注意 → 下一步选项</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= BEHAVIOR CHAIN ================= -->
-<section id="chain" style="padding-top:40px">
+<!-- ================= MECHANISM ATLAS ================= -->
+<section id="atlas" style="padding-top:60px">
   <div class="wrap">
-    <div class="kicker reveal">16-Layer Behavior Chain · 十六层行为链</div>
-    <h2 class="reveal">不笼统说<span class="grad">"互动率"</span>，<br>逐层定位行为瓶颈。</h2>
-    <p class="lead reveal">曝光高点击低？点击高停留低？收藏高分享低？——不同的断点，指向完全不同的机制。禁止把所有传播目标混为一谈。</p>
-    <div class="chain-wrap reveal">
-      <div class="chain" id="chainEl">
-        <div class="node"><div class="b">👁</div><div class="s">注意</div><div class="e">Attention</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🖱</div><div class="s">点击</div><div class="e">Click</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">📖</div><div class="s">阅读</div><div class="e">Read</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">💡</div><div class="s">理解</div><div class="e">Comprehend</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🧠</div><div class="s">记忆</div><div class="e">Remember</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🤝</div><div class="s">信任</div><div class="e">Trust</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">⚖️</div><div class="s">态度</div><div class="e">Attitude</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">👍</div><div class="s">互动</div><div class="e">Engage</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🔖</div><div class="s">收藏</div><div class="e">Save</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🔁</div><div class="s">转发</div><div class="e">Share</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">➕</div><div class="s">关注</div><div class="e">Follow</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🚪</div><div class="s">入群</div><div class="e">Join</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🙋</div><div class="s">参与</div><div class="e">Participate</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">✍️</div><div class="s">贡献</div><div class="e">Contribute</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">🛒</div><div class="s">转化</div><div class="e">Convert</div></div><div class="arr">→</div>
-        <div class="node"><div class="b">♾️</div><div class="s">留存</div><div class="e">Retain</div></div>
-      </div>
+    <div class="kicker reveal">Mechanism Atlas · 机制星图</div>
+    <h2 class="reveal">下面这张图，就是它的<span class="grad">知识本体</span>。</h2>
+    <p class="lead reveal">不是装饰性动画——每个亮点都是知识库里的<b style="color:var(--ink)">真实机制节点</b>，连线是真实的 <code style="font-family:var(--mono);font-size:.85em;color:var(--cyan)">related_nodes</code> 关系，等级标签来自逐节点的证据定级。这是 216 节点全图的 <b style="color:var(--ink)">73 节点高权重子图</b>。悬停查看，拖拽把玩。</p>
+    <div class="atlas-shell reveal">
+      <canvas id="atlasCv"></canvas>
+      <div class="atlas-hud"><b>REAL KNOWLEDGE GRAPH</b><br>73 NODES · 148 EDGES · 32 DOMAINS<br>HOVER / DRAG TO EXPLORE</div>
+      <div id="tip"></div>
     </div>
-    <p class="chain-note reveal">// Virality ≠ Community —— 病毒传播不等于社群，六个目标严格区分：REACH / VIRALITY / ENGAGEMENT / COMMUNITY / CONVERSION / RETENTION</p>
+    <div class="filters reveal" id="filters"></div>
+    <p class="atlas-note reveal">颜色 = 七大机制族群 · 光点大小 = 全图引用度（hub 等级）· 绿环 = A 级证据。<b>想要全图？</b>216 节点 + 1155 边全部开源，<a href="https://github.com/mizzlelover/communication-science-skill/tree/main/communication-science-skill/knowledge/mechanisms" target="_blank" rel="noopener">mechanisms/ 目录</a>按域存放。</p>
   </div>
 </section>
 
-<!-- ================= MECHANISM TICKER ================= -->
+<!-- ================= TICKER ================= -->
 <div class="ticker-zone">
-  <div class="ticker-head reveal">
-    <h3>蒸馏自 <span class="grad">100 部经典</span>，无一书一摘要</h3>
-    <span>跨来源合并 → 术语归一 → 冲突登记 → 证据定级 → 机制入图</span>
+  <div class="ticker-head">
+    <h3>机制长廊</h3>
+    <span>按全图引用度排序的高权重机制（节选）· Most-referenced mechanisms</span>
   </div>
-  <div class="marquee">
-    <div class="mrow">
-      <span class="chip"><b>Daniel Kahneman</b><i>Thinking, Fast and Slow</i></span>
-      <span class="chip"><b>Robert Cialdini</b><i>Influence · Pre-Suasion</i></span>
-      <span class="chip"><b>Richard Thaler</b><i>Nudge · Misbehaving</i></span>
-      <span class="chip"><b>Chip &amp; Dan Heath</b><i>Made to Stick</i></span>
-      <span class="chip"><b>Jonah Berger</b><i>Contagious · Catalyst</i></span>
-      <span class="chip"><b>Damon Centola</b><i>How Behavior Spreads</i></span>
-      <span class="chip"><b>Duncan Watts</b><i>Six Degrees</i></span>
-      <span class="chip"><b>Albert-László Barabási</b><i>Linked</i></span>
-      <span class="chip"><b>Everett Rogers</b><i>Diffusion of Innovations</i></span>
-      <span class="chip"><b>George Lakoff</b><i>Metaphors We Live By</i></span>
-      <span class="chip"><b>Elliot Aronson</b><i>The Social Animal</i></span>
-      <span class="chip"><b>Jonathan Haidt</b><i>The Righteous Mind</i></span>
-    </div>
-  </div>
-  <div class="marquee">
-    <div class="mrow">
-      <span class="chip"><b>Cristina Bicchieri</b><i>Norms in the Wild</i></span>
-      <span class="chip"><b>Richard Petty</b><i>Communication and Persuasion</i></span>
-      <span class="chip"><b>Erving Goffman</b><i>The Presentation of Self</i></span>
-      <span class="chip"><b>Stanley Milgram</b><i>Obedience to Authority</i></span>
-      <span class="chip"><b>Byron Sharp</b><i>How Brands Grow</i></span>
-      <span class="chip"><b>Kevin Keller</b><i>Strategic Brand Management</i></span>
-      <span class="chip"><b>Seth Godin</b><i>Tribes · Permission Marketing</i></span>
-      <span class="chip"><b>Andrew Chen</b><i>The Cold Start Problem</i></span>
-      <span class="chip"><b>Sinan Aral</b><i>The Hype Machine</i></span>
-      <span class="chip"><b>Tim Wu</b><i>The Attention Merchants</i></span>
-      <span class="chip"><b>Nancy Duarte</b><i>Resonate</i></span>
-      <span class="chip"><b>Henry Jenkins</b><i>Spreadable Media</i></span>
-    </div>
-  </div>
+  <div class="marquee"><div class="mrow" id="row1"></div></div>
+  <div class="marquee"><div class="mrow" id="row2"></div></div>
 </div>
 
+<!-- ================= BEHAVIOR CHAIN ================= -->
+<section id="chain" style="padding-top:90px">
+  <div class="wrap">
+    <div class="kicker reveal">Behavior Chain · 传播行为链</div>
+    <h2 class="reveal">不笼统说<span class="grad">"互动率"</span>，<br>逐层定位行为瓶颈。</h2>
+    <p class="lead reveal">十六层行为链是诊断的坐标系——先定位用户停在哪一层，再调对应机制。</p>
+    <div class="chain-wrap reveal"><div class="chain" id="chainEl"></div></div>
+    <div class="chain-note reveal">AUTO DIAGNOSIS · 逐层点亮中…</div>
+    <div class="funnels reveal">
+      <div class="funnel"><b>曝光高 → 点击低</b><span class="arr2"> ⇒ </span>查 注意/好奇缺口/具体性/封面-标题一致性<span class="dx"><em>诊断示例：</em>标题信息差不足，抽象名词过多压低 processing_fluency</span></div>
+      <div class="funnel"><b>点击高 → 停留低</b><span class="arr2"> ⇒ </span>查 期待违背/认知负荷/信息气味<span class="dx"><em>诊断示例：</em>标题承诺未在首屏兑现，expectation violation 触发划走</span></div>
+      <div class="funnel"><b>收藏高 → 分享低</b><span class="arr2"> ⇒ </span>Personal Utility 强、Social Currency 弱<span class="dx"><em>诊断示例：</em>内容对"我自己"有用，但缺少可身份化的转发理由</span></div>
+      <div class="funnel"><b>评论高 → 转化低</b><span class="arr2"> ⇒ </span>讨论动机强、行为动机弱<span class="dx"><em>诊断示例：</em>CTA 缺失摩擦削减设计，讨论热度未导入行动路径</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHOWDOWN ================= -->
+<section id="vs" style="padding-top:40px">
+  <div class="wrap">
+    <div class="kicker reveal">Myth vs Mechanism · 对抗测试</div>
+    <h2 class="reveal">听到"爆款玄学"时，<br>它会这样<span class="grad">接招</span>。</h2>
+    <p class="lead reveal">内置对抗测试：用户说错时，不迎合。以下每一条都是评测案例库中的真实考题。</p>
+    <div class="vs-grid reveal">
+      <div class="vs-row">
+        <div class="vs-bad"><span class="q">小红书标题一定要有数字！</span></div>
+        <div class="vs-mid">⇒</div>
+        <div class="vs-good"><b>不机械同意。</b>数字提供<span class="mech">specificity_effect</span><span class="gr">B</span>与流畅性收益，但在身份共鸣型、故事型标题中会打断情绪连续性——按内容类型给条件化建议。</div>
+      </div>
+      <div class="vs-row">
+        <div class="vs-bad"><span class="q">人类注意力只有 8 秒。</span></div>
+        <div class="vs-mid">⇒</div>
+        <div class="vs-good"><b>识别为媒体讹传</b>——无原始研究支持，金鱼记忆比较同属营销谣传。替换为真实机制：<span class="mech">attention_capacity_limits</span><span class="gr">A</span>与情境性注意。</div>
+      </div>
+      <div class="vs-row">
+        <div class="vs-bad"><span class="q">所有爆款都要制造焦虑。</span></div>
+        <div class="vs-mid">⇒</div>
+        <div class="vs-good"><b>反驳错误前提。</b>高唤醒促进分享有证据（<span class="mech">emotional_arousal</span><span class="gr">B</span>），但 manufactured outrage 在反模式库：短期流量换长期信任损耗与平台风险。敬畏、共情、实用是替代路径。</div>
+      </div>
+      <div class="vs-row">
+        <div class="vs-bad"><span class="q">社群不活跃？发个红包呗。</span></div>
+        <div class="vs-mid">⇒</div>
+        <div class="vs-good"><b>拒绝表面答案。</b>先诊断 Identity / Norm / Status / Ritual / Newcomer Onboarding 五层结构缺口——红包改变的是刺激，不是结构。</div>
+      </div>
+      <div class="vs-row">
+        <div class="vs-bad"><span class="q">数据不好，肯定是文案的问题。</span></div>
+        <div class="vs-mid">⇒</div>
+        <div class="vs-good"><b>有时"不要改"。</b>先排除分发、受众错配、时机、网络结构，再归因内容——复盘工作流从外生变量开始。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= EVIDENCE ================= -->
-<section id="evidence">
+<section id="evidence" style="padding-top:40px">
   <div class="wrap">
     <div class="kicker reveal">Evidence System · 证据体系</div>
     <h2 class="reveal">每个机制都有<span class="grad">证据等级</span>，<br>每条建议都有适用边界。</h2>
-    <p class="lead reveal">复制危机是这个行业的照妖镜。A/B 级机制占 84%；E 级（复制失败）永久隔离；无法核实出处的断言，一律不得入库。</p>
-
-    <div class="ev-grid reveal">
-      <div class="grade" data-g="A"><div class="g">A</div><div class="n">强证据</div><div class="d">多独立团队 · Meta-analysis · 高质量复制。可作强建议核心依据。</div></div>
-      <div class="grade" data-g="B"><div class="g">B</div><div class="n">中等证据</div><div class="d">效应存在但边界明显。可作主要依据，必须携带边界条件。</div></div>
-      <div class="grade" data-g="C"><div class="g">C</div><div class="n">新兴证据</div><div class="d">样本或情境有限（多为 AI 时代新现象）。必须明示"证据尚新"。</div></div>
-      <div class="grade" data-g="D"><div class="g">D</div><div class="n">从业者经验</div><div class="d">无系统检验。必须标注"实践经验，非实证结论"。</div></div>
-      <div class="grade" data-g="E"><div class="g">E</div><div class="n">有争议 / 复制失败</div><div class="d">不得作为强建议依据。仅在解释"为什么不可靠"时引用。</div></div>
+    <p class="lead reveal">回答的问题从来不是"某本书说了什么"，而是"关于某一机制，目前最可靠的知识是什么"。全库 A/B 级占 84%，零编造 DOI、零编造页码。</p>
+    <div class="ev-grid">
+      <div class="grade reveal" data-g="A"><div class="g">A</div><div class="n">强证据</div><div class="d">多独立研究 / Meta-analysis / 高质量复制。可作强建议核心依据。</div></div>
+      <div class="grade reveal" data-g="B"><div class="g">B</div><div class="n">中等证据</div><div class="d">效应存在、边界明显。可作主要依据，必须带边界条件。</div></div>
+      <div class="grade reveal" data-g="C"><div class="g">C</div><div class="n">新兴/情境</div><div class="d">样本或情境有限（AI 时代新现象多在此）。必须标注"证据尚新"。</div></div>
+      <div class="grade reveal" data-g="D"><div class="g">D</div><div class="n">实践经验</div><div class="d">行业共识、无系统检验。必须标注"实践经验，非实证结论"。</div></div>
+      <div class="grade reveal" data-g="E"><div class="g">E</div><div class="n">争议/失效</div><div class="d">复制失败或严重争议。不得作为强建议依据，仅用于破除误解。</div></div>
     </div>
-
-    <div class="kicker reveal">Anti-Folklore · 我们敢说不</div>
-    <h2 class="reveal" style="font-size:clamp(24px,3.4vw,34px)">内置一张<span class="grad">反玄学清单</span></h2>
-    <div class="no-grid" style="margin-top:34px">
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"人类注意力只有 8 秒"</div><div class="d">无原始研究支持的媒体讹传，金鱼比较纯属营销谣言。真实机制：attention_capacity_limits 与情境性注意。</div></div></div>
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"所有爆款都要制造焦虑"</div><div class="d">高唤醒促进分享有证据（B+），但 manufactured outrage 属反模式——信任损耗与平台风险明确。</div></div></div>
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">Ego Depletion · 意志力耗竭</div><div class="d">大规模预注册复制失败（E 级）。禁入建议依据，与 power posing、行为层启动一起进隔离区。</div></div></div>
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">刷量 · 编造好评 · 虚假稀缺</div><div class="d">反模式库明令拒绝：说明为什么短期有效、为什么长期损害信任与账号。Useful ≠ Manipulative。</div></div></div>
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"数据不好 = 文案不好"</div><div class="d">先排除分发、受众错配、时机与网络结构，再归因内容。有时"不要改"才是正确答案。</div></div></div>
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"小红书标题一定要有数字"</div><div class="d">数字提供具体性（B），但在身份共鸣型标题中可能削弱情绪连续性——按内容类型给条件化建议。</div></div></div>
+    <div class="kicker reveal" style="color:var(--pink)">内置一张反玄学清单</div>
+    <div class="no-grid">
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"人类注意力只有 8 秒"</div><div class="d">无原始研究支持的媒体讹传；Gloria Mark 的研究被误读。谣言清单内置，永不采用。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">Ego depletion 自我损耗</div><div class="d">大规模预注册复制失败，定级 E——禁止作为建议依据，经典结论被修正时保留修正。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"损失厌恶是铁律"</div><div class="d">存在但幅度有争议、个体差异大——从 A 降级至 B，建议必须携带边界。</div></div></div>
     </div>
   </div>
 </section>
@@ -433,15 +546,15 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
   <div class="wrap">
     <div class="kicker reveal">Capabilities · 七种调用模式</div>
     <h2 class="reveal">从一个标题，到一篇万字长文，<br>到<span class="grad">整个社群</span>。</h2>
+    <p class="lead reveal">对 Agent 说人话即可，任务判定自动路由到对应工作流。</p>
     <div class="mode-grid">
-      <div class="mode reveal"><div class="id">M1 · QUICK</div><div class="t">快速诊断</div><div class="d">逐要素拆解内容，定位最短板。</div><div class="q">"帮我看看这个标题行不行"</div></div>
-      <div class="mode reveal"><div class="id">M2 · DEEP</div><div class="t">机制级分析</div><div class="d">为什么传播不动？机制组合归因。</div><div class="q">"机制级分析这篇为什么没人转"</div></div>
-      <div class="mode reveal"><div class="id">M3 · REWRITE</div><div class="t">标题与改写</div><div class="d">标题两道门检验，候选 + 优劣 + 推荐。</div><div class="q">"给我几个新标题"</div></div>
-      <div class="mode reveal"><div class="id">M4 · RESEARCH</div><div class="t">传播研究</div><div class="d">知识库检索 + 理论冲突登记。</div><div class="q">"研究一下XX传播现象"</div></div>
-      <div class="mode reveal"><div class="id">M5 · COMMUNITY</div><div class="t">社群诊断与设计</div><div class="d">Identity / Norm / Status / Ritual 十层结构。</div><div class="q">"800 人的群只有 20 人说话"</div></div>
-      <div class="mode reveal"><div class="id">M6 · POSTMORTEM</div><div class="t">传播复盘</div><div class="d">先排除外生变量，再漏斗定位归因。</div><div class="q">"曝光 20 万完播 2%，复盘一下"</div></div>
-      <div class="mode reveal"><div class="id">M7 · LONGFORM</div><div class="t">长文深度优化</div><div class="d">论证地图 · 认知负荷曲线 · 语义压缩 · 结构重排。先结构后逐句。</div><div class="q">"优化这篇 6000 字文章"</div></div>
-      <div class="mode reveal"><div class="id">×13</div><div class="t">平台适配</div><div class="d">公众号 / 小红书 / 抖音 / B站 / 知乎 / 微博 / X / TikTok / YouTube…</div><div class="q">"改成抖音口播稿"</div></div>
+      <div class="mode reveal"><div class="id">M1 · QUICK</div><div class="t">快速诊断</div><div class="d">标题/首屏逐要素拆解，秒级定位最短板。</div><div class="q">"帮我看看这个标题行不行"</div></div>
+      <div class="mode reveal"><div class="id">M2 · DEEP</div><div class="t">机制级分析</div><div class="d">十六层行为链 + 机制映射，解释为什么传播不动。</div><div class="q">"为什么这篇传播不动？"</div></div>
+      <div class="mode reveal"><div class="id">M3 · REWRITE</div><div class="t">改写与标题</div><div class="d">先诊断后改写；候选方案 + 优劣说明，等你确认。</div><div class="q">"给我几个新标题"</div></div>
+      <div class="mode reveal"><div class="id">M4 · RESEARCH</div><div class="t">传播研究</div><div class="d">检索 216 节点知识库，理论冲突单独登记。</div><div class="q">"研究一下这个传播现象"</div></div>
+      <div class="mode reveal"><div class="id">M5 · COMMUNITY</div><div class="t">社群策略</div><div class="d">Identity/Norm/Status/Ritual 十层结构诊断与设计。</div><div class="q">"800 人社群只有 20 人说话"</div></div>
+      <div class="mode reveal"><div class="id">M6 · POSTMORTEM</div><div class="t">传播复盘</div><div class="d">先排除外生变量，再按漏斗相邻比率定位环节。</div><div class="q">"曝光 20 万、完播 2%，复盘"</div></div>
+      <div class="mode reveal"><div class="id">M7 · LONGFORM</div><div class="t">长文深度优化</div><div class="d">3000 字以上：命题抽取、论证地图、认知负荷、两遍优化。先结构后逐句。</div><div class="q">"优化这篇 6000 字行业研究"</div></div>
     </div>
   </div>
 </section>
@@ -449,24 +562,86 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
 <!-- ================= EVALS ================= -->
 <section id="evals" style="padding-top:30px">
   <div class="wrap">
-    <div class="kicker reveal">Evaluation · 透明评测</div>
+    <div class="kicker reveal">Evaluation · 评测</div>
     <h2 class="reveal">自己说好不算数，<br><span class="grad">盲测数据</span>放这里。</h2>
     <div class="eval-grid">
       <div class="bars reveal">
-        <div class="bar-row"><div class="bt"><b>Self-eval · 160 案通过率</b><span>160 / 160</span></div><div class="bar"><i data-w="100"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>Self-eval · 基础集均值</b><span>17.71 / 18</span></div><div class="bar"><i data-w="98.4"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>盲测 · 三轮通过</b><span>32/32 × 3</span></div><div class="bar"><i data-w="100"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>盲测 · 最新轮均值（隔离环境）</b><span>17.53 / 18</span></div><div class="bar gold"><i data-w="97.4"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>长文实跑 · 15 类埋设缺陷命中</b><span>15 / 15</span></div><div class="bar"><i data-w="100"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>self-eval · 基础集 110 案</b><span>17.71 / 18</span></div><div class="bar"><i data-w="98.4"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>self-eval · 长文集 50 案（三轮迭代后）</b><span>17.94 / 18</span></div><div class="bar"><i data-w="99.7"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>环境隔离盲测 · 首轮</b><span>17.19 / 18</span></div><div class="bar gold"><i data-w="95.5"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>环境隔离盲测 · 第三轮</b><span>17.53 / 18</span></div><div class="bar gold"><i data-w="97.4"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>5000 字演示长文 · 预埋 15 类缺陷检出</b><span>15 / 15</span></div><div class="bar"><i data-w="100"></i></div></div>
       </div>
-      <div class="reveal">
-        <div class="eval-card">
-          <h4>三角色盲测协议</h4>
-          <p><span class="hl">R1</span> 作答者不可见答案 · <span class="hl">R2</span> 独立评分 · <span class="hl">R3</span> 审计。
-          三轮环境隔离盲测全部通过、红线为零；均值 17.19 → 17.66 → 17.53，与 self-eval 的差距收敛至噪声级。</p>
-        </div>
-        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只能证明"知识库可支撑合格应答"；所以我们补做了环境隔离盲测，协议与全部评分留痕公开在仓库中。</div>
+      <div class="eval-card reveal">
+        <h4>怎么读这些分数</h4>
+        <p><span class="hl">160/160</span> 案例通过，<span class="hl">红线 0</span>（overclaiming / ethical_safety 任一为零即整案失败）。环境隔离盲测：作答者不可见答案、独立评分者判分、三轮迭代 <span class="hl">32/32</span> 全过。</p>
+        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只证明"知识库可支撑合格应答"。所以补做了环境隔离盲测——协议（R1/R2/R3 三角色分离）与全部评分留痕都在仓库里开源。</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTALL ================= -->
+<section id="install" style="padding-top:30px">
+  <div class="wrap">
+    <div class="kicker reveal">Install · 三分钟接入</div>
+    <h2 class="reveal">遵循 Agent Skills 开放标准，<br><span class="grad">主流 Agent 原生兼容</span>。</h2>
+    <p class="lead reveal">克隆仓库，把目录放进对应技能路径，然后用自然语言调用。</p>
+    <div class="reveal">
+      <div class="tabs" id="tabs">
+        <button class="tab on" data-t="t0">Claude Code / ZCode<span class="sub">~/.claude/skills</span></button>
+        <button class="tab" data-t="t1">Codex CLI<span class="sub">~/.codex/skills</span></button>
+        <button class="tab" data-t="t2">OpenCode<span class="sub">~/.config/opencode/skills</span></button>
+        <button class="tab" data-t="t3">Trae<span class="sub">.trae/skills</span></button>
+        <button class="tab" data-t="t4">其他 Agent<span class="sub">AGENTS.md</span></button>
+      </div>
+      <div class="codebox" id="t0"><button class="cp">COPY</button><pre><span class="c"># 全局安装（所有项目可用）</span>
+git clone https://github.com/mizzlelover/communication-science-skill.git
+mkdir -p ~/.claude/skills
+cp -R communication-science-skill ~/.claude/skills/
+
+<span class="c"># 或项目级安装</span>
+cp -R communication-science-skill your-project/.claude/skills/</pre></div>
+      <div class="codebox" id="t1" hidden><button class="cp">COPY</button><pre><span class="c"># Codex CLI 原生支持 Agent Skills 标准</span>
+git clone https://github.com/mizzlelover/communication-science-skill.git
+mkdir -p ~/.codex/skills
+cp -R communication-science-skill ~/.codex/skills/
+
+<span class="c"># 使用：自动发现，或显式唤起</span>
+<span class="s">$communication-science-skill</span> 帮我诊断这篇公众号文章</pre></div>
+      <div class="codebox" id="t2" hidden><button class="cp">COPY</button><pre><span class="c"># OpenCode 原生支持 Agent Skills 标准</span>
+git clone https://github.com/mizzlelover/communication-science-skill.git
+mkdir -p ~/.config/opencode/skills
+cp -R communication-science-skill ~/.config/opencode/skills/
+
+<span class="c"># 或项目级：.opencode/skills/</span></pre></div>
+      <div class="codebox" id="t3" hidden><button class="cp">COPY</button><pre><span class="c"># Trae</span>
+git clone https://github.com/mizzlelover/communication-science-skill.git
+cp -R communication-science-skill your-project/.trae/skills/</pre></div>
+      <div class="codebox" id="t4" hidden><button class="cp">COPY</button><pre><span class="c"># 只识别 AGENTS.md 的 Agent？加一行即可：</span>
+<span class="k">处理传播诊断 / 内容优化 / 社群增长 / 长文优化 / 传播复盘类任务时，
+先阅读 communication-science-skill/SKILL.md 并严格遵循其工作流与铁律。</span></pre></div>
+      <p class="inst-note">对话调用<span style="color:var(--green)">零依赖</span>；仅 <code>scripts/</code> 工程工具需要 Python 3.9+ / PyYAML。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section id="principles" style="padding-top:40px">
+  <div class="wrap">
+    <div class="kicker reveal">Design Principles · 十条军规</div>
+    <h2 class="reveal">理论有依据，建议有边界，<br><span class="grad">方法可进化。</span></h2>
+    <div class="prin reveal">
+      <span>Mechanism <b>before</b> Tactic</span>
+      <span>Evidence <b>before</b> Confidence</span>
+      <span>Human <b>before</b> Platform</span>
+      <span>Platform <b>as</b> Adapter</span>
+      <span>Diagnosis <b>before</b> Rewrite</span>
+      <span>Virality <b>≠</b> Community</span>
+      <span>Correlation <b>≠</b> Causation</span>
+      <span>Short-term Performance <b>≠</b> Long-term Value</span>
+      <span>Useful <b>≠</b> Manipulative</span>
+      <span>Theory + Boundary + Practice</span>
     </div>
   </div>
 </section>
@@ -479,130 +654,328 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
       <div class="reveal">
         <div class="author-name">谁是专家</div>
         <p class="author-desc">
-          本方法论由「谁是专家」研究并构建——从 100 部经典与原始文献出发，拒绝"一本书一个摘要"，
+          本方法论的研究者与构建者。从 100 本经典与原始文献出发，拒绝"一本书一个摘要"，
           以机制为单元跨来源蒸馏，全程携带证据意识与伦理边界。
           同名创作 IP 持续分享传播科学、社群增长与 AI 时代的知识工作方法。
         </p>
         <div class="socials">
-          <a class="soc" href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener">
-            <span class="ic" style="background:rgba(254,44,85,.15);color:#fe2c55">书</span>
-            <span><span class="n">小红书 · 谁是专家</span><br><span class="m">RED ID: 9945310245</span></span>
-            <span class="go">↗</span>
-          </a>
-          <a class="soc" href="https://x.com/dboy_yi2025" target="_blank" rel="noopener">
-            <span class="ic" style="background:rgba(255,255,255,.12);color:#fff">𝕏</span>
-            <span><span class="n">X (Twitter) · @dboy_yi2025</span><br><span class="m">Communication science in the AI era</span></span>
-            <span class="go">↗</span>
-          </a>
-          <a class="soc" href="#author" onclick="return false">
-            <span class="ic" style="background:rgba(52,211,153,.14);color:#34d399">微</span>
-            <span><span class="n">微信公众号 · 谁是专家</span><br><span class="m">微信搜一搜，或扫码 →</span></span>
-            <span class="go" style="opacity:.4">◦</span>
-          </a>
+          <a class="soc" href="https://www.xiaohongshu.com/user/profile/64dd6c680000000001011d25" target="_blank" rel="noopener"><span class="ic">📕</span><span><span class="n">小红书 · 谁是专家</span><br><span class="m">RED ID: 9945310245</span></span><span class="go">→</span></a>
+          <a class="soc" href="https://x.com/dboy_yi2025" target="_blank" rel="noopener"><span class="ic">𝕏</span><span><span class="n">X (Twitter) · @dboy_yi2025</span><br><span class="m">Methods &amp; notes in public</span></span><span class="go">→</span></a>
+          <span class="soc"><span class="ic">💬</span><span><span class="n">微信公众号 · 谁是专家</span><br><span class="m">微信搜一搜，或扫码 →</span></span></span>
         </div>
       </div>
       <div class="qr-side reveal">
         <img class="qr-img" src="wechat-qrcode.png" alt="微信公众号「谁是专家」二维码">
-        <div class="qr-cap">WECHAT · SCAN TO FOLLOW</div>
+        <div class="qr-cap">微信扫码 · 搜一搜「谁是专家」<br>SCAN TO FOLLOW ON WECHAT</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FINAL CTA ================= -->
+<!-- ================= FINAL ================= -->
 <section class="final">
   <div class="wrap">
-    <h2 class="reveal">理论有依据，建议有边界，<br><span class="grad">方法可进化。</span></h2>
-    <p class="lead reveal" style="text-align:center">开源 · 可部署 · 可扩展。把它放进你的 Agent，让下一次传播决策有据可依。</p>
+    <h2 class="reveal">什么样的信息，在什么样的人、<br><span class="grad">什么样的机制下</span>，会以什么方式改变行动？</h2>
+    <p class="lead reveal">这是这套方法论试图回答的问题。现在，把它装进你的 Agent。</p>
     <div class="cta reveal" style="justify-content:center">
-      <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">⭐ Star on GitHub</a>
-      <a class="btn btn-ghost" href="https://github.com/mizzlelover/communication-science-skill#quick-start" target="_blank" rel="noopener">三分钟部署指南</a>
+      <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub · Star &amp; Clone</a>
+      <a class="btn btn-ghost" href="#install">接入指南 ↑</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="foot-in">
-    <div>© 2026 谁是专家 · Human Communication &amp; Community Growth Engine v1.1.9</div>
-    <div><a href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub</a> · Code: MIT · Knowledge: CC BY 4.0</div>
+    <div>© 2026 谁是专家 · Human Communication &amp; Community Growth Engine</div>
+    <div><a href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub</a> · Code: MIT · Knowledge: CC BY 4.0 · v1.1.9</div>
   </div>
 </footer>
 
 </main>
 
 <script>
-/* ---------- canvas network ---------- */
-const cv=document.getElementById('net'),cx=cv.getContext('2d');
-let W,H,pts=[],mouse={x:-999,y:-999};
-const DPR=Math.min(devicePixelRatio||1,2);
-function size(){W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';cx.setTransform(DPR,0,0,DPR,0,0);
-  const n=Math.min(90,Math.floor(W*H/16000));pts=[];
-  for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,
-    r:Math.random()*1.6+.8,c:['34,211,238','139,92,246','236,72,153'][Math.floor(Math.random()*3)]});
-}
-size();addEventListener('resize',size);
-addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
-function pulseFrom(node,i,depth){ /* occasionally fire a pulse */
-  if(depth>2)return; node.fire=0;
-}
-function tick(){
-  cx.clearRect(0,0,W,H);
-  const R=Math.min(150,W/9);
-  for(const p of pts){
-    p.x+=p.vx;p.y+=p.vy;
-    if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
-    cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fillStyle=`rgba(${p.c},.75)`;cx.fill();
-  }
-  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
-    const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-    if(d<R){cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);
-      cx.strokeStyle=`rgba(99,120,180,${(1-d/R)*.32})`;cx.lineWidth=.7;cx.stroke();}
-  }
-  // mouse link
-  for(const p of pts){const d=Math.hypot(p.x-mouse.x,p.y-mouse.y);
-    if(d<170){cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);
-      cx.strokeStyle=`rgba(34,211,238,${(1-d/170)*.35})`;cx.lineWidth=.8;cx.stroke();}}
-  requestAnimationFrame(tick);
-}
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches)tick();
-else{cx.clearRect(0,0,W,H)}
+/* ATLAS data — real subgraph distilled from knowledge/mechanisms/ (216 nodes → 73 hubs, 32 domains) */
+const ATLAS = {"nodes": [{"id": "misinformation_velocity", "zh": "错误信息传播速度", "en": "Misinformation Velocity", "d": "ai_information_environment", "dz": "AI 信息环境（§23 新增模块）", "g": "B+", "grp": "plt", "deg": 18}, {"id": "synthetic_media_trust", "zh": "合成媒体的信任问题", "en": "Synthetic Media Trust", "d": "ai_information_environment", "dz": "AI 信息环境（§23 新增模块）", "g": "C", "grp": "plt", "deg": 12}, {"id": "ai_information_intermediaries", "zh": "AI 作为信息中介", "en": "AI Information Intermediaries", "d": "ai_information_environment", "dz": "AI 信息环境（§23 新增模块）", "g": "C", "grp": "plt", "deg": 10}, {"id": "selective_attention", "zh": "选择性注意", "en": "Selective Attention", "d": "attention", "dz": "注意", "g": "A", "grp": "cog", "deg": 19}, {"id": "attention_capacity_limits", "zh": "注意容量限制", "en": "Attention Capacity Limits", "d": "attention", "dz": "注意", "g": "A", "grp": "cog", "deg": 19}, {"id": "cognitive_dissonance", "zh": "认知失调理论", "en": "Cognitive Dissonance Theory", "d": "attitude_change", "dz": "态度改变", "g": "A-", "grp": "per", "deg": 15}, {"id": "attitude_strength_accessibility", "zh": "态度强度与可达性", "en": "Attitude Strength and Accessibility", "d": "attitude_change", "dz": "态度改变", "g": "A-", "grp": "per", "deg": 13}, {"id": "authority_influence", "zh": "权威影响", "en": "Authority Influence (Obedience to Authority)", "d": "authority", "dz": "权威", "g": "B+", "grp": "soc", "deg": 12}, {"id": "credentialing_symbols", "zh": "资历符号", "en": "Credentialing Symbols", "d": "authority", "dz": "权威", "g": "B", "grp": "soc", "deg": 9}, {"id": "loss_aversion", "zh": "损失厌恶", "en": "Loss Aversion", "d": "behavioral_economics", "dz": "行为经济学", "g": "B", "grp": "mot", "deg": 14}, {"id": "scarcity_mindset", "zh": "稀缺心态", "en": "Scarcity Mindset (Tunneling / Bandwidth Tax)", "d": "behavioral_economics", "dz": "行为经济学", "g": "C", "grp": "mot", "deg": 12}, {"id": "nudge_mechanism", "zh": "助推", "en": "Nudge (Choice Architecture)", "d": "behavioral_economics", "dz": "行为经济学", "g": "C", "grp": "mot", "deg": 11}, {"id": "need_to_belong", "zh": "归属基本需要", "en": "Need to Belong", "d": "belonging", "dz": "归属", "g": "A-", "grp": "com", "deg": 13}, {"id": "ostracism_effects", "zh": "排斥效应", "en": "Ostracism Effects", "d": "belonging", "dz": "归属", "g": "A-", "grp": "com", "deg": 12}, {"id": "mental_availability", "zh": "心理可得性", "en": "Mental Availability", "d": "brand_consumer", "dz": "品牌与消费者行为", "g": "B+", "grp": "plt", "deg": 17}, {"id": "distinctive_brand_assets", "zh": "独特性品牌资产", "en": "Distinctive Brand Assets", "d": "brand_consumer", "dz": "品牌与消费者行为", "g": "B+", "grp": "plt", "deg": 16}, {"id": "category_entry_points", "zh": "品类进入点", "en": "Category Entry Points", "d": "brand_consumer", "dz": "品牌与消费者行为", "g": "B+", "grp": "plt", "deg": 15}, {"id": "working_memory_limits", "zh": "工作记忆容量限制", "en": "Working Memory Limits", "d": "cognitive_load", "dz": "认知负荷", "g": "A", "grp": "cog", "deg": 19}, {"id": "information_overload", "zh": "信息过载", "en": "Information Overload", "d": "cognitive_load", "dz": "认知负荷", "g": "B", "grp": "cog", "deg": 16}, {"id": "community_boundaries", "zh": "社群边界", "en": "Community Boundaries", "d": "community", "dz": "社群", "g": "B", "grp": "com", "deg": 16}, {"id": "status_systems", "zh": "地位系统", "en": "Status Systems", "d": "community", "dz": "社群", "g": "B", "grp": "com", "deg": 16}, {"id": "sense_of_community", "zh": "社区感", "en": "Sense of Community", "d": "community", "dz": "社群", "g": "B+", "grp": "com", "deg": 15}, {"id": "complex_contagion", "zh": "复杂传染", "en": "Complex Contagion", "d": "complex_contagion", "dz": "复杂传染", "g": "B+", "grp": "net", "deg": 11}, {"id": "social_reinforcement", "zh": "多重社会强化", "en": "Social Reinforcement", "d": "complex_contagion", "dz": "复杂传染", "g": "B+", "grp": "net", "deg": 10}, {"id": "chunking", "zh": "组块化", "en": "Chunking", "d": "comprehension", "dz": "长文阅读理解与论证（Long-form Intelligence 增量 v1.1）", "g": "A-", "grp": "cog", "deg": 8}, {"id": "schema_formation", "zh": "图式形成", "en": "Schema Formation", "d": "comprehension", "dz": "长文阅读理解与论证（Long-form Intelligence 增量 v1.1）", "g": "A-", "grp": "cog", "deg": 8}, {"id": "dual_process_theory", "zh": "双系统理论", "en": "Dual-Process Theory (System 1 / System 2)", "d": "decision_making", "dz": "决策", "g": "B", "grp": "mot", "deg": 16}, {"id": "availability_heuristic", "zh": "可得性启发式", "en": "Availability Heuristic", "d": "decision_making", "dz": "决策", "g": "A", "grp": "mot", "deg": 12}, {"id": "opinion_leadership", "zh": "意见领袖", "en": "Opinion Leadership", "d": "diffusion", "dz": "扩散", "g": "B+", "grp": "net", "deg": 13}, {"id": "diffusion_of_innovations", "zh": "创新扩散理论", "en": "Diffusion of Innovations", "d": "diffusion", "dz": "扩散", "g": "A-", "grp": "net", "deg": 12}, {"id": "gatekeeping_dynamics", "zh": "守门机制", "en": "Gatekeeping Dynamics", "d": "diffusion", "dz": "扩散", "g": "B", "grp": "net", "deg": 12}, {"id": "emotional_arousal", "zh": "情绪唤醒", "en": "Emotional Arousal", "d": "emotion", "dz": "情绪", "g": "B", "grp": "mot", "deg": 17}, {"id": "affect_heuristic", "zh": "情感启发式", "en": "Affect Heuristic", "d": "emotion", "dz": "情绪", "g": "B", "grp": "mot", "deg": 15}, {"id": "framing_effects", "zh": "沟通框架效应", "en": "Framing Effects (Message Framing)", "d": "framing", "dz": "框架", "g": "B+", "grp": "per", "deg": 16}, {"id": "metaphor_framing", "zh": "隐喻框架", "en": "Metaphor Framing", "d": "framing", "dz": "框架", "g": "B", "grp": "per", "deg": 11}, {"id": "hook_model", "zh": "Hook 模型", "en": "Hook Model", "d": "habit", "dz": "习惯", "g": "D", "grp": "mot", "deg": 14}, {"id": "friction_reduction", "zh": "摩擦削减", "en": "Friction Reduction", "d": "habit", "dz": "习惯", "g": "B", "grp": "mot", "deg": 12}, {"id": "social_identity_theory", "zh": "社会认同理论", "en": "Social Identity Theory", "d": "identity", "dz": "身份认同", "g": "A-", "grp": "soc", "deg": 21}, {"id": "self_presentation_impression_management", "zh": "自我呈现与印象管理", "en": "Self-Presentation / Impression Management", "d": "identity", "dz": "身份认同", "g": "B", "grp": "soc", "deg": 19}, {"id": "concreteness_in_language", "zh": "语言具体性", "en": "Concreteness in Language", "d": "language_rhetoric", "dz": "语言与修辞", "g": "B+", "grp": "per", "deg": 16}, {"id": "specificity_effect", "zh": "具体数字与细节的效能", "en": "Specificity Effect (Numbers and Details)", "d": "language_rhetoric", "dz": "语言与修辞", "g": "B", "grp": "per", "deg": 10}, {"id": "gist_vs_verbatim_memory", "zh": "要旨记忆与逐字记忆", "en": "Gist vs Verbatim Memory (Fuzzy-Trace Theory)", "d": "memory", "dz": "记忆", "g": "A-", "grp": "cog", "deg": 17}, {"id": "encoding_specificity", "zh": "编码特异性", "en": "Encoding Specificity", "d": "memory", "dz": "记忆", "g": "A", "grp": "cog", "deg": 14}, {"id": "zeigarnik_effect", "zh": "蔡格尼克效应", "en": "Zeigarnik Effect", "d": "memory", "dz": "记忆", "g": "B", "grp": "cog", "deg": 13}, {"id": "implementation_intentions", "zh": "执行意图", "en": "Implementation Intentions", "d": "motivation", "dz": "动机", "g": "A", "grp": "mot", "deg": 14}, {"id": "self_efficacy", "zh": "自我效能", "en": "Self-Efficacy", "d": "motivation", "dz": "动机", "g": "B", "grp": "mot", "deg": 14}, {"id": "narrative_transportation", "zh": "叙事传输", "en": "Narrative Transportation", "d": "narrative", "dz": "叙事", "g": "B+", "grp": "per", "deg": 15}, {"id": "anecdote_vs_statistics", "zh": "个案与统计的说服力差距", "en": "Anecdote vs Statistics", "d": "narrative", "dz": "叙事", "g": "B", "grp": "per", "deg": 12}, {"id": "weak_ties_strength", "zh": "弱连接优势", "en": "The Strength of Weak Ties", "d": "network_effects", "dz": "网络效应", "g": "A-", "grp": "net", "deg": 13}, {"id": "strong_ties_support", "zh": "强连接支持", "en": "Strong Ties Support", "d": "network_effects", "dz": "网络效应", "g": "B+", "grp": "net", "deg": 12}, {"id": "network_density", "zh": "网络密度", "en": "Network Density", "d": "network_effects", "dz": "网络效应", "g": "B+", "grp": "net", "deg": 11}, {"id": "mere_exposure", "zh": "单纯曝光效应", "en": "Mere Exposure Effect", "d": "perception", "dz": "感知", "g": "A-", "grp": "cog", "deg": 14}, {"id": "visual_hierarchy", "zh": "视觉层级", "en": "Visual Hierarchy", "d": "perception", "dz": "感知", "g": "B", "grp": "cog", "deg": 12}, {"id": "psychological_reactance", "zh": "心理逆反", "en": "Psychological Reactance", "d": "persuasion", "dz": "说服", "g": "A-", "grp": "per", "deg": 21}, {"id": "central_route_processing", "zh": "中心路径加工", "en": "Central Route Processing", "d": "persuasion", "dz": "说服", "g": "A-", "grp": "per", "deg": 16}, {"id": "elaboration_likelihood_model", "zh": "精细加工可能性模型", "en": "Elaboration Likelihood Model (ELM)", "d": "persuasion", "dz": "说服", "g": "A-", "grp": "per", "deg": 15}, {"id": "algorithmic_amplification", "zh": "算法放大", "en": "Algorithmic Amplification", "d": "platform_algorithmic", "dz": "平台与算法中介", "g": "B+", "grp": "plt", "deg": 22}, {"id": "attention_economics", "zh": "注意力经济学", "en": "Attention Economics", "d": "platform_algorithmic", "dz": "平台与算法中介", "g": "A-", "grp": "plt", "deg": 15}, {"id": "engagement_optimization_bias", "zh": "互动优化偏差", "en": "Engagement Optimization Bias", "d": "platform_algorithmic", "dz": "平台与算法中介", "g": "B+", "grp": "plt", "deg": 14}, {"id": "curiosity_gap", "zh": "好奇缺口", "en": "Curiosity Gap (Information Gap Theory)", "d": "prediction_surprise", "dz": "预测与意外", "g": "B", "grp": "cog", "deg": 20}, {"id": "prediction_error", "zh": "预测误差", "en": "Prediction Error", "d": "prediction_surprise", "dz": "预测与意外", "g": "A", "grp": "cog", "deg": 11}, {"id": "processing_fluency", "zh": "处理流畅性", "en": "Processing Fluency", "d": "processing_fluency", "dz": "处理流畅性", "g": "A-", "grp": "cog", "deg": 23}, {"id": "fluency_truth_effect", "zh": "流畅性致真错觉", "en": "Illusory Truth Effect (Fluency-based Truthiness)", "d": "processing_fluency", "dz": "处理流畅性", "g": "A-", "grp": "cog", "deg": 15}, {"id": "variable_ratio_reward", "zh": "可变比率强化", "en": "Variable-Ratio Reinforcement", "d": "reward", "dz": "奖励", "g": "B", "grp": "mot", "deg": 15}, {"id": "endowed_progress_effect", "zh": "人为进度效应", "en": "Endowed Progress Effect", "d": "reward", "dz": "奖励", "g": "B", "grp": "mot", "deg": 13}, {"id": "fear_of_missing_out", "zh": "错失恐惧", "en": "Fear of Missing Out (FOMO)", "d": "social_comparison", "dz": "社会比较", "g": "B", "grp": "soc", "deg": 10}, {"id": "upward_social_comparison", "zh": "上行社会比较", "en": "Upward Social Comparison", "d": "social_comparison", "dz": "社会比较", "g": "B", "grp": "soc", "deg": 9}, {"id": "commitment_consistency", "zh": "承诺一致性", "en": "Commitment and Consistency", "d": "social_norms", "dz": "社会规范", "g": "A-", "grp": "soc", "deg": 19}, {"id": "reciprocity_norm", "zh": "互惠规范", "en": "Reciprocity Norm", "d": "social_norms", "dz": "社会规范", "g": "A-", "grp": "soc", "deg": 13}, {"id": "social_proof", "zh": "社会认同", "en": "Social Proof", "d": "social_proof", "dz": "社会认同（从众证据）", "g": "A-", "grp": "soc", "deg": 22}, {"id": "normative_influence", "zh": "规范性影响", "en": "Normative Influence", "d": "social_proof", "dz": "社会认同（从众证据）", "g": "A-", "grp": "soc", "deg": 18}, {"id": "source_credibility_model", "zh": "信源可信度模型", "en": "Source Credibility Model", "d": "trust", "dz": "信任", "g": "A-", "grp": "soc", "deg": 24}, {"id": "trust_calibration", "zh": "信任校准", "en": "Trust Calibration", "d": "trust", "dz": "信任", "g": "B", "grp": "soc", "deg": 20}], "edges": [{"a": "affect_heuristic", "b": "anecdote_vs_statistics"}, {"a": "affect_heuristic", "b": "availability_heuristic"}, {"a": "affect_heuristic", "b": "dual_process_theory"}, {"a": "affect_heuristic", "b": "emotional_arousal"}, {"a": "affect_heuristic", "b": "loss_aversion"}, {"a": "affect_heuristic", "b": "processing_fluency"}, {"a": "ai_information_intermediaries", "b": "algorithmic_amplification"}, {"a": "ai_information_intermediaries", "b": "attention_economics"}, {"a": "ai_information_intermediaries", "b": "gatekeeping_dynamics"}, {"a": "algorithmic_amplification", "b": "attention_economics"}, {"a": "algorithmic_amplification", "b": "emotional_arousal"}, {"a": "algorithmic_amplification", "b": "engagement_optimization_bias"}, {"a": "algorithmic_amplification", "b": "fear_of_missing_out"}, {"a": "algorithmic_amplification", "b": "gatekeeping_dynamics"}, {"a": "algorithmic_amplification", "b": "misinformation_velocity"}, {"a": "algorithmic_amplification", "b": "opinion_leadership"}, {"a": "anecdote_vs_statistics", "b": "availability_heuristic"}, {"a": "anecdote_vs_statistics", "b": "gist_vs_verbatim_memory"}, {"a": "anecdote_vs_statistics", "b": "misinformation_velocity"}, {"a": "anecdote_vs_statistics", "b": "narrative_transportation"}, {"a": "attention_capacity_limits", "b": "attention_economics"}, {"a": "attention_capacity_limits", "b": "dual_process_theory"}, {"a": "attention_capacity_limits", "b": "information_overload"}, {"a": "attention_capacity_limits", "b": "scarcity_mindset"}, {"a": "attention_capacity_limits", "b": "selective_attention"}, {"a": "attention_capacity_limits", "b": "working_memory_limits"}, {"a": "attention_economics", "b": "engagement_optimization_bias"}, {"a": "attention_economics", "b": "mental_availability"}, {"a": "attitude_strength_accessibility", "b": "central_route_processing"}, {"a": "attitude_strength_accessibility", "b": "cognitive_dissonance"}, {"a": "attitude_strength_accessibility", "b": "elaboration_likelihood_model"}, {"a": "attitude_strength_accessibility", "b": "mere_exposure"}, {"a": "authority_influence", "b": "credentialing_symbols"}, {"a": "authority_influence", "b": "psychological_reactance"}, {"a": "authority_influence", "b": "source_credibility_model"}, {"a": "authority_influence", "b": "trust_calibration"}, {"a": "availability_heuristic", "b": "dual_process_theory"}, {"a": "availability_heuristic", "b": "fluency_truth_effect"}, {"a": "availability_heuristic", "b": "gatekeeping_dynamics"}, {"a": "availability_heuristic", "b": "misinformation_velocity"}, {"a": "category_entry_points", "b": "distinctive_brand_assets"}, {"a": "category_entry_points", "b": "encoding_specificity"}, {"a": "category_entry_points", "b": "mental_availability"}, {"a": "category_entry_points", "b": "mere_exposure"}, {"a": "category_entry_points", "b": "visual_hierarchy"}, {"a": "central_route_processing", "b": "cognitive_dissonance"}, {"a": "central_route_processing", "b": "dual_process_theory"}, {"a": "central_route_processing", "b": "elaboration_likelihood_model"}, {"a": "chunking", "b": "gist_vs_verbatim_memory"}, {"a": "chunking", "b": "schema_formation"}, {"a": "chunking", "b": "working_memory_limits"}, {"a": "cognitive_dissonance", "b": "commitment_consistency"}, {"a": "commitment_consistency", "b": "endowed_progress_effect"}, {"a": "commitment_consistency", "b": "hook_model"}, {"a": "commitment_consistency", "b": "normative_influence"}, {"a": "commitment_consistency", "b": "psychological_reactance"}, {"a": "commitment_consistency", "b": "reciprocity_norm"}, {"a": "community_boundaries", "b": "network_density"}, {"a": "community_boundaries", "b": "sense_of_community"}, {"a": "community_boundaries", "b": "social_identity_theory"}, {"a": "complex_contagion", "b": "network_density"}, {"a": "complex_contagion", "b": "social_reinforcement"}, {"a": "complex_contagion", "b": "strong_ties_support"}, {"a": "complex_contagion", "b": "weak_ties_strength"}, {"a": "concreteness_in_language", "b": "encoding_specificity"}, {"a": "concreteness_in_language", "b": "fluency_truth_effect"}, {"a": "concreteness_in_language", "b": "implementation_intentions"}, {"a": "concreteness_in_language", "b": "metaphor_framing"}, {"a": "concreteness_in_language", "b": "processing_fluency"}, {"a": "concreteness_in_language", "b": "specificity_effect"}, {"a": "credentialing_symbols", "b": "distinctive_brand_assets"}, {"a": "credentialing_symbols", "b": "source_credibility_model"}, {"a": "credentialing_symbols", "b": "status_systems"}, {"a": "curiosity_gap", "b": "emotional_arousal"}, {"a": "curiosity_gap", "b": "hook_model"}, {"a": "curiosity_gap", "b": "prediction_error"}, {"a": "curiosity_gap", "b": "zeigarnik_effect"}, {"a": "diffusion_of_innovations", "b": "opinion_leadership"}, {"a": "distinctive_brand_assets", "b": "mental_availability"}, {"a": "distinctive_brand_assets", "b": "mere_exposure"}, {"a": "distinctive_brand_assets", "b": "processing_fluency"}, {"a": "distinctive_brand_assets", "b": "visual_hierarchy"}, {"a": "dual_process_theory", "b": "elaboration_likelihood_model"}, {"a": "dual_process_theory", "b": "processing_fluency"}, {"a": "dual_process_theory", "b": "working_memory_limits"}, {"a": "elaboration_likelihood_model", "b": "source_credibility_model"}, {"a": "emotional_arousal", "b": "engagement_optimization_bias"}, {"a": "emotional_arousal", "b": "misinformation_velocity"}, {"a": "emotional_arousal", "b": "psychological_reactance"}, {"a": "encoding_specificity", "b": "gist_vs_verbatim_memory"}, {"a": "endowed_progress_effect", "b": "hook_model"}, {"a": "endowed_progress_effect", "b": "variable_ratio_reward"}, {"a": "endowed_progress_effect", "b": "zeigarnik_effect"}, {"a": "engagement_optimization_bias", "b": "hook_model"}, {"a": "engagement_optimization_bias", "b": "misinformation_velocity"}, {"a": "engagement_optimization_bias", "b": "variable_ratio_reward"}, {"a": "fear_of_missing_out", "b": "need_to_belong"}, {"a": "fear_of_missing_out", "b": "scarcity_mindset"}, {"a": "fear_of_missing_out", "b": "social_proof"}, {"a": "fear_of_missing_out", "b": "upward_social_comparison"}, {"a": "fear_of_missing_out", "b": "variable_ratio_reward"}, {"a": "fluency_truth_effect", "b": "mere_exposure"}, {"a": "fluency_truth_effect", "b": "misinformation_velocity"}, {"a": "fluency_truth_effect", "b": "processing_fluency"}, {"a": "fluency_truth_effect", "b": "specificity_effect"}, {"a": "fluency_truth_effect", "b": "synthetic_media_trust"}, {"a": "framing_effects", "b": "gist_vs_verbatim_memory"}, {"a": "framing_effects", "b": "loss_aversion"}, {"a": "framing_effects", "b": "metaphor_framing"}, {"a": "friction_reduction", "b": "implementation_intentions"}, {"a": "friction_reduction", "b": "nudge_mechanism"}, {"a": "gatekeeping_dynamics", "b": "opinion_leadership"}, {"a": "gist_vs_verbatim_memory", "b": "misinformation_velocity"}, {"a": "gist_vs_verbatim_memory", "b": "schema_formation"}, {"a": "gist_vs_verbatim_memory", "b": "specificity_effect"}, {"a": "hook_model", "b": "variable_ratio_reward"}, {"a": "hook_model", "b": "zeigarnik_effect"}, {"a": "information_overload", "b": "scarcity_mindset"}, {"a": "information_overload", "b": "working_memory_limits"}, {"a": "mental_availability", "b": "mere_exposure"}, {"a": "mere_exposure", "b": "processing_fluency"}, {"a": "need_to_belong", "b": "normative_influence"}, {"a": "need_to_belong", "b": "ostracism_effects"}, {"a": "need_to_belong", "b": "self_presentation_impression_management"}, {"a": "need_to_belong", "b": "sense_of_community"}, {"a": "need_to_belong", "b": "strong_ties_support"}, {"a": "network_density", "b": "strong_ties_support"}, {"a": "normative_influence", "b": "ostracism_effects"}, {"a": "normative_influence", "b": "self_presentation_impression_management"}, {"a": "normative_influence", "b": "social_proof"}, {"a": "nudge_mechanism", "b": "social_proof"}, {"a": "ostracism_effects", "b": "upward_social_comparison"}, {"a": "prediction_error", "b": "variable_ratio_reward"}, {"a": "psychological_reactance", "b": "scarcity_mindset"}, {"a": "scarcity_mindset", "b": "working_memory_limits"}, {"a": "schema_formation", "b": "working_memory_limits"}, {"a": "selective_attention", "b": "visual_hierarchy"}, {"a": "self_efficacy", "b": "upward_social_comparison"}, {"a": "self_presentation_impression_management", "b": "status_systems"}, {"a": "sense_of_community", "b": "status_systems"}, {"a": "social_identity_theory", "b": "status_systems"}, {"a": "social_proof", "b": "social_reinforcement"}, {"a": "social_reinforcement", "b": "strong_ties_support"}, {"a": "source_credibility_model", "b": "specificity_effect"}, {"a": "source_credibility_model", "b": "synthetic_media_trust"}, {"a": "source_credibility_model", "b": "trust_calibration"}, {"a": "strong_ties_support", "b": "weak_ties_strength"}, {"a": "synthetic_media_trust", "b": "trust_calibration"}]};
+</script>
 
-/* ---------- reveal on scroll ---------- */
+<script>
+'use strict';
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============ 1. scroll progress ============ */
+const prog=document.getElementById('prog');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  prog.style.width=(h.scrollTop/(h.scrollHeight-innerHeight)*100)+'%';
+},{passive:true});
+
+/* ============ 2. background network ============ */
+(function(){
+  const cv=document.getElementById('net'),cx=cv.getContext('2d');
+  let W,H,pts=[],mouse={x:-9e3,y:-9e3},run=true;
+  const DPR=Math.min(devicePixelRatio||1,2);
+  function size(){W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;
+    cv.style.width=W+'px';cv.style.height=H+'px';cx.setTransform(DPR,0,0,DPR,0,0);
+    const n=Math.min(90,Math.floor(W*H/16000));pts=[];
+    for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.6+.8});}
+  size();addEventListener('resize',size);
+  addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+  function tick(){
+    if(run){
+      cx.clearRect(0,0,W,H);
+      const R=Math.min(150,W/9);
+      for(const p of pts){
+        p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      }
+      for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+        const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+        if(d<R){cx.strokeStyle=`rgba(99,120,180,${(1-d/R)*.16})`;cx.lineWidth=1;
+          cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();}
+      }
+      for(const p of pts){
+        const d=Math.hypot(p.x-mouse.x,p.y-mouse.y);
+        if(d<130&&d>0){p.x+=(p.x-mouse.x)/d*1.1;p.y+=(p.y-mouse.y)/d*1.1;}
+        cx.fillStyle='rgba(148,163,216,.65)';
+        cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill();
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
+/* ============ 3. reveal + counters ============ */
 const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
 }),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-/* ---------- counters ---------- */
 const cio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;cio.unobserve(e.target);
   const el=e.target,to=+el.dataset.to,t0=performance.now(),dur=1600;
   (function f(t){const k=Math.min(1,(t-t0)/dur),v=Math.floor(to*(1-Math.pow(1-k,3)));
-    el.textContent=v.toLocaleString();if(k<1)requestAnimationFrame(f);else el.textContent=to.toLocaleString();})(t0);
+    el.textContent=v.toLocaleString();if(k<1)requestAnimationFrame(f);})(t0);
 }),{threshold:.6});
 document.querySelectorAll('.num').forEach(el=>cio.observe(el));
 
-/* ---------- bars ---------- */
+/* ============ 4. eval bars ============ */
 const bio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;bio.unobserve(e.target);
-  e.target.querySelectorAll('i[data-w]').forEach((b,i)=>setTimeout(()=>b.style.width=b.dataset.w+'%',i*160));
+  e.target.querySelectorAll('i[data-w]').forEach(i=>i.style.width=i.dataset.w+'%');
 }),{threshold:.4});
 const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
 
-/* ---------- chain pulse ---------- */
-const chain=document.getElementById('chainEl');
-if(chain){const wrap=chain.parentElement,nodes=[...chain.querySelectorAll('.node')];let idx=0;
-  setInterval(()=>{nodes.forEach(n=>n.classList.remove('hit'));
-    const n1=nodes[idx%nodes.length],n2=nodes[(idx+1)%nodes.length];
-    n1.classList.add('hit');n2.classList.add('hit');
-    const target=n2.offsetLeft-wrap.clientWidth/2+n2.offsetWidth/2;
-    wrap.scrollTo({left:Math.max(0,target),behavior:'smooth'});
-    idx++;},900);}
+/* ============ 5. layers auto-cycle ============ */
+(function(){
+  const layers=[...document.querySelectorAll('.layer')];if(!layers.length)return;
+  let li=0;
+  layers.forEach(l=>l.addEventListener('click',()=>{
+    layers.forEach(x=>x.classList.remove('active'));l.classList.add('active');
+    li=layers.indexOf(l);
+  }));
+  if(RM)return;
+  setInterval(()=>{
+    layers.forEach(x=>x.classList.remove('active'));
+    li=(li+1)%layers.length;layers[li].classList.add('active');
+  },3600);
+})();
 
-/* ---------- layer stack ---------- */
-document.querySelectorAll('.layer').forEach(l=>l.addEventListener('click',()=>{
-  document.querySelectorAll('.layer').forEach(x=>x.classList.remove('active'));l.classList.add('active');
-}));
+/* ============ 6. behavior chain ============ */
+(function(){
+  const STAGES=[['👁','注意','ATTENTION'],['🎯','点击','CLICK'],['📖','阅读','READ'],['🧠','理解','COMPREHEND'],
+    ['💾','记忆','MEMORY'],['🤝','信任','TRUST'],['⚖️','态度','ATTITUDE'],['💬','互动','ENGAGE'],
+    ['🔖','收藏','SAVE'],['🔁','转发','SHARE'],['➕','关注','FOLLOW'],['👥','入群','JOIN'],
+    ['✍️','参与','PARTICIPATE'],['🌟','贡献','CONTRIBUTE'],['💰','转化','CONVERT'],['♻️','留存','RETAIN']];
+  const chain=document.getElementById('chainEl');if(!chain)return;
+  chain.innerHTML=STAGES.map((s,i)=>
+    `<div class="node${i===0?' hit':''}"><div class="b">${s[0]}</div><div class="s">${s[1]}</div><div class="e">${s[2]}</div></div>${i<STAGES.length-1?'<div class="arr">→</div>':''}`).join('');
+  const nodes=[...chain.querySelectorAll('.node')];let idx=0;
+  if(RM)return;
+  setInterval(()=>{
+    nodes[idx].classList.remove('hit');idx=(idx+1)%nodes.length;
+    nodes[idx].classList.add('hit');
+    const w=chain.parentElement;
+    if(w.scrollWidth>w.clientWidth+8)
+      w.scrollTo({left:nodes[idx].offsetLeft-w.clientWidth/2+nodes[idx].offsetWidth/2,behavior:'smooth'});
+  },1100);
+})();
+
+/* ============ 7. mechanism ticker ============ */
+(function(){
+  const N=ATLAS.nodes.slice().sort((a,b)=>b.deg-a.deg);
+  const gc=g=>g.startsWith('A')?'gv':(g.startsWith('C')?'cv2':(g==='D'?'dv':'cv'));
+  const chip=n=>`<span class="chip"><b>${n.zh}</b><i>${n.en}</i><i class="${gc(n.g)}">[${n.g}]</i></span>`;
+  const half=Math.ceil(N.length/2);
+  const r1=N.slice(0,half).map(chip).join(''),r2=N.slice(half).map(chip).join('');
+  document.getElementById('row1').innerHTML=r1+r1;
+  document.getElementById('row2').innerHTML=r2+r2;
+})();
+
+/* ============ 8. MECHANISM ATLAS ============ */
+(function(){
+  const cv=document.getElementById('atlasCv');if(!cv)return;
+  const cx=cv.getContext('2d'),tip=document.getElementById('tip');
+  const GRP={cog:['认知','#22d3ee'],mot:['动机情绪','#8b5cf6'],soc:['社会信任','#ec4899'],
+    per:['说服叙事','#f97316'],net:['传播网络','#60a5fa'],com:['社群归属','#34d399'],plt:['平台品牌','#fbbf24']};
+  const nodes=ATLAS.nodes,N=nodes.length;
+  const idx={};nodes.forEach((n,i)=>idx[n.id]=i);
+  const adj=nodes.map(()=>[]);
+  ATLAS.edges.forEach(e=>{const a=idx[e.a],b=idx[e.b];if(a!=null&&b!=null){adj[a].push(b);adj[b].push(a);}});
+  nodes.forEach(n=>{n.dz=n.dz.split('（')[0];});
+  let W,H,hover=-1,drag=-1,activeGrp=null,run=true;
+  function size(){
+    W=cv.clientWidth||cv.parentElement.clientWidth;H=cv.clientHeight;
+    const DPR=Math.min(devicePixelRatio||1,2);
+    cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  size();
+  // init layout: golden spiral (after size)
+  nodes.forEach((n,i)=>{
+    const r=Math.sqrt((i+.5)/N)*Math.min(W,H)*.46,a=i*2.399963;
+    n.x=W/2+r*Math.cos(a);n.y=H/2+r*Math.sin(a);
+    n.vx=0;n.vy=0;n.rad=(4+Math.min(8,n.deg*.42))*(W<420?.8:1);
+  });
+  const rings=[];
+  function step(){
+    if(!run)return;
+    const k2=Math.min(W,H)*6.2,rest=Math.min(W,H)*.16;
+    for(let i=0;i<N;i++)for(let j=i+1;j<N;j++){
+      const a=nodes[i],b=nodes[j];
+      let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy;if(d2<4)d2=4;
+      const d=Math.sqrt(d2);
+      let f=k2/d2;if(f>2.6)f=2.6;
+      dx/=d;dy/=d;
+      a.vx+=dx*f;a.vy+=dy*f;b.vx-=dx*f;b.vy-=dy*f;
+    }
+    for(const e of ATLAS.edges){
+      const a=nodes[idx[e.a]],b=nodes[idx[e.b]];if(!a||!b)continue;
+      const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1;
+      const f=(d-rest)*.0042;
+      a.vx+=dx/d*f;a.vy+=dy/d*f;b.vx-=dx/d*f;b.vy-=dy/d*f;
+    }
+    nodes.forEach((n,i)=>{
+      n.vx+=(W/2-n.x)*.0022;n.vy+=(H/2-n.y)*.0022;
+      if(i===drag){n.vx=0;n.vy=0;return;}
+      // soft walls: spring back before touching the edge, so nodes never line up on the border
+      const m=42;
+      if(n.x<m)n.vx+=(m-n.x)*.05; else if(n.x>W-m)n.vx-=(n.x-(W-m))*.05;
+      if(n.y<m)n.vy+=(m-n.y)*.05; else if(n.y>H-m)n.vy-=(n.y-(H-m))*.05;
+      n.vx*=.86;n.vy*=.86;
+      const sp=Math.hypot(n.vx,n.vy);if(sp>3.4){n.vx*=3.4/sp;n.vy*=3.4/sp;}
+      n.x+=n.vx;n.y+=n.vy;
+      n.x=Math.max(10,Math.min(W-10,n.x));n.y=Math.max(10,Math.min(H-10,n.y));
+    });
+    if(!RM&&Math.random()<.012&&rings.length<4){
+      const n=nodes[(Math.random()*N)|0];
+      rings.push({x:n.x,y:n.y,r:n.rad,a:.5,c:GRP[n.grp][1]});
+    }
+    for(const r of rings){r.r+=1.3;r.a*=.94;}
+    for(let i=rings.length-1;i>=0;i--)if(rings[i].a<.02)rings.splice(i,1);
+    draw();
+  }
+  function draw(){
+    cx.clearRect(0,0,W,H);
+    for(const e of ATLAS.edges){
+      const a=nodes[idx[e.a]],b=nodes[idx[e.b]];if(!a||!b)continue;
+      const dimmed=activeGrp&&(a.grp!==activeGrp||b.grp!==activeGrp);
+      const hl=hover>=0&&(idx[e.a]===hover||idx[e.b]===hover);
+      cx.strokeStyle=hl?'rgba(34,211,238,.55)':`rgba(148,163,184,${dimmed?.03:.13})`;
+      cx.lineWidth=hl?1.6:1;
+      cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();
+    }
+    for(const r of rings){
+      cx.strokeStyle=r.c;cx.globalAlpha=r.a;cx.lineWidth=1.2;
+      cx.beginPath();cx.arc(r.x,r.y,r.r,0,7);cx.stroke();cx.globalAlpha=1;
+    }
+    nodes.forEach((n,i)=>{
+      const dim=activeGrp&&n.grp!==activeGrp;
+      const isH=i===hover,nb=hover>=0&&adj[hover].includes(i);
+      cx.globalAlpha=dim?.07:((hover<0||isH||nb)?1:.3);
+      if(isH||nb){cx.shadowColor=GRP[n.grp][1];cx.shadowBlur=isH?22:12;}
+      cx.fillStyle=GRP[n.grp][1];
+      cx.beginPath();cx.arc(n.x,n.y,isH?n.rad*1.35:n.rad,0,7);cx.fill();
+      cx.shadowBlur=0;
+      if(n.g.startsWith('A')&&!dim){
+        cx.strokeStyle='rgba(52,211,153,.55)';cx.lineWidth=1;
+        cx.beginPath();cx.arc(n.x,n.y,n.rad+3.5,0,7);cx.stroke();
+      }
+      cx.globalAlpha=1;
+    });
+  }
+  function frame(){step();requestAnimationFrame(frame);}
+  requestAnimationFrame(frame);
+  new IntersectionObserver(es=>{run=es[0].isIntersecting;},{threshold:0}).observe(cv);
+  addEventListener('resize',size);
+
+  function locate(ev){const r=cv.getBoundingClientRect();return{x:ev.clientX-r.left,y:ev.clientY-r.top};}
+  function pick(x,y){
+    let best=-1,bd=Infinity;
+    for(let i=0;i<N;i++){
+      const n=nodes[i],d=(n.x-x)*(n.x-x)+(n.y-y)*(n.y-y),rr=(n.rad+12)*(n.rad+12);
+      if(d<rr&&d<bd){bd=d;best=i;}
+    }
+    return best;
+  }
+  cv.addEventListener('pointermove',ev=>{
+    const p=locate(ev);
+    if(drag>=0){
+      nodes[drag].x=Math.max(24,Math.min(W-24,p.x));
+      nodes[drag].y=Math.max(24,Math.min(H-24,p.y));
+      return;
+    }
+    hover=pick(p.x,p.y);
+    cv.style.cursor=hover>=0?'pointer':'grab';
+    if(hover>=0){
+      const n=nodes[hover];
+      tip.innerHTML=`<div class="tz">${n.zh}</div><div class="te">${n.en}</div>
+        <div class="tm">${n.dz} · 等级 <b>${n.g}</b> · 全图引用度 ${n.deg}<br>本子图相连 ${adj[hover].length} 个机制</div>`;
+      tip.style.opacity=1;
+      let tx=p.x+18,ty=p.y-14;
+      if(tx+tip.offsetWidth>W-10)tx=p.x-tip.offsetWidth-18;
+      if(ty+tip.offsetHeight>H-6)ty=H-tip.offsetHeight-8;
+      tip.style.left=tx+'px';tip.style.top=ty+'px';
+    }else tip.style.opacity=0;
+  },{passive:true});
+  cv.addEventListener('pointerdown',ev=>{
+    const p=locate(ev);drag=pick(p.x,p.y);
+    if(drag>=0){cv.classList.add('grabbing');try{cv.setPointerCapture(ev.pointerId);}catch(_){}}
+  });
+  addEventListener('pointerup',()=>{drag=-1;cv.classList.remove('grabbing');});
+  cv.addEventListener('pointerleave',()=>{hover=-1;tip.style.opacity=0;});
+
+  const fl=document.getElementById('filters');
+  const counts={};nodes.forEach(n=>counts[n.grp]=(counts[n.grp]||0)+1);
+  let html=`<span class="fchip on" data-f="all">全部 · ${N}</span>`;
+  for(const k in GRP)html+=`<span class="fchip" data-f="${k}">${GRP[k][0]} · ${counts[k]||0}</span>`;
+  fl.innerHTML=html;
+  fl.addEventListener('click',ev=>{
+    const c=ev.target.closest('.fchip');if(!c)return;
+    fl.querySelectorAll('.fchip').forEach(x=>x.classList.remove('on'));
+    c.classList.add('on');
+    activeGrp=c.dataset.f==='all'?null:c.dataset.f;
+  });
+})();
+
+/* ============ 9. install tabs + copy ============ */
+(function(){
+  const tabs=document.querySelectorAll('.tab');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('on'));t.classList.add('on');
+    document.querySelectorAll('.codebox').forEach(b=>b.hidden=b.id!==t.dataset.t);
+  }));
+  document.querySelectorAll('.cp').forEach(btn=>btn.addEventListener('click',()=>{
+    const pre=btn.parentElement.querySelector('pre');
+    const txt=pre.innerText.trim();
+    const done=()=>{btn.textContent='✓ COPIED';btn.classList.add('ok');
+      setTimeout(()=>{btn.textContent='COPY';btn.classList.remove('ok');},1600);};
+    if(navigator.clipboard)navigator.clipboard.writeText(txt).then(done,()=>fallback());
+    else fallback();
+    function fallback(){const ta=document.createElement('textarea');ta.value=txt;
+      document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();done();}
+  }));
+})();
 </script>
 </body>
 </html>

@@ -3,183 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>人类传播与社群增长引擎 · Human Communication & Community Growth Engine</title>
-<meta name="description" content="基于证据的传播方法论 Skill：216 个机制节点、13 个平台适配器、16 层行为链。让 AI 学会诊断传播，而不是背诵爆款技巧。由「谁是专家」构建。">
-<meta property="og:title" content="人类传播与社群增长引擎">
-<meta property="og:description" content="把认知科学与传播学的可靠证据，蒸馏成 AI Agent 可调用的方法论。216 机制节点 · 13 平台适配器 · 每条建议带证据等级。">
+<title>木铎 MUDUO · 人类传播与社群增长引擎</title>
+<meta name="description" content="木铎 MUDUO：金口木舌，质直动人。基于证据的传播方法论引擎——216 个机制节点、13 个平台适配器、16 层行为链。让 AI 学会诊断传播，而不是背诵爆款技巧。">
+<meta property="og:title" content="木铎 MUDUO · 人类传播与社群增长引擎">
+<meta property="og:description" content="天下之无道也久矣，天将以夫子为木铎。216 机制节点 · 13 平台适配器 · 每条建议带证据等级与适用边界。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://skill.mizzlelover.xyz/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='8' cy='10' r='3' fill='%2322d3ee'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%238b5cf6'/%3E%3Ccircle cx='16' cy='22' r='3' fill='%23ec4899'/%3E%3Cpath d='M8 10L24 8M8 10L16 22M24 8L16 22' stroke='%23475669' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='5' fill='%23a63a24'/%3E%3Ctext x='16' y='14' font-size='11' text-anchor='middle' fill='%23f4eee0' font-family='serif' font-weight='700'%3E%E6%9C%A8%3C/text%3E%3Ctext x='16' y='26' font-size='11' text-anchor='middle' fill='%23f4eee0' font-family='serif' font-weight='700'%3E%E9%93%8E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"人类传播与社群增长引擎","alternateName":"Human Communication & Community Growth Engine","applicationCategory":"DeveloperApplication","operatingSystem":"Any","author":{"@type":"Person","name":"谁是专家"},"license":"https://creativecommons.org/licenses/by/4.0/","codeRepository":"https://github.com/mizzlelover/communication-science-skill"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"木铎 MUDUO","alternateName":"Human Communication & Community Growth Engine","applicationCategory":"DeveloperApplication","operatingSystem":"Any","author":{"@type":"Person","name":"谁是专家"},"license":"https://creativecommons.org/licenses/by/4.0/","codeRepository":"https://github.com/mizzlelover/communication-science-skill"}
 </script>
 <style>
 :root{
-  --bg0:#04060d; --bg1:#0a0e1f; --bg2:#0d1226;
-  --cyan:#22d3ee; --violet:#8b5cf6; --pink:#ec4899; --gold:#fbbf24; --green:#34d399; --orange:#f97316; --blue:#60a5fa;
-  --ink:#e6ebf5; --ink-dim:#94a3b8; --ink-faint:#5b6b85;
-  --line:rgba(148,163,184,.14);
-  --card:rgba(148,163,184,.055);
+  /* 纸 · 墨 · 朱砂 · 金 */
+  --paper:#f4eee0; --paper2:#ece4d0; --paper3:#e4dac2;
+  --ink:#211d15; --ink2:#4c4636; --ink3:#7d7562; --ink4:#a2977f;
+  --zhu:#a63a24;      /* 朱砂 · 印红 */
+  --zhu2:#bc4530;
+  --jin:#96742f;      /* 金口 · 青铜 */
+  --lv:#4f6b4a;       /* 石绿 */
+  --line:rgba(60,50,32,.22);
+  --line2:rgba(60,50,32,.12);
+  --card:rgba(255,252,244,.55);
+  /* 矿物七色 · 机制族群 */
+  --c-cog:#3e5f7a; --c-mot:#74455a; --c-soc:#a63a24; --c-per:#9c5a28;
+  --c-net:#34506b; --c-com:#4f6b4a; --c-plt:#a07d24;
+  --serif:"Noto Serif SC","Source Han Serif SC","Source Han Serif CN","Songti SC","STSong","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
   --mono:"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  background:var(--bg0); color:var(--ink);
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
-  line-height:1.75; overflow-x:hidden;
+  background:var(--paper); color:var(--ink);
+  font-family:var(--sans); line-height:1.8; overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
-::selection{background:rgba(139,92,246,.4)}
-a{color:inherit;text-decoration:none}
-
-/* ============ chrome ============ */
-#prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:80;
-  background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink))}
-#net{position:fixed;inset:0;z-index:0;opacity:.9}
-.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(60% 45% at 18% 8%, rgba(34,211,238,.10), transparent 60%),
-    radial-gradient(50% 40% at 85% 20%, rgba(139,92,246,.12), transparent 60%),
-    radial-gradient(55% 45% at 70% 90%, rgba(236,72,153,.08), transparent 60%);
+/* 宣纸肌理 */
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.30 0 0 0 0 0.20 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+/* 帘纹 · 竹帘横痕 */
+body::after{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.35;
+  background:repeating-linear-gradient(0deg, transparent 0 46px, rgba(96,80,50,.045) 46px 47px);
+}
+::selection{background:rgba(166,58,36,.28)}
+a{color:inherit;text-decoration:none}
 main{position:relative;z-index:1}
 
-/* ============ shared ============ */
-.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
-section{padding:110px 0;position:relative}
-.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
-.kicker::before{content:"◈ "}
-h2{font-size:clamp(28px,4.4vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.25;margin-bottom:18px}
-.lead{color:var(--ink-dim);font-size:17px;max-width:680px}
-.grad{background:linear-gradient(100deg,var(--cyan),var(--violet) 45%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:180% auto;animation:shimmer 7s linear infinite}
-@keyframes shimmer{to{background-position:180% center}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+/* ============ 通用 ============ */
+.wrap{max-width:1140px;margin:0 auto;padding:0 30px}
+section{padding:104px 0;position:relative}
+.kicker{font-family:var(--serif);font-size:14px;font-weight:700;letter-spacing:.42em;color:var(--zhu);margin-bottom:20px}
+.kicker .en{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;color:var(--ink4);margin-top:6px;text-transform:uppercase}
+h2{font-family:var(--serif);font-size:clamp(28px,4.2vw,42px);font-weight:900;letter-spacing:.02em;line-height:1.4;margin-bottom:20px}
+.lead{color:var(--ink2);font-size:16.5px;max-width:700px}
+.lead b{color:var(--ink);font-weight:600}
+.verm{color:var(--zhu)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  .grad{animation:none}
-}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.rule-double{border-top:3px double var(--line)}
 
-/* ============ nav ============ */
-nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  background:rgba(4,6,13,.55);border-bottom:1px solid var(--line)}
-.nav-in{max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:26px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;letter-spacing:.02em}
-.logo svg{flex:none}
-.nav-links{margin-left:auto;display:flex;gap:22px;font-size:13.5px;color:var(--ink-dim)}
+/* 印章 */
+.seal{flex:none;width:34px;height:34px;border-radius:6px;background:var(--zhu);color:var(--paper);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:900;font-size:12.5px;line-height:1.18;
+  box-shadow:0 2px 10px rgba(166,58,36,.35)}
+
+/* ============ 导航 ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  background:rgba(244,238,224,.82);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:13px 30px;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:.12em}
+.logo .en{font-family:var(--mono);font-size:9.5px;letter-spacing:.34em;color:var(--ink3);font-weight:400;margin-top:3px}
+.nav-links{margin-left:auto;display:flex;gap:22px;font-size:13.5px;color:var(--ink2)}
 .nav-links a{transition:color .2s}
-.nav-links a:hover{color:var(--cyan)}
-.nav-gh{border:1px solid rgba(34,211,238,.35);color:var(--cyan)!important;padding:6px 14px;border-radius:99px;font-family:var(--mono);font-size:12px;transition:all .25s}
-.nav-gh:hover{background:rgba(34,211,238,.1);box-shadow:0 0 18px rgba(34,211,238,.25)}
-@media(max-width:820px){.nav-links a:not(.nav-gh){display:none}}
+.nav-links a:hover{color:var(--zhu)}
+.nav-gh{border:1px solid rgba(166,58,36,.4);color:var(--zhu)!important;padding:5px 15px;border-radius:3px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;transition:all .25s}
+.nav-gh:hover{background:var(--zhu);color:var(--paper)!important}
+@media(max-width:860px){.nav-links a:not(.nav-gh){display:none}}
 
-/* ============ hero ============ */
-.hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 90px;position:relative;overflow:hidden}
-.halo{position:absolute;left:50%;top:38%;width:640px;height:640px;transform:translate(-50%,-50%);
-  border-radius:50%;filter:blur(80px);opacity:.5;pointer-events:none;
-  background:conic-gradient(from 0deg,rgba(34,211,238,.16),rgba(139,92,246,.18),rgba(236,72,153,.14),rgba(34,211,238,.16));
-  animation:spin 26s linear infinite}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;
-  color:var(--ink-dim);border:1px solid var(--line);border-radius:99px;padding:7px 16px;margin-bottom:34px;background:rgba(10,14,31,.5)}
-.hero-tag b{color:var(--gold);font-weight:600}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.4}}
-h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:8px}
-.hero-en{font-family:var(--mono);font-size:clamp(11px,1.6vw,15px);letter-spacing:.42em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:30px}
-.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--ink-dim);max-width:680px;margin-bottom:44px}
+/* ============ HERO ============ */
+.hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 80px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;right:-2%;top:50%;transform:translateY(-50%);z-index:0;pointer-events:none;
+  writing-mode:vertical-rl;font-family:var(--serif);font-weight:900;
+  font-size:clamp(120px,17vw,240px);letter-spacing:.18em;line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px rgba(60,50,32,.13)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:60px;align-items:center;position:relative;z-index:1;width:100%}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr}}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;
+  color:var(--ink3);border:1px solid var(--line);border-radius:3px;padding:7px 16px;margin-bottom:36px;background:var(--card)}
+.hero-tag b{color:var(--jin);font-weight:600}
+.hero-tag .dian{width:6px;height:6px;background:var(--zhu);border-radius:1px;transform:rotate(45deg)}
+h1.brand{font-family:var(--serif);font-size:clamp(64px,10vw,128px);font-weight:900;letter-spacing:.06em;line-height:1.05;margin-bottom:6px}
+.brand-en{font-family:var(--mono);font-size:clamp(13px,1.8vw,17px);letter-spacing:.58em;color:var(--jin);margin-bottom:34px}
+.hero-dianjing{font-family:var(--serif);font-size:clamp(19px,2.6vw,26px);font-weight:700;color:var(--zhu);letter-spacing:.06em;margin-bottom:22px}
+.hero-dianjing::before{content:"—— ";color:var(--ink4);font-weight:400}
+.hero-sub{font-size:16px;color:var(--ink2);max-width:600px;margin-bottom:42px}
 .hero-sub b{color:var(--ink);font-weight:600}
 .cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;font-size:15px;font-weight:600;transition:all .25s;position:relative}
-.btn-pri{background:linear-gradient(100deg,var(--cyan),var(--violet));color:#04060d;box-shadow:0 8px 30px rgba(80,120,255,.35)}
-.btn-pri:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(80,120,255,.5)}
-.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(10,14,31,.4)}
-.btn-ghost:hover{border-color:rgba(34,211,238,.5);color:var(--cyan);transform:translateY(-2px)}
-.hero-meta{margin-top:52px;display:flex;gap:26px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.08em}
-.hero-meta span b{color:var(--ink-dim);font-weight:500}
-.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.3em;animation:hint 2.2s infinite}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;border-radius:3px;font-size:15px;font-weight:600;transition:all .25s;letter-spacing:.06em}
+.btn-pri{background:var(--zhu);color:var(--paper);box-shadow:0 8px 24px rgba(166,58,36,.28)}
+.btn-pri:hover{background:var(--zhu2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(166,58,36,.38)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:var(--card)}
+.btn-ghost:hover{border-color:var(--jin);color:var(--jin);transform:translateY(-2px)}
+.hero-meta{margin-top:52px;display:flex;gap:26px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--ink4);letter-spacing:.1em}
+.hero-meta span b{color:var(--ink2);font-weight:600;font-size:13px}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;color:var(--ink4);letter-spacing:.34em;animation:hint 2.4s infinite;z-index:1}
 @keyframes hint{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,8px);opacity:1}}
 
-/* ============ stats ============ */
-.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,14,31,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.stats-in{max-width:1120px;margin:0 auto;padding:44px 28px;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+/* 木铎图 */
+.bell-wrap{display:flex;justify-content:center;position:relative}
+.bell-frame{position:relative;padding:34px 38px;border:1px solid var(--line);background:var(--card)}
+.bell-frame::before{content:"";position:absolute;inset:6px;border:1px solid var(--line2);pointer-events:none}
+.bell-corner{position:absolute;font-family:var(--serif);font-size:11px;color:var(--ink4);letter-spacing:.2em}
+.bell-corner.tl{top:-22px;left:2px}
+.bell-corner.br{bottom:-24px;right:2px}
+#bellSvg{display:block;width:min(300px,64vw);height:auto}
+@keyframes sway{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg)}}
+#bellBody{transform-origin:160px 40px;animation:sway 5.2s ease-in-out infinite}
+@keyframes ripple{0%{opacity:.55;transform:scale(.62)}100%{opacity:0;transform:scale(1.28)}}
+.ripple{transform-box:fill-box;transform-origin:center;animation:ripple 3.2s ease-out infinite}
+.ripple.r2{animation-delay:1.05s}.ripple.r3{animation-delay:2.1s}
+@media(prefers-reduced-motion:reduce){
+  #bellBody,.ripple{animation:none}
+  .scroll-hint{animation:none}
+}
+
+/* ============ 数记 ============ */
+.stats{border-top:3px double var(--line);border-bottom:3px double var(--line);background:rgba(236,228,208,.5)}
+.stats-in{max-width:1140px;margin:0 auto;padding:42px 30px;display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
 @media(max-width:900px){.stats-in{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:520px){.stats-in{grid-template-columns:repeat(2,1fr)}}
-.stat .num{font-family:var(--mono);font-size:clamp(26px,3.4vw,38px);font-weight:700;background:linear-gradient(120deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat .lbl{font-size:12.5px;color:var(--ink-dim);margin-top:2px}
-.stat .en{font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:.14em;text-transform:uppercase}
+.stat .num{font-family:var(--serif);font-size:clamp(28px,3.4vw,40px);font-weight:900;color:var(--ink)}
+.stat .num::after{content:"";display:block;width:26px;height:2px;background:var(--zhu);margin-top:4px}
+.stat .lbl{font-size:12.5px;color:var(--ink2);margin-top:8px}
+.stat .en{font-family:var(--mono);font-size:9.5px;color:var(--ink4);letter-spacing:.16em;text-transform:uppercase}
 
-/* ============ axiom / layers ============ */
-.axiom-quote{font-size:clamp(24px,3.8vw,40px);font-weight:800;letter-spacing:-.01em;line-height:1.5;max-width:820px;margin-bottom:14px}
-.axiom-quote em{font-style:normal;background:linear-gradient(100deg,var(--gold),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-.axiom-sub{color:var(--ink-dim);margin-bottom:60px;max-width:640px}
+/* ============ 释名 ============ */
+.shiming-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;margin-top:14px}
+@media(max-width:920px){.shiming-grid{grid-template-columns:1fr}}
+.quote-stele{border:1px solid var(--line);background:var(--card);padding:44px 30px;position:relative;display:flex;justify-content:center;gap:34px}
+.quote-stele::before{content:"";position:absolute;inset:7px;border:1px solid var(--line2);pointer-events:none}
+.vtext{writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.4vw,26px);letter-spacing:.24em;line-height:2;color:var(--ink)}
+.vtext.small{font-size:13px;font-weight:500;color:var(--ink3);letter-spacing:.3em;padding-top:6px}
+.vtext .red{color:var(--zhu)}
+.shiyi{display:flex;flex-direction:column;gap:0}
+.shiyi-item{padding:26px 0;border-bottom:1px solid var(--line2);display:grid;grid-template-columns:64px 1fr;gap:20px}
+.shiyi-item:first-child{padding-top:6px}
+.shiyi-item .ord{font-family:var(--serif);font-size:30px;font-weight:900;color:var(--paper);background:var(--ink);
+  width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:3px}
+.shiyi-item:nth-child(2) .ord{background:var(--zhu)}
+.shiyi-item:nth-child(3) .ord{background:var(--jin)}
+.shiyi-item .t{font-family:var(--serif);font-size:19px;font-weight:900;margin-bottom:6px;letter-spacing:.04em}
+.shiyi-item .d{font-size:14px;color:var(--ink2);line-height:1.85}
+.shiyi-item .d em{font-style:normal;color:var(--zhu);font-weight:600}
+
+/* ============ 架构 ============ */
+.axiom-quote{font-family:var(--serif);font-size:clamp(24px,3.6vw,38px);font-weight:900;letter-spacing:.02em;line-height:1.55;max-width:820px;margin-bottom:16px}
+.axiom-sub{color:var(--ink2);margin-bottom:60px;max-width:660px;font-size:15.5px}
 .layers{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:900px){.layers{grid-template-columns:1fr}}
-.stack{display:flex;flex-direction:column;gap:12px;perspective:900px}
-.layer{border:1px solid var(--line);border-radius:14px;padding:18px 22px;background:var(--card);cursor:pointer;
-  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,background .3s,box-shadow .3s;position:relative;overflow:hidden}
-.layer::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.06));opacity:0;transition:opacity .3s}
-.layer:hover::before{opacity:1}
+@media(max-width:920px){.layers{grid-template-columns:1fr}}
+.stack{display:flex;flex-direction:column;gap:12px}
+.layer{border:1px solid var(--line);border-radius:3px;padding:18px 22px;background:var(--card);cursor:pointer;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s;position:relative}
+.layer::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:transparent;transition:background .3s}
 .layer .t{display:flex;align-items:baseline;gap:12px}
-.layer .no{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
-.layer .nm{font-weight:700;font-size:16.5px}
-.layer .en{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-left:auto}
-.layer p{font-size:13.5px;color:var(--ink-dim);margin-top:8px;display:none}
+.layer .no{font-family:var(--mono);font-size:11px;color:var(--ink4)}
+.layer .nm{font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.04em}
+.layer .en{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink4);text-transform:uppercase;margin-left:auto}
+.layer p{font-size:13.5px;color:var(--ink2);margin-top:8px;display:none;line-height:1.8}
 .layer.active p{display:block}
-.layer.active{transform:translateX(10px) rotateX(2deg)}
-.layer[data-c="0"].active{border-color:rgba(236,72,153,.55);box-shadow:0 0 34px rgba(236,72,153,.16)}
-.layer[data-c="1"].active{border-color:rgba(139,92,246,.55);box-shadow:0 0 34px rgba(139,92,246,.16)}
-.layer[data-c="2"].active{border-color:rgba(34,211,238,.55);box-shadow:0 0 34px rgba(34,211,238,.16)}
-.layer[data-c="3"].active{border-color:rgba(52,211,153,.55);box-shadow:0 0 34px rgba(52,211,153,.16)}
-.layer-demo{border:1px dashed var(--line);border-radius:14px;padding:24px;background:rgba(10,14,31,.35)}
-.layer-demo h4{font-size:14px;margin-bottom:14px;color:var(--ink-dim);font-weight:600}
-.demo-io{font-family:var(--mono);font-size:12.5px;line-height:2.1;background:#070b16;border:1px solid var(--line);border-radius:10px;padding:18px 20px;color:var(--ink-dim);white-space:pre-wrap}
-.demo-io .k{color:var(--cyan)}
-.demo-io .g{color:var(--gold)}
-.demo-io .p{color:var(--pink)}
-.demo-io .v{color:var(--green)}
+.layer.active{transform:translateX(10px);border-color:var(--zhu);box-shadow:0 8px 30px rgba(166,58,36,.1)}
+.layer.active::after{background:var(--zhu)}
+.layer[data-c="1"].active{border-color:var(--jin)}.layer[data-c="1"].active::after{background:var(--jin)}
+.layer[data-c="2"].active{border-color:var(--c-cog)}.layer[data-c="2"].active::after{background:var(--c-cog)}
+.layer[data-c="3"].active{border-color:var(--lv)}.layer[data-c="3"].active::after{background:var(--lv)}
+/* 碑拓面板 */
+.stele-panel{background:#221d14;color:#ddd5bf;border-radius:3px;padding:26px 28px;position:relative;
+  box-shadow:0 18px 50px rgba(34,29,20,.28);border:1px solid #3a3325}
+.stele-panel::before{content:"";position:absolute;inset:6px;border:1px solid rgba(221,213,191,.14);pointer-events:none}
+.stele-panel h4{font-family:var(--serif);font-size:15px;margin-bottom:16px;color:#c9c0a4;font-weight:700;letter-spacing:.1em}
+.demo-io{font-family:var(--mono);font-size:12.5px;line-height:2.15;color:#b3aa92;white-space:pre-wrap}
+.demo-io .k{color:#e0a48f}
+.demo-io .g{color:#c9a959}
+.demo-io .p{color:#d97b5f}
+.demo-io .v{color:#9ab88a}
 
-/* ============ atlas ============ */
-.atlas-shell{margin-top:48px;border:1px solid var(--line);border-radius:20px;overflow:hidden;
-  background:radial-gradient(80% 100% at 50% 0%,rgba(139,92,246,.07),transparent 55%),rgba(6,9,18,.72);position:relative}
+/* ============ 星图 ============ */
+.atlas-shell{margin-top:48px;border:1px solid var(--line);border-radius:3px;overflow:hidden;position:relative;
+  background:
+    radial-gradient(90% 90% at 50% 10%, rgba(150,116,47,.08), transparent 60%),
+    var(--paper2);
+  box-shadow:inset 0 0 80px rgba(96,80,50,.1)}
+.atlas-shell::before{content:"";position:absolute;inset:8px;border:1px solid var(--line2);pointer-events:none;z-index:2}
 #atlasCv{display:block;width:100%;height:600px;cursor:grab;touch-action:none}
 #atlasCv.grabbing{cursor:grabbing}
 @media(max-width:760px){#atlasCv{height:440px}}
-.atlas-hud{position:absolute;left:16px;top:14px;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
-  letter-spacing:.14em;line-height:2;pointer-events:none;
-  background:rgba(6,9,18,.6);padding:8px 14px;border-radius:10px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
-.atlas-hud b{color:var(--ink-dim);font-weight:600}
+.atlas-hud{position:absolute;left:22px;top:20px;font-family:var(--mono);font-size:10px;color:var(--ink3);
+  letter-spacing:.16em;line-height:2;pointer-events:none;background:rgba(244,238,224,.75);
+  padding:8px 14px;border:1px solid var(--line2);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:3}
+.atlas-hud b{color:var(--ink2);font-weight:600}
+.atlas-seal{position:absolute;right:22px;bottom:20px;z-index:3;pointer-events:none;opacity:.9}
 #tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;
-  background:rgba(7,10,20,.92);border:1px solid rgba(34,211,238,.4);border-radius:12px;padding:12px 16px;
-  max-width:280px;box-shadow:0 14px 40px rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-#tip .tz{font-size:14.5px;font-weight:700}
-#tip .te{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.04em;margin:2px 0 6px}
-#tip .tm{font-size:11.5px;color:var(--ink-dim)}
-#tip .tm b{color:var(--gold);font-weight:600}
+  background:rgba(250,246,236,.96);border:1px solid var(--line);border-left:3px solid var(--zhu);border-radius:2px;padding:12px 16px;
+  max-width:290px;box-shadow:0 14px 40px rgba(60,50,32,.22)}
+#tip .tz{font-family:var(--serif);font-size:15px;font-weight:900}
+#tip .te{font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.04em;margin:2px 0 7px}
+#tip .tm{font-size:11.5px;color:var(--ink2);line-height:1.7}
+#tip .tm b{color:var(--zhu);font-weight:600}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;align-items:center}
-.fchip{font-family:var(--mono);font-size:12px;letter-spacing:.06em;border:1px solid var(--line);border-radius:99px;
-  padding:7px 15px;color:var(--ink-dim);background:var(--card);cursor:pointer;transition:all .22s;user-select:none}
-.fchip:hover{border-color:rgba(148,163,184,.4);color:var(--ink)}
-.fchip .n{opacity:.55;font-size:10.5px;margin-left:5px}
-.fchip.on{color:#04060d;font-weight:700;border-color:transparent}
-.fchip[data-f="all"].on{background:linear-gradient(100deg,var(--cyan),var(--violet))}
-.fchip[data-f="cog"].on{background:var(--cyan)}
-.fchip[data-f="mot"].on{background:var(--violet)}
-.fchip[data-f="soc"].on{background:var(--pink)}
-.fchip[data-f="per"].on{background:var(--orange)}
-.fchip[data-f="net"].on{background:var(--blue)}
-.fchip[data-f="com"].on{background:var(--green)}
-.fchip[data-f="plt"].on{background:var(--gold)}
-.atlas-note{margin-top:16px;font-size:12.5px;color:var(--ink-faint)}
-.atlas-note b{color:var(--ink-dim);font-weight:600}
-.atlas-note a{color:var(--cyan)}
+.fchip{font-size:12.5px;letter-spacing:.06em;border:1px solid var(--line);border-radius:2px;
+  padding:7px 15px;color:var(--ink2);background:var(--card);cursor:pointer;transition:all .22s;user-select:none;font-family:var(--serif);font-weight:600}
+.fchip:hover{border-color:var(--ink3);color:var(--ink)}
+.fchip .n{font-family:var(--mono);opacity:.55;font-size:10px;margin-left:5px}
+.fchip.on{color:var(--paper);border-color:transparent}
+.fchip[data-f="all"].on{background:var(--ink)}
+.fchip[data-f="cog"].on{background:var(--c-cog)}
+.fchip[data-f="mot"].on{background:var(--c-mot)}
+.fchip[data-f="soc"].on{background:var(--c-soc)}
+.fchip[data-f="per"].on{background:var(--c-per)}
+.fchip[data-f="net"].on{background:var(--c-net)}
+.fchip[data-f="com"].on{background:var(--c-com)}
+.fchip[data-f="plt"].on{background:var(--c-plt)}
+.atlas-note{margin-top:16px;font-size:12.5px;color:var(--ink3)}
+.atlas-note b{color:var(--ink);font-weight:600}
+.atlas-note a{color:var(--zhu);border-bottom:1px solid rgba(166,58,36,.35)}
 
-/* ============ ticker ============ */
-.ticker-zone{padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(7,10,20,.5);overflow:hidden}
-.ticker-head{max-width:1120px;margin:0 auto 30px;padding:0 28px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-.ticker-head h3{font-size:20px;font-weight:800}
-.ticker-head span{font-size:13px;color:var(--ink-dim)}
+/* ============ 长廊 ============ */
+.ticker-zone{padding:64px 0;border-top:3px double var(--line);border-bottom:3px double var(--line);background:rgba(236,228,208,.45);overflow:hidden}
+.ticker-head{max-width:1140px;margin:0 auto 30px;padding:0 30px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.ticker-head h3{font-family:var(--serif);font-size:20px;font-weight:900;letter-spacing:.1em}
+.ticker-head span{font-size:13px;color:var(--ink3)}
 .marquee{display:flex;overflow:hidden;user-select:none;gap:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee+.marquee{margin-top:14px}
 .mrow{display:flex;gap:14px;flex:none;animation:scroll 60s linear infinite}
@@ -187,172 +248,196 @@ h1{font-size:clamp(40px,7.2vw,84px);font-weight:900;letter-spacing:-.03em;line-h
 .marquee:hover .mrow{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.mrow{animation:none}}
-.chip{flex:none;border:1px solid var(--line);background:rgba(148,163,184,.05);border-radius:10px;padding:9px 16px;font-size:13px;color:var(--ink-dim);white-space:nowrap}
-.chip b{color:var(--ink);font-weight:600}
-.chip i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-left:7px}
-.gv{color:var(--green)} .cv{color:var(--cyan)} .cv2{color:var(--violet)} .dv{color:var(--gold)}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:2px;padding:8px 16px;font-size:13px;color:var(--ink2);white-space:nowrap}
+.chip b{font-family:var(--serif);color:var(--ink);font-weight:700}
+.chip i{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--ink4);margin-left:7px}
+.gv{color:var(--lv)} .cv{color:var(--c-cog)} .cv2{color:var(--c-mot)} .dv{color:var(--jin)}
 
-/* ============ chain ============ */
+/* ============ 行为链 ============ */
 .chain-wrap{overflow-x:auto;padding:26px 4px 18px;-webkit-overflow-scrolling:touch;
-  scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.3) transparent}
+  scrollbar-width:thin;scrollbar-color:rgba(96,80,50,.35) transparent}
 .chain-wrap::-webkit-scrollbar{height:6px}
 .chain-wrap::-webkit-scrollbar-track{background:transparent}
-.chain-wrap::-webkit-scrollbar-thumb{background:rgba(148,163,184,.28);border-radius:99px}
-.chain{display:flex;gap:10px;align-items:center;min-width:max-content;position:relative}
+.chain-wrap::-webkit-scrollbar-thumb{background:rgba(96,80,50,.3);border-radius:99px}
+.chain{display:flex;gap:8px;align-items:center;min-width:max-content;position:relative}
 .node{flex:none;text-align:center}
-.node .b{width:64px;height:64px;border-radius:16px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;
-  font-size:24px;transition:all .3s}
-.node .s{font-size:12.5px;margin-top:8px;color:var(--ink-dim)}
-.node .e{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);letter-spacing:.06em;text-transform:uppercase}
-.node.hit .b{border-color:var(--cyan);box-shadow:0 0 22px rgba(34,211,238,.4);transform:translateY(-4px)}
-.node.hit .s{color:var(--cyan)}
-.arr{flex:none;color:var(--ink-faint);font-size:15px;padding:0 2px}
-.chain-note{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.1em}
+.node .b{width:60px;height:60px;border-radius:3px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:900;font-size:26px;color:var(--ink2);transition:all .3s;position:relative}
+.node .s{font-size:12.5px;margin-top:9px;color:var(--ink3);font-weight:600}
+.node .e{font-family:var(--mono);font-size:9px;color:var(--ink4);letter-spacing:.06em;text-transform:uppercase}
+.node.hit .b{border-color:var(--zhu);background:var(--zhu);color:var(--paper);box-shadow:0 8px 24px rgba(166,58,36,.3);transform:translateY(-4px)}
+.node.hit .s{color:var(--zhu)}
+.arr{flex:none;color:var(--ink4);font-size:14px;padding:0 1px}
+.chain-note{font-family:var(--mono);font-size:11.5px;color:var(--ink4);letter-spacing:.12em}
 .funnels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
 @media(max-width:820px){.funnels{grid-template-columns:1fr}}
-.funnel{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--card);font-size:13.5px;color:var(--ink-dim)}
-.funnel b{color:var(--ink);font-weight:600;font-family:var(--mono);font-size:13px}
-.funnel .arr2{color:var(--pink);font-family:var(--mono)}
+.funnel{border:1px solid var(--line);border-radius:3px;padding:18px 20px;background:var(--card);font-size:13.5px;color:var(--ink2);border-left:3px solid var(--jin)}
+.funnel b{color:var(--ink);font-weight:700;font-family:var(--serif);font-size:14.5px;letter-spacing:.04em}
+.funnel .arr2{color:var(--zhu);font-family:var(--mono)}
 .funnel .dx{display:block;margin-top:6px}
-.funnel .dx em{font-style:normal;color:var(--cyan)}
+.funnel .dx em{font-style:normal;color:var(--c-cog);font-weight:600}
 
-/* ============ showdown ============ */
+/* ============ 问难 ============ */
 .vs-grid{display:flex;flex-direction:column;gap:14px;margin-top:48px}
 .vs-row{display:grid;grid-template-columns:1fr 44px 1.35fr;gap:14px;align-items:stretch}
 @media(max-width:820px){.vs-row{grid-template-columns:1fr}.vs-mid{transform:rotate(90deg);margin:-4px auto}}
-.vs-bad{border:1px solid rgba(236,72,153,.25);background:rgba(236,72,153,.045);border-radius:14px;padding:16px 20px;
-  color:var(--ink-dim);font-size:14px;position:relative}
-.vs-bad::before{content:"“";position:absolute;left:14px;top:2px;font-size:34px;color:rgba(236,72,153,.35);font-family:Georgia,serif}
-.vs-bad .q{display:block;padding-left:18px;font-weight:600;color:#c9b6d8}
-.vs-mid{display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-family:var(--mono);font-size:13px}
-.vs-good{border:1px solid rgba(52,211,153,.28);background:rgba(52,211,153,.05);border-radius:14px;padding:16px 20px;font-size:13.5px;color:var(--ink-dim);line-height:1.7}
+.vs-bad{border:1px solid rgba(60,50,32,.25);background:rgba(60,50,32,.04);border-radius:3px;padding:16px 20px;
+  color:var(--ink2);font-size:14px;position:relative}
+.vs-bad::before{content:"或曰";position:absolute;left:14px;top:-11px;font-family:var(--serif);font-size:11px;font-weight:700;
+  color:var(--paper);background:var(--ink3);padding:2px 10px;letter-spacing:.2em;border-radius:2px}
+.vs-bad .q{display:block;padding-left:6px;font-weight:600;color:var(--ink2);font-family:var(--serif);font-size:15px;letter-spacing:.03em}
+.vs-mid{display:flex;align-items:center;justify-content:center;color:var(--ink4);font-family:var(--mono);font-size:13px}
+.vs-good{border:1px solid rgba(166,58,36,.3);background:rgba(166,58,36,.045);border-radius:3px;padding:16px 20px;font-size:13.5px;color:var(--ink2);line-height:1.8;position:relative}
+.vs-good::before{content:"铎曰";position:absolute;left:14px;top:-11px;font-family:var(--serif);font-size:11px;font-weight:700;
+  color:var(--paper);background:var(--zhu);padding:2px 10px;letter-spacing:.2em;border-radius:2px}
 .vs-good b{color:var(--ink);font-weight:600}
-.vs-good .mech{font-family:var(--mono);font-size:11.5px;color:var(--cyan)}
-.vs-good .gr{font-family:var(--mono);font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid rgba(52,211,153,.45);color:var(--green);margin-left:6px}
+.vs-good .mech{font-family:var(--mono);font-size:11.5px;color:var(--c-cog)}
+.vs-good .gr{font-family:var(--mono);font-size:10.5px;padding:1px 7px;border-radius:2px;border:1px solid rgba(79,107,74,.55);color:var(--lv);margin-left:6px}
 
-/* ============ evidence ============ */
+/* ============ 证据五等 ============ */
 .ev-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:44px 0 60px}
 @media(max-width:900px){.ev-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.ev-grid{grid-template-columns:repeat(2,1fr)}}
-.grade{border:1px solid var(--line);border-radius:14px;padding:20px 18px;background:var(--card);transition:all .3s}
-.grade:hover{transform:translateY(-5px)}
-.grade .g{font-family:var(--mono);font-size:26px;font-weight:700}
-.grade .n{font-size:13.5px;font-weight:600;margin:6px 0 4px}
-.grade .d{font-size:12px;color:var(--ink-dim);line-height:1.6}
-.grade[data-g="A"] .g{color:var(--green)} .grade[data-g="A"]:hover{border-color:rgba(52,211,153,.5);box-shadow:0 8px 30px rgba(52,211,153,.12)}
-.grade[data-g="B"] .g{color:var(--cyan)} .grade[data-g="B"]:hover{border-color:rgba(34,211,238,.5);box-shadow:0 8px 30px rgba(34,211,238,.12)}
-.grade[data-g="C"] .g{color:var(--violet)} .grade[data-g="C"]:hover{border-color:rgba(139,92,246,.5);box-shadow:0 8px 30px rgba(139,92,246,.12)}
-.grade[data-g="D"] .g{color:var(--gold)} .grade[data-g="D"]:hover{border-color:rgba(251,191,36,.5);box-shadow:0 8px 30px rgba(251,191,36,.12)}
-.grade[data-g="E"] .g{color:var(--pink)} .grade[data-g="E"]:hover{border-color:rgba(236,72,153,.5);box-shadow:0 8px 30px rgba(236,72,153,.12)}
+.grade{border:1px solid var(--line);border-radius:3px;padding:22px 18px;background:var(--card);transition:all .3s;position:relative}
+.grade:hover{transform:translateY(-5px);box-shadow:0 12px 34px rgba(60,50,32,.12)}
+.grade .g{font-family:var(--serif);font-size:32px;font-weight:900}
+.grade .n{font-family:var(--serif);font-size:14.5px;font-weight:700;margin:8px 0 5px;letter-spacing:.06em}
+.grade .d{font-size:12px;color:var(--ink2);line-height:1.7}
+.grade[data-g="A"] .g{color:var(--lv)}
+.grade[data-g="B"] .g{color:var(--c-cog)}
+.grade[data-g="C"] .g{color:var(--c-mot)}
+.grade[data-g="D"] .g{color:var(--jin)}
+.grade[data-g="E"] .g{color:var(--zhu)}
 .no-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 @media(max-width:820px){.no-grid{grid-template-columns:1fr}}
-.no-card{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(236,72,153,.22);background:rgba(236,72,153,.05);border-radius:14px;padding:18px 20px}
-.no-card .x{flex:none;width:26px;height:26px;border-radius:50%;border:1px solid rgba(236,72,153,.5);color:var(--pink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:2px}
-.no-card .t{font-size:14.5px;font-weight:700;margin-bottom:3px}
-.no-card .d{font-size:12.5px;color:var(--ink-dim);line-height:1.65}
+.no-card{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(166,58,36,.28);background:rgba(166,58,36,.04);border-radius:3px;padding:18px 20px}
+.no-card .x{flex:none;width:26px;height:26px;border-radius:2px;background:var(--zhu);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:2px;font-family:var(--serif)}
+.no-card .t{font-family:var(--serif);font-size:14.5px;font-weight:700;margin-bottom:4px}
+.no-card .d{font-size:12.5px;color:var(--ink2);line-height:1.7}
 
-/* ============ modes ============ */
+/* ============ 七艺 ============ */
 .mode-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
 @media(max-width:1000px){.mode-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.mode-grid{grid-template-columns:1fr}}
-.mode{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--card);transition:all .3s;position:relative}
-.mode:hover{transform:translateY(-5px);border-color:rgba(139,92,246,.5);box-shadow:0 10px 34px rgba(139,92,246,.14)}
-.mode .id{font-family:var(--mono);font-size:11px;color:var(--violet);letter-spacing:.18em}
-.mode .t{font-size:16px;font-weight:700;margin:8px 0 6px}
-.mode .d{font-size:12.5px;color:var(--ink-dim);line-height:1.65}
-.mode .q{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-top:12px;line-height:1.7}
+.mode{border:1px solid var(--line);border-radius:3px;padding:22px;background:var(--card);transition:all .3s;position:relative}
+.mode:hover{transform:translateY(-5px);border-color:rgba(166,58,36,.45);box-shadow:0 12px 34px rgba(166,58,36,.1)}
+.mode .id{font-family:var(--mono);font-size:10.5px;color:var(--zhu);letter-spacing:.18em}
+.mode .t{font-family:var(--serif);font-size:17px;font-weight:900;margin:9px 0 6px;letter-spacing:.04em}
+.mode .d{font-size:12.5px;color:var(--ink2);line-height:1.7}
+.mode .q{font-size:11.5px;color:var(--ink3);margin-top:12px;line-height:1.7;border-top:1px dashed var(--line);padding-top:10px}
+.mode .q::before{content:"问：";color:var(--jin);font-weight:600}
 
-/* ============ evals ============ */
+/* ============ 校考 ============ */
 .eval-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;margin-top:44px;align-items:center}
-@media(max-width:900px){.eval-grid{grid-template-columns:1fr}}
+@media(max-width:920px){.eval-grid{grid-template-columns:1fr}}
 .bars{display:flex;flex-direction:column;gap:18px}
 .bar-row .bt{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px}
-.bar-row .bt b{font-weight:600}
-.bar-row .bt span{font-family:var(--mono);color:var(--ink-dim);font-size:12px}
-.bar{height:8px;border-radius:99px;background:rgba(148,163,184,.12);overflow:hidden}
+.bar-row .bt b{font-weight:600;font-family:var(--serif);letter-spacing:.03em}
+.bar-row .bt span{font-family:var(--mono);color:var(--ink3);font-size:12px}
+.bar{height:7px;border-radius:99px;background:rgba(96,80,50,.14);overflow:hidden}
 .bar i{display:block;height:100%;border-radius:99px;width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1);
-  background:linear-gradient(90deg,var(--cyan),var(--violet))}
-.bar.gold i{background:linear-gradient(90deg,var(--gold),var(--pink))}
-.eval-card{border:1px solid var(--line);border-radius:16px;padding:26px;background:rgba(10,14,31,.5)}
-.eval-card h4{font-size:15px;font-weight:700;margin-bottom:10px}
-.eval-card p{font-size:13px;color:var(--ink-dim);line-height:1.8}
-.eval-card .hl{color:var(--gold)}
-.honest{margin-top:16px;border-left:2px solid var(--gold);padding:10px 16px;font-size:12.5px;color:var(--ink-dim);background:rgba(251,191,36,.05);border-radius:0 10px 10px 0}
+  background:linear-gradient(90deg,var(--ink),var(--c-cog))}
+.bar.gold i{background:linear-gradient(90deg,var(--jin),var(--zhu))}
+.eval-card{border:1px solid var(--line);border-radius:3px;padding:26px;background:var(--card);position:relative}
+.eval-card::before{content:"";position:absolute;inset:6px;border:1px solid var(--line2);pointer-events:none}
+.eval-card h4{font-family:var(--serif);font-size:16px;font-weight:900;margin-bottom:10px;letter-spacing:.06em}
+.eval-card p{font-size:13px;color:var(--ink2);line-height:1.9}
+.eval-card .hl{color:var(--zhu);font-weight:700}
+.honest{margin-top:16px;border-left:3px solid var(--jin);padding:10px 16px;font-size:12.5px;color:var(--ink2);background:rgba(150,116,47,.07);border-radius:0 3px 3px 0}
 
-/* ============ install ============ */
-.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:44px 0 0}
-.tab{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;border:1px solid var(--line);border-radius:10px 10px 0 0;
-  padding:10px 18px;color:var(--ink-dim);background:rgba(10,14,31,.4);cursor:pointer;transition:all .22s;border-bottom:none}
+/* ============ 接入 ============ */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:44px 0 0}
+.tab{font-family:var(--serif);font-weight:700;font-size:13px;letter-spacing:.04em;border:1px solid var(--line);border-radius:3px 3px 0 0;
+  padding:10px 18px;color:var(--ink2);background:rgba(236,228,208,.5);cursor:pointer;transition:all .22s;border-bottom:none}
 .tab:hover{color:var(--ink)}
-.tab.on{color:var(--cyan);border-color:rgba(34,211,238,.45);background:rgba(34,211,238,.07);box-shadow:0 -6px 20px rgba(34,211,238,.08)}
-.tab .sub{display:block;font-size:9.5px;color:var(--ink-faint);letter-spacing:.12em;margin-top:2px}
-.codebox{border:1px solid var(--line);border-radius:0 14px 14px 14px;background:#070b16;position:relative}
-.codebox .cp{position:absolute;right:12px;top:12px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);
-  border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer;transition:all .2s;background:rgba(10,14,31,.7)}
-.codebox .cp:hover{color:var(--cyan);border-color:rgba(34,211,238,.5)}
-.codebox .cp.ok{color:var(--green);border-color:rgba(52,211,153,.5)}
-.codebox pre{padding:24px 26px;overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:2;color:var(--ink-dim)}
-.codebox pre .c{color:var(--ink-faint)}
-.codebox pre .k{color:var(--cyan)}
-.codebox pre .s{color:var(--gold)}
+.tab.on{color:var(--zhu);border-color:rgba(166,58,36,.45);background:rgba(166,58,36,.06)}
+.tab .sub{display:block;font-family:var(--mono);font-weight:400;font-size:9px;color:var(--ink4);letter-spacing:.1em;margin-top:3px}
+.codebox{border:1px solid var(--line);border-radius:0 3px 3px 3px;background:#221d14;position:relative}
+.codebox .cp{position:absolute;right:12px;top:12px;font-family:var(--mono);font-size:10.5px;color:#8d8468;letter-spacing:.1em;
+  border:1px solid rgba(221,213,191,.25);border-radius:2px;padding:5px 12px;cursor:pointer;transition:all .2s;background:rgba(34,29,20,.8)}
+.codebox .cp:hover{color:#e0a48f;border-color:rgba(224,164,143,.5)}
+.codebox .cp.ok{color:#9ab88a;border-color:rgba(154,184,138,.5)}
+.codebox pre{padding:24px 26px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:2.05;color:#b3aa92}
+.codebox pre .c{color:#6e6752}
+.codebox pre .k{color:#e0a48f}
+.codebox pre .s{color:#c9a959}
 .codebox[hidden]{display:none}
-.inst-note{margin-top:18px;font-size:13px;color:var(--ink-dim)}
-.inst-note code{font-family:var(--mono);font-size:12px;color:var(--cyan);background:rgba(34,211,238,.08);padding:2px 8px;border-radius:6px}
+.inst-note{margin-top:18px;font-size:13px;color:var(--ink2)}
+.inst-note code{font-family:var(--mono);font-size:12px;color:var(--zhu);background:rgba(166,58,36,.08);padding:2px 8px;border-radius:2px}
 
-/* ============ principles ============ */
-.prin{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
-.prin span{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;border:1px solid var(--line);
-  border-radius:99px;padding:9px 18px;color:var(--ink-dim);background:var(--card);transition:all .25s}
-.prin span:hover{color:var(--cyan);border-color:rgba(34,211,238,.45);transform:translateY(-2px)}
-.prin span b{color:var(--pink);font-weight:700}
+/* ============ 军规 ============ */
+.prin{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:44px}
+@media(max-width:760px){.prin{grid-template-columns:1fr}}
+.prin span{display:flex;align-items:baseline;gap:12px;font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;border:1px solid var(--line);
+  border-radius:2px;padding:13px 18px;color:var(--ink2);background:var(--card);transition:all .25s}
+.prin span:hover{color:var(--ink);border-color:rgba(166,58,36,.45);transform:translateX(4px)}
+.prin span i{font-style:normal;font-family:var(--serif);font-weight:900;color:var(--zhu);font-size:14px}
+.prin span b{color:var(--zhu);font-weight:700}
 
-/* ============ author ============ */
-.author{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:
-  radial-gradient(55% 60% at 80% 30%, rgba(251,191,36,.07), transparent 60%),rgba(7,10,20,.6)}
+/* ============ 作者 ============ */
+.author{border-top:3px double var(--line);border-bottom:3px double var(--line);background:rgba(236,228,208,.5)}
 .author-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:52px;align-items:center;margin-top:44px}
 @media(max-width:880px){.author-grid{grid-template-columns:1fr}}
-.author-name{font-size:clamp(30px,4.5vw,46px);font-weight:900;background:linear-gradient(100deg,var(--gold),var(--pink) 60%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.author-desc{color:var(--ink-dim);font-size:15px;margin:14px 0 28px;max-width:480px}
-.socials{display:flex;flex-direction:column;gap:12px;max-width:420px}
-.soc{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:12px;padding:13px 18px;background:var(--card);transition:all .25s}
-.soc:hover{transform:translateX(6px);border-color:rgba(251,191,36,.45)}
-.soc .ic{flex:none;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;background:rgba(148,163,184,.1)}
-.soc .n{font-size:14px;font-weight:600}
-.soc .m{font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-top:1px}
-.soc .go{margin-left:auto;color:var(--ink-faint);font-size:13px}
+.author-name{font-family:var(--serif);font-size:clamp(32px,4.5vw,46px);font-weight:900;letter-spacing:.08em}
+.author-desc{color:var(--ink2);font-size:15px;margin:16px 0 30px;max-width:500px;line-height:1.9}
+.socials{display:flex;flex-direction:column;gap:12px;max-width:430px}
+.soc{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:3px;padding:13px 18px;background:var(--card);transition:all .25s}
+.soc:hover{transform:translateX(6px);border-color:rgba(166,58,36,.45)}
+.soc .ic{flex:none;width:34px;height:34px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:15px;background:rgba(96,80,50,.12)}
+.soc .n{font-family:var(--serif);font-size:14.5px;font-weight:700}
+.soc .m{font-family:var(--mono);font-size:10.5px;color:var(--ink4);margin-top:2px}
+.soc .go{margin-left:auto;color:var(--ink4);font-size:13px}
 .qr-side{display:flex;flex-direction:column;align-items:center;gap:14px}
-.qr-img{max-width:340px;width:100%;border-radius:18px;border:1px solid rgba(251,191,36,.3);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(251,191,36,.08);transition:transform .4s}
-.qr-img:hover{transform:scale(1.03) rotate(-.5deg)}
-.qr-cap{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.12em;text-align:center}
+.qr-img{max-width:330px;width:100%;border-radius:3px;border:1px solid var(--line);padding:10px;background:var(--card);
+  box-shadow:0 20px 55px rgba(60,50,32,.18);transition:transform .4s}
+.qr-img:hover{transform:scale(1.02) rotate(-.4deg)}
+.qr-cap{font-family:var(--mono);font-size:10.5px;color:var(--ink4);letter-spacing:.14em;text-align:center;line-height:2}
 
-/* ============ final / footer ============ */
-.final{text-align:center;padding:130px 0}
-.final h2{font-size:clamp(30px,5vw,52px);max-width:820px;margin:0 auto 20px}
-.final .lead{margin:0 auto 44px}
-footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:var(--ink-faint)}
-.foot-in{max-width:1120px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.foot-in a{color:var(--ink-dim)}
-.foot-in a:hover{color:var(--cyan)}
+/* ============ 落款 ============ */
+.final{text-align:center;padding:130px 0 110px;position:relative;overflow:hidden}
+.final h2{font-family:var(--serif);font-size:clamp(28px,4.6vw,48px);max-width:860px;margin:0 auto 22px;font-weight:900;line-height:1.55}
+.final .lead{margin:0 auto 46px}
+.final-seal{width:86px;height:86px;border-radius:8px;background:var(--zhu);color:var(--paper);margin:0 auto 34px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:900;font-size:32px;line-height:1.22;letter-spacing:.05em;
+  box-shadow:0 14px 44px rgba(166,58,36,.4);transform:rotate(-3deg)}
+.luokuan{font-family:var(--serif);font-size:15px;letter-spacing:.14em;color:var(--ink3);margin-top:40px}
+.luokuan b{color:var(--zhu);font-weight:700}
+footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:var(--ink4)}
+.foot-in{max-width:1140px;margin:0 auto;padding:0 30px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-in a{color:var(--ink3)}
+.foot-in a:hover{color:var(--zhu)}
+
+/* 进度条 */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:80;background:var(--zhu)}
+
+/* ============ 窄屏适配 ============ */
+@media(max-width:560px){
+  .hero-tag{display:inline-block;font-size:10px;letter-spacing:.1em;padding:8px 14px;line-height:2}
+  .brand-en{letter-spacing:.32em;font-size:12px}
+  h1.brand{font-size:clamp(60px,19vw,88px)}
+  .vtext{letter-spacing:.18em}
+  .bell-frame{padding:24px 20px}
+}
 </style>
 </head>
 <body>
 <div id="prog"></div>
-<canvas id="net"></canvas>
-<div class="aurora"></div>
 
 <nav>
   <div class="nav-in">
     <a class="logo" href="#top">
-      <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="8" cy="10" r="3.4" fill="#22d3ee"/><circle cx="24" cy="8" r="3.4" fill="#8b5cf6"/><circle cx="16" cy="23" r="3.4" fill="#ec4899"/><path d="M8 10L24 8M8 10L16 23M24 8L16 23" stroke="#475569" stroke-width="1.6"/></svg>
-      传播与社群增长引擎
+      <span class="seal">木<br>铎</span>
+      <span>木铎<span class="en">MUDUO ENGINE</span></span>
     </a>
     <div class="nav-links">
+      <a href="#shiming">释名</a>
       <a href="#axiom">架构</a>
       <a href="#atlas">机制星图</a>
       <a href="#chain">行为链</a>
-      <a href="#evidence">证据体系</a>
-      <a href="#modes">能力</a>
-      <a href="#install">安装</a>
+      <a href="#evidence">证据</a>
+      <a href="#modes">七艺</a>
+      <a href="#install">接入</a>
       <a href="#author">作者</a>
       <a class="nav-gh" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GITHUB ↗</a>
     </div>
@@ -363,33 +448,87 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="halo"></div>
+  <div class="hero-bg" aria-hidden="true">木铎</div>
   <div class="wrap">
-    <div class="hero-tag"><span class="dot"></span> EVIDENCE-AWARE METHODOLOGY · <b>v1.1.9</b> · OPEN SOURCE</div>
-    <h1>让 AI 学会<span class="grad">诊断传播</span>，<br>而不是背诵爆款技巧。</h1>
-    <div class="hero-en">Human Communication &amp; Community Growth Engine</div>
-    <p class="hero-sub">
-      把认知科学、社会心理学、传播学、网络科学中<b>当前最可靠的证据</b>，蒸馏成 AI Agent 可直接调用的方法论——
-      每条建议都携带<b>机制依据、证据等级与适用边界</b>。
-    </p>
-    <div class="cta">
-      <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">
-        <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        GitHub 仓库
-      </a>
-      <a class="btn btn-ghost" href="#atlas">探索机制星图 ↓</a>
-    </div>
-    <div class="hero-meta">
-      <span><b>216</b> MECHANISM NODES</span>
-      <span><b>13</b> PLATFORM ADAPTERS</span>
-      <span><b>160</b> EVAL CASES</span>
-      <span><b>BLIND TEST</b> 32/32 × 3</span>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag"><span class="dian"></span> EVIDENCE-AWARE METHODOLOGY · <b>v1.1.9</b> · OPEN SOURCE</div>
+        <h1 class="brand">木铎</h1>
+        <div class="brand-en">MUDUO · COMMUNICATION ENGINE</div>
+        <p class="hero-dianjing">不以金声炫技，以质直动人。</p>
+        <p class="hero-sub">
+          木铎，金口木舌之铃，古之传播者振之以警众。今日它是一套可装进 AI Agent 的传播方法论引擎——
+          把认知科学、社会心理学、传播学、网络科学中<b>当前最可靠的证据</b>蒸馏为可调用的工作流，
+          让 AI 学会<b>诊断传播</b>，而不是背诵爆款技巧。
+        </p>
+        <div class="cta">
+          <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            观 GitHub 仓库
+          </a>
+          <a class="btn btn-ghost" href="#atlas">览机制星图 ↓</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>216</b> MECHANISMS</span>
+          <span><b>13</b> ADAPTERS</span>
+          <span><b>160</b> EVAL CASES</span>
+          <span><b>BLIND</b> 32/32 × 3</span>
+        </div>
+      </div>
+      <div class="bell-wrap">
+        <div class="bell-frame">
+          <span class="bell-corner tl">金口 · 木舌</span>
+          <span class="bell-corner br">《论语 · 八佾》</span>
+          <svg id="bellSvg" viewBox="0 0 320 400" fill="none" aria-label="木铎线图">
+            <!-- 声波 -->
+            <g stroke="#a63a24" stroke-width="1.4" fill="none">
+              <path class="ripple r1" d="M52 130 A 118 118 0 0 0 52 270" opacity="0"/>
+              <path class="ripple r2" d="M30 112 A 150 150 0 0 0 30 288" opacity="0"/>
+              <path class="ripple r3" d="M8 94 A 184 184 0 0 0 8 306" opacity="0"/>
+              <path class="ripple r1" style="animation-delay:.5s" d="M268 130 A 118 118 0 0 1 268 270" opacity="0"/>
+              <path class="ripple r2" style="animation-delay:1.55s" d="M290 112 A 150 150 0 0 1 290 288" opacity="0"/>
+              <path class="ripple r3" style="animation-delay:2.6s" d="M312 94 A 184 184 0 0 1 312 306" opacity="0"/>
+            </g>
+            <!-- 铎体 -->
+            <g id="bellBody">
+              <!-- 钮 -->
+              <path d="M146 42 Q146 22 160 22 Q174 22 174 42" stroke="#211d15" stroke-width="4" stroke-linecap="round"/>
+              <rect x="140" y="40" width="40" height="12" rx="3" fill="#211d15"/>
+              <!-- 舞（顶面） -->
+              <path d="M118 66 L202 66" stroke="#211d15" stroke-width="4" stroke-linecap="round"/>
+              <!-- 钲身 -->
+              <path d="M122 66 C 112 128 92 190 66 240 L 62 254" stroke="#211d15" stroke-width="4" stroke-linecap="round"/>
+              <path d="M198 66 C 208 128 228 190 254 240 L 258 254" stroke="#211d15" stroke-width="4" stroke-linecap="round"/>
+              <!-- 弦纹 -->
+              <path d="M114 108 L 206 108" stroke="#96742f" stroke-width="1.6" opacity=".8"/>
+              <path d="M107 136 L 213 136" stroke="#96742f" stroke-width="1.6" opacity=".55"/>
+              <!-- 乳钉 -->
+              <g fill="#211d15" opacity=".8">
+                <circle cx="134" cy="164" r="2.6"/><circle cx="160" cy="166" r="2.6"/><circle cx="186" cy="164" r="2.6"/>
+                <circle cx="126" cy="196" r="2.6"/><circle cx="160" cy="199" r="2.6"/><circle cx="194" cy="196" r="2.6"/>
+              </g>
+              <!-- 金口（铣/于） -->
+              <path d="M62 254 Q 160 288 258 254" stroke="#96742f" stroke-width="5" stroke-linecap="round"/>
+              <path d="M62 254 Q 160 288 258 254" stroke="#211d15" stroke-width="1.2" stroke-dasharray="1 5" opacity=".6"/>
+              <!-- 木舌 -->
+              <g>
+                <path d="M160 66 L 160 250" stroke="#8a5a30" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+                <rect x="152" y="248" width="16" height="32" rx="7" fill="#8a5a30" stroke="#211d15" stroke-width="2"/>
+                <path d="M156 255 L 156 273 M 164 255 L 164 273" stroke="#6e4523" stroke-width="1.4" opacity=".8"/>
+              </g>
+            </g>
+            <!-- 座款 -->
+            <text x="160" y="330" text-anchor="middle" font-family="var(--serif)" font-size="13" letter-spacing="6" fill="#7d7562">木舌在腹，声自质出</text>
+            <text x="160" y="356" text-anchor="middle" font-family="var(--mono)" font-size="8.5" letter-spacing="3.5" fill="#a2977f">BRONZE MOUTH · WOODEN TONGUE</text>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
   <div class="scroll-hint">SCROLL ↓</div>
 </header>
 
-<!-- ================= STATS ================= -->
+<!-- ================= 数记 ================= -->
 <div class="stats reveal">
   <div class="stats-in">
     <div class="stat"><div class="num" data-to="216">0</div><div class="lbl">机制节点</div><div class="en">Mechanisms</div></div>
@@ -401,11 +540,49 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
   </div>
 </div>
 
-<!-- ================= AXIOM / ARCHITECTURE ================= -->
-<section id="axiom">
+<!-- ================= 释名 ================= -->
+<section id="shiming">
   <div class="wrap">
-    <div class="kicker reveal">Core Axiom · 核心公理</div>
-    <p class="axiom-quote reveal"><em>底层人类机制稳定，</em><br>平台机制变化。</p>
+    <div class="kicker reveal">壹 · 释名<span class="en">The Name · Why MUDUO</span></div>
+    <h2 class="reveal">何谓<span class="verm">木铎</span>？</h2>
+    <p class="lead reveal">两千五百年前，仪邑的边防官见过孔子后，对弟子们说了这句话——自此，「木铎」成了传播者最古老的称谓。</p>
+    <div class="shiming-grid">
+      <div class="quote-stele reveal">
+        <div class="vtext small">《论语 · 八佾》 仪封人语</div>
+        <div class="vtext">天下之无道也久矣，<br>天将以<span class="red">夫子</span>为<span class="red">木铎</span>。</div>
+      </div>
+      <div class="shiyi">
+        <div class="shiyi-item reveal">
+          <div class="ord">闻</div>
+          <div>
+            <div class="t">铃之用，使人听见</div>
+            <div class="d">铎为大铃，宣达政教、召集民众时摇响。它直指传播的第一性问题——<em>注意力</em>：在众声喧哗中，如何让人听见。</div>
+          </div>
+        </div>
+        <div class="shiyi-item reveal">
+          <div class="ord">质</div>
+          <div>
+            <div class="t">金口木舌，质胜于文</div>
+            <div class="d">以木为舌，不以金声炫技。质直之物，其声方能及远——暗合引擎的脾气：<em>机制先于技巧，证据先于自信</em>。</div>
+          </div>
+        </div>
+        <div class="shiyi-item reveal">
+          <div class="ord">志</div>
+          <div>
+            <div class="t">礼崩乐坏，仍对人说话</div>
+            <div class="d">孔子被尊为木铎，意为在无道的时代依然选择启蒙与言说。今日信息过载、玄学横行，<em>做清醒的传播者</em>，正是此志。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 架构 ================= -->
+<section id="axiom" class="rule-double">
+  <div class="wrap">
+    <div class="kicker reveal">贰 · 架构<span class="en">Core Axiom · 核心公理</span></div>
+    <p class="axiom-quote reveal">底层人类机制稳定，<br><span class="verm">平台机制变化。</span></p>
     <p class="axiom-sub reveal">理论只存在于机制层；抖音、小红书、公众号都只是适配器。平台改版，理论不动；新平台出现，只需新增 adapter。</p>
     <div class="layers">
       <div class="stack reveal">
@@ -426,7 +603,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
           <p>注意 / 认知负荷 / 记忆 / 情绪 / 动机 / 身份 / 规范 / 信任——与平台无关、与时代无关的底层机制。</p>
         </div>
       </div>
-      <div class="layer-demo reveal">
+      <div class="stele-panel reveal">
         <h4>一次请求如何穿过四层 ·「优化这篇小红书标题」</h4>
         <div class="demo-io"><span class="k">1 任务判定</span>      → M1/M3，加载标题优化工作流
 <span class="k">2 按需加载</span>      → xiaohongshu adapter
@@ -440,23 +617,24 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
   </div>
 </section>
 
-<!-- ================= MECHANISM ATLAS ================= -->
-<section id="atlas" style="padding-top:60px">
+<!-- ================= 机制星图 ================= -->
+<section id="atlas" style="padding-top:64px">
   <div class="wrap">
-    <div class="kicker reveal">Mechanism Atlas · 机制星图</div>
-    <h2 class="reveal">下面这张图，就是它的<span class="grad">知识本体</span>。</h2>
-    <p class="lead reveal">不是装饰性动画——每个亮点都是知识库里的<b style="color:var(--ink)">真实机制节点</b>，连线是真实的 <code style="font-family:var(--mono);font-size:.85em;color:var(--cyan)">related_nodes</code> 关系，等级标签来自逐节点的证据定级。这是 216 节点全图的 <b style="color:var(--ink)">73 节点高权重子图</b>。悬停查看，拖拽把玩。</p>
+    <div class="kicker reveal">叁 · 机制星图<span class="en">Mechanism Atlas · 星图</span></div>
+    <h2 class="reveal">下面这张图，是它的<span class="verm">知识本体</span>。</h2>
+    <p class="lead reveal">不是装饰性动画——每个墨点都是知识库里的<b>真实机制节点</b>，连线是真实的 <code style="font-family:var(--mono);font-size:.85em;color:var(--c-cog)">related_nodes</code> 关系，等级标签来自逐节点的证据定级。如敦煌星图之于天象，此图之于传播。这是 216 节点全图的 <b>73 节点高权重子图</b>。悬停查看，拖拽把玩。</p>
     <div class="atlas-shell reveal">
       <canvas id="atlasCv"></canvas>
       <div class="atlas-hud"><b>REAL KNOWLEDGE GRAPH</b><br>73 NODES · 148 EDGES · 32 DOMAINS<br>HOVER / DRAG TO EXPLORE</div>
+      <div class="atlas-seal"><span class="seal" style="width:44px;height:44px;font-size:15px;border-radius:5px">星<br>图</span></div>
       <div id="tip"></div>
     </div>
     <div class="filters reveal" id="filters"></div>
-    <p class="atlas-note reveal">颜色 = 七大机制族群 · 光点大小 = 全图引用度（hub 等级）· 绿环 = A 级证据。<b>想要全图？</b>216 节点 + 1155 边全部开源，<a href="https://github.com/mizzlelover/communication-science-skill/tree/main/communication-science-skill/knowledge/mechanisms" target="_blank" rel="noopener">mechanisms/ 目录</a>按域存放。</p>
+    <p class="atlas-note reveal">色 = 七大机制族群（矿物七色）· 点之大小 = 全图引用度（hub 等级）· 绿环 = A 级证据。<b>欲观全图？</b>216 节点 + 1155 边全部开源，<a href="https://github.com/mizzlelover/communication-science-skill/tree/main/communication-science-skill/knowledge/mechanisms" target="_blank" rel="noopener">mechanisms/ 目录</a>按域存放。</p>
   </div>
 </section>
 
-<!-- ================= TICKER ================= -->
+<!-- ================= 机制长廊 ================= -->
 <div class="ticker-zone">
   <div class="ticker-head">
     <h3>机制长廊</h3>
@@ -466,11 +644,11 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
   <div class="marquee"><div class="mrow" id="row2"></div></div>
 </div>
 
-<!-- ================= BEHAVIOR CHAIN ================= -->
+<!-- ================= 行为链 ================= -->
 <section id="chain" style="padding-top:90px">
   <div class="wrap">
-    <div class="kicker reveal">Behavior Chain · 传播行为链</div>
-    <h2 class="reveal">不笼统说<span class="grad">"互动率"</span>，<br>逐层定位行为瓶颈。</h2>
+    <div class="kicker reveal">肆 · 传播行为链<span class="en">Behavior Chain · 十六阶</span></div>
+    <h2 class="reveal">不笼统说<span class="verm">「互动率」</span>，<br>逐层定位行为瓶颈。</h2>
     <p class="lead reveal">十六层行为链是诊断的坐标系——先定位用户停在哪一层，再调对应机制。</p>
     <div class="chain-wrap reveal"><div class="chain" id="chainEl"></div></div>
     <div class="chain-note reveal">AUTO DIAGNOSIS · 逐层点亮中…</div>
@@ -483,12 +661,12 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
   </div>
 </section>
 
-<!-- ================= SHOWDOWN ================= -->
-<section id="vs" style="padding-top:40px">
+<!-- ================= 问难 ================= -->
+<section id="vs" style="padding-top:44px">
   <div class="wrap">
-    <div class="kicker reveal">Myth vs Mechanism · 对抗测试</div>
-    <h2 class="reveal">听到"爆款玄学"时，<br>它会这样<span class="grad">接招</span>。</h2>
-    <p class="lead reveal">内置对抗测试：用户说错时，不迎合。以下每一条都是评测案例库中的真实考题。</p>
+    <div class="kicker reveal">伍 · 问难<span class="en">Myth vs Mechanism · 对抗测试</span></div>
+    <h2 class="reveal">听到「爆款玄学」时，<br>它会这样<span class="verm">接招</span>。</h2>
+    <p class="lead reveal">内置对抗测试：用户说错时，不迎合。或曰者，流行之见也；铎曰者，机制之答也。以下每一条都是评测案例库中的真实考题。</p>
     <div class="vs-grid reveal">
       <div class="vs-row">
         <div class="vs-bad"><span class="q">小红书标题一定要有数字！</span></div>
@@ -513,57 +691,57 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
       <div class="vs-row">
         <div class="vs-bad"><span class="q">数据不好，肯定是文案的问题。</span></div>
         <div class="vs-mid">⇒</div>
-        <div class="vs-good"><b>有时"不要改"。</b>先排除分发、受众错配、时机、网络结构，再归因内容——复盘工作流从外生变量开始。</div>
+        <div class="vs-good"><b>有时「不要改」。</b>先排除分发、受众错配、时机、网络结构，再归因内容——复盘工作流从外生变量开始。</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= EVIDENCE ================= -->
-<section id="evidence" style="padding-top:40px">
+<!-- ================= 证据五等 ================= -->
+<section id="evidence" style="padding-top:44px">
   <div class="wrap">
-    <div class="kicker reveal">Evidence System · 证据体系</div>
-    <h2 class="reveal">每个机制都有<span class="grad">证据等级</span>，<br>每条建议都有适用边界。</h2>
-    <p class="lead reveal">回答的问题从来不是"某本书说了什么"，而是"关于某一机制，目前最可靠的知识是什么"。全库 A/B 级占 84%，零编造 DOI、零编造页码。</p>
+    <div class="kicker reveal">陆 · 证据体系<span class="en">Evidence System · 五等之判</span></div>
+    <h2 class="reveal">每个机制都有<span class="verm">证据等级</span>，<br>每条建议都有适用边界。</h2>
+    <p class="lead reveal">回答的问题从来不是「某本书说了什么」，而是「关于某一机制，目前最可靠的知识是什么」。全库 A/B 级占 84%，零编造 DOI、零编造页码。</p>
     <div class="ev-grid">
       <div class="grade reveal" data-g="A"><div class="g">A</div><div class="n">强证据</div><div class="d">多独立研究 / Meta-analysis / 高质量复制。可作强建议核心依据。</div></div>
       <div class="grade reveal" data-g="B"><div class="g">B</div><div class="n">中等证据</div><div class="d">效应存在、边界明显。可作主要依据，必须带边界条件。</div></div>
-      <div class="grade reveal" data-g="C"><div class="g">C</div><div class="n">新兴/情境</div><div class="d">样本或情境有限（AI 时代新现象多在此）。必须标注"证据尚新"。</div></div>
-      <div class="grade reveal" data-g="D"><div class="g">D</div><div class="n">实践经验</div><div class="d">行业共识、无系统检验。必须标注"实践经验，非实证结论"。</div></div>
+      <div class="grade reveal" data-g="C"><div class="g">C</div><div class="n">新兴/情境</div><div class="d">样本或情境有限（AI 时代新现象多在此）。必须标注「证据尚新」。</div></div>
+      <div class="grade reveal" data-g="D"><div class="g">D</div><div class="n">实践经验</div><div class="d">行业共识、无系统检验。必须标注「实践经验，非实证结论」。</div></div>
       <div class="grade reveal" data-g="E"><div class="g">E</div><div class="n">争议/失效</div><div class="d">复制失败或严重争议。不得作为强建议依据，仅用于破除误解。</div></div>
     </div>
-    <div class="kicker reveal" style="color:var(--pink)">内置一张反玄学清单</div>
+    <div class="kicker reveal" style="letter-spacing:.3em">破妄录 · 内置一张反玄学清单<span class="en">Anti-Myth Registry</span></div>
     <div class="no-grid">
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"人类注意力只有 8 秒"</div><div class="d">无原始研究支持的媒体讹传；Gloria Mark 的研究被误读。谣言清单内置，永不采用。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">「人类注意力只有 8 秒」</div><div class="d">无原始研究支持的媒体讹传；Gloria Mark 的研究被误读。谣言清单内置，永不采用。</div></div></div>
       <div class="no-card reveal"><div class="x">✕</div><div><div class="t">Ego depletion 自我损耗</div><div class="d">大规模预注册复制失败，定级 E——禁止作为建议依据，经典结论被修正时保留修正。</div></div></div>
-      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">"损失厌恶是铁律"</div><div class="d">存在但幅度有争议、个体差异大——从 A 降级至 B，建议必须携带边界。</div></div></div>
+      <div class="no-card reveal"><div class="x">✕</div><div><div class="t">「损失厌恶是铁律」</div><div class="d">存在但幅度有争议、个体差异大——从 A 降级至 B，建议必须携带边界。</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ================= MODES ================= -->
-<section id="modes" style="padding-top:30px">
+<!-- ================= 七艺 ================= -->
+<section id="modes" style="padding-top:34px">
   <div class="wrap">
-    <div class="kicker reveal">Capabilities · 七种调用模式</div>
-    <h2 class="reveal">从一个标题，到一篇万字长文，<br>到<span class="grad">整个社群</span>。</h2>
+    <div class="kicker reveal">柒 · 调用七艺<span class="en">Capabilities · Seven Modes</span></div>
+    <h2 class="reveal">从一个标题，到一篇万字长文，<br>到<span class="verm">整个社群</span>。</h2>
     <p class="lead reveal">对 Agent 说人话即可，任务判定自动路由到对应工作流。</p>
     <div class="mode-grid">
-      <div class="mode reveal"><div class="id">M1 · QUICK</div><div class="t">快速诊断</div><div class="d">标题/首屏逐要素拆解，秒级定位最短板。</div><div class="q">"帮我看看这个标题行不行"</div></div>
-      <div class="mode reveal"><div class="id">M2 · DEEP</div><div class="t">机制级分析</div><div class="d">十六层行为链 + 机制映射，解释为什么传播不动。</div><div class="q">"为什么这篇传播不动？"</div></div>
-      <div class="mode reveal"><div class="id">M3 · REWRITE</div><div class="t">改写与标题</div><div class="d">先诊断后改写；候选方案 + 优劣说明，等你确认。</div><div class="q">"给我几个新标题"</div></div>
-      <div class="mode reveal"><div class="id">M4 · RESEARCH</div><div class="t">传播研究</div><div class="d">检索 216 节点知识库，理论冲突单独登记。</div><div class="q">"研究一下这个传播现象"</div></div>
-      <div class="mode reveal"><div class="id">M5 · COMMUNITY</div><div class="t">社群策略</div><div class="d">Identity/Norm/Status/Ritual 十层结构诊断与设计。</div><div class="q">"800 人社群只有 20 人说话"</div></div>
-      <div class="mode reveal"><div class="id">M6 · POSTMORTEM</div><div class="t">传播复盘</div><div class="d">先排除外生变量，再按漏斗相邻比率定位环节。</div><div class="q">"曝光 20 万、完播 2%，复盘"</div></div>
-      <div class="mode reveal"><div class="id">M7 · LONGFORM</div><div class="t">长文深度优化</div><div class="d">3000 字以上：命题抽取、论证地图、认知负荷、两遍优化。先结构后逐句。</div><div class="q">"优化这篇 6000 字行业研究"</div></div>
+      <div class="mode reveal"><div class="id">M1 · QUICK</div><div class="t">快速诊断</div><div class="d">标题/首屏逐要素拆解，秒级定位最短板。</div><div class="q">帮我看看这个标题行不行</div></div>
+      <div class="mode reveal"><div class="id">M2 · DEEP</div><div class="t">机制级分析</div><div class="d">十六层行为链 + 机制映射，解释为什么传播不动。</div><div class="q">为什么这篇传播不动？</div></div>
+      <div class="mode reveal"><div class="id">M3 · REWRITE</div><div class="t">改写与标题</div><div class="d">先诊断后改写；候选方案 + 优劣说明，等你确认。</div><div class="q">给我几个新标题</div></div>
+      <div class="mode reveal"><div class="id">M4 · RESEARCH</div><div class="t">传播研究</div><div class="d">检索 216 节点知识库，理论冲突单独登记。</div><div class="q">研究一下这个传播现象</div></div>
+      <div class="mode reveal"><div class="id">M5 · COMMUNITY</div><div class="t">社群策略</div><div class="d">Identity/Norm/Status/Ritual 十层结构诊断与设计。</div><div class="q">800 人社群只有 20 人说话</div></div>
+      <div class="mode reveal"><div class="id">M6 · POSTMORTEM</div><div class="t">传播复盘</div><div class="d">先排除外生变量，再按漏斗相邻比率定位环节。</div><div class="q">曝光 20 万、完播 2%，复盘</div></div>
+      <div class="mode reveal"><div class="id">M7 · LONGFORM</div><div class="t">长文深度优化</div><div class="d">3000 字以上：命题抽取、论证地图、认知负荷、两遍优化。先结构后逐句。</div><div class="q">优化这篇 6000 字行业研究</div></div>
     </div>
   </div>
 </section>
 
-<!-- ================= EVALS ================= -->
-<section id="evals" style="padding-top:30px">
+<!-- ================= 校考 ================= -->
+<section id="evals" style="padding-top:34px">
   <div class="wrap">
-    <div class="kicker reveal">Evaluation · 评测</div>
-    <h2 class="reveal">自己说好不算数，<br><span class="grad">盲测数据</span>放这里。</h2>
+    <div class="kicker reveal">捌 · 评测<span class="en">Evaluation · 校考</span></div>
+    <h2 class="reveal">自己说好不算数，<br><span class="verm">盲测数据</span>放这里。</h2>
     <div class="eval-grid">
       <div class="bars reveal">
         <div class="bar-row"><div class="bt"><b>self-eval · 基础集 110 案</b><span>17.71 / 18</span></div><div class="bar"><i data-w="98.4"></i></div></div>
@@ -575,17 +753,17 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
       <div class="eval-card reveal">
         <h4>怎么读这些分数</h4>
         <p><span class="hl">160/160</span> 案例通过，<span class="hl">红线 0</span>（overclaiming / ethical_safety 任一为零即整案失败）。环境隔离盲测：作答者不可见答案、独立评分者判分、三轮迭代 <span class="hl">32/32</span> 全过。</p>
-        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只证明"知识库可支撑合格应答"。所以补做了环境隔离盲测——协议（R1/R2/R3 三角色分离）与全部评分留痕都在仓库里开源。</div>
+        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只证明「知识库可支撑合格应答」。所以补做了环境隔离盲测——协议（R1/R2/R3 三角色分离）与全部评分留痕都在仓库里开源。</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= INSTALL ================= -->
-<section id="install" style="padding-top:30px">
+<!-- ================= 接入 ================= -->
+<section id="install" style="padding-top:34px">
   <div class="wrap">
-    <div class="kicker reveal">Install · 三分钟接入</div>
-    <h2 class="reveal">遵循 Agent Skills 开放标准，<br><span class="grad">主流 Agent 原生兼容</span>。</h2>
+    <div class="kicker reveal">玖 · 接入<span class="en">Install · 三分钟接入</span></div>
+    <h2 class="reveal">遵循 Agent Skills 开放标准，<br><span class="verm">主流 Agent 原生兼容</span>。</h2>
     <p class="lead reveal">克隆仓库，把目录放进对应技能路径，然后用自然语言调用。</p>
     <div class="reveal">
       <div class="tabs" id="tabs">
@@ -621,40 +799,40 @@ cp -R communication-science-skill your-project/.trae/skills/</pre></div>
       <div class="codebox" id="t4" hidden><button class="cp">COPY</button><pre><span class="c"># 只识别 AGENTS.md 的 Agent？加一行即可：</span>
 <span class="k">处理传播诊断 / 内容优化 / 社群增长 / 长文优化 / 传播复盘类任务时，
 先阅读 communication-science-skill/SKILL.md 并严格遵循其工作流与铁律。</span></pre></div>
-      <p class="inst-note">对话调用<span style="color:var(--green)">零依赖</span>；仅 <code>scripts/</code> 工程工具需要 Python 3.9+ / PyYAML。</p>
+      <p class="inst-note">对话调用<span style="color:var(--lv);font-weight:600">零依赖</span>；仅 <code>scripts/</code> 工程工具需要 Python 3.9+ / PyYAML。</p>
     </div>
   </div>
 </section>
 
-<!-- ================= PRINCIPLES ================= -->
-<section id="principles" style="padding-top:40px">
+<!-- ================= 军规 ================= -->
+<section id="principles" style="padding-top:44px">
   <div class="wrap">
-    <div class="kicker reveal">Design Principles · 十条军规</div>
-    <h2 class="reveal">理论有依据，建议有边界，<br><span class="grad">方法可进化。</span></h2>
+    <div class="kicker reveal">拾 · 军规十条<span class="en">Design Principles</span></div>
+    <h2 class="reveal">理论有依据，建议有边界，<br><span class="verm">方法可进化</span>。</h2>
     <div class="prin reveal">
-      <span>Mechanism <b>before</b> Tactic</span>
-      <span>Evidence <b>before</b> Confidence</span>
-      <span>Human <b>before</b> Platform</span>
-      <span>Platform <b>as</b> Adapter</span>
-      <span>Diagnosis <b>before</b> Rewrite</span>
-      <span>Virality <b>≠</b> Community</span>
-      <span>Correlation <b>≠</b> Causation</span>
-      <span>Short-term Performance <b>≠</b> Long-term Value</span>
-      <span>Useful <b>≠</b> Manipulative</span>
-      <span>Theory + Boundary + Practice</span>
+      <span><i>一</i>Mechanism <b>before</b> Tactic</span>
+      <span><i>二</i>Evidence <b>before</b> Confidence</span>
+      <span><i>三</i>Human <b>before</b> Platform</span>
+      <span><i>四</i>Platform <b>as</b> Adapter</span>
+      <span><i>五</i>Diagnosis <b>before</b> Rewrite</span>
+      <span><i>六</i>Virality <b>≠</b> Community</span>
+      <span><i>七</i>Correlation <b>≠</b> Causation</span>
+      <span><i>八</i>Short-term Performance <b>≠</b> Long-term Value</span>
+      <span><i>九</i>Useful <b>≠</b> Manipulative</span>
+      <span><i>十</i>Theory + Boundary + Practice</span>
     </div>
   </div>
 </section>
 
-<!-- ================= AUTHOR ================= -->
+<!-- ================= 作者 ================= -->
 <section class="author" id="author">
   <div class="wrap">
-    <div class="kicker reveal" style="color:var(--gold)">Author · 作者</div>
+    <div class="kicker reveal">拾壹 · 作者<span class="en">Author</span></div>
     <div class="author-grid">
       <div class="reveal">
         <div class="author-name">谁是专家</div>
         <p class="author-desc">
-          本方法论的研究者与构建者。从 100 本经典与原始文献出发，拒绝"一本书一个摘要"，
+          本方法论的研究者与构建者。从 100 本经典与原始文献出发，拒绝「一本书一个摘要」，
           以机制为单元跨来源蒸馏，全程携带证据意识与伦理边界。
           同名创作 IP 持续分享传播科学、社群增长与 AI 时代的知识工作方法。
         </p>
@@ -672,22 +850,24 @@ cp -R communication-science-skill your-project/.trae/skills/</pre></div>
   </div>
 </section>
 
-<!-- ================= FINAL ================= -->
+<!-- ================= 落款 ================= -->
 <section class="final">
   <div class="wrap">
-    <h2 class="reveal">什么样的信息，在什么样的人、<br><span class="grad">什么样的机制下</span>，会以什么方式改变行动？</h2>
+    <div class="final-seal reveal">木<br>铎</div>
+    <h2 class="reveal">什么样的信息，在什么样的人、<br><span class="verm">什么样的机制下</span>，会以什么方式改变行动？</h2>
     <p class="lead reveal">这是这套方法论试图回答的问题。现在，把它装进你的 Agent。</p>
     <div class="cta reveal" style="justify-content:center">
       <a class="btn btn-pri" href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub · Star &amp; Clone</a>
       <a class="btn btn-ghost" href="#install">接入指南 ↑</a>
     </div>
+    <p class="luokuan reveal"><b>木铎 MUDUO</b> · 在信息过载的时代，做一个清醒的传播者</p>
   </div>
 </section>
 
 <footer>
   <div class="foot-in">
-    <div>© 2026 谁是专家 · Human Communication &amp; Community Growth Engine</div>
-    <div><a href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub</a> · Code: MIT · Knowledge: CC BY 4.0 · v1.1.9</div>
+    <div>© 2026 谁是专家 · 木铎 MUDUO · Human Communication &amp; Community Growth Engine</div>
+    <div><a href="https://works.mizzlelover.xyz/" target="_blank" rel="noopener">作品集 ↗</a> · <a href="https://github.com/mizzlelover/communication-science-skill" target="_blank" rel="noopener">GitHub</a> · Code: MIT · Knowledge: CC BY 4.0 · v1.1.9</div>
   </div>
 </footer>
 
@@ -702,51 +882,14 @@ const ATLAS = {"nodes": [{"id": "misinformation_velocity", "zh": "错误信息�
 'use strict';
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ============ 1. scroll progress ============ */
+/* ============ 1. 卷首进度 ============ */
 const prog=document.getElementById('prog');
 addEventListener('scroll',()=>{
   const h=document.documentElement;
   prog.style.width=(h.scrollTop/(h.scrollHeight-innerHeight)*100)+'%';
 },{passive:true});
 
-/* ============ 2. background network ============ */
-(function(){
-  const cv=document.getElementById('net'),cx=cv.getContext('2d');
-  let W,H,pts=[],mouse={x:-9e3,y:-9e3},run=true;
-  const DPR=Math.min(devicePixelRatio||1,2);
-  function size(){W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;
-    cv.style.width=W+'px';cv.style.height=H+'px';cx.setTransform(DPR,0,0,DPR,0,0);
-    const n=Math.min(90,Math.floor(W*H/16000));pts=[];
-    for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,
-      vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.6+.8});}
-  size();addEventListener('resize',size);
-  addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
-  function tick(){
-    if(run){
-      cx.clearRect(0,0,W,H);
-      const R=Math.min(150,W/9);
-      for(const p of pts){
-        p.x+=p.vx;p.y+=p.vy;
-        if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-      }
-      for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
-        const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-        if(d<R){cx.strokeStyle=`rgba(99,120,180,${(1-d/R)*.16})`;cx.lineWidth=1;
-          cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();}
-      }
-      for(const p of pts){
-        const d=Math.hypot(p.x-mouse.x,p.y-mouse.y);
-        if(d<130&&d>0){p.x+=(p.x-mouse.x)/d*1.1;p.y+=(p.y-mouse.y)/d*1.1;}
-        cx.fillStyle='rgba(148,163,216,.65)';
-        cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill();
-      }
-    }
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-
-/* ============ 3. reveal + counters ============ */
+/* ============ 2. reveal + 计数 ============ */
 const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
 }),{threshold:.12});
@@ -760,14 +903,14 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.6});
 document.querySelectorAll('.num').forEach(el=>cio.observe(el));
 
-/* ============ 4. eval bars ============ */
+/* ============ 3. 校考研墨条 ============ */
 const bio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;bio.unobserve(e.target);
   e.target.querySelectorAll('i[data-w]').forEach(i=>i.style.width=i.dataset.w+'%');
 }),{threshold:.4});
 const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
 
-/* ============ 5. layers auto-cycle ============ */
+/* ============ 4. 四层轮转 ============ */
 (function(){
   const layers=[...document.querySelectorAll('.layer')];if(!layers.length)return;
   let li=0;
@@ -782,12 +925,12 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
   },3600);
 })();
 
-/* ============ 6. behavior chain ============ */
+/* ============ 5. 行为链 · 十六阶 ============ */
 (function(){
-  const STAGES=[['👁','注意','ATTENTION'],['🎯','点击','CLICK'],['📖','阅读','READ'],['🧠','理解','COMPREHEND'],
-    ['💾','记忆','MEMORY'],['🤝','信任','TRUST'],['⚖️','态度','ATTITUDE'],['💬','互动','ENGAGE'],
-    ['🔖','收藏','SAVE'],['🔁','转发','SHARE'],['➕','关注','FOLLOW'],['👥','入群','JOIN'],
-    ['✍️','参与','PARTICIPATE'],['🌟','贡献','CONTRIBUTE'],['💰','转化','CONVERT'],['♻️','留存','RETAIN']];
+  const STAGES=[['观','注意','ATTENTION'],['击','点击','CLICK'],['读','阅读','READ'],['解','理解','COMPREHEND'],
+    ['忆','记忆','MEMORY'],['信','信任','TRUST'],['态','态度','ATTITUDE'],['言','互动','ENGAGE'],
+    ['藏','收藏','SAVE'],['传','转发','SHARE'],['随','关注','FOLLOW'],['入','入群','JOIN'],
+    ['与','参与','PARTICIPATE'],['献','贡献','CONTRIBUTE'],['化','转化','CONVERT'],['留','留存','RETAIN']];
   const chain=document.getElementById('chainEl');if(!chain)return;
   chain.innerHTML=STAGES.map((s,i)=>
     `<div class="node${i===0?' hit':''}"><div class="b">${s[0]}</div><div class="s">${s[1]}</div><div class="e">${s[2]}</div></div>${i<STAGES.length-1?'<div class="arr">→</div>':''}`).join('');
@@ -802,7 +945,7 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
   },1100);
 })();
 
-/* ============ 7. mechanism ticker ============ */
+/* ============ 6. 机制长廊 ============ */
 (function(){
   const N=ATLAS.nodes.slice().sort((a,b)=>b.deg-a.deg);
   const gc=g=>g.startsWith('A')?'gv':(g.startsWith('C')?'cv2':(g==='D'?'dv':'cv'));
@@ -813,12 +956,12 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
   document.getElementById('row2').innerHTML=r2+r2;
 })();
 
-/* ============ 8. MECHANISM ATLAS ============ */
+/* ============ 7. 机制星图 · 纸上星象 ============ */
 (function(){
   const cv=document.getElementById('atlasCv');if(!cv)return;
   const cx=cv.getContext('2d'),tip=document.getElementById('tip');
-  const GRP={cog:['认知','#22d3ee'],mot:['动机情绪','#8b5cf6'],soc:['社会信任','#ec4899'],
-    per:['说服叙事','#f97316'],net:['传播网络','#60a5fa'],com:['社群归属','#34d399'],plt:['平台品牌','#fbbf24']};
+  const GRP={cog:['认知','#3e5f7a'],mot:['动机情绪','#74455a'],soc:['社会信任','#a63a24'],
+    per:['说服叙事','#9c5a28'],net:['传播网络','#34506b'],com:['社群归属','#4f6b4a'],plt:['平台品牌','#a07d24']};
   const nodes=ATLAS.nodes,N=nodes.length;
   const idx={};nodes.forEach((n,i)=>idx[n.id]=i);
   const adj=nodes.map(()=>[]);
@@ -831,7 +974,7 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
     cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);
   }
   size();
-  // init layout: golden spiral (after size)
+  // 初始布局：黄金螺线（如星图之旋玑）
   nodes.forEach((n,i)=>{
     const r=Math.sqrt((i+.5)/N)*Math.min(W,H)*.46,a=i*2.399963;
     n.x=W/2+r*Math.cos(a);n.y=H/2+r*Math.sin(a);
@@ -858,7 +1001,6 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
     nodes.forEach((n,i)=>{
       n.vx+=(W/2-n.x)*.0022;n.vy+=(H/2-n.y)*.0022;
       if(i===drag){n.vx=0;n.vy=0;return;}
-      // soft walls: spring back before touching the edge, so nodes never line up on the border
       const m=42;
       if(n.x<m)n.vx+=(m-n.x)*.05; else if(n.x>W-m)n.vx-=(n.x-(W-m))*.05;
       if(n.y<m)n.vy+=(m-n.y)*.05; else if(n.y>H-m)n.vy-=(n.y-(H-m))*.05;
@@ -881,25 +1023,28 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
       const a=nodes[idx[e.a]],b=nodes[idx[e.b]];if(!a||!b)continue;
       const dimmed=activeGrp&&(a.grp!==activeGrp||b.grp!==activeGrp);
       const hl=hover>=0&&(idx[e.a]===hover||idx[e.b]===hover);
-      cx.strokeStyle=hl?'rgba(34,211,238,.55)':`rgba(148,163,184,${dimmed?.03:.13})`;
-      cx.lineWidth=hl?1.6:1;
+      cx.strokeStyle=hl?'rgba(166,58,36,.62)':`rgba(70,58,38,${dimmed?.03:.16})`;
+      cx.lineWidth=hl?1.5:1;
       cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();
     }
     for(const r of rings){
-      cx.strokeStyle=r.c;cx.globalAlpha=r.a;cx.lineWidth=1.2;
+      cx.strokeStyle=r.c;cx.globalAlpha=r.a;cx.lineWidth=1.1;
       cx.beginPath();cx.arc(r.x,r.y,r.r,0,7);cx.stroke();cx.globalAlpha=1;
     }
     nodes.forEach((n,i)=>{
       const dim=activeGrp&&n.grp!==activeGrp;
       const isH=i===hover,nb=hover>=0&&adj[hover].includes(i);
       cx.globalAlpha=dim?.07:((hover<0||isH||nb)?1:.3);
-      if(isH||nb){cx.shadowColor=GRP[n.grp][1];cx.shadowBlur=isH?22:12;}
+      // 墨点 · 纸白芯 + 矿物色边
+      cx.fillStyle='#f8f4e9';
+      cx.strokeStyle=GRP[n.grp][1];
+      cx.lineWidth=isH?3.4:(nb?2.6:2);
+      cx.beginPath();cx.arc(n.x,n.y,isH?n.rad*1.35:n.rad,0,7);cx.fill();cx.stroke();
       cx.fillStyle=GRP[n.grp][1];
-      cx.beginPath();cx.arc(n.x,n.y,isH?n.rad*1.35:n.rad,0,7);cx.fill();
-      cx.shadowBlur=0;
+      cx.beginPath();cx.arc(n.x,n.y,(isH?n.rad*1.35:n.rad)*.38,0,7);cx.fill();
       if(n.g.startsWith('A')&&!dim){
-        cx.strokeStyle='rgba(52,211,153,.55)';cx.lineWidth=1;
-        cx.beginPath();cx.arc(n.x,n.y,n.rad+3.5,0,7);cx.stroke();
+        cx.strokeStyle='rgba(79,107,74,.6)';cx.lineWidth=1;
+        cx.beginPath();cx.arc(n.x,n.y,n.rad+4,0,7);cx.stroke();
       }
       cx.globalAlpha=1;
     });
@@ -958,7 +1103,7 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
   });
 })();
 
-/* ============ 9. install tabs + copy ============ */
+/* ============ 8. 接入页签 + 抄录 ============ */
 (function(){
   const tabs=document.querySelectorAll('.tab');
   tabs.forEach(t=>t.addEventListener('click',()=>{

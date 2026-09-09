@@ -1,0 +1,25 @@
+# Evidence Package — S104 Schultz 2007
+# 标准格式。access_level 如实标注。
+source_id: S104
+title: "The Constructive, Destructive, and Reconstructive Power of Social Norms"
+authors: "P. Wesley Schultz; Jessica M. Nolan; Robert B. Cialdini; Noah J. Goldstein; Vladas Griskevicius"
+year: 2007
+journal: Psychological Science 18(5), 429-434
+doi: "10.1111/j.1467-9280.2007.01917.x"
+url: "https://pubmed.ncbi.nlm.nih.gov/17576283/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "PubMed 完整摘要（正文级结论）+ 2018 作者 Reprise 文章摘要（Perspectives on Psychological Science 13(2):249-254，作者亲述 2007 研究背景与结论）"
+research_question: "描述性规范反馈如何影响家庭能源消耗？回旋镖效应是否可被指令性信号消除？"
+core_claims:
+  - "现场实验用描述性规范信息（告知街区平均能耗）促进家庭节能"
+  - "描述性规范对高能耗家庭产生理想的节能效果；但对低能耗家庭产生不想要的回旋镖效应（能耗上升）"
+  - "叠加指令性信息（传达社会赞许/不赞成）可消除回旋镖效应"
+  - "该文为 APS 全部期刊中引用最高的 30 篇之一，作者归因于大样本真实行为测量"
+method: "现场实验（居民家庭能耗反馈提示卡）；以街区平均能耗为描述性规范信息；部分条件叠加指令性赞许信号；测量实际能耗变化"
+results: "描述性规范：高能耗户节能、低能耗户回旋镖；指令性赞许信号消除回旋镖"
+limitations: "美国加州居民样本；能耗行为单一场景；效应量以原文为准（本轮未取原文统计）"
+boundary_conditions: "规范信息干预需区分基线位置（低分布者防回旋镖）；指令性信号是关键补足"
+relevant_nodes: [norm_messaging_effects, descriptive_injunctive_norms, social_proof]
+notes: "PubMed 摘要全文 + 作者 2018 Reprise 双源确认；原文正文未取得 → abstract_only。已从 found 升级为 annotated。"
+last_verified: "2026-09"

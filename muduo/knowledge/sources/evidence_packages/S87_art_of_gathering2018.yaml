@@ -1,0 +1,27 @@
+# Evidence Package — S87 Priya Parker 2018（The Art of Gathering）
+# 标准格式。access_level 如实标注。
+source_id: S87
+title: "The Art of Gathering: How We Meet and Why It Matters"
+authors: "Priya Parker"
+year: 2018
+journal: Riverhead Books（Penguin 旗下；中译本《聚会》机械工业出版社 2020，译者叶子）
+doi: "无 DOI（专著）"
+url: "https://m.douban.com/book/subject/30292164/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经 6 渠道交叉实取：① 豆瓣书目页（Riverhead 官方简介+原文摘录『有选择地排他』，ISBN 9781594634925，2018-05-15）② 厦门大学图书馆馆藏目录（中文版全书目录：你们究竟为何聚会/谁在哪里/别做一个冷漠的主人/创造一个暂时的别样世界/后勤事务/别把最完美的一面带入我的聚会/创造良性争议/天下无不散的宴席）③ 华尔街俱乐部深度解读（六大支柱：明确具体且具争议性的目的、有选择地邀请、积极主持、创造临时替代世界、精心设计开场与收尾、引导有益的争议）④ 亚马逊书目页（热门标注：Specificity is a crucial ingredient）⑤ TED2019 演讲页及中译稿（specific disputable purpose、主持角色、新聚会规则）⑥ 播客《她的书单》与 befree.ai 逐字稿（purpose vs category、慷慨排他、良性争议、开场收尾）"
+research_question: "为什么大多数聚会平淡无奇？如何通过有意识的设计（目的、邀请、规则、主持、开场收尾）把日常聚会变成有意义的、变革性的体验？"
+core_claims:
+  - "目的（purpose）优先：『类别不是目的』——『生日派对』只是类别，具体、可被争议（disputable）的目的才是聚会的决策过滤器；『The more specific the gathering, the more narrowly it frames itself and the more passion it arouses』（亚马逊书页热门标注；TED 演讲『embrace a specific disputable purpose』）"
+  - "有选择地邀请（generous exclusion）：『如果人人受邀，等于无人受邀』——不符合聚会目的的人会稀释聚会，有意识地把某人排除在外是对目的与来宾的慷慨（豆瓣原文摘录+ befreed.ai 逐字稿）"
+  - "主人（host）角色：不做『冷漠的主人』——主人需以『慷慨的权威』积极主持、使客人平等并彼此联结，而不是只管食物鲜花（中文版目录第三章+播客『慷慨掌控者』）"
+  - "规则设计：为聚会建立临时性、只对本次聚会有效的规则（如聚会期间禁手机），把聚会变成『暂时的别样世界』（中文版目录第四章：规则的兴起/礼仪与临时规则/规则与手机）"
+  - "以优雅引入良性争议（controversy with grace）：『不健康的和平』比冲突更伤人，良性争议需要设计（热度图/安全空间/基本规则）而非回避（中文版目录第七章+华尔街俱乐部『引导有益的争议』+B 站访谈『不健康的和平』）"
+  - "精心设计开场与收尾：开场调动气氛、收尾完成告别，聚会的高潮与结局都应被设计（中文版目录第八章『天下无不散的宴席』+TED『三步把日常聚会变成变革性聚会』）"
+method: "实践书（D 级设计框架）：作者为冲突促动师（conflict facilitator），基于为世界各地会议、婚礼、法庭、闪聚、阿以夏令营等设计聚会的案例提出方法论；非实验研究"
+results: "（实践框架）聚会设计六支柱成为企业会议、社群活动与个人社交设计的常用参照，TED2019 演讲传播广泛"
+limitations: "案例叙事与作者经验驱动，无系统实证检验；中文深度解读亦指出其西方中心化倾向、理想化设计与操作成本问题"
+boundary_conditions: "适用于可被设计的线下/线上聚会场景；前提是组织者拥有一定权威与选择权（可筛选邀请名单、可设定规则）；对完全开放、无门槛的公共活动需修正"
+relevant_nodes: [collective_effervescence, community_rituals, third_place, sense_of_community]
+notes: "聚会设计方法论源头之一（book 级）。『purpose 优先/慷慨排他/临时规则（pop-up rules，对应中文版第四章『礼仪与临时规则』）/良性争议/开场收尾』均经多源实取，未编造。D 级实践框架。third_place 为边缘关联（聚会有时限，与常设第三空间相对）。"
+last_verified: "2026-09"

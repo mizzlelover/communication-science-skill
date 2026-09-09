@@ -1,0 +1,63 @@
+# Case Schema（实践案例库）
+# 铁律：案例不得被当成因果证据（Correlation ≠ Causation）。
+#
+# 研究诚信规则：
+#   - 正式案例必须真实取得材料（original_material）；Acquire→Read→Contextualize→
+#     Mechanism Mapping→Alternative Explanation→Validation 六步未完成 = Candidate Case。
+#   - 必须区分 Observable Outcome 与 Claimed Outcome；outcome_status 六级。
+#   - corpus_status 标记案例在语料库中的验证状态；UNVERIFIED 案例不得用于高置信建议。
+#   - 单案例只能用于 illustration / hypothesis generation / contextual example；
+#     升级为 Contextual Practice Pattern 需 ≥3 独立案例 或 理论支持+≥2 独立案例。
+type: object
+required: [case_id, case_type, context, goal, intervention, mechanisms, result, alternative_explanations, evidence_quality, lesson, outcome_status, corpus_status]
+properties:
+  case_id:          {type: string, pattern: "^CASE-[A-Z]+-[0-9]{3}$"}
+  case_type:
+    type: string
+    enum: [research_case, brand_case, platform_case, community_case, campaign_case, failure_case, crisis_case, growth_case, content_case, ugc_case]
+  context:          {type: string, description: "背景：谁、什么平台、什么时间、什么约束"}
+  goal:             {type: string, description: "目标属于哪个 Behavior Goal（见 SKILL.md §4），不得笼统写'传播效果'"}
+  intervention:     {type: string, description: "做了什么改动"}
+  mechanisms:       {type: array, items: {type: string}, description: "涉及的机制节点 ID"}
+  result:           {type: string, description: "实际发生了什么；只有可公开核实的程度才允许写数字"}
+  original_material: {type: string, description: "实际取得的材料（论文/官方复盘/可核报道/存档截图）；缺失 = Candidate Case"}
+  campaign_mechanics: {type: string, description: "活动机制拆解（分发链路、参与结构、激励设计）"}
+  distribution_context: {type: string, description: "分发环境：账号体量/时机/算法状态/外力流量"}
+  observable_outcome: {type: string, description: "可观察到的结果（有材料支撑）"}
+  claimed_outcome:  {type: string, description: "品牌/当事方宣称的结果（PR 口径）——必须与 observable 分开"}
+  outcome_status:
+    type: string
+    enum: [OBSERVED, SELF_REPORTED, MEDIA_REPORTED, THIRD_PARTY_VERIFIED, INFERRED, UNKNOWN]
+    description: "结果性质六级；禁止把品牌 PR 数字当科研证据"
+  causal_status:
+    type: string
+    enum: [experimental, quasi_experimental, correlational, observational, case_inference, speculative]
+    description: "案例推断的因果地位，默认 case_inference"
+  failure_points:   {type: array, items: {type: string}, description: "失效点/翻车点；负案例语料的必备字段"}
+  community_lifecycle:
+    type: object
+    description: "community_case 必填——避免只看拉新阶段"
+    properties:
+      formation:        {type: string}
+      early_growth:     {type: string}
+      norm_creation:    {type: string}
+      role_structure:   {type: string}
+      participation:    {type: string}
+      conflict:         {type: string}
+      moderation:       {type: string}
+      retention:        {type: string}
+      decline_or_scale: {type: string}
+  alternative_explanations:
+    type: array
+    items: {type: string}
+    description: "至少 2 条：除干预外还能解释结果的其他原因（时机/渠道/天花板/幸存者偏差等）"
+  evidence_quality:
+    type: string
+    enum: [anecdote, practitioner_report, observational, experimental]
+    description: "research_case 才允许 experimental"
+  lesson:           {type: string, description: "机制层面的教训，而非'复制这个打法'"}
+  source_ids:       {type: array, items: {type: string, pattern: "^S[0-9]{2,3}$"}}
+  corpus_status:
+    type: string
+    enum: [CANDIDATE, SOURCE_CONFIRMED, PARTIAL, SELF_REPORTED, SECONDARY_ONLY, UNVERIFIED]
+    description: " 案例重审计标记；缺省 = UNVERIFIED。2026-09 基线：现有 12 案例均为 SECONDARY_ONLY（经典研究/公开报道改写，未取得一手材料）"

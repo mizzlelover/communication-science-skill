@@ -1,0 +1,300 @@
+# habit — 习惯（Habit）：行为如何被重复自动化，以及如何设计它
+domain: habit
+nodes:
+  - id: habit_loop_cue_routine_reward
+    canonical_name_en: Habit Loop (Cue-Routine-Reward)
+    canonical_name_zh: 习惯回路（线索-惯常行为-奖励）
+    aliases: [习惯循环, cue-routine-reward, 习惯三要素]
+    domain: habit
+    definition: "习惯回路由 Duhigg 在 The Power of Habit（S18）中科普化：稳定线索触发惯常行为，行为获得的奖励反哺该线索-行为联结。其学术对应物是情境-反应自动化关联（Wood 与 Neal 方向；S110 综述实有表述：习惯与目标追求协同引导行动，习惯是高效默认模式）。与 hook_model 的区别：习惯回路是描述性框架（习惯如何运作），Hook 模型是产品设计流程（如何制造上瘾式使用）；与 behavior_model_bmap 的区别：B=MAP 解释单次行为为何发生，习惯回路解释重复后的自动化。"
+    core_claim: "在稳定情境中重复并获得奖励的行为，会转变为由线索自动触发的习惯，降低对动机与意图的依赖。"
+    mechanism: "重复使行为的控制从目标系统转移到情境线索系统：线索（时间、地点、前序动作、情绪状态）与反应形成直接联结，奖励事后巩固该联结；计算模型显示习惯与目标追求协同引导行动，习惯是行动的高效默认模式（S110）。行为自动化释放注意与工作记忆资源（S110）。"
+    causal_chain: "稳定情境中重复行为+奖励 → 线索-反应联结巩固 → 行为自动触发 → 去意图化维持"
+    variables:
+      inputs: [线索稳定性, 重复频率, 行为难度, 奖励即时性]
+      moderators: [情境变化频率, 行为复杂度, 个体目标变动]
+      mediators: [情境-反应关联强度, 自动化程度]
+      outputs: [无意识执行频率, 行为稳定性, 中断后恢复速度]
+    evidence:
+      supporting:
+        - "Wood 与 Neal 的情境-反应习惯理论与实验综述（学术基础）"
+        - "Lally 等 2010 的习惯形成追踪：自动化随重复增长，中位数约 66 天且个体差异极大（现场追踪研究）"
+      conflicting:
+        - "习惯回路三段式是简化模型；真实习惯的形成受行为类型与复杂度强烈影响，不存在普适天数（对『21 天』流行说法的否定）"
+      replication:
+        - "情境-反应自动化方向稳健；流行版本（21 天养成）为讹传。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "行为需在相对稳定的情境中重复（动荡环境难成习惯）"
+      - "奖励需相对即时；远期收益难以巩固习惯"
+    failure_conditions:
+      - "情境改变（搬家、换工作、换平台）切断线索，习惯衰减"
+      - "行为复杂且奖励遥远（健身、学习）时，仅靠重复难以自动化"
+    common_misinterpretations:
+      - "『21 天养成一个习惯』：原始研究发现中位数约 66 天且范围极大，21 天为商业讹传"
+      - "把习惯回路当成设计公式照搬；它首先描述行为规律，其次才是设计启发"
+    ethical_risks:
+      - "利用自动化机制绑定非用户利益行为（自动续费、默认勾选）"
+    examples:
+      original_cases: ["The Power of Habit（S18）中牙膏、咖啡等消费习惯的线索分析"]
+      research_cases: ["Lally 等 2010 的习惯自动化追踪；Wood 团队的情境改变研究"]
+      modern_cases: ["打卡签到、固定栏目更新、睡前刷短视频"]
+    communication_implications: "让内容绑定时点与场景（『早八通勤三分钟』），稳定更新节律本身就是线索建设。"
+    community_implications: "社群仪式（周报、每周讨论日）是集体习惯回路：固定时间+固定形式+即时反馈。"
+    content_applications:
+      body: "内容系列给固定开场结构（同一问候、同一栏目名），帮助听众建立听觉线索"
+      cta: "『每晚十点，我们评论区见』——把行为绑定时点"
+    platform_implications: "平台的推送与默认打开路径是在争夺线索定义权；用户习惯一旦绑定平台，迁移成本成为竞争壁垒。"
+    related_nodes: [context_cue_stability, hook_model, behavior_model_bmap, variable_ratio_reward, friction_reduction]
+    source_ids: [S18, S16, S110]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Wood & Rünger 2016 Annual Review 综述（S110 已实取引言+目录+摘要）"
+      effect_size: "习惯=线索驱动的自动反应；习惯强度=行为频率×情境一致性"
+      replication_status: "综述整合认知/计算/神经证据；行为频率×情境一致性测量有复制"
+      context_dependency: "情境稳定+重复是形成前提；改变依赖环境重组"
+      downgrade_upgrade_reason: "2026-09 补充一手综述证据（S110），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S110]
+      supporting_evidence: [S18, S16]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: behavior_model_bmap
+    canonical_name_en: Fogg Behavior Model (B=MAP)
+    canonical_name_zh: 福格行为模型（B=MAP）
+    aliases: [B=MAP, 福格模型, Fogg Behavior Model]
+    domain: habit
+    definition: "Fogg 行为模型（S16、S37）主张行为（Behavior）在动机（Motivation）、能力（Ability）与提示（Prompt）三者同时到位时发生：B=MAP。动机不足时可通过降低难度（提升可及性）补偿；任何要素缺失，行为都不会发生。动机是不可靠的波浪，可靠的设计是简化+提示。定级 C：模型整合的成分均有实证，但 B=MAP 作为整体模型的直接检验有限。"
+    core_claim: "行为发生需要动机、能力、提示三者同时满足；降低行为难度比提升动机更可靠。"
+    mechanism: "动机决定行为意愿的强度上限，且随时间波动；能力维度由简化因子（时间、金钱、体力、脑力、社交偏离、日程）构成，越简单越易发生（S16、S175）；提示是行为的触发器，只在动机与能力阈值之上才有效（S16）。设计含义：与其 persuasion 动机，不如降低门槛并放置合适提示。"
+    causal_chain: "动机（≥阈值） + 能力（足够简单） + 提示（适时出现） → 行为发生"
+    variables:
+      inputs: [动机强度, 行为难度（时间/金钱/脑力/日程）, 提示时机与形式]
+      moderators: [习惯水平, 竞争行为密度, 环境支持度]
+      mediators: [行为阈值（动机-能力互补曲线）, 提示显著性]
+      outputs: [目标行为发生率, 转化率]
+    evidence:
+      supporting:
+        - "Fogg 2009 的模型化论述与说服技术领域应用（Persuasive Technology，S37）"
+        - "Tiny Habits（S16）的实践方法体系（从业者证据）"
+      conflicting:
+        - "B=MAP 作为整体模型的实证检验有限；动机-能力的互补曲线在不同任务上形状不一（模型化争议）"
+      replication:
+        - "成分（提示、简化、动机）各有独立证据；整体框架属整合性实践模型。评级按枚举记 C"
+      meta_analysis: []
+    evidence_grade: C
+    boundary_conditions:
+      - "适用于可被单次触发的目标行为；对长期动机系统只是近似"
+      - "提示需在动机-能力阈值之上的时刻出现"
+    failure_conditions:
+      - "只有提示而无简化（复杂的转化流程）时，转化率依然低"
+      - "动机被催熟（焦虑营销）但能力未跟上，行为短暂且伴随反噬"
+    common_misinterpretations:
+      - "把 B=MAP 读成『三分天下等权重』；模型的实践重心恰恰是简化与提示，而非提升动机"
+      - "误当实证定律引用；它是整合性设计框架"
+    ethical_risks:
+      - "利用焦虑抬升动机再配合高利润行为提示（恐惧式转化）"
+    examples:
+      original_cases: ["Tiny Habits（S16）中的微习惯设计与锚点提示案例"]
+      research_cases: ["Fogg 的说服技术实验与模型论文（S37）"]
+      modern_cases: ["一键登录、表单分步化、推送时机的 A/B 实验"]
+    communication_implications: "所有行动号召自检三问：动机是否在场？步骤是否已最简？提示是否出现在对的时间？三问不过关就改设计而非改话术。"
+    community_implications: "社群活动报名流程用 B=MAP 审计：砍步骤、明提示、降门槛，比动员话术更能提升参与率。"
+    content_applications:
+      cta: "CTA 落到单步动作（『点一下预约』）而非复合任务（『关注+转发+评论』）"
+      title: "标题承担动机，正文首段给出最短路径与下一步提示"
+    platform_implications: "平台的转化漏斗优化本质是 MAP 三要素的工程化；提示过载（推送轰炸）是各平台普遍的负外部性。"
+    related_nodes: [friction_reduction, hook_model, habit_loop_cue_routine_reward, implementation_intentions, permission_opt_in_mechanics]
+    source_ids: [S16, S37, S175]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Fogg 2019《Tiny Habits》（S16，B=MAP 三要素）+ Fogg 2003（S37，FBM 行为模型）"
+      effect_size: "动机×能力×提示三要素齐备时行为才发生（行为设计框架）"
+      replication_status: "FBM 为设计实践广泛采用；未经严格对照检验（D 级框架）"
+      context_dependency: "能力因素比动机更可靠（6 因素：时间/金钱/体力/脑力/社交偏离/日程）"
+      downgrade_upgrade_reason: "2026-09 实取 S16 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S16, S175]
+      supporting_evidence: [S37]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: hook_model
+    canonical_name_en: Hook Model
+    canonical_name_zh: Hook 模型（上瘾模型）
+    aliases: [上瘾模型, 触发-行动-奖励-投入, Hooked model]
+    domain: habit
+    definition: "Hook 模型（Nir Eyal，S17）是产品实践框架：外部触发启动行动，行动获得多变奖励，投入阶段储存价值并加载下一轮内部触发，循环形成使用习惯。证据等级 D（从业者经验，非实证结论）：Eyal 的框架是对强化机制的产品化整合，无系统性独立检验。机制上挂钩 variable_ratio_reward（多变奖励）与 endowed_progress_effect（投入与进度）。"
+    core_claim: "触发-行动-多变奖励-投入的闭环设计可以提高产品使用频率并形成习惯（实践主张）。"
+    mechanism: "多变奖励对应可变比率强化（结果不可预期维持尝试）；投入阶段让用户存入数据、关系与内容，提高沉没成本与下一触发的个性化程度；随着循环重复，外部触发逐渐内化为内部触发（无聊时想到打开 app）。该框架描述的产品机制与 habit_loop_cue_routine_reward 的学术描述对应，但增加了投入环节（S17）。"
+    causal_chain: "外部触发 → 行动 → 多变奖励 → 投入（储存价值） → 内部触发形成 → 循环"
+    variables:
+      inputs: [触发设计, 行动门槛, 奖励变异性, 投入机会]
+      moderators: [产品价值密度, 用户替代品丰富度, 平台治理]
+      mediators: [奖励期望, 沉没投入, 线索内化]
+      outputs: [使用频率, 留存, 内容与关系沉淀]
+    evidence:
+      supporting:
+        - "Hooked（S17）中的产品案例与作者实践（从业者框架）"
+      conflicting:
+        - "无系统实证检验；作为经验框架，成功率依赖产品价值本身（D 级定性）"
+      replication:
+        - "复现依赖产品与市场条件，学术界基本不将其作为因果理论引用。评级按枚举记 D"
+      meta_analysis: []
+    evidence_grade: D
+    boundary_conditions:
+      - "适用于高频、低成本、奖励可设计的数字产品场景"
+      - "奖励需与用户真实价值相关，否则循环在觉醒后崩塌"
+    failure_conditions:
+      - "产品核心价值不足时，钩子只能延缓流失而不能创造留存"
+      - "用户识别出操纵结构或平台监管介入后"
+    common_misinterpretations:
+      - "把 Hook 模型当科学定律套用；它是 D 级实践框架，与被检验过的强化机制不同层级"
+      - "以为多变奖励可以替代产品价值；无价值的变奖励只会加速倦怠"
+    ethical_risks:
+      - "成瘾式设计争议：针对注意力与强迫性使用的伦理批评与监管讨论（尤其未成年人保护）"
+    examples:
+      original_cases: ["Hooked（S17）中社交产品的触发-行动-奖励-投入案例分析"]
+      research_cases: ["（无独立实证研究；机制成分见 variable_ratio_reward 与习惯文献）"]
+      modern_cases: ["短视频无限流、社交 app 的每日签到与内容投入循环"]
+    communication_implications: "内容产品的钩子设计可借鉴其结构，但应以真实价值为锚：多变的只是呈现，不变的是有用性。"
+    community_implications: "社群把成员投入（内容、关系、身份）沉淀在社群内，是最稳健的『投入阶段』；纯积分钩子最脆弱。"
+    content_applications:
+      body: "系列内容设计投入点（用户提交案例、问题征集被采纳），让受众从消费者变为共同生产者"
+      sharing: "把分享设计成投入而非转发任务（生成个人化的年度报告）"
+    platform_implications: "Hook 模型是增长团队的通用语言，也是平台『engagement 优化偏差』的意识形态来源；治理层面需要在留存与福祉之间权衡。"
+    related_nodes: [variable_ratio_reward, endowed_progress_effect, habit_loop_cue_routine_reward, behavior_model_bmap, engagement_optimization_bias]
+    source_ids: [S17]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Eyal 2014《Hooked》（S17，Hook 四阶段：触发-行动-可变奖励-投入）"
+      effect_size: "可变奖励制造渴望驱动回访（产品设计实践框架）"
+      replication_status: "Hook 为增长团队通用语言；未经严格对照检验（D 级框架）"
+      context_dependency: "内部触发建立依赖情感线索；投入抬高切换成本"
+      downgrade_upgrade_reason: "2026-09 实取 S17 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S17]
+      supporting_evidence: []
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: friction_reduction
+    canonical_name_en: Friction Reduction
+    canonical_name_zh: 摩擦削减
+    aliases: [降低门槛, 减少摩擦, removing friction]
+    domain: habit
+    definition: "摩擦削减指通过移除行为路径上的认知、时间、步骤与信任障碍来提升行为发生率，是行为改变策略中证据最稳的一类。Berger 的 Catalyst（S39）把『减少摩擦』列为核心杠杆之一；英国行为洞察团队的 EAST 框架亦以 Easy 为首（经典文献，未建包，仅作背景提及）。定级 B（多来源研究支持，边界条件明显）。与 behavior_model_bmap 的关系：摩擦削减是能力（Ability）维度的操作化；与 default_option_effect 的关系：默认是预设选项，摩擦削减是路径简化，常配合使用。"
+    core_claim: "在动机不变的前提下，削减行为路径中最窄的瓶颈（步骤、认知、信任）可显著提升行为发生率。"
+    mechanism: "行为是瓶颈约束下的产物：任何一步的放弃成本都会截流；不确定性像暂停按钮让人推迟行动，解法是让尝试变容易（免费样品、试驾、freemium 降低上手成本）（S39）；削减摩擦同时降低启动成本与决策成本，与执行意图、默认效应等机制协同（S39、S16）。"
+    causal_chain: "识别最窄瓶颈 → 削减步骤/认知/信任摩擦 → 启动与完成成本下降 → 行为发生率提升"
+    variables:
+      inputs: [步骤数量, 认知负荷, 等待时间, 信任成本]
+      moderators: [动机强度（动机越低摩擦杠杆越大）, 用户熟练度, 竞品摩擦水平]
+      mediators: [启动成本, 中途放弃率]
+      outputs: [转化率, 完成率, 投诉率]
+    evidence:
+      supporting:
+        - "Catalyst（S39）整合的多项摩擦实验与现场研究（专著综述）"
+        - "EAST 框架汇总的政策行为干预证据（经典文献，未建包）"
+      conflicting:
+        - "摩擦只是改变的障碍之一（REDUCE 框架）：高卷入改变还常需处理心理抗拒、眷恋现状与距离等非摩擦障碍；框架为研究+访谈归纳，五障碍的独立贡献未量化（S39）"
+      replication:
+        - "方向稳健但幅度依赖具体瓶颈；需要逐一诊断而非通用套用。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "适用于动机偏低、路径冗长的大众行为场景"
+      - "摩擦诊断需基于真实行为数据而非猜测"
+    failure_conditions:
+      - "在需要深思熟虑的高风险决策（签约、投资）中取消摩擦，损害双方利益"
+      - "削减了非瓶颈步骤（瓶颈其实在信任）而无效"
+    common_misinterpretations:
+      - "『越少步骤越好』：对身份与承诺类行为，适度仪式感本身就是价值"
+      - "把摩擦削减等同于简化 UI；认知与信任摩擦常常更大"
+    ethical_risks:
+      - "对退订、注销、退款流程刻意增加摩擦（单向摩擦），构成对用户的剥夺"
+    examples:
+      original_cases: ["Catalyst（S39）中的摩擦与注册流程案例；Tiny Habits（S16）的行为极简化"]
+      research_cases: ["政府服务简化与政策现场实验（EAST 方向）"]
+      modern_cases: ["一键登录、免密支付、课程试看 30 秒、社群双链直达活动页"]
+    communication_implications: "每篇内容结尾的行动路径都要点进实测一遍：链接层级、加载速度、表单长度，任何一处都是截流点。"
+    community_implications: "入群、报名、发言的流程审计是社群增长的最便宜杠杆；先减摩擦再谈激励。"
+    content_applications:
+      cta: "CTA 文案直接描述动作结果（『点这里生成你的报告』）并附单步路径"
+      body: "教程把环境准备前置成清单，消除执行时的认知摩擦"
+    platform_implications: "平台对 friction 的工程化（自动填充、快捷支付）塑造了整个转化基线；单向摩擦（退出门槛）则是监管焦点。"
+    related_nodes: [behavior_model_bmap, default_option_effect, satisficing, implementation_intentions, nudge_mechanism]
+    source_ids: [S39, S16, S11]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Fogg 2019（S16，能力六因素降低摩擦）+ Berger 2020（S39，催化剂：移除障碍）+ Thaler & Sunstein 2008（S11，选择架构）"
+      effect_size: "减少步骤与摩擦提升行为转化（转化优化实践方向一致）"
+      replication_status: "摩擦-转化关系为增长实践共识（A/B 测试传统）"
+      context_dependency: "行为复杂度/习惯强度/退出门槛调制"
+      downgrade_upgrade_reason: "2026-09 实取 S16/S39 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S16]
+      supporting_evidence: [S39, S11]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: context_cue_stability
+    canonical_name_en: Context Cue Stability
+    canonical_name_zh: 情境线索稳定性
+    aliases: [情境稳定性, 线索绑定, context-dependent habit]
+    domain: habit
+    definition: "习惯与执行情境（时间、地点、前序动作、情绪状态）绑定：情境稳定则习惯巩固，情境改变则习惯松动。Wood 团队的研究显示，情境剧变是习惯中断与重建的机会窗口（S110 载『可通过改变环境/摩擦干预习惯』『改变需环境重组』；『搬家研究』细节为 EP 摘录外内容）；Lally 等 2010 的追踪显示自动化程度与情境重复性相关。与 habit_loop_cue_routine_reward 的关系：习惯回路是三要素框架，本节点聚焦其中『线索』的稳定性维度。"
+    core_claim: "行为自动化的维持依赖触发情境的稳定；情境改变既破坏旧习惯，也为新习惯提供插入点。"
+    mechanism: "情境线索是习惯的检索键：重复在同一情境中执行行为，使情境表征与反应强关联；情境消失则检索失败，行为回到需要意图驱动的状态；反过来，在无旧习惯的新情境中，行为选择更开放，是植入新行为的窗口（S110，其 boundary_conditions 载『改变需环境重组/减少线索』）。"
+    causal_chain: "情境稳定+重复执行 → 线索-反应强关联 → 自动化维持；情境改变 → 旧习惯检索失败 → 新行为可植入"
+    variables:
+      inputs: [时间/地点/前序动作的稳定性, 情境剧变事件]
+      moderators: [行为复杂度, 替代行为的可得性, 个体意向强度]
+      mediators: [线索-反应关联强度, 检索成功概率]
+      outputs: [习惯维持率, 新行为植入成功率]
+    evidence:
+      supporting:
+        - "Wood 团队关于情境改变与习惯中断的研究（搬家研究等，现场观察）"
+        - "Lally 等 2010 追踪中自动化与情境重复的关联（现场追踪）"
+      conflicting:
+        - "强意图与支持系统可部分对冲情境变化的影响（边界研究）"
+      replication:
+        - "方向稳健；效应幅度因行为类型差异大。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "适用于情境触发的日常行为；对身份驱动的高卷入行为解释力有限"
+      - "新习惯植入需在新情境中有明确的执行计划"
+    failure_conditions:
+      - "在旧情境未变时强行插入新行为，与旧习惯竞争而失败"
+      - "平台改版或社区迁移摧毁线索生态，用户行为断档"
+    common_misinterpretations:
+      - "把习惯失败归因于意志力；多数失败是线索环境管理问题"
+    ethical_risks:
+      - "平台刻意垄断用户的情境线索（全时段推送、仪式劫持）压缩其自主安排空间"
+    examples:
+      original_cases: ["Tiny Habits（S16）的锚点（anchor）设计：把新行为绑定既有日常动作"]
+      research_cases: ["Wood 团队的搬家与习惯改变研究"]
+      modern_cases: ["搬家季的健身卡转化窗口、换机迁移、社群固定栏目时间表"]
+    communication_implications: "发布时间稳定化是免费的习惯工程：固定时段+固定栏目名，让用户的生活时段成为你的触发器。"
+    community_implications: "重大产品改版或迁移时，主动重建线索（旧时间新入口的提醒与仪式），否则活跃度断崖。"
+    content_applications:
+      body: "把新行为绑定到受众已有的稳定动作上（『刷完牙后打开今日三分钟』）"
+      cta: "提醒文案写明具体情境触发：『午休开始时，先看这 3 行』"
+    platform_implications: "平台通过时间锚定的功能设计（晨间摘要、睡前模式）占据用户的时段线索；时段所有权是注意力竞争的深层战场。"
+    related_nodes: [habit_loop_cue_routine_reward, encoding_specificity, implementation_intentions, friction_reduction, behavior_model_bmap]
+    source_ids: [S16, S18, S110]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Duhigg 2012《The Power of Habit》（S18，线索-惯常-奖赏回路）+ Fogg 2019（S16，锚点行为 B=MAP）"
+      effect_size: "稳定情境线索提高习惯启动概率（习惯研究传统方向一致）"
+      replication_status: "情境一致性-习惯强度关联在习惯文献中方向稳定"
+      context_dependency: "线索需稳定可及；行为需足够简单；注意 S18 为科普框架、S110 为实证综述"
+      downgrade_upgrade_reason: "2026-09 实取 S18 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S18]
+      supporting_evidence: [S16]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"

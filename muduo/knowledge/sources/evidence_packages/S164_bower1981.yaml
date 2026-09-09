@@ -1,0 +1,25 @@
+# Evidence Package — S164 Bower 1981（Mood and Memory）
+# 标准格式。access_level 如实标注。
+source_id: S164
+title: "Mood and Memory"
+authors: "Gordon H. Bower"
+year: 1981
+journal: "American Psychologist 36(2): 129-148"
+doi: "10.1037/0003-066X.36.2.129"
+url: "https://pubmed.ncbi.nlm.nih.gov/7224324/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "ResearchGate 一手完整摘要（4 点主要发现+关联网络理论）+ PubMed 元数据（PMID 7224324）+ tandfonline 与 ouci 引用交叉确认"
+research_question: "当前心境如何影响记忆的编码、检索与认知加工？"
+core_claims:
+  - "心境状态依赖记忆：词表、日记记录的个人经历与童年经历的回忆均受回忆时心境影响"
+  - "回忆时心境与材料效价一致者回忆比例更高（心境一致性记忆）"
+  - "情绪强烈影响自由联想、想象幻想、社会知觉与对他人人格的快速判断；叙述情感与读者情绪一致时事件显著性与可记忆性提高"
+  - "提出关联网络理论：情绪作为记忆单元与同时发生事件建立联结，激活该情绪单元促进相关事件检索并启动情绪主题"
+method: "催眠诱导快乐/悲伤心境后的系列实验（词表回忆、日记与童年经历回忆、联想与人格判断任务）"
+results: "心境状态依赖记忆与心境一致性效应在多种材料上出现；情绪调制联想、幻想与判断"
+limitations: "后续心境依赖检索复制不完全稳定（Bower & Mayer 1985 自身报告复制失败）；心境诱发方法（催眠）存在生态效度争议"
+boundary_conditions: "信息模糊、可作多效价解读时效应最强；受众未将心境来源归因于无关事件时"
+relevant_nodes: [mood_congruence]
+notes: "心境一致性效应的奠基论文，mood_congruence 节点的一手来源；ResearchGate 完整摘要+多源交叉，未虚标正文级。"
+last_verified: "2026-09"

@@ -1,0 +1,24 @@
+# Evidence Package — S103 Cialdini 1990
+# 标准格式。access_level 如实标注。
+source_id: S103
+title: "A Focus Theory of Normative Conduct: Recycling the Concept of Norms to Reduce Littering in Public Places"
+authors: "Robert B. Cialdini; Raymond R. Reno; Carl A. Kallgren"
+year: 1990
+journal: Journal of Personality and Social Psychology 58(6), 1015-1026
+doi: "10.1037/0022-3514.58.6.1015"
+url: "https://www.proquest.com/docview/614311222/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "摘要全文 + 5 个研究的方法/结果标题结构（ProQuest 元数据页）；正文受订阅限制"
+research_question: "社会规范对行为是否有可检验的影响？何时有效？"
+core_claims:
+  - "规范须区分为指令性规范（injunctive：多数人赞成/反对什么）与描述性规范（descriptive：多数人实际做什么），两者在情境中可能相反"
+  - "当注意焦点集中于某一类型规范时，行为只随当时更凸显的那类规范变化（norm focus）"
+  - "在 5 个自然情境中验证：聚焦描述性/指令性规范分别使乱扔垃圾行为按该规范方向改变"
+method: "5 个自然现场研究（公共停车场/球场等）：操纵规范凸显性（norm salience）+ 环境脏乱状态，测量乱扔垃圾行为"
+results: "当聚焦描述性规范时，个体行为随他人实际行为变化；当聚焦指令性规范时，随社会赞许/反对变化"
+limitations: "未取得原文未核验各研究具体效应量；情境为美国公共场合；行为仅限乱扔垃圾"
+boundary_conditions: "规范的影响依赖其被注意/凸显（focus）；指令性与描述性规范方向冲突时结果取决于凸显者"
+relevant_nodes: [descriptive_injunctive_norms, norm_messaging_effects, social_proof]
+notes: "ProQuest 显示完整 5 研究结构（Study1-5 方法/结果标题）→ 结构级已读，正文 FULL TEXT NOT AVAILABLE；未编造效应量。"
+last_verified: "2026-09"

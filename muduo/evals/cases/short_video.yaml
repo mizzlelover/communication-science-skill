@@ -1,0 +1,336 @@
+# =============================================================
+# 评测集：短视频 / 口播脚本诊断（15 案例，VID-001..VID-015）
+# 被测：muduo（人类传播与社群增长引擎）
+# 覆盖：开场问题（无钩子/承诺过强/密度过载）、结构问题（无悬念/价值后置/铺垫过长）、
+#       信号问题（完播导向缺失/无互动位/无关注理由）、抖音vs B站vs 视频号跨平台对照、
+#       "不要改"（分发/账号层归因）、AI 生成感同质化检测
+# difficulty 枚举：easy | medium | hard
+# scoring_focus 枚举（9 维）：theory_accuracy, evidence_accuracy, diagnostic_quality,
+#   actionability, platform_fit, specificity, overclaiming, ethical_safety, writing_quality
+# key_mechanisms 仅允许使用知识库机制 ID 清单中的 ID
+# 演示数字均已标注"演示数据"；不引用真实品牌具体数据
+# =============================================================
+
+- case_id: VID-001
+  category: short_video
+  difficulty: easy
+  input: >-
+    用户投稿一份抖音口播脚本求优化。开场原文："大家好，我是做企业培训的王老师，今天想跟大家聊一聊职场沟通里
+    一个很多人都会犯的错误。这个错误其实我十年前刚入行的时候也犯过，后来花了很多年才慢慢总结出来……"背景：
+    账号1.2万粉（演示数据），最近5条视频平均播放时长约4秒、3秒流失率78%（演示数据）。用户问："帮我看看
+    开场怎么改。"
+  context: {platform: "douyin", goal: "retention", audience: "泛兴趣职场用户"}
+  expected_behavior: >-
+    诊断要点：① 开场约10秒是自我介绍加个人经历铺垫，无信息缺口，在抖音全屏沉浸流里等于把滑动否决权交还给
+    用户（应引用 adapter 的 opening_role、attention_environment 字段）；② "3秒流失78%、平均播放4秒"（演示数据）
+    指向首句 bottom_up_attention_capture 与 curiosity_gap 缺失——自我介绍后置，首句直接给具体冲突画面或反常识
+    断言；③ 给出"内容化钩子"改写示例（首句呈现那个典型错误行为的真实场景），而非营销化标题党开场。
+    引用机制：bottom_up_attention_capture / curiosity_gap / zeigarnik_effect。
+    边界：钩子必须被正文兑现，假钩子引发信任折价与完播下滑（opening_role 边界声明）；完播权重为
+    industry_consensus，不得承诺修改后播放量。
+  key_mechanisms: [bottom_up_attention_capture, curiosity_gap, zeigarnik_effect]
+  material_ref: "DY-A-FAIL-004"
+  material_note: "对应真实样本：行业讨论记录的抖音新号低流量视频——'开头平淡（大家好今天我来教大家…）'钩子缺失、每条播放<500（douyin.itotii.com 行业讨论文，见 content_corpus survivorship_note），与本案'自我介绍+个人经历铺垫式开场'同类失败形态"
+  scoring_focus: [diagnostic_quality, actionability, platform_fit]
+  anti_patterns: ["建议保留先自我介绍再入正题的写法", "承诺修改后的播放量数字", "用'黄金三秒'等玄学话术替代机制解释"]
+
+- case_id: VID-002
+  category: short_video
+  difficulty: medium
+  input: >-
+    知识类账号运营者投稿视频并附数据求助。开场承诺："看完这条视频，你就能把副业月收入做到2万以上，方法简单到
+    离谱。"正文实际内容是副业的三种常见类型与心态准备，无任何具体方法与收入路径。数据（演示数据）：点击率6.2%
+    高于账号均值，5秒留存81%，但30秒留存跌至19%，点赞率正常，评论区出现"标题党""就这？"。用户问："是不是
+    结尾不够炸？想加个更狠的结尾。"
+  context: {platform: "douyin", goal: "retention", audience: "想搞副业的泛兴趣用户"}
+  expected_behavior: >-
+    诊断要点：① 拒绝"改结尾"的归因——数据模式（点击高、早期留存高、中段暴跌、评论区标题党反馈）指向
+    expectation mismatch：开场承诺与内容兑现断裂（对应 SKILL.md 漏斗"点击高停留低→查 expectation violation"）；
+    ② 机制映射：prediction_error（承诺落空产生负预测误差触发滑动）与 trust_calibration（信任折价影响后续转粉
+    与转化）；③ 给出二选一路径——降承诺（把承诺改到内容真实交付的层级）或升交付（正文必须含可执行方法），
+    并说明判断标准取决于现有素材能支撑哪边；加码结尾只会加剧错配。
+    边界：数据为用户自述演示数据；完播权重为 industry_consensus，不引用具体权重百分比；不承诺数据改善幅度。
+  key_mechanisms: [prediction_error, trust_calibration, goal_gradient_effect]
+  material_ref: "CASE-FAL-002"
+  material_note: "对应真实案例：一般化标题党生命周期——'点开即失望'的预期违背逐次累积、评论区'又被骗'常态化、平台降权后分发崩塌（cases.yaml CASE-FAL-002，素材来自中央网信办标题党治理公告等，见 original_material），与本案'高点击低留存+评论区标题党反馈'同型"
+  scoring_focus: [diagnostic_quality, theory_accuracy, actionability]
+  anti_patterns: ["顺着用户思路只优化结尾", "建议更强的开场承诺", "把标题党说成无损策略"]
+
+- case_id: VID-003
+  category: short_video
+  difficulty: medium
+  input: >-
+    口播脚本开场原文："2026年做个人IP，一定要搞懂三个模型：定位模型、流量模型、转化模型。定位模型又分四步：
+    赛道选择、人设锚点、内容矩阵、差异化壁垒；流量模型分公域私域两条链路，公域里又有推荐流、搜索流、关注流
+    三层结构……"前20秒无画面停顿、无案例、连续输出约160字概念（演示数据），目标受众是刚起步的个人IP新手。
+    用户反馈："感觉全是干货但记不住。"
+  context: {platform: "douyin", goal: "comprehension", audience: "个人IP新手"}
+  expected_behavior: >-
+    诊断要点：① 开场高密度概念轰炸超出 working_memory_limits（工作记忆组块上限），新手无既有图式，概念全部
+    变成 extraneous_cognitive_load；② "全是干货但记不住"是 information_overload 信号而非内容质量缺陷，
+    不得把"干货多"当优点肯定；③ 建议单条只交付一个组块（如只讲人设锚点），其余系列化承接——引用 adapter
+    content_lifecycle（抖音内容是流量事件，长青需系列化与主页沉淀弥补）；④ 每个概念配具体案例提升
+    germane_load_learning（帮助加工而非堆积）。
+    边界：密度合适与否依赖受众先验知识——对老手同样密度可接受；不建议为降密度注水拉时长（完播反而受损）。
+  key_mechanisms: [working_memory_limits, information_overload, germane_load_learning]
+  material_ref: "XHS-B-LOW-002"
+  material_note: "对应真实内容样本：小红书报告类干货笔记——'33页报告｜看懂数字人营销商机'正文为观点罗列、无故事化无案例落地，收藏79>赞57（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'全是干货但记不住'同型"
+  scoring_focus: [diagnostic_quality, theory_accuracy, actionability]
+  anti_patterns: ["把'干货多'直接夸成优点", "建议同一条里继续堆叠更多案例", "忽视受众知识水平差异一刀切"]
+
+- case_id: VID-004
+  category: short_video
+  difficulty: medium
+  input: >-
+    一条"如何快速看懂上市公司财报"的抖音口播脚本（约3分钟，演示数据）。结构：第一段直接说"看财报主要看三个
+    指标：毛利率、现金流、负债率"，随后用约2分钟逐一定义讲解，结尾是"今天就讲到这里，喜欢的朋友点个关注"。
+    用户自评"内容很扎实、很专业"，但平均播放完成度23%（演示数据）。
+  context: {platform: "douyin", goal: "retention", audience: "投资小白与泛兴趣用户"}
+  expected_behavior: >-
+    诊断要点：① 结构为结论先行加平铺定义，全片无信息缺口与递进钩子，中段极易流失；抖音完播导向
+    （adapter interaction_signals：完播率最重信号方向，industry_consensus）下此结构吃亏；② 建议保留"三指标"
+    骨架但重构叙事序——用真实感案例的异常现象开场（如"这家公司利润翻倍却发不出工资"的演示情境）制造
+    curiosity_gap，再逐层揭示三指标如何解释它；③ 每4-5秒一次信息更新（adapter known_platform_patterns 的
+    节奏压缩条目），结尾用 peak_end_rule 做回收；④ 指出结尾"点个关注"话术空洞，应给出关注理由。
+    边界：结论先行不是绝对错误——在搜索与教学语境（B站、知乎）它是优点，此处按平台目标适配；完播权重为
+    industry_consensus。
+  key_mechanisms: [suspense_structure, curiosity_gap, peak_end_rule]
+  material_ref: "DY-A-MED-007"
+  material_note: "对应真实样本：剧集官抖'高播放低点赞'——播放约500万仅6万赞（互动率约1.2%），无有效物料、未透剧情（豆瓣『观众席』社群观察帖，见 content_corpus survivorship_note），与本案'内容扎实但结构平铺无钩子'同型"
+  scoring_focus: [diagnostic_quality, platform_fit, actionability]
+  anti_patterns: ["认定'结论先行'在任何平台都错", "建议增加无关段子充时长", "把完播率说成官方公开权重"]
+
+- case_id: VID-005
+  category: short_video
+  difficulty: medium
+  input: >-
+    用户投稿"5个免费自学网站"口播脚本。前80%篇幅在讲"为什么要自学""自学失败的三种原因"，最后一个部分才
+    给出5个网站名单且语速很快带过。数据（演示数据）：平均播放时长约为总时长一半，收藏率低于同类均值。用户
+    困惑："精华都在最后了，为什么大家不看完？"
+  context: {platform: "douyin", goal: "save", audience: "学生党与自学爱好者"}
+  expected_behavior: >-
+    诊断要点：① 价值后置加尾部快速带过是双重浪费——serial_position_effect：系列信息中首尾位置记忆与注意
+    最优，本片把价值放在内部靠后且弱呈现；② 收藏导向内容需让核心价值前置可感知：名单首条即给出最强的1个并
+    演示用法，其余用"第2个更冷门但更好用"式递进钩子维持完播（goal_gradient_effect：可感知的进展推进）；
+    ③ 结尾回收汇总强化 peak_end_rule；④ 收藏型内容应设计"暂停截图"节奏点（引用 adapter user_behavior 与
+    comment_role 语境）。
+    边界：不承诺收藏量；清单类内容仍需满足信息增量要求，避免为前置而空洞化名单。
+  key_mechanisms: [serial_position_effect, goal_gradient_effect, peak_end_rule]
+  material_ref: "XHS-A-HIGH-001"
+  material_note: "对应真实内容样本：小红书高收藏工具教程爆款——'Claude Code 零基础终极教程！'收藏≈172,097>点赞≈117,895，'对我有用先存着'工具化使用（Apify 抓取示例输出，见 content_corpus survivorship_note），作本案收藏导向清单内容的对照（收藏价值需前置可感知）"
+  scoring_focus: [diagnostic_quality, actionability, theory_accuracy]
+  anti_patterns: ["建议把名单藏进评论区引导互动", "只说'把重点放前面'而不给结构方案", "承诺收藏率数字"]
+
+- case_id: VID-006
+  category: short_video
+  difficulty: easy
+  input: >-
+    口播脚本"新手怎么挑笔记本电脑"，总长约3分钟（演示数据）。第0-45秒讲笔记本电脑二十年发展史、行业格局与
+    厂商恩怨，第46秒才进入选购参数。用户说："我觉得背景知识对新手有用，不忍心删。"
+  context: {platform: "douyin", goal: "retention", audience: "准备买电脑的新手"}
+  expected_behavior: >-
+    诊断要点：① 用户带着"怎么挑"的任务进来（jobs_to_be_done），45秒与任务无关的背景是 extraneous_cognitive_load，
+    叠加 attention_capacity_limits 在开头即崩完播；② 建议把背景压缩到5秒以内或转为字幕侧信息，历史内容拆成
+    独立一条满足爱好者（走系列化，呼应 adapter content_lifecycle）；③ 开头直接进入"第一个决定看哪三个参数"的
+    具体交付。
+    边界：不是所有背景都该删——当背景本身构成悬念或身份共鸣时可保留但需压缩；肯定"背景有用"的判断在图文、
+    长视频与搜索场景成立，此处是平台与目标差异而非用户品味错误。
+  key_mechanisms: [extraneous_cognitive_load, attention_capacity_limits, jobs_to_be_done]
+  material_ref: "XHS-B-LOW-006"
+  material_note: "对应真实内容样本：小红书汽车科普低互动笔记——'无人车发展史|看中国崛起'编年体知识盘点+宏大叙事、无当下问题钩子、无个人视角（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'前45秒讲行业史与厂商恩怨'同型"
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["为省时长粗暴建议砍半而不给取舍逻辑", "建议开头加夸张营销式钩子", "否定背景知识的一切价值"]
+
+- case_id: VID-007
+  category: short_video
+  difficulty: hard
+  input: >-
+    "冷门历史故事"账号（5万粉，演示数据）投稿脚本：单条完整讲述一个历史事件，全程无分段钩子、无中途悬念
+    更新，结尾无回收。账号数据（演示数据）：平均播放时长除以总时长为31%，点赞率4.5%，评论率0.8%。同行同类
+    视频时长更短但完成度55%（演示数据）。用户问："我的内容比同类账号详细多了，为什么推不动？"
+  context: {platform: "douyin", goal: "reach", audience: "历史爱好者与泛兴趣用户"}
+  expected_behavior: >-
+    诊断要点：① 不做"细节多等于内容好"的单一归因：对比数据把瓶颈指向完播侧——31%对55%的完成度差距在推荐
+    系统里被放大（adapter recommendation_model：完播/复播/互动率为核心加权信号；recommendation_feedback_loop：
+    数据差→曝光少→更差）；② 机制映射：无分段钩子导致中段流失（zeigarnik_effect 缺口管理缺失）；③ 建议不
+    动选题与详细度偏好，改结构：三分钟拆成"事件反常起点→两段递进反转→结尾回收"，每段留小缺口；④ 可测试
+    同一故事的60秒压缩版做变量隔离。
+    边界：明确完播权重为 industry_consensus 黑箱，禁止引用任何具体权重百分比；不承诺"改完就起量"。
+  key_mechanisms: [ranking_signal_weighting, zeigarnik_effect, recommendation_feedback_loop]
+  material_ref: "DY-A-FAIL-001"
+  material_note: "对应真实样本：剧集官抖'高曝光-低互动'失败形态——曝光/在看数千万级、点赞仅数万数千，社群诊断'1️⃣不搞笑 2️⃣不抽象 3️⃣无拉扯 4️⃣无记忆：无有效物料'（豆瓣『观众席』讨论帖，见 content_corpus survivorship_note），与本案全程无分段钩子、无中途悬念同型"
+  scoring_focus: [diagnostic_quality, platform_fit, evidence_accuracy]
+  anti_patterns: ["引用'完播率权重占40%'等具体数字", "断言改完必爆", "忽略复播与转粉等其他信号"]
+
+- case_id: VID-008
+  category: short_video
+  difficulty: easy
+  input: >-
+    口播脚本"租房避坑指南"（60秒，演示数据）：干货密度高、从头讲到尾，无任何提问、无留白、无可争论的取舍点，
+    结尾直接"祝大家租房顺利"。数据（演示数据）：点赞率5%、评论率0.2%（同类均值约1.5%）、分享率正常。用户问：
+    "评论为什么没人说话？"
+  context: {platform: "douyin", goal: "engagement", audience: "一线城市租房年轻人"}
+  expected_behavior: >-
+    诊断要点：① 脚本没有评论触发器——无提问、无留白、无可争论取舍点，adapter comment_role（热评文化：评论区
+    是内容的延伸现场）与 known_platform_patterns 的评论区钩子条目完全未被利用；② 引用 adapter
+    interaction_signals：评论权重高于点赞（industry_consensus），低评论会拖累分发；③ 建议在内容里自然埋一个
+    "两难取舍"（如"地铁远500米省800块，你选哪边"）或留一个可补充的真实经验缺口，并用置顶评论开话题。
+    边界：刻意留错引战短期拉评论但损伤专业信任（comment_role 边界声明）；低评论不单一归因于受众。
+  key_mechanisms: [rhetorical_question_engagement, social_proof, emotional_arousal]
+  material_ref: "XHS-A-MEDIUM-006"
+  material_note: "对应真实内容样本：小红书互动型笔记正面对照——'姐妹们哪支口红用得最频繁？'提问式互动钩子，评论901≈点赞80%（Apifox 接口文档真实响应示例，见 content_corpus survivorship_note），与本案'无提问无留白无评论触发器'形成对照"
+  scoring_focus: [diagnostic_quality, actionability, platform_fit]
+  anti_patterns: ["建议故意写错内容引战", "建议'评论区扣1'式空洞互动", "把低评论单一归因于受众不表达"]
+
+- case_id: VID-009
+  category: short_video
+  difficulty: medium
+  input: >-
+    美食探店账号（8万粉，演示数据）：单条数据不差（完播35%、点赞率6%，均为演示数据），但月涨粉仅300且取关率
+    偏高（演示数据）。抽查脚本发现：每条结尾都是"这期就到这里，我们下期见"；近期三条内容主题跳跃（火锅探店/
+    减脂餐/咖啡测评），无统一人设口头禅、无固定栏目。用户问："要不要在结尾加'关注我领优惠券'？"
+  context: {platform: "douyin", goal: "follow", audience: "同城美食消费人群"}
+  expected_behavior: >-
+    诊断要点：① 单条价值高但账号预期价值弱——对应 SKILL.md 漏斗"观看高关注低→查定位连贯性与
+    parasocial_relationship"：主题跳跃让用户无法形成"关注后能看到什么"的预期；② 机制：parasocial_relationship
+    需要稳定人格与重复暴露（mere_exposure），配合 self_presentation_impression_management 的统一人设符号
+    （固定开场、固定栏目）；③ 结尾应给出"下期预告型"关注理由；"领优惠券"若为真实权益可用，但属于交易理由
+    而非关系理由，需向用户区分两种关注动机。
+    边界：引用 adapter follow_role——抖音关注对推荐流量影响有限，涨粉意义在直播与复购；必须说明 Follow 不等于
+    Reach，避免用户误以为涨粉能直接救播放。
+  key_mechanisms: [parasocial_relationship, mere_exposure, self_presentation_impression_management]
+  material_ref: "DY-B-HIGH-002"
+  material_note: "对应真实样本：抖音美食账号系列化正面对照——'宝子们来吃旋转自助小火锅啦'固定话术/场景模板复用形成'系列惯性'，同账号多条第10万+赞（抖音百科「会吃的慧」词条作品表，见 content_corpus survivorship_note），与本案主题跳跃、无固定栏目形成对照"
+  scoring_focus: [diagnostic_quality, platform_fit, actionability]
+  anti_patterns: ["承诺涨粉能提升播放量", "建议每条结尾机械加'关注我'", "混淆 Follow 与 Reach 目标层"]
+
+- case_id: VID-010
+  category: short_video
+  difficulty: hard
+  input: >-
+    同一支"城市地铁线路背后的博弈"深度讲解脚本（横屏10分钟，先讲结论再展开论证）。用户先发抖音：完播8%、
+    平均播放时长40秒（演示数据）；后发B站：播放完成度52%、弹幕互动活跃（演示数据）。用户结论："抖音用户不行，
+    我是不是该放弃抖音？"
+  context: {platform: "douyin 与 bilibili 对照", goal: "reach", audience: "深度内容爱好者"}
+  expected_behavior: >-
+    诊断要点：① 拒绝"用户不行"归因，也不直接归罪脚本——这是同一脚本跨平台信号语义差异：B站是横屏点选场景，
+    cover_role 与 title_role 决定点击，用户带学习意图进来，容忍结论先行的论证结构；抖音是单列沉浸流加滑动否决权
+    （attention_environment），opening_role 极重，前3秒无缺口则完播崩塌；② 引用 adapter content_units：中视频/
+    横屏内容在抖音权重较低（industry_consensus）；③ 给出三选一决策：经营抖音需另做竖屏"内容化钩子"切口版
+    （用脚本里最反常识的单点切入）、或明确抖音非目标平台、或做抖音导流B站的系列预告形态；④ 说明两平台
+    interaction_signals 差异（三连弹幕 vs 完播导向）导致同一脚本的数据不可互换解读。
+    边界：两平台数据非同期发布不可严格对照（演示数据）；平台形态权重为 industry_consensus。
+  key_mechanisms: [bottom_up_attention_capture, attention_capacity_limits, ranking_signal_weighting]
+  material_ref: "DY-B-MED-007"
+  material_note: "对应真实样本：跨平台同内容对照——粉丝二创视频在抖音/B站/小红书均有高播放（豆瓣高赞收集帖内用户补充其跨平台表现，见 content_corpus survivorship_note），印证同一内容跨平台信号语义差异而非'用户不行'"
+  scoring_focus: [platform_fit, diagnostic_quality, overclaiming]
+  anti_patterns: ["接受'抖音用户不行'的归因", "建议把B站横屏直接竖屏裁切重发", "无视两平台数据不可比性"]
+
+- case_id: VID-011
+  category: short_video
+  difficulty: hard
+  input: >-
+    情感观点类口播"为什么我不劝人原谅父母"，抖音表现稳定（完播28%、站内转发率1.8%，演示数据）。脚本原样
+    复制到视频号后播放量约为抖音的十分之一，且几乎无转发（演示数据）。脚本风格：强冲突表达、金句收尾、
+    结尾引导评论区站队，无任何社交场景话题点。用户问："是不是视频号用户看不懂？"
+  context: {platform: "weixin_channels 与 douyin 对照", goal: "share", audience: "关注家庭关系话题的30岁以上人群"}
+  expected_behavior: >-
+    诊断要点：① 不是"看不懂"，是分发模型与转发语义错配：抖音 distribution_model 为算法分发绝对主导、单列沉浸，
+    强冲突吃 emotional_arousal 红利；视频号是社交叠加逻辑——内容经关注关系与朋友互动进入熟人链路（应引用目标
+    平台 adapter 的 distribution_model、sharing_mechanism、social_graph_characteristics 字段语义）；② 强冲突观点
+    在熟人可见场景转发成本高（identity_signaling：转发即公开表态），评论区站队结尾进一步抬高转发门槛；③ 重构
+    方向：把"我敢说"改造成"替你说"（给用户安全表达的观点容器），收尾提供温和共识或家庭群聊场景的实用框架
+    （stepps_sharing_framework 的 Social Currency 与 Practical Value）。
+    边界：视频号机制细节未完全公开，标注 industry_consensus 并以平台最新公告为准；两平台数据量级不同不可直接
+    比较；不承诺转发率。
+  key_mechanisms: [identity_signaling, stepps_sharing_framework, social_identity_theory]
+  material_ref: "XHS-A-HIGH-004"
+  material_note: "对应真实内容样本：小红书情绪文案爆款——'直到幸福能触手可及'约1.2万赞，第一人称共鸣把'我的情绪'变成'我们的情绪'，弱关系社区里陌生人情绪共鸣是转发主引擎（Apifox 接口文档真实响应示例，见 content_corpus survivorship_note），与本案'替你说'改造方向（给用户安全表达的观点容器）对应"
+  scoring_focus: [platform_fit, diagnostic_quality, specificity]
+  anti_patterns: ["建议抖音风格原样坚持'内容好就行'", "把平台差异说成受众智力差异", "建议刷转发改善数据"]
+
+- case_id: VID-012
+  category: short_video
+  difficulty: hard
+  input: >-
+    新注册账号发布的第一条视频（账号0粉，发布2天）：播放量187、点赞3、后台无完播数据权限（演示数据）。用户
+    贴出完整脚本说："我知道脚本肯定有问题，你帮我全部重写，越快爆款越好。"
+  context: {platform: "douyin", goal: "reach", audience: "待验证的目标受众"}
+  expected_behavior: >-
+    诊断要点：① 正确行为是"先不改"：187次曝光（演示数据）样本量不足以支撑对脚本的任何数据推断；0粉账号
+    首条内容处于冷启动期（cold_start_dynamics），当前瓶颈是分发启动与定位验证，不是文案（SKILL.md 铁律6：
+    有时"不要改"，先排除分发层）；② 给出行动序列：连发3-5条同主题验证定位、观察可得相对信号（如平均播放
+    时长）、必要时用 Dou+ 小额测试（adapter algorithmic_features，official_rule-产品存在）再谈内容诊断；③
+    用 recommendation_feedback_loop 解释冷启动期数据噪声。
+    边界：不承诺爆款；流量池具体层级细节属 experience_speculation 不可引用（adapter distribution_model 标注）；
+    拒绝重写请求时需给出可执行的替代路径而非空泛安抚。
+  key_mechanisms: [cold_start_dynamics, recommendation_feedback_loop, ranking_signal_weighting]
+  material_ref: "DY-A-FAIL-005"
+  material_note: "对应真实样本：新号冷启动失败形态——播放量只有几百甚至几十、未养号/内容不垂直导致标签无法建立（知乎专栏运营教程文，见 content_corpus survivorship_note），与本案0粉首条187播放同型，支持'先不改、先验证定位'的判断"
+  scoring_focus: [diagnostic_quality, overclaiming, evidence_accuracy]
+  anti_patterns: ["接单全量重写", "承诺'改完必爆'", "引用流量池级数等未证实细节"]
+
+- case_id: VID-013
+  category: short_video
+  difficulty: hard
+  input: >-
+    口播账号用同一"三段式反转加固定BGM"模板连发14条（演示数据）：前4条平均播放约50万，最近10条依次降到
+    8万、5万、3万（演示数据）。用户贴出最新一条脚本要求："照原模板再优化得更爆一点。"
+  context: {platform: "douyin", goal: "reach", audience: "与既往相同的泛兴趣人群"}
+  expected_behavior: >-
+    诊断要点：① 拒绝"同模板再优化"：衰减曲线（50万到3万，演示数据）加"模板未变"共同指向模板级
+    hedonic_adaptation（审美疲劳）与平台级同质化竞争（adapter risk_factors：同质化模仿衰减极快），问题在内容
+    策略层而非单条脚本打磨（SKILL.md 铁律6）；② 机制：mere_exposure 的边际反应递减叠加 novelty_preference 对
+    变化的偏好，固定结构与BGM让系统与用户都失去新异信号；③ 给出变量隔离实验方案：保持选题，一次只改一个
+    维度（开场形态/结构/BGM/出镜方式），观察完成度变化；保留模板中仍有效的部分（如结尾回收）。
+    边界：不否定模板的历史贡献；衰减也可能叠加大盘或时段因素，建议先对照同类账号同期表现再归因。
+  key_mechanisms: [hedonic_adaptation, novelty_preference, mere_exposure]
+  material_ref: "DY-B-MED-001"
+  material_note: "对应真实样本：同账号同模板复用边际递减——'会吃的慧'自助小火锅系列 11.5万→11.4万→9.5万赞（抖音百科「会吃的慧」词条作品表，见 content_corpus survivorship_note），说明模板复制有效但有衰减，与本案连发14条播放从50万降到3万同型"
+  scoring_focus: [diagnostic_quality, overclaiming, actionability]
+  anti_patterns: ["按用户要求继续打磨同模板", "把衰减归因于'最近不够努力'", "建议一次性更换全部变量导致无法归因"]
+
+- case_id: VID-014
+  category: short_video
+  difficulty: medium
+  input: >-
+    用户投稿口播脚本节选："家人们，谁懂啊！这个神器真的绝绝子！注意看，它将彻底改变你的生活！无论你是学生党
+    还是打工人，都能轻松上手！这个方法我愿称之为YYDS！赶紧点赞收藏，错过后悔一年！"全片1分20秒（演示数据）
+    充满同构感叹句，无一个具体场景、无第一人称真实经验、无任何数字细节。用户自述内容由AI批量生成，感觉
+    "哪都行又哪都不行"。
+  context: {platform: "douyin", goal: "trust", audience: "泛兴趣用户"}
+  expected_behavior: >-
+    诊断要点：① 同质化检测：模板化感叹词、空洞断言、万能句式是 ai_content_saturation 的典型特征；在供给侧
+    同类脚本泛滥（adapter risk_factors：同质化审美疲劳），内容同时失去 authenticity_premium（真实感溢价）——
+    无具体细节与个人经验则可信度无法建立；② 机制：concreteness_in_language 与 specificity_effect（具体细节是
+    可信度与记忆的载体）；③ 改写方向：每个空洞感叹替换为一个可验证的具体细节（谁、在哪、什么场景、什么
+    数字），保留一个真实的不完美细节反而提升可信；AI 辅助创作应走"AI 初稿加真人经验注入"的协作路径而非
+    伪装纯人工。
+    边界：不做"AI检测率"承诺；不建议洗稿或伪装人声规避平台AI内容标识要求（合规风险，以平台最新公告为准）。
+  key_mechanisms: [ai_content_saturation, authenticity_premium, concreteness_in_language]
+  material_ref: "DY-B-FAIL-005"
+  material_note: "对应真实样本：抖音同质化感叹式文案失败样本——'谁能忍住不磕呢 #文轩'常见感叹式文案无新增信息、CP剪辑红海中的普通一条（豆瓣分享帖，见 content_corpus survivorship_note），与本案'家人们谁懂啊/绝绝子/YYDS'万能句式+空洞断言同型"
+  scoring_focus: [diagnostic_quality, ethical_safety, specificity]
+  anti_patterns: ["建议用同义词替换规避AI检测", "建议堆更多网络热梗掩盖空洞", "断言AI内容必被限流"]
+
+- case_id: VID-015
+  category: short_video
+  difficulty: hard
+  input: >-
+    职场成长类口播"向上管理的三个动作"（演示数据：完播31%、点赞率7%、评论率2.4%，评论区大量"太真实了"
+    "我老板就这样"；但视频挂载的9.9元课程链接点击率仅0.3%、转化近乎为0，均为演示数据）。脚本为三段干货，
+    结尾仅一句"想系统学习的同学看购物车"。用户问："是不是课程不行？"
+  context: {platform: "douyin", goal: "conversion", audience: "职场1-5年人群"}
+  expected_behavior: >-
+    诊断要点：① 评论高转化低→Discussion Motivation 强、Behavioral Motivation 弱（SKILL.md 漏斗定位），瓶颈
+    不在课程产品而在脚本到行动的桥接：CTA 单句悬空，无 friction_reduction（购买路径的认知与信任成本未被
+    处理），也无从"共鸣情绪"到"行动"的过渡；② 机制：attitude_behavior_gap（态度与行为脱节）、
+    commitment_consistency（用小承诺衔接：先领免费样章或一节体验课再谈付费）；③ 建议：结尾先做一次具体化
+    （"你现在就能用的一个动作"），再用低门槛过渡动作承接，硬广信息后移到置顶评论与主页；④ 提醒电商与课程
+    类目内容受专项规范治理（adapter content_constraints，official_rule）。
+    边界：不承诺转化率；不对课程产品价值下判断（超出内容诊断范围）；合规细则以平台最新公告为准。
+  key_mechanisms: [attitude_behavior_gap, friction_reduction, commitment_consistency]
+  material_ref: "DY-A-LOW-004"
+  material_note: "对应真实样本：抖音带货'低互动高转化'对照——'质疑三寸翘 理解三寸翘 成为三寸翘'品牌自播点赞4504但销量1000-2500件，靠精准流量承接/付费投流而非泛互动（蝉妈妈服饰带货榜口径，见 content_corpus survivorship_note），说明互动信号与转化目标分离（Virality ≠ Conversion）"
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["直接断言课程产品不行", "建议限时秒杀式激进促销话术", "忽略课程品类合规提示"]

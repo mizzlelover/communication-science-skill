@@ -1,0 +1,25 @@
+# Evidence Package — S206 Levin, Schneider & Gaeth 1998（框架效应类型学）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S206
+title: "All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects"
+authors: "Irwin P. Levin; Sandra L. Gaeth; Gary J. Gaeth"
+year: 1998
+journal: Organizational Behavior and Human Decision Processes, 76(2), 149-188
+doi: "10.1016/S0749-5978(98)92804-7"
+url: "https://doi.org/10.1016/S0749-5978(98)92804-7"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心类型学经 3 个独立源交叉核实（未取得全文）：①期刊页码（OBHDP 76(2):149-188）经 RePEc/IDEAS、北师大学位论文参考文献、hanspub 三处一致；②类型学（心理科学进展框架效应综述确认）：三类框架——风险选择框架（risky choice：亚洲疾病式，备选项的正/负表述改变风险偏好）、属性框架（attribute framing：单一对象属性的得/失表述改变对象评价，如肉 75% 瘦 vs 25% 肥）、目标框架（goal framing：同一行为目标的得/失表述改变行为动机，如健康信息）；③关键主张：三类框架的机制与边界不同，不可混用——『框架效应』不是单一现象"
+research_question: "不同类型的框架操作在机制与边界上有何系统差异？"
+core_claims:
+  - "框架效应三分型：风险选择框架（选项级）/属性框架（对象评价级）/目标框架（行动动机级）——机制不同，效果不同"
+  - "属性框架最稳健（单对象评价直接受正/负属性措辞影响）；目标框架效应幅度通常更小且依赖调节变量"
+  - "对应用实践的推论：文案的『正说 vs 反说』要按目标选型——改对象评价用属性框架，改行为动机用目标框架，改风险偏好用选项框架"
+  - "机制差异：风险选择框架由前景理论价值函数驱动；属性框架与评价联想/流畅性相关；目标框架依赖个体收益感知"
+method: "理论类型学 + 三类框架的实证批判分析（对既有实验的分类再评估）"
+results: "（经典类型学）框架研究的标准分类框架，被后续数千篇研究沿用"
+limitations: "未取得全文；类型学基于当时文献；后续新增图形框架等扩展（心理科学进展 2021 综述）"
+boundary_conditions: "三类不可互换引用；属性框架>目标框架的稳健性排序；目标框架对预防行为 vs 检测行为方向不同（后续研究边界）"
+relevant_nodes: [framing_effects]
+notes: "framing_effects 节点的类型学 EP。分类与页码多源一致，未编造。"
+last_verified: "2026-09"

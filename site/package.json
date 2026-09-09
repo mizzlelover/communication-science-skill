@@ -1,0 +1,9 @@
+{
+  "name": "muduo-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "木铎 MUDUO · 人类传播与社群增长引擎 官网（静态站）",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}

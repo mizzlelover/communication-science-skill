@@ -1,0 +1,25 @@
+# Evidence Package — S58 Centola 2018（How Behavior Spreads）
+# 标准格式。access_level 如实标注。
+source_id: S58
+title: "How Behavior Spreads: The Science of Complex Contagions"
+authors: "Damon Centola"
+year: 2018
+journal: Princeton University Press（专著；312 页）
+doi: "无 DOI（专著）"
+url: "https://muse.jhu.edu/book/64726"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：Project MUSE 摘要全文（十年网络实验：投票/健康/技术/金融）+ 目录结构（理论/应用/社会设计三部分 10 章）+ arXiv 综述（Complex Contagions: A Decade in Review）+ 中文书评（引言摘录）"
+research_question: "社会网络如何影响行为的传播？为何疾病迅速扩散而行为/创新常常难以流行？"
+core_claims:
+  - "复杂传染（complex contagion）vs 简单传染：行为/创新需要多重社会强化（多来源暴露/社会证明）才能被采纳，不同于疾病的一次接触即传播"
+  - "反直觉发现：促进疾病病毒式扩散的条件（弱连接/小世界/枢纽）反而抑制行为传播；『弱连接加速行为扩散』的流行信念是错误的——密集相互连接的周边社区对复杂传染更重要"
+  - "网络设计（social design）：可通过调整网络结构（宽桥/密集社区）而非仅内容来促进行为改变；组织变革/公共健康/社会运动的网络干预路径"
+  - "基于十年线上随机网络实验（健康行为、政治动员、习惯扩散等）"
+method: "十余年线上随机网络实验（改变被试网络结构）+ 计算社会科学建模 + 跨域应用"
+results: "（实验+理论）复杂传染理论成为网络科学与社会传播标准框架；颠覆弱连接=快扩散的直觉"
+limitations: "线上实验环境的生态效度需谨慎外推；个体阈值与情境差异大"
+boundary_conditions: "行为需社会强化（高代价/高风险/需验证）；纯信息传播仍近似简单传染"
+relevant_nodes: [complex_contagion, wide_bridges, social_reinforcement, critical_mass_threshold, strong_ties_support]
+notes: "complex_contagion 域的一手专著来源（book 级）；配套 S124（Centola 2018 Science 实验）与 S101（Centola 2010 Science）。『弱连接反向』为书中核心主张，未编造。"
+last_verified: "2026-09"

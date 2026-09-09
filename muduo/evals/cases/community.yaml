@@ -1,0 +1,322 @@
+# 社群运营评测案例（15 个）
+# 测试被测系统的社群诊断与社群设计能力：结构诊断优先于表面归因、规模校验、证据纪律
+# 案例中的数字均为演示数据
+
+- case_id: COM-001
+  category: community
+  difficulty: easy
+  input: >-
+    （演示数据）一个微信付费学员群，480 人，近 30 天日均发言只有 2.3 人。群公告还是一年前的开课通知，
+    从没有人告诉新人这个群里能聊什么、不能聊什么、发言用什么格式。群主偶尔甩一篇文章链接进群。
+    管理员说："群里太冷清了，发个红包刺激一下吧，你帮我写个红包文案。"
+  context: {platform: wechat_group, goal: participate, audience: "付费学员"}
+  expected_behavior: >-
+    应先做结构诊断再谈动作，不应直接接受"发红包"方案。诊断要点：Norm 缺口——群规范不明示，
+    新人和老成员都不知道"这里怎么说话"，发言成本高、收益不明（descriptive_injunctive_norms：
+    描述性规范不可见；norm_enforcement_reputation：无规范执行也就无声誉信号）。
+    应建议：把群规范可见化（入群欢迎语+置顶群规+话题引导）、由群主/管理员示范目标发言行为、
+    固定轻量互动节点。同时提醒：发红包只能带来短暂注意力，无法修复规范结构，
+    且外部激励有挤出内在动机的风险（intrinsic_extrinsic_motivation）。
+  key_mechanisms: [descriptive_injunctive_norms, norm_enforcement_reputation, norm_messaging_effects, intrinsic_extrinsic_motivation]
+  material_ref: "CASE-COM-002"
+  material_note: "演示场景映射的真实材料：知识付费/私域社群的分层结构与'沉默的大多数'（免费群→年费群→私董会，低价层活跃度低、流失集中），来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, theory_accuracy, actionability]
+  anti_patterns: ["直接建议发红包刺激活跃", "只写红包文案不做诊断", "把冷清归因于用户不积极"]
+
+- case_id: COM-002
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）一个读书会微信群，220 人，有群规、每周有阅读主题，但成员发言经常无人回应：
+    近一个月成员提问平均等不到 2 条回复，多数回复只来自群主一人。几位曾积极发言的成员逐渐不再说话。
+    运营者问："是不是我们每周选的话题不够好？要不要换个话题库？"
+  context: {platform: wechat_group, goal: participate, audience: "读书会成员"}
+  expected_behavior: >-
+    应拒绝表面归因"话题不好"，先检查 Status 回路：发言得不到回应=发言没有地位收益=沉默被理性化
+    （status_systems 回路断裂）。应进一步诊断网络结构是否为星型（所有回应都依赖群主，
+    群主不在线则回路中断；network_density 低、成员之间缺乏互联）。
+    建议方向：建立回应保障机制（值班回应/首问必答）、公开认可贡献者（reputation_systems），
+    有意识制造成员之间的连接（网状化）而非只优化话题内容。
+  key_mechanisms: [status_systems, reputation_systems, network_density, social_identity_theory]
+  material_ref: "https://gonglue.epwk.com/321356.html"
+  material_note: "演示场景映射的真实材料：社群'成员发言无人回应、只有群主/管理员发言'的沉默氛围与'越沉默越沉默'死循环（4A 广告网攻略公开文章《社群/私聊没人回？5大根本原因与3套高互动话术模板全解析》）"
+  scoring_focus: [diagnostic_quality, theory_accuracy, specificity]
+  anti_patterns: ["顺着话题不好给选题建议", "只建议换话题库不改结构", "建议多发红包活跃气氛"]
+
+- case_id: COM-003
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）一个行业交流群 350 人，成员来自某次线下活动，活动结束后的三个月里群里只剩零星的
+    自我介绍和偶尔的广告，没有任何固定重复的共同事件。群主的想法是："再拉一批新人进来带带气氛，
+    你帮我设计一个拉新裂变活动。"
+  context: {platform: wechat_group, goal: participate, audience: "行业从业者"}
+  expected_behavior: >-
+    应指出"拉新解决不了沉寂：先修容器再进水"，不应顺着做拉新方案。诊断要点：Ritual 缺失——
+    没有固定重复的共同事件（每周例会/共读/复盘），成员没有再次聚集的时间锚点（community_rituals），
+    群体体验无法周期性重建（collective_effervescence）；同时群活动后未形成临界规模的内容供给
+    （critical_mass_threshold），新人进入一个无规范无仪式的空容器只会加速流失。
+    应建议：先建固定仪式（低频但可预期的共同事件），再考虑扩容。
+  key_mechanisms: [community_rituals, collective_effervescence, critical_mass_threshold, community_boundaries]
+  material_ref: "CASE-COM-009"
+  material_note: "演示场景映射的真实材料：热度/活动一次性释放后社群沉寂、拉新无法修复结构问题——天涯社区停服三年、三次重启（热度回归但结构未修复），来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, actionability, overclaiming]
+  anti_patterns: ["只建议发红包", "顺着需求设计拉新裂变方案", "承诺拉新后活跃度会提升的具体数字"]
+
+- case_id: COM-004
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）一个健身打卡社群，每月新增约 120 人，但 7 日留存只有 18%。新人入群后只收到一条
+    机器人欢迎语，没有接待、没有任务、没有人告诉新人第一步做什么；新人的第一条打卡几乎无人评论。
+    运营者判断："可能是这批新人质量不行，下一批投放换个更精准的人群？"
+  context: {platform: wechat_group, goal: retention, audience: "健身新手"}
+  expected_behavior: >-
+    应识别 newcomer_onboarding 缺失而非归因人群质量：新人 24-48 小时的体验决定去留，
+    无引导=首日沉默=永久沉默。新人面对陌生环境存在归属不确定性（belonging_uncertainty：
+    不确定"这里有没有我的位置"），归属需求未被回应（need_to_belong）时退出成本最低的选项就是离开。
+    应建议：设计入群首日流程（自我介绍模板+新人专属首次任务+首条发言必有人回应的保障），
+    用轻仪式固定新人进入节奏（community_rituals），并给出应观测的指标（首日发言率、首周回应时长）。
+  key_mechanisms: [newcomer_onboarding, belonging_uncertainty, need_to_belong, community_rituals]
+  material_ref: "CASE-COM-001"
+  material_note: "演示场景映射的真实材料：清晰的新人 onboarding 路径（首个可完成任务+可预期回应）才能把新人转化为持续成员——开源社区'第一次 PR 未被及时回应即流失'的公开观察，来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["同意人群质量差并建议重新投放", "只建议发新人红包", "不给首日流程只给原则"]
+
+- case_id: COM-005
+  category: community
+  difficulty: hard
+  input: >-
+    （演示数据）一个运行 5 年的老摄影爱好者群，老成员形成了固定小圈子，内部黑话多。新人提问常被
+    敷衍"先看置顶"，偶尔被嘲"这都不会"。新人首周流失率明显偏高。管理员的想法是：
+    "要不要单独开一个新人群，把新人圈起来养熟了再放进来？"
+  context: {platform: wechat_group, goal: retention, audience: "摄影爱好者"}
+  expected_behavior: >-
+    应识别为社群文化对新人不友好的结构问题：边界收得过紧（community_boundaries 事实上只对老成员开放）、
+    公开贬低制造被排斥感（ostracism_effects：被排斥者与旁观者的参与意愿同时受损）、
+    新人归属不确定性被放大（belonging_uncertainty）；且管理员对嘲弄行为不干预，
+    构成规范执行失灵。"单独开新人群"是双刃剑：隔离保护了新人但可能让他们永远进不了核心圈，
+    应同时配套晋升通道（participation_ladder：新人群→正式群→贡献者角色的可见阶梯）。
+    应建议：设新人导师角色（把带新人变成老成员的地位收益而非负担）、公开的提问规范、
+    对嘲弄行为的一致处理。
+  key_mechanisms: [ostracism_effects, belonging_uncertainty, participation_ladder, community_boundaries, newcomer_onboarding]
+  material_ref: "CASE-COM-007"
+  material_note: "演示场景映射的真实材料：规范执行失灵如何击穿社群信任——Rust 社区 2021 年审查团队集体辞职事件（成文 CoC+分级惩戒；'治理层自身冲突没有流程'），来源见该案例 original_material（官方博客公开复盘）"
+  scoring_focus: [diagnostic_quality, theory_accuracy, actionability]
+  anti_patterns: ["只建议开新人群不配晋升通道", "建议群主私下警告被嘲新人别玻璃心", "忽略规范执行失灵"]
+
+- case_id: COM-006
+  category: community
+  difficulty: easy
+  input: >-
+    （演示数据）一个 1800 人的母婴交流群，月发言人数 90 人（约 5%）。运营者非常焦虑：
+    "群是不是要死了？我打算把三个月没发过言的人都清退，逼大家说话。"
+  context: {platform: wechat_group, goal: participate, audience: "母婴用户"}
+  expected_behavior: >-
+    应用参与阶梯（participation_ladder）校准预期：大型松散社群遵循极不对称的参与分布
+    （常被概括为 90-9-1 结构），5% 的月发言率在此量级属常态而非病态；大群低活跃不等于社群失败。
+    应明确反对"清退沉默成员"：沉默者多数是接收层，清退直接摧毁潜在参与池与群内规范可见度。
+    应建议：识别 90 人核心层做深度运营（给角色与地位收益，status_systems），
+    把大群重新定位为信息广播+轻互动层；考核指标从全员发言率改为留存、核心贡献者数量与响应质量。
+  key_mechanisms: [participation_ladder, status_systems, community_rituals]
+  material_ref: "CASE-COM-012"
+  material_note: "演示场景映射的真实材料：大型社群极不对称的参与分布（小米社区研究口径参与金字塔约 1%-29%-70%、'论坛独行侠'占比约 70.9%）——大群低活跃是常态而非病态，来源见该案例 original_material"
+  scoring_focus: [theory_accuracy, overclaiming, diagnostic_quality]
+  anti_patterns: ["判定社群失败", "同意清退沉默成员", "不做规模校验直接给提活方案"]
+
+- case_id: COM-007
+  category: community
+  difficulty: hard
+  input: >-
+    （演示数据）一家知识付费公司的学员大群 3000 人，日均消息 400 条，但约 95% 的消息集中在 30 人身上。
+    公司管理层定的目标是"把 3000 人的活跃度提上去"，并把全员月发言率作为运营考核 KPI。
+    运营负责人来问怎么达成。
+  context: {platform: wechat_group, goal: contribution, audience: "付费学员"}
+  expected_behavior: >-
+    应先质疑考核目标本身而不是直接给提活方案：在 90-9-1 式参与分布下，把大群整体发言率设为 KPI
+    违背参与阶梯结构（participation_ladder），会逼运营做出有害动作（如物质刺激灌水）。
+    应给出分层运营方案：核心共创层（约 30-50 人，高承诺高回报，给身份与权限成长）、
+    普通参与层（轻任务与定期仪式）、接收层（信息触达与转化观测）；每层用不同指标
+    （贡献数/响应时长/留存率）。并提醒：不要用现金激励硬拉全员发言，
+    外部奖励会挤出学员的内在学习动机（intrinsic_extrinsic_motivation）。
+  key_mechanisms: [participation_ladder, status_systems, reputation_systems, intrinsic_extrinsic_motivation]
+  material_ref: "CASE-COM-008"
+  material_note: "演示场景映射的真实材料：付费社群的内容分层与参与阶梯（生财有术精华帖/风向标/项目库分层、龙珠激励、航海实战押金制），活跃集中于头部、长尾艰难维持，来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, actionability, platform_fit]
+  anti_patterns: ["接受 KPI 直接给全员提活方案", "建议按发言次数发钱", "只讲理论不给分层动作"]
+
+- case_id: COM-008
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）一个在线教育团队做"邀请 3 位好友进群送课程礼包"活动，仅在 4 个存量群里各群发了一次
+    海报，3 天共有 47 人参与后完全停滞。团队复盘结论是"奖品没有吸引力"，计划把礼包升级为
+    价值 299 元的课来救数据。
+  context: {platform: wechat_group, goal: join, audience: "存量学员及其好友"}
+  expected_behavior: >-
+    应先指出传播结构问题而非同意奖品归因：邀请好友入群是复杂行为——被邀请者要付出社交成本、
+    邀请者要承担人情风险，这类行为通常需要多重社会确认才会上行（complex_contagion），
+    单次群发只提供一次触达，远低于复杂行为所需的暴露与确认次数；
+    且参与者看不到"别人也在参与"，缺乏社会强化（social_reinforcement）。
+    应建议：多轮节奏化触达、实时展示参与名单与进度（social_proof）、让先行者晒成果作为示范、
+    简化邀请步骤（friction_reduction）；并提醒加大奖品不解决结构问题，
+    反而可能把筛选标准扭曲为逐利者优先。
+  key_mechanisms: [complex_contagion, social_reinforcement, social_proof, friction_reduction]
+  material_ref: "CASE-CMP-001"
+  material_note: "演示场景映射的真实材料：裂变设计的核心杠杆是把'单机任务'改造成'双向互惠交换'（支付宝集五福求卡/送卡：目标梯度+互惠规范，公开报道参与规模亿级），来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns: ["同意加大奖品力度的方案", "把低参与归因于文案", "承诺升级奖品后能带来多少人的具体数字"]
+
+- case_id: COM-009
+  category: community
+  difficulty: hard
+  input: >-
+    （演示数据）一个社区团购群主做"老带新"：要求成员把海报转发到朋友圈，转发的只有个位数。
+    这个群里成员平时私聊接龙非常热闹，但几乎没人愿意向外转发。群主问：
+    "是不是海报设计得太丑了？你帮我改改海报文案。"
+  context: {platform: wechat_group, goal: join, audience: "社区团购用户"}
+  expected_behavior: >-
+    应先承认海报可能是次要因素，但优先诊断网络与身份结构：强关系群内成员彼此高度连接
+    （network_density 高、以强关系为主），信息在群内冗余，缺乏向外桥接的弱关系通道
+    （weak_ties_strength：新增长恰恰依赖弱关系；wide_bridges：能带来新增的是横跨圈层的宽桥，
+    而这种桥接个体少且承担高社交成本）；转发团购海报到朋友圈是身份信号行为（identity_signaling），
+    利益驱动型转发话术有负面身份成本，多数成员未达到转发的行为阈值（network_threshold_models）。
+    应建议：识别并激励少数天生的桥接者、给转发者提供正向社交货币（晒品质生活而非省钱薅羊毛）、
+    降低公开性（如定向私聊推荐替代朋友圈群发）。
+  key_mechanisms: [weak_ties_strength, wide_bridges, identity_signaling, network_threshold_models, complex_contagion]
+  material_ref: "CASE-RES-002"
+  material_note: "演示场景映射的真实材料：高成本行为依赖'窄而深的多重社会确认'而非'广而浅的一次曝光'（Centola 在线社交网络行为扩散实验：复杂 contagion/wide bridges），来源见该案例 original_material（Science 论文）"
+  scoring_focus: [diagnostic_quality, specificity, theory_accuracy]
+  anti_patterns: ["只改海报文案", "建议转发就有红包", "忽略身份成本只谈利益话术"]
+
+- case_id: COM-010
+  category: community
+  difficulty: hard
+  input: >-
+    （演示数据）用户要从零做一个 AI 工具学习社群，定价年费 365 元，首批种子用户预计 80 人。
+    用户说："我见过太多群三分钟热度就死掉了，帮我设计一下，怎么让它活过一年？"
+  context: {platform: wechat_group, goal: retention, audience: "AI 工具学习者"}
+  expected_behavior: >-
+    应先声明学习型社群的功能门槛高于消费型（需要 identity+progress，不只是 utility+norm），
+    然后给出结构化设计而非活动罗列。至少覆盖四个结构层：
+    边界（community_boundaries：明确谁该进谁不该进，设置入门筛选与承诺装置，保护学习氛围）、
+    仪式（community_rituals：固定节奏如周更挑战、月度复盘，给成员周期性聚集点）、
+    地位（status_systems：学徒→贡献者→导师的进阶身份，学习进度可见）、
+    共同体感（sense_of_community：集体身份叙事，"我们是谁"能被一句话说出来）。
+    应分阶段给方案（0-2 周启动关键仪式并冲内容临界量 / 2-6 周建立贡献者回路 / 长期身份体系），
+    给应观测指标而非承诺具体数字，目标设定要具体可达成（goal_setting_effectiveness）。
+  key_mechanisms: [sense_of_community, community_boundaries, community_rituals, status_systems, goal_setting_effectiveness]
+  material_ref: "CASE-COM-004"
+  material_note: "演示场景映射的真实材料：社群四要素（边界/仪式/地位/共同体感）互相咬合的完整设计——蔚来用户社区（NIO House 第三空间、NIO Day 年度仪式、用户信托治理、积分勋章地位体系），来源见该案例 original_material"
+  scoring_focus: [actionability, specificity, writing_quality]
+  anti_patterns: ["只给一串活动创意", "承诺一年留存率的具体数字", "忽略入门筛选直接拉人"]
+
+- case_id: COM-011
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）一位飞盘爱好者手上已有 40 个常一起玩的微信好友，想建一个本地飞盘社群。
+    他问："怎么让这个群不要变成一个约球工具群，然后就慢慢死掉？"
+  context: {platform: wechat_group, goal: retention, audience: "城市运动爱好者"}
+  expected_behavior: >-
+    应先纠正一个可能的隐含误判：约球/组局型兴趣社群由工具价值驱动，utility 本身足以支撑存活，
+    不必强行加"学习感"或深度内容（避免过度设计）。真正的风险是活动停摆=群死，
+    因此关键设计是：给群增加"第三空间"属性（third_place：活动之外可闲聊可求助的日常场），
+    用固定仪式锚定节奏（community_rituals：每周固定局+赛后照片与复盘分享），
+    分层边界（community_boundaries：开放报名的新手局与核心老友局分开，
+    既接纳新人又保护核心关系密度），并逐步沉淀集体认同（sense_of_community：队名、队服、传统梗）。
+  key_mechanisms: [third_place, community_rituals, community_boundaries, sense_of_community, strong_ties_support]
+  material_ref: "CASE-COM-011"
+  material_note: "演示场景映射的真实材料：体育/兴趣社群的结构设计——虎扑（答题注册边界、JRs 身份符号与黑话、女神大赛等年度仪式、步行街情感联结），来源见该案例 original_material（三联生活周刊等）"
+  scoring_focus: [actionability, platform_fit, overclaiming]
+  anti_patterns: ["否定约球群的工具价值强行加学习模块", "只给活动日历不给结构设计", "承诺社群不会死"]
+
+- case_id: COM-012
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）一个护肤品品牌准备建付费会员群（年费 199 元），运营的方案是：
+    "每天在群里推 3 条产品种草内容撑住活跃度，顺便转化。"来问我这个方案行不行。
+  context: {platform: wechat_group, goal: conversion, audience: "品牌付费会员"}
+  expected_behavior: >-
+    应指出"每天推种草"是广播不是社群：消费型社群门槛确实较低（utility+norm 即可成立），
+    但单向广告轰炸会把付费社群做成广告位，用户静音或退群只是时间问题。
+    应给出设计要点：utility（会员专属权益、真实的一对一答疑，直接降低购买决策疑虑
+    perceived_purchase_risk）、规范（descriptive_injunctive_norms：鼓励分享真实使用体验的规范
+    而非广告话术，管理层的软广频率要有明示上限）、真实性（authenticity_perception：
+    允许负面评价出现，过度控制的口碑会反向摧毁信任）、互惠（reciprocity_norm：
+    先持续给非销售价值再谈转化）。应提醒社群目标（Community/Retention）与转化目标（Conversion）
+    的指标不能混用。
+  key_mechanisms: [community_boundaries, descriptive_injunctive_norms, authenticity_perception, perceived_purchase_risk, reciprocity_norm]
+  material_ref: "CASE-COM-006"
+  material_note: "演示场景映射的真实材料：'官方社群一旦变成纯单向广播（福利发放器）就退化为公告板'——米游社运营体系（签到/兑换/有奖活动/UGC 共创）及单向广播退化风险，来源见该案例 original_material"
+  scoring_focus: [actionability, ethical_safety, platform_fit]
+  anti_patterns: ["同意每天推 3 条种草", "建议把负面评价删掉维持口碑", "把社群活跃和转化率混为一个指标"]
+
+- case_id: COM-013
+  category: community
+  difficulty: hard
+  input: >-
+    （演示数据）一个运行 6 年的写作社群近 3 个月核心成员流失约 40%。起因是一位资深成员长期公开
+    贬低新人作品，管理员认为"他是元老，不好处理"选择沉默；随后两位骨干退群并在朋友圈公开吐槽，
+    群内开始站队互撕，新人几乎不再发言。
+  context: {platform: wechat_group, goal: retention, audience: "写作社群成员"}
+  expected_behavior: >-
+    应按瓦解动力学做多层诊断，不做"多搞活动挽回"式的表面处理：
+    1）规范执行失灵（community_governance + norm_enforcement_reputation）——规则对元老不适用，
+    等于宣告规范对所有成员失效，规范执行者的声誉资产崩塌，这是瓦解的起点；
+    2）身份冲突（social_identity_theory + in_group_favoritism）——元老与新人形成两个子群体，
+    内群体偏袒驱动站队互撕，共同身份叙事（"我们是写作者"）被派系身份取代；
+    3）排斥效应扩散（ostracism_effects）——被贬低者流失，旁观者因目睹排斥而参与意愿下降（寒蝉效应）。
+    应建议：治理规则一致适用（先私聊干预、后公开透明的处理结果公示）、修复集体叙事、
+    明确管理员的回避本身就是瓦解放大器；并给预期时间线（信任重建以月计，不承诺挽留比例）。
+  key_mechanisms: [community_governance, norm_enforcement_reputation, social_identity_theory, in_group_favoritism, ostracism_effects]
+  material_ref: "CASE-COM-010"
+  material_note: "演示场景映射的真实材料：规范执行与治理权失灵导致的信任崩塌与成员流失——百度贴吧血友病吧'卖吧'事件（吧务自治权被剥夺、虚假医疗广告泛滥、公益组织联名举报），来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, theory_accuracy, ethical_safety]
+  anti_patterns: ["建议办一场大活动冲喜", "建议直接踢掉元老但不给治理流程", "回避管理员责任只批评闹事者"]
+
+- case_id: COM-014
+  category: community
+  difficulty: hard
+  input: >-
+    （演示数据）一个打卡学习群过去半年一直用现金红包奖励发言和打卡（每月奖励池 2000 元）。
+    上月预算砍半，停发现金的当天活跃暴跌 70%，运营者问：
+    "怎么把活跃度拉回发钱时的水平？我去申请下个季度的预算。"
+  context: {platform: wechat_group, goal: participate, audience: "打卡学习成员"}
+  expected_behavior: >-
+    应解释动机挤出而非帮用户找回预算：长期按次付酬使外部奖励替代了参与的意义感
+    （intrinsic_extrinsic_motivation：奖励撤除后行为失去理由，活跃暴跌是挤出的典型表现），
+    因此"拉回发钱时的水平"这个目标本身有误导——原水平是用钱维持的，不是社群健康度。
+    应明确不做具体数字承诺（overclaiming 风险）。建议方向：重建内在动机回路
+    （进度可见、成果公开展示、goal_gradient_effect 用进度机制让努力可感知）、
+    把现金奖励改为非现金的社会认可（status_systems + reputation_systems：排行榜、荣誉身份、
+    优先权益）、预算骤停改为逐步退出并同步解释、用分层参与目标替代全员活跃目标。
+  key_mechanisms: [intrinsic_extrinsic_motivation, status_systems, reputation_systems, goal_gradient_effect]
+  material_ref: "http://m.toutiao.com/group/7408886846870045225/"
+  material_note: "演示场景映射的真实材料：现金返现式打卡使外部激励替代内在动机——中国青年报调查：英语阅读打卡返 180 元，参与者'纯粹为了返还现金强制分享'、敷衍应付（中青网记者杜园春）"
+  scoring_focus: [theory_accuracy, overclaiming, actionability]
+  anti_patterns: ["承诺能恢复到发钱时水平", "建议申请预算继续发钱", "把暴跌归因于成员功利"]
+
+- case_id: COM-015
+  category: community
+  difficulty: medium
+  input: >-
+    （演示数据）用户正在筹备一个知识分享群（还没开始拉人），计划是：
+    "前 3 个月每人每发一次言奖 5 元，先把氛围烧起来，三个月后氛围会自转，就可以停了。
+    你帮我算算预算够不够？"
+  context: {platform: wechat_group, goal: participate, audience: "知识分享参与者"}
+  expected_behavior: >-
+    应拒绝回答预算问题并指出方案的两个结构性风险：
+    1）按发言付酬是典型的动机挤出预设（intrinsic_extrinsic_motivation）：为钱建立的行为
+    在停钱后不会转为自发，"氛围自转"不会发生，反而停奖即崩（与 COM-014 同源机制）；
+    2）逆向筛选（community_boundaries）：按发言付费会把逐利者优先筛选进来，
+    稀释并排挤真正的内容贡献者，社群文化在启动期就被定坏。
+    应建议：把预算从按次付费改投到基础设施（内容质量、固定仪式、核心成员培育）；
+    如确要激励，用一次性启动型设计（endowed_progress_effect：给新人已完成的进度感，
+    如"你的第一课已解锁"）而非按发言计价。
+  key_mechanisms: [intrinsic_extrinsic_motivation, community_boundaries, endowed_progress_effect, community_rituals]
+  material_ref: "CASE-FAL-009"
+  material_note: "演示场景映射的真实材料：用外部激励直接购买互动的结构性失败——Facebook 2017 年'互动诱饵'降权（'求赞求转发'帖子被算法降权、重复违规者整体可见度下降），来源见该案例 original_material"
+  scoring_focus: [theory_accuracy, diagnostic_quality, overclaiming]
+  anti_patterns: ["帮用户计算发言奖励预算", "认可氛围会自转的假设", "建议发完钱再改成积分制混过去"]

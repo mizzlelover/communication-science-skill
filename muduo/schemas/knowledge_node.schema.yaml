@@ -1,0 +1,108 @@
+# Knowledge Node Schema（统一知识节点）
+# 适用于：mechanisms/ 下所有机制节点。
+# 文件组织：knowledge/mechanisms/<domain>.yaml，顶层为 {domain: <id>, nodes: [<node>...]}
+type: object
+required:
+  - id
+  - canonical_name_en
+  - canonical_name_zh
+  - domain
+  - definition
+  - core_claim
+  - mechanism
+  - evidence_grade
+  - boundary_conditions
+  - related_nodes
+  - source_ids
+properties:
+  id:                    {type: string, pattern: "^[a-z][a-z0-9_]+$", description: "snake_case 英文 ID，全库唯一，永不复用"}
+  canonical_name_en:     {type: string}
+  canonical_name_zh:     {type: string}
+  aliases:               {type: array, items: {type: string}, description: "同义词/旧称/常见误称"}
+  domain:                {type: string, description: "所属一级 Domain id"}
+  definition:            {type: string, description: "是什么；中文陈述，术语保留英文原词"}
+  core_claim:            {type: string, description: "一句话核心主张（可被检验的形式）"}
+  mechanism:             {type: string, description: "为什么会这样：过程性解释"}
+  causal_chain:          {type: string, description: "A → B → C 形式的因果链"}
+  variables:
+    type: object
+    properties:
+      inputs:     {type: array, items: {type: string}}
+      moderators: {type: array, items: {type: string}, description: "调节变量：改变效应强弱/方向"}
+      mediators:  {type: array, items: {type: string}, description: "中介变量：效应经由何物传递"}
+      outputs:    {type: array, items: {type: string}}
+  evidence:
+    type: object
+    properties:
+      supporting:    {type: array, items: {type: string}, description: "支持证据，每条注明出处类型；禁止编造具体统计量"}
+      conflicting:   {type: array, items: {type: string}}
+      replication:   {type: array, items: {type: string}, description: "复制研究状态"}
+      meta_analysis: {type: array, items: {type: string}}
+  evidence_grade:
+    type: string
+    enum: [A, A-, B+, B, B-, C, D, E]
+    description: "A 强 / A- 强偏中 / B+ 中偏强 / B 中等 / B- 中偏弱 / C 新兴情境依赖 / D 从业者经验 / E 有争议或弱。定义见 EVIDENCE.md"
+  grade_justification:
+    type: object
+    description: "证据等级判定留痕（）：A/B/C 级必填；D/E 级可选。必须来自证据而非模型感觉"
+    properties:
+      independent_studies:  {type: string, description: "独立研究支持情况"}
+      effect_size:          {type: string, description: "效应量状态"}
+      replication_status:   {type: string}
+      context_dependency:   {type: string}
+      downgrade_upgrade_reason: {type: string, description: "升降级原因（如复制危机修正）"}
+  validation_status:
+    type: string
+    enum: [VALIDATED, PARTIALLY_VALIDATED, PRACTITIONER_ONLY, MEMORY_BASED, UNVERIFIED, CONTESTED, STALE]
+    description: " 重审计标记；缺省按 MEMORY_BASED 处理。2026-09 基线：全库未经实读验证，均为 MEMORY_BASED"
+  causal_status:
+    type: string
+    enum: [experimental, quasi_experimental, correlational, observational, case_inference, speculative]
+    description: " 工程化：观察性平台数据禁止写成确定因果"
+  knowledge_half_life:
+    type: string
+    enum: [very_long, long, medium, short, very_short]
+    description: "人类认知机制=very_long；平台算法=very_short。决定复审频率而非统一重验"
+  provenance:
+    type: object
+    description: "来源链（）：节点必须能回答'这个结论到底从哪里来的'"
+    properties:
+      primary_sources:    {type: array, items: {type: string}, description: "原始研究 source_id"}
+      secondary_sources:  {type: array, items: {type: string}}
+      supporting_evidence: {type: array, items: {type: string}}
+      conflicting_evidence: {type: array, items: {type: string}}
+      boundary_sources:   {type: array, items: {type: string}}
+      case_sources:       {type: array, items: {type: string}}
+      platform_sources:   {type: array, items: {type: string}}
+      last_verified:      {type: string, pattern: "^[0-9]{4}-[0-9]{2}$"}
+  boundary_conditions:   {type: array, items: {type: string}, description: "适用边界：何时成立"}
+  failure_conditions:    {type: array, items: {type: string}, description: "何时无效或反效果"}
+  common_misinterpretations: {type: array, items: {type: string}, description: "常见误读（营销玄学化）"}
+  ethical_risks:         {type: array, items: {type: string}}
+  examples:
+    type: object
+    properties:
+      original_cases: {type: array, items: {type: string}, description: "来源著作中的原始案例"}
+      research_cases: {type: array, items: {type: string}, description: "研究中的经典实验（仅描述，不编造数据）"}
+      modern_cases:   {type: array, items: {type: string}, description: "当代平台/营销现象"}
+  communication_implications: {type: string, description: "对内容传播意味着什么"}
+  community_implications:     {type: string, description: "对社群运营意味着什么"}
+  content_applications:
+    type: object
+    description: "落到内容要素的用法；无则省略该项"
+    properties:
+      title:    {type: string}
+      opening:  {type: string}
+      body:     {type: string}
+      narrative: {type: string}
+      evidence: {type: string}
+      emotion:  {type: string}
+      visual:   {type: string}
+      cta:      {type: string}
+      comments: {type: string}
+      sharing:  {type: string}
+  platform_implications: {type: string, description: "平台机制如何加强/削弱该机制（原则性，平台细节在 adapter）"}
+  related_nodes:         {type: array, items: {type: string}, description: "节点 ID；悬空引用会被 validate_schema 拒绝"}
+  conflicting_nodes:     {type: array, items: {type: string}, description: "冲突节点 ID；冲突细节登记于 evidence/conflicts/"}
+  source_ids:            {type: array, items: {type: string, pattern: "^S[0-9]{2,3}$"}, minItems: 1, description: "必须至少引用一个 registry 中的来源"}
+  last_reviewed:         {type: string, pattern: "^[0-9]{4}-[0-9]{2}$", description: "YYYY-MM"}

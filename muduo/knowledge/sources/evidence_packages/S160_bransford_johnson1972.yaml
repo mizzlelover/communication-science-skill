@@ -1,0 +1,24 @@
+# Evidence Package — S160 Bransford & Johnson 1972（Contextual Prerequisites）
+# 标准格式。access_level 如实标注。
+source_id: S160
+title: "Contextual Prerequisites for Understanding: Some Investigations of Comprehension and Recall"
+authors: "John D. Bransford; Marcia K. Johnson"
+year: 1972
+journal: "Journal of Verbal Learning and Verbal Behavior 11(6): 717-726"
+doi: "10.1016/S0022-5371(72)80006-9"
+url: "https://circularlearning.com.au/blog/the-importance-of-context"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "正文未直接获取。渠道1：circularlearning.com.au《The importance of context》（三组实验详述 + 洗衣房段落（laundry passage）原文全文引用）；渠道2：knowt.com 课程笔记《Global Coherence & Kintsch's Construction–Integration Model》（量化数据：段落含 18 个观点、无语境组平均仅回忆约 2.8 个、读后揭示主题不改善回忆、组织框架须在编码时可用）；渠道3：MIT Open Learning《Pre-/Post-testing》引用（先备知识对学习的影响，'How learning works' 参考文献链）；渠道4：tandfonline Memory 2024 引用（确认卷期页码 11(6):717-726 与 DOI）。"
+research_question: "恰当的语境（图式/背景知识）是否是理解的先决条件？提供语境的时间点（阅读前 vs 阅读后）如何影响理解与回忆？"
+core_claims:
+  - "恰当的语境（图式）是理解的前提：无语境时洗衣房段落难以理解与回忆；阅读前被告知'这是关于洗衣服'的组能理解并记住大量细节（circularlearning.com.au 详述）"
+  - "语境必须在编码时（阅读前）可用才有效：阅读后才被告知主题的组与无语境组同样难以回忆——组织框架须在编码阶段激活（circularlearning.com.au；knowt.com 笔记）"
+  - "量化结果：洗衣房段落含约 18 个独立观点，无语境组平均仅回忆约 2.8 个；主题信息在阅读后给出不改善回忆（knowt.com 笔记）"
+method: "系列理解与回忆实验：洗衣房段落三条件对比（无语境 vs 阅读前给语境 vs 阅读后给语境），辅以语境图片等变体条件，测量理解评定与延迟回忆"
+results: "阅读前提供恰当语境显著提升理解与回忆；阅读后提供无效。无先备图式时，即使文本中每个单词都完全可懂，也无法组织成有意义的整体；成为'背景知识/图式是理解前提'的经典实验证据（circularlearning.com.au；knowt.com；MIT Open Learning 引用）"
+limitations: "单一模糊段落材料、回忆测量为主；真实世界文本通常自带部分语境；后续研究（如 Kintsch 1988 C-I 模型传统）对'语境作用的时间窗口'与先备知识激活机制有更精细讨论"
+boundary_conditions: "图式/语境须在编码阶段可用；缺乏相关先备知识的读者受益最大；语境内容须与文本主题匹配（错误语境无益）；对教育设计推论：须在呈现新内容前建立丰富语境并与读者既有语言/主题知识连接（circularlearning.com.au 教学推论）"
+relevant_nodes: [schema_formation, conceptual_coherence]
+notes: "图式/背景知识前提作用的经典实验来源（洗衣房段落）。核心结果经独立教学博客（含段落原文）、课程笔记（量化数据）、MIT Open Learning 引用多源交叉确认，未编造。建议：将 S160 计入 comprehension.yaml schema_formation 节点的 source_ids（当前为 S10/S04/S63）。"
+last_verified: "2026-09"

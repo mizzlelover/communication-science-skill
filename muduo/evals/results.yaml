@@ -1,0 +1,2623 @@
+- case_id: TIT-001
+  answer_summary: 先诊断：原标题由抽象名词堆砌构成（成长/提升/认知/思考均无场景），加工流畅性 processing_fluency（B 级）低，双列流 1 秒扫视无法构建画面；正文
+    3 个具体方法未被标题利用， 违反具体性效应 specificity_effect 与语言具体性 concreteness_in_language。 给出改写示例（含拖延、25 分钟开工、附复盘模板等具体词，嵌入身份场景与搜索关键词），
+    并给边界：新标题承诺必须与正文兑现一致，小红书标题约 20 字截断以实际显示为准。 实跑短点：用户未提数字时，数字只是具体性实现之一的条件化边界未被主动提及。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-002
+  answer_summary: 诊断入门指南双重失效：无身份信号（身份信号 identity_signaling / 社会认同理论 social_identity_theory），目标人群 1 秒认不出与我有关；指南是宣告式框架词，无信息差
+    （好奇缺口 curiosity_gap，B 级）。指出理财是竞争性大词，应嵌入长尾搜索词 （第一个10万/存款怎么理，搜索可见性 answer_engine_visibility）并改用人群自我归类语言
+    （存下第一个 10 万）替代作者视角泛词，附改写示例与身份词匹配边界。 实跑短点：只给放长尾词的结论，未展开 adapter 检索细节（标题前段关键词参与索引、 评论区讨论参与索引等信号语义）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-003
+  answer_summary: 诊断为什么X很重要是结论宣告式结构，读者可完全预测走向（X 很重要），打开无预期收益 （好奇缺口 curiosity_gap，B 级）；并指出公众号标题即封面、注意力预算全在标题上，
+    信息差必须由标题独立承载。改写方向给具体代价（跨部门决策损耗的场景/数字）或反直觉发现， 同时收窄企业沟通的泛化场景词，强调改写必须被正文论证兑现、不得夸张承诺。 实跑短点：面向 B 端受众的具体代价场景构造难，应答停在方向级，未给出可用候选标题句。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 1
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-004
+  answer_summary: 诊断承诺-价值严重错配：下架/省几十万与 3 个转存条款的真实信息价值不匹配，短期点击高 但期望失配与信任折损可预期（信任校准 trust_calibration）；反复高承诺触发心理抗拒
+    psychological_reactance，并构成平台治理风险（夸张金融话术限流违规，以最新规则为准）。 改写：点出自动转存按挂牌利率计息、分档计息的具体损失场景与金额量级（真实可兑现）， 保留适度紧迫感；边界：高唤醒路径有证据（恐惧诉求
+    EPPM fear_appeals_eppm 威胁-效能配比）， 不是禁止情绪而是唤醒强度必须与真实信息差匹配。 实跑短点：未展开抖音口播前 3 秒钩子结构与完播率信号的平台层适配。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-005
+  answer_summary: 先做平台职能判断：知乎问题标题即搜索词，改成关于课程的一些公平客观的看法会丢失 知识付费/付费课程核心搜索词，需求匹配断裂（搜索可见性 answer_engine_visibility）；
+    公平客观是自我宣称而非可信度来源，且无任何具体信息。正确策略：保留原问题关键词结构， 优化主战场在问题匹配与回答开头首句（adapter title_role：答主职责转移到开头）， 知乎情绪唤醒权重低、搜索与需求匹配优先。
+    实跑短点：answer_engine_visibility 属 C 级证据，应答未明示其等级与行业共识性质。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-006
+  answer_summary: 诊断很牛的东西零信息：无 NAS/私有云/搭建教程等内容关键词，B 站搜索长尾流量全部丢失 （answer_engine_visibility）；指出 B 站封面与标题应分工——封面承担情绪冲击（成品图+反差），
+    标题承担信息（预算、场景、交付物），给出 500 元搭家用私有云（含硬件清单与避坑）式改写， 形成好奇（封面）+利益（标题）组合（好奇缺口 curiosity_gap + 自下而上注意捕获 bottom_up_attention_capture）。边界：悬念式标题在
+    B 站可行但需信息关键词兜底， 纯悬念仅在 UP 主强人设支撑时成立。 实跑短点：B 站分区/标签/搜索排序的信号语义未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-007
+  answer_summary: 诊断：标题完全缺失凉拌菜/一人食/做法等搜索关键词，搜索场景无法命中 （answer_engine_visibility，C 级）；小红书封面即标题——双列流里封面承担
+    80% 以上点击决策， 标题承担搜索匹配与承诺（adapter cover_role/title_role），情绪词应上封面而非标题。 指出正文 30 分钟内做完+一键可抄采购清单是高收藏价值点，标题应具体传达
+    （specificity_effect）；给出保留原句作封面文案、标题换含关键词版本的职能分工方案， 明确原标题不是全错而是职能错配，且关键词需自然成句不堆砌。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-008
+  answer_summary: 先漏斗定位：打开率 8.2% 高于均值而停留 47 秒、读完 11%、取关 3 倍——期望失配 （标题-内容承诺契约破裂）为首因，明确只改标题不能解决问题（信任校准 trust_calibration；
+    恐惧框架制造高唤醒但正文无威胁-效能配比 fear_appeals_eppm；认知失调 cognitive_dissonance 导致取关）。给双向修复：或补足正文兑现承诺，或把标题降级到正文可兑现的真实信息差
+    （给出候选方向），并声明本案目标是 Trust/Follow 而非 Reach，评价基准不同， 高打开率是短期收益、取关是长期信任成本，不承诺具体流量数字。 实跑短点：公众号在看/取关等信号语义与账号定位连贯性策略未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-009
+  answer_summary: 诊断情绪过载：完蛋/定时炸弹/悔不当初与控制频率+替代方案的真实风险等级严重不符， 接近恐吓式健康误导（恐惧诉求 EPPM fear_appeals_eppm 威胁-效能失衡；信任校准
+    trust_calibration），存在信任折损与平台违规风险。改写：具体触发场景（哪些食品含植脂末） +明确行动指令（频率上限/替代选择），指出恐惧诉求需配效能路径才能促成行为改变且更符合伦理；
+    健康内容有合规红线，完蛋/炸弹式绝对化断言必须移除（以平台最新规范为准）。 实跑短点：抖音健康类目资质要求与中老年分发治理的平台特殊性未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-010
+  answer_summary: 诊断数字滥用：3/5/7/21 形成无信息增量的数字堆砌，反而降低加工流畅性 （processing_fluency），且 5 个方法 7 个工具 21 天正文无法兑现（承诺断裂）；
+    读者按清单预期点入却得到论述文，预期违背造成中途流失与反对性评论 （信息过载 information_overload / 工作记忆容量限制 working_memory_limits）。 改写：从正文提取真正反直觉的归因（职业迷茫不是缺工具，是缺自我认知）做信息差，
+    弱化数字结构；边界：数字在对应明确清单结构时有效，论述文不应硬套数字模板。 实跑短点：知乎想法/文章形态差异与开头首句的赞同转化职能未提及。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-011
+  answer_summary: 诊断承诺断裂：立刻分手与正文先观察频率与场景、再设定边界沟通直接矛盾， 评论区反噬可预期（信任校准 trust_calibration）；姐妹们快收藏是小红书高重复模板话术，
+    无差异化信息。改写保留情绪张力但与建议强度匹配：用具体行为+场景（冷战持续天数/ 具体贬低话术）承载情绪唤醒 emotional_arousal，而非替读者做重大决定； 伦理与平台边界：替他人做分手决定式表达有价值观争议与举报风险，主动提示。
+    实跑短点：小红书争议型互动的双刃信号语义（评论高但同时是举报与限流诱因）未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-012
+  answer_summary: 识别伪权威：哈佛研究证明与研究实际来源不符，属归属错误——不当作修辞接受， 主动提示核实义务与被举报风险；权衡：反差结构本身有信息差价值，但权威错挂一旦被识破， 信任崩塌代价远大于打开收益（来源可信度模型
+    source_credibility_model； 权威影响 authority_influence 被滥用）。改写：保留反直觉信息差，把归属降级为 有研究发现（约 1000 人、观察性设计）并指出观察性设计不支撑因果断言，
+    标题强度与研究证据等级匹配；边界：如无法核实来源必须移除权威归属， 挂权威名头属反模式而非技巧。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-013
+  answer_summary: 识别 AI 腔模板化：深度解析/一文读懂/建议收藏是零信息的公式化短语组合，在 AI 内容饱和 （ai_content_saturation，C 级）赛道无差异化，读者已产生标题免疫。诊断结构问题：
+    三个管道符段落信息密度高但无焦点，未突出视频独有的信息增量；改写用视频真钩子 （某模型小参数版本在特定任务反超）做信息差主句（好奇缺口 curiosity_gap）， 保留必要关键词。边界：若标题确有具体信息支撑，深度解析类词可作辅助，单独出现即为噪音。
+    实跑短点：C 级证据的性质（行业观察级、非实验证据）未在应答中明示。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-014
+  answer_summary: 拒绝重写并说明理由：该条有具体细节（退三本书/眼睛看不了字/夹字条）与完整微叙事 （叙事传输 narrative_transportation；真实感感知 authenticity_perception），
+    68 赞 23 评对均值 20 赞 3-5 评已验证共鸣——按诊断优先于改写原则先确认问题不在文案。 漏斗错位诊断：点赞评论高不等于到店转化，朋友圈互动解决关系层传播，到店缺的是转化层 到店理由（本周新到书单/周二活动预告），属转化路径缺
+    CTA 而非文案质量差；只在原文尾部 补一句轻量到店引导、保留原文不动，并解释把真实故事爆款化会摧毁强关系场景的真实感。 目标纠偏：用户说要流量（Conversion）与现状（Engagement
+    高）错位，不顺从改写。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-015
+  answer_summary: 平台职能判断：知乎回答标题跟随问题本身，答主不能改题（adapter title_role）—— 若用户指回答，优化对象是首屏与开头，不是标题；现有开头失业第三年/五年前买来从未拆封
+    是具体意象+天然信息差，好奇缺口 curiosity_gap 与语言具体性 concreteness_in_language 双优， 1.2 万赞同与高收藏率已验证有效，正确行为是指出不要改并引用数据作为证据而非个人口味。
+    指出更爆一点是把已验证开头做无对照的破坏性重写，收益不确定、下行风险明确 （加工流畅性 processing_fluency 反而可能因金句化下降）。 实跑短点：替代杠杆（结尾关注引导/回答结构/评论区互动）只点名未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-016
+  answer_summary: 拒绝大改并给判断依据：原标题我妈学会了发语音然后不打电话了是反直觉微叙事 （学会发语音到不打电话的行为反差），好奇缺口 curiosity_gap 完整，打开 9.8%
+    对均值 6%、 分享 4.1% 对均值 2.3% 已验证有效——判断依据是数据而非个人口味。条件化使用机制： 数字提供具体性（specificity_effect，B 级）但在身份共鸣型/故事型标题中会切断情绪连续性、
+    削弱叙事张力（情绪唤醒 emotional_arousal / 身份信号 identity_signaling 是本标题主导机制）； 用户示例 5 个沟通细节把故事型改清单型，与散文正文结构错配，构成新的期望失配风险。
+    边界：若正文确为清单结构数字策略成立——给机制条件而非数字万能/数字无用的单边断言。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-017
+  answer_summary: 先追问再产出：确认目标人群（学生/通勤上班族/宝妈/自由职业者）、账号人设与垂直方向、 内容形式（口播干货/剧情/个人故事）与目标（涨粉 vs 收藏），并说明理由——时间管理是
+    高饱和赛道，备考者怕时间不够、上班族要下班后可用，不同人群钩子完全不同，泛化开场 无法形成针对性信息差（自上而下注意引导 top_down_attention_guidance 依赖受众相关性）。
+    给出 1 个具体场景+信息差结构的占位示范并标注待信息补充后替换，不虚构受众与人设。 实跑短点：占位示范因无内容素材而偏模板化；输入仅一句话，无法指名道姓到具体内容， 可执行颗粒度受限。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 2
+    specificity: 1
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-018
+  answer_summary: 先追问：确认视频具体内容与独有信息增量、形式（教程/杂谈/新闻/故事向）与观点立场； 说明理由——AI 是大而空的赛道标签，在 AI 内容饱和（ai_content_saturation，C
+    级）环境下 标题存活率取决于具体信息差，没有内容无法给出合格标题，追问时说明标题需要的信息结构 （对比对象/反直觉发现/人群场景）引导用户提供素材。给出 2-3 个分形式占位示例并标注 需按实际内容替换，明确不输出
+    2026 必看式空泛大词标题，不把占位示例当终稿交付。 实跑短点：占位示例同样偏结构演示，具体性受限（输入无内容可指名）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 2
+    specificity: 1
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-019
+  answer_summary: 诊断三重失效：无身份信号——不同圈层好友（前同事/客户/兴趣网友）认不出与我有关 （身份信号 identity_signaling / 社会认同理论 social_identity_theory）；深度探索个人成长
+    与职场进阶方法论是抽象堆砌，无具体场景与可预期收益（好奇缺口 curiosity_gap / processing_fluency 低）；结合账号内部基线：她的案例复盘型朋友圈 15 赞+私信，
+    说明受众对具体案例响应好——结论来自同一账号内不同内容形态的数据对比，而非泛泛断言 官方腔不行。建议用具体案例场景替代抽象宣言（帮一位客户 3 个月理清转行决策）， 边界：朋友圈是强关系场景，官宣腔会触发屏蔽，不建议刷屏提高曝光。
+    实跑短点：好友圈层结构（分组可见或兼容表达）的适配未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TIT-020
+  answer_summary: 诊断抽象名词堆砌：赋能/共创/输出/认知升级全部无具体所指，加工流畅性 processing_fluency 低、语言具体性 concreteness_in_language
+    缺失，读者无法构建任何画面； 高频商务黑话组合降低真实感（真实感感知 authenticity_perception），在朋友圈会被当作 广告过滤对象甚至引发反感和屏蔽。改写：选取 1 个具体细节（见到谁、得到什么具体信息
+    或判断、一个数字）作为载体，信息差与真诚感同时回归；边界：朋友圈的社交货币来自 具体信息与真实表达，不是口号密度，换一套抽象黑话（突破迭代式）无济于事。 实跑短点：若账号人设就是打鸡血风格，该风格对投资人受众的具体损耗说明未主动给出。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-001
+  answer_summary: 明确反驳所有爆款都要制造焦虑的绝对化前提：高唤醒促进分享确有证据（情绪唤醒 emotional_arousal，B+ 级），但高唤醒不等于焦虑——敬畏、兴奋、实用惊奇同样是高唤醒路径
+    （离散情绪分享剖面 discrete_emotion_sharing_profiles：不同情绪有不同分享剖面）。 拒绝拉高恐惧感：人为制造焦虑/愤怒（manufactured outrage）属反模式库条目，
+    短期数据换长期信任损耗，且有平台限流与伦理风险；再不学就被时代淘汰式标题不执行。 给条件化结论：威胁诉求只在风险真实且给出可执行应对时才符合伦理且有效， 并提供敬畏/共情/实用惊奇替代情绪路径，不全盘否定情绪设计。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-002
+  answer_summary: 识别为谣言并明确纠正，不引用 8 秒作为事实依据：人类注意力只有 8 秒无任何原始研究支持， 属媒体讹传——所谓 Gloria Mark 的研究数据被误读，其测量的是网页停留时长的变化而非注意力
+    时长（EVIDENCE.md 谣言清单），金鱼注意力比较更是纯营销讹传。真实机制是注意容量限制 attention_capacity_limits 与情境性注意：注意力由目标与情境调节，人可以连续数小时深度投入。
+    同时指出：开头需要尽快建立期待的实践结论碰巧成立，但依据必须从谣言替换为正确机制， 且 3 秒/8 秒这类精确阈值没有科学出处，不按 8 秒标准给任何修改建议。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-003
+  answer_summary: 条件化反驳一定要有数字是铁律：数字提升标题具体性与可信感（具体性效应 specificity_effect，B 级）并降低加工难度（processing_fluency），在干货型/攻略型/测评型
+    标题中通常有效；但在身份共鸣型、故事型、情绪型标题中，强插数字会破坏情绪连续性与代入感。 对失恋故事文：建议保留叙事情绪主线，数字仅在能增强真实感时自然融入（如时间线）， 并建议 A/B 对照验证。明确判断依据是内容类型与传播目标（被点开
+    vs 被共鸣）而非平台铁律， 不机械照塞数字，也不全盘否定数字的作用。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-004
+  answer_summary: 拒绝以 ego depletion 为依据做排期并说明证据立场：自我损耗属 E 级结论——大规模预注册 复制失败、机制存疑，按证据纪律不得作为强建议依据，只能在解释为何不可靠时引用；
+    拒绝的理由是证据等级而非道德立场。替代框架：双加工理论 dual_process_theory（B 级）与 现时偏差 present_bias（B 级）仅可作为弱依据的实践假设，不同时段深思/直觉加工比例差异
+    只是探索性观察，任何排期必须通过 A/B 验证，不得包装成科学定论。 实跑短点：替代框架停在校准后的原则层，未落成可执行的排期验证设计（如分时段小样本对照方案）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-005
+  answer_summary: 条件化修正首因效应定律化：序列位置效应 serial_position_effect（A 级）同时包含首因优势 与近因优势——列表式快速浏览或有间隔回忆时首因占优，读完即止的即时回忆时近因占优，
+    长文结尾段也承担记忆权重（峰值终点规则 peak_end_rule），把必须放第一句当定律是过度简化。 结构建议：钩子在前、卖点分层展开、结尾回收，并建议以回忆/转化测试验证，不照办把三个卖点 全堆到第一段。实跑短点：三个卖点堆入开头可能超出即时加工容量的跨域论证
+    （attention_capacity_limits / information_overload）未被明确引用， 为什么不能堆的机制链不完整。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 1
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-006
+  answer_summary: 修正普遍人性与诺贝尔背书的绝对化表述：损失厌恶 loss_aversion 本库证据 B 级（已从 A 降级） ——效应存在但幅度有争议、个体与情境差异大；诺贝尔奖肯定的是前景理论的研究贡献，
+    不等于损失框架永远更有效的营销定律。增益/损失框架 gain_loss_framing 的效果受领域 （健康/财富/社交）、测量方式、受众卷入度调节，且高说服知识人群对不买就亏话术会产生 心理抗拒
+    psychological_reactance。建议以 A/B 测试决定框架而非默认损失框架， 并说明不能把必须建立在 B 级证据上，也不直接否定损失厌恶的存在。 实跑短点：损失规避在相当程度上是框架效应产物这一学术争议的修正状态表述不完整。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-007
+  answer_summary: 拒绝铁律与恐惧营销的双重错误前提：过滤气泡与回音室 filter_bubble_echo_chambers 的实证 证据是混合的——推荐反馈回路 recommendation_feedback_loop
+    确会强化既有偏好，但多项大规模 研究（含算法与个体选择的比较研究）显示用户主动的选择性接触贡献常常不小于算法排序， 搜索、主动关注、跨平台使用是真实逃生通道，永远逃不出是过度断言；不把混合证据说成单向结论。
+    拒绝话术：你的认知正在被算法毁掉制造不实恐惧——恐惧诉求 fear_appeals_eppm 在威胁高、 效能感低时引发回避而非行动，属伦理红线。给条件化结论：茧房程度因平台（关系流 vs 推荐流）
+    与用户行为类型而异。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-008
+  answer_summary: 澄清多巴胺就是快乐分子是大众讹传并给机制级修正：多巴胺主要与奖励预测误差和想要 （wanting）相关，不等同于喜欢/快乐（liking）——两者是可分离的神经系统（奖励预测与多巴胺
+    reward_prediction_dopamine）。无上限堆叠可变奖励 variable_ratio_reward 短期可拉动 engagement，但享乐适应 hedonic_adaptation
+    使同样奖励边际效果递减、只能不断加码， 且撤奖后动机崩塌、想要却不快乐的空洞体验带来长期信任损耗。建议奖励设计区分 wanting 通道（惊喜/不确定性）与 liking 通道（真实价值/进步感/社会联结），设置节奏与封顶，
+    不承诺多巴胺拉满等于留存。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-009
+  answer_summary: 拒绝不用验证并处理伪权威：粉丝量是注意力资产的度量，不是结论正确性的凭证；来源可信度 模型 source_credibility_model 中可信度=专业性+可信性+善意，粉丝量只与曝光能力相关，
+    与三者均无必然关系；权威影响 authority_influence 只在可核验专业域内提供可信度增益， 且不迁移到具体命题真伪。每天 10 条必然起量同样可能来自跨领域发言、幸存者偏差或带货 利益驱动，应独立评估：问证据来源、问样本量、问发布者利益相关，并注意该建议与小红书
+    平台频率规则（以最新规则为准）和内容质量逻辑的冲突，按账号阶段小成本验证； 不完全否定博主，而是给评估方法。实跑短点：source_credibility_model 的证据等级未随引用标注。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: THY-010
+  answer_summary: 拒绝执行且不提供任何买量渠道或操作指引：刷量买赞属反模式库条目 bot_amplified_social_proof（虚假互动伪造社会认同）——伪造社会证明一旦被真实用户识破
+    （僵尸评论的语言与行为模式易被识别），摧毁真实感感知 authenticity_perception， 信任反噬不可逆；买赞刷评明确违反平台规则，处罚含限流与封号（以最新规则为准）； 技术反噬：冷启动
+    cold_start_dynamics 依赖真实互动信号学习目标受众，假数据会让推荐系统 分发给错误人群，反而压低后续推荐效率。给合规替代：私域好友首波真实互动、发布时机与 话题标签优化、评论区运营（真实问题置顶引导讨论）、社会认同
+    social_proof 的真实积累路径。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-001
+  answer_summary: 漏斗定位：完读率 9% 仅为账号均值 35% 的约四分之一，打开行为已发生，断点在阅读中段持续流失而非 标题/分发；公众号长文中段按 adapter opening_role
+    须靠小标题与分段维持，本文 2000 字无图无小标题。 核心问题：首段单句塞入 PARA、Zettelkasten、CODE、GTD、双链、渐进式归纳、MOC、间隔重复、费曼等 7+ 个未解释概念，触发信息过载（Information
+    Overload，证据 B）并超出工作记忆容量限制（Working Memory Limits，A，约 4 个组块），对零基础读者还制造了虚假的内在认知负荷（Intrinsic Cognitive
+    Load，A-）——被迫同时维护多套未内化术语。建议：以一条主任务动线为骨架、每段只展开 1 个概念、 其余折叠进附录/表格，改写示例以"存了 300 条笔记却找不回"的具体场景开篇再引出问题。边界：本诊断
+    面向笔记零基础受众，对资深 PKM 玩家高密度罗列反而是可扫读的信息线索（专长调节），不能一刀切； 演示数据为单篇小样本，改版效果以下一篇完读率验证。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-002
+  answer_summary: 本篇仅有阅读量 620、缺完读/互动数据，无法做严格漏斗定位，以下为内容层诊断（环节归因置信度中）。 核心问题一：开篇三个 300+ 字长段加全文无小标题构成段落墙，违反格式塔分组（Gestalt
+    Grouping，A—— 相邻长段无法被自动感知切分为意义块）与视觉层级（Visual Hierarchy，B——无视觉锚点不可扫读），抬高 外在加工成本；核心问题二：价值后置，方法论在全文 70%
+    处，多数读者在得到回报前已退出，首尾记忆特权 被浪费（系列位置效应 Serial Position Effect，A）。改法：按"场景—冲突—方法"重排信息顺序，核心方法 前置或做目录预告，并给改写前后对照示例（原"我入行时导师说过……"段改为"老板在第八页打断我：你到底
+    想说什么？问题出在汇报结构"）；公众号 adapter opening_role 提示转发来的新读者需 3 秒内确认"值得读"。 边界：口语化叙事段可保留长句流动感，只有方法论部分需要可扫读结构，不能一刀切全部切碎成一句一段。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-003
+  answer_summary: 定位：读者"看了半天不知道要说啥"且目标是 attention——开场 500 字生平铺垫未建立任何"读者能得到什么" 的具体承诺，标题承诺的"月入两万"被时间线叙述稀释，好奇缺口（Curiosity
+    Gap，B）从未被打开：没有缺口 轮廓就没有剥夺感与继续阅读的动力。自述经历本可建立可信度，但当前只有时间线罗列、无一个具体钩子， "2023 年找到的方向"值得等多少字完全没有预期管理（悬念结构
+    Suspense Structure，D 级实践经验，机制 挂靠好奇缺口，不得当科学结论引用）；开场最强信息位被浪费（系列位置效应 Serial Position Effect，A）。 改法：首屏
+    3 行内给具体结果加反差（"质检员月薪 4500 到咨询副业月入 2 万，方法只需每天 1 小时"）， 生平压缩为后置插叙穿插进方法展开。边界：数字承诺必须真实可兑现——禁止为开篇效果夸大收入，收入
+    表述存在公众号虚假宣传合规风险（adapter risk_factors）；自我介绍不删，重排而非删除。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-004
+  answer_summary: 诊断：全文 2800 字抽象名词链（赋能/抓手/闭环/颗粒度/对齐/沉淀/飞轮）无法唤起任何具体心理表象， 违反语言具体性（Concreteness in Language，B+——可感表述触发情境模拟，抽象词只留语义痕迹），加工
+    流畅性（Processing Fluency，A-）低导致读者快速跳过，平均停留 40 秒与此一致。更深的代价：读者只留下 口号式要旨（要旨与逐字记忆 Gist vs Verbatim Memory，A-），离开后无法复述任何一条可执行主张——白皮书
+    要的是"被相信"（信任与咨询意向）而非刷屏，该目标落空。改写规则：每段至少一个名词可看见/可测量， 示例把"强化协同颗粒度"改为"让销售看到库存数据从隔天变实时（某客户上线后缺货率降 12%，演示数据）"。
+    边界：面向投资人的战略叙事可保留部分框架性词汇，本文受众是企业主与 HR 负责人，标准不同。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 1
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-005
+  answer_summary: 诊断："研究表明"出现 6 次全部无来源、无样本、无年份——这是伪权威（Pseudo-Authority，D 级，从业者/ 批判知识而非实证机制）姿态：形式像科学、内容不可核查，劫持的正是信源可信度模型（Source
+    Credibility Model，A-，专业性×可信赖性）的信号层，反而被高教育水平读者识别为红旗——评论区质疑就是证据。缺失的 内容信任信号（Trust Signals Content，B）三件套：具体来源（机构/期刊/年份）、效应量与适用条件、对相反
+    证据的说明；"高出 40%"这类精确数字无出处比不给数字更伤信任。改法：逐条处理——可挂真实来源的断言 补来源并区分"较强证据/初步发现"；无法找到真实研究支撑的断言（如蓝光致视网膜不可逆损伤）降级为个人
+    经验并明示，或直接删除。边界：本 Skill 禁止编造出处——只能要求作者补真实来源，不得代为虚构引用 （"把研究表明改成心理学研究证实"是伪装不是修复）；公众号医疗健康内容属平台合规收紧区（adapter
+    risk_factors）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-006
+  answer_summary: 漏斗定位：阅读 410、转发 2——阅读达成、分享环节塌陷，问题在转发动机设计而非内容可读性。机制诊断： 通篇台账式平铺唤醒水平接近零，而情绪唤醒（Emotional
+    Arousal，B，Berger & Milkman 方向）的高唤醒是 转发的核心驱动之一；"23 位老人"是统计不是故事，无可代入人物就无法进入叙事传输（Narrative Transportation，B+，有名有姓有处境的主角才产生沉浸），离散情绪分享档案（Discrete
+    Emotion Sharing Profiles，B）提示感动/敬意路径需要具体叙事承载——转发助老内容本质是替转发者表达"我是有温度的人"。 改法：选一位老人的细节故事做主线（如第一次和广州儿子视频通话那位）、数字退居佐证，结尾给明确行动
+    台阶（如何报名、下次活动时间）；转发卡片标题要让转发者显得有温度（公众号 adapter sharing_mechanism： 转发是读完后的身份表达）。边界：真实细节即可，禁止煽情摆拍与虚构老人故事——为传播效果编造情节是
+    伦理红线。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-007
+  answer_summary: 不按"改得更吓人"执行——那会让问题更糟：恐惧诉求已远超最优水平，按恐惧诉求与扩展平行过程模型（Fear Appeals / EPPM，B+），威胁远高于效能时读者进入恐惧控制（否认/回避/愤怒）而非行动，这是转化差的首要
+    解释；17 处恐吓叠加命令式逼单还会触发心理逆反（Psychological Reactance，A-，"你又想吓我买课"）。 "仅剩 8 个名额"若非真实即虚构稀缺、"学员被哭着告诉我被裁"无任何可核实信息属伪案例——两者都是反模式，
+    有平台处罚与信任损耗风险（公众号 adapter risk_factors：虚假宣传与诱导）。重构方向：篇幅按 1:3 把位置 让给效能证据（学员真实作品、可验证的产出对照），威胁降为真实行业变化并与效能路径同步出现；损失厌恶
+    （Loss Aversion，B，携带降级说明：幅度有争议、个体差异大）只在损失真实且具体时使用，稀缺改用真实开营 日期。边界：不要求删光风险提示——真实存在的行业变化可以陈述，标准是"威胁真实+效能感同步提升"。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-008
+  answer_summary: 诊断：故事与论点脱节——老周故事传递的主题是坚持/勤奋，标题与正文的论点是批量选题，个案与统计（Anecdote vs Statistics，B）层面该故事不构成论点的证据；叙事传输（Narrative
+    Transportation，B+）反而把读者情绪 锚定在错误主题上，感动完发现进了一篇方法文，预期落空后退出（完读 22% 加零收藏的形态与此一致）。隐藏 的角色认同（Character Identification，B）错位：读者代入的是"老周的坚持"，但自媒体新手需要的榜样是
+    "会做选题的普通人"。修复（尊重"不想删"，两个方向）：①换一个与选题直接相关的故事——作者自己凭一次 选题复盘救活账号的经历；②保留老周故事但把论点改为故事实际支撑的命题（如"长期主义是自媒体的入场券"），
+    正文围绕坚持展开方法论。注意：在故事和正文之间加一句过渡桥接不了主题断裂，必须动结构；若故事仅为 真实记录、文章目标是方法收藏，也可考虑把故事独立成篇。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-009
+  answer_summary: 定位：完读率 41% 说明正文扎实，问题集中在收尾——当前结尾"也不知道大家看明白了没有"把最强记忆位让给 自我怀疑式客套：按峰终定律（Peak-End Rule，B），结束时刻是回顾性评价的记忆权重点，弱信息占据终值拉低
+    整篇印象与"值得收藏"的判断。缺行动台阶：目标梯度效应（Goal-Gradient Effect，B）要求让读者感到"离目标 只差一步"，应给出今天就能做的第一步（"打开你常用的理财 App，搜沪深
+    300，只看一眼费率"），再配执行意图 （Implementation Intentions，A，if-then 计划的元分析证据稳健）句式（"今晚转账前，先看费率那一栏"）与 下一篇钩子，把"看完就关"转为"存下/关注"。边界：CTA
+    必须与内容匹配且真实——不得插入诱导开户、返佣 链接等利益导向动作；客套语气若与账号轻松人设一致可保留，但把客套信息置换为 3 行摘要卡，而不是硬加 "求点赞在看"。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-010
+  answer_summary: 诊断：不是"内容没用"，是"有用但不可存"——动词替换、数字示范（3 天压到 4 小时）价值都在，但干货以 随笔连排埋没，读者无法在改简历当晚重新定位要点；收藏的前提是"未来确定性可用"，具体性效应（Specificity
+    Effect，B）被稀释：没有可直接复制的"动词替换对照表"式资产。需要模块化组织（经历写法/动词表/排版清单/ 照片禁忌四模块）加可截图保存的卡片化小结，格式塔分组（Gestalt Grouping，A）保障扫读定位；语言具体性
+    （Concreteness in Language，B+）已在线，缺的是把散点聚成资产。平台适配：小红书收藏是决策价值最高的 信号（adapter interaction_signals），把对照表做成首图或图
+    2 大字卡片（干货清单体），公众号版做可跳转 目录，不要塞成一张无限长图。边界：保留"改过 200 份简历"的口语人设——素人真实感是该平台的信任货币， 不要把随笔全部改成冷冰冰条目；"加个收藏引导"不解决结构问题。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-011
+  answer_summary: 拒绝默认改写路径，先排除分发问题：内容对目标读者质量过硬（三份真实监管文件加两位从业者审阅、无事实 错误），低阅读与文本质量关系不大——直接按要求改成口语化爆款体会会同时毁掉深度价值与平台适配。诊断
+    指向渠道-受众错配：①品类进入点（Category Entry Points，B+）错位——跨境企业财务/合规负责人的内容 检索与阅读场景不在小红书双列闲逛流，他们查监管原文、行业 newsletter
+    与专业社群；②同质性（Homophily， A-）边界——发布网络（小红书加朋友圈）与目标职业人群几乎不重叠，触达是零级问题而非转化级问题。主建议 换渠道：垂直行业社群、行业 newsletter、知乎相关问题、LinkedIn
+    类 B 端场景；若坚持小红书，另做"合规 避坑清单"式轻量衍生版并导流原文（以"合规人"身份认同组织语言——社会认同理论 Social Identity Theory， A-），而非改写原文。边界：不断言"B
+    端内容在小红书必然没流量"（存在合规科普账号成立先例），结论是 "此篇此改法不适配"；跨平台规则以平台最新公告为准。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-012
+  answer_summary: 拒绝"重写一遍"：内容深度已被外部证据验证（同主题文章观点撞车且你更深），问题不在文本层——重写只会 消耗作者。诊断指向网络与时机：新账号信任存量为零，公众号无算法流量池（adapter
+    distribution_model： 流量上限≈粉丝×打开率+转发裂变），发布网络（朋友圈加两个好友群）与行业读者几乎不重叠；内容未经关键 中间人转发、缺二级扩散节点——两级传播（Two-Step
+    Flow，A-）与意见领袖（Opinion Leadership，B+，携带 Watts 修正状态：影响者只是触发器，网络与受众易感性才是关键，不承诺找到关键人必然爆）；新信息恰恰更 依赖弱连接行业群触达（弱连接优势
+    Weak Ties Strength，A-，Granovetter：强连接圈信息冗余）。动作：定向 请教式推荐给 5-10 位行业从业者与垂直编辑、投稿行业 newsletter/垂直媒体、把三县访谈素材拆成系列与
+    被访者建立互惠转发链。边界：单篇 87 阅读样本极小，结论应表述为高置信假设并用下一篇验证；个人号冷 启动本就是慢变量，勿以单篇定生死。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-013
+  answer_summary: 诊断不是"AI 用词"问题而是信息增量为零：四章节全是公共常识复述（无案例、无数字、无个人经验、无反常识 观点），在 AI 内容饱和（AI Content Saturation，C
+    级——新兴描述性概念，尚无跨平台量化研究）环境下， "工整但空洞"的模板化内容已被读者识别并跳过——生成模型恰好擅长产出高流畅性模板文，饱和环境抬高的正是 筛选门槛。"再润色"解决不了：润色只降低表面加工成本，而读者退出是因为内容不含触发深加工（Germane
+    Load Learning，B）的加工价值（可执行步骤、可对照细节、与读者处境的连接）；新颖性偏好（Novelty Preference， A）层面全文无任何信息增益。方向：至少把一节换成作者真实经历加具体数字加一次失败教训，或砍掉一半篇幅
+    聚焦单个可执行点做深。边界："AI 写的都不行"是过度概括——AI 辅助且有观点与细节的内容照样成立，问题在 信息密度与独特性，不在生成工具本身。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-014
+  answer_summary: 必须先做漏斗定位而不是给标题：打开率 4.2% vs 账号均值 4.0% 基本持平——标题/封面不是当前瓶颈，直接给 10 个爆款标题是对数据的误读。断点在完读率 18%：中段一口气
+    12 个资源×5 条路线构成双重选择过载——信息 过载（Information Overload，B）与选择过载（Choice Overload，B，携带修正状态：元分析显示无条件版本 平均效应约等于零，仅在选项复杂加偏好不确定的决策者上成立；本文受众零基础转行者恰好命中调节条件）叠加，
+    工作记忆容量（Working Memory Limits，A，约 4 组块）下读者无法建立"我该走哪条"的地图而退出；收藏率 0.6% 是次级问题——资源罗列缺"单一最佳路径"的可保存资产。输出：只给
+    1 个最高优先级修复——中段收敛为 1 条主推路线加场景化选择器（"在职/预算有限只看 A"），其余折叠为附录表格；标题优化留待本修复的下一篇 数据验证后再处理。边界：单篇小样本演示数据，定位基于相对比率而非绝对值，不把
+    18% 当强结论外推。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LNG-015
+  answer_summary: 诊断：结构均质导致记忆失败——12 条平行连排无视觉差异，系列位置效应（Serial Position Effect，A）的 首尾记忆特权被浪费在第 1、2 条常规技巧上；最有价值的第
+    7 条"错峰投放"埋在中段，既无隔离效应（Von Restorff Effect，A-，同质序列中唯一异类享有记忆特权；边界：全部特异等于没有特异，只能突出一条）的 异质性标记，也吃不到位置红利。读者只剩模糊要旨（要旨与逐字记忆
+    Gist vs Verbatim Memory，A-）——无 加粗/列表/小结意味着无法形成"这篇最值钱的是错峰投放"的可提取记忆，这正是"看完说不出重点"的机制。 改法：把错峰投放提为第 1 条或独立小节并加视觉强调，结尾用
+    3 行清单回收 12 条（先给最反直觉的一条）， 提供"报价高峰日历"式可保存资产；若做小红书版可改为"1 条最值钱加 11 条合集"的两级卡片结构。边界：12 条本身不需要删——价值密度尚可，问题在排序与强调方式，"删到只剩
+    5 条"是未评估各条价值差异的误诊； 把 12 条全部加粗等于没有强调。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-001
+  answer_summary: 数据链概览：曝光 18.5 万 → CTR 1.1%（账号近 10 篇均值 4.8%，跌至基线约 1/4）→ 点击后互动率与历史 持平、收藏评论绝对值随点击等比下滑——断点唯一位于曝光→点击环节；外生变量（投流/处罚/平台调整）均无
+    证据，可归因内容层。瓶颈定位在 Attention/Relevance 层（封面+标题），正文与点击率无关（互动率持平 佐证），禁止先诊断正文。归因（置信度高）：杂乱客厅实拍缺视觉层级（Visual
+    Hierarchy，B）与图形-背景 分离（Figure-Ground Separation，A），在双列比较环境中无法形成自下而上注意捕获，也未传达"整理后"的 结果预期；标题"心得/一些布局建议"是抽象框架词，无身份信号（租房）与信息差——身份信号（Identity
+    Signaling，B）与好奇缺口（Curiosity Gap，B）双缺，目标人群 1 秒内认不出"与我有关"（选择性注意 Selective Attention，A 的目标相关过滤）。基线方法：结论基于账号自身历史（1.1%
+    vs 4.8%）的平台内对比， 不引用跨账号绝对值；替代解释"账号权重下滑"不可证伪，不采用。修正：封面大字承载具体结果（"15㎡ 租房 客厅 3 天改造"前后对比图），标题人群点名加关键词前置服务搜索长尾（小红书
+    adapter：封面即标题、标题 关键词前置）；观测指标：下一篇同题材 CTR 回到 4%+ 基线区间即验证。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-002
+  answer_summary: 数据链概览：展示 12 万（平台已给足流量）→ 打开率 2.3%（账号近半年均值 7.1%，不足基线 1/3）→ 打开后 读完率正常——断点在标题/封面的 Attention
+    层，与 4000 字正文质量无关；无投流与处罚信息、账号基线可用， 排除外生变量。标题诊断："关于制造业现状的一些观察与思考"零信息差——"制造业"是无差异大词、"观察与 思考"不承诺任何读者不知道的东西，好奇缺口（Curiosity
+    Gap，B）需要"已知部分+缺口轮廓"才产生剥夺感； 也无相关性信号支持自上而下注意引导（Top-down Attention Guidance，A），目标读者在扫读中被选择性注意 （Selective
+    Attention，A）过滤。封面诊断：编辑器默认纯色封面使自下而上注意捕获（Bottom-up Attention Capture，A）为零，浪费公众号信息流中仅有的视觉资源。修正：把正文已有的反直觉发现（某环节利润变化）
+    提取进标题（具体环节加变化方向，如"制造业XX环节利润正在反向走扩：来自一线渠道的数据"），封面放核心 数据图，标题承诺必须与正文兑现一致（公众号 adapter title_role：悬念缺口加身份点名加搜索关键词三重
+    职责，列表页前 13-16 字定生死）。观测指标：改后打开率应回到 7% 基线区间——"观察与思考"式标题的搜索 长尾同样为零，改动后需验证。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-003
+  answer_summary: 数据链概览：3 秒播放率 42% 高于同行参考区间 30-38%（留人成功）加完播率 7%（2 分 40 秒视频极低）加 评论区大量"具体怎么操作/我去哪办"——按漏斗规则首指向期望失配（expectation
+    violation）：开场承诺与 内容不符是首要问题，禁止只建议"把开头做得更快更强"。机制诊断：开场"一招/每月多拿几千块"与实际内容 （政策门槛下一次性提取已有余额，非每月收入）不符——信任校准（Trust
+    Calibration，B）意义上承诺契约 破裂，观众学到"这号会夸大"，取关与信任折价随之；收益性夸大同时触发认知失调（Cognitive Dissonance， A-），观众带着"每月几千块"预期进来发现落空，以退出消解失调。评论证据支撑诊断："具体怎么操作"说明
+    需求真实存在，但被夸大承诺误导后未获得可执行价值（信息气味断裂）——观众要的是流程，开场给的是焦虑。 修复：开场降级到真实利害（"公积金什么条件下能取、能取多少——3 分钟讲清"）或升级内容覆盖承诺；本例
+    是 Watch/Retention 目标案例，高 3 秒率不能单独证明开场健康（抖音 adapter opening_role：假钩子触发 信任折价与完播下滑）。替代解释：完播低也可能部分来自时长本身，但
+    3 秒率高于同行且流失形态与评论主题 一致，期望失配优先；"每月多拿几千块"式收益表述属抖音品类合规风险区，必须修正。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-004
+  answer_summary: 数据链概览：封面点击率 9.2% 正常加标题封面信息诚实——排除期望失配，不走改标题分支；45% 的流失集中在 0 分 40 秒至 1 分 10 秒单一 30 秒窗口、3
+    分钟后留存明显恢复——这是负荷曲线的典型形态，不是全片内容 质量下滑。机制诊断：0-3 分钟连续讲解哈希函数、非对称加密、Merkle 树三个术语密集概念且无生活化类比， 超出工作记忆容量（Working
+    Memory Limits，A——无计算机背景观众的新概念组块逼近上限）；内在认知负荷 （Intrinsic Cognitive Load，A-）无图式脚手架支撑，处理流畅性（Processing
+    Fluency，A-）骤降触发放弃 ——流失窗口正是"第一个概念未消化、第二个概念压上来"的位置。修复：开场先用一个生活化类比建立图式 （"哈希=把任意文件压成固定长度的指纹"）再进术语；最难概念（Merkle
+    树）后移；在 0:40 前给出"接下来 你会得到什么"的价值预告。边界：内容深度不应为流失率砍掉——受众（技术爱好者）的设定决定密度节奏， 整体压缩时长是错误解法；可参考 B 站"省流前置"结构（先结论后展开）降低进入门槛。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-005
+  answer_summary: 目标先行声明：这组数据要先问传播目标——若目标是收藏/留存，收藏/阅读约 12%（3400/2.8 万）远高于基线 是健康甚至优等的表现；只有目标是 Share 时才构成问题，防止把"收藏高分享低"当缺陷无脑修。漏斗定位
+    （按目标=Share）：收藏远高于基线、分享/阅读约 0.75%（210/2.8 万，历史均值 3%，跌至约 1/4）——个人 实用价值（Personal Utility）强、社交货币（Social
+    Currency）弱的典型形态，问题只出在分享环节。机制 诊断：清单式结构存储价值高（目标梯度效应 Goal-Gradient Effect，B 与具体性效应 Specificity Effect，
+    B 支撑"用得上"的收藏判断），但"我的系统"是私人方案叙事——身份信号（Identity Signaling，B）与自我 呈现（Self-Presentation / Impression Management，B）层面，转发它不能替转发者表达任何身份，实用内容
+    默认触发"存起来自己看"（STEPPS 分享框架（B）的 Social Currency 缺位）。修复：在不稀释实用价值的前提 下，文末增加可转发动机——"你用哪个工具"的站队式话题（把讨论引到评论区）、一张反直觉结论的浓缩卡片
+    （可直接作为转发卡片素材，公众号 adapter sharing_mechanism：转发是读完后的身份表达）。边界：utility 与 share 两目标存在取舍，不可为转发稀释清单完整性，也不必改成情绪文。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-006
+  answer_summary: 先纠正预设：评论 380 条中大量为"怎么报名/多少钱/可以一对一吗"——讨论意愿与购买需求都强，"内容写得 不好"的归因不成立；点击 8200/曝光 9.6 万≈8.5%
+    的 CTR 也说明内容层无碍。漏斗定位：赞评强 → 私信咨询 9 人 → 成交 2 单——断点在评论→私信→成交的路径环节，属 friction/CTA 结构问题而非内容说服力问题。 摩擦点逐一诊断：①无价格锚点——报价不透明抬高风险感知与询问门槛（购买感知风险
+    Perceived Purchase Risk，B 加锚定效应 Anchoring Effect，A 缺失，价格悬空使每个询价者先跨"问价尴尬"）；②主页简介只有 个人兴趣、正文无价格区间与服务流程——认知摩擦；③私信平均滞后
+    14 小时——时间摩擦，需求在等待中冷却 （摩擦削减 Friction Reduction，B：路径每一步都是截流点）。修正优先级：路径外修复优先于内容改写—— 主页服务卡（服务内容加价格区间加适用人群）、"多少钱/流程"常见问题自动回复、笔记尾部明确
+    CTA。合规 边界：小红书对营销导流与站外交易有限制（adapter risk_factors），CTA 不得引导站外交易，价格信息以 平台允许的方式呈现。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-007
+  answer_summary: 先纠偏：单篇读完率 61% 高于账号均值——单篇价值成立，"这篇写得不行"的归因不成立；关注转化率约 0.11% （涨粉 96/阅读 8.5 万，其中约 6 万来自推荐流）的断点在账号层而非本篇内容。漏斗定位：阅读→关注环节
+    ——关注是"对账号未来价值下注"，而该账号四类内容（散文/数码测评/行业评论/短篇）轮流发布、无栏目结构、 简介"记录一些想法"——读者无法形成"关注后我会持续得到什么"的预期：账号级心理可得性（Mental
+    Availability，B+，注意其证据基础为快消品类，此处为结构类比）未建立、自我呈现（Self-Presentation / Impression Management，B）无一致性人设、推荐流冷启动受众与作者无关系史，准社会关系（Parasocial
+    Relationship，B+，需要高频加人格化加持续披露积累）无从形成。CTA 诊断："喜欢的话点个关注"没有提供 关注理由，对定位混乱的账号更无法自圆其说——加重关注诱导话术只会更空。修复：先收敛定位与栏目结构
+    （四选一为主线），简介改为账号价值陈述（"每周三一篇XX"），文末用"持续能得到什么"替代"喜欢就关注"。 边界：推荐流受众的关注转化基线本就低于粉丝转发场景，应纵向对比自身历史而非追泛行业绝对值——0.11%
+    不能直接判定为灾难。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-008
+  answer_summary: 拒绝从"转化低"倒推去改视频：CTR 5%（高于同行参考）、3 秒率 51%、完播率 38%、主页访问 4100 全线健康， 评论区多人主动问价——内容链路有数据支撑，流失集中在详情页→购买（1.6%
+    vs 同类 3-5% 参考区间）。定位： offer/承接页摩擦，不是内容问题。详情页摩擦逐项诊断（当前只有一句课程名与价格）：①无大纲——交付物 不可预期，购买感知风险（Perceived Purchase
+    Risk，B）高企，高风险感知下决策退回"选最不会错的"等于 不买；②无退款政策——风险逆转机制缺失（摩擦削减 Friction Reduction，B：信任摩擦未消）；③无学员 案例——社会认同（Social
+    Proof，A-）缺失，高风险品类中"相似他人的真实结果"是最强风险保险；④1999 元 无价值锚定——锚定效应（Anchoring Effect，A）缺失，价格悬空无参照系。修正：先补齐详情页信任四件套
+    （课程大纲加退款政策加学员真实结果加价值锚点）再观察转化；若修复后仍低，再检验价格-人群匹配——评论 区已主动问价的需求证据说明需求存在，禁止未诊断直接降价。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-009
+  answer_summary: 第一步先声明外生变量（必须先做）：账号处于平台限流处罚期（两周前内容违规被下架）——曝光下滑无法归因 于内容质量，处罚期内一切内容层诊断都缺乏有效基线，需先纠正"最近标题起得太差"的预设归因。数据形态
+    支撑：曝光、点击、收藏、评论同步等比下滑（约 -70%），而点击率 4.9%、收藏率等环节比率与限流前 30 天 均值基本一致——这是"流量源头被切断"的分布层特征；内容质量问题通常表现为环节比率变化（如
+    CTR 下滑） 而非全链路等比萎缩，两条证据方向一致。机制映射：限流是分发层与守门层的机制——平台权力与守门（Platform Power Gatekeeping，B+）、守门机制（Gatekeeping
+    Dynamics，B）、算法放大（Algorithmic Amplification， B+）发生在内容机制的上游，不属于文案或选题问题；历史处罚后数据回到原有水平支持"可恢复"判断。正确 动作：核查平台违规通知与申诉渠道、等待处罚期结束；处罚期内不做内容改动、不用本期数据下任何内容层
+    结论（无对照基线）——用限流期数据做内容归因是本次复盘最大的错误风险。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PST-010
+  answer_summary: 第一步先声明外生变量（必须先做）：80% 曝光（160 万/200 万）来自付费投流，"总曝光是去年同期 3 倍" 少数由内容驱动、主要由投放预算驱动，不能作为内容质量的证据——混合口径数据无法衡量内容，自然流量
+    （40 万曝光、CTR 2.1%、完播 22%）才是评估内容质量的唯一有效基线。归因谬误指出：负责人把媒介层 （预算投放）与内容层（内容质量）混为一谈；"内容团队水平不行"的人际归因不表态附和，转译为可检验的
+    数据问题。机制：投流是放大器——算法放大（Algorithmic Amplification，B+）放大的是内容现有转化效率， 内容侧转化效率不变时投放增长只会带来曝光增长而非销售增长（注意力经济学
+    Attention Economics，A-： 注意力与转化是两个变量）；排序信号权重（Ranking Signal Weighting，C，具体权重不公开）提示付费与 自然流量的信号口径必须拆分。动作：按付费/自然拆分全漏斗分别归因；若自然流量转化健康而付费流量差，
+    问题在定向人群与 offer 匹配而非内容——先补数据清单（分渠道 CTR/完播/转化、投放定向设置、详情页 转化率）再下结论。边界：当前数据不足以判定"内容团队水平"，任何内容层结论必须等渠道拆分数据。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-001
+  answer_summary: 先排除分发层（1.2万粉账号近5条有基础曝光，非冷启动）。核心问题：开场约10秒是自我介绍加个人经历铺垫， 无信息缺口——在抖音全屏单列沉浸流（adapter attention_environment：滑动否决权，0.5-1秒去留）里等于把
+    决定权交还用户（opening_role：开场极重，前3秒决定完播分布）。"3秒流失78%、平均播放4秒（演示数据）" 指向首句自下而上注意捕获（bottom_up_attention_capture）与好奇缺口（curiosity_gap，Loewenstein
+    信息缺口理论： 给轮廓不给答案）缺失。改法：首句直接呈现那个典型错误的具体冲突画面（示例："开会时你说'方案没问题'， 三天后执行全跑偏——你把'说了'当成了'沟通了'"），自我介绍后置到第10秒后；用蔡格尼克效应（zeigarnik_effect，
+    知识库标注其受目标承诺调节、非无条件成立）让缺口贯穿全片。边界：钩子必须被正文兑现，假钩子引发信任折价 与完播下滑（opening_role 边界）；完播权重为 industry_consensus，不承诺修改后播放量；不使用"黄金三秒"玄学话术。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-002
+  answer_summary: 拒绝"加更狠的结尾"的归因：数据模式（点击6.2%高、5秒留存81%、30秒留存19%、评论区"标题党"，演示数据） 正是 SKILL.md 漏斗"点击高停留低→查 expectation
+    violation"——开场承诺与内容兑现断裂，而非结尾不炸。 机制映射：预测误差（prediction_error，负向误差引发警觉与重新评估触发滑动）与信任校准（trust_calibration，
+    信任折价影响后续转粉与转化）。给二选一路径：降承诺（把"月入2万+简单到离谱"改到内容真实交付的层级） 或升交付（正文必须含可执行方法与收入路径，用目标梯度效应 goal_gradient_effect
+    设计可感知的进展）； 判断标准取决于现有素材能支撑哪边——加码结尾只会加剧错配。边界：数据为用户自述演示数据需后台核验； 完播权重为 industry_consensus，不引用权重百分比；不承诺改善幅度；不建议更强的开场承诺。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-003
+  answer_summary: '"全是干货但记不住"是信息过载（information_overload）信号，不是内容质量缺陷，也不得把"干货多"当优点肯定—— 前20秒约160字连续概念（演示数据）远超工作记忆容量限制（working_memory_limits，Cowan
+    约4组块估计， Miller 1956 经典证据），个人IP新手无既有图式，概念全部变成外在认知负荷。改法：单条只交付一个组块 （如只讲"人设锚点"），其余系列化承接（adapter content_lifecycle：抖音内容是"流量事件"而非"资产"，
+    长青性需系列化与主页沉淀弥补）；每个概念配具体案例，用相关负荷（germane_load_learning）帮助图式建构 而非堆积。边界：密度合适与否依赖受众先验知识——对老手同样密度可接受；不建议为降密度注水拉时长
+    （完播反而受损）。'
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-004
+  answer_summary: 完成度23%（演示数据）+ 结构为结论先行加2分钟平铺定义：全片无信息缺口与递进钩子，中段极易流失； 抖音完播率是最重信号方向（adapter interaction_signals，industry_consensus），此结构吃亏。建议保留"三指标"
+    骨架但重构叙事序：用异常现象开场（演示情境："这家公司利润翻倍却发不出工资"）制造好奇缺口 （curiosity_gap），再逐层揭示三指标如何解释它；按 adapter 节奏压缩条目每3-5秒一次信息更新，
+    结尾用峰终定律（peak_end_rule）回收，并把空洞的"点个关注"替换为具体关注理由 （"下一篇讲怎么用现金流识别暴雷，关注不迷路"）。边界：结论先行不是绝对错误——在搜索与教学语境 （B站、知乎）它是优点，此处是平台与目标适配差异；完播权重为
+    industry_consensus；不建议加无关段子充时长。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-005
+  answer_summary: 平均播放≈总时长一半、收藏低于均值（演示数据）：前80%篇幅讲"为什么自学"、名单在尾部快速带过， 是系列位置效应（serial_position_effect，首尾位置记忆与注意最优）下的双重浪费——价值放在内部靠后且弱呈现。
+    重构：名单首条即给出最强的1个并演示用法，其余用"第2个更冷门但更好用"式递进钩子维持完播 （目标梯度效应 goal_gradient_effect：可感知的进展推进）；结尾回收汇总强化峰终定律（peak_end_rule）。
+    平台层：抖音用户有保存视频行为（adapter sharing_mechanism："保存视频+微信发送"是常见暗路径）， 在名单处放慢节奏、设置"这一屏可以暂停截图"的节奏点；评论区按热评文化正常开话题承接讨论。
+    边界：不承诺收藏量；清单需满足信息增量要求，不为前置而空洞化名单；不把名单藏进评论区引导互动。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-006
+  answer_summary: 用户带着"怎么挑"的任务进来（待办任务 jobs_to_be_done），第0-45秒的行业史与厂商恩怨和任务无关， 构成外在认知负荷（extraneous_cognitive_load），叠加注意容量限制（attention_capacity_limits）在开头即崩完播。
+    改法：开头直接进入"第一个决定看哪三个参数"的具体交付；历史压缩到5秒以内或转为字幕侧信息； 历史内容拆成独立一条满足爱好者（走系列化，呼应 adapter content_lifecycle）。边界：不是所有背景都该删——
+    当背景本身构成悬念或身份共鸣时可保留但需压缩；"背景知识有用"的判断在图文、长视频与搜索场景成立， 此处是平台与传播目标的差异，不是用户品味错误；不建议为省时长粗暴砍半而不给取舍逻辑，也不加夸张营销式钩子。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-007
+  answer_summary: 不做"细节多等于内容好"的单一归因：先排除限流与选题因素（5万粉账号分发正常、同行同类更短但完成度55%）， 对比数据把瓶颈指向完播侧——31%对55%的完成度差距在推荐系统里被放大（adapter
+    recommendation_model： 完播/复播/互动率为核心加权信号，industry_consensus；推荐反馈循环 recommendation_feedback_loop： 数据差→曝光少→更差）。机制映射：无分段钩子导致中段流失——蔡格尼克效应（zeigarnik_effect）缺口管理缺失
+    （该效应受目标承诺调节，需真实悬念而非形式化停顿）。建议不动选题与详细度偏好，改结构： 三分钟拆成"事件反常起点→两段递进反转→结尾回收"，每段留小缺口；可测试同一故事的60秒压缩版做变量隔离。
+    边界：完播权重为 industry_consensus 黑箱，禁止引用任何具体权重百分比；不承诺"改完就起量"； 复播与转粉等其他信号同在加权方向，需一并观察。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-008
+  answer_summary: 评论率0.2%对同类约1.5%（演示数据）不是受众不表达：脚本没有评论触发器——无提问、无留白、无可争论取舍点， adapter comment_role（热评文化：评论区是内容的延伸现场与二次传播点）与
+    known_platform_patterns 的评论区钩子 条目完全未被利用。引用 adapter interaction_signals：评论权重高于点赞（industry_consensus），低评论会拖累分发。
+    改法：在内容里自然埋一个"两难取舍"（如"地铁远500米省800块，你选哪边"）——轻度情绪卷入 （emotional_arousal）加立场选择激发讨论，热评示范引发社会认同（social_proof）；设问参与效应
+    （rhetorical_question_engagement）要求问题真实可答；用置顶评论开话题而非"扣1"。边界：刻意留错引战短期拉评论 但长期损伤专业信任（comment_role 边界）；低评论不单一归因于受众。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-009
+  answer_summary: 单条价值高但账号预期价值弱——对应漏斗"观看高关注低→查定位连贯性与拟社会关系"：主题跳跃 （火锅探店/减脂餐/咖啡测评）让用户无法形成"关注后能看到什么"的预期。机制：拟社会关系
+    （parasocial_relationship）需要稳定人格与重复暴露（mere_exposure），配合自我呈现与印象管理 （self_presentation_impression_management）的统一人设符号——固定开场、固定栏目。结尾应给"下期预告型"
+    关注理由；"关注我领优惠券"若为真实权益可用，但属于交易理由而非关系理由，需向用户区分两种关注动机。 边界：引用 adapter follow_role——抖音关注对推荐流量影响有限，涨粉意义在直播转化与电商复购；
+    必须说明 Follow 不等于 Reach，涨粉不直接救播放，不承诺涨粉提升播放量，不建议每条机械加"关注我"。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-010
+  answer_summary: 拒绝"抖音用户不行"的归因，也不直接归罪脚本：这是同一脚本跨平台信号语义差异。B站是横屏点选场景， 封面+标题决定点击（adapter cover_role/title_role），用户带学习意图进来，容忍结论先行的论证结构；
+    抖音是单列沉浸流+滑动否决权（attention_environment），开场极重（opening_role），前3秒无缺口则完播崩塌， 且中视频/横屏内容权重较低（content_units，industry_consensus）。给三选一决策：①经营抖音需另做竖屏
+    "内容化钩子"切口版——用脚本里最反常识的单点开场（bottom_up_attention_capture），不是横屏裁切； ②明确抖音非目标平台；③做抖音系列预告导流B站。两平台互动信号语义不同（三连/弹幕
+    vs 完播导向， ranking_signal_weighting），同一脚本的数据不可互换解读。边界：两平台数据非同期发布不可严格对照（演示数据）； 平台形态权重为 industry_consensus。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-011
+  answer_summary: 不是"视频号用户看不懂"，是分发模型与转发语义错配：抖音 distribution_model 为算法分发绝对主导、单列沉浸， 强冲突吃情绪唤醒（emotional_arousal）红利；视频号是社交叠加逻辑——内容经关注关系与朋友点赞背书进入熟人链路
+    （wechat_channels adapter 的 distribution_model/social_graph_characteristics/sharing_mechanism 字段语义）。
+    身份信号（identity_signaling）：熟人可见场景转发即公开表态，成本高；评论区站队结尾进一步抬高转发门槛。 重构方向：把"我敢说"改造成"替你说"（给用户安全表达的观点容器），收尾提供温和共识或家庭群聊场景的实用框架
+    （STEPPS 分享框架 stepps_sharing_framework 的 Social Currency 与 Practical Value）。边界：视频号推荐与社交链路 权重未完全公开（industry_consensus），以平台最新公告为准；两平台数据量级不同不可直接比较；不承诺转发率；
+    不建议刷转发改善数据。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-012
+  answer_summary: 正确行为是"先不改"：187次曝光（演示数据）样本量不足以支撑对脚本的任何数据推断；0粉账号首条内容处于 冷启动期（cold_start_dynamics），当前瓶颈是分发启动与定位验证，不是文案（SKILL.md
+    铁律6：先排除分发层）。 给出行动序列而非空泛安抚：连发3-5条同主题验证定位→观察可得相对信号（如平均播放时长，而非绝对播放量）→ 必要时用 Dou+ 小额测试（adapter algorithmic_features，official_rule-产品存在）→再谈内容诊断；
+    用推荐反馈循环（recommendation_feedback_loop）解释冷启动期数据噪声——低曝光下互动数据无统计意义。 边界：不承诺爆款；流量池具体层级细节属 experience_speculation
+    不可引用（adapter distribution_model 标注）； 拒绝"越快爆款越好"的重写请求。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-013
+  answer_summary: 拒绝"照原模板再优化"：衰减曲线（50万→8万→5万→3万，演示数据）加"模板未变"共同指向模板级享乐适应 （hedonic_adaptation，审美疲劳）与平台级同质化竞争（adapter
+    risk_factors：一个模板爆了全员抄，衰减极快）， 问题在内容策略层而非单条脚本打磨（铁律6）。机制：单纯曝光（mere_exposure）的边际反应递减叠加新颖性偏好 （novelty_preference）对变化的偏好——固定结构与BGM让系统与用户都失去新异信号。给变量隔离实验方案：
+    保持选题，一次只改一个维度（开场形态/结构/BGM/出镜方式），观察完成度变化；保留模板中仍有效的部分 （如结尾回收）。边界：不否定模板的历史贡献；衰减也可能叠加大盘或时段因素，先对照同类账号同期表现再归因；
+    不建议一次性更换全部变量导致无法归因。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-014
+  answer_summary: 同质化检测：模板化感叹词（绝绝子/YYDS）、空洞断言、万能句式是 AI 内容饱和（ai_content_saturation—— 知识库标注为对条件变化的描述性概念而非单一心理效应）下的典型供给特征；供给侧同类脚本泛滥
+    （adapter risk_factors：同质化审美疲劳），内容同时失去真实性溢价（authenticity_premium）——无具体细节与 第一人称经验则可信度无法建立。机制：语言具体性（concreteness_in_language）与具体性效应
+    （specificity_effect）——具体细节是可信度与记忆的载体。改写方向：每个空洞感叹替换为一个可验证的具体细节 （谁、在哪、什么场景、什么数字），保留一个真实的不完美细节反而提升可信；AI
+    辅助创作走"AI初稿+真人经验注入" 的协作路径而非伪装纯人工。边界：不做"AI检测率"承诺；不建议洗稿或伪装人声规避平台AI内容标识要求 （合规风险，以平台最新公告为准）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: VID-015
+  answer_summary: 漏斗定位：评论高转化低→Discussion Motivation 强、Behavioral Motivation 弱——瓶颈不在课程产品 （不对产品价值下判断，超出内容诊断范围），而在脚本到行动的桥接。机制：态度-行为差距
+    （attitude_behavior_gap："太真实了""我老板就这样"是共鸣未转行动）；摩擦削减（friction_reduction）缺失—— CTA 单句"想系统学习的同学看购物车"悬空，购买路径的认知与信任成本未被处理；承诺一致性
+    （commitment_consistency）用小承诺衔接：先领免费样章或一节体验课再谈付费。建议：结尾先做一次具体化 （"你现在就能用的一个动作"），再用低门槛过渡动作承接，硬广信息后移到置顶评论与主页。
+    提醒：电商与课程类目内容受专项规范治理（adapter content_constraints，official_rule），细则以平台最新公告为准； 不承诺转化率；不建议限时秒杀式激进促销话术。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-001
+  answer_summary: 拒绝直接复制并说明信号语义差异：小红书条目依赖 search_mechanism（关键词匹配、收藏导向）与 title_role/cover_role 的"点击开关"角色；公众号是订阅深度阅读场景（adapter
+    distribution_model：订阅分发为主， 触达靠会话推送与转发卡片），长青打开靠心理可得性（mental_availability）与品类进入点 （category_entry_points——用户在什么场景想起这个账号），而非站内搜索词。机制保留：清单结构的具体性与
+    实用价值（concreteness_in_language）跨平台有效。必须重构：标题从关键词堆叠改为会话转发语境下的价值承诺 （示例：《我花三个月喝遍全城，这14家人均30的独立咖啡店值得专程去》，演示）；正文补足公众号读者预期的
+    叙事深度与作者视角，而非清单裸奔；文末增加订阅承接位。边界：不承诺打开率与阅读数；平台导流规则以最新公告为准。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-002
+  answer_summary: 必须指出核心重构点：小红书首屏是封面加标题的注意力战场（目标平台 cover_role/title_role 承担"点击开关"）， 长文直发会被折叠与划走——滑动场景对工作记忆容量限制（working_memory_limits）与注意容量限制
+    （attention_capacity_limits）的阈值远比公众号严苛，需重排为短段落加分点与要点卡片，提升处理流畅性 （processing_fluency）与视觉层级（visual_hierarchy），首屏用自下而上注意捕获（bottom_up_attention_capture）。
+    机制保留：核心故事与洞察（叙事价值可跨平台复用）。必须重构：拆三篇可取，但每篇须独立成立——各自有钩子、 有结论、可单独被搜索与收藏，而不是机械按篇幅切三段；封面需针对每篇重做。边界：不承诺涨粉数；
+    小红书社区规范（导流与营销限制）以最新公告为准；只加emoji不算完成适配。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-003
+  answer_summary: 必须拒绝拼接方案并给出结构重构：B站是横屏点选场景（title_role/cover_role 决定点击），dominant_user_intent 以主动学习为主——用户带着明确意图进来，45秒碎点串联显得注水，需自行拼接逻辑，外在负荷反而升高；
+    该花的内在认知负荷（intrinsic_cognitive_load，单主题纵深）没有花。机制保留：知识内核与讲解人格可迁移。 必须重构：单主题完整论证（可结论先行加章节导航，B站用户接受更高密度与更长时长），前30秒给
+    "这条视频解决什么问题"的承诺（好奇缺口 curiosity_gap 放在价值承诺而非营销钩子上）；互动信号语义变化： 投币/收藏/弹幕/三连（interaction_signals 字段差异）替代抖音的完播导向，结尾按B站仪式请求三连。
+    边界：B站分区与推荐机制为 industry_consensus，以最新公告为准；封面标题的点击权重必须重做，不能只管内容。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-004
+  answer_summary: 必须指出"手动搬运加同套标题封面"不可行并解释分发模型差异：抖音 distribution_model 为算法分发绝对主导、 单列沉浸（attention_environment）；视频号为社交叠加逻辑——内容经关注关系与朋友互动进入熟人链路
+    （wechat_channels adapter 的 distribution_model/social_graph_characteristics/sharing_mechanism 字段），
+    同套冲突表达在熟人可见场景转发成本高（身份信号 identity_signaling：转发即公开表态）， 评论区站队结尾进一步抑制转发。机制保留：观点浓度与出镜人设（拟社会关系 parasocial_relationship
+    可跨平台）。 必须重构：结尾从"站队引战"改为"替用户说出他们想在同事圈、家庭群说的话"（STEPPS 分享框架）， 标题与封面面向会话转发卡片重做。边界：视频号推荐与社交链路权重未公开（industry_consensus），
+    以最新公告为准；不承诺播放数据；不把低转发归因于内容质量差。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-005
+  answer_summary: 必须拒绝"只删字数"的机械压缩并说明语境差异：知乎是问答语境——内容与问题绑定，检索意图先于内容存在 （编码特异性 encoding_specificity），读者以中心路径加工（central_route_processing）深读论证；
+    小红书是发现与种草语境，身份标签与生活场景先行（外周路径加工 peripheral_route_processing 权重升高）， 收藏依赖可执行、可截图的具体性（具体性效应 specificity_effect）与排版（visual_hierarchy，
+    目标平台 adapter 的 title_role/cover_role 语义："封面即标题"）。机制保留：数据引用与专业背书 （信源可信度模型 source_credibility_model
+    依然有效，但从长论证转为可信信号点呈现）。 必须重构：身份共鸣开头+场景痛点+可操作清单+来源标注的结构。边界：专业内容需检查平台资质规范； 不承诺收藏数据；知乎高赞不能当作跨平台质量证明。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-006
+  answer_summary: 必须拒绝无差别蹭热点并说明生命周期与入口差异：微博热点广场是实时广场逻辑，热点即入口 （primary_entry_points），热点窗口以小时计、24-48小时断崖（content_lifecycle）；小红书分发以搜索与推荐的
+    长尾消费为主（search_mechanism 与 content_lifecycle 字段语义：爆发数天+搜索长尾数月）， 纯观点蹭热点帖既无时效优势也无搜索沉淀，还可能稀释账号人群画像。机制保留：若话题能转译为该平台式需求
+    （怎么做/怎么选/避坑），热点可用。必须重构：做成可被持续搜索的长青实用笔记（长尾需求 long_tail_demand、 品类进入点 category_entry_points），而非观点速朽帖。边界：社会争议话题涉及平台治理与内容安全差异，
+    需提示合规风险并以平台最新公告为准；不承诺热点流量；不断言热点帖必然被限流。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-007
+  answer_summary: 必须拒绝"剪一剪就能发"并说明语义翻转：YouTube 场景里 title_role/cover_role 是点击开关、search_mechanism 主导长青流量（content_lifecycle
+    为"发布即资产"的长青结构）；抖音 attention_environment 是单列沉浸加滑动否决权 （注意力经济学 attention_economics 的极端形态），opening_role
+    极重，content_lifecycle 是爆发式衰减的流量事件。 机制保留：科普内核与演示素材。必须重构：竖屏切割后若开场仍是"本视频我们将讨论……"式结构则前3秒无缺口—— 需重做开场（bottom_up_attention_capture
+    加 curiosity_gap）、单点纵深压缩、结尾留系列钩子 （zeigarnik_effect）弥补长青缺失。边界：抖音搜索虽有增长但量级不可与搜索平台比（adapter search_mechanism
+    边界声明："抖音SEO被夸大"），不得期待等量长尾流量；不承诺播放数据；只改画幅不改叙事结构不可行。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-008
+  answer_summary: 必须回答"保留什么、重构什么"：thread 的分条结构本质是蔡格尼克效应（zeigarnik_effect）的逐条缺口管理， 依赖滚动信息流的顺手性（x adapter：首帖即标题+承诺，展开率由首帖独立决定）；公众号是会话内打开的
+    "承诺式阅读"，读者预期完整叙事（叙事传输 narrative_transportation），机械保留12段分行会显得零碎并辜负深度预期。 机制保留：核心观点链与金句（gist 层面跨语言跨平台有效）。必须重构：合并为戏剧弧线结构
+    （dramatic_arc_structure：铺垫-升级-反转-回收），thread 的逐条钩子转译为章节间递进悬念而非断点分行； 转发场景下 title_role 在转发卡片中承担主要角色（wechat_official
+    adapter：标题承担"让转发者显得有品位"的 社交货币职责），需重做标题。边界：翻译改编须标注来源并注意版权；不承诺打开率；不能只做翻译不做结构重构。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-009
+  answer_summary: 必须明确指出问题而非默认支持：各平台 interaction_signals、title_role/cover_role 与 search_mechanism 语义不同——
+    小红书标题的关键词逻辑对抖音图文近乎无效（douyin adapter：cover_role 弱化、搜索心智弱）， 对B站须重做封面标题（点击开关），对知乎必须匹配问题语境（encoding_specificity；zhihu
+    title_role： 问题标题由提问者决定，答主职责转移到首句）。一键同发产生的内容同质化可能触发平台去重与低质分发治理 （算法博弈 algorithmic_gaming 风险，治理方向标注 industry_consensus）。机制保留：核心素材
+    （图、数据、观点）可跨平台复用。必须重构：每平台至少重做标题、封面、开头三件套与结构顺序—— "一稿多发"可以，"一键同发"不行。边界：不夸大"搬运必限流"（平台治理细节不公开，industry_consensus）；
+    不承诺分发效果；不建议用同义词替换做伪原创。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-010
+  answer_summary: 必须拒绝该请求并说明多层风险：① 平台层——去重与搬运治理惩罚伪原创（douyin adapter risk_factors： 搬运/违规限流，industry_consensus-治理方向），即便逃脱检测也进入同质化竞争（AI内容饱和
+    ai_content_saturation 与享乐适应 hedonic_adaptation 的供给侧拥挤）；② 机制层——爆款效果绑定原账号的人格与受众匹配 （拟社会关系 parasocial_relationship、冷启动
+    cold_start_dynamics），脱离语境复制脚本不保证任何效果； ③ 伦理层（铁律7）：这是欺骗性手段且有侵权风险（内容溯源 content_provenance 与溯源核查 provenance_verification
+    视角）。正确替代：拆解该爆款的机制（钩子结构、缺口设计、节奏）， 用自己的选题与真实经验重做（真实性溢价 authenticity_premium）。边界：不下"必然限流/必然被诉"的断言， 表述为风险方向；涉及版权问题建议咨询专业意见；不暗示"小号不会发现所以安全"。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-011
+  answer_summary: 必须拒绝全文直贴并解释知乎信号语义：知乎内容嵌在问题语境下被消费（编码特异性 encoding_specificity）， 读者预期直接回答问题加可验证论证（中心路径加工
+    central_route_processing；zhihu opening_role： "先说结论"是社区规范）；开头品牌叙事与文末硬广会损害信源可信度模型（source_credibility_model），
+    贴文式导流是社区治理的典型折叠对象（zhihu adapter：瓦力反作弊/折叠治理，official_rule-治理存在， 软广侵蚀口碑 risk_factors）。机制保留：文章的论证骨架与数据。必须重构：先选择与核心主张匹配的高质量问题，
+    回答版按"结论前置加论证展开、推广退到个人简介与主页层"重做。边界：知乎机制表述标注 industry_consensus 并以最新公告为准；不承诺曝光量（公众号阅读2.4万不代表知乎表现）；导流方式需符合社区规范。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-012
+  answer_summary: 正确行为是先给合规闸门再谈传播：金融理财属专项规范品类（douyin adapter content_constraints： official_rule-品类专项治理；risk_factors
+    同类条目），"年化稳稳跑赢通胀""小白闭眼跟投""大概率不会亏" 属典型违规与误导风险，同时构成长期信任校准（trust_calibration）损伤与伪权威（pseudo_authority）风险。
+    机制保留：资质与专业背书本身是可信资产（权威影响 authority_influence、职业资质符号语境）。 必须重构：删除收益承诺话术，用风险披露与可验证信息建立内容信任信号（trust_signals_content——
+    风险提示反而是可信信号）；严禁利用损失厌恶（loss_aversion）与稀缺（scarcity_mindset）制造跟投冲动。 边界（必答）：具体资质要求、可做品类与话术边界以平台最新公告与当地监管要求为准，建议先完成平台相关
+    资质认证流程再创作；不做"改完就合规"的担保；不把合规问题当作可绕过的文案问题。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-013
+  answer_summary: 合规闸门前置：医疗健康属专项治理品类（douyin adapter content_constraints：official_rule；risk_factors 同类条目），
+    "三招根治偏头痛，比吃药安全"涉及诊疗断言与安全风险，跨平台后影响面扩大，平台通常要求专业资质认证 并禁止诊断治疗类断言。机制保留：真实经验分享的叙事与共情价值（在"个人经验、非医疗建议"的弱声明边界内）。
+    必须重构：把"根治"降为"个人缓解经验"，补充来源标注与就医指引（信源可信度模型 source_credibility_model）， 弃用恐吓式健康话术——恐惧诉求/EPPM（fear_appeals_eppm）提示过高威胁加低效能感会触发心理逆反
+    （psychological_reactance）而非行为改变。边界（必答）：医疗内容资质与表述边界以平台最新公告与监管要求为准； 不提供诊断建议；不做"合规就没事"担保；不建议删除免责声明以"更敢说"。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-014
+  answer_summary: 必须指出绝对化用语与无依据承诺的风险："全网最低价！全网第一的持妆效果！不好用你来找我！错过今天再等一年！" ——绝对化用语加无依据承诺，电商内容受专项规范治理（douyin
+    adapter content_constraints：official_rule； 小红书侧 risk_factors 亦有"极限词/虚假宣传"红线），须提示合规修改并以平台最新公告与广告规范为准。
+    机制保留：种草笔记的真实使用证据可迁移。必须重构：这些话术的"效力"来自锚定效应（anchoring_effect）与稀缺 （scarcity_mindset）的粗放版本，合规替代是可验证的具体证据（如"持妆X小时实测"，演示数据须真实可查）建立
+    内容信任信号（trust_signals_content）；scarcity 只在真实限时机制存在时使用；带货视频的信任与行动链结构 需按抖音重构，不是笔记改口播。边界（必答）：不得提供"擦边替代词"规避审核；合规细节以平台最新公告与
+    广告规范为准。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLT-015
+  answer_summary: 完整迁移方案三层：① 机制保留——纪录片叙事与实地素材是跨平台内容资产（叙事传输 narrative_transportation 与拟社会关系 parasocial_relationship
+    的真实感根基），气质不必娱乐化。② 必须重构——时长压缩为2-4分钟 章节化版本（视频号会话转发场景偏好完播可得的时长），开场直接给"这条街为什么变了"的缺口； 封面与标题面向熟人转发卡片重做，提供身份表达理由（身份信号
+    identity_signaling："转给同样爱这座城的人"）。 ③ 信号语义说明——视频号社交叠加链路（distribution_model/sharing_mechanism/social_graph_characteristics：
+    朋友点赞背书进熟人链路、卡片原生转发零摩擦）与B站弹幕三连文化（community_mechanism 与 interaction_signals 字段差异：collective_effervescence
+    弹幕共同在场、投币收藏）不同，本地人群经同城与朋友圈路径触达。 可列为后续：本地话题标签、更新频率等运营层问题需与用户确认。边界：视频号推荐与社交链路权重未公开 （industry_consensus），以最新公告为准；不承诺目标人群触达数据；不建议只改时长或全面娱乐化。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-001
+  answer_summary: 我不会直接写红包文案——先做结构诊断：这是消费型付费学员群，480 人日均 2.3 人发言的问题不在"人不积极"， 首要缺口在 Norm 层：群规范一年未明示，新老人都不知道"这里能聊什么、怎么聊"，描述性规范不可见
+    （descriptive_injunctive_norms），也无规范执行带来的声誉信号（norm_enforcement_reputation）； 次要缺口是 Status 回路未建立（发言无回应、无收益）。动作方案分阶段：0-2
+    周内规范可见化 （入群欢迎语+置顶群规+话题引导模板）、群主/管理员每周示范目标发言行为、固定一个轻互动节点（每周答疑日）； 红包最多作一次性辅助，且必须说明局限——只买短暂注意力，无法修复规范结构，外部激励还有挤出内在动机的风险
+    （intrinsic_extrinsic_motivation）。观测指标：首日发言率、新人首条消息回应时长，不承诺具体数字。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-002
+  answer_summary: 不建议先换话题库——话题质量是次要变量，结构问题才是主因。核心诊断是 Status 回路断裂（status_systems）： 提问平均等不到 2 条回复，发言没有地位收益，沉默被理性化，原积极成员因付出-收益持续失衡而退出；
+    且回应高度集中于群主一人，网络呈星型结构（network_density 低），群主不在线回路即中断。 建议：建立"首问必答"值班回应制、每周公开认可高质量回答者（reputation_systems，如置顶精华回答）、
+    有意识制造成员间连接（结伴共读/话题接力）把星型推向网状，而不是只优化话题内容。 观测指标：非群主回应占比、首问平均回应时长。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-003
+  answer_summary: 不做拉新裂变方案——"拉新解决不了沉寂：先修容器再进水"。诊断：Ritual 缺失是主缺口——三个月没有任何 固定重复的共同事件，成员没有再次聚集的时间锚点（community_rituals），群体体验无法周期性重建
+    （collective_effervescence；边界：线上弱仪式的效果弱于线下同在场）；同时活动后的内容供给未达临界规模 （critical_mass_threshold），新人此刻进入一个无规范无仪式的空容器只会加速流失，还会摊薄现有连接。
+    动作：0-2 周先建低频但可预期的仪式（每月一次线上案例复盘夜），2-6 周观察参与回流再议是否扩容； 不承诺活跃度提升的具体数字。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-004
+  answer_summary: 拒绝"人群质量不行"的归因，先看新人 24-48 小时的体验：只有一条机器人欢迎语、无接待无任务、 首条打卡无人评论——这是 newcomer_onboarding 缺失，无引导=首日沉默=永久沉默；新人还面对归属不确定性
+    （belonging_uncertainty），归属需求未被回应（need_to_belong）时离开是成本最低的选项， 7 日留存 18% 更可能由此解释，而非投放人群质量。给出可直接执行的首日流程：自我介绍模板+
+    新人专属首次任务+首条发言必有人回应的保障机制，用固定新人仪式（每周新人日）锚定进入节奏。 观测指标：首日发言率、首周回应时长——先修容器，再谈投放优化。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-005
+  answer_summary: 这是多层结构问题，"单独开新人群"不能单独立案。诊断：边界事实上只对老成员开放（community_boundaries 过紧）、 公开贬低制造被排斥感且波及旁观者（ostracism_effects——被排斥者与围观者的参与意愿同时受损）、
+    新人归属不确定性被放大（belonging_uncertainty），而管理员对嘲弄不干预构成规范执行失灵。 "单独开新人群"是双刃剑：隔离保护了新人但可能让他们永远进不了核心圈，必须配套可见晋升阶梯
+    （participation_ladder：新人群→正式群→贡献者角色）。建议：设新人导师角色（把带新人变成老成员的地位收益 而非负担）、公开的提问规范、对嘲弄行为的一致处理流程。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-006
+  answer_summary: 先用参与阶梯（participation_ladder）校准预期再谈动作：1800 人大群月发言 5%（约 90 人）符合大型松散社群 极不对称的参与分布（常被概括为
+    90-9-1 结构），在此量级属常态而非病态，"群要死了"是预期错位而非结构崩坏。 明确反对清退沉默成员：他们多数是接收层，清退直接摧毁潜在参与池与群内规范可见度。 建议：把 90 人核心层挑出来做深度运营（给角色与地位收益，status_systems），大群重新定位为
+    信息广播+轻互动层；考核指标从全员发言率改为留存、核心贡献者数量与响应质量。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-007
+  answer_summary: 先质疑考核目标本身而不是接方案：在 90-9-1 式参与分布下，把 3000 人全员月发言率设为 KPI 违背参与阶梯结构 （participation_ladder），会逼运营做出有害动作（物质刺激灌水、甚至买水军）。给出分层运营替代方案：
+    核心共创层（约 30-50 人，高承诺高回报，给身份与权限成长，status_systems+reputation_systems）、 普通参与层（轻任务+定期仪式）、接收层（信息触达与转化观测）；每层用不同指标（贡献数/响应时长/留存率），
+    并建议以此与管理层重谈 KPI。同时提醒：不要用现金激励硬拉全员发言——外部奖励会挤出学员的内在学习动机 （intrinsic_extrinsic_motivation）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-008
+  answer_summary: 拒绝"奖品不够吸引力"的归因——这是传播结构问题：邀请好友入群是复杂行为，被邀请者要付出社交成本、 邀请者要承担人情风险，这类行为通常需要多重社会确认才会上行（complex_contagion），单次群发只提供一次触达，
+    远低于复杂行为所需；且参与者看不到"别人也在参与"，缺乏社会强化（social_reinforcement / social_proof）。 建议：多轮节奏化触达、实时展示参与名单与进度、让先行者晒成果做示范、简化邀请步骤（friction_reduction）。
+    并提醒：升级 299 元礼包不解决结构问题，反而可能把筛选标准扭曲为逐利者优先；不承诺升级后的参与人数。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-009
+  answer_summary: 海报可能是次要因素，优先诊断网络与身份结构：群内私聊接龙热闹说明强关系密集（network_density 高）， 信息在群内冗余，缺向外桥接的弱关系通道（weak_ties_strength）——新增长恰恰依赖横跨圈层的宽桥
+    （wide_bridges），而这种桥接个体少且承担高社交成本；转发团购海报到朋友圈是身份信号行为 （identity_signaling），"薅羊毛"式利益话术有负面身份成本，多数成员未达到转发的行为阈值
+    （network_threshold_models）。建议：识别并单独激励少数天生桥接者、给转发者提供正向社交货币 （晒品质生活而非省钱薅羊毛）、把公开朋友圈群发降级为定向私聊推荐。观测指标：桥接者转发后的二次进群率。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-010
+  answer_summary: 先声明学习型社群的功能门槛高于消费型（需要 identity+progress，不只是 utility+norm），然后按结构层设计 而非罗列活动：边界（community_boundaries——入门筛选与承诺装置，如申请制+首月学习承诺，保护学习氛围）、
+    仪式（community_rituals——周更挑战+月度复盘的固定节奏）、地位（status_systems——学徒→贡献者→导师的 进阶身份，学习进度可见）、共同体感（sense_of_community——一句话能说出的集体身份叙事）。
+    分阶段：0-2 周启动关键仪式并冲内容临界量 / 2-6 周建立贡献者回路 / 长期身份体系； 目标设定具体可达成（goal_setting_effectiveness，如"首月完成 1 次作品互评"）。
+    只给应观测指标（首周激活率、仪式参与率、贡献者转化），不承诺一年留存数字。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-011
+  answer_summary: 先纠正一个隐含误判：约球/组局型兴趣社群由工具价值驱动，utility 本身足以支撑存活， 不必强行加"学习感"或深度内容（避免过度设计）。真正的风险是活动停摆=群死，关键设计是：
+    给群加"第三空间"属性（third_place——活动之外可闲聊可求助的日常场）、用固定仪式锚定节奏 （community_rituals——每周固定局+赛后照片与复盘分享）、分层边界（community_boundaries——
+    开放报名的新手局与核心老友局分开，既接纳新人又保护核心关系密度）、逐步沉淀集体认同 （sense_of_community——队名、队服、传统梗）。微信生态落地：群接龙报名、群相册沉淀照片、小程序约局。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-012
+  answer_summary: '"每天推 3 条种草"是广播不是社群——消费型社群门槛确实较低（utility+norm 即可成立）， 但单向广告轰炸会把 199 元/年的付费群做成广告位，静音或退群只是时间问题。设计要点：
+    utility（会员专属权益+真实一对一答疑，直接降低购买决策疑虑 perceived_purchase_risk）、 规范（descriptive_injunctive_norms——鼓励分享真实使用体验，管理层软广频率设明示上限）、
+    真实性（authenticity_perception——允许负面评价出现，过度控制的口碑会反向摧毁信任）、 互惠（reciprocity_norm——先持续给非销售价值再谈转化）。提醒：社群目标（Community/Retention）与
+    转化目标（Conversion）指标不能混用——分别观测留存与权益使用率、转化链路。'
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-013
+  answer_summary: 按瓦解动力学做三层诊断，不做"多搞活动冲喜"式的表面处理：①规范执行失灵（community_governance + norm_enforcement_reputation）——规则对元老不适用等于宣告规范对所有成员失效，规范执行者的声誉资产崩塌，
+    这是瓦解起点，管理员的回避本身就是瓦解放大器；②身份冲突（social_identity_theory + in_group_favoritism） ——元老与新人形成两个子群体，内群体偏袒驱动站队互撕，"我们是写作者"的共同叙事被派系身份取代；
+    ③排斥扩散（ostracism_effects）——被贬低者流失，旁观者目睹排斥后参与意愿下降（寒蝉效应）。 建议：治理规则一致适用（先私聊干预、后公开透明公示处理结果）、修复集体叙事； 预期时间线：信任重建以月计，不承诺挽留比例。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-014
+  answer_summary: 解释动机挤出而不是帮着找预算：长期按次付酬使外部奖励替代了参与的意义感（intrinsic_extrinsic_motivation）， 停钱当天活跃暴跌 70% 是挤出的典型表现——"拉回发钱时的水平"这个目标本身有误导，原水平是用钱维持的，
+    不是社群健康度。建议：重建内在动机回路（进度可见、成果公开展示、goal_gradient_effect 进度机制）、 现金奖励改为非现金的社会认可（status_systems + reputation_systems：排行榜、荣誉身份、优先权益）、
+    预算骤停改为逐步退出并向成员同步解释、用分层参与目标替代全员活跃目标。 不做任何"能恢复到某水平"的数字承诺。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: COM-015
+  answer_summary: 拒绝计算预算，并指出方案的两个结构性风险：①按发言付酬是典型的动机挤出预设 （intrinsic_extrinsic_motivation）——为钱建立的行为在停钱后不会转为自发，"三个月后氛围自转"不会发生，
+    停奖即崩（与发钱群暴跌同源机制）；②逆向筛选（community_boundaries）——按发言付费会把逐利者优先筛选进来， 稀释并排挤真正的内容贡献者，社群文化在启动期就被定坏。建议把预算从按次付费改投基础设施
+    （内容质量、固定仪式、核心成员培育）；如确要启动激励，用一次性启动型设计 （endowed_progress_effect——"你的第一课已解锁"的已完成进度感）而非按发言计价。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-001
+  answer_summary: 问题明确：抽象名词堆砌（生态化/协同/赋能/全域/范式），读者无法形成具体画面，处理流畅度低 （processing_fluency），且缺乏可感知的对象与动作（concreteness_in_language
+    / specificity_effect）。 改写示例：《跨部门数据总在返工？给 B2B 团队的三步对齐流程（附模板）》——可感知对象+动作+结果。 边界：若该标题用于内部战略文件或投资人材料，抽象框架词承担"视野与野心"的语用功能，不适用具体化改写；
+    面向企业服务决策人的公域传播则以场景具体化为先，不机械加数字。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-002
+  answer_summary: 先做漏斗定位而不是动笔：9% 点击率说明注意力环节已通过、标题/封面完成了本职；停留 11 秒的首查项是 标题-内容一致性（expectation mismatch——curiosity_gap
+    的失效条件：缺口未兑现则读者撤回投入）， 其次才排查首屏认知负荷（information_overload）。明确"先验证一致性再动笔"：对照标题承诺逐段检查 正文前 3 段是否兑现。正文未提供——我需要看正文首屏才能下结论，不会凭空给"更抓人"的改写。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-003
+  answer_summary: '"注意力只有 8 秒"是无研究支持的媒体讹传（源自营销报告被媒体放大，非同行评审结论）， 不能作为策略依据，也不认可"前 8 秒必须放爆点"的推论。真实机制是 attention_capacity_limits——
+    注意力容量有限但是情境性、可分配的，可搭配 selective_attention：相关性决定注意分配。 可用的替代判断框架：前三行做信息 scent 与"这和我有什么关系"的相关性检验， 比绑定某个具体秒数更可靠、也不依赖被讹传的数字。'
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-004
+  answer_summary: 500 块买不来结构，两周沉寂通常是结构缺口，我不会直接给发红包方案。先诊断/提问：群成员彼此认识吗、 有共同身份感吗（sense_of_community）？新人进来第一小时发生什么（newcomer_onboarding）？
+    有固定重复的共同事件吗（community_rituals）？发言有回应、有角色分工吗（status_systems）？ 红包只能作辅助且必须说明局限——外部激励不产生持续互动，易形成"领完即散"。结构性动作至少两个：
+    固定话题日/每月行业互助答疑（仪式）、新人自我介绍模板+首条发言必回应（新人路径）、 设 3-5 名轮值答疑角色（地位回路）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-005
+  answer_summary: 明确拒绝把 ego depletion 作为策略依据：它的大样本预注册复制失败、效应量存在重大争议， "意志力是有限资源、会被消耗"这个前提目前不可靠——基于它设计的打卡策略（如"避开意志力耗尽时段"）
+    方向可能整体错误。替代方案（均来自可用机制）：habit_loop_cue_routine_reward（把打卡绑定到既有日常线索）、 implementation_intentions（"如果
+    X 则打卡 Y"的具体计划）、self_efficacy（小步成功记录提升自我效能）。 拒绝理由一句话：不是理论不经典，是它的证据地基塌了——不用塌了的地基盖楼；不存在"实践中还是可以参考"的混用。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-006
+  answer_summary: 诊断：30 个知识点超出工作记忆容量（working_memory_limits），整篇无组块造成信息过载（information_overload）。 取舍规则：按"单一任务动线"保留主干——30
+    个知识点先归并为不超过 5 个组块（按学习路径：是什么/怎么装/ 怎么用/常见坑/进阶），每组块不超过 3 个要点，其余折叠为附录清单或表格；仍超载则拆成连载，先框架后细节 （gestalt_grouping
+    组块分层）。落到本案例的动作示例：把"7 个安装报错处理"合并为 1 张排错表移到文末附录。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-007
+  answer_summary: 用 Personal Utility vs Social Currency 框架定位：收藏率 8% 说明自用价值强，分享率 0.3% 说明 转发者没有获得任何社交理由——转发是身份信号行为（identity_signaling），这篇内容没给转发者
+    "转了能代表我什么"的答案（stepps_sharing_framework 的 Social Currency 维度缺失）。 收藏高不是负面信号，是可转化的资产，不建议全面改写。提升 Social
+    Currency 的具体动作： 加一个可引用的观点钩子（"X 决定 Y"式转发即表态句）、替转发者写好转发言口、加身份标签 （"发给每一个刚开始做 X 的人"）——观点必须足够具体才可被引用（specificity_effect
+    支撑）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-008
+  answer_summary: 不建议原样搬运：同一互动信号在不同平台语义不同——小红书点赞/收藏偏种草与自用检索， 公众号在看/转发偏社交背书，知乎赞同偏论证质量；原平台爆说明内容形态匹配了小红书的分发逻辑
+    （封面决定曝光），不代表匹配公众号（依赖标题+会话转发）与知乎（依赖问题匹配度）的流量入口 （algorithmic_amplification 各平台权重不同）。情境变了，编码与提取不再匹配（encoding_specificity），
+    social_proof 信号也不可跨平台迁移。结论：先适配再分发——公众号改标题逻辑+开头重构、知乎找匹配问题作答； 各平台具体规则以最新公告为准。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-009
+  answer_summary: 这个忙我不能帮：编造用户好评我不会提供任何版本的文案——"7 天瘦 8 斤"式虚构评价属于虚假宣传， 具体风险：平台虚假评价处罚（封链接/扣分）、广告法框架下功效宣称的法律责任、被识破后的信任反噬
+    （provenance_verification：可核查性缺失是信任崩塌点，减肥品类尤甚）。合规且更有效的替代路径： 体验官计划征集真实用户反馈（带真实使用记录的 7 天打卡本身就比编造文案有说服力）、
+    明确标注示意性内容的场景演示。需要的话我可以帮你设计体验官招募与反馈收集流程。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: REG-010
+  answer_summary: '"爆款"不是可执行的目标，先确认两件事再动笔：①这篇文案要达成什么传播目标——被点开/看完/被转发/购买 是行为链上不同环节，机制选择完全不同；②发在哪个平台——平台决定内容形态、分发逻辑与信号语义。
+    （如有主题和目标人群，一并给我。）确认后即可开始；不基于"爆款"一词默认涨粉或带货—— 那样写出来的只能是哪个平台都不适配的平庸文案。'
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-001
+  answer_summary: 类型判定：M7 长文结构诊断，行业深度文约 8000 字 6 节，未超单次处理上限，全文分析。 诊断：核心论点首现于第 3 节末（约 37% 处，远超 15% 阈值），前
+    3 节约 3200 字背景铺垫占 40%——命中 AP-LF-007 Delayed Thesis（P0）与 AP-LF-002 Background Overload。 Editing Plan：restructure
+    Move 将"私域成败在组织/预算/KPI 而非渠道"前移至 ≤10% 作中心命题，背景 Cut 为 ≤10% 导语，开场以"服务二十多家品牌发现被忽略的事实"作具体承诺重写；遵守 Macro before
+    Micro，Pass 2 前不动句子级文字。 Platform Adaptation：wechat_official 的 opening_role（订阅读者带预期可短开场、转发新读者需 3 秒确认值得读）要求回报前置，title_role
+    同步把身份点名与具体缺口补进标题与摘要。 边界：信息觅食理论（Information Foraging）（B，读者按线索评估继续阅读的收益成本，长文 0-10% Entry 段每句都在经受离开决策——本篇前
+    3200 字 scent 持续走低即流失机制）；好奇心缺口（Curiosity Gap）（B，已知与想知的落差驱动注意，需读者具备先验知识，私域从业者受众成立）；论证结构（Argumentation
+    Structure）（B，主张需支撑与限定才可防御，用于核查 thesis 前移后论证链不断裂）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-002
+  answer_summary: 类型判定：M7 长文诊断，会员体系教育/方法论混合体约 6500 字 7 节。 诊断：Central Thesis Extraction 失败——全文抽不出一句话中心命题，并列堆叠而非论证，P0；argument
+    map 显示正反例数据（复购提升、付费会员客单高六成、活跃会员<3%）为孤儿证据（AP-LF-004 Evidence Dumping），五主题并列无优先级论证（AP-LF-018）。 Editing
+    Plan：重建 argument map，归并为 2-3 个支撑 claim（候选主命题："会员体系设计质量取决于权益可感知度与积分闭环，而非等级数量"），正反例重组为对同一 claim 的检验；"系统落地"节降为
+    recommendation 或 Cut；不用"加小标题"替代论证重建。 Platform Adaptation：wechat_official 的 title_role（标题从全景式改为具体判断式承诺，承担好奇心缺口与身份点名）+
+    search_mechanism（"会员体系设计"关键词保留搜一搜长尾）。 边界：论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，适用于并列话题归并与证据归类）；组块化（Chunking）（A-，按有意义单元组织扩大可处理范围，适用于七节归并为可复述组块，不适用于机械压字数）；信息觅食理论（Information
+    Foraging）（B，读者按线索评估收益成本，无命题时 scent 散焦导致跳读弃读）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-003
+  answer_summary: 类型判定：M7 长文诊断+语义压缩，约 5500 字 5 节，问题在 Redundancy 层而非文笔。 诊断：Redundancy Detection 判定"信任先于转化"在第
+    2/3/4/5 节构成同一 duplicated_claim 组（AP-LF-001/008），第 4 节含"30 个社群观察"数据、信息密度最高，其余三处为修辞变体、零增量。 Editing Plan（Delete
+    before Rewrite）：保留第 4 节为唯一正式表述，第 3 节金句降级为过渡句，第 2、5 节表述删除；压缩后论证完整性不受损，不机械按字数等比例删减。 Platform Adaptation：wechat_official
+    的 opening_role（去重后开头更早进入具体观点，改善首屏读完率）+ interaction_signals（"在看"转化依赖读完体验，去重直接受益）。 边界：加工流畅性（Processing
+    Fluency）（A-，处理越顺畅越被喜欢与相信，重复措辞被识破后流畅感转为"注水"印象，适用于判断重复的读者感知代价）；认知疲劳（Cognitive Fatigue）存在但有条件（B，时间任务疲劳效应行为层稳定、机制解释存疑，长文
+    40-70% 进度承受力最低，重复放大该区间弃读风险）；信息觅食理论（Information Foraging）（B，读者按线索评估收益成本，重复段=收益密度为零的 patch）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-004
+  answer_summary: 类型判定：M7，先诊断后响应"润色"指令——触发工作流"禁止跳过诊断直接润色"场景。 诊断：promise→delivery 断裂的 P0——开头承诺"把这个问题讲透"，正文仅回答"内容营销与内容发布的区别"，未交付中心命题与判断框架，结尾"没有标准答案"未兑现承诺；命中
+    AP-LF-009 Underexplaining（"为谁/解决什么/凭什么持续"三件事首现即收束、缺 warrant）与 AP-LF-012（无反方讨论）。必须明确提示：Structural Editing
+    优先于 Line Editing，只润色会把 P0 埋得更深，征得确认再继续。 Editing Plan 两条路径：A. 先补中心命题与判断框架，再做两遍优化的 Pass 2 润色（推荐）；B.
+    坚持仅润色，书面提示遗留风险后执行；未确认前不擅自大改结构。 Platform Adaptation：wechat_official 的 opening_role（首段决定读完率，框架前置直接受益）+
+    title_role（"讲透"式承诺须与标题兑现一致，防透支账号信任）。 边界：论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，用于定位"有结论无框架"的论证缺口）；信息气味（Information
+    Scent）（B，线索与目标相关性驱动继续阅读，承诺-交付一致是 scent 的前提）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-005
+  answer_summary: 类型判定：M7 长文诊断，增长方法论约 6000 字 6 节，"读到一半读不下去"与结构证据吻合。 诊断：认知负荷曲线第 3/4/5 节（约 40%-65%）连续 HIGH/VERY_HIGH（二阶交互/边际分析/有效前沿/能力租连环概念
+    >3 无锚定，AP-LF-003 Concept Dumping），违反"禁止连续多节 HIGH"，且正落 Fatigue Zone——这是长文弃读第一死因。 Editing Plan（Reader
+    State before Word Count，结构性补偿）：把全文最强案例或阶段性结论移入该区，"能力租"移出或压缩，每节末插入小结/转折/新问题恢复节奏；禁止"把解释写得更详细"（那是加倍负荷），不给每节配等量案例的平均主义方案。
+    Platform Adaptation：wechat_official 的 opening_role（长文中段靠小标题与分段维持注意）+ interaction_signals（疲劳区间修复效果可由读完率→"在看"转化观察验证）。
+    边界：认知疲劳（Cognitive Fatigue）存在但有条件（B，时间任务疲劳效应行为层稳定、机制解释存疑，长文 40-70% 进度承受力最低）；工作记忆限制（Working Memory Limits）（A，同时保持约
+    4 个有意义单元，适用于连环概念超载判断）；信息超载（Information Overload）（B，信息量超加工能力时理解质量下降，适用于术语密度区间诊断）；信息气味（Information Scent）（B，线索相关性驱动继续阅读，小结与新问题即恢复
+    scent）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-006
+  answer_summary: 类型判定：M7 长文诊断，内容复用方法论约 5000 字 5 节，内容正确结构完整，问题在 Memory Design 层（P1，非 P0）。 诊断：Memory Design
+    检查列不出 3-5 个可记住的框架/关键词/对比 = 记忆设计缺失；五步法（盘点-拆解-重组-分发-复盘）有天然骨架但未命名、无对比锚点、结尾通用客套。 Editing Plan：为五步法命名可复述框架名（如"内容复用五步环"）、建立"搬运
+    vs 复用"对比锚点、用一个类比固定"拆解-重组"（如"一鱼多吃"），三个锚点在第 5 节结尾显式回收并替换客套结尾；不以"结尾加一句金句"为唯一方案，不发明与内容脱节的花哨概念。 Platform
+    Adaptation：wechat_official 的 content_lifecycle（长青+搜一搜长尾，框架名与"内容复用"关键词利于数月后被检索唤醒）+ comment_role（结尾改为"你的五步里最难跑通哪一步"式可回答问题，激活精选留言）。
+    边界：提取线索设计（Retrieval Cue Design）（B，日后要调用的线索须在编码时植入，适用于框架命名与结尾回收）；要旨记忆（Gist vs Verbatim Memory）（A-，读者长期保留要旨与结构而非逐字内容，适用于以框架替代细节堆叠）；图式形成（Schema
+    Formation）（A-，新信息挂入已有图式才可留存，命名与类比即挂点）。不承诺具体记忆率/完读率数字。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-007
+  answer_summary: 类型判定：M7 + AI 生成内容检测，"用户运营全景图"约 7000 字 5 节。 诊断命中报告：每节完全同构（"在 XX 时代…首先/其次/最后…缺一不可"，AP-LF-019）、空过渡（"接下来我们看看"，AP-LF-015）、语义重复（AP-LF-001）、零具体证据（无数据/案例/操作细节）——问题在生成层而非润色层，不具备直接发布质量，"结构工整"不等于质量合格。
+    Editing Plan（去同构化结构手术）：每节按信息类型差异化组织（用户运营=机制层、内容运营=流程层，按 §8 role 重组节结构）；过渡改为"为什么现在讲下一部分"；补真实案例或按价值密度收缩篇幅与维度（AP-LF-018）；不做局部润色掩盖同构骨架，并明示
+    AI 痕迹的发布风险。 Platform Adaptation：wechat_official 的 risk_factors（同质化模板内容叠加打开率大盘下滑，既无打开也无转发）+ title_role（"全景图"式宽泛承诺若无真实增量则透支账号信任）。
+    边界：信息气味（Information Scent）（B，线索相关性驱动继续阅读，同构节让节间 scent 归零、读者无法从标题预测增量）；加工流畅性（Processing Fluency）（A-，处理顺畅度影响好感与信任，同构节"易读"但零增量使流畅感转为模板感）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-008
+  answer_summary: 类型判定：M7 平台适配任务，约束优先——尊重"内容不改"的定稿约束，诊断落点为平台错配而非文章质量：6000 字论证闭环公众号深度文与小红书笔记形态（正文 1000
+    字上限 [official_rule]、封面钩子/口语化/收藏逻辑）不匹配。 适配方案（不改写原文）：拆为 3-4 篇系列笔记，每篇承载一个论点；第 1 节"47 个品牌中 31 个质量达标仅 6
+    个进品类前 20%"的剪刀差数据单独成篇做钩子；结尾加"完整论证见公众号"引用结构互导；不以"压成一篇 800 字长笔记"为默认方案（论证损耗大），若坚持单篇需明示取舍。 Platform Adaptation：xiaohongshu
+    的 cover_role（"封面即标题"，双列流里封面承担主要点击决策，剪刀差对比图做封面方向）+ title_role（关键词前置+人群点名，如"内容做得好的号为什么数据差"）+ interaction_signals（收藏是决策价值最高信号，系列笔记按自查清单设计
+    save value）。 边界：组块化（Chunking）（A-，按有意义单元组织扩大可处理范围，适用于系列拆分粒度设计，不适用于压字数硬塞单篇）；信息气味（Information Scent）（B，线索相关性驱动继续阅读，系列间"上一篇/下一篇"钩子维持
+    scent）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-009
+  answer_summary: 类型判定：M7 长文诊断，约 4500 字 4 节，仅 P1 开头问题、无 P0 结构伤，可在两遍优化的 Pass 2 处理开头文字。 诊断（逐句证据）："在市场竞争日益激烈的今天"式空转起笔；"系统探讨""全面了解"为无边界承诺；第
+    1 节其余约 300 字继续铺垫增长的重要性；第一个具体观点"留存变量被九成团队跳过了"迟至第 2 节——Entry 阶段（0-10%）scent 持续走低。 改写方向（诊断给方向、不整段重写）：把"九成团队跳过留存变量"前置为具体承诺并给回报地图（读到第
+    2 节能带走什么判断）；不用加感叹号式方案替代承诺具体化。 Platform Adaptation：wechat_official 的 opening_role（订阅读者带预期可短开场，新转发读者
+    3 秒确认回报）+ title_role（标题补"九成团队都跳过"式具体缺口，替代宽泛表述）。 边界：信息气味（Information Scent）（B，线索相关性驱动继续阅读，宽泛承诺使 scent
+    无法聚焦）；好奇心缺口（Curiosity Gap）（B，已知与想知的落差驱动注意，"九成跳过"对增长从业者构成有效缺口）；特异性效应（Specificity Effect）（B，具体信息更可信更易记，适用于把承诺从"全面"改为"一个被跳过的变量"）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFGZ-010
+  answer_summary: 类型判定：M7 长文诊断，约 5200 字 5 节，第 5 节为逐条复述加求赞——判定 summary_repetition（AP-LF-013），无 closure
+    设计。 诊断：峰值结尾效应（Peak-End Rule）存在但有条件（B，回溯评价由峰值与结尾主导、过程时长被忽略，适用于读者对整篇的记忆评价、不适用于过程内即时满意度）——复述式结尾把最有利位置让给零增量内容，"希望这篇能帮你系统建立认知"不能替代收束。
+    Editing Plan：Closure 选 Synthesis + Action——给一个可带走的判断（如"私域的本质是用户关系经营，先定组织与 KPI 再谈工具"）+ 行动清单，显式回收 2-3
+    个 memory anchors（三阶段/四动作/组织配置各锚点化一句）；求三连保留但移到收束内容之后作轻量引导，不作收尾主体；不建议"再完整总结一遍更完整"。 边界补充：系列位置效应（Serial
+    Position Effect）（A，首尾位置记忆优势稳定，近因位置应留给最有力的收束而非清单复述）；提取线索设计（Retrieval Cue Design）（B，日后调用的线索须编码时植入，锚点回收即植入）。
+    Platform Adaptation：wechat_official 的 interaction_signals（"在看"与收藏依赖收尾体验，复述式结尾压低信号）+ comment_role（结尾留一个可回答的具体问题替代三连求赞，激活精选留言区）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-001
+  answer_summary: 类型判定：M7 + Evidence Audit（research 文体审稿），白皮书约 9000 字 8 节。 诊断：11 处"研究表明/指出/显示"均无具体文献 =
+    citation decoration 伪引用（AP-LF-017）；第 4 节 6 个品牌案例支撑同一结论 = case stacking（AP-LF-005，案例数量≠证据强度：无对比组、无效应量、有幸存者偏差）；"可见私域运营是决定复购的核心变量"为相关→因果的
+    conclusion_leap（AP-LF-012）。 Editing Plan：降级表述（"研究表明"→"公开报道显示/我们观察到/一种可能的解释是"）；补强路径二选一——补可溯源文献或改为诚实的经验陈述；红线：禁止编造具体文献出处补引用，不默认案例数量等于证据强度，不建议"再多找些研究证明"而不问可溯源性。
+    Platform Adaptation：wechat_official 的 search_mechanism（研究类长文依赖搜一搜长尾，不可溯源表述在复查时损害账号权重）+ risk_factors（财经/行业数据表述收紧，"数倍""翻倍"无出处有合规风险）。
+    边界：流畅真相效应（Fluency Truth Effect）（A-，易处理的陈述更易被当作真，"研究表明"借流畅感制造可信错觉，同时警惕反向利用它修饰不可溯源断言）；来源可信度模型（Source
+    Credibility Model）（A-，可信度=专业性+可信赖性，无出处断言在专业读者处反向扣分）；轶事与统计（Anecdote vs Statistics）（B，个案生动但证明力弱于系统数据，两者结合最有效，适用于案例堆叠降权判断）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-002
+  answer_summary: 类型判定：M7 + Concept Registry（research 文体），约 8500 字 7 节，"用户资产/私域资产/客户资本"合计出现 23 次。 诊断：concept_registry
+    判定一概念多名 + 前后定义漂移——第 1 节"可反复触达且无需额外付费"→第 4 节"会员+社群粉丝+企微好友总和"→第 6 节"另含品牌认知与情感联结"，外延逐节扩大（AP-LF-009 与多名同指的组合）；不认为三词"各有侧重可并存"，外延不一致是内容缺陷而非风格差异。
+    Editing Plan：评审语境保留"用户资产"为主名（与评审语境最贴合），首次出现处给唯一规范定义并显式声明外延边界；"私域资产""客户资本"列为别名或删除；统一后回改全文 23 处并在 concept_registry
+    留痕；不只统一名字不处理定义漂移。 Platform Adaptation：wechat_official 的 search_mechanism（术语不统一使相关查询的搜一搜收录分散在三个词上）+
+    opening_role（评审/专业读者首屏即建立概念预期，定义漂移从第 1 节开始耗损信任）。 边界：概念一致性（Conceptual Coherence）（B，同一概念多名或多义迫使读者反复重建图式，适用于术语注册表审查）；图式形成（Schema
+    Formation）（A-，新信息挂入已有图式才可留存，术语漂移使图式无法稳定）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-003
+  answer_summary: 类型判定：M7 超长文（约 12000 字 > 8000 阈值），触发 §34 分块协议，显式声明步骤：Step 1 全局大纲（扫 9 节标题/首尾段/小结句）→ Step
+    2 按 section 分块 → Step 3 逐块产出 section 摘要（claim/evidence/role/issues）→ Step 4 汇总 Global Representation
+    → Step 5 在全局表示上做跨章节分析（论证图/重复/一致性/长程连贯）→ Step 6 分块优化。 维护 longform_state.yaml（含 ap_lf_hits/ap_lf_fixes）支持跨会话续作，并请用户提供全文文本或分节粘贴；不假装已通读全文，不以篇幅为由拒绝任务。
+    已可从第 1 节核对的 promise→delivery：claim"品牌化并不必然要求供应链重构，但完成重构者新品上架周期缩短三分之一"承诺证据链在第五、六节展开，Step 5 必须核对兑现。
+    Platform Adaptation：wechat_official 的 content_lifecycle（长青+搜一搜长尾，分块修复时保留问题式小标题利于长期检索）+ title_role（白皮书标题承担搜索关键词职责）。
+    边界：组块化（Chunking）（A-，按有意义单元组织扩大可处理范围，分块协议即其应用）；工作记忆限制（Working Memory Limits）（A，同时保持约 4 个单元，一次性处理 12000
+    字必丢跨节关系，这是分块的机制依据）；信息觅食理论（Information Foraging）（B，读者按线索评估收益成本，小标题即 scent 结构）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 1
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-004
+  answer_summary: 类型判定：M7 + Article Type Detection，约 7000 字 6 节，类型混杂 P0：第 1-3 节 research 文体（重 evidence+methodology），第
+    4-6 节 consulting 文体（重 problem→framework→recommendation），两种文体评价标准与优化侧重不同、禁用同一模板。 内容缺陷更致命（contradiction）：第
+    2 节核心发现"控制门店密度与城市线级后相关系数由 0.31 衰减至 0.12、不再显著→数字化投入本身不直接带来增长"，第 5 节却建议"三个月内完成会员系统选型全面铺开+数字化 KPI 权重不低于
+    15% 强推"——建议与证据直接冲突，交给管理层会在第一轮质询被击穿。 Editing Plan 两条路径：A. research 定位——发现诚实化、建议改条件化（数字化投入仅在何种条件下与增长相容）；B.
+    consulting 定位——重组证据链，把第 2 节发现降为风险提示、建议改由其他论据支撑；不只润色措辞掩盖矛盾。 Platform Adaptation：wechat_official 的 title_role（标题"路径选择"暗含
+    consulting 兑现义务，须与文体定位一致）+ opening_role（管理层读者 3 秒内要看到结论与立场）。 边界：论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，适用于矛盾定位与条件化改写）；图式形成（Schema
+    Formation）（A-，读者按文体预期建立加工图式，文体切换不声明则预期落空）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-005
+  answer_summary: 类型判定：M7 + Article Type Detection，判定 thought_leadership（重 originality+argument），据此回应"多加数据和案例"：思想领袖文的证据标准与
+    research 不同，核心交付是论证链自洽与可攻击点预防御，不是数据密度——"证据太薄"的审稿意见不照单全收。 诊断真正脆弱点："信任生产成本"（准入靠租金/评价靠规模/人格靠时间）是三元对照而非可测量口径，攻击将发生在论证层；预防御：预演
+    counterargument 三件套（最强反例：内容平台信任成本真的更低吗——刷量与虚假信任如何计入成本函数？），并给限定条件（适用于内容决策链品类与信任敏感型购买）；不删观点性表述求客观。 Platform
+    Adaptation：wechat_official 的 opening_role（观点文读者在首段判断是否值得为观点花时间）+ comment_role（精选留言是观点文的二次论证场，预演的反例可置顶主动回应）。
+    边界：论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，适用于识别三元对照的论证缺口）；中心路线加工（Central Route Processing）（A-，高卷入高专业度读者系统式检查推理质量而非数据个数，适用于"同行挑刺"受众的证据策略）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-006
+  answer_summary: 类型判定：M7 + Article Type Detection，判定 consulting（优化侧重 problem→framework→recommendation
+    一致性）。 诊断 P0：第 2 节归因"68% 取消续费会员过去三个月到店不足 4 次、到店频次与续费意愿相关性远高于价格敏感度→核心是使用习惯未建立、非价格问题"，第 6 节四条建议（限时年卡折扣/首月促销/拉新返现/本地生活投放）全部围绕价格杠杆与拉新——建议与诊断脱节，conclusion_leap/contradiction，"顺一遍措辞"只会交付语言更顺的错建议，不把脱节归因于表达不清。
+    修正方向：建议从"建立到店习惯"推导——首月打卡挑战、团课课程化、到店提醒链路（按执行意图式设计落到"何时/何地/做什么"）；价格手段降为辅助并说明取舍；补齐"诊断→方案逻辑→建议"之间缺失的一层。
+    Platform Adaptation：wechat_official 的 interaction_signals（习惯类建议比折扣类更易引发"在看"与收藏的行业共鸣）+ title_role（"会员流失诊断"类问题式标题利于搜一搜长尾）。
+    边界：论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，适用于诊断-建议对齐检查）；执行意图（Implementation Intentions）（A，"何时何地如何"的具体计划显著提升执行率，适用于把建议落为可执行动作而非方向性口号）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-007
+  answer_summary: 类型判定：M7 + argument map 审查（观点文）。 诊断：第 2 节为 overclaim——"可以断言""彻底淘汰""所有品类、所有城市无一例外"是全称断言且无对应证据强度，任何单一反例（如依赖到店体验的县域服务品类）即可击穿；"就像十年前不做线上支付的餐馆"是可得性启发式个案类推、不构成类推证明。
+    回应作者双重诉求（要冲击力+怕被挑刺）：限定化改写——按品类分层（高频餐饮与低频装修家政分开判断）、限定城市线级、时间依据显式化，"彻底淘汰"改"将大量淘汰"；限定不是弱化——可防御的强观点比一枪击穿的全称断言更具传播生存力；只加"可能/或许"缓冲词而不调证据结构不作数。
+    Platform Adaptation：wechat_official 的 title_role（标题若保留"淘汰"级冲击，正文必须可防御，否则标题党透支账号信任）+ comment_role（同行挑刺先落留言区，被击穿的断言会被精选留言公开放大）。
+    边界：可得性启发式（Availability Heuristic）（A，易想起的个案被高估为普遍规律，适用于识别个案类推的证明力上限）；论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，适用于断言强度与证据匹配）；来源可信度模型（Source
+    Credibility Model）（A-，可信度=专业性+可信赖性，可防御的判断才养得起长期权威）。不帮用户把断言"写得更有力"，不删观点求中立。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-008
+  answer_summary: 类型判定：M7 + argument map（research 文体，知乎场景）。 诊断：第 3 节为 misplaced_evidence——全文最关键的 41% 测算裸奔先行，支撑数据与抽样明细（2024Q3
+    两个城市 60 网点抽查、前置仓 4.7 vs 自提点 2.8 元每单）押后至第 5 节、中间隔完整第 4 节，读者在第 3 节只能选择相信或不信。 Move 计划：把第 5 节数据段前移至第 3
+    节 claim 之下，或第 3 节给最小数据钩子（"两项成本合计 4.7 vs 2.8 元每单"）+ 指路抽样明细；移动后核对第 4 节模式对比框架与第 5 节余下内容的衔接不被破坏（Global
+    Coherence before Local Beauty）；附录 B 留作核查收纳，不替代正文论证路，不删除该组数据。 Platform Adaptation（知乎）：title_role（问题标题由提问者决定，答主的"标题"职责转移到开头首句——41%
+    结论与最小数据证据应在首屏同屏）+ opening_role（知乎"先说结论"社区规范下，裸奔结论首当其冲被质疑）+ content_lifecycle（知乎全平台最长尾，结构修复利于长期被搜索引用）。
+    边界：信息气味（Information Scent）（B，线索相关性驱动继续阅读，关键 claim 无支撑时 scent 断裂）；论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，misplaced_evidence
+    即支撑缺位的空间错配）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-009
+  answer_summary: 类型判定：M7 + Narrative Thread Analysis（research 文体，知乎场景）。 诊断：主线图（残值影响因素模型为主线：Problem→Evidence→Model→Practice）显示第
+    4 节整节约 1500 字政策沿革（1998 办法→2005 办法→2016 国八条→2018 取消限迁）使主线中断、背景资料失控，中断点约在 40-50% 接近 Fatigue Zone。 Cut/Merge/Move
+    方案：压缩为 200-300 字制度背景或移附录，仅保留"限迁政策"一条与残值直接相关的钩子回连主线；不整节删除（第 5 节"制度成因"需要所指），删减后核对第 5 节开场是否需补一句过渡（Global
+    Coherence 核查）；不以"读者可以跳过"开脱——结构问题不是读者责任，也不误诊为语言啰嗦。 Platform Adaptation（知乎）：search_mechanism（"新能源二手车残值"是长期搜索需求，主线紧凑利于长尾引用）+
+    opening_role（知乎目的性阅读环境，读者带问题而来，1500 字沿革最易触发跳读与点踩）。 边界：信息觅食理论（Information Foraging）（B，读者按线索评估收益成本，背景失控=patch
+    收益密度过低触发离开）；认知疲劳（Cognitive Fatigue）存在但有条件（B，时间任务疲劳效应行为层稳定、机制解释存疑，长文 40-70% 进度承受力最低，中断点恰落此区间）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFRE-010
+  answer_summary: 类型判定：M7 + 长程连贯检查。 诊断：promise→delivery 映射表——第 1 节承诺五个决策逐一给判断框架，实际交付两个半（储值/社群定位完整，第三个"内容谁来生产"第
+    4 节一笔带过，第四个"要不要上企微 SCRM"以"呼之欲出"未回答，第五个"渠道定位"全文未再出现），判定未兑现承诺 P1；"呼之欲出"不等于已回答。 修复选项与取舍：A. 补齐 delivery——补写第四、五决策的判断框架，文章扩容，兑现"环环相扣"；B.
+    修订 promise——标题与第 1 节改为"三个关键决策"并删除第五决策提及，省力但损失标题承诺感；默认推荐 A 并说明取舍，不反向修改开头承诺掩盖缺口而不告知，不删未兑现决策点而不说明。 边界：论证结构（Argumentation
+    Structure）（B，主张需支撑与限定才可防御，未兑现的 promise 即论证链缺口）；好奇心缺口（Curiosity Gap）（B，已知与想知的落差驱动注意，需随后闭合，长期开口不闭合计入挫败感）；蔡格尼克效应（Zeigarnik
+    Effect）（B，未完成任务产生持续张力、效应强度受任务意义调节，对决策型读者未回答的决策是未闭合张力，损伤收尾）。 Platform Adaptation：wechat_official 的
+    title_role（按 B 修订需同步改标题与摘要）+ search_mechanism（"SCRM""私域渠道"是搜一搜查询词，删承诺会损失长尾流量；选 A 则在补写节内嵌入这些关键词）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFME-001
+  answer_summary: 类型判定：M7 + Article Type Detection，判定 educational（优化侧重 learning progression）。 诊断：第 2 节一次性引入
+    15+ 概念（AARRR/RARRA/北极星指标/OMTM/魔法数字/Aha Moment 等），只给名词式解释、无案例锚定、无依赖排序 = concept_dumping（AP-LF-003），超出新手组块能力、图式形成失败——这是"看不懂"的机制来源，不把问题归为读者水平；"北极星指标/OMTM"并存还构成概念多名。
+    重排方案：按依赖序分批——先给"北极星指标 + CAC/LTV"最小可用集（3 个概念内）各配一个锚定例子；模型类概念（AARRR/RARRA/Growth Loop）用到处再引入；其余移文末术语表给一句话定义+指向；不逐个名词抄定义、不删一半概念了事、不无排序地整体移附录。
+    Platform Adaptation：wechat_official 的 opening_role（新人读者首屏需要"这篇按什么顺序教会你"的学习地图）+ title_role（"写给运营新人"身份点名合格，保留）。
+    边界：图式形成（Schema Formation）（A-，新信息挂入已有图式才可留存，无锚定概念无法挂载）；组块化（Chunking）（A-，按有意义单元组织扩大可处理范围，适用于"最小可用集"批量设计）；工作记忆限制（Working
+    Memory Limits）（A，同时保持约 4 个单元，15+ 概念单节引入必然超载）；概念一致性（Conceptual Coherence）（B，同义概念多名迫使读者重复建图，北极星指标/OMTM
+    应二选一）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFME-002
+  answer_summary: 类型判定：M7 长文诊断（方法论），"记不住五步"的机制根源在组块设计缺陷，不认为命名只是风格问题而跳过。 诊断：五步命名结构不平行——"盘资产"（三字动宾）/"建立标准"（四字动宾）/"对内容生产流程进行再造……"（完整长句）/"数据看板"（名词短语）/"如何让这套体系……"（问句），层级与顺序线索混乱（正文顺序与标题顺序交叉），框架无法被复述——这正是"记不住"的机制根源。
+    命名统一方案：五步统一为平行动宾结构——盘资产/立标准/造流程/建看板/跑迭代，正文与标题顺序一并理顺；平行命名降低复述成本、便于日后按名字调用整套方法；不扩成七步增加信息量，不加英文缩写装专业。
+    Platform Adaptation：wechat_official 的 title_role（"内容中台五步法"框架名进标题与摘要，利于搜一搜"内容中台"长尾）+ interaction_signals（可复述框架提升"在看/收藏"概率，收藏是长尾与忠诚信号）。
+    边界：组块化（Chunking）（A-，按有意义单元组织扩大可处理范围，平行命名即建立等大组块）；提取线索设计（Retrieval Cue Design）（B，日后调用的线索须编码时植入，统一命名即线索）；加工流畅性（Processing
+    Fluency）（A-，处理顺畅度影响好感与记忆，平行结构降低复述流畅成本）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFME-003
+  answer_summary: 类型判定：M7 + Narrative Thread Analysis（方法论），判定"案例抢走主线"：方法主干（SOP 四步骤）约 1800 字被拆到第 2、6 节首尾，两个深度案例约
+    4000 字占据第 3-5 节——读者读完记住烘焙品牌故事而非方法本身。 结构方案（非简单删）：方案 A——两案例各压缩至 400-600 字、拆散嵌入对应步骤之下做分布式证据；方案 B——保留烘焙品牌案例做主叙事线、健身品牌降为侧栏引用；两种方案都必须让四步骤成为骨架；不删光案例改纯理论，不把两案例压缩后堆在同一位置，不为保留"得意案例"牺牲方法主干。
+    Platform Adaptation：wechat_official 的 opening_role（"我总结的私域 SOP"承诺的是方法，首屏先立四步骤骨架再引案例）+ comment_role（案例细节下沉留言区补充，作者回复"17
+    个店长访谈"细节既保血肉又护主线）。 边界：信息觅食理论（Information Foraging）（B，读者按线索评估收益成本，读者的 patch 目标是取回方法而非听故事）；叙事传输（Narrative
+    Transportation）（B+，沉浸故事降低反驳并卷入态度，解释案例为何抢戏——魅力即风险）；认知疲劳（Cognitive Fatigue）存在但有条件（B，时间任务疲劳效应行为层稳定、机制解释存疑，40-70%
+    进度被长案例占据时承受力最低）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFME-004
+  answer_summary: 类型判定：M7 两遍优化纪律执行：Pass 1 结构/证据诊断先行，Pass 2 才进文字层面；不直接进入润色跳过证据诊断。 诊断：五节"观点-解释-案例-小结"结构工整无需大手术，但四个关键论据均为不可验证的匿名经验数据，最核心的"月均消费频次提升
+    40%+"标注"内部复盘不方便披露"——判定 weak_evidence + 可信度风险（P1）；证据问题清单：降级表述（"我们观察到……量级在三分之一以上"，保留趋势、弱化精确度）+ 显式标注数据性质（服务复盘、样本范围）；"趋势是确定的"这句本身需软化——它是用流畅感替代证据。
+    红线：禁止编造文献、客户名或数据把 40% "坐实"，不建议虚构案例补位，不帮用户把内部数字包装得更可信。 Platform Adaptation（知乎）：risk_factors（知乎对编故事/软广高警觉，不可验证数字是高赞反噬高发点）+
+    opening_role（知乎"先说结论"规范下，结论的置信度标注应与结论同屏出现）。 边界：来源可信度模型（Source Credibility Model）（A-，可信度=专业性+可信赖性，匿名强断言在高警觉读者处产生反效果）；流畅真相效应（Fluency
+    Truth Effect）（A-，易处理的陈述更易被当作真，同时警惕反向利用其修饰断言）；论证结构（Argumentation Structure）（B，主张需支撑与限定才可防御，适用于证据降级后的限定补写）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFME-005
+  answer_summary: 压缩档（用户明确只要"最要命的几件事"），Top 3 Critical 先行，不输出 14 部分全套报告，不先挑最容易的结尾问题开刀。 P0——核心框架"内容驱动增长=生产效率×分发效率×复用效率"迟至第
+    2 节末（约 30%）才出现，第 1 节约 2000 字行业百年史为失控铺垫（AP-LF-007 Delayed Thesis + AP-LF-002）：修复为 Thesis 前移至 ≤10%、百年史压为三句导语；论证结构（Argumentation
+    Structure）（B，主张需支撑与限定才可防御，thesis 迟现=全文主张长期无锚）。 P1——"效率是内容驱动增长的根本"在第 3/4/5 节结尾重复三次（AP-LF-001/013）：保留一处最优表述，其余删除或降级为过渡句。
+    P1——第 7 节结尾无记忆锚点无行动建议：峰值结尾效应（Peak-End Rule）存在但有条件（B，回溯评价由峰值与结尾主导、过程时长被忽略，适用于整篇记忆评价）——修复：给 2-3 个锚点（三效率乘式框架命名+"百年史一句版"对比锚点）并在结尾显式回收，提取线索设计（Retrieval
+    Cue Design）（B，日后调用的线索须编码时植入，锚点回收即植入）；认知疲劳（Cognitive Fatigue）（B）。 其余次要问题收进简短清单留待后续；Rewrite Options（结构重排/证据审计/逐句编辑/全文重写）交用户选择；Platform
+    Adaptation：wechat_official 的 opening_role（框架前置改善首屏回报确认）+ title_role（标题承载框架名）+ content_lifecycle（锚点式框架利于搜一搜长尾）；不承诺完读率。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 1
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-001
+  answer_summary: M7 咨询型（consulting）长文，6000 字/5 节，单次上下文内。命中 AP-LF-012（Premature Conclusion，无 qualifier、反方三件套全缺）：第
+    4 节把 n=2 演示案例外推为"必然 40%" "任何企业"，按论证结构（Argumentation Structure）（B，claim 强度不得超过 evidence×warrant 支撑，consulting
+    型必须显式 warrant，n=2 不支撑普遍化）判为 overclaim/conclusion_leap。Editing Plan 两条路径交用户选：①Rewrite 绝对句为条件化 表述（"层级多、决策链长的企业中观察到
+    20%-40% 决策提速，演示数据，n=2"）+ Expand 边界段；②补可核实大样本证据后再保留强度——拒绝向"更有说服力"方向强化：流畅性真相 效应（Fluency Truth Effect）（A-，作用于低审读直觉判断，高怀疑受众核查后反噬更重，
+    流畅自信的错误概括被证伪后信任崩塌更快）。Platform（zhihu）：title_role 去"必选项" 式绝对词；risk_factors 对绝对化断言与软文举报敏感（verified_observation，以平台最新
+    规则为准）。边界：n=2 演示数据仅支持方向性假设，路径②在取得可核实样本前不适用。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-002
+  answer_summary: M7 咨询型长文，5000 字/4 节。命中 AP-LF-011（Argument Jump）：SCQA 缺失，全文从 Solution 直入，Situation/Complication
+    层整体缺位——按论证结构（Argumentation Structure）（B，consulting 型 problem→solution 必须有显式 warrant 桥，缺问题层则 方法建议悬空），信息气味（Information
+    Scent）（B，读者靠线索持续预估信息价值，无 问题层则 scent 自第一节断裂）失效，与"不知道为什么要看"一致。Editing Plan 走 Re-outline：Original（步骤直入）vs
+    Proposed（S 复购率连续三季下滑、群发转化跌至 2%， 演示数据 → C 不分层的代价 → S 三步法）对照交用户确认后才进下一阶段，不逐句润色操作 步骤。Platform（zhihu）：opening_role
+    首段 3 行内给"为什么是我、为什么现在"； title_role 加冲突限定而非更吸睛。边界：冲突场景须用用户真实数据替换演示值，trust 目标下禁止用悬念钩子替代问题层。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-003
+  answer_summary: M7 咨询型长文，8000 字/6 节。拒绝跳过 Pass 1（Macro before Micro，§41 Case F）： P0 级 contradiction——第
+    1/5 节"库存周转第一指标"与第 2 节"交付准时率才是客户核心" 打架，归因为概念一致性（Conceptual Coherence）（B，同一文章内中心指标名/义漂移迫使 读者重建图式，非笼统"逻辑不清"）；另命中
+    AP-LF-001（第 3/4 节"数字化不是上系统" 同义重复组）。Editing Plan 先向用户展示结构诊断（P0 矛盾定位 §1/§2/§5 + 重复组清单 §3-4）并说明两遍优化成本逻辑（给应删除段落抛光是浪费），征得确认后
+    Pass 1 归并矛盾、 压缩重复，Pass 2 才润色；信息觅食（Information Foraging）（B，读者按收益/成本决定 去留，"语言高级"让同一层意思被付三次理解成本，收益/成本比下降）。Platform（zhihu）：
+    title_role 先解决"站哪边"；interaction_signals 该群体重收藏，小标题承载可检索指标词 配合 search_mechanism。边界：用户若坚持不改结构，仅交付矛盾点清单与风险说明，不产出
+    掩盖矛盾的润色稿。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-004
+  answer_summary: M7 咨询型长文，6800 字，用户要求删到 3000 字内。无成段同义重复、每节有独立增量—— 机械缩字违反 Value/Cost（§31），目标是 Maximum
+    Meaning per Unit of Reader Effort 而非 Minimum Word Count；信息觅食（Information Foraging）（B，读者按收益/成本决定 去留，删边界与失败案例会制造普适性假象、推高未来核查成本）；仅
+    §1/§3 可 Merge（同 机制不同实验边界），组块化（Chunking）（A-，适用于离散信息点组织，对必要推导链不 适用）。Editing Plan 逐节 Delete Test 并如实报告：§1+§3
+    Merge 预计压 10%-15%，其余 节删任一块有明确损失；替代方案：TL;DR 三条结论 + 正文保完整推导 + 公式与失败案例降为 附录/括注，或拆上下两篇；拒绝为凑字删边界条件与失败案例。Platform（zhihu）：
+    title_role 保"六个反直觉结论"的数字具体性；content_lifecycle（save 目标下长尾检索 价值高，删节损害收藏留存）。边界：用户坚持 3000 字硬约束时，交付"必删损失清单"逐项
+    确认后再执行，不默认动手。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-005
+  answer_summary: M7 咨询型长文，7000 字/6 节。命中 AP-LF-012（反方三件套全缺：无让步句、无适用条件、 无反方证据，案例均为转型成功企业存在抽样偏差）——论证结构（Argumentation
+    Structure） （B，Toulmin 框下 rebuttal 层缺位，单侧论证在高知识受众中触发反驳生成反而降低可信度）。 Editing Plan 增设"这并不意味着"反方层：至少两类具体反方证据（协作密集型研发团队产出
+    对照数据、新人前 6 个月融入成本数据，均标注待核实）并正面回应；保留"分布式是趋势" 主张，用边界条件使其更精确，不改骑墙句；预防接种理论（Inoculation Theory）（B+， 预先呈现弱化反方并反驳可增强态度抵抗力，适用于读者已知反方论点的争议议题）。
+    Platform（zhihu）：opening_role 第 1 节末预告边界讨论；interaction_signals 预期评论 区反方质疑，正文预回应降低分歧成本。边界：反方数据核实前一律标注"待核实"，不为平衡
+    删成功案例。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-006
+  answer_summary: M7 咨询型长文，7500 字/6 节。命中管线 §15 promise→delivery 映射断裂（19 条 AP-LF 无直接对应条目，走 Global Coherence
+    检查）：第 1 节承诺"证明五年内失去定价权"后文 零兑现、第 6 节结论漂移为"漫长旅行"——概念一致性（Conceptual Coherence）（B，主张 命题全文须名义稳定，结论漂移到另一命题迫使读者重建图式并产生承诺背叛感）；删承诺句
+    之"可惜"有机制依据：好奇缺口（Curiosity Gap）（B，承诺句制造的信息缺口若不闭合， 读者以背叛感而非满足感离场，适用于开篇高承诺型文章）。Editing Plan 两条选项交用户 确认：①Expand
+    增补"数据资产如何转化为议价能力"一节（机制+可核实证据）兑现原承诺； ②Rewrite 把承诺收缩为全文实际证明的内容并同步改标题；修复后核对全文 open_question/promise 清单（§34），确认无第二个未兑现承诺。Platform（zhihu）：
+    title_role 与承诺二选一同步改防标题-内容 scent 错配；search_mechanism 零售关键词 围绕实际兑现命题重设。边界：演示数据案例不能充当"定价权"论证证据，补论证须用可核实
+    来源，不默认替用户二选一。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-007
+  answer_summary: M7 咨询型长文，6000 字/5 节。命中 AP-LF-001（同主张三措辞组）：§1/§3/§5 三句剥离 措辞后信息增量为零，成组比对标记同一重复组——信息觅食（Information
+    Foraging）（B， 重复组浪费读者采集预算，剥离措辞后增量为零的段落是负收益节点）；加工流畅性 （Processing Fluency）（A-，重复降低阅读成本但传递"水"的元信号，作用于流畅度归因，
+    间隔复现携带新信息才不触发反感）。Editing Plan 保留判据：三句中保留最具体、位置最优 或作者原声最鲜明的一句（建议 §1 句，其后案例可挂靠），其余 Merge/降为括注；重复组 清单：组
+    1（§1-§3-§5）预计压缩约 300 字/5%；不逐句润色后全保；§5 句若判定承担首尾 呼应修辞功能可保留，但须在改动说明中对账功能。Platform（zhihu）：content_lifecycle
+    （save 读者按小标题回检，删并后小标题同步改组块名）；interaction_signals 保留第 2/4 节案例的可赞点。边界：修辞性重复与机械重复分开处置，不一刀切。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-008
+  answer_summary: M7 咨询型长文，9000 字/7 节，>8000 字先走分块协议建全局大纲。命中 AP-LF-003 （Concept Dumping）：§4-§6 前半 3500
+    字连续框架推演零锚定，负荷曲线该区连续 HIGH 且恰落 Fatigue Zone（40%-70%）——认知疲劳（Cognitive Fatigue）（B，长文中段注意 资源衰减导致弃读；修正状态：存在但有条件，高动机与任务相关读者可部分抵消，故"内容
+    是干货"不豁免结构问题）。Editing Plan 节奏修复并说明位置：§4 五要素每要素嵌一个微型 案例、§5 矩阵改图表+解说、§5/§6 节间加两行小结；与第 7 节故事收尾区分（结尾记忆锚是
+    设计，不动）；禁止在疲劳区插无关趣闻——引人不分心的细节效应（Seductive Details Effect）（B，生动但无关细节挤占主线记忆配额，适用于教学与论证文本）。Platform （zhihu）：opening_role
+    目录预告节奏；cover_role 维持信息型封面不承担节奏修复。 边界：零删除约束下只改呈现节奏不改内容密度，图表资源不足时先以文本化小结替代。 【扣分备注：diagnostic_quality
+    1——负荷曲线仅区域级标记，未逐节标注 LOW/MEDIUM/HIGH， 判定要点 1"画出认知负荷曲线"部分达成】
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 1
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-009
+  answer_summary: M7 咨询型长文，7000 字/6 节。命中 AP-LF-002（Background Overload：前 3000 字行业 背景占比 >40%、无一句观点）+ AP-LF-007（Delayed
+    Thesis：中心命题 55% 处首现）—— 信息气味（Information Scent）（B，读者沿线索持续预估信息价值，scent 长期悬空触发 退出，适用于承诺-交付型长文）；选择性注意（Selective
+    Attention）（A，未被注意选择 深加工的内容对记忆与行为几乎零贡献，背景堆叠对主张记忆无增益）。Editing Plan 用 Move 而非 Cut 回应用户"直接删掉？"：中心命题前移至前
+    10%-15% 并给一句话版本，背景 压缩为 300-500 字服务性铺垫或降为括注；不全删——部分背景数据支撑后文论证，先查 第 4-6 节引用再定去留；不保留原结构只把背景写生动。Platform（zhihu）：opening_role
+    首屏即观点；title_role 直接挂主张不挂悬置式命名。边界：压缩后回检后文对背景数据的 引用是否仍成立，不做"压轴感"方案。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFMC-010
+  answer_summary: M7 咨询型长文，8000 字/6 节。概念注册表命中两类问题：multiple_names（飞轮/增强回路/ 自增长闭环三名同实）与 shifting_definition（第
+    5 节定义偷换为"多渠道协同获客"）—— 概念一致性（Conceptual Coherence）（B，一个概念一个名字且定义前后稳定是图式建构的 文本前提，注册表（§14）是标准诊断工具）；图式形成（Schema
+    Formation）（A-，概念 按依赖序引入且名义稳定时读者才建起可复用心智模型，名/义漂移迫使图式重建，适用于 多节长文）。Editing Plan 指出 shift 实际后果：第 5 节"预算越大闭环越强"仅在新定义
+    下成立、与第 1 节机制无关，属概念漂移导致的 conclusion_leap（AP-LF-011）；全文统一 canonical 术语并首次出现即固定定义、回改前文全部引用处；第 5 节若确要引入新机制须
+    显式声明"这是另一个结构"或删除该推论。Platform（zhihu）：search_mechanism 三名词 分散检索权重，统一后利于关键词沉淀；interaction_signals 读者疑问即评论信号，首节末
+    加术语约定消解。边界：只统一名称不处理第 5 节定义偷换 = 修复未完成；预算-闭环结论 在无新证据前降级为假设。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFED-001
+  answer_summary: M7 教育型（educational）长文，8500 字/7 节，走分块协议。画概念依赖图命中依赖倒置 三处：损失函数/梯度（§7 定义→§2 使用）、过拟合（§6→§4）、训练集划分（§6→§5），属
+    AP-LF-003 依赖序错乱变体；不是"概念太难"而是顺序错——图式形成（Schema Formation） （A-，概念先定义后使用且有锚定案例时情境模型才建成，适用于零基础读者教学长文）+
+    工作记忆限制（Working Memory Limits）（A，未定义术语在工作记忆约 4 组块容量中挂不 住，这正是第 2 节劝退的机制根源）。Editing Plan 按 schema_formation
+    重排依赖序（或 首用处最小自足定义先行、正式展开留后文），产出 Original vs Proposed 大纲对照交用户 确认；拒绝"后文会讲"脚注方案；不删未定义概念；重排后回检示例数据前后引用是否仍成立。
+    Platform（zhihu）：opening_role 开篇给学习路径图替代悬念；search_mechanism 术语按 canonical 命名利于零基础检索。边界：§7 末术语表重排后降级为检索辅助而非补救工具。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFED-002
+  answer_summary: M7 教育型长文，7000 字/6 节。命中管线 §25 Memory Design 缺口（P1）：核心概念零复现、 无统一命名、无一句话总括，读者只留 gist 印象无法提取——记忆线索设计（Retrieval
+    Cue Design）（B，提取线索须在学习时编码且与提取情境匹配，复现须携带新信息或新功能才 有效，适用于方法教学文）；序位效应（Serial Position Effect）（A，系列位置的首尾记忆
+    优势稳定存在，锚点应置节首节末黄金位）；对照单纯曝光（Mere Exposure）（A-，修正 状态：meta 层稳健但单调重复会衰减，故 2-3 次适度复现且每次携带新信息是记忆设计而非 废话）。Editing
+    Plan 3-5 个锚点：四引擎总括命名+一句话锚句、各节首末各一次复现（携带 新场景/新推论）、结尾用四引擎合成统一图景收束；拒绝每节末同构"本节要点"清单（对称 模板腔）与全文加粗爆炸。Platform（zhihu）：content_lifecycle（save
+    读者回检按命名 检索）；interaction_signals 结尾统一图景提供可转发的一屏总结。边界：复现控制在每概念 2-3 次，超量触发单调衰减。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFED-003
+  answer_summary: M7 教育型长文，9000 字/7 节，走分块协议。援引 Simplify Expression, Not Reality （§44）拒绝降级式简化：推导链与三个边界条件是必要复杂度，"直觉上跟着感觉修正"=
+    用易读性换错误；诊断不是"太硬"而是表达无组块——组块化（Chunking）（A-，离散推理 步骤组织为带编号有意义单元后工作记忆才装得下，适用于步骤化数学与逻辑内容）；不用 一句话结论替代读者走完推导，读者自行完成图式建构（Schema
+    Formation）（A-，情境 模型由读者主动建构才产生可迁移理解，适用于原理型内容）的过程不可折叠。Editing Plan 拆解式替代：第 3 节推导拆成编号分步块（每块一个动作+一行算式）、1000
+    人模拟类比替换 抽象百分比、第 5 节边界条件改"三个翻车场景"分块叙述——拆解表达、保留数学结构；不砍 推导步骤或边界条件。Platform（zhihu）：opening_role 先给"16.7%
+    直觉答案会错"锚点 问题再进推导；cover_role 示意图封面降门槛。边界："一段一个点"在推导块内部遵守、跨块 不适用；专业读者可加公式速查附录但不折叠正文推导。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFED-004
+  answer_summary: M7 教育型长文，8000 字/5 节。命中 AP-LF-003 混写变体：指令/原理/易错点三层内容在同 段交替，"头大"来自排版结构而非内容——外在认知负荷（Extraneous
+    Cognitive Load） （A-，由呈现方式而非内容本身产生的无效负荷，"做"与"懂"的模式反复切换是主要来源， 适用于操作教程混写场景）。Editing Plan 按组块化（Chunking）（A-，用层级信号把多元素
+    绑成组块，对离散操作步骤最有效）分层重组每节：操作步骤（编号列表，每步一动作）/ 原理框（步骤后集中解释）/易错点（提示框），并给第 3 节重组示例；不删原理（否则读者 无法迁移到变体任务）；不做纯加粗/分割线/emoji
+    视觉修补（段落墙内信息仍混写）。 Platform（zhihu）：cover_role 步骤截图式封面；search_mechanism"数据透视表 求和 计数" 等操作词进小标题利于检索。边界：遵守"内容别动"——只动信息层级与顺序；重组后回检
+    步骤与原理对应关系。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFED-005
+  answer_summary: M7 教育型长文，7500 字/6 节（掘金）。scent 断裂：标题层承诺"快速上手"，节标题与 内容层供给理论讲义（第 1 节 1200 字设计思想、第 5 节才出现首个可运行查询、全文零
+    练习），30 秒停留与 scent 失效一致——信息气味（Information Scent）（B，读者据线索 预估信息价值，线索-交付错位即离场，适用于标题承诺型教程）；信息觅食（Information
+    Foraging）（B，读者按收益/时间成本决定去留，理论前置于实操违背新手觅食预期）。 Editing Plan 双向修复交用户取舍：①Rewrite 标题诚实化（"SQL 入门：先理解这三个
+    概念"）；②Restructure 内容兑现承诺（第 1 节改可跟敲的第一个查询，理论后置）；不放大 标题承诺；修复后逐节核对标题-内容 scent 一致性并给新目录。Platform（juejin）：
+    title_role 技术社区重可检索的具体性而非营销承诺；interaction_signals 收藏驱动型 社区，跟敲练习是收藏主因。边界："内容迁就标题"若保留须明示 trust 持续损耗代价；
+    理论内容不删只调序。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFBR-001
+  answer_summary: M7 思想文（thought_leadership），6000 字/5 节。先做文体判定：评价重心在 originality+argument，不适用研究报告证据模板，拒绝麦肯锡化改写。命中
+    AP-LF-009 （Underexplaining：断言链"我确信/毫无疑问/我可以预言"缺 warrant，两则轶事撑不起 普遍化）——论证结构（Argumentation Structure）（B，思想文的断言可用
+    warrant 桥接 作者观察与主张，强观点+显式边界即可辩护，大样本非必需）；人格—情感—逻辑三诉求 （Ethos Pathos Logos）（B，authority 目标下 ethos 贡献最大，绝对句消耗
+    ethos 而 可辩护强观点增强 ethos）。Editing Plan 思想文式修复：为两条断言链补 warrant（N 次 组织实验的观察支撑+机制解释）并划边界（"这是我基于 N 次实验的判断，适用于知识密集型
+    组织"），"毫无疑问"降级为可辩护强观点；"按项目重组""以能力为节点"是原创提法， 按 §43 Preserve Author Intent 保全，不删锋利立场。Platform（wechat）：title_role
+    保留观点锋利度不转研究体命名；sharing_mechanism 转发承载原创概念，报告体直伤转发达意。 边界：不要求补大样本实证、不编造研究引用；修辞调级不等于稀释观点。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFBR-002
+  answer_summary: M7 思想文/随笔混合体，5500 字/4 节。作者声音（短句成段、比喻、第二人称）是个人 IP 辨识度资产，转报告体将同时摧毁真实性感知（Authenticity Perception）（B，读者对作者
+    真实性的判断依赖稳定表达风格，风格突变触发"做作"归因，适用于创始人 IP 文本）—— "专业感"收益远小于声音损失（§43 Preserve Author Intent，先说明代价再动手）；加工
+    流畅性（Processing Fluency）（A-，短句与熟悉比喻降低阅读成本，作用于阅读体验层， 与"专业感"归因分属两条通路，勿混为一谈）。Editing Plan 不直接照办：给替代方案——
+    保留短句与比喻的 Pass 2 微调（删冗余、理顺松散段逻辑连接、四节加克制小标题）+ 200 字 报告体样例供董事会对比感知差异，决定权交回用户；不删第二人称与比喻（承担论证功能）； 用户未理解后果前不模板化重写。Platform（wechat）：title_role
+    保留口语张力； sharing_mechanism 朋友圈转发依赖金句与身份表达，报告体直伤转发动力。边界：样例仅作 对比用；董事会硬性要求时建议"公众号原文+董事会内参版"双轨。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFBR-003
+  answer_summary: M7 思想文（创业叙事），6500 字/5 节。叙事是资产不是病灶：叙事传输（Narrative Transportation）（B+，故事沉浸降低反驳倾向，高感染力叙事应保留，故事四节不动）；
+    命中 AP-LF-012（无 qualifier）——"我们的经验"到"所有创业公司都应"是 n=1 普遍化 且故事与结论间缺搭桥，轶事与统计的错配（Anecdote vs Statistics）（B，单案例的生动性
+    使其说服力超过其证据地位，n=1 只能支撑假设与路径展示，不支撑普遍化处方）。Editing Plan 三件套修复结论段：加边界（"适用于品类结构分散、库存占用现金流的早期公司"）、 加机制桥（砍
+    SKU 为何起效：现金集中、决策带宽、单位经济变化）、加至少一次反例检验 （哪些公司不该这么做）；"全部积蓄换来的真理"降级为"我们在一个样本上验证过的路径"。 Platform（wechat）：sharing_mechanism
+    转发达意句走身份认同，加边界后仍可转； title_role 不放大外推。边界：不删故事换数据堆砌、不只软化"真理"二字保留外推、不 要求补 100 家公司数据后才许下结论。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFBR-004
+  answer_summary: M7 品牌长文发布前把关，7000 字/6 节。命中 AP-LF-017（Citation Decoration）+ 红线项： "哈佛商学院 2019 年 73%/68%"无法溯源且检索示数字版本不一，触发来源核验（Provenance
+    Verification）（C，证据尚新、情境依赖——高传播风险内容的引用必须独立溯源后使用， 不适用于"群里看到有人转"的转引）；不放行理由：精确数字+权威机构名触发流畅性真相 效应（Fluency
+    Truth Effect）（A-，流畅表述被误判为真，作用于低审读直觉判断，被读者 核查证伪后信任反噬更重）——公众号信任资产损失远大于改标题成本。Editing Plan 分级 处置：①优先换可查证来源，真实出处核实后才可保留精确数字；②否则删百分比、降级为
+    "多项研究提示多数变革未达预期（具体比例存在争议）"并同步修改标题与两处小标题。 Platform（wechat）：risk_factors 平台对失实信息有处罚机制（verified_observation，
+    以最新规则为准）；content_lifecycle 公众号长尾搜索会让错误引用持续暴露。边界：不得 "换更权威机构名"、不得标"仅供参考"照发；核实完成前不发。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFBR-005
+  answer_summary: M7 思想文（叙事主导），8000 字/6 节。命中 AP-LF-004（Evidence Dumping 变体）：4/6 故事段为孤儿叙事（无对应 claim 的证据）——引人不分心的细节效应（Seductive
+    Details Effect）（B，生动但与主张无关的细节抢走注意与记忆配额，读者记得台风夜、忘"确定性 生意"，适用于论证型文本的游离素材）；故事人物认同（Story Character Identification）
+    （B，读者对具体人物的情感联结驱动代入与转发，人物段是 sharing_mechanism 的达意载体， 但须绑定主张才有效）。Editing Plan 绑定式而非删除式：保留承担论证功能的 2
+    个故事段并 让每段结尾显式回扣 claim；4 个游离段择优保留 1 个重新剪裁服务核心主张（店长出走段 → "确定性也指人的稳定"），其余降为删节或另起一篇——"故事一个不删"用转移阵地满足；
+    修改后复述测试：读者能否一句话转述"便利店是确定性生意"。Platform（wechat）： sharing_mechanism 每段回扣句即候选转发语；title_role 挂主张而非场景。边界：60%
+    叙事 不必压成观点集锦，目标是从"记得故事"升级为"记得故事+主张"。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFAI-001
+  answer_summary: M7 平台长文（AI 辅助初稿），8000 字/6 节。命中 AP-LF-001（AI Semantic Repetition， §38 七类之首）：AI 逐段独立生成的默认同义改写——§1/§3/§6
+    三句剥离措辞后信息增量 为零，同一重复组；信息觅食（Information Foraging）（B，读者按信息增量收益决定继续 成本，重复组是负收益节点）。Editing Plan 成组比对→保留最具体一句（第
+    6 节"价格曲线 陡降"具象表述），其余 Cut/降为括注，输出重复组清单与预计压缩量；向用户解释病因与 复发风险：只润色句子不解决逐段生成的结构性重复，AI 内容饱和（AI Content Saturation）
+    （C，证据尚新、情境依赖——读者对模板化复述的耐受度在下降，效应大小未定）。Platform （zhihu）：interaction_signals"信息密度低"评论即社区信号，修复后正面呼应；title_role
+    六信号具体性保留不转营销腔。边界：§1→§6 若判定为首尾呼应修辞功能可保留一处并对账； 演示数据不充当增量证据。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFAI-002
+  answer_summary: M7 平台长文（AI 全景型），9000 字/8 节。命中 AP-LF-018（Artificial Completeness）： 8 维度机械等权、无中心命题、无取舍，"什么都有又什么都没说"的病根是文章在"解析"而非
+    "论证"——论证结构（Argumentation Structure）（B，论点须有取舍与优先级，等权罗列不 构成论证，authority 型必须有可辩护主张）；信息觅食（Information
+    Foraging）（B，读者 为目录完整支付阅读成本却获得不了可转述判断，收益/成本失衡即退出）。Editing Plan 走 Re-outline 交用户确认：先定一句中心命题（"私域的瓶颈通常不在引流而在复购设计"，
+    演示数据），再按论证需要取舍——合并引流+内容、Cut 工具节、Expand 复购/转化；拒绝 等权结构+每节金句（完备性幻觉抛光）；向用户说明"全面"的代价：读者只为一个可转述的 判断停留。Platform（zhihu）：title_role"一文读懂"式收敛为具体主张；search_mechanism
+    8 节均分关键词稀释检索权重，聚焦后利于长尾。边界：新大纲确认前不输出重写稿；被 Cut 节存档为专题素材。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFAI-003
+  answer_summary: M7 平台长文（AI 同构型），8500 字/6 节。命中 AP-LF-019（Symmetry Bias）：六节 "定义-三要点-小结"完全同构、标题句式雷同，是 AI
+    逐段独立生成的结构指纹——匀速节奏 抹平重要性差异，读者无法从形态判断哪节值得慢读；新颖性偏好（Novelty Preference） （A，注意系统对新异刺激有稳定偏向，同构使 30% 处建立预期后
+    novelty 不再被触发， attention 持续衰减，适用于节奏设计）；认知疲劳（Cognitive Fatigue）（B，匀速高密 结构加速中段衰减；修正状态：存在但有条件，受动机与内容相关性调节）。Editing
+    Plan 按内容重新分配节形态：核心节用案例展开、次要节 Merge/压缩、对比性内容改表格，打破 逐节同构、小标题改组块名；不为破对称改成随机杂乱——节奏服务论证；回答用户：不是 "写丰满"而是"差异化"。Platform（zhihu）：opening_role
+    首节后加全文结构预告标出核心 节；interaction_signals"像课件"评论对应同构感，修复点可回应。边界：打破同构后仍须 保持可预期的章节信号，避免过度变形。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFAI-004
+  answer_summary: M7 平台长文（AI 白皮书），9000 字/6 节（wechat）。双命中：AP-LF-015（Mechanical Transition：五处零信息过渡句）+ AP-LF-016（Buzzword
+    Density：黑话链无具体主语与 场景）——具体性语言（Concreteness in Language）（B+，可看见可测量的表述才建立情境 模型，黑话链使具体性归零，"很顺但没内容"的体感由此而来）；加工流畅性（Processing
+    Fluency）（A-，流畅感被误读为专业感，作用于直觉判断——"读着很顺"恰是风险信号）。 Editing Plan 给替换规则而非逐句润色：过渡句改实质承上启下句（点明上节结论如何改变 下节问题）；黑话逐个替换为可测量表述或删除（示例："打通线上线下双闭环"→"线上下单
+    门店自提的转化率从 X% 到 Y%"）；不以"客户吃这一套"保留黑话——顺应会加剧通胀且客户 核查即反噬。Platform（wechat）：risk_factors 中小企业主受众对虚化表述的投诉风险；
+    content_lifecycle 白皮书长尾转发场景中黑话不可转述。边界：术语保留诉求限定为"保留 必要术语、替换空心黑话"，逐词处理清单交用户核对。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: LFAI-005
+  answer_summary: M7 思想文（AI 生成+人工包装），10000 字/7 节，走分块协议。双命中：AP-LF-006 （False Depth："第一层/第二层/第三层"修辞升维，每层只是同一主张换措辞，无机制/边界/
+    反例，删繁从句后主张不变）+ AP-LF-013（Conclusion Echo：第 7 节对第 1 节零增量复述 伪装升华）——概念一致性（Conceptual Coherence）（B，概念层级须对应真实信息分层，
+    伪层级迫使读者建构空图式）；信息觅食（Information Foraging）（B，"看着很深其实一层" 即多轮采集后增量趋零，读者按投入产出比中止深读）。Editing Plan 升级方案：让"层"
+    携带真实增量（每层回答一个具体问题或引入机制/边界/反例），结论必须推进（新推论/行动 含义/诚实的开放问题）而非回声；结尾位保留重写不移除——峰终定律（Peak-End Rule） （B，修正状态：存在但有条件，回顾记忆由峰值与结尾主导，结尾重写优于移除）；如实告知
+    用户：资深读者判断成立，本文当前不构成思想文。Platform（zhihu）：interaction_signals 资深读者挑错高发于评论区，升级后正面回应；title_role"本质回归"式标题升级完成前与
+    内容不匹配，预留降级方案。边界：不保留三层外壳只润色用词；不删结尾段了事；用户拒绝 实质升级时建议降格为叙事随笔。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false

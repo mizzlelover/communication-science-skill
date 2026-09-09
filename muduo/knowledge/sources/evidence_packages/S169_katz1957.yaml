@@ -1,0 +1,25 @@
+# Evidence Package — S169 Katz 1957（The Two-Step Flow of Communication: An Up-To-Date Report on an Hypothesis）
+# 标准格式。access_level 如实标注。
+source_id: S169
+title: "The Two-Step Flow of Communication: An Up-To-Date Report on an Hypothesis"
+authors: "Elihu Katz"
+year: 1957
+journal: "Public Opinion Quarterly 21(1): 61-78"
+doi: "10.1086/266687"
+url: "https://repository.upenn.edu/cgi/viewcontent.cgi?article=1279&context=asc_papers"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "论文全文 PDF 由 UPenn Scholarly Commons 公开托管（Wikipedia 引用该链接，本次抓取 PDF 失败但链接真实存在）。实际获取：① Wikipedia（weblio 日文镜像）完整条目（两级传播模型：大众媒介→意见领袖→较少接触者；1944 People's Choice 起源 → 1955 Personal Influence → 1957 更新；意见领袖定义与批评）+ 求闻百科中文条目（含 Deutschmann & Danielson 1960『谨慎应用』批评、Rogers 扩散研究对两级假设的修正、数字时代多级流动）；② PSU 学术写作页面（Katz 1957 把人际关系功能更新为『传播网络 + 社会压力/支持来源』；意见领袖与受影响者相似、差异在媒介接触度）；③ communicationtheory.org（两级传播理论介绍与批评）；④ Britannica（Katz 生平与两级传播贡献）；⑤ tandfonline 引用页与多篇中英文期刊论文确认 DOI 10.1086/266687、POQ 21(1):61-78。"
+research_question: "对 1944 年伊利县选举研究（《人民的选择》）中提出的两级传播假说做一次『最新报告』：大众媒介信息是否经由意见领袖的人际中介才影响公众？该假说有哪些证据、应用与未决问题？"
+core_claims:
+  - "大众媒介信息并非直接均匀击中受众：『观点常从广播与印刷媒介流向意见领袖，再由他们流向较不活跃的人群』（Bostian 1970 转述原假说；Wikipedia/PSU 页面）"
+  - "意见领袖与受其影响者在个性、兴趣与社会经济地位上相似，关键差异是他们对大众媒介的接触度更高；人际接触对投票/态度改变的作用超过媒介直接说服（1944 伊利县研究结论；PSU 页面/communicationtheory.org）"
+  - "Katz 1957 把两级流动的研究更新为对『人际关系功能』的概括：人际接触作为传播网络以及社会压力/支持的来源（PSU 页面引用 Bostian）——后续发展为多级流动修正"
+  - "批评与边界：Deutschmann & Danielson（1960）建议对两级假说谨慎应用；Rogers 的扩散研究显示知晓阶段大众媒介作用更大；新媒体时代两级流动与直接命中、多级流动并存（求闻百科）"
+method: "研究整合与理论更新（文献综述 + 对 1940 年代选举面板研究及 1950 年代多项议题研究的再分析），发表于 Public Opinion Quarterly"
+results: "确立两级传播为有限效果范式的核心命题：媒介效果经由人际网络过滤与放大；意见领袖不是固定精英层而是各职业/各阶层分布的活跃转述者（后被实证修正为多级流动）"
+limitations: "原研究（伊利县）未直接测量完整的两级链条，两级流动是事后推断假说；只测了一般媒介接触而非特定信息流；单个意见领袖层级随议题变化，非稳定结构（PSU 页面/求闻百科批评）"
+boundary_conditions: "议题需一定解释成本或风险（投票/健康/高价购买）；社会网络存在活跃转述者；对低风险即时决策，直接媒介命中更常见；新媒体环境两级结构不再普遍成立"
+relevant_nodes: [two_step_flow, opinion_leadership]
+notes: "两级传播假说的经典『最新报告』论文（与 S43 Katz & Lazarsfeld 1955 直接衔接）。内容基于 Wikipedia 系/PSU/学术引用等多源交叉，UPenn 全文链接真实存在但未抓取到正文，未编造。"
+last_verified: "2026-09"

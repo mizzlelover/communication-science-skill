@@ -1,0 +1,26 @@
+# Evidence Package — S76 Sharp 2010（How Brands Grow: What Marketers Don't Know）
+# 标准格式。access_level 如实标注。
+source_id: S76
+title: "How Brands Grow: What Marketers Don't Know"
+authors: "Byron Sharp"
+year: 2010
+journal: Oxford University Press（专著）
+doi: "无 DOI（专著）"
+url: "https://thinkifwethink.com/how-brands-grow-by-byron-sharp-key-insights-and-modern-marketing-applications"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：thinkifwethink 英文深度摘要（增长靠扩大渗透而非忠诚/double jeopardy 效应/约 50-80% 销量来自购买频率很低的顾客/mental & physical availability 两大基石/消费者是『多配偶』的/独特性品牌资产/FMCG、航空、银行、娱乐多行业大样本）+ 豆瓣长评（double jeopardy 双重困境详解：小品牌更难获客且留存更弱/帕累托修正：头部 20% 客户贡献约 50%+ 而非 80%/Mass Marketing 优于 Target Marketing/均值回归）+ 雪球分析（夏普渗透率模型/双重危机定律/心智与物理可获得性/品类进入点 CEP 链/可口可乐、宝洁的实践）+ 界面新闻（大渗透模型/真正贡献销售额的是轻度用户/快消年流失七成）+ 微博解读（两大基石：心理可得性与物理可得性）"
+research_question: "基于大样本购买数据，品牌到底靠什么增长？传统营销的哪些认知是错的？"
+core_claims:
+  - "品牌增长主要靠扩大渗透率（更多轻度/新购买者），而非提升既有用户的忠诚度或复购率；市场份额主要由『偶尔买你』的人数决定，而非超级忠诚客群"
+  - "双危机定律（double jeopardy）：小品牌不仅购买者更少，其购买者的购买频率与忠诚也系统性更低；『小而美的忠诚客群』在重复购买数据中稀缺——这是市场结构而非品牌失败"
+  - "轻购买者主导增长：约 50-80% 的品牌销量来自购买频率很低的顾客；只经营重度用户会缩小品牌增长潜力"
+  - "增长的两大基石是心理可得性（购买时刻被想起：识别记忆、品牌资产一致性）与物理可得性（想买时随处可买到：渠道与铺货）；品类进入点（CEP）联想网络决定心理可得性"
+  - "消费者在品牌间普遍切换（『多配偶』式购买），忠诚是相对的；独特性品牌资产（颜色、logo、包装、标语）通过长期一致使用积累识别与记忆"
+method: "大样本购买数据研究（Ehrenberg-Bass 研究所跨 FMCG/航空/银行/娱乐等行业的扫描面板数据分析，Dirichlet 模型传统）"
+results: "（数据实证）当代品牌增长研究最常被引用的实证著作；系统破除忠诚度营销迷思"
+limitations: "证据以重复购买品类为主；对耐用品、高卷入与新兴品类的适用性需谨慎；物理可得性未设独立机制节点，散见于 mental_availability 的边界条件"
+boundary_conditions: "适用于快消等重复购买品类；以物理可得性（渠道铺货）为前提——买不到的品牌再有名也不产生销售；描述结构规律，不否认个别强差异化品牌可偏离"
+relevant_nodes: [mental_availability, double_jeopardy_law, category_entry_points, distinctive_brand_assets, positioning_mechanism]
+notes: "Ehrenberg-Bass 学派奠基之作（book 级）。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

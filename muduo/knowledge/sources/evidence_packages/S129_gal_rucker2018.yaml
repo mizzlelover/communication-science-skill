@@ -1,0 +1,25 @@
+# Evidence Package — S129 Gal & Rucker 2018（损失厌恶批判）
+# 标准格式。access_level 如实标注。
+source_id: S129
+title: "The Loss of Loss Aversion: Will It Loom Larger Than Its Gain?"
+authors: "David Gal; Derek D. Rucker"
+year: 2018
+journal: Journal of Consumer Psychology 28(3), 497-516
+doi: "10.1002/jcpy.1047"
+url: "https://m.sohu.com/a/249175586_130887/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "批判论点经多源交叉实取：中国社科院/华尔街见闻报道（损失厌恶被指为谬误/惯性与参照依赖的误读/科学惰性）+ Crossroads Lab 词条（Gal & Rucker 2018 限定普适性但不否定基本模式）+ 2024 Camerer 等元分析（607 项估算均值 1.955 [1.820, 2.102]，效应稳健但幅度域依赖）"
+research_question: "『损失比收益显得更大』是否被过度普遍化？经典证据能否被其他机制（惯性/参照点/理性反应）解释？"
+core_claims:
+  - "损失厌恶的普适性被高估：经典范式（如咖啡杯实验）可能被『惯性/现状维持』而非『损失敏感』解释"
+  - "部分被归因损失厌恶的现象（沉没成本等）与损失-收益比较无关，是被错误归因"
+  - "科学惰性：挑战证据（如价格上升比下降更具影响力）被低引用，模棱两可证据总被朝损失厌恶方向解释"
+  - "2024 Camerer 等元分析（607 项估算/150 篇）给出平衡视角：均值损失厌恶系数 1.955 [1.820, 2.102]——效应真实稳健，但 2:1 为具体范式的参数而非普适常数"
+method: "理论批判 + 证据再审查 + 对经典范式的替代解释（惯性/参照依赖/理性反应）"
+results: "（批判性综述）限定损失厌恶的普适性与效应量；不否定基础模式（元分析确认均值≈2）"
+limitations: "批判主要针对『普适恒定比例』的流行叙事；Camerer 元分析表明效应稳健、幅度因域而变"
+boundary_conditions: "小损失/抽象损失不对称较弱；大额/具身损失更强；测量方式影响表现出的权重"
+relevant_nodes: [loss_aversion, endowment_effect, status_quo_bias, sunk_cost_fallacy]
+notes: "#8 复核清单 loss aversion 条目的批判证据（paper 级）。与 B2 已登记的 S113（Kahneman & Tversky 1979 原始）构成『原始+批判+元分析』完整链条。未编造数字：1.955 [1.820, 2.102] 为 Camerer 元分析公开结果。"
+last_verified: "2026-09"

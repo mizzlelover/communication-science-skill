@@ -1,0 +1,27 @@
+# Evidence Package — S10 Andy Clark 2016（Surfing Uncertainty）
+# 标准格式。access_level 如实标注。
+source_id: S10
+title: "Surfing Uncertainty: Prediction, Action, and the Embodied Mind"
+authors: "Andy Clark"
+year: 2016
+journal: Oxford University Press（专著，2016-01-07，424 页，ISBN 9780190217013）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/review/17394021/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：(1) 豆瓣深度书评（WebFetch 全文，三部分九章逐章解析）——预测误差最小化/层级生成模型/感知即'受控的幻觉'/注意力=精确度加权（含偏向竞争、空间与特征注意、感觉整合）/主动推断（行动=本体感觉预测的自我实现）/内感受推断与情绪/懒惰预测大脑与'黑暗房间'悖论/设计者环境与语言作为精确度操控工具；(2) OUP 官方书目页——大脑作为预测机器（prediction machines）、行动即选择下一个输入、感知-行动循环、'predictavores'；第二本关于预测心智的书，首本将其与具身认知结合的专著；(3) Mind 期刊书评（Alva Noë 撰，DOI 10.1093/mind/fzx038）——学术接受记录；(4) 学术引用链——Sprevak & Smith 2023（Top Cogn Sci）预测加工综述将本书列为预测编码/主动推断框架的书目级来源"
+research_question: "预测加工（predictive processing）能否统一解释感知、行动、注意、情绪、记忆与人类文化的独特性？"
+core_claims:
+  - "大脑是预测机器：心智的统一原理是预测误差最小化——层级生成模型持续产生自上而下的预测以'解释掉'（explain away）自下而上的感官信号，只有未被预测的差异（prediction error）沿层级向上传递"
+  - "感知即'受控的幻觉'：知觉体验是大脑基于先验对世界成因的最佳猜测，受感官信号实时约束与修正"
+  - "注意力=精确度加权（precision weighting）：注意不是独立'探照灯'，而是调节预测误差的'精确度'（信号可靠性/神经增益）的机制，可统一偏向竞争、空间/特征注意、感觉整合等注意力现象"
+  - "行动=主动推断（active inference）：行动是实现本体感觉预测的手段（自我实现的预言），感知-注意-行动构成循环，行动服务于降低不确定性；同一生成模型离线运行构成想象、梦境与记忆的基础（'认知打包套餐'）"
+  - "解决'黑暗房间'悖论：生命体内嵌生存先验（食物、体温等）+ 探索（新奇）可降低长期不确定性，故大脑不会停在最可预测处——为好奇与新奇偏好提供统一解释"
+  - "人类独特性来自'设计者环境'：社会-文化-技术生态位为预测大脑提供脚手架；语言是操控自己与他人精确度分配的强大工具"
+method: "理论综合专著（认知科学哲学）：预测编码/自由能框架 + 具身认知 + 神经科学证据（MMN、双眼竞争、重复抑制、fMRI 想象-感知同构等）"
+results: "（理论综合）预测加工框架面向公众与跨学界的权威综合；'注意力=精确度加权'成为后续注意力理论化的重要表述"
+limitations: "预测加工为统一理论纲领而非单一实证结论；'大脑=预测机器'的强解释在哲学与实证层面均有争论（Mind 书评即为例证）；无数学形式化"
+boundary_conditions: "适用于解释感知/注意/学习的机制框架；不得把'受控的幻觉'当作现实不存在；精确度加权为计算模型表述，非可直接观测的单一脑区过程"
+relevant_nodes: [prediction_error, novelty_preference, reward_prediction_dopamine, curiosity_gap]
+notes: "预测误差最小化/生成模型/精度加权为公开标准内容，经深度书评+出版社官方页+期刊书评交叉实取，未编造。"
+last_verified: "2026-09"

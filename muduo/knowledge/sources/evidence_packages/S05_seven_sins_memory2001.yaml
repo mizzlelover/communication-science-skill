@@ -1,0 +1,26 @@
+# Evidence Package — S05 Schacter 2001（The Seven Sins of Memory）
+# 标准格式。access_level 如实标注。
+source_id: S05
+title: "The Seven Sins of Memory: How the Mind Forgets and Remembers"
+authors: "Daniel L. Schacter"
+year: 2001
+journal: Houghton Mifflin（专著；2002 牛津大学出版社平装版）
+doi: "无 DOI（专著；框架同源论文 DOI: 10.1037/0003-066X.54.3.182）"
+url: "https://pubmed.ncbi.nlm.nih.gov/10199218/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 PubMed 1999《Am Psychol》论文摘要（PMID 10199218，七宗罪分类与前三种遗忘/中间三种扭曲/末种侵入的完整划分）+ 渠道2 CUNY 与 UCF 心理学教材章节（2001 书七宗罪表格化与逐罪机制、示例）+ 渠道3 中文书评（道客巴巴《记忆七罪》，七章对应七宗罪、HM 案例、fMRI/PET 神经成像）+ 渠道4 American Archive 电台访谈（Houghton Mifflin 出版确认）+ 渠道5 Schacter 2022《Memory Sins in Applied Settings》（PMID 37035272，明确 omission/commission 划分）与 2021 年 update（PMCID PMC8285452，建构性记忆）"
+research_question: "人脑记忆为何会系统性出错？这些错误能否被分类，且是适应性系统的副产品而非随机故障？"
+core_claims:
+  - "记忆的失误可归为七宗罪：transience（随时间衰退）、absent-mindedness（注意缺失导致的编码失败）、blocking（信息暂时无法提取，如话到嘴边）、misattribution（来源混淆与错误再认）、suggestibility（受误导植入记忆）、bias（当前知识与信念对过去的回溯性扭曲）、persistence（无法忘怀的侵入性记忆）"
+  - "七宗罪分两组：三种 sins of omission（transience、absent-mindedness、blocking，该记的没记住）与四种 sins of commission（misattribution、suggestibility、bias、persistence，记错了或不该记的记住了）；另一常用分法为三种遗忘+三种扭曲+一种侵入（1999 论文摘要）"
+  - "七宗罪不是系统设计缺陷，而是记忆适应性特征的副产品（by-products of otherwise adaptive features）；记忆本质上具有建构性，每次提取都可能改写"
+  - "各宗罪的证据来自认知、社会与临床心理学及认知神经科学：脑损伤患者（如 H.M.）与 fMRI/PET 神经成像研究"
+  - "书的章节结构对应七宗罪逐一展开（健忘、失神、空白、错认、暗示、偏颇、纠缠），并以广为人知的人物故事阐释每一宗罪（中文书评确认）"
+method: "认知心理学、社会心理学、临床心理学与认知神经科学证据的综合与分类框架（科普专著）"
+results: "（专著）将记忆失误系统化为七宗罪分类框架，并将其定位为适应性特征的副产品而非故障"
+limitations: "分类框架而非单一机制，各宗罪证据强度不一（persistence 的适应性解释仍有争论）；教材也提醒早期研究样本以 WEIRD（西方受教工业民主社会人群）为主"
+boundary_conditions: "不同宗罪的强度因年龄、情绪与事件类型而异；部分宗罪（如 persistence）在特定情境是保护机制而非缺陷"
+relevant_nodes: [memory_sins, testing_effect, zeigarnik_effect, retrieval_cue_design, schema_violation]
+notes: "记忆七宗罪框架的科普专著版，与 1999《Am Psychol》论文同源（本书为框架的大众化展开）。多源交叉实取（PubMed 摘要、两本开放教材、中文书评、作者后续论文），核心概念为公开内容，未编造。"
+last_verified: "2026-09"

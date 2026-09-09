@@ -1,0 +1,25 @@
+# Evidence Package — S55 Watts 2003（Six Degrees）
+# 标准格式。access_level 如实标注。
+source_id: S55
+title: "Six Degrees: The Science of a Connected Age"
+authors: "Duncan J. Watts"
+year: 2003
+journal: W. W. Norton（专著）
+doi: "无 DOI（专著）"
+url: "https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8057803"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：中文百科（小世界现象/局部行为导致全局结果/网络结构决定关系）+ 深度解读（2003 全球 6 万志愿者邮件实验：约 6 跳到达/2/3 中断因不感兴趣；Facebook 3.57 度）+ Watts-Strogatz 模型（随机重连创造捷径）"
+research_question: "小世界现象（六度分隔）为何普遍存在于各类网络？网络结构如何决定动力学行为？"
+core_claims:
+  - "小世界现象：任意两人平均约 6 个中间人可达（Milgram 1967 连锁信 + Watts 2003 全球 6 万志愿者邮件实验确认 5-7 跳）"
+  - "Watts-Strogatz 模型：规则网络随机重连少量链接创造'捷径'，产生短平均路径+高聚类的小世界结构——六度分隔在何种条件下出现"
+  - "局部行为→全局结果：网络上的传播/合作演化/同步等动力学主要由网络结构决定（传染病/谣言/金融故障传播）"
+  - "六度重点不在'六'而在'连接的科学'：小世界结构广泛存在于神经/社会/经济/生态/互联网网络"
+method: "网络科学（Watts-Strogatz 1998 模型）+ 大规模实证（2003 邮件实验）+ 跨领域应用"
+results: "（实证+理论）小世界网络成为网络科学核心概念；六度分隔首次大规模实证"
+limitations: "科普+研究综合；小世界出现条件依赖具体网络参数"
+boundary_conditions: "稀疏连接的巨大网络；平均路径与聚类系数需同时考量"
+relevant_nodes: [small_world_property, weak_ties_strength, network_threshold_models]
+notes: "小世界网络的开创来源（book 级）。6 跳/3.57 度为公开数据，未编造。"
+last_verified: "2026-09"

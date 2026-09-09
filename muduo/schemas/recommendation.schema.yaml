@@ -1,0 +1,27 @@
+# Recommendation Schema（所有重要建议的输出结构）
+#
+# 研究诚信规则：
+#   - confidence：内部必填置信级别（HIGH/MEDIUM/LOW/EXPERIMENTAL），禁止所有建议同语气；
+#     用户侧可简化显示，但内部字段必须存在。
+#   - 平台建议必须分层：mechanism（理论层）与 platform_observation（平台层）不得混成一句
+#     "根据认知科学，某平台必须……"。
+#   - evidence_trace：Recommendation → Mechanism → Evidence → Source 可回溯链（）。
+type: object
+required: [observation, diagnosis, mechanism, evidence_level, why_it_matters, recommendation, boundary, confidence]
+properties:
+  observation:  {type: string, description: "看到了什么（对内容的客观描述，非评价）"}
+  diagnosis:    {type: string, description: "问题判断：属于哪个 Behavior Goal 的哪个环节"}
+  mechanism:    {type: array, items: {type: string}, description: "机制节点 ID"}
+  evidence_level: {type: string, enum: [A, B, C, D, E], description: "所引机制的证据等级"}
+  confidence:   {type: string, enum: [HIGH, MEDIUM, LOW, EXPERIMENTAL], description: "本条建议的置信级别；D/E 级机制最高只允许 LOW/EXPERIMENTAL"}
+  causal_status: {type: string, enum: [experimental, quasi_experimental, correlational, observational, case_inference, speculative], description: ""}
+  mechanism_note: {type: string, description: " 理论层：机制如何起作用（一句）"}
+  platform_observation: {type: string, description: " 平台层：该平台的观察依据（evidence_level L1-L4），与理论层分开陈述"}
+  why_it_matters: {type: string}
+  recommendation: {type: string, description: "具体改法，可直接执行"}
+  example:      {type: string, description: "改写示例（可选字段，建议给出）"}
+  boundary:     {type: string, description: "适用与不适用条件（必须给出）"}
+  alternative:  {type: string, description: "替代方案或竞争性机制解释"}
+  risk:         {type: string, description: "执行风险（含短期表现与长期价值的冲突）"}
+  evidence_trace: {type: string, description: "机制 ID → 证据 → source_id 的回溯链"}
+  platform_adjustment: {type: string, description: "在该平台下的具体修正（可选）"}

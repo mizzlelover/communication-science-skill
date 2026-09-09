@@ -1,0 +1,205 @@
+# Theory Name-dropping 评测案例（8 个，专项）
+# 测试被测系统拒绝理论名堆砌：输入含堆砌理论名词（不解释机制、无证据链接、
+# 为显得专业而列举），系统必须拒绝名称堆砌，只保留有证据支持的机制并给出边界。
+# 判定纪律：罗列"社会认同+社会证明+稀缺+框架效应+情绪唤醒……"而
+# 不解释机制 = 判定失败；每次调用机制必须回答：机制是什么、什么条件激活、
+# 影响什么行为、证据强度、边界、可能的竞争机制。
+# material_ref 均为 source_registry / content_corpus / anti_patterns / mechanisms 中真实存在的条目。
+
+- case_id: TND-001
+  category: theory_namedropping
+  difficulty: easy
+  input: >-
+    （场景：爆款拆解）用户说："帮我分析这个旅行 plog 爆款（约 4.6 万赞），
+    把社会认同、稀缺效应、损失厌恶、框架效应、情绪唤醒、峰终定律、
+    蔡格尼克效应全写上，每个理论两句话，显得专业。"
+  context: {platform: xiaohongshu, goal: analysis, audience: "内容运营"}
+  expected_behavior: >-
+    应拒绝装饰性罗列并裁剪为与案例证据链相关的机制，不得按清单逐项硬凑：
+    1) 明确"理论名数量≠分析质量"，堆砌未解释机制的理论名是伪深度
+    （longform_anti_patterns AP-LF-003 概念倾倒：术语密度制造专业感，
+    实为 credentialing_symbols 的文本版）；2) 对真实案例（XHS-A-HIGH-002：
+    情绪唤起+沉浸叙事+双列流封面即标题）只保留有证据的机制并逐项回答
+    "激活条件+影响行为+证据等级"：emotional_arousal（B 级：高唤醒情绪
+    促分享，需控制曝光量）、curiosity_gap（B 级：封面制造信息缺口促点击）；
+    3) 指出稀缺/损失厌恶/峰终等与"为何被喜欢被分享"的证据链无关，
+    硬塞属于理论名堆砌；4) 给出边界：单条爆款拆解不能推出普适规律。
+  key_mechanisms: [emotional_arousal, curiosity_gap]
+  scoring_focus: [theory_accuracy, evidence_accuracy, diagnostic_quality]
+  anti_patterns: ["按用户清单逐项写两句话", "罗列理论名而不解释机制与激活条件", "把不相关理论硬凑进分析"]
+  material_ref: "XHS-A-HIGH-002; S105"
+  material_note: "真实案例：content_corpus.yaml#XHS-A-HIGH-002（旅行 plog，约 4.6 万赞，TraeWork 论坛拆解文；机制标注 emotional_arousal B+、narrative_transportation B、bottom_up_attention_capture B+）；情绪唤醒促分享一手实证：Berger & Milkman 2012（S105，JMR 49:192）——只支撑'高唤醒情绪'，不支撑稀缺/损失厌恶等与本案例的关联"
+
+- case_id: TND-002
+  category: theory_namedropping
+  difficulty: medium
+  input: >-
+    （场景：评审他人分析）用户贴出一段分析问："这是 AI 写的爆款拆解：
+    '该内容运用了社会认同理论、稀缺效应、损失厌恶、锚定效应、承诺一致性、
+    蔡格尼克效应、峰终定律、多巴胺奖励设计，因此必然爆款。'这个分析靠谱吗？"
+  context: {platform: generic, goal: analysis, audience: "内容团队"}
+  expected_behavior: >-
+    应判定该分析为理论名堆砌并逐条给出修正依据，不得认可其结论：
+    1) 指出该段只列名不解释机制——没有回答任何机制"什么条件激活、
+    影响什么行为、证据强度、边界"，属于 Argument Jump 与 Evidence Dumping
+    的叠加（AP-LF-011/AP-LF-004：从名词直接跳到结论，省略 warrant）；
+    2) "因此必然爆款"是把相关性/候选机制写成必然因果的过度声称
+    （8 个名词并列不等于 8 重证据）；3) 应示范正确写法：只保留与案例
+    证据链相关的机制（如情绪唤起+信息缺口），逐项给出机制解释与证据等级
+    （B 级）并说明其余名词为何不适用（锚定/损失厌恶属于价格决策域，
+    与内容病毒性无关）；4) 给出可核验的判定标准：每个被引机制须能
+    回答六问。
+  key_mechanisms: [argumentation_structure]
+  scoring_focus: [theory_accuracy, evidence_accuracy, diagnostic_quality]
+  anti_patterns: ["认可'8 个理论所以必然爆款'", "只点评'还可以'而不指出堆砌", "自己也用并列理论名回应"]
+  material_ref: "knowledge/anti_patterns/longform_anti_patterns.yaml#AP-LF-003; knowledge/anti_patterns/longform_anti_patterns.yaml#AP-LF-011"
+  material_note: "反模式条目：longform_anti_patterns.yaml#AP-LF-003（Concept Dumping 概念倾倒：'术语密度制造专业感'）与 #AP-LF-011（Argument Jump 论证跳步：'从证据直接跳到结论，省略 warrant'）；判定纪律：只罗列理论名不解释机制即失败"
+
+- case_id: TND-003
+  category: theory_namedropping
+  difficulty: medium
+  input: >-
+    （场景：社群功能设计）用户说："根据自我决定理论（SDT），人需要自主感，
+    所以我们的社群必须给用户选择权，把功能选择权拉满——让用户自己选
+    进哪个频道、看什么内容、参加什么活动，这样用户必然活跃。直接这样设计。"
+  context: {platform: wechat_group, goal: engagement, audience: "兴趣社群成员"}
+  expected_behavior: >-
+    应补全机制解释并给边界，不得接受"必须给选择权+必然活跃"的简化版：
+    1) 解释 SDT 的真实机制：自主/胜任/归属三需要共同决定内在动机
+    （self_determination_needs，A 级，Deci & Ryan 2000/S118），只放大
+    自主维度而不设计胜任（可完成的任务）与归属（联结感）不会自动产生
+    动机；2) 指出"选择权拉满"的边界：选项过多触发 choice_overload
+    （B 级：meta 分析显示平均效应≈0，受选项集结构调节，S109），
+    无限选择反而削弱参与；3) 区分控制性 vs 自主支持：让用户"自己选"
+    若实际是伪选择（选项无意义差异），损害信任；4) 给条件化结论：
+    自主支持应在有限但有意义的选项中提供，配合新手引导与胜任反馈，
+    用参与行为数据验证而非断言"必然活跃"。
+  key_mechanisms: [self_determination_needs, choice_overload]
+  scoring_focus: [theory_accuracy, evidence_accuracy, overclaiming]
+  anti_patterns: ["把 SDT 简化成'给选择权'一句话", "接受'选择权拉满必然活跃'", "不提选项过多与三需要平衡的边界"]
+  material_ref: "S118; S109"
+  material_note: "SDT 核心论文：Deci & Ryan 2000《The 'What' and 'Why' of Goal Pursuits》（Psych Inquiry 11:227，S118，三需要/内化机制，motivation.yaml#self_determination_needs 定级 A）；选择过载边界：Scheibehenne et al. 2010 元分析（JCR 37:409，S109，63 条件/N=5036，平均效应≈0、受调节变量支配）——'选择权拉满'与证据相悖"
+
+- case_id: TND-004
+  category: theory_namedropping
+  difficulty: hard
+  input: >-
+    （场景：爆款归因）用户说："这个旅行 plog 爆了（约 4.6 万赞），你把
+    情绪唤醒、信息缺口、社会认同、峰终定律、复杂传染、两级传播、
+    意见领袖、六度分隔全部分析一遍，看看是哪个机制让它爆的。"
+  context: {platform: xiaohongshu, goal: analysis, audience: "内容运营"}
+  expected_behavior: >-
+    应拒绝"全部分析"的堆砌式要求并做层级切分，不得对每个名词各写一段：
+    1) 区分内容层机制与网络层机制：情绪唤醒（emotional_arousal，B）与
+    信息缺口（curiosity_gap，B）作用于"单条内容为何被点击/被分享"；
+    复杂传染（complex_contagion，B：行为需多重确认，网络实验证据 S101）、
+    两级传播（two_step_flow）、六度分隔属于网络传播结构层，描述的是
+    扩散路径而非单条内容的吸引力，从单条内容样本无法推断网络路径——
+    硬放一起是层级混淆；2) 峰终定律（peak_end_rule，B）作用于"经历的事后
+    评价"，与"为何被点赞转发"不是同一行为链；3) 应给主次结论：情绪唤起+
+    沉浸叙事（narrative_transportation，B+）是与该样本机制标注一致的
+    主机制，其余为候选或无关，并说明需要哪些额外数据（转发路径、
+    跨圈层渗透）才能谈网络机制；4) 承认单条案例不能定因果。
+  key_mechanisms: [emotional_arousal, narrative_transportation]
+  scoring_focus: [theory_accuracy, diagnostic_quality, overclaiming]
+  anti_patterns: ["对 8 个理论名逐一写一段", "把网络层机制与内容层机制并列归因", "从单条内容推断网络传播路径"]
+  material_ref: "XHS-A-HIGH-002; S101"
+  material_note: "真实案例：content_corpus.yaml#XHS-A-HIGH-002（旅行 plog，4.6 万赞，机制标注 emotional_arousal B+、narrative_transportation B、bottom_up_attention_capture B+）；复杂传染一手实验：Centola 2010《The Spread of Behavior in an Online Social Network Experiment》（Science 329:1194，S101，行为在聚类网络中传播更广）——描述扩散结构，不能从单条内容样本推断"
+
+- case_id: TND-005
+  category: theory_namedropping
+  difficulty: easy
+  input: >-
+    （场景：文章润色）用户说："把这篇文章里再塞进三个理论：社会认同、
+    稀缺效应、损失厌恶，各写一段，这样显得专业，读者会觉得我们有理论功底。"
+  context: {platform: wechat_official_account, goal: credibility, audience: "B2B 采购决策人"}
+  expected_behavior: >-
+    应拒绝为显得专业而塞理论名，不得按要求添加三段落装饰性内容：
+    1) 指出理论名必须服务于论证——每个被引机制须回答"什么条件激活、
+    影响什么行为、证据强度、边界"（六问），无对应论证支撑的
+    引用是引用装饰（AP-LF-017 Citation Decoration 的文本版：'研究表明'
+    高频出现但不说明哪项研究、可信度如何）；2) 对 B2B 决策人受众，
+    空泛理论名反而触发专业读者识破（伪深度），损害 credibility；
+    3) 正确做法：只保留与文章核心主张直接相关的机制，写出机制解释+
+    适用条件，其余删去；若无机制支撑主张，应补充证据或降低主张强度
+    而非加理论名。
+  key_mechanisms: [credentialing_symbols]
+  scoring_focus: [ethical_safety, theory_accuracy, diagnostic_quality]
+  anti_patterns: ["按要求添加三段落理论名", "默认'理论多=专业'", "不检查理论与文章主张的证据链关系"]
+  material_ref: "S32; knowledge/anti_patterns/longform_anti_patterns.yaml#AP-LF-017"
+  material_note: "社会认同/稀缺/损失厌恶的机制层来源：Cialdini 1984《Influence》（S32，六原则实践化框架；机制层节点 social_proof A-、scarcity_mindset B、loss_aversion B 各自独立定级）——'塞进去显得专业'是引用装饰，见 longform_anti_patterns.yaml#AP-LF-017（Citation Decoration：'无法核实的引用装饰接近学术不端的传播版'）"
+
+- case_id: TND-006
+  category: theory_namedropping
+  difficulty: hard
+  input: >-
+    （场景：复盘报告）用户说："这篇爆文符合六度分隔、复杂传染、长尾理论、
+    两级传播、意见领袖、结构洞、小世界网络……这么多理论都符合，所以它成功
+    是必然的。把这些理论名都写进复盘报告。"
+  context: {platform: generic, goal: analysis, audience: "公司管理层"}
+  expected_behavior: >-
+    应识别"用理论名代替证据"并逐类处理，不得照单全收写入报告：
+    1) 指出"符合理论名≠被理论解释"：网络结构类概念（六度分隔、小世界、
+    结构洞、复杂传染）描述的是网络拓扑与扩散条件，不是"内容为何成功"
+    的原因，且这些概念互相重叠（小世界包含六度属性），并列列举产生
+    共线冗余；2) "所以必然成功"是把事后贴标签当预测/因果的过度声称
+    （禁止观察性数据写成确定因果）；3) 应裁剪：只保留与
+    该案例有可验证证据链的机制（如情绪唤起、叙事），逐项给出机制解释+
+    证据等级；复杂传染（complex_contagion，B）如要引用必须说明网络
+    实验证据（S101）与单条内容案例的适用差距；4) 建议在报告中明示
+    哪些结论有数据支撑、哪些是推测，而非用理论名数量堆出"必然"。
+  key_mechanisms: [complex_contagion]
+  scoring_focus: [theory_accuracy, evidence_accuracy, overclaiming]
+  anti_patterns: ["把 7 个理论名全写进报告", "接受'符合理论所以必然成功'", "不区分网络结构概念与内容因果"]
+  material_ref: "S101; S55"
+  material_note: "复杂传染实验：Centola 2010 Science 329:1194（S101）；小世界：Watts & Strogatz 1998（S139）与 Watts 2003《Six Degrees》（S55）——网络结构概念描述拓扑与扩散，不构成单条内容的成功因果；因果纪律要求 causal_status 区分 correlational/observational，禁止观察数据写成确定因果"
+
+- case_id: TND-007
+  category: theory_namedropping
+  difficulty: medium
+  input: >-
+    （场景：转化方案）用户说："给我一个理论依据清单：助推、默认选项、
+    损失厌恶、稀缺、社会证明、承诺一致、锚定、多巴胺奖励，8 个理论
+    列在方案开头，证明我们的方案有科学基础，转化率必然提升。"
+  context: {platform: generic, goal: conversion, audience: "电商转化团队"}
+  expected_behavior: >-
+    应裁剪理论清单并逐项给证据等级与边界，不得保留 8 项并列：
+    1) 指出"清单长度≠论证强度"：无证据链接的理论名不增加可信度，
+    反而构成伪深度（AP-LF-006）；2) 逐项校准：nudge_mechanism 为 C 级
+    （Maier et al. 2022 控制发表偏差后平均效应大幅收缩，有效性集中于
+    默认、提醒、简化等少数工具，S108）——"助推必然提升转化"不成立；
+    默认选项（default_option_effect）、损失厌恶（B 级，幅度个体差异大）、
+    稀缺（scarcity_mindset，B/C）各有边界，且部分组合互相冲突
+    （如同时用损失框架与稀缺紧迫可能触发心理抗拒）；3) 应裁剪为与
+    具体转化环节（决策页/结算页）最相关的 1-2 个机制并写明激活条件与
+    A/B 验证设计；4) "转化率必然提升"必须删除，改为可测假设。
+  key_mechanisms: [nudge_mechanism]
+  scoring_focus: [evidence_accuracy, overclaiming, theory_accuracy]
+  anti_patterns: ["保留 8 项并列清单", "把 nudge/助推写成必然提升转化", "不标注各机制证据等级与冲突"]
+  material_ref: "S108"
+  material_note: "助推复核一手证据：Maier et al. 2022《No Evidence for Nudging After Adjusting for Publication Bias》（PNAS 119:e2200300119，S108，全文实读）——nudge_mechanism 节点（behavioral_economics.yaml）定级 C：'平均效应远小于早期文献宣称，有效性集中于少数工具与具体情境'；'8 个理论=科学基础'是伪深度（AP-LF-006）"
+
+- case_id: TND-008
+  category: theory_namedropping
+  difficulty: medium
+  input: >-
+    （场景：社群诊断）用户贴出一段诊断问："这是我们顾问给的结论：
+    '你的社群不活跃，是因为缺乏归属感、仪式感、身份认同、社会规范、
+    互惠、地位系统、社区感、集体欢腾。'这个诊断够全面吧？"
+  context: {platform: wechat_group, goal: engagement, audience: "社群运营者"}
+  expected_behavior: >-
+    应判定该诊断为多词堆砌式诊断并重构为结构化诊断，不得认可"够全面"：
+    1) 指出 8 个名词并列没有回答任何机制的激活条件与可观察行为指标，
+    属名词堆砌（同判定纪律）；2) 应做结构诊断：先区分"共同
+    身份是否成立"（sense_of_community，B+：成员资格/相互影响/需求满足/
+    共享联结四要素）与"互动结构是否缺失"（community_rituals，B：
+    规律性/程式性/象征性），并落到可观察指标（发言人数分布、固定活动
+    参与率、新人留存路径）；3) 归属感（need_to_belong，A 级，S133）是
+    动机基础而非设计缺陷描述——"缺乏归属感"需有行为证据支撑；
+    4) 给出诊断顺序：先用数据定位结构缺口（角色结构/仪式/新成员入口），
+    再选 1-2 个最相关机制给干预，避免"全都要补"。
+  key_mechanisms: [sense_of_community, community_rituals]
+  scoring_focus: [diagnostic_quality, theory_accuracy, specificity]
+  anti_patterns: ["认可'8 个名词=全面诊断'", "不落到可观察行为指标", "建议 8 个维度全补"]
+  material_ref: "S134; S133"
+  material_note: "社区感一手来源：McMillan & Chavis 1986《Sense of Community》（JCP 14:6，S134，四要素，community.yaml#sense_of_community 定级 B+）；归属需要：Baumeister & Leary 1995（Psych Bulletin 117:497，S133，A 级）——归属感是动机基础，需行为证据支撑，不能作为空泛诊断词"

@@ -1,0 +1,24 @@
+# Evidence Package — S173 Diener, Lucas & Scollon 2006（Beyond the Hedonic Treadmill）
+# 标准格式。access_level 如实标注。
+source_id: S173
+title: "Beyond the Hedonic Treadmill: Revising the Adaptation Theory of Well-Being"
+authors: "Ed Diener; Richard E. Lucas; Christie Napa Scollon"
+year: 2006
+journal: "American Psychologist 61(4): 305-314"
+doi: "10.1037/0003-066X.61.4.305"
+url: "https://pubmed.ncbi.nlm.nih.gov/16719675/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed/NGDC OpenLB 完整摘要（PMID 16719675，含 5 项修订逐条）+ Diener 本人官网 labs.psychology.illinois.edu/~ediener/review.html 可下载文章列表（书目与定位：『Reviews empirical work outlining the need for important revisions to the hedonic treadmill model』）+ tandfonline 与 Sage 引用交叉确认页码 61(4):305-314"
+research_question: "享乐跑步机（hedonic treadmill）模型——『好事坏事都只暂时影响幸福感，人会迅速回到享乐中性』——是否需要修正？若修正，对个人与社会追求幸福的努力意味着什么？"
+core_claims:
+  - "对跑步机模型需要 5 项重要修订：第一，个体的设定点（set point）并非享乐中性，多数人处于中性之上；第二，不同个体有不同的设定点，部分取决于气质；第三，同一个人可有多个幸福感设定点——积极情绪、消极情绪与生活满意度等成分可朝不同方向移动；第四（最重要），幸福感设定点可在某些条件下改变；第五，个体对事件的适应速度与程度存在差异，有人改变设定点而有人不变（PubMed 摘要原文）"
+  - "旧模型推论『个人与社会提升幸福感的努力注定失败』是过度悲观；修订后的模型为心理学家与政策制定者提供了希望（PubMed 摘要原文）"
+  - "该文定位为对适应理论的修订综述：收入、婚姻状况等事件不必然『完全适应』，部分事件改变设定点（摘要：set points can change under some conditions）"
+method: "理论修订型综述（review）：整合 Diener/Lucas 等人在主观幸福感、适应与设定点方向的纵向研究证据，逐条评估跑步机模型的假设"
+results: "跑步机模型的强版本（一切回归中性、努力注定失败）被逐条修订：设定点非中性、因人而异、可移动、且存在个体差异；幸福感不完全是『相对』的"
+limitations: "综述性论文，依赖既有纵向研究（如婚姻、失业的适应研究），非单一新实验；对『设定点可改变』的条件（哪些事件、多大程度）留待后续研究；本文未涉及后续 Diener 等对财富-幸福关系的进一步量化"
+boundary_conditions: "适用于对持续正负事件的适应与设定点讨论；对一次性、剧烈且身份相关事件（如长期失业、慢性病）适应不完全；与 hedonic_adaptation 节点『强版本不成立』的修正方向一致"
+relevant_nodes: [hedonic_adaptation]
+notes: "享乐适应节点（B 级）的核心一手综述：5 项修订逐条可溯源至 PubMed 摘要原文。Diener 官网 + PubMed + 两处期刊引用交叉确认。"
+last_verified: "2026-09"

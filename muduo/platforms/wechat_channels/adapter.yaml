@@ -1,0 +1,159 @@
+platform_name: 微信视频号（WeChat Channels）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：产品形态（推荐/朋友/关注三页签、双按钮设计、与公众号生态打通）
+  为公开可见规则；推荐权重与流量构成为行业共识。
+  2026-09-08 已实取官方源并登记于 platform_sources（S1-S3）：《微信视频号运营规范》
+  （weixin.qq.com 官方协议页，账号注册/内容规范/违规处置）、腾讯官方《微信视频号直播行为规范》
+  （support.weixin.qq.com，更新日期 2026-07-20）、腾讯官方《微信视频号直播间低质量内容认定细则》
+  （support.weixin.qq.com，更新日期 2026-06-11）。known_platform_patterns 已逐条标注
+  evidence_level（L1=官方文档实际读到并支持；L2=已验证观察；L3=行业共识；L4=推测）、
+  source_ref 与 last_verified: "2026-09"。原标注 official_rule 但无官方文档直接载明的条目
+  已降为 L3 并在 note 注明。所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {ref_id: S1, source: "《微信视频号运营规范》https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=video", source_owner: "腾讯（微信团队）", source_type: official, claim_supported: "视频号注册与内容原则：诚实使用（禁止虚假信息/干扰平台数据）、分享优质内容、不干扰他人；账号注册规则与违规处置机制", published_date: "未知（官方长期维护）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {ref_id: S2, source: "《微信视频号直播行为规范》https://support.weixin.qq.com/cgi-bin/mmtemplatepage-bin/pages/agreement/QP3B5JAHbc1MzpPm", source_owner: "腾讯（微信团队）", source_type: official, claim_supported: "视频号直播内容规范：主播实名注册、严重违规（违法违规/色情赌博等）将导致账号永久封禁等处置", published_date: "2026-07-20（更新日期）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {ref_id: S3, source: "《微信视频号直播间低质量内容认定细则》https://support.weixin.qq.com/cgi-bin/mmsupportacctnodeweb-bin/pages/6IZdh4KabcDZArRY", source_owner: "腾讯（微信团队）", source_type: official, claim_supported: "直播间低质量内容治理：录播/低频互动/博眼球等将视情节采取减少推荐、限流、禁播、封禁等处置", published_date: "2026-06-11（更新时间）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "短视频/中视频（竖屏为主，横屏兼容）"
+  - "直播（含带货直播）"
+  - "图文消息（较新产品形态，细节随版本变化）"
+
+dominant_user_intent:
+  - "被动刷推荐（休闲视频消费）"
+  - "看朋友赞过的内容（带着'熟人看过'的预期）"
+  - "直播观看与购物"
+
+distribution_model: >-
+  算法推荐+社交推荐叠加：这是与抖音最本质的区别——"朋友赞过"入口把强关系
+  背书叠进分发链，内容可经由朋友点赞触达二度人脉 [official_rule-产品形态：
+  朋友页签公开可见]。关注页与公众号导流补充订阅型触达。
+
+recommendation_model: >-
+  双轨：算法推荐流（完播/互动加权，权重黑箱 [industry_consensus]）+
+  社交背书流（朋友点赞可见 [official_rule-产品形态]）。
+  社交信号的放大意味着"内容是否值得用户公开点赞"变得战略级重要。
+
+social_graph_characteristics: >-
+  强关系背书叠加在弱关系分发上：分发主体仍是算法，但朋友的赞既是推荐信号
+  也是社交背书；用户点赞前会意识到"朋友看得见"——社交可见性改变互动行为。
+
+content_lifecycle: >-
+  介于抖音与公众号之间：社交背书让内容衰减慢于纯算法平台，
+  长尾与复看强于抖音 [industry_consensus]；与公众号文章互相挂链可互相续命。
+
+primary_entry_points:
+  - "发现页视频号一级入口"
+  - "推荐/朋友/关注三页签"
+  - "公众号文章内嵌卡片与视频号消息"
+  - "群聊与朋友圈转发的视频卡片"
+  - "直播入口"
+
+attention_environment: >-
+  竖屏沉浸流为主；但"朋友"页签让部分观看带着社交预期——
+  用户在看"我朋友觉得好的东西"，评判标准略不同于纯兴趣推荐。
+
+user_behavior: >-
+  用户年龄结构偏高、微信生态习惯延续：对转发到群/朋友圈的消费链路熟悉；
+  点赞的社交可见性让部分用户用"私下收藏/转发给朋友"替代公开赞 [industry_consensus]。
+
+interaction_signals:
+  - "大拇指赞：进入推荐信号 [official_rule-产品形态：双按钮语义不同为公开设计]"
+  - "爱心'赞'：朋友可见的社交推荐信号 [official_rule-产品形态]"
+  - "完播/复播：算法推荐的核心权重方向 [industry_consensus]"
+  - "转发到群/朋友圈：微信生态内零摩擦，价值最高的扩散信号"
+  - "评论与直播弹幕：讨论深度信号"
+
+sharing_mechanism: >-
+  全平台最强站内分享：视频卡片在朋友圈/群/单聊内原生播放，
+  无口令、无跳转摩擦（friction_reduction）——这是与抖音分享链路最大的差别；
+  内容设计上"值得转给谁"比"值得点赞"更具杠杆 [industry_consensus]。
+
+search_mechanism: >-
+  视频号搜索与微信搜一搜打通，公众号-视频号内容互索引 [industry_consensus]；
+  标题关键词与话题参与检索匹配，搜索流量占比低于小红书但持续增长。
+
+community_mechanism: >-
+  直播间+粉丝团承担社群功能；与公众号（内容资产）、企业微信（客户关系）、
+  小程序（交易）构成微信生态闭环——视频号常是闭环里的"流量入口"角色。
+
+algorithmic_features:
+  - "社交推荐信号（朋友点赞进入朋友页签分发）[official_rule-产品形态]"
+  - "算法推荐流（权重黑箱）[industry_consensus]"
+  - "直播预约与开播提醒 [official_rule-产品存在]"
+  - "原创声明与原创保护 [official_rule-产品存在]"
+
+content_constraints:
+  - "[industry_consensus] 视频时长与文件大小上限随版本多次调整，以平台最新公告为准"
+  - "[official_rule] 直播与内容遵守平台内容规范（具体条目以最新公告为准）"
+
+title_role: >-
+  信息流底部标题+话题：承担搜索关键词与内容承诺双职责；
+  竖屏沉浸流中权重低于开场画面，但决定搜索与转发卡片的信息完整度。
+
+cover_role: >-
+  弱于双列平台：单列沉浸流不展示封面网格；封面主要影响主页浏览、
+  搜索结果与转发卡片的观感。
+
+opening_role: >-
+  重要：沉浸流中开场仍决定完播分布——前几秒的视觉冲击或悬念缺口
+  （curiosity_gap）是滑动否决权下的生存条件 [industry_consensus]。
+
+tag_role: >-
+  话题标签参与内容分类与活动聚合 [official_rule-产品存在]；
+  对分发的实际权重未公开 [industry_consensus]。
+
+comment_role: >-
+  评论区兼有陌生人互动与熟人可见色彩（朋友互动会提示）；
+  直播弹幕提供实时共同在场（collective_effervescence）。
+
+follow_role: >-
+  关注+朋友点赞双通道：内容可通过朋友背书触达二度人脉（weak_ties_strength），
+  也可通过公众号关联沉淀粉丝；涨粉价值高于抖音（生态闭环可承接私域）。
+
+risk_factors:
+  - "[industry_consensus] 社交背书的抑制效应：用户因点赞可见而吝于点赞，社交信号被低估——内容需给出'公开点赞的理由'"
+  - "[industry_consensus] 用户结构偏熟龄：适合深度/实用/情感内容，纯潮流内容效果弱于抖音"
+  - "[official_rule] 内容与直播合规治理（以最新公告为准）"
+  - "[industry_consensus] 生态依赖：流量入口受微信整体策略影响（platform_power_gatekeeping）"
+
+known_platform_patterns:
+  - pattern: "设计'值得公开点赞'的内容（朋友可见的表态）"
+    mechanism_links: [social_identity_theory, self_presentation_impression_management, social_proof]
+    fact_type: industry_consensus
+    note: "爱心赞=用户在朋友面前的自我表达；实用/正能量/身份认同类内容更易获得公开赞。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识；'爱心赞朋友可见'为产品界面可观察形态，官方文档未直接载明）"
+    last_verified: "2026-09"
+  - pattern: "公众号图文挂视频号卡片互相导流"
+    mechanism_links: [friction_reduction, recommendation_feedback_loop]
+    fact_type: official_rule
+    note: "生态互通为官方产品能力 [official_rule-产品形态]；图文读者转视频观众，视频观众转订阅，双向反哺。"
+    evidence_level: L3
+    source_ref: "N/A（公众号-视频号互挂/互导为产品可观察能力，无官方文档直接载明；原标 official_rule 降级）"
+    last_verified: "2026-09"
+  - pattern: "直播预约+开播提醒锁定准时观看"
+    mechanism_links: [commitment_consistency, implementation_intentions, habit_loop_cue_routine_reward]
+    fact_type: official_rule
+    note: "预约为官方产品功能 [official_rule-产品存在]；预约行为本身是公开承诺，提高到场率。"
+    evidence_level: L3
+    source_ref: "N/A（直播预约/开播提醒为产品界面可观察功能，无官方文档直接载明；原标 official_rule 降级）"
+    last_verified: "2026-09"
+  - pattern: "转发导向的内容设计（'转给家人看'）"
+    mechanism_links: [strong_ties_support, empathy_induced_helping, word_of_mouth_drivers]
+    fact_type: industry_consensus
+    note: "健康/避坑/常识类内容自带'为家人转发'的利他动机，匹配微信强关系链。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+  - pattern: "熟龄友好的节奏与信息密度（慢一点、大字、讲清楚）"
+    mechanism_links: [processing_fluency, extraneous_cognitive_load, homophily]
+    fact_type: experience_speculation
+    note: "经验观察：降低信息密度与语速的内容在视频号目标人群中留存更好；需 A/B 验证。"
+    evidence_level: L4
+    source_ref: "N/A（经验推测，无官方文档，需个体 A/B 验证）"
+    last_verified: "2026-09"
+
+confidence: medium

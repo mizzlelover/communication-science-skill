@@ -1,0 +1,25 @@
+# Evidence Package — S145 Schultz, Dayan & Montague 1997（A Neural Substrate of Prediction and Reward）
+# 标准格式。access_level 如实标注。
+source_id: S145
+title: "A Neural Substrate of Prediction and Reward"
+authors: "Wolfram Schultz; Peter Dayan; P. Read Montague"
+year: 1997
+journal: "Science 275(5306): 1593-1599"
+doi: "10.1126/science.275.5306.1593"
+url: "https://pubmed.ncbi.nlm.nih.gov/9054347/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "PubMed 官方摘要全文（PMID 9054347）+ CNCB-NGDC OpenLB PubMed 镜像记录（OLB-PM-09054347）双源确认；未找到可实际抓取的开放全文 PDF（Gatsby/UCL 作者主页路径试探不可达），正文实验细节未获取"
+research_question: "灵长类多巴胺神经元的活动是否编码对未来显著/奖励事件的预测变化（预测误差），从而构成奖励学习与预测的神经基础？"
+core_claims:
+  - "预测未来事件的能力使生物体能检测、建模并操纵其与环境交互的因果结构"
+  - "行为实验表明学习由对未来显著事件（奖励与惩罚）期望的变化驱动"
+  - "生理实验识别出灵长类中脑多巴胺神经元：其波动输出信号指示对未来显著、奖励性事件的预测变化或误差（而非奖励本身）"
+  - "这些发现可通过自适应优化控制（强化学习/时间差分）的量化理论统一理解"
+method: "综述（Review）：整合行为学习实验与灵长类多巴胺神经元单细胞记录生理研究，并以量化学习理论（自适应优化控制）建模解释"
+results: "确立『多巴胺神经元编码奖励预测误差』假说：神经元输出反映预测的奖励与实际奖励之间的差异，学习由误差驱动"
+limitations: "本包仅获取摘要层信息；具体实验范式（条件化任务、放电模式细节）与数据需原文核验；原文发表于 1997 年 Science，正文未开放"
+boundary_conditions: "适用于奖励型学习（conditioning）情境的神经机制解释；多巴胺≠愉悦本身（wanting/liking 区分见 reward.yaml 节点）；向人类内容策略的迁移属类比而非直证"
+relevant_nodes: [reward_prediction_dopamine, prediction_error]
+notes: "奖励预测误差假说的奠基性一手来源（paper 级，abstract_only）。摘要层双源（PubMed+CNCB 镜像）实取，未编造实验细节；机制节点中『意外奖励放电/预期奖励不放电/预期落空抑制』等正文细节待全文核验后升级。"
+last_verified: "2026-09"

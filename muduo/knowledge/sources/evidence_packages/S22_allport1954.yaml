@@ -1,0 +1,25 @@
+# Evidence Package — S22 Allport 1954（The Nature of Prejudice）
+# 标准格式。access_level 如实标注。
+source_id: S22
+title: "The Nature of Prejudice"
+authors: "Gordon W. Allport"
+year: 1954
+journal: Addison-Wesley（专著；25 章）
+doi: "无 DOI（专著）"
+url: "https://m.geilixinli.com/baike/knowledge/2197"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：中文人格心理学词条（偏见机制/接触假说四条件/刻板印象/替罪羊）+ 群际接触理论综述（平等地位/共同目标/群际合作/权威法律支持）+ NBER 论文（接触假说起源与随机分配证据）+ 接触-偏见关系 meta 研究（Tropp & Pettigrew 2005）"
+research_question: "偏见的心理机制与社会条件是什么？如何减少群际偏见？"
+core_claims:
+  - "偏见=基于错误僵化的过度概括形成的对某群体的敌意或负面态度；放在人格（功能自主性/特质）与社会（刻板印象/替罪羊）的交叉处分析"
+  - "接触假说（contact hypothesis）：减少群际偏见的主要方式是与外群体在最佳条件下接触"
+  - "最佳接触四条件：①平等地位 ②共同目标 ③群际合作（非竞争）④权威与法律支持"
+  - "后续实证：群际接触减少偏见的结论被广泛验证（Pettigrew & Tropp meta；随机室友分配研究）；最优条件对多数群体预测更强（Tropp & Pettigrew 2005）"
+method: "人格与社会心理学理论专著 + 大量案例与既有研究综合"
+results: "（理论奠基）偏见研究经典；接触假说成为减少偏见的标准路径"
+limitations: "专著为理论综合（1954 年代证据基础）；接触效应的因果强度需现代随机分配研究支撑"
+boundary_conditions: "接触需满足四条件才有减小偏见效果；未满足条件的接触可能无效或反效"
+relevant_nodes: [in_group_favoritism, social_identity_theory]
+notes: "in_group_favoritism/偏见的奠基来源（book 级）。四条件为公开标准内容，未编造。"
+last_verified: "2026-09"

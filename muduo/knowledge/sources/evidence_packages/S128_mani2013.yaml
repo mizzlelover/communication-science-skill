@@ -1,0 +1,25 @@
+# Evidence Package — S128 Mani et al. 2013（贫困与认知功能）
+# 标准格式。access_level 如实标注。
+source_id: S128
+title: "Poverty Impedes Cognitive Function"
+authors: "Anandi Mani; Sendhil Mullainathan; Eldar Shafir; Jiaying Zhao"
+year: 2013
+journal: Science 341(6149), 976-980
+doi: "10.1126/science.1238041"
+url: "https://pubmed.ncbi.nlm.nih.gov/23990553/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "Science 摘要 + 中文详细解读（购物中心 101 名被试的财务场景认知任务 + 印度甘蔗农收获前后对比）+ 后续引用（2020 发薪日周边复现讨论；2023 Shah 等实证审计）"
+research_question: "贫困与认知功能之间是否存在因果关系（而非仅相关）？"
+core_claims:
+  - "购物中心实验（101 人）：低收入者在高额假设修理费场景下认知任务表现显著下降，高收入者不受影响——同一个人在不同财务压力下表现不同"
+  - "印度甘蔗农实地研究：收获前（财务压力）比收获后（收到付款）在类似认知任务上表现明显更差"
+  - "结果无法用压力、营养、工作努力程度或可用时间解释——指向与贫困相关的担忧消耗心智资源（带宽税）"
+  - "政策蕴含：帮助填表、规划提示、提醒等低成本干预对穷人特别有帮助"
+method: "购物中心实验室实验 + 印度农业区实地自然实验（收获前后组内比较）+ 两种认知任务（Raven 流体智力与认知控制）"
+results: "贫困→认知功能受损的因果证据；成为稀缺/带宽税理论（S13）的标志性论文"
+limitations: "复制争议：Carvalho et al. 2016 田间研究部分认知指标未复现同等强度；2023 Shah 等对文献表征的实证审计；效应存在但强度有讨论（EVIDENCE.md B/C）"
+boundary_conditions: "财务稀缺需达到捕获注意的强度；对财务脆弱人群支持最强"
+relevant_nodes: [scarcity_mindset, attention_capacity_limits]
+notes: "scarcity_mindset 的一手论文来源（paper 级）。S13《Scarcity》图书的配套核心论文。未编造：购物中心 101 人/甘蔗农收获前后。"
+last_verified: "2026-09"

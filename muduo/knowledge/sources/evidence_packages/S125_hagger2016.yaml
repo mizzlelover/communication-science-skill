@@ -1,0 +1,25 @@
+# Evidence Package — S125 Hagger et al. 2016（ego depletion RRR）
+# 标准格式。access_level 如实标注。
+source_id: S125
+title: "A Multilab Preregistered Replication of the Ego-Depletion Effect"
+authors: "Martin S. Hagger; Nikos L. D. Chatzisarantis; et al. (23 labs)"
+year: 2016
+journal: Perspectives on Psychological Science 11(4), 546-573
+doi: "10.1177/1745691616652873"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5329006/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "RRR 结论经多源交叉实取：23 实验室、2141 名被试、预注册协议；ego depletion 效应微不足道、与零无显著差异 + 方法学讨论（Dang 2016：e-crossing 任务可能未充分消耗；Baumeister & Vohs 反驳）+ Carter & McCullough 2014 发表偏差元分析"
+research_question: "自我控制资源有限模型（ego depletion）能否被大规模预注册复制？"
+core_claims:
+  - "23 个国际实验室、2141 名被试的预注册复制：ego depletion 效应量微不足道，与零无显著差异"
+  - "先前 meta 分析（Hagger 2010）报告的效应被 Carter & McCullough 2014 指出存在强发表偏差；校正后大幅缩水"
+  - "后续争论：复制所用 e-crossing 任务可能未充分消耗自我控制（Dang 2016 补充分析：仅在自报努力高的被试上发现条件×努力交互）"
+  - "结论：作为精确机制理论（单一葡萄糖/意志力资源池）的 ego depletion 大概率不成立；行为层表现随时间下降的现象真实，但由更复杂的机制（注意疲劳/动机/预期）解释"
+method: "23 实验室预注册多实验室复制（Registered Replication Report）+ 后续评论与再分析"
+results: "复制失败（效应≈0）；引发领域内对 ego depletion 理论地位的长期争论"
+limitations: "复制任务有效性存在争议（Baumeister 方反驳）；争论未完全解决——但大规模预注册证据对原理论构成决定性削弱"
+boundary_conditions: "针对单一资源池机制假说；行为层时间任务效应（cognitive_fatigue 所依赖）不受此复制影响"
+relevant_nodes: [cognitive_fatigue]
+notes: "#8 复核清单 ego depletion 条目的决定性复制证据（paper 级）。原研究 Baumeister et al. 1998 在 EVIDENCE.md 在案。未编造数字：23 labs/N=2141/效应≈0。"
+last_verified: "2026-09"

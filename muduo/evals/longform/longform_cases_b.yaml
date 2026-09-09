@@ -1,0 +1,570 @@
+# =============================================================================
+# Long-form Intelligence 评测案例库 B 组（LFMC / LFED / LFBR / LFAI，共 25 案）
+# 用途：评测 longform_article_optimization + semantic_redundancy 的长文专项能力
+# 分类：LFMC 管理咨询 ×10｜LFED 教育文章 ×5｜LFBR 品牌思想文 ×5｜LFAI AI 生成长文 ×5
+# 专项覆盖：overclaim/conclusion_leap｜SCQA 缺失｜概念依赖序｜记忆锚点｜思想文断言｜
+#           作者意图保全｜AI 七类检测（语义重复/人工完备/对称偏置/空过渡/抽象通胀/
+#           伪深度/结论回声）｜复杂度保全｜删除纪律｜两遍优化顺序｜反方层｜承诺兑现
+# 规则：key_mechanisms 仅可用机制 ID 清单；节选均为原创撰写；文中数据均为演示数据
+# =============================================================================
+
+# ----------------------------- 管理咨询文章（LFMC） -----------------------------
+
+- case_id: LFMC-001
+  category: longform_consulting
+  difficulty: medium
+  input: >-
+    用户请求："这是我们咨询团队发在知乎上的方法论长文，有客户反馈'结论下得太满'，帮我优化得
+    更有说服力。" 文章节选——《组织扁平化：提升人效的必选项》，全文约 6000 字、共 5 节
+    （问题—框架—证据—建议）：第 3 节证据部分给出两个客户案例，某连锁零售企业改革后审批层级
+    从 5 级减到 3 级，某 SaaS 公司季度决策周期缩短约三成（均为演示数据，样本为 2024 年我们
+    服务的 2 家客户）；第 4 节建议部分写道："综上所述，扁平化必然使决策速度提升 40% 以上，
+    任何企业只要坚定推行扁平化，一年内人效都将显著提升。犹豫的企业只会被时代淘汰。"
+    第 5 节为实施路线图，全文未讨论适用边界。
+  context: {platform: zhihu, goal: trust, audience: "企业中高管"}
+  expected_behavior: >-
+    判定要点：1) 必须命中 overclaim/conclusion_leap：2 个演示案例（n=2）不能支撑"必然提升
+    40% 以上""任何企业都将"的普遍化结论，证据与主张之间存在断层；2) 必须给出两条合规路径
+    （降级表述或补 warrant）：把绝对句改写为条件化表述（如在"层级多、决策链长的企业中，可能
+    观察 20%-40% 的决策提速，演示数据"），或明确补充能支撑普遍结论的大样本证据后再保留强度，
+    同时补适用边界；3) 不得为了让文章"更有说服力"而强化绝对化断言——须向用户说明 fluency_truth_effect
+    的反噬：流畅自信的错误概括被证伪后信任崩塌更快；4) 不得编造统计数据补强证据；5) 修改须按
+    四元组（Problem→Change→Reason→Mechanism）呈现。
+  key_mechanisms: [argumentation_structure, fluency_truth_effect]
+  scoring_focus: [overclaiming, diagnostic_quality, evidence_accuracy]
+  anti_patterns: ["为增强说服力而保留甚至强化绝对化断言", "编造大样本统计数据填补证据缺口", "只润色第 4 节措辞而不处理证据—结论匹配问题"]
+
+- case_id: LFMC-002
+  category: longform_consulting
+  difficulty: easy
+  input: >-
+    用户请求："这篇私域方法文发出来后读者说'不知道为什么要看'，帮我看看。" 文章节选——
+    《私域用户分层实操：三步搭建标签体系》，全文约 5000 字、共 4 节。文章第一句即是
+    "第一步，先搭建基础标签层"，随后逐步展开行为标签、偏好标签与生命周期标签的搭建步骤，
+    全部篇幅都在讲"怎么做"，直到结尾一句"以上就是私域分层的完整方法"。没有交代企业当前
+    面临的复购下滑、流失加速或增长停滞等任何问题背景，也没有说明分层为什么能解决这些问题、
+    不分层的代价是什么（文中数据均为演示数据）。四个小标题全是操作步骤名，与正文内容一致。
+  context: {platform: zhihu, goal: trust, audience: "企业中高管"}
+  expected_behavior: >-
+    判定要点：1) 必须诊断出 SCQA 缺失：全文直接从 Solution 讲起，Situation 与 Complication
+    层整体缺位，读者没有"为什么是我、为什么现在"的入场理由，information_scent 从第一节就断裂；
+    2) 必须先补 problem/context 层再谈其他优化：建议在开头增设具体冲突场景（如"复购率连续
+    三个季度下滑，群发转化跌至 2%，演示数据"），把方法置于问题之后；3) 不得跳过结构诊断直接
+    逐句润色第 1 节的操作步骤；4) 必须走 Re-outline 流程：给出 Original vs Proposed 结构对照
+    并经用户确认后才进入下一阶段。
+  key_mechanisms: [argumentation_structure, information_scent]
+  scoring_focus: [diagnostic_quality, actionability]
+  anti_patterns: ["只把标题和首句改得更吸睛而不补问题层", "跳过结构诊断直接逐句润色操作步骤", "补一个空洞的行业大背景而非具体冲突场景"]
+
+- case_id: LFMC-003
+  category: longform_consulting
+  difficulty: medium
+  input: >-
+    用户请求："请帮我逐句润色这篇供应链文章，让语言更高级一点。" 文章节选——《供应链数字化
+    的三重跃迁》，全文约 8000 字、共 6 节。第 1 节明确主张"库存周转是供应链数字化的第一指标"；
+    第 2 节用一段数据论证交付准时率才是客户视角的核心（演示数据）；第 3、4 节分别用不同措辞
+    解释"数字化不是上系统"这同一层意思；第 5 节结论又回到"库存周转是唯一值得 CEO 盯的数字"。
+    第 6 节为三步实施清单。句面流畅、术语漂亮，但主张前后打架。用户补充："结构不用动，你只改文字就行，最好句子再对仗一些。"
+  context: {platform: zhihu, goal: trust, audience: "供应链与运营负责人"}
+  expected_behavior: >-
+    判定要点：1) 必须拒绝跳过 Pass 1（Macro before Micro，Case F 假润色情形）：存在 P0 级矛盾
+    （第 1、5 节与第 2 节主张冲突）与语义重复组（第 3、4 节），此时逐句润色是在给应删除的
+    段落抛光；2) 必须先向用户展示结构诊断（P0 矛盾点定位 + 重复组清单）并说明两遍优化的成本
+    逻辑，征得确认后先做结构编辑、后做逐句编辑；3) 不得服从"只改文字"的字面指令直接逐句润色；
+    4) 概念层面的矛盾归因应引用 conceptual_coherence（同一文章内中心指标漂移）而非笼统的
+    "逻辑不清"。
+  key_mechanisms: [conceptual_coherence, information_foraging]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["服从指令直接逐句润色并交付", "给几十条平铺的'语言更高级'改写建议", "自作主张改结构却不说明为什么拒绝先润色"]
+
+- case_id: LFMC-004
+  category: longform_consulting
+  difficulty: hard
+  input: >-
+    用户请求："这篇定价文 6800 字太长了，删到 3000 字以内，现在没人有耐心看长文。" 文章节选——
+    《定价的六个反直觉结论》，全文约 6800 字、共 5 节：第 1 节"锚定效应如何设定价格参照点"
+    与第 3 节"为什么先展示高价套餐"涉及同一机制但给出不同实验边界；第 2 节的区分定价公式
+    含三行推导和两个适用前提；第 4 节案例给出失败条件（某 SaaS 降价反而流失高净值用户，
+    演示数据）；第 5 节边界讨论说明哪些行业该结论不适用。粗查几乎每节都携带独立信息增量，
+    无成段同义重复。全文无目录、无 TL;DR。用户补充："或者你挑最重要的留，其他的直接砍。"
+  context: {platform: zhihu, goal: save, audience: "企业中高管"}
+  expected_behavior: >-
+    判定要点：1) 必须援引 Value/Cost 原则拒绝机械缩字：目标是 Maximum Meaning per
+    Unit of Reader Effort，不是 Minimum Word Count，本篇删一半意味着删掉推导链或边界条件，
+    属于必要复杂度；2) 必须先做逐节 Delete Test 并如实报告：仅第 1、3 节存在可 Merge 的
+    机制重叠（预计压 10%-15%），其余节删任何一块都有明确损失；3) 必须给分层阅读替代方案：
+    TL;DR 三条结论 + 正文保完整推导 + 公式与失败案例降为括注/附录，或建议拆为上下两篇；
+    4) 不得为凑 3000 字删掉边界条件与失败案例——那会让结论变得更具普适性假象。
+  key_mechanisms: [information_foraging, chunking]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["机械按比例删字凑够 3000 字", "删掉失败案例和边界条件让文章'更干脆'", "直接拒绝用户但不说'为什么不能删'也不给替代方案"]
+
+- case_id: LFMC-005
+  category: longform_consulting
+  difficulty: medium
+  input: >-
+    用户请求："这篇远程办公文观点很鲜明，有读者说'太一边倒了'，帮我优化。" 文章节选——
+    《办公室的终局：分布式组织》，全文约 7000 字、共 6 节。全文按"协作工具成熟—人才半径
+    扩大—成本结构改善—管理范式转变"的顺序单向推进，每一节都以"远程办公的优势在于……"开头，
+    案例均为转型成功的企业（两家远程优先公司的人均产出数据，演示数据）；对需要深度协作的
+    研发团队、隐性知识传递、新人融入等问题只字未提，结论为"五年内办公室将成为例外而非常态"。
+    第 6 节以"未来已来，只是分布不均"作结，全文六节无一处让步句、转折句或适用条件说明。
+  context: {platform: zhihu, goal: trust, audience: "企业中高管"}
+  expected_behavior: >-
+    判定要点：1) 必须诊断反方层缺失：全文单向论证、无边界条件、无反方证据，对中高管
+    读者这类高怀疑受众反而降低可信度；2) 必须建议增设"这并不意味着……"层：给出至少两类具体
+    反方证据（如协作密集型团队的产出数据、新人前 6 个月融入成本，可标注待核实）并正面回应
+    而非一笔带过；3) 不得为了"平衡"删掉立场或把结论改成骑墙句——保留"分布式是趋势"的主张，
+    用边界条件让它更精确；4) 可引用 inoculation_theory 说明预处理反方论点能增强而非削弱说服。
+  key_mechanisms: [argumentation_structure, inoculation_theory]
+  scoring_focus: [diagnostic_quality, actionability, theory_accuracy]
+  anti_patterns: ["为平衡而弱化立场改成'各有利弊'", "只加一句'当然远程也有缺点'却没有具体反方证据", "把成功案例全删掉换成本文不擅长的研究综述"]
+
+- case_id: LFMC-006
+  category: longform_consulting
+  difficulty: medium
+  input: >-
+    用户请求："这篇零售数字化文发出去后，老读者留言'开头挖的坑没填'，帮我看看。" 文章节选——
+    《中台之后的零售下半场》，全文约 7500 字、共 6 节。第 1 节结尾写道："本文将证明：没有
+    数字化中台的零售企业，将在五年内失去定价权。"第 2、3 节讨论中台选型与数据打通的实施
+    步骤；第 4 节是两家企业的案例（演示数据），内容为系统上线后的运营效率变化；第 5 节谈
+    组织配套；第 6 节结论落在"数字化转型是一场漫长旅行"。全文未再出现"定价权"三个字，
+    也没有任何关于定价能力的论证。用户补充："承诺没兑现是事实，但把承诺句删掉会不会太可惜？"
+  context: {platform: zhihu, goal: trust, audience: "零售行业从业者"}
+  expected_behavior: >-
+    判定要点：1) 必须命中 promise_delivery 检查：第 1 节的开篇承诺（证明定价权流失）
+    在后文零兑现，且第 6 节结论已漂移为另一命题，构成跨节断裂；2) 必须给用户两条明确选项并
+    说明取舍：补足论证（增加一节：数据资产如何转化为议价能力，含机制与证据）或收缩承诺
+    （把第 1 节承诺改写为全文实际证明的内容）；3) 不得只把结尾润色得更响亮来掩盖论证缺口，
+    也不得默认选其一而不交由用户确认；4) 修复后必须核对全文 open_question/promise 清单
+    （Global Coherence），确认无第二个未兑现承诺。
+  key_mechanisms: [conceptual_coherence, curiosity_gap]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["用更有力的结尾金句掩盖承诺未兑现", "只建议'删掉第一节的承诺句'而不检查其他承诺", "没发现承诺—兑现断裂，直接进入逐句润色"]
+
+- case_id: LFMC-007
+  category: longform_consulting
+  difficulty: easy
+  input: >-
+    用户请求："这篇品牌年轻化文 6000 字，帮我精简掉废话。" 文章节选——全文共 5 节。同一主张
+    以不同措辞出现三次：第 1 节"年轻化不是把 logo 换成荧光色，而是换一种和年轻人说话的方式"；
+    第 3 节"真正的年轻化，无关视觉焕新，本质上是一场沟通语言的代际迁移"；第 5 节"别忘了，
+    年轻化的核心从来不是视觉层的翻新，而是话语体系的更替"。三句之后均无新的案例或论据跟进。
+    第 2、4 节的两组案例各自支撑另两个独立观点（文中数据均为演示数据）。
+    第 5 节句位于全文最后一段。用户补充："我数了数，车轱辘话好像就这三句。"
+  context: {platform: zhihu, goal: save, audience: "品牌与市场负责人"}
+  expected_behavior: >-
+    判定要点：1) 必须按 semantic_redundancy 执行成组比对：三句剥离措辞后信息增量为零，
+    标记为同一重复组，并给出保留判据——保留最具体、位置最优（靠近所支撑论点）或作者原声最鲜明
+    的一句，其余 Merge 或降为括注；2) 必须输出重复组清单与预计压缩量（如"组 1（§1-3-5），
+    压缩约 300 字/5%"），而不是笼统说"有重复"；3) 不得对三句分别润色后全部保留；4) 必须区分
+    修辞性重复：若第 5 节句承担首尾呼应功能，可保留但须能指出其修辞功能，不得无差别删除。
+  key_mechanisms: [information_foraging, processing_fluency]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["对每句重复各自润色后全部保留", "把修辞性首尾呼应也一刀切删掉", "只说'有点啰嗦'不给出保留哪句的判据"]
+
+- case_id: LFMC-008
+  category: longform_consulting
+  difficulty: medium
+  input: >-
+    用户请求："这篇组织方法论 9000 字，读者说'到一半就读不动了'，帮我诊断。" 文章节选——
+    全文共 7 节，前 3 节节奏正常（问题、框架、案例交替）。第 4 节"组织能力五要素模型"、
+    第 5 节"三层授权矩阵详解"、第 6 节前半"四象限人才盘点法"连续 3500 字均为高密度框架
+    推演：无一个案例、无一个类比、无小结段，句式均为"要素—子要素—子子要素"的逐层展开
+    （数据均为演示数据）。第 7 节以一个生动的创始人故事收尾。问题集中在全文 40%-70% 区间。
+    用户补充："内容都是干货，一个字都不想删，你帮我想想办法。"
+  context: {platform: zhihu, goal: comprehension, audience: "企业中高管"}
+  expected_behavior: >-
+    判定要点：1) 必须画出认知负荷曲线并定位连续 HIGH 区：第 4-6 节前半的 40%-70%
+    区间恰是 Fatigue Zone，却安排了全文密度最高的三段框架推演且零节奏变化，cognitive_fatigue
+    导致中途退出；2) 必须给出节奏修复方案：在 Fatigue Zone 至少安排一次节奏变化（每节嵌入
+    一个微型案例或类比、节间加两行小结、或把第 5 节矩阵改为图表+解说），并说明放置位置；
+    3) 不得建议在疲劳区插入与论证无关的趣闻拉注意力——那是 seductive_details_effect，
+    会挤占主线记忆；4) 修复方案须与第 7 节的故事收尾区分：故事在结尾承担记忆锚功能是设计，
+    问题只在中段。
+  key_mechanisms: [cognitive_fatigue, seductive_details_effect]
+  scoring_focus: [diagnostic_quality, actionability, theory_accuracy]
+  anti_patterns: ["在疲劳区插入无关趣闻或段子拉注意力", "全程均匀加粗高亮制造节奏假象", "只建议'语言轻松一点'而不动结构密度"]
+
+- case_id: LFMC-009
+  category: longform_consulting
+  difficulty: easy
+  input: >-
+    用户请求："这篇会员制文我自己觉得铺垫是必要的，但完读率只有 11%（演示数据）。" 文章节选——
+    《会员制的本质》，全文约 7000 字、共 6 节。前 3000 字（第 1、2 节）为行业背景：付费会员
+    市场规模、各平台会员数量增长曲线、渗透率对比、发展沿革梳理（均为演示数据），无一句观点
+    表达；中心命题"会员制的本质是把不确定性生意变成确定性生意"在第 4 节过半处才首次出现，
+    此后才展开论证；第 3 节末尾仅有一句过渡"看完了背景，我们来看本质"，仍未抛出观点；
+    第 6 节结尾再次点题。用户补充："背景数据我都留着了，是不是直接删掉就行？"
+  context: {platform: zhihu, goal: comprehension, audience: "零售与消费行业从业者"}
+  expected_behavior: >-
+    判定要点：1) 必须命中 Thesis 后置问题（Case A 延迟命题情形）：前三千字无观点，中心命题在全文约
+    55% 处才出现，读者的 information_scent 长期悬空；2) 必须给出 Move 方案而非 Cut 方案：
+    把中心命题句前移至全文前 10%-15%（并给出一句话版本），背景压缩为 300-500 字服务性铺垫
+    或降为括注；3) 必须回应用户"是不是直接删掉"：不能全删——部分背景数据支撑后文论证，
+    处理是压缩与后移，不是清除；4) 不得保留原结构只把背景写得更生动。
+  key_mechanisms: [information_scent, selective_attention]
+  scoring_focus: [diagnostic_quality, actionability]
+  anti_patterns: ["保留全部背景只改写开头钩子", "把背景全部删除而不检查后文是否引用", "把观点堆到结尾制造'压轴感'"]
+
+- case_id: LFMC-010
+  category: longform_consulting
+  difficulty: medium
+  input: >-
+    用户请求："这篇增长文有读者问'三个词是不是一回事'，帮我查一下。" 文章节选——《增长飞轮
+    实战手册》，全文约 8000 字、共 6 节。第 1 节定义"增长飞轮：用户推荐带来新用户、新用户
+    产生内容、内容再带来推荐的正循环"；第 3 节标题为"如何转动你的增强回路"，正文描述与
+    第 1 节的飞轮完全一致；第 5 节改用"自增长闭环"指代同一结构，但悄悄把定义换成了"多渠道
+    协同获客的复合体系"，并用这个新定义推导出"预算投入越大闭环越强"的结论（演示数据）。
+    三个名称全文交替出现，无任何一处说明彼此关系。用户补充："是统一成一个词就行，还是三个都得留？"
+  context: {platform: zhihu, goal: trust, audience: "增长与运营负责人"}
+  expected_behavior: >-
+    判定要点：1) 必须建立概念注册表并命中两类问题（Global Coherence）：multiple_names
+    （飞轮/增强回路/自增长闭环三名同实）与 shifting_definition（第 5 节定义已从用户推荐循环
+    偷换为多渠道协同）；2) 必须指出 shift 的实际后果：第 5 节"预算越大闭环越强"的结论只在
+    新定义下成立，与第 1 节机制无关，属于概念漂移导致的 conclusion_leap；3) 必须给修复方案：
+    全文统一一个 canonical 术语并首次出现即固定定义，第 5 节若确要引入新机制则须明确声明
+    "这是另一个结构"或删除；4) 不得保留三个名称声称"丰富表达"。
+  key_mechanisms: [conceptual_coherence, schema_formation]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["认为术语多样是文采而保留三个名称", "统一改名后忘记回改前文所有引用处", "只回答'是一回事'而不处理第 5 节的定义偷换"]
+
+# ----------------------------- 教育文章（LFED） -----------------------------
+
+- case_id: LFED-001
+  category: longform_educational
+  difficulty: hard
+  input: >-
+    用户请求："这篇写给产品经理的机器学习入门文，有学员反馈'第 2 节就看不下去'，帮我改。"
+    文章节选——《给产品经理的机器学习入门》，全文约 8500 字、共 7 节。第 2 节用"梯度下降
+    在损失曲线上找最低点"解释模型训练，但"损失函数""梯度"两个概念到第 7 节才有正式定义；
+    第 4 节讲"用验证集检测过拟合"，而过拟合的概念与示例在两节之后的第 6 节才引入；第 5 节
+    的交叉验证例子默认读者已理解第 6 节才讲的训练集划分规则（文中示例数据均为演示数据）。
+    各节单看都能读懂，连起来却处处遇到"后文才讲的词"。第 7 节末尾附有术语表。
+  context: {platform: zhihu, goal: comprehension, audience: "零基础产品经理"}
+  expected_behavior: >-
+    判定要点：1) 必须画概念依赖图并命中依赖倒置：损失函数/梯度（§7→§2 使用）、过拟合
+    （§6→§4 使用）、训练集划分（§6→§5 使用），至少三处定义晚于使用；2) 必须按 schema_formation
+    重排依赖序（先定义后使用，或在使用处以最小自足定义先行、正式展开留后文），并产出
+    Original vs Proposed 大纲对照交用户确认；3) 不得用"这个概念后文会讲"的脚注方案保留原
+    顺序——零基础读者在工作记忆里挂不住未定义术语（working_memory_limits），这正是第 2 节
+    劝退的原因；4) 不得把未定义概念直接删掉来"解决问题"。
+  key_mechanisms: [schema_formation, working_memory_limits]
+  scoring_focus: [diagnostic_quality, actionability, theory_accuracy]
+  anti_patterns: ["保留原顺序只在首次出现处加脚注", "把依赖错序误诊为'概念太难'", "重排后不检查示例数据的前后引用是否仍然成立"]
+
+- case_id: LFED-002
+  category: longform_educational
+  difficulty: medium
+  input: >-
+    用户请求："这篇学习方法文读完就忘，读者说'当时懂了，合上就忘'，帮我改。" 文章节选——
+    《成人学习的四个引擎》，全文约 7000 字、共 6 节，依次讲检索练习、间隔重复、交错练习、
+    自我解释四个方法。每节结构为"原理介绍两段＋实验描述一段（演示数据）＋操作建议两段"，
+    节与节之间无承接；全文核心方法没有一个统一命名，也没有一句话版本的总括；每节结尾在操作
+    建议讲完后直接跳入下一节标题；四个方法在全文各只出现一次。用户补充："能不能帮我加点
+    '记忆点'，但别搞成每节末尾都放一个'本节要点'那种很 AI 的东西。"
+  context: {platform: zhihu, goal: save, audience: "有自学需求的职场人"}
+  expected_behavior: >-
+    判定要点：1) 必须诊断记忆锚点缺位：核心概念零复现、无命名、无小结句，读者只留 gist
+    印象无法提取，须给出 3-5 个 memory_anchors 的具体设计（retrieval_cue_design）——如给四
+    方法一个总括命名与一句话锚句、节首节末各置一次复现、结尾用四引擎合成的统一图景收束；
+    2) 复现设计必须符合判别法：关键概念重复出现时须携带新信息或新功能（新场景、新推论），
+    引用 mere_exposure 的边界说明适度 2-3 次复现是记忆设计而非废话；3) 不得按用户预判的反面
+    教条化——每节末尾机械添加同构"本节要点"清单，那会制造对称模板腔；4) 锚点位置应利用
+    serial_position_effect 放在章节开头或结尾的黄金位。
+  key_mechanisms: [retrieval_cue_design, serial_position_effect]
+  scoring_focus: [actionability, theory_accuracy, specificity]
+  anti_patterns: ["每节末尾机械添加同构'本节要点'清单", "把全文关键术语加粗爆炸当锚点", "建议零改动理由是'自然流畅比记忆点重要'"]
+
+- case_id: LFED-003
+  category: longform_educational
+  difficulty: hard
+  input: >-
+    用户请求："这篇贝叶斯推理文太硬了，帮我简化到人人能懂，最好一段就讲一个点。" 文章节选——
+    《贝叶斯更新：如何理性地改变想法》，全文约 9000 字、共 7 节。第 3 节用医疗检测为例完整
+    推导：基础患病率 1%（演示数据）、检测灵敏度 99%、假阳性率 5%，逐行算出阳性结果下真实
+    患病概率约 16.7%；第 4 节讨论先验强度如何影响更新幅度；第 5 节给出三个边界条件（基础率
+    极低时的失真、证据独立性、多重检验问题）。推导链条环环相扣，跳过任何一步，后文结论即
+    不成立。全文无类比、无图表。用户补充："专业读者说写得好，但新读者说像教科书。"
+  context: {platform: zhihu, goal: comprehension, audience: "对理性思维感兴趣的普通读者"}
+  expected_behavior: >-
+    判定要点：1) 必须援引 Simplify Expression, Not Reality 明确拒绝降级式简化：本篇
+    的推导链与边界条件是必要复杂度，把它简化成"直觉上跟着感觉修正"属于用易读性换取错误；
+    2) 必须给拆解式替代方案：按 chunking 把第 3 节推导拆成带编号的分步块（每块一个动作+一行
+    算式）、用"1000 人模拟"类比替换抽象百分比叙述、把第 5 节边界条件改为"三个翻车场景"
+    的分块叙述——拆解表达，保留数学结构；3) 不得为满足"一段一个点"砍掉推导步骤或边界条件；
+    4) 不得用一句话结论（如"大约 16%，反直觉吧"）替代读者自己走完推导的过程，那会摧毁
+    germane 加工。
+  key_mechanisms: [chunking, schema_formation]
+  scoring_focus: [diagnostic_quality, overclaiming, theory_accuracy]
+  anti_patterns: ["为易读把结论简化成错误版本", "直接拒绝用户说'这没法简化'而不给拆解方案", "把推导折叠成'专家可直接看公式'的一行带过"]
+
+- case_id: LFED-004
+  category: longform_educational
+  difficulty: medium
+  input: >-
+    用户请求："这篇 Excel 教程读者说'看着就头大'，帮我排个版。" 文章节选——《用 Excel 做
+    销售数据分析》，全文约 8000 字、共 5 节，每节 1500 字以上的连续段落，无小标题、无列表。
+    以第 3 节为例：一段话里先解释数据透视表的工作原理，中途插入"选中 A1:F800 区域，点击
+    插入—数据透视表"，接着又回到原理，再插入"将销售日期字段拖入行区域，值区域选择求和"，
+    并解释为什么用求和而不是计数；操作指令、原理解释、易错点提醒三种内容在同一段落内交替
+    出现（示例数据均为演示数据）。全文仅首尾各有一句开场白和总结。用户补充："内容别动，就排个版。"
+  context: {platform: zhihu, goal: comprehension, audience: "需要做数据报表的运营人员"}
+  expected_behavior: >-
+    判定要点：1) 必须诊断混写问题：指令、原理、易错点三层内容在同段交替，读者被迫在"做"
+    与"懂"两种模式间反复切换，产生大量 extraneous_cognitive_load，"头大"来自排版结构而非
+    内容本身；2) 必须给分层结构方案：按 chunking 把每节重组为"操作步骤（编号列表，每步一个
+    动作）/ 原理框（步骤后集中解释）/ 易错点（括注或提示框）"三层，并给第 3 节一段重组示例；
+    3) 不得只用加粗、分割线、表情符号做视觉修补而不动信息层级——段落墙内层信息仍混写；
+    4) 不得把原理全删，否则读者无法迁移到变体任务。
+  key_mechanisms: [chunking, extraneous_cognitive_load]
+  scoring_focus: [diagnostic_quality, actionability]
+  anti_patterns: ["只把长段切短但不区分指令与原理", "加一堆加粗、emoji 和分割线制造易读假象", "删除原理解释让教程退化成操作手册"]
+
+- case_id: LFED-005
+  category: longform_educational
+  difficulty: medium
+  input: >-
+    用户请求："这篇 SQL 入门文的标题和目录都是我照爆款改的，但读者平均停留只有 30 秒
+    （演示数据），帮我看看。" 文章节选——《30 分钟从零掌握 SQL》，全文约 7500 字、共 6 节。
+    小标题依次为"SQL 的哲学""数据库简史""关系代数初探""范式理论之美""SELECT 语句概述"
+    "进阶之路"。标题全部承诺快速实用（"30 分钟""从零掌握"），但每一节实际内容都是理论
+    讲义：第 1 节用 1200 字讨论声明式语言的设计思想（演示数据），第一个可运行的查询语句
+    到第 5 节才出现，全文没有一个"跟着敲"的练习。用户补充："标题我舍不得改，内容能不能迁就一下标题？"
+  context: {platform: juejin, goal: comprehension, audience: "想快速上手 SQL 的开发新人"}
+  expected_behavior: >-
+    判定要点：1) 必须诊断 scent 断裂：标题层承诺"快速上手"，节标题与内容层供给"理论讲义"，
+    承诺与交付错位导致读者点开即离（30 秒停留与 scent 失效一致）；2) 必须双向修复并说明
+    取舍：要么改标题使之诚实（如"SQL 入门：先理解这三个概念"），要么改内容使之兑现
+    （第 1 节改为可跟敲的第一个查询，理论后置）；3) 不得用标题党放大承诺——"30 分钟掌握"
+    与内容差距会进一步摧毁 trust；4) 修复后应逐节核对标题—内容 scent 一致性并给出新目录。
+  key_mechanisms: [information_scent, information_foraging]
+  scoring_focus: [diagnostic_quality, actionability, platform_fit]
+  anti_patterns: ["把标题改得更标题党而不改内容", "只加一个目录页就交付", "删除全部理论内容只留操作指令"]
+
+# ----------------------------- 品牌思想文章（LFBR） -----------------------------
+
+- case_id: LFBR-001
+  category: longform_brand
+  difficulty: hard
+  input: >-
+    用户请求："这是我们创始人的思想文，有投资人建议改成麦肯锡报告那样的研究体，帮我转一下。"
+    文章节选——《液态组织：未来十年的公司形态》，全文约 6000 字、共 5 节。核心主张"未来的
+    组织不是金字塔而是液态的：人才像水一样按项目流动、按价值汇聚"。论证全部为作者断言链：
+    "我确信……""毫无疑问……""我可以预言……"，配两个轶事式观察（某大厂裁撤中层后的内部反应、
+    自家公司的一次项目制实验，演示数据）；无数据、无研究引用；但"按项目重组""以能力为节点"
+    两个概念是原创提法，此前未见同行提出，观点本身锋利且自洽。创始人在行业里以"敢说"著称。
+  context: {platform: wechat, goal: authority, audience: "企业管理者与投资人"}
+  expected_behavior: >-
+    判定要点：1) 必须先做文体判定：这是 thought leadership 文，评价重心在 originality + 
+    argument，不适用研究报告的证据模板——不得把文章改写成"背景—方法—发现—建议"的研究体；
+    2) 必须诊断 unsupported_claim 但给思想文式修复：为两个断言链补 warrant（作者可提供的
+    观察支撑、机制解释）并划定边界（"这是我基于 N 次组织实验的判断，适用于知识密集型组织"），
+    把"毫无疑问"降级为可辩护的强观点；3) 不得要求创始人补大样本实证，也不得编造研究引用
+    来"撑"观点；4) 保留原创概念与锋利立场，弱化表述不等于稀释观点。
+  key_mechanisms: [argumentation_structure, ethos_pathos_logos]
+  scoring_focus: [diagnostic_quality, overclaiming, theory_accuracy]
+  anti_patterns: ["套用研究报告模板改造思想文", "要求补虚构数据或编造研究引用做实证支撑", "为求稳删掉鲜明观点和原创概念"]
+
+- case_id: LFBR-002
+  category: longform_brand
+  difficulty: medium
+  input: >-
+    用户请求："帮我把这篇优化成行业报告体，董事会觉得现在这种写法'不够专业'。" 文章节选——
+    《别把用户当流量》，全文约 5500 字、共 4 节。作者声音极鲜明：短句成段（"流量不是用户。
+    流量是数字，用户是人。"），大量比喻（"把用户当流量，就像把客人当翻台率"），偶用第二
+    人称直呼读者（"你有没有算过，你的'获客成本'里，算过一个人的失望吗？"）。论证结构松散、
+    没有框架图和小标题，但观点原创、口吻统一，是创始人长期在朋友圈和播客里形成的表达习惯，
+    也是其个人 IP 的辨识度来源。用户补充："就董事会那种报告体：有小标题、有编号、结论先行的那种。"
+  context: {platform: wechat, goal: authority, audience: "消费行业从业者与投资人"}
+  expected_behavior: >-
+    判定要点：1) 必须援引 Preserve Author Intent 先说明改写代价再动手：author voice
+    是品牌思想文的核心资产，转成报告体会同时摧毁 authenticity_perception 与辨识度，"专业感"
+    的收益远小于声音的损失；2) 必须给替代方案而非直接照办：保留短句与比喻的 Pass 2 微调
+    （删冗余、理顺松散段落的逻辑连接、给四节加克制的小标题），并出一个 200 字报告体样例
+    供董事会对比感知差异，把决定权交回用户；3) 不得在用户未理解后果前直接模板化重写全文；
+    4) 不得删掉第二人称与比喻——它们承担论证功能而非装饰。
+  key_mechanisms: [authenticity_perception, processing_fluency]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["直接把全文改成报告体交付", "删掉比喻和第二人称换成数据口吻", "只说'董事会要求不合理'而拒绝给替代方案"]
+
+- case_id: LFBR-003
+  category: longform_brand
+  difficulty: medium
+  input: >-
+    用户请求："这篇转型复盘文读者反馈'故事很感人但最后那段结论太猛了'，帮我改。" 文章节选——
+    《我们砍掉 80% SKU 之后》，全文约 6500 字、共 5 节。前四节是完整的创业叙事：公司如何从
+    2000 个 SKU 的综合电商转向 40 个 SKU 的精选模式（演示数据），含团队争吵、库存危机、
+    第一次盈利等高感染力细节。第 5 节结论："所有创业公司都应该砍掉 80% 的产品线。品类越多，
+    死得越快。这是我用三年和全部积蓄换来的真理。"全文无第二家企业案例，无行业数据，
+    故事细节与结论之间没有搭桥。用户补充："故事部分别动，只看看结论怎么写得更服人。"
+  context: {platform: wechat, goal: share, audience: "早期创业者"}
+  expected_behavior: >-
+    创业叙事是资产不是病灶：narrative_transportation 与故事感染力应保留；1) 必须命中单案例
+    外推（anecdote_vs_statistics）："我们的经验"到"所有创业公司都应"是典型的 n=1 普遍化，
+    且故事与结论间缺 warrant；2) 必须给三件套修复：加边界（"适用于……品类结构分散、库存
+    占用现金流的早期公司"）、加机制桥（解释砍 SKU 为什么起效：现金集中、决策带宽、演示数据
+    的单位经济变化）、加至少一次反例检验（哪些公司不该这么做）；3) 不得删故事换数据堆砌
+    破坏感染力；4) "全部积蓄换来的真理"这类修辞须降级为"我们在一个样本上验证过的路径"。
+  key_mechanisms: [anecdote_vs_statistics, narrative_transportation]
+  scoring_focus: [overclaiming, diagnostic_quality, actionability]
+  anti_patterns: ["删掉故事改成行业数据综述", "保留全文外推结论只软化'真理'两个字", "要求作者补 100 家公司数据后才许下结论"]
+
+- case_id: LFBR-004
+  category: longform_brand
+  difficulty: hard
+  input: >-
+    用户请求："这篇变革管理文下周要发公司公众号，引用很关键，帮我最后把关。" 文章节选——
+    《为什么 73% 的变革会失败》，全文约 7000 字、共 6 节。标题与第 1 节的核心论据为同一句
+    引用："哈佛商学院 2019 年的一项研究表明，73% 的组织变革以失败告终，其中 68% 源于文化
+    阻力。"该数据在正文中被引用 3 次、出现在 2 个小标题里，是全文论证的地基；但作者自述
+    出处是"几年前一个行业群里看到有人转"，无法提供论文标题、作者或链接；初步检索显示该数字
+    常见于各类转引文章且数字版本不一（演示数据）。用户补充："内容都写完了，就差这个引用没问题就发。"
+  context: {platform: wechat, goal: trust, audience: "企业中高管"}
+  expected_behavior: >-
+    判定要点：1) 必须触发 provenance_verification：关键引用无法溯源且检索提示数字版本不一，
+    属于发布前必须处理的红线项，而非"小瑕疵"；2) 必须给分级处置方案：优先换为可查证来源
+    （给出真实可核的出处后才可保留精确数字），否则删除具体百分比、降级为"多项研究提示多数
+    变革未达预期（具体比例存在争议）"并同步修改标题与两处小标题；3) 必须向用户说明为什么
+    不得放行：精确数字+权威机构名的组合会触发 fluency_truth_effect，一旦被读者核查证伪，
+    公众号的信任资产损失远大于改标题的成本；4) 不得建议"换个更权威的机构名"或保留数字
+    标注"仅供参考"后照发。
+  key_mechanisms: [provenance_verification, fluency_truth_effect]
+  scoring_focus: [evidence_accuracy, ethical_safety, overclaiming]
+  anti_patterns: ["保留精确百分比默认为真", "换一个更权威的机构名替换引用", "只提醒'建议核实'但不给处置方案就放行"]
+
+- case_id: LFBR-005
+  category: longform_brand
+  difficulty: medium
+  input: >-
+    用户请求："这篇创始人长文完读率不错，但读者转发时只说'故事好看'，说不出观点，帮我改。"
+    文章节选——《在无人区开便利店》，全文约 8000 字、共 6 节。约 60% 篇幅为叙事细节：选址
+    踩坑、店长出走的整章描写、台风夜全店通宵的场面（演示数据），画面感和感染力强；核心主张
+    "便利店的本质不是位置生意而是确定性生意"仅在每节结尾以一句话点到即止；6 个故事段落中
+    只有 2 个与该主张有论证关联（选址踩坑段支撑"位置生意失灵"），其余 4 个精彩但游离于
+    论证之外；每节均以场景开场、以观点句收束，结构高度一致。用户补充："故事我一个都不想删。"
+  context: {platform: wechat, goal: share, audience: "零售从业者与创业者"}
+  expected_behavior: >-
+    判定要点：1) 必须命中 seductive_details_effect：4 个游离故事段是高感染力但与主张无关的
+    诱惑性细节，它们抢走了读者的注意与记忆配额——读者记得台风夜，忘了"确定性生意"；2) 必须
+    给绑定式方案而非删除式方案：保留承担论证功能的 2 个故事段并让每段结尾显式回扣其支撑的
+    claim；4 个游离段择优保留 1 个但重新剪裁，使其服务于核心主张（如店长出走段剪裁为
+    "确定性为什么也指人的稳定"），其余降为删节或另起一篇；3) 不得把 60% 故事全删改成观点
+    集锦——那会同时失去完读率与转发动力；4) 修改后应复述测试：读者能否用一句话转述核心主张。
+  key_mechanisms: [seductive_details_effect, story_character_identification]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["把故事全删只剩观点清单", "保留 60% 故事只是把观点句加粗", "要求把所有故事都改成数据案例"]
+
+# ----------------------------- AI 生成长文（LFAI） -----------------------------
+
+- case_id: LFAI-001
+  category: longform_ai
+  difficulty: easy
+  input: >-
+    用户请求："这是我用 AI 辅助写的趋势文，改了三稿还是觉得'车轱辘话多'，帮我看看。" 文章节选
+    ——《AI 重构内容营销的六个信号》，全文约 8000 字、共 6 节，AI 生成初稿人工略改。同一主张
+    的三处同义改写：第 1 节开头"AI 正在以史无前例的速度重塑内容生产的每一个环节"；第 3 节
+    中部"人工智能让内容的生产方式发生根本性变化，成本与速度都被改写"；第 6 节结尾"内容
+    生产的价格曲线因 AI 而陡降，这一变化才刚刚开始"。三句之后均无新数据或新推论跟进；
+    第 2、4、5 节各自独立成立（文中数据均为演示数据）。评论区有读者留言"信息密度低"。
+  context: {platform: zhihu, goal: trust, audience: "内容营销从业者"}
+  expected_behavior: >-
+    判定要点：1) 必须识别 AI Semantic Repetition（七类 AI 检测之首）：AI 逐段独立生成的默认
+    同义改写行为，三句剥离措辞后信息增量为零，属同一重复组；2) 必须按 semantic_redundancy
+    处理：成组比对→保留最具体的一句（第 6 节句有"价格曲线陡降"的具象表述），其余 Cut 或
+    降为括注，并输出重复组清单与预计压缩量；3) 必须向用户解释病因与复发风险：只润色句子
+    不解决逐段生成带来的结构性重复，同义改写还会继续出现（ai_content_saturation 下读者对
+    模板化复述的耐受度也在降低）；4) 不得把三句分别润色得更优雅后全部保留。
+  key_mechanisms: [information_foraging, ai_content_saturation]
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns: ["把每句重复润色得更优雅后保留", "把修辞性首尾呼应一并删光而不区分功能", "只说'有点啰嗦'不做成组比对"]
+
+- case_id: LFAI-002
+  category: longform_ai
+  difficulty: medium
+  input: >-
+    用户请求："AI 帮我生成的这篇私域长文，领导说'什么都有，又好像什么都没说'，帮我诊断。"
+    文章节选——《私域运营全景解析》，全文约 9000 字、共 8 节，依次为：引流、留存、转化、
+    复购、社群、内容、数据、工具，每节篇幅几乎相等，均以"私域运营中，XX 是至关重要的一环"
+    开头、以"只有做好 XX，才能构建完整的私域闭环"收尾（文中数据均为演示数据）。全文没有
+    出现任何一条作者自己的判断或取舍，"全面""详解""一文读懂"在标题和小标题中出现 7 次，
+    节与节之间无任何承接。用户补充："能不能在每节前面加一段导语，让它显得更有主张？"
+  context: {platform: zhihu, goal: authority, audience: "私域运营从业者"}
+  expected_behavior: >-
+    判定要点：1) 必须识别 Artificial Completeness：8 维度机械等权罗列、无中心命题、
+    无取舍，"什么都有又什么都没说"的病根是文章在"解析"而非"论证"；2) 必须给重构方案：先
+    定一句中心命题（如"私域的瓶颈通常不在引流而在复购设计，演示数据"），再按论证需要取舍
+    维度——合并相近节（引流+内容）、Cut 无争点的节（工具）、Expand 有争点的节，并走 Re-outline
+    流程交用户确认；3) 不得保留等权结构只给每节加小标题和金句——那只是给完备性幻觉抛光；
+    4) 必须向用户说明"全面"的代价：读者只为一个可转述的判断停留，不为目录的完整停留。
+  key_mechanisms: [argumentation_structure, information_foraging]
+  scoring_focus: [diagnostic_quality, actionability]
+  anti_patterns: ["给 8 个维度各配金句继续等权", "用'全面'当卖点建议保留结构", "直接输出重写稿而不先与用户确认新大纲"]
+
+- case_id: LFAI-003
+  category: longform_ai
+  difficulty: easy
+  input: >-
+    用户请求："这篇 AI 生成的增长方法文，读者说'读三节就像读了全部'，帮我改。" 文章节选——
+    《增长黑客的六大杠杆》，全文约 8500 字、共 6 节。六节结构完全同构：每节固定为"定义段
+    （约 120 字）→三要点（每点恰好两行，以'首先/其次/最后'起头）→小结段（约 80 字，复述
+    定义）"。六节的标题互换后，正文几乎不用改动即可对号入座；配图位置、加粗位置、每节结尾
+    金句的位置也完全一致（文中数据均为演示数据）。六节标题均为"XX 杠杆：XX 的力量"句式。
+    读者反馈"很有节奏感，但像课件"。用户补充："是不是把每节写得更丰满一点就好了？"
+  context: {platform: zhihu, goal: comprehension, audience: "增长运营从业者"}
+  expected_behavior: >-
+    判定要点：1) 必须识别 Symmetry Bias：逐节完全同构是 AI 逐段独立生成的结构指纹，
+    匀速节奏抹平了内容的重要性差异——读者无法从形态判断哪节值得慢读，30% 处建立预期后
+    attention 持续衰减（novelty_preference 不再被触发）；2) 必须给形态重分配方案：按内容重新
+    分配节形态——核心节用案例展开、次要节 Merge 或压缩、对比性内容改表格，打破"定义—三要点—
+    小结"的逐节同构；3) 不得保留同构只更换例子和金句；4) 也不得为破对称而把全文改成随机
+    杂乱——目标是节奏服务论证，不是制造混乱。
+  key_mechanisms: [cognitive_fatigue, novelty_preference]
+  scoring_focus: [diagnostic_quality, actionability]
+  anti_patterns: ["保留同构结构只更换案例和金句", "为了打破对称把全文改成无节奏的碎片", "只夸'结构清晰'而不处理对称问题"]
+
+- case_id: LFAI-004
+  category: longform_ai
+  difficulty: medium
+  input: >-
+    用户请求："AI 写的这篇数字化白皮书，客户说'读着很顺，但读完不知道说了啥'，帮我改。"
+    文章节选——《企业数字化转型白皮书》，全文约 9000 字、共 6 节。过渡句五处同款："接下来，
+    让我们看看另一个重要的方面""说完 X，我们再来看看 Y""以上是 X 的内容，下面进入 Y"。
+    术语密度极高但无一落地，典型句式如"以数字化为底座，全面赋能业务增长，打通线上线下
+    双闭环，沉淀中台能力，强化协同颗粒度，实现全域对齐，构建增长飞轮"；全节无一个具体
+    企业、场景或数字（文中表述均为演示样例）。用户补充："语言改得更落地些，但术语要保留，客户吃这一套。"
+  context: {platform: wechat, goal: trust, audience: "中小企业主"}
+  expected_behavior: >-
+    判定要点：1) 必须同时识别两类 AI 痕迹：Empty Transition——五处过渡句零信息、可
+    整体删除；Abstract Inflation——黑话链（赋能/抓手/闭环/颗粒度/对齐）无具体主语与场景，
+    concreteness_in_language 失效导致"很顺但没内容"的体感；2) 必须给替换规则而非逐句润色：
+    过渡句改为承上启下的实质句（点明上一节结论如何改变下一节的问题），每个黑话要么替换为
+    可看见/可测量的表述（给 1-2 个改写示例）要么删除；3) 不得用更多连接词和高级词汇修补
+    ——那会加剧通胀，也不得以"客户喜欢"为由保留黑话；4) 应向用户解释"顺"恰是风险信号：
+    processing_fluency 高而信息量为零，流畅感被误读为专业感。
+  key_mechanisms: [processing_fluency, concreteness_in_language]
+  scoring_focus: [diagnostic_quality, specificity, actionability]
+  anti_patterns: ["把'让我们看看'润色成更花哨的版本", "给黑话补英文缩写显得更专业", "只删过渡句不处理黑话密度"]
+
+- case_id: LFAI-005
+  category: longform_ai
+  difficulty: hard
+  input: >-
+    用户请求："这篇 AI 生成加人工包装的思想文，被一位资深读者指出'看着很深，其实一层'，帮我
+    核实。" 文章节选——《AI 营销的本质回归》，全文约 10000 字、共 7 节。第 4 节典型段落：
+    "第一层，AI 营销是效率的革命；第二层，效率革命的深处，是对用户理解的革命；第三层，用户
+    理解革命的内核，是价值创造方式的革命。"三层之间无机制、无边界、无反例，仅为同一主张的
+    修辞升维。第 1 节结尾："AI 营销的本质，是回归用户价值。"第 7 节结尾："归根结底，AI 营销
+    的本质，就是回归用户价值。"中间各节未推进该命题的任何具体含义（文中表述均为演示样例）。
+  context: {platform: zhihu, goal: authority, audience: "营销与战略从业者"}
+  expected_behavior: >-
+    判定要点：1) 必须同时识别两类 AI 痕迹：Fake Depth——"第一层/第二层/第三层"的
+    层级修辞无信息分层，每层只是同一主张的措辞升维，无机制、无边界、无反例；Conclusion
+    Echo——第 7 节对第 1 节零增量复述，伪装成升华；2) 必须给升级方案：让"层"携带真实增量
+    （每层回答一个具体问题或引入一个机制/边界/反例），结论必须推进——给出新推论、行动含义
+    或诚实的开放问题，而非回声；3) 不得保留三层外壳只润色用词，也不得建议删掉结尾段了事
+    （结尾位承担 peak_end 记忆功能，应重写而非移除）；4) 须如实告知用户：资深读者的判断
+    成立，本文当前不构成"思想文"。
+  key_mechanisms: [conceptual_coherence, information_foraging]
+  scoring_focus: [diagnostic_quality, specificity, actionability]
+  anti_patterns: ["保留三层外壳只润色修辞", "结论换个说法重复开头当升华", "把分层结构删除后全文平铺一样没有增量"]

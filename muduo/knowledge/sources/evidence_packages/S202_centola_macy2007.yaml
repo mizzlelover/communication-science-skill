@@ -1,0 +1,25 @@
+# Evidence Package — S202 Centola & Macy 2007（复杂传染与弱长边局限）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S202
+title: "Complex Contagions and the Weakness of Long Ties"
+authors: "Damon Centola; Michael Macy"
+year: 2007
+journal: American Journal of Sociology, 113(3), 702-734
+doi: "10.1086/521848"
+url: "https://doi.org/10.1086/521848"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心命题经 4 个独立源交叉核实（未取得全文）：①期刊页码与 DOI（AJS 113(3):702-734, 10.1086/521848）经 Nature Human Behaviour 2024 与 JORS 2025 参考文献表一致；②理论命题：复杂传染（需要多源确认/强化的行为——如加入运动平台、采纳新规范）在长边/弱边结构中传播受限——与 Granovetter 弱边优势（简单传染）构成对偶；簇状冗余边提供社会强化，反而利于复杂传染；③理论边界更新：2025 年 PNAS（Wan, Riedl & Lazer）参数化模型显示——大多数参数空间中随机网络扩散不劣于簇状网络，簇状网络仅在采纳近乎确定性的条件下占优（最利条件下也仅 22% 参数空间有 5% 优势），『可达性 vs 强化』存在根本权衡；④配套实验证据：Centola 2010（S124，Science 329:1194，健康行为在线网络实验）为该理论提供行为实验支持"
+research_question: "网络结构（长边 vs 簇状冗余边）如何决定行为的传播范围？"
+core_claims:
+  - "复杂传染需要来自多个邻居的重复确认/强化——单次接触不足以触发采纳"
+  - "弱长边对简单传染（如信息）是优势，对复杂传染是劣势：长边绕过簇状强化结构，到达后缺乏第二确认即死亡"
+  - "社会强化要求与网络聚类度共同决定最优结构——不是『广撒网』总赢"
+  - "理论边界（2025 PNAS）：随机网络在多数参数下扩散同样远甚至更远；簇状优势限于采纳近确定的条件——权衡为『reach vs reinforcement』"
+method: "理论建模与仿真（阈值传染模型：简单 vs 复杂传染在规则格点/小世界/随机网络上的对比）"
+results: "（经典理论）与 Granovetter 1973 构成简单/复杂传染的结构对偶；为复杂传染实验（S124）奠基"
+limitations: "未取得全文；仿真为主（行为实验见 S124）；阈值确定性假设被后续参数化研究修正"
+boundary_conditions: "行为采纳越依赖社会强化越需要聚类；采纳近乎自动（低阈值）时长边恢复优势；平台场景=强弱边混合，需按传染复杂度设计"
+relevant_nodes: [complex_contagion]
+notes: "complex_contagion 节点的理论奠基 EP（实验证据已有 S124）。理论命题与最新边界均多源核实，未编造。"
+last_verified: "2026-09"

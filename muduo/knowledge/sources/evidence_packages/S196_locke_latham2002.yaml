@@ -1,0 +1,26 @@
+# Evidence Package — S196 Locke & Latham 2002（目标设定理论 35 年综述）
+# 标准格式。access_level 如实标注。
+source_id: S196
+title: "Building a practically useful theory of goal setting and task motivation: A 35-year odyssey"
+authors: "Edwin A. Locke; Gary P. Latham"
+year: 2002
+journal: American Psychologist, 57(9), 705-717
+doi: "10.1037//0003-066X.57.9.705"
+url: "https://doi.org/10.1037/0003-066X.57.9.705"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（PubMed PMID 12237980 + ProQuest 全文页 + 多处引用核实三源交叉）：总结目标设定理论 35 年实证研究。摘要明载内容结构：①理论核心发现（core findings）；②目标发挥作用的机制（mechanisms）；③目标效应的调节变量（moderators：目标承诺/自我效能/反馈/任务复杂性——ProQuest 章节目录核实）；④目标与满足感的关系；⑤目标作为外部诱因的中介；⑥外部效度与实践意义；⑦与其他理论的关系及理论局限（目标冲突/学习与绩效目标/风险/人格/潜意识动机等新方向）。章节目录核实核心立场：具体而困难的目标比『尽力而为』产生更高绩效；Ryan 1970 与 Lewin 层次期望传统为意识目标研究的先驱。配套：Locke & Latham 1990《A Theory of Goal-Setting and Task Performance》（Prentice Hall）为专著；2006 Current Directions 为新方向续篇"
+research_question: "意识目标如何调节任务动机与绩效？35 年证据支持哪些核心命题与边界？"
+core_claims:
+  - "核心命题：具体且困难（specific & difficult）的目标比『尽力而为』的模糊目标产生更高任务绩效——35 年实证的总结论"
+  - "机制四条：目标引导注意与行动方向、调动努力、延长坚持、促进策略开发（摘要 mechanisms 条目）"
+  - "关键调节变量：目标承诺（重要性与自我效能支撑）、反馈（追踪进度所必需）、任务复杂性（复杂任务需策略与学习目标而非仅高目标）"
+  - "理论局限被作者明列：目标冲突、学习 vs 绩效目标的区分、目标与风险行为、潜意识动机——不是万灵药"
+  - "外部效度：实验室外（工作/组织场景）有广泛应用与生产力证据（摘要 practical significance 条目）"
+method: "理论综述（35 年实证纲领的整合陈述；400+ 研究的范式总结，具体数量为学界通行表述）"
+results: "（经典理论综述）目标设定成为组织心理学最有实证支撑的动机理论之一；为库内 goal_setting 节点 A→C 降级提供一手恢复依据"
+limitations: "作者自述理论（非中立元分析）；元分析证据在库外（节点 ev.meta 已记组织心理学元分析）；绩效目标对学习任务的负面效应是作者自己列的边界"
+boundary_conditions: "需要承诺与反馈在位；复杂/新颖任务上具体高目标可能损害探索性学习（learning goal 替代）；能力与策略不足时高目标催生不道德或冒险捷径"
+relevant_nodes: [goal_setting_effectiveness]
+notes: "goal_setting_effectiveness 节点『Locke & Latham 目标设定理论一手 EP 未建』标注的建包来源。摘要为官方文本，未编造。"
+last_verified: "2026-09"

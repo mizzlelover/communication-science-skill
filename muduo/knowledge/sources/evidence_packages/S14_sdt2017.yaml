@@ -1,0 +1,26 @@
+# Evidence Package — S14 Ryan & Deci 2017（Self-Determination Theory）
+# 标准格式。access_level 如实标注。
+source_id: S14
+title: "Self-Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness"
+authors: "Richard M. Ryan; Edward L. Deci"
+year: 2017
+journal: Guilford Press（专著，756 页，ISBN 9781462528769）
+doi: "无 DOI（专著）"
+url: "https://iucat.iu.edu/ius/16409808"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 图书馆目录（iucat.iu.edu，完整 24 章目录含六 mini-theories 章节 + 护封摘要：三需要）+ 渠道2 SDT 官方站点（selfdeterminationtheory.org，700+ 页权威专著、自主/胜任/归属定义、自主 vs 控制动机）+ 渠道3 中文综述（《心理科学进展》张春虎，动机调节类型：外部调节/摄入调节/认同调节/整合调节 + 内在动机/去动机，Ryan & Deci 2017 引用）+ 渠道4 书评摘要（Revue québécoise de psychologie，六 mini-theories、需要支持/挫败 vs 发展与幸福感）+ 渠道5 RCCS 文章（动机连续体 amotivation→受控→自主）"
+research_question: "支持或挫败自主、胜任、归属三种基本心理需要，如何影响动机质量、内化、发展、幸福感与各领域功能？"
+core_claims:
+  - "三种基本心理需要：自主（autonomy，意愿、选择与自我认同）、胜任（competence，有效与进步）、归属（relatedness，被他人认可与联结）；支持或挫败这三需要影响发展、幸福感与功能（护封摘要 + 官方站点）"
+  - "SDT 由六种 mini-theories 构成：认知评价理论（CET，奖励/反馈对外在事件对内在动机的影响）、有机整合理论（OIT，外在动机的内化与分化）、因果定向理论、基本心理需要理论（BPNT）、目标内容理论（Goal Contents Theory）、关系动机理论（目录级确认）"
+  - "动机沿连续谱分布：从去动机、外部调节、摄入调节、认同调节、整合调节到内在动机；内化与整合程度决定外在动机能否转为自主动机（中文综述 + RCCS）"
+  - "自主动机（内在动机 + 充分内化的外在动机）与受控动机（外部压力或内部压力驱动）的区分是 SDT 的核心；需要满足促进自主动机与高质量表现及幸福感（官方站点 + 组织领域综述）"
+  - "应用覆盖教育、医疗、心理治疗、运动、游戏与虚拟环境、工作与组织等领域（完整目录 + 书评摘要）"
+method: "宏理论（macro-theory）综合：概念整合 + 数十年跨领域实证研究综述（教科书级专著）"
+results: "（教科书级专著）三需要满足→自主动机→高质量功能与幸福感；需要受挫→受控动机与不良后果"
+limitations: "教科书级理论综述而非新实验；三需要普适性表述被部分学者质疑带西方个人主义预设；需要测量工具效度是主要争议点"
+boundary_conditions: "适用于解释自愿性、持续性动机，对一次性强约束任务解释力有限；三需要间存在权衡（如强归属规范可压低自主感），需整体设计而非单点最大化"
+relevant_nodes: [self_determination_needs, goal_setting_effectiveness, implementation_intentions, self_efficacy]
+notes: "SDT 综合专著，Deci & Ryan 2000 论文（S118）的书籍版延伸与全景展开；六 mini-theories、三需要与目录级内容实取，属教科书级公开内容，未编造。"
+last_verified: "2026-09"

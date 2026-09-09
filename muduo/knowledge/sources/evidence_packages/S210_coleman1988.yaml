@@ -1,0 +1,25 @@
+# Evidence Package — S210 Coleman 1988（社会资本与网络闭合）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S210
+title: "Social Capital in the Creation of Human Capital"
+authors: "James S. Coleman"
+year: 1988
+journal: American Journal of Sociology, 94, S95-S120
+doi: "10.1086/228943"
+url: "https://doi.org/10.1086/228943"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心框架经 4 个独立源交叉核实（未取得全文）：①期刊页码与 DOI（AJS 94:S95-S120, 10.1086/228943）经 SCIRP/tandfonline/cssci 三处引用一致；②社会资本三形态（多篇综述转述一致）：义务与期望（obligations and expectations，依赖可信赖的社会环境）、信息渠道（information channels，关系传递行动所需信息）、社会规范（social norms，配合有效制裁）；③核心论点：社会资本的定义性特征是其功能——行动者可动用的社会结构资源；网络闭合（network closure）使义务、规范与可信惩罚得以维持，从而创造人力资本（家长-社区闭合案例）；④理论对话：与 Burt 结构洞传统构成『闭合 vs 洞』的社会资本两翼"
+research_question: "社会结构关系如何作为资本生产人力资本？"
+core_claims:
+  - "社会资本依功能定义：存在于关系结构中、为行动者提供资源的任何社会结构侧面"
+  - "三形态：义务与期望（信任的账本）/信息渠道（关系降低信息获取成本）/规范与有效制裁（闭合网络使规范可执行）"
+  - "网络闭合论：闭合的社会结构（密集互连）让信任、规范与惩罚可行——网络密度是社会资本的前提条件"
+  - "与结构洞的互补对偶：闭合产生信任与规范执行（Coleman），洞产生信息优势（Burt）——组织与社群设计需权衡两者"
+method: "理论论文（社会学理论综合 + 教育实证案例：家庭与社区闭合对学生留校/辍学的影响）"
+results: "（经典）社会资本概念的社会学定型；网络闭合成为社群治理与信任研究的标准变量"
+limitations: "未取得全文；理论论文（教育案例为主）；闭合的负面面（排外/过度约束）由后续研究补充"
+boundary_conditions: "闭合产生规范执行力，但过度闭合抑制新信息（与结构洞权衡）；规范需配合可信制裁；开放网络中闭合机制失效"
+relevant_nodes: [network_density]
+notes: "network_density 节点 'Coleman 1988 经典文献' 的建包来源。三形态与闭合论多源一致，未编造。"
+last_verified: "2026-09"

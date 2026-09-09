@@ -1,0 +1,26 @@
+# Evidence Package — S79 Godin 1999（Permission Marketing: Turning Strangers into Friends and Friends into Customers）
+# 标准格式。access_level 如实标注。
+source_id: S79
+title: "Permission Marketing: Turning Strangers into Friends and Friends into Customers"
+authors: "Seth Godin"
+year: 1999
+journal: Simon & Schuster（专著）
+doi: "无 DOI（专著）"
+url: "https://pulserevops.com/sales-book-summaries/bs0166"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：英文深读笔记（interruption vs permission 两种运营模型/注意力最稀缺/五级许可阶梯从 situational curiosity 到 intravenous subscription/猎人-农夫隐喻/频率优于触达：陌生人需 5-7 次曝光才转化为信念/许可资产复利 vs 打断广告每季归零/『资产不是产品而是名单』/每天约 3,000 条营销信息饱和）+ MBA 智库百科中文词条（许可营销定义/opt-in『选择性添加』vs『选择性退出』/实现许可的五个基本步骤/以约会比喻陌生人→朋友→终生用户/Simon & Schuster 1999）+ Amazon 官方书评（interruption marketing 失效/以诱饵换取自愿接受/与志愿者对话的共生交换/Yoyodyne 与 Yahoo 背景）+ 创业邦报道（Godin 背景与许可式营销的提出）+ 网络营销教程（Godin 三阶段模型『吸引关注→建立认知→促成行动』/Double opt-in 双重确认）"
+research_question: "在注意力被营销信息淹没的时代，为什么打断式广告越来越无效？营销者应如何通过征得许可与消费者建立可持续关系？"
+core_claims:
+  - "许可营销 vs 打断营销：注意力是最稀缺资源，打断式营销（电视广告、冷呼叫、弹窗）买断陌生人的注意力时刻且单位经济逐年恶化（消费者每天接触约 3,000 条营销信息、大脑过滤越发激进）；许可营销先征得同意（opt-in）再沟通，单位经济逐年改善"
+  - "许可阶梯：从陌生人到顾客的渐进许可交换——消费者按自愿让渡的注意量分为五级（情境好奇→品牌信任→个人关系→销售点→静脉式订阅），Godin 以『约会』为喻：先留好印象→建立关系→成为朋友→终生用户；营销者普遍高估自己所在的许可层级"
+  - "实现许可的五步骤：①以诱饵（免费样品/优惠/问卷）让潜在顾客自愿加入许可名单→②利用其注意提供演示与价值→③继续激励维持许可→④提供更多激励扩大许可范围（个性化/会员权益）→⑤将许可转化为购买行为（并继续经营忠诚与终生价值）"
+  - "资产逻辑：许可资产（订阅名单、关注者、会员）跨季度复利增长，而打断广告的资产价值每季度归零——『资产不是产品，而是名单』；频率优于触达：信任靠重复建立（陌生人需 5-7 次曝光），许可渠道以近零成本提供数十次曝光"
+  - "过渡期现实：许可起步慢，多数组织需同时运行两种模型一段时间——打断作为把陌生人带到 opt-in 时刻的漏斗入口，许可作为转化与复利的机器（把打断当终端步骤而非第一步才是战略错误）"
+method: "作者在 Yoyodyne/Yahoo 的互联网营销实践归纳 + 直接营销行业响应率证据（从业者框架）"
+results: "（实践框架）预告了 GDPR 等数据权利立法方向的注意力交换理论，成为私域/订阅营销的思想源头"
+limitations: "为从业者归纳框架，无系统实证检验；浅层许可（一键关注）含金量低的问题被后续实践反复验证，需与 dark patterns 治理结合看待"
+boundary_conditions: "适用于可重复沟通的场景（邮件、订阅、私域）；许可价值依赖交换物的真实价值——无价值内容即使被许可也会被习惯性忽略；许可可随时被撤回"
+relevant_nodes: [permission_opt_in_mechanics, attention_economics]
+notes: "从业者实践框架（D 级，如实标注）。opt-in、许可阶梯、五步骤等核心概念为公开内容，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,26 @@
+# Evidence Package — S95 van Dijck, Poell & de Waal 2018（The Platform Society）
+# 标准格式。access_level 如实标注。
+source_id: S95
+title: "The Platform Society: Public Values in a Connective World"
+authors: "José van Dijck; Thomas Poell; Martijn de Waal"
+year: 2018
+journal: Oxford University Press（专著；240 页）
+doi: "无 DOI（专著）"
+url: "http://www.nurnberg.com.cn/book/book_show.aspx?id=21042"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：中文版权代理内容简介（四领域：新闻/城市交通/健康/教育 + 公共价值清单）+ 巴西学术论文（平台化/数据化/infopower/数据主权）+ 复旦《国际新闻界》对 van Dijck 的访谈（平台生态系统/平台化树/用户能动性）"
+research_question: "平台如何渗透西方社会的组织方式？平台机制如何运作，公共价值如何在平台社会中存续？"
+core_claims:
+  - "平台=可编程的数字基础设施，促进并塑造终端用户与互补者之间的个性化互动，经由系统化数据收集、算法处理、变现与数据流通组织"
+  - "平台化（platformization）=社会各部门因线上连接者与互补者的相互形塑而转型；平台不是孤立的站点，而是彼此紧密耦合的生态系统"
+  - "平台社会不只从经济转向社会：公共价值（隐私、准确性、安全、保密 + 公平、可行性、民主管理与问责）是平台化竞争的焦点"
+  - "私人平台与公共部门在新闻、城市交通、健康、教育四个领域的斗争：谁负责树立公共价值观与共同利益标准"
+  - "数据化（datafication）与算法治理重塑公民实践、雇佣市场与民主进程"
+method: "理论专著（平台研究/媒体研究）+ 四个领域的案例分析"
+results: "（理论框架）平台化与平台社会成为平台研究的标准概念；公共价值框架被广泛引用"
+limitations: "专著以西方（欧美）语境为主；数据主权/殖民议题在后续发展中扩展"
+boundary_conditions: "适用于平台生态成熟的社会；对平台化程度不同的地区需调整"
+relevant_nodes: [platform_power_gatekeeping, moderation_governance, algorithmic_amplification, community_governance]
+notes: "platform_power_gatekeeping 等的一手理论来源（book 级）。四领域与公共价值清单为公开标准内容，未编造。"
+last_verified: "2026-09"

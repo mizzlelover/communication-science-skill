@@ -1,0 +1,24 @@
+# Evidence Package — S165 Batson, Duncan, Ackerman, Buckley & Birch 1981（Is Empathic Emotion a Source of Altruistic Motivation?）
+# 标准格式。access_level 如实标注。
+source_id: S165
+title: "Is Empathic Emotion a Source of Altruistic Motivation?"
+authors: "C. Daniel Batson; Bruce D. Duncan; Paula Ackerman; T. Buckley; Kimberly Birch"
+year: 1981
+journal: "Journal of Personality and Social Psychology 40(2): 290-302"
+doi: "10.1037/0022-3514.40.2.290"
+url: "https://doi.org/10.1037/0022-3514.40.2.290"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "ResearchGate 摘要片段（Tested the hypothesis that empathy leads to altruistic motivation...）+ IB 教学文献（appsychology.com）完整复述实验设计与结果（高/低共情×易/难逃离）+ 中文科普详述（44 名女大学生/Elaine 电击范式/2x2 设计）+ 后续 Fultz 1986（排除负性社会评价的利己解释）与 Cialdini 1987（个人悲伤-利己竞争解释）交叉"
+research_question: "对他人困境的共情情绪是否产生真正的利他动机（以降低他人需要为目标），而非利己动机？"
+core_claims:
+  - "共情唤起增加帮助行为，且独立于能否逃离困境：高共情组无论逃离难易均帮助"
+  - "低共情组在易逃离条件下退缩不帮助，说明其帮助（若发生）源于避免继续观看痛苦的利己动机"
+  - "整体结果支持共情-利他假说：共情情绪诱发以他人福祉为目标的利他动机"
+method: "实验室实验：44 名女大学生观察假被试 Elaine 遭受电击，操纵共情水平（与受助者的相似性）与逃离难易（2x2 设计），测量是否愿意代替受电击"
+results: "高共情条件下多数被试愿意代替（不受逃离难易影响）；低共情+易逃离条件下多数退缩；低共情+难逃离下部分帮助"
+limitations: "共情-利他解释存在竞争性利己解释（Cialdini 1987：个人悲伤缓解）；样本为心理学学生、存在需求特征风险"
+boundary_conditions: "受助者具体可识别、共情充分唤起时效应明显；帮助成本适中且有可执行行动路径"
+relevant_nodes: [empathy_induced_helping]
+notes: "共情-利他假说的经典实验起点，empathy_induced_helping 节点一手来源；多源交叉（未取得一手完整摘要，已如实标注）。"
+last_verified: "2026-09"

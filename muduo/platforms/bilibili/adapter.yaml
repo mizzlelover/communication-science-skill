@@ -1,0 +1,173 @@
+platform_name: 哔哩哔哩（Bilibili / B站）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：产品形态（弹幕、一键三连、投币、充电、专栏）为公开可见规则；
+  推荐权重与分区流量构成为行业共识（官方未公开算法）。
+  社区治理与创作激励规则已联网核验《哔哩哔哩社区公约》及创作激励官方公告（2026-09 实取），
+  投币等互动指标获官方激励文档佐证；算法权重细节官方仍未公开。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {source: "《哔哩哔哩社区公约》 https://member.bilibili.com/studio/convention/", source_owner: "哔哩哔哩", source_type: official, claim_supported: "社区共识（认真创作/友善交流/拥抱创新）、投稿规范、主动添加创作声明、违规分类与处置框架", published_date: "未知（持续修订版）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "《社区公约》违规行为细则 https://member.bilibili.com/studio/convention/content?index=2-6", source_owner: "哔哩哔哩", source_type: official, claim_supported: "网络暴力/引战/缺乏尊重/饭圈争议的违规认定与处置（删除下线、限制传播、封禁等）", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "哔哩哔哩客服官方号《【UP主创作直通车】视频创作激励篇》 https://www.bilibili.com/opus/1198858284376784900", source_owner: "哔哩哔哩", source_type: official, claim_supported: "创作激励申请条件（权益等级≥3、信用分≥80）、激励收益构成（稿件基础激励+广告分成）、结算规则", published_date: "2026-05-05", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "《视频创作激励年度计划》官方活动页 https://www.bilibili.com/blackboard/activity-N13czQtWTg.html", source_owner: "哔哩哔哩", source_type: official, claim_supported: "视频基础激励标准（近半年月均平台收入<5000元、90天内原创自制稿件、上限2000元/月）、投币量等任务档位", published_date: "2024版（未知具体日）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "中长视频（横屏为主，分钟到小时级）"
+  - "短视频（竖屏沉浸流）"
+  - "专栏图文"
+  - "直播"
+  - "音频"
+
+dominant_user_intent:
+  - "兴趣学习（教程/知识/评测——带着学习目的来）"
+  - "娱乐追更（追 UP 主更新，追番式消费）"
+  - "社区归属（弹幕玩梗、评论区文化、身份认同）"
+
+distribution_model: >-
+  推荐+关注+搜索三足鼎立：粉丝价值显著高于抖音（关注页/动态触达+追更文化）
+  [industry_consensus]；分区体系让垂类内容有稳定的兴趣入口；
+  热门榜单提供公共流量位 [official_rule-产品存在]。
+
+recommendation_model: >-
+  播放完成度、三连（点赞/投币/收藏/转发）、弹幕与评论互动加权
+  [industry_consensus-权重黑箱]；分区与标签参与人群匹配；
+  新 UP 主有冷启动扶持机制（官方公开过扶持方向，细节随年份变化）。
+
+social_graph_characteristics: >-
+  中度关系：UP 主与粉丝强连接（一键三连、充电、大会员），观众之间弱连接但
+  通过弹幕/玩梗形成群体身份（social_identity_theory）——"小破站"的集体认同。
+
+content_lifecycle: >-
+  长青性最好的视频平台之一：中长视频的搜索与推荐长尾可达数月到数年
+  [industry_consensus]；知识/教程类内容持续被检索唤醒；
+  爆款爆发速度弱于抖音但衰减慢得多。
+
+primary_entry_points:
+  - "首页推荐流"
+  - "分区（垂类兴趣入口）"
+  - "搜索（教程/评测第一入口）"
+  - "动态（关注流）"
+  - "热门/排行榜"
+
+attention_environment: >-
+  列表选择式为主：封面+标题+UP主+播放量多要素同屏比较，
+  CTR 竞争前移；用户目的性强，点开后观看时长容忍度高（中长视频心智）。
+
+user_behavior: >-
+  用户年轻、社区规范敏感、对"恰饭"（商业内容）有明确的容忍规则——
+  坦诚的恰饭可被接受，隐瞒会被反噬 [industry_consensus]；
+  弹幕参与是独特行为：边看边表达（共同在场）。
+
+interaction_signals:
+  - "投币：稀缺虚拟货币，强认可信号（硬币有限 [official_rule-产品规则]）"
+  - "收藏：工具价值信号（教程/清单）"
+  - "点赞/转发：态度与扩散"
+  - "弹幕密度：共同在场的实时互动信号"
+  - "评论：讨论深度"
+  - "关注/充电：关系沉淀与金钱支持"
+  - "播放完成度：算法核心信号方向 [industry_consensus]"
+
+sharing_mechanism: >-
+  站内分享到微信/QQ 顺畅（视频卡片可跨端播放）；"一键三连"是站内专属的
+  复合互动仪式 [official_rule-产品存在]；长视频的分享常以"安利"文化出现——
+  把 UP 主推荐给同好是身份表达。
+
+search_mechanism: >-
+  搜索心智强（"什么值得买之前先看 B 站评测"）[industry_consensus]；
+  标题+简介+字幕+分 P 结构参与索引；教程/评测类内容的搜索长尾显著。
+
+community_mechanism: >-
+  全平台最强社区属性之一：弹幕共同在场（collective_effervescence）、
+  评论区玩梗与"神评"文化、UP 主人格化运营、粉丝牌与舰队体系（直播粉丝分层
+  [official_rule-产品存在]）；社区礼仪（弹幕规范）有明确治理 [official_rule-社区规范存在]。
+
+algorithmic_features:
+  - "首页推荐流（完成度+三连加权）[industry_consensus]"
+  - "分区/排行榜/活动页公共流量位 [official_rule-产品存在]"
+  - "创作激励与充电计划（creator_incentive_structures）[official_rule-产品存在]"
+  - "搜索联想与热搜 [official_rule-产品存在]"
+
+content_constraints:
+  - "[industry_consensus] 投稿时长上限远高于短视频平台（分钟级到小时级），具体数值以平台最新公告为准"
+  - "[industry_consensus] 标题约 80 字上限（以平台最新公告为准）"
+  - "[official_rule] 搬运需获授权标注，原创声明受保护（以最新规则为准）"
+
+title_role: >-
+  列表流点击三要素之一（封面+标题+数据）："标题起号"文化成熟——
+  信息量与悬念的平衡（"我花了 X 天做了 Y"式具体承诺 [industry_consensus]）；
+  知识类标题承担搜索关键词职责。
+
+cover_role: >-
+  三要素之首：信息流中封面决定 CTR；UP 主常将封面风格统一化为人设资产
+  （distinctive_brand_assets）——老粉一眼认出是"你"（mere_exposure）。
+
+opening_role: >-
+  前 30 秒决定跳出：中长视频容忍更长开场，但"省流"文化要求尽快进入正题——
+  先给结论再展开的结构广泛有效 [industry_consensus]。
+
+tag_role: >-
+  分区+标签双重分类：分区决定人群池，标签辅助兴趣匹配；
+  活动标签参与官方流量位 [official_rule-产品存在]。
+
+comment_role: >-
+  评论区是第二内容现场：补充、纠错、玩梗、"课代表总结"；
+  UP 主置顶评论掌控讨论方向；评论区质量是社区氛围的核心指标。
+
+follow_role: >-
+  关注=追更承诺，粉丝价值高：动态触达、充电/大会员变现、粉丝群沉淀；
+  "百万粉 UP 主"的话语权显著高于同等播放量的无粉丝账号——
+  粉丝是可复用资产（与抖音的对比性差异）。
+
+risk_factors:
+  - "[industry_consensus] 恰饭信任税：商业内容占比过高或隐瞒商业性质引发粉丝反噬（psychological_reactance）"
+  - "[industry_consensus] 中长视频产能压力：更新频率与质量的平衡，断更即掉粉 [industry_consensus-观察]"
+  - "[official_rule] 弹幕与评论治理、版权合规（搬运判罚，以最新规则为准）"
+  - "[industry_consensus] 年轻社区的规范敏感：价值观争议的社区反噬烈度高"
+
+known_platform_patterns:
+  - pattern: "结尾/开头求三连（把互动变成仪式）"
+    mechanism_links: [reciprocity_norm, commitment_consistency, foot_in_the_door]
+    fact_type: industry_consensus
+    note: "三连是产品规则 [official_rule-产品存在]；'看完再走'的请求把观看获益转化为互惠行动。"
+    evidence_level: L2
+    source_ref: S4
+    last_verified: "2026-09"
+  - pattern: "省流前置（先结论后过程，P1 给完整版）"
+    mechanism_links: [processing_fluency, gist_vs_verbatim_memory, information_overload]
+    fact_type: industry_consensus
+    note: "尊重用户时间换取完播与好感；'省流版'降低进入门槛，细节版承接深度需求。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "弹幕造梗与共同在场体验"
+    mechanism_links: [collective_effervescence, emotional_contagion, sense_of_community]
+    fact_type: industry_consensus
+    note: "弹幕高密度时刻（名场面）形成情绪共振，是平台不可复制的体验资产；内容可设计'名场面点'。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "系列化追更+更新预告"
+    mechanism_links: [zeigarnik_effect, parasocial_relationship, habit_loop_cue_routine_reward]
+    fact_type: industry_consensus
+    note: "未完结的系列制造持续期待；固定更新日培养观看仪式。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "封面统一风格作为人设资产"
+    mechanism_links: [distinctive_brand_assets, mere_exposure, visual_hierarchy]
+    fact_type: industry_consensus
+    note: "在列表流里，熟悉的封面模板降低识别成本并累积品牌性（mental_availability）。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "坦诚恰饭声明维护信任"
+    mechanism_links: [trust_signals_content, authenticity_perception, psychological_reactance]
+    fact_type: industry_consensus
+    note: "公开说明商业性质降低被操纵感；'恰饭但说实话'在 B 站是可经营的信任策略。"
+    evidence_level: L1
+    source_ref: S1
+    last_verified: "2026-09"
+
+confidence: medium

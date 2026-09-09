@@ -1,0 +1,25 @@
+# Evidence Package — S189 Ariely, Loewenstein & Prelec 2003（连贯性任意）
+# 标准格式。access_level 如实标注。
+source_id: S189
+title: "'Coherent Arbitrariness': Stable Demand Curves Without Stable Preferences"
+authors: "Dan Ariely; George Loewenstein; Drazen Prelec"
+year: 2003
+journal: The Quarterly Journal of Economics, 118(1), 73-105
+doi: "10.1162/00335530360535153"
+url: "https://doi.org/10.1162/00335530360535153"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "摘要级一手核实（出版社摘要经三处独立源确认）：①作者官方发表列表（Duke 大学 Ariely 主页：QJE vol.118 no.1, Jan 2003, pp.73-105, OUP, ISSN 0033-5533, [doi]）；②RePEc/IDEAS 收录页（vol.118(1), pages 73-106，附完整摘要）；③Cambridge 书目 PDF 引用核实。摘要全文实取：六个实验证明熟悉产品与简单享乐体验的初始估值强烈受任意『锚』影响（锚有时来自被试社会保障号后两位）；后续估值对产品间质量/数量差异保持连贯——整体估值模式制造出稳定底层偏好的错觉。实验表明连贯性任意（1）不能解读为对信息的理性反应；（2）不随对品的经验增加而减弱；（3）不一定被市场力量削弱；（4）不限于现金价格（对其他估值载体同样成立）。结论：从市场数据估计的需求曲线未必以任何规范意义揭示真实消费者偏好"
+research_question: "支付意愿等估值是否存在稳定底层偏好？任意初始锚能否长期塑造估值结构？"
+core_claims:
+  - "六实验证明：熟悉产品与简单享乐体验的初始估值被任意锚（如社保号后两位）强烈拉动"
+  - "『连贯性任意』：初始锚任意，但后续估值对品间相对差异保持系统连贯——整体呈现稳定的支付意愿曲线假象"
+  - "该效应（1）非理性信息反应（2）不随经验衰减（3）不被市场力量消除（4）不限于现金价格——锚定对估值的塑造是结构性的"
+  - "推论：需求曲线未必揭示真实偏好——对『支付意愿=价值信号』的营销与定价实践构成直接约束"
+method: "系列实验室估值实验（6 个实验）：操纵任意锚（社会保障号等）→测初始估值与后续相对估值的一致性"
+results: "（经典）锚定对估值的任意性与连贯性并存；偏好可被构造而非揭示（与 2006 'Tom Sawyer' 后续一致）"
+limitations: "未取得全文正文（摘要级+多源书目核实）；实验室假想估值为主，真实购买情境的效应衰减有后续研究讨论；锚的具体参数（社保号）为美国情境"
+boundary_conditions: "估值对象缺乏稳定内部标准时锚定最强；有丰富品类经验与稳定价格记忆的品类效应减弱（与库内 anchoring_effect 边界一致）；锚需被认真对待"
+relevant_nodes: [anchoring_effect]
+notes: "anchoring_effect 节点『Ariely 2003 经典文献，未建包』两处标注的建包来源。摘要为出版社官方文本，未编造。"
+last_verified: "2026-09"

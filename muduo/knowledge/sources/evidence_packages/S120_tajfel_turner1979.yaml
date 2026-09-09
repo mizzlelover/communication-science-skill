@@ -1,0 +1,25 @@
+# Evidence Package — S120 Tajfel & Turner 1979（社会认同）
+# 标准格式。access_level 如实标注。
+source_id: S120
+title: "An Integrative Theory of Intergroup Conflict"
+authors: "Henri Tajfel; John C. Turner"
+year: 1979
+journal: In W. Austin & S. Worchel (Eds.), The Social Psychology of Intergroup Relations (pp. 33-47). Brooks/Cole
+doi: "无 DOI（书章）"
+url: "https://www.bibsonomy.org/bibtex/ec4182828ad83af5a39bfce2d7995f13"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "书章元数据+理论综述（多源：德文章节全文概述 Tajfel 分类研究/最小群体范式 + 中文营销综述确认三阶段：分类/认同/比较）"
+research_question: "群体间冲突与歧视的心理起源是什么？为什么仅仅是分类就足以产生内群体偏袒？"
+core_claims:
+  - "社会认同=个体基于群体成员身份对自我的定义；自尊与社会认同绑定"
+  - "三阶段过程：社会分类（categorization）→社会认同（identification，情感意义绑定）→社会比较（comparison，内群-外群分化）"
+  - "最小群体范式（minimal group paradigm）：任意/最小分类足以引发内群体偏袒与外群体歧视"
+  - "个体通过提升内群地位来提升自尊（积极区分）"
+method: "理论整合 + 最小群体范式实验系列（Tajfel 早期分类研究/刻板印象/偏见）"
+results: "（综述）任意分类足以产生内群偏好；社会认同驱动群际行为"
+limitations: "书章全文订阅受限；早期范式有方法学争议（最小群体范式的解释力边界）"
+boundary_conditions: "认同显著性（salience）是关键调节；跨文化（集体主义/个体主义）有差异"
+relevant_nodes: [social_identity_theory, in_group_favoritism]
+notes: "S25（Social Identifications）的书章级论文一手来源；SIT 是社会认同域奠基。抽象级获取，未编造实验数字。"
+last_verified: "2026-09"

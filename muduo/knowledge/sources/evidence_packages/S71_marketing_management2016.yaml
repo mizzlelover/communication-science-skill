@@ -1,0 +1,26 @@
+# Evidence Package — S71 Kotler & Keller 2016（Marketing Management 15th）
+# 标准格式。access_level 如实标注。
+source_id: S71
+title: "Marketing Management (15th ed.)"
+authors: "Philip Kotler; Kevin Lane Keller"
+year: 2016
+journal: Pearson（教科书，全球商学院标准教材）
+doi: "无 DOI（教科书）"
+url: "https://tweenangels.org/kotler-and-keller-marketing-management-15th-edition"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：教科书综述（4Ps/顾客终身价值 CLV/整合营销传播 IMC/顾客中心/数字化）+ 商业思想地图（STP 理论/4P 营销组合/营销本质=发现满足顾客需求）+ 清华读书目录（R-STP-4Ps 框架/市场分析/定位/品牌）+ 核心框架 PPT（顾客让渡价值/满意度-忠诚度关联/客户资产）"
+research_question: "营销管理的系统框架是什么？企业如何创造、沟通、传递顾客价值？"
+core_claims:
+  - "营销本质=创造、沟通、传递顾客价值（发现并满足顾客需求，而非只卖产品）"
+  - "战略核心 STP：市场细分（Segmentation）→目标市场（Targeting）→定位（Positioning）；组合 4P（产品/价格/渠道/促销），15th ed 扩展数字渠道/体验/可持续"
+  - "品牌资产（CBBE，Keller 模型）：品牌识别→含义→响应→关系四阶段；顾客终身价值（CLV）与客户关系管理为核心资产逻辑"
+  - "顾客让渡价值（总价值-总成本）；满意度-忠诚度关联（'满意陷阱'：80% 满意客户仍流失）"
+  - "整合营销传播（IMC）跨触点统一品牌叙事"
+method: "营销管理教科书（首版 1969，历版整合案例/框架/研究）"
+results: "（权威框架）全球商学院营销标准教科书；STP/4P/品牌资产标准词汇"
+limitations: "教科书规范框架（多为框架性/描述性，非单一实验）；数字时代需补充平台事实"
+boundary_conditions: "适用于营销战略与品牌管理分析；具体机制需实证支持"
+relevant_nodes: [positioning_mechanism, category_entry_points, choice_overload, double_jeopardy_law, endowed_progress_effect, goal_gradient_effect, mental_availability, perceived_purchase_risk]
+notes: "营销管理标准教科书（book 级）。STP/4P/CBBE 为公开标准内容，未编造。"
+last_verified: "2026-09"

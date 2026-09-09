@@ -1,0 +1,286 @@
+# trust — 信任（Trust）：在不确定中决定"是否把决策权交给对方"的心理与系统机制
+domain: trust
+nodes:
+  - id: trust_calibration
+    canonical_name_en: Trust Calibration
+    canonical_name_zh: 信任校准
+    aliases: ["信任校准理论", "trust in automation 校准方向"]
+    domain: trust
+    definition: "信任校准指信任水平与被信方真实可靠性的匹配程度：信任过高导致过度依赖（盲目跟单、不验证），信任过低导致使用不足（错过真正可靠的信源与工具）。该概念在人与自动化系统（Lee 与 See 的 trust in automation 方向）与信源选择中通用，校准是目标而非最大化信任。"
+    core_claim: "有效决策要求信任与可靠性匹配：既非最大化信任也非最小化信任，而是随绩效证据动态调整。"
+    mechanism: "个体依据信源的历史绩效、透明度与利益结构形成先验信任，随新证据更新；但两类偏差破坏校准：一是初始信任被表面信号（专业话术、成功叙事）抬高后更新迟缓（确认偏差），二是信任一旦建立便过滤负面证据（动机性推理）。机制上的解法是把信任锚定在可验证维度（过去预测记录、利益披露、失败透明）而非印象维度。"
+    causal_chain: "初始信任先验 → 交互与绩效证据 → 证据过滤/更新 → 信任水平与可靠性匹配或错位 → 过度依赖/使用不足的决策代价"
+    variables:
+      inputs: [信源历史绩效证据, 利益结构透明度, 用户自身知识与验证能力]
+      moderators: [反馈可见性与延时, 沉没投入, 群体氛围（大家都信）]
+      mediators: [信任更新速率, 证据过滤倾向, 感知可靠性]
+      outputs: [依赖程度（采纳/验证/拒绝）, 决策质量, 错误信任下的损失规模]
+    evidence:
+      supporting: ["Lee 与 See 的自动化信任研究：信任-可靠性错位（miscalibration）导致误用与弃用两类失败（Lee & See 自动化信任研究，未建包）", "信源可信度研究传统支持印象信号与真实可靠性的分离", "金融与医疗领域的过度信任案例研究（信任与绩效脱钩的代价）"]
+      conflicting: ["校准需要高质量反馈循环；低频、延时、模糊的领域（长期投资）校准天然困难", "个体差异大：部分用户系统性过度信任、部分系统性怀疑"]
+      replication: ["自动化信任的校准框架获得多团队支持", "真实长期决策场景中的校准测量方法仍在发展"]
+      meta_analysis: ["自动化信任领域有系统综述支持校准框架；跨领域统一 meta 缺乏"]
+    evidence_grade: "C"
+    boundary_conditions: ["存在足够频率与清晰度的反馈证据", "用户具备基本验证手段与动机", "信源的利益结构可被披露"]
+    failure_conditions: ["反馈延时长、噪声大（长期投资、健康干预）导致校准几乎不可行", "信源刻意伪造绩效记录", "群体性信任氛围压制个体怀疑（身份保护性认知接管）"]
+    common_misinterpretations: ["把建立信任当唯一目标——错误方向上的高信任比低信任更危险", "误以为信任是稳定人格特质；它是随证据动态波动的状态"]
+    ethical_risks: ["刻意制造不可校准的环境（消灭负面反馈、封禁质疑者）以维持过度信任", "伪造历史绩效记录"]
+    examples:
+      original_cases: ["Lee 与 See 的自动化信任校准框架（人因工程研究传统）", "Cialdini《Influence》对权威与信任错用的警示案例（S32）"]
+      research_cases: ["自动化系统中的信任-可靠性匹配实验（误用/弃用双向失败）", "信源历史准确性与信任更新的实验研究"]
+      modern_cases: ["投资社群对『老师』的跟单依赖与集体亏损", "AI 工具使用中的过度信任（不加验证采纳生成内容）", "理财博主的『实盘晒单』作为校准证据的兴起"]
+    communication_implications: "面向高利害决策的内容应主动提供校准证据：历史预测的公开记录、错误清单、利益披露；『我错过什么』比『我对过什么』更能建立可校准的信任。"
+    community_implications: "社群应建立信源绩效的可视化机制（预测记录、对错公示），使信任校准从个人印象升级为公共记录；对过度信任（跟单）行为要有风险提示机制。"
+    content_applications:
+      evidence: "展示完整预测记录含错误项：『过去一年我公开的判断里，错了这三件』——负样本透明是信任校准的核心素材"
+      body: "给出验证路径：『这个结论你可以用XX数据自己复核』，把信任转化为可校准的证据链"
+      title: "标题明示利益结构与局限：『一个非投资建议的观察』——限制声明提升可信而非削弱"
+      comments: "对质疑评论提供证据回应而非删评，维持校准反馈循环"
+    platform_implications: "平台的评分与粉丝数是低分辨率的信任代理，系统性无法完成校准（缺少绩效记录维度）；创作者实盘/实作记录类内容形式是对平台信任基础设施缺口的民间补足。"
+    related_nodes: [source_credibility_model, reputation_systems, provenance_verification, synthetic_media_trust, authority_influence, trust_signals_content]
+    source_ids: [S92, S32]
+    validation_status: MEMORY_BASED
+    grade_justification:
+      independent_studies: "无已建一手 EP：Lee & See 自动化信任研究标注未建包；S92（Aral 2020）为邻近领域、S32（Cialdini）为权威原则书，EP 登记文本均不直接支撑校准框架；S37（Fogg B=MAP）与信任校准无关，已移除引用"
+      effect_size: "无经 EP 核实的效应量"
+      replication_status: "『自动化信任的校准框架获得多团队支持』等声明源自人因工程教科书层，未经一手 EP 核实"
+      context_dependency: "依赖反馈频率与清晰度；长期低频反馈领域校准天然困难"
+      downgrade_upgrade_reason: "2026-09-09 反向审计（A15）：核心证据在 S32/S37/S92 三 EP 登记文本零支持，由 B 降为 C 并回退 MEMORY_BASED"
+    provenance:
+      primary_sources: ['S92', 'S32']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: source_credibility_model
+    canonical_name_en: Source Credibility Model
+    canonical_name_zh: 信源可信度模型
+    aliases: ["信源可信度", "expertise-trustworthiness 二维模型", "Hovland 耶鲁学派信源研究"]
+    domain: trust
+    definition: "源自耶鲁学派传播研究传统（经 S34/S35 转述；Hovland 原著 EP 未建包）：说服力部分取决于信源可信度，经典维度为专业性（expertise）与可信赖性（trustworthiness），后续研究补充 goodwill（善意——信源是否为我着想）。高可信信源即刻提升态度改变，但效应随时间衰减（与 sleeper_effect 衔接）。术语说明：本节点的 expertise/trustworthiness/goodwill 信源维度与 S121（Mayer, Davis & Schoorman 1995）组织信任模型的 ability/benevolence/integrity 三要素是两套并行的术语体系——分属信源可信度研究传统与组织信任研究传统，内涵相近但文献脉络不同，不宜混同。"
+    core_claim: "同样的信息，专业、可靠、为受众着想的信源更具说服力；但可信度效应会随时间与信源淡忘而衰减，甚至被信息自身的质量反超。"
+    mechanism: "受众在不细究论点质量时，以信源属性作为启发式判断信息效度（外周路径，见 peripheral_route_processing）；专业性与可信赖性分别回答『他懂吗』与『他会不会骗我』，goodwill 回答『他为我吗』。三维度独立起效：专家但利益相关、善良但外行，都会折损说服。高可信启动的即时说服在延迟测量中衰减较快——当信源与信息在记忆中解耦，信息质量重新主导（睡眠者效应的条件基础）。"
+    causal_chain: "信源线索暴露 → 专业性/可信赖性/善意判断 → 启发式接受（低卷入）或论证权重调整（高卷入） → 即时态度改变 → 随信源淡忘而衰减"
+    variables:
+      inputs: [信源专业资历线索, 诚实与利益结构线索, 对受众善意的表达]
+      moderators: [受众卷入度与专业知识（高卷入时信源只是论证之一）, 信源-受众相似性, 立场偏见预期]
+      mediators: [感知专业能力, 感知诚实, 感知善意]
+      outputs: [即时态度改变, 信息接受阈值下降, 随时间衰减（sleeper 条件）, 对后续信息的信任转移]
+    evidence:
+      supporting: ["Hovland 耶鲁学派的信源可信度系列实验（经典传统，EP 未建包，经 S34/S35 转述）", "ELM 框架下的信源线索研究：低卷入时信源作为外周线索、高卷入时作为论证佐证（Petty 与 Cacioppo 系列）", "goodwill 维度的后续研究支持三因素结构（goodwill 维度，EP 未建包）"]
+      conflicting: ["高卷入且论点强的情境中，信源效应被论点质量部分替代", "信源过度完美（无瑕疵人设）反触发怀疑"]
+      replication: ["专业性、可信赖性的即时效应在多研究中高度稳健", "时间衰减模式支持 sleeper_effect 的条件结构"]
+      meta_analysis: ["信源可信度效应的元整合支持即时效应稳健、延时衰减的模式"]
+    evidence_grade: "A-"
+    boundary_conditions: ["受众卷入度低或缺乏独立判断依据时信源权重最大", "信源与议题匹配（跨领域专家光环失效）", "受众不预设立场偏见（预设立场激活身份防御）"]
+    failure_conditions: ["受众卷入高、论点可评估时，信源效应被论点质量稀释", "信源与议题不匹配（外行跨界）", "信源利益冲突被识破", "信源与受众身份对立（identity 保护接管）"]
+    common_misinterpretations: ["把可信度等同于头衔堆砌——可信赖性与善意往往比专业资历更影响普通受众", "忽视时间衰减：靠权威撑起的认同在信源淡忘后回吐"]
+    ethical_risks: ["借用与议题无关的专业身份背书（跨界站台）", "隐瞒利益冲突假装善意"]
+    examples:
+      original_cases: ["Hovland 等耶鲁学派的信源实验传统（S35 综述所述）", "Petty 与 Cacioppo 对信源线索在 ELM 中位置的整合（S34）"]
+      research_cases: ["信源可信度高低的经典对比实验（同一信息配不同信源介绍）", "延时测量中可信度效应衰减的研究（sleeper 效应条件）"]
+      modern_cases: ["医生、律师做垂类内容的专业光环", "财经博主展示持仓与利益披露", "『三甲医生』头衔被冒用做健康带货的信任套利"]
+    communication_implications: "建立三维可信度资产：专业（展示方法论与战绩）、可靠（一致性、错误透明）、善意（真实利益披露与立场声明）；高卷入受众最终看论点，可信度只是入场券。"
+    community_implications: "社群的专家问答（AMA）、认证体系应围绕三维度设计：资历可查、历史记录可回溯、利益结构公开；社群对信源的集体评价机制（引用、纠错）比个体背书更持久。"
+    content_applications:
+      evidence: "证据区块标明信源三维信息：『谁在说（资历）、凭什么信（记录）、他图什么（利益披露）』"
+      title: "标题嵌入可信信源而不滥用：『一位做了10年审计的朋友告诉我…』（需真实）"
+      body: "高卷入内容把论点质量放首位，信源仅作辅助背书——受众会核对论证"
+      opening: "开场建立善意而非权威：『我不卖课，这条视频提醒你注意我自己的利益边界』"
+    platform_implications: "平台的认证体系（蓝V、专业资质标注）是信源可信度的制度化；算法无法验证『goodwill』维度，利益披露依赖创作者自觉与平台规则，冒名与跨界套利是平台治理重点。"
+    related_nodes: [trust_calibration, authority_influence, sleeper_effect, authenticity_perception, credentialing_symbols, trust_signals_content, ethos_pathos_logos]
+    source_ids: [S34, S35, S66, S121]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Mayer, Davis & Schoorman 1995 组织信任整合模型（S121，AMR 20:709，abstract_only）+ Hovland 耶鲁学派信源研究传统（EP 未建包，经 S34/S35 转述；S34 实为 Petty & Cacioppo 1986 ELM 全书）"
+      effect_size: "能力/善意/诚信三维度→信任→风险承担；Dirks & Ferrin 2002 元分析确认信任-绩效正效应"
+      replication_status: "三维度框架成为组织信任研究标准并获大量实证验证"
+      context_dependency: "三维度相对权重因情境/关系对象而异；高卷入时论点质量稀释信源权重"
+      downgrade_upgrade_reason: "2026-09 补充信任模型一手论文（S121，abstract_only 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S121]
+      supporting_evidence: [S34, S35, S66]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: authenticity_perception
+    canonical_name_en: Authenticity Perception
+    canonical_name_zh: 真实感知觉
+    aliases: ["真实感", "perceived authenticity"]
+    domain: trust
+    definition: "受众对信源『真实、不装、表里如一』的知觉：由线索（自我暴露、不完美展示、一致性）推断而非对客观真实的测量。真实感知是强信任货币，但它是对信号的知觉——可以被刻意表演，也可以与客观真实性脱钩。"
+    core_claim: "真实感来自可推断的线索模式（不完美、一致、高成本自我暴露），而非客观真实本身；因此它可被经营，也可被伪造——而伪造被识破的代价是信任崩塌。"
+    mechanism: "受众以下列线索推断真实感：不完美细节（瑕疵降低表演嫌疑）、跨情境一致性（言行、人前人后）、高成本信号（真实利益损失、脆弱面暴露——难以低成本伪造）、观众互动的即时性。社交媒体的表演性使『过于完美』成为失真信号（负向线索），粗糙但真实的素材反而获得信任溢价（authenticity_premium）。"
+    causal_chain: "线索暴露（不完美/一致/高成本） → 表演嫌疑降低 → 真实感推断 → 信任与关系投资 → （伪线索被识破时）信任崩塌"
+    variables:
+      inputs: [不完美与瑕疵线索, 跨情境一致性, 高成本自我暴露, 与受众的互动直接性]
+      moderators: [受众的反表演警觉度（经历过翻车者更敏感）, 平台内容生态的平均精致度, 关系历史]
+      mediators: [表演嫌疑评估, 心理距离感知]
+      outputs: [信任与追随, 真实感溢价（宽容度、付费意愿）, （识破时）背叛感与声讨]
+    evidence:
+      supporting: ["自我呈现研究（Goffman 传统）支持线索推断机制（S24）", "消费者行为研究：U（用户生成）内容与品牌官方内容的信任差（真实感溢价方向一致）", "『原相机』『翻车片段』等真实感线索在平台生态中的流行（从业者观察与平台数据报告层面）"]
+      conflicting: ["真实感线索可被策略性伪造（设计过的『不完美』），且识破难度低——效应稳定性受限", "对强利益相关场景（带货），真实感线索的信任转化率显著衰减"]
+      replication: ["真实感与信任的正相关在调查研究中反复出现", "线索-真实感的因果链条缺乏严格实验证据，多为相关与案例"]
+      meta_analysis: ["无权威 meta-analysis；以消费行为与传播学研究综述为主"]
+    evidence_grade: "B"
+    boundary_conditions: ["受众具备识伪基线能力或存在外部验证渠道时真实感才有意义", "低利害、高频互动场景中真实感溢价最强", "内容生态整体精致度越高，粗糙真实线索的边际价值越大"]
+    failure_conditions: ["伪造的真实感被识破（摆拍的『随手拍』）", "高利害决策场景中真实感无法替代可验证证据", "受众进入普遍的表演警觉期（行业信任危机后）"]
+    common_misinterpretations: ["把真实感当道德品质而非可被经营与伪造的知觉产物", "误以为真实=不修边幅：真实感的关键是一致性与高成本信号，不是糙"]
+    ethical_risks: ["表演真实（设计的人设翻车）造成系统性信任污染", "以『真实』降低受众警惕后实施诱导"]
+    examples:
+      original_cases: ["Goffman 拟剧论对前台表演与真实感的分析（S24）", "消费者行为教科书中 UGC 信任优势的讨论（S72）"]
+      research_cases: ["UGC 与品牌内容的可信度对比研究", "自我暴露与信任建立的实验研究"]
+      modern_cases: ["『原相机』声明与花絮式内容", "博主公开亏损与失败（高成本真实信号）", "AI 生成内容泛滥后『真人感』成为稀缺资产（authenticity_premium）"]
+    communication_implications: "真实感经营三原则：跨平台跨时间人设一致、保留真实瑕疵、暴露有代价的真实面（立场、亏损、局限）；在 AI 内容时代，可验证的真人痕迹是稀缺信任资产。"
+    community_implications: "社群的真实感来自成员间的非正式互动（吐槽、求助、翻车自嘲）而非官方内容；运营者应有意识保留『后台感』空间，官方内容的过度精致会拉高表演警觉。"
+    content_applications:
+      body: "保留真实的局限声明与失败片段：『这方法在X情况下不适用，我自己也栽过』"
+      visual: "素材混用精致封面+原相机截图，以真实线索平衡表演感"
+      opening: "用高成本信号开场：『今天说点可能得罪同行的』（真实利益暴露提升真实感）"
+      comments: "楼主以真人口吻回复（第一人称、承认不知道的部分），维持评论区真实感"
+    platform_implications: "AI 生成内容规模化使真实感线索通胀，『看起来真实』的信号价值衰减，可验证的真实性（实拍记录、过程存档、平台水印与溯源）正在成为新的信任基础设施（见 provenance_verification、content_provenance）。"
+    related_nodes: [self_presentation_impression_management, trust_signals_content, source_credibility_model, authenticity_premium, ai_content_saturation, trust_calibration]
+    source_ids: [S24, S72, S92]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Goffman 1959（S24，前台自我呈现与流露，主支撑）+ Solomon 2017（S72）与 Aral 2020（S92）仅作背景参考：两 EP 登记文本无『消费者真实性感知』『AI 时代真实性』对应条目"
+      effect_size: "真实感线索影响信任与好感（真实性知觉研究）"
+      replication_status: "真实性-信任关联多研究支持；AI 生成使信号通胀"
+      context_dependency: "可验证真实性（实拍/存档/溯源）取代外观信号"
+      downgrade_upgrade_reason: "2026-09 实取 S24 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S24]
+      supporting_evidence: [S72, S92]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: trust_signals_content
+    canonical_name_en: Trust Signals in Content
+    canonical_name_zh: 内容信任信号
+    aliases: ["可信度线索", "credibility cues in content"]
+    domain: trust
+    definition: "内容内部可提升信任知觉的具体信号：具体细节与数字（specificity）、可验证声明（来源标注、方法论展示）、承认局限、利益披露、引用可追溯证据等。注意：这些是提升信任知觉的信号，与内容实际可靠性相关但可分离——高质量信号可被伪造。"
+    core_claim: "具体、可验证、有局限声明的表达系统性提升信任知觉；但信号与真实可靠性可分离，长期依赖信号而内容失实将付出信任崩塌代价。"
+    mechanism: "具体细节提高想象可行度与加工流畅，暗示作者『知道内情』（无法编造的细节感）；可验证声明把验证成本转移到读者可控范围（可自己查），降低不确定；局限声明是高成本信号（作者自限利益），难以低成本伪造——因此比全称肯定更具可信度。这些信号在低卷入场景作为启发式被快速读取；高卷入场景中，读者会实际验证，信号必须与实质匹配。"
+    causal_chain: "具体细节+可验证声明+局限披露 → 知晓感与可验证感 → 信任知觉提升 → 接受与行动 → （信号与实质脱钩被发现时）信任反噬"
+    variables:
+      inputs: [细节与数字的具体度, 来源可追溯性, 局限与反面证据的披露]
+      moderators: [受众卷入度（高卷入会实际验证）, 领域利害程度, 内容生态的信号通胀度]
+      mediators: [知晓感（sense of knowing）, 可验证感, 加工流畅性]
+      outputs: [信任知觉, 转化与行动, 长期信源资产或（失实后）信任崩塌]
+    evidence:
+      supporting: ["具体性提升可信度的实践框架综合（Made to Stick 所综合的 SUCCESs 中 Credibility 维度，S40；非独立检验的因果模型，证据等级 D）", "具体数字提升信念确度的语言研究（S70 Magic Words 方向的配套实验）", "局限声明（two-sided 信息）提升可信度的说服研究传统（EP 未建包）"]
+      conflicting: ["具体细节也可是编造的（虚构细节同样提升可信度感知）——信号可被滥用", "过载的具体细节反而触发怀疑或信息过载", "高利害领域信号效应被实际验证行为稀释"]
+      replication: ["具体性与可信度的正相关方向稳健", "『信号被伪造』的场景证据来自虚假新闻研究：高细节伪信息同样获得信任"]
+      meta_analysis: ["无独立 meta-analysis；以说服研究与语言心理学综述为主"]
+    evidence_grade: "B"
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["受众无法即时验证时信号主导（信任知觉效应最大）", "信号与实质长期匹配时积累为信源资产", "低通胀生态中信号边际价值高"]
+    failure_conditions: ["受众具备验证能力与动机（信号被检验）", "信号通胀：行业普遍使用同款话术后效应衰减", "细节被证伪一次即触发全面怀疑"]
+    common_misinterpretations: ["把信任信号当内容质量——具体好看≠真实正确（伪信息恰恰善用具体细节）", "以为堆砌数据就是可信：无来源无方法的数据反而显得可疑"]
+    ethical_risks: ["用编造的具体细节制造虚假可信（伪数据的说服力）", "选择性引用制造片面的『有据』感"]
+    examples:
+      original_cases: ["《Made to Stick》的 Credibility 维度（S40）", "《Magic Words》对语言形式影响可信度的实验讨论（S70）"]
+      research_cases: ["具体数字提升说服的实验（语言心理学传统）", "双面信息（含反面论点）提升可信度的经典说服研究"]
+      modern_cases: ["财经内容标注数据来源与更新时间", "测评博主公开采购凭证与测试方法", "AI 内容泛滥后『附上原始链接』成为稀缺习惯"]
+    communication_implications: "信任信号的三件套最低配置：具体（可感知细节与数字）、可查（来源与链接）、有局限（适用边界与反面情况）；在 AI 内容时代，『可查』从加分项变成稀缺项。"
+    community_implications: "社群内容规范（要求带来源、禁绝对化表述）在成员层面建立信号纪律，长期提升整个社群产出的可信度与对外声誉——信任信号是社区公共品。"
+    content_applications:
+      evidence: "证据块固定格式：数据+来源链接+采集方法+已知局限，四要素齐备才发布"
+      body: "把『不适用条件』写进正文：『如果你是X情况，请勿照搬』——局限声明是高成本可信信号"
+      title: "标题避免绝对化，用带边界的具体：『三类人里两类有效，第三类慎用』"
+      comments: "对数据质疑评论直接补充来源与计算过程，公开维护信号-实质一致"
+    platform_implications: "平台对医疗、财经等内容有资质与来源标注要求；AI 生成内容标注义务正在成为平台规则（与 content_provenance 衔接），信任信号的制度化验证是平台信任层的发展方向。"
+    related_nodes: [specificity_effect, concreteness_in_language, source_credibility_model, provenance_verification, fluency_truth_effect, trust_calibration, synthetic_media_trust]
+    source_ids: [S40, S70, S34]
+    provenance:
+      primary_sources: ['S40', 'S70', 'S34']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: reputation_systems
+    canonical_name_en: Reputation Systems
+    canonical_name_zh: 声誉系统
+    aliases: ["信誉系统", "reputation mechanism"]
+    domain: trust
+    definition: "通过记录、聚合与展示个体历史行为来支撑陌生人信任的制度与技术系统（评分、评价、信用分、贡献榜、背书链）。它把一次性的互动信任转化为可累积、可传递的声誉资产，是平台经济与大规模社群的信任基础设施。"
+    core_claim: "声誉系统有效的前提是记录的真实性、维度相关性与抗操纵性；三者任一失守，系统将从信任基础设施退化为操纵对象。"
+    mechanism: "声誉系统通过把过去行为转化为未来预期（你上次做得好，这次大概率也行）降低陌生人互动风险；其有效性依赖：反馈的真实性（防刷分、防报复性差评）、维度相关性（评分维度与决策相关）、信号可读性（信息过载时用户依赖简化启发，如星级）。系统也创造新的博弈：刷好评、差评勒索、互刷互赞，因此需要配套反操纵治理（见 norm_enforcement_reputation、platform_power_gatekeeping）。"
+    causal_chain: "行为被记录 → 聚合为声誉分数/评价 → 未来互动方据此决策 → 声誉产生真实经济后果 → （反操纵不足时）刷分博弈侵蚀系统"
+    variables:
+      inputs: [行为与交易记录, 评价反馈的真实性, 聚合算法与展示形式]
+      moderators: [系统抗操纵设计, 评价者激励结构, 声誉可迁移性（跨平台/跨场景）]
+      mediators: [对声誉信号的信度评估, 声誉预期]
+      outputs: [陌生人信任提升, 交易效率, 声誉两极分化（马太效应）, 操纵军备竞赛]
+    evidence:
+      supporting: ["平台经济学对平台治理与双边市场的论述（S96，间接支撑：EP 登记文本无声誉系统直接内容，仅『过滤器帮用户找到相关价值』间接对应）", "博弈论与实验经济学的声誉机制研究：声誉维持合作的理论与实验证据（S27、S52 为邻近理论传统，EP 登记文本无声誉系统直接内容）", "电商与共享经济平台的声誉-成交关联研究"]
+      conflicting: ["声誉分数的维度效度常被质疑（评分混合了品、价、物流等无关维度）", "刷分与操纵的持续侵蚀，系统需要不断更新防御", "声誉的马太效应压制新进入者（冷启动劣势）"]
+      replication: ["声誉系统提升合作与交易效率的方向性结果稳健", "抗操纵的具体设计有效性因平台与时代而异（军备竞赛持续）"]
+      meta_analysis: ["无跨平台权威 meta-analysis；以平台经济与实验经济学综述为主"]
+    evidence_grade: "B"
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["记录真实且不可伪造", "评分维度与决策相关", "互动重复发生（声誉有未来价值）"]
+    failure_conditions: ["操纵成本低（刷分灰产）导致信号失真", "一次性互动场景（声誉无未来价值）", "声誉评价与决策质量脱钩（评分通胀）"]
+    common_misinterpretations: ["把好评数量当可信度——可操纵的计数是最易失真的信号", "忽视声誉系统的冷启动问题：新进入者无历史即无信任，需要替代背书机制"]
+    ethical_risks: ["声誉绑架（以差评威胁勒索）", "评分歧视与算法声誉固化（历史污点永久化）"]
+    examples:
+      original_cases: ["平台经济学对声誉机制与双边市场的分析（S96）", "Bicchieri 对声誉维持规范与合作的博弈论分析（S27）"]
+      research_cases: ["声誉机制维持公共合作的实验研究", "评价系统抗操纵设计的田野研究"]
+      modern_cases: ["电商信用评价体系与刷单灰产的军备竞赛", "开源社区贡献记录作为职业声誉资产", "知识付费领域的『避雷』与口碑社群（民间声誉系统的兴起）"]
+    communication_implications: "内容可借助外部声誉信号（真实评价、第三方记录、贡献履历）建立可验证信任；『可查证的声誉』比自我声称的资历更抗怀疑，尤其在 AI 生成内容泛滥的背景下。"
+    community_implications: "社群声誉系统设计三原则：与核心价值行为挂钩（贡献而非晒单）、抗刷（行为验证）、可积累可展示（等级、履历页）；声誉资产的流动性决定成员留存（离开=声誉清零是强锁定，但也构成公平性争议）。"
+    content_applications:
+      evidence: "引用可查证的外部声誉：历史项目记录、第三方评价、公开履历链接"
+      cta: "CTA 提供声誉核验路径：『我的过往服务记录与评价都在这里（公开可查）』"
+      body: "展示行为轨迹而非标签：『三年里完成XX、被XX引用』比『资深专家』更可信"
+      title: "标题以声誉锚点替代资历词：『带过37个学生的实操老师』（需真实）"
+    platform_implications: "平台声誉系统的算法权重决定创作者行为（评分信号被博弈）；去中心化身份与跨平台声誉协议是正在发展的方向，同时平台的声誉锁定（封号=社会性死亡）成为治理争议焦点。"
+    related_nodes: [norm_enforcement_reputation, trust_calibration, platform_power_gatekeeping, status_systems, cold_start_dynamics, trust_signals_content, community_governance]
+    source_ids: [S96, S27, S52]
+    provenance:
+      primary_sources: ['S96', 'S27', 'S52']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: provenance_verification
+    canonical_name_en: Provenance Verification
+    canonical_name_zh: 溯源验证
+    aliases: ["内容溯源验证", "source provenance", "出处验证"]
+    domain: trust
+    definition: "通过技术与社会机制确立内容的来源与修改历史（谁创作、何时、是否被编辑、是否AI生成），使信任判断可以锚定在可验证的出处链上。C2PA（内容出处与真实性联盟）等标准试图为媒体内容建立密码学级的出处凭证（行业标准实践，EP 待补）；在传播层面，溯源也包括引用链、原始文献可达性等弱验证形式。"
+    core_claim: "当内容真伪无法靠肉眼判断时，信任判断从『内容本身』转移到『出处链』；谁控制出处验证基础设施，谁就获得新的守门人权力。"
+    mechanism: "AI 生成内容使表面真实性通胀（任何文本图像都可被低成本生成），基于直觉的信任判断失效；溯源机制为内容附加机器可读的出处凭证（拍摄设备、时间戳、编辑记录），把验证从『判断内容』转为『验证凭证链』。其有效性取决于：凭证的密码学强度、签发节点的可信度、以及用户端验证工具的普及——凭证存在但无人验证则形同虚设。"
+    causal_chain: "内容生成 → 出处凭证附加（签名/时间戳/编辑链） → 传播中被验证或不验证 → 信任锚定于凭证链 → （验证缺位时）凭证通胀或失效"
+    variables:
+      inputs: [内容本体, 出处凭证（签名、元数据、编辑历史）, 验证工具可得性]
+      moderators: [凭证签发生态的可信度, 用户验证习惯, 平台展示凭证的界面设计]
+      mediators: [对凭证链的信任, 验证成本感知]
+      outputs: [来源可确认的内容信任, 深度伪造的甄别, （无验证时）凭证形同虚设, 守门人权力集中]
+    evidence:
+      supporting: ["深度伪造与AI内容泛滥带来的溯源需求（平台与行业标准动向，S92、S95 的平台治理讨论）", "密码学签名与出处标准（如 C2PA）的技术可行性（行业标准实践，EP 待补）", "引用规范与同行评审作为弱溯源形式在科学传播中的长期实践"]
+      conflicting: ["用户端验证率极低：凭证存在不等于被查验", "溯源标准面临生态碎片化与成本问题", "出处链本身可被伪造或脱节（转发链断裂）"]
+      replication: ["技术可行性有工程验证", "社会层面的有效性（实际改变信任行为）证据尚早，属新兴领域"]
+      meta_analysis: ["尚无成熟 meta-analysis；属新兴技术与治理交叉领域"]
+    evidence_grade: "C"
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["验证工具嵌入用户高频路径（而非要求额外操作）", "签发生态具备广泛可信度与互认", "高利害内容（新闻、证据、财务）优先适用"]
+    failure_conditions: ["用户不验证（凭证存在但无人查看）", "签发节点被俘获或标准碎片化互不承认", "内容脱离凭证单独传播（截图、转发剥离元数据）"]
+    common_misinterpretations: ["把溯源当真伪保证——溯源证明的是出处与修改历史，不证明内容为真（真实信源也会出错，恶意信源可产出『真实出处』的假内容）", "以为技术上可行就等于会被使用——验证行为的普及是最大瓶颈"]
+    ethical_risks: ["溯源基础设施的守门人权力集中（谁有权签发与撤销凭证）", "以『无凭证』为由排斥真实但未经签发的内容（排他性滥用）"]
+    examples:
+      original_cases: ["C2PA 等内容出处标准的工程实践（技术标准层面）", "科学共同体对引用规范与数据可及性的长期要求（弱溯源传统）"]
+      research_cases: ["深度伪造检测与出处验证的人因研究（验证率与界面设计的早期实验）"]
+      modern_cases: ["相机原生签名与新闻机构的实拍凭证实践", "平台对AI生成内容的标注政策", "财经内容要求附原始数据链接的社区规范"]
+    communication_implications: "在高利害内容中主动提供溯源要素（原始链接、时间、修改记录），把『可验证』本身做成差异化信任资产；同时向受众说明溯源≠真相（出处真实不等于内容正确）。"
+    community_implications: "社群可建立轻量溯源文化：要求观点帖附来源、存档原始链接、标注修改。这不依赖密码学，却能在成员层面建立『可查证』的规范，是抗 AI 污染的社群免疫。"
+    content_applications:
+      evidence: "证据块附溯源三要素：原始来源链接、发布/更新时间、修改说明"
+      title: "标题谨慎使用『独家』，改用可验证表述：『数据截至X月，来源链接见文末』"
+      body: "正文显式区分：我的观察/引用来源/AI辅助整理，三类信息分层标注"
+      comments: "对溯源质疑提供存档链接（网页快照），把验证路径公开化"
+    platform_implications: "平台正在引入AI内容标注与出处凭证展示（政策与标准演进中）；溯源展示的界面设计（是否醒目、是否默认展示）将决定其社会效力，也成为平台间竞争与监管的焦点（见 synthetic_media_trust、ai_information_intermediaries）。"
+    related_nodes: [trust_signals_content, content_provenance, synthetic_media_trust, trust_calibration, misinformation_velocity, ai_information_intermediaries, authenticity_premium]
+    source_ids: [S92, S95, S181]
+    provenance:
+      primary_sources: ['S92', 'S95', 'S181']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

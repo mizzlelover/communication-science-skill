@@ -1,0 +1,24 @@
+# Evidence Package — S152 Schacter 1999（The Seven Sins of Memory: Insights from Psychology and Cognitive Neuroscience）
+# 标准格式。access_level 如实标注。
+source_id: S152
+title: "The Seven Sins of Memory: Insights from Psychology and Cognitive Neuroscience"
+authors: "Daniel L. Schacter"
+year: 1999
+journal: "American Psychologist 54(3): 182-203"
+doi: "10.1037/0003-066X.54.3.182"
+url: "https://pubmed.ncbi.nlm.nih.gov/10199218/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "渠道1：PubMed 官方摘要全文（PMID 10199218，实抓）：七宗罪完整列举（transience, absent-mindedness, blocking, misattribution, suggestibility, bias, persistence）+「前三宗为不同类型的遗忘、中三宗为不同类型的失真、最后一宗为难以忘记的侵入性回忆」+「七宗罪为适应性特征的副产品」论证；渠道2：CNCB-NGDC OpenLB PubMed 镜像（OLB-PM-10199218，实抓）同一摘要双源确认；渠道3：SAGE 书章节页（2011，实抓）收录确认 + Schacter 2022《The seven sins of memory: an update》（PMID 33459149，实抓）摘要确认框架沿用二十年并支持建构性记忆/适应功能解释"
+research_question: "记忆为什么会出故障？记忆的系统性失误能否被分类，且每类都有可识别的认知/神经机制与功能根源？"
+core_claims:
+  - "记忆的失误可分类为七宗罪：短暂性（transience）、心不在焉（absent-mindedness）、阻塞（blocking）、错认（misattribution）、暗示感受性（suggestibility）、偏差（bias）、纠缠（persistence）"
+  - "前三宗涉及不同类型的遗忘（omission），中三宗涉及不同类型的失真（commission），最后一宗（纠缠）涉及难以忘记的侵入性回忆"
+  - "七宗罪看似系统设计缺陷，实为记忆适应性特征（adaptive features）的副产品（by-products）——框架后续二十年被持续沿用"
+method: "综述（Review）：综合认知、社会、临床心理学的证据 + 认知神经科学证据（脑损伤患者研究、神经成像技术），对七宗罪逐一评述"
+results: "提出并论证七宗罪分类框架：前四宗为遗漏之罪、后三宗为佣金之罪的后续细化（记忆中/后续文本）；各宗罪均映射可识别的机制（衰减、注意失败、线索竞争、来源混淆、误导信息、当前知识重写、反刍）"
+limitations: "仅摘要级获取（APA 付费墙，未找到开放全文 PDF）；七宗罪为分类框架而非单一机制，各宗罪证据强度不一（纠缠的适应性解释仍有争论）；本包不覆盖各宗罪实验细节"
+boundary_conditions: "不同宗罪因年龄/情绪/事件类型而异；部分宗罪（如纠缠）在特定情境是保护机制而非缺陷；传播/调研场景：诱导性提问可植入虚假记忆（暗示感受性），用户证言需来源校验（与 memory_sins 节点边界一致）"
+relevant_nodes: [memory_sins]
+notes: "记忆七宗罪框架的原始论文（paper 级，abstract_only，摘要全文两源确认）。与 S05（2001 专著）同源同框架；DOI 按 APA 规范写法记录。支撑 memory.yaml memory_sins。"
+last_verified: "2026-09"

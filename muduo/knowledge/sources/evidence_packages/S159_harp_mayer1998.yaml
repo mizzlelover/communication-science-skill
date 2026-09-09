@@ -1,0 +1,25 @@
+# Evidence Package — S159 Harp & Mayer 1998（Seductive Details）
+# 标准格式。access_level 如实标注。
+source_id: S159
+title: "How Seductive Details Do Their Damage: A Theory of Cognitive Interest in Science Learning"
+authors: "Shannon F. Harp; Richard E. Mayer"
+year: 1998
+journal: "Journal of Educational Psychology 90(3): 414-434"
+doi: "10.1037/0022-0663.90.3.414"
+url: "https://www.cambridge.org/core/books/multimedia-learning/coherence-principle/4E80B70CB76E2166B76E5653EBDE7D3E"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "正文未直接获取。渠道1：Cambridge University Press《Multimedia Learning》(2009) Coherence Principle 章节（效应机制：无关材料竞争工作记忆资源/转移注意/扰乱组织/诱发不恰当主题整合；13/14 项测试简洁组迁移更优、中位效应量 d=0.97；边界条件）；渠道2：西安科技大学转载《梅耶多媒体教学设计10条原则》（花边细节 Seductive Details 概念源流 Garner et al. 1989；Harp & Mayer 区分花边文本 Seductive Text 与花边插图 Seductive Illustrations；闪电形成教学案例）；渠道3：北师大《心理发展与教育》2014 眼动研究（后续实证：诱饵插图组回忆显著更少要点、生成更少问题解决方案，80% 学习者报告被诱饵插图吸引）；渠道4：tandfonline JRTE 2025 引用（确认 90(3):414-434 与 DOI）。"
+research_question: "有趣但与学习目标无关的细节（诱饵细节）为什么以及如何损害科学学习？认知兴趣理论如何解释这一反直觉效应？"
+core_claims:
+  - "有趣但与主题无关的细节会损害而非提升对核心内容的理解与记忆——这是'一致性原则'（coherence principle）的核心证据：排除无关材料的学习效果更好（Cambridge Multimedia Learning 章节）"
+  - "机制：诱饵细节竞争工作记忆中有限的认知资源、把注意从重要材料转移开、扰乱材料的组织过程、并诱发学习者把新材料整合进不恰当的主题（Cambridge Multimedia Learning 章节）"
+  - "Harp & Mayer 提出认知兴趣理论：诱饵细节诱发的是情感兴趣（emotional interest）而非与主题因果结构相联的认知兴趣（cognitive interest），故提升'有趣感'却不提升学习（论文标题 + 西安科技大学综述对花边文本/花边插图区分的转述）"
+  - "后续独立实验证据：诱饵插图组回忆显著更少要点、生成更少问题解决方案，80% 学习者被诱饵插图吸引，且诱饵材料诱发了不恰当的先备知识（北师大 2014 眼动研究）"
+method: "系列实验（科学课文/插图教学情境，如闪电形成过程），操纵诱饵文本与诱饵插图的有无、位置与信号提示，测量回忆（retention）与迁移（transfer）"
+results: "简洁材料优于含诱饵材料的教学呈现：13/14 项测试中简洁组迁移表现更好、中位效应量 d=0.97（Cambridge 章节）；诱饵细节虽提升兴趣感但损害对核心内容的回忆与迁移；成为多媒体学习'一致性原则'与认知负荷理论 seductive details 效应的奠基来源"
+limitations: "教学情境实验（科学课文）；效应大小随情境与受众波动，部分研究未发现显著损害（cognitive_load.yaml seductive_details_effect 节点 conflicting 一致）；对高先验知识学习者影响减弱"
+boundary_conditions: "对低先验知识/低工作记忆容量学习者最显著（Cambridge 章节）；与核心因果结构相关的细节不属诱饵而是必要案例；叙事框架中服务主题的细节无碍；纯娱乐内容不适用（与 cognitive_load.yaml seductive_details_effect 节点一致）"
+relevant_nodes: [seductive_details_effect, extraneous_cognitive_load]
+notes: "诱饵细节效应经典实证来源。核心论点经 Cambridge 章节（机制+效应量）、西安科技大学教学综述（概念区分）、北师大后续实验（独立复制方向）多源交叉确认，未编造。建议：将 S159 计入 cognitive_load.yaml seductive_details_effect 节点的 source_ids（当前为 S40/S69/S65）。"
+last_verified: "2026-09"

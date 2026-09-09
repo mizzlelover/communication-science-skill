@@ -1,0 +1,350 @@
+# emotion — 情绪（Emotion）：情绪如何驱动注意、记忆与分享
+domain: emotion
+nodes:
+  - id: emotional_arousal
+    canonical_name_en: Emotional Arousal
+    canonical_name_zh: 情绪唤醒
+    aliases: [生理唤醒, 高唤醒效应, arousal]
+    domain: emotion
+    definition: "情绪唤醒指情绪事件引发的生理与心理激活水平提升（注意聚焦、行动准备、生理激活）。本节点刻画其在传播中的核心方向：高唤醒情绪（无论正负）比低唤醒情绪更促进公开分享。"
+    core_claim: "在控制曝光量与内容实用性后，高唤醒情绪的内容比低唤醒情绪的内容获得更多分享。"
+    mechanism: "唤醒提升行动准备度与自我激活，使『转发』这类社交行动的启动成本显得更低；高唤醒同时强化社交货币感——分享成为表达立场、维系关系的低成本动作。低唤醒（满足、悲伤）伴随放松与不作为倾向。注意：Barrett 的建构情绪理论提醒，唤醒并非自动决定情绪的单一生理信号，同一唤醒状态可被解读为愤怒或兴奋，解读依赖情境与概念（S06）。"
+    causal_chain: "高唤醒情绪内容 → 生理/心理激活上升 → 分享冲动与社交效用评估提高 → 更多转发与讨论"
+    variables:
+      inputs: [内容情绪强度, 情绪类型, 与受众的切身相关性]
+      moderators: [身份一致性, 内容公开性与敏感度, 分享操作成本, 受众当前状态]
+      mediators: [生理唤醒, 社交货币感, 行动准备度]
+      outputs: [分享量, 评论量, 传播速度]
+    evidence:
+      supporting:
+        - "Berger & Milkman 2012 对数千篇媒体线上文章的大样本内容分析，并以实验补充因果方向：敬畏、愤怒、焦虑等高唤醒情绪与更多分享相关，悲伤与更少分享相关（期刊论文）"
+        - "Contagious（S59）整合多个平台数据与实验，支持唤醒-分享方向（专著综述）"
+      conflicting:
+        - "高唤醒不保证传播：与受众无关或被感知为操纵的高唤醒内容分享率低（多来源观察）"
+        - "深度悲伤等低唤醒负性内容抑制分享，但可能提高深度阅读与共情（研究观察）"
+      replication:
+        - "方向性结论跨平台、跨语言样本重复出现；效应量中小，且随分享界面与算法环境波动。评级按枚举记 B（B+ 水平：中等偏强）"
+      meta_analysis:
+        - "尚无针对『唤醒→分享』的独立大规模注册元分析，主要依赖原作者团队系列研究与其他团队的零散复制"
+    evidence_grade: B
+    boundary_conditions:
+      - "适用于带公开分享功能、转发成本低的一键式渠道"
+      - "内容需先进入受众注意池，唤醒无法作用于未被看见的内容"
+      - "情绪处于受众可承受的安全与道德边界内"
+    failure_conditions:
+      - "高唤醒叠加身份威胁时触发心理抗拒（psychological_reactance），表现为反驳而非分享"
+      - "被识别为标题党或情绪操纵后，分享成为社交风险，唤醒反而抑制转发"
+      - "平台限流或转发门槛高时，唤醒停留在评论层面而不转化为扩散"
+    common_misinterpretations:
+      - "『够情绪化就一定爆』：唤醒只是放大器，相关性与可信度才是地基"
+      - "把唤醒等同于负面情绪：敬畏、惊叹等正性高唤醒同样有效"
+    ethical_risks:
+      - "刻意制造愤怒与恐惧以换取传播会污染讨论规范，导致情绪疲劳与信任损耗"
+    examples:
+      original_cases: ["Contagious（S59）情绪章节对高唤醒广告与低唤醒广告分享差异的对比讨论"]
+      research_cases: ["Berger & Milkman 2012 的文章列表分析与后续情绪操纵实验"]
+      modern_cases: ["挑战类短视频与燃向混剪的高转发；灾难事件的刷屏式扩散"]
+    communication_implications: "把高唤醒作为放大器而非地基：先保证相关与可信，再用敬畏/义愤/惊叹收口；悲伤叙事用于深度阅读场景，不指望转发。"
+    community_implications: "活动通知需要唤醒度（倒计时、集体进度），但日常讨论要防止长期高愤怒状态，避免社群极化与倦怠。"
+    content_applications:
+      title: "给标题一个『值得起身转发』的理由：反差事实加情绪词，而非纯恐吓"
+      emotion: "优先敬畏与惊叹，其次与社群身份一致的义愤"
+      cta: "『转给那个需要看到的人』——把分享行为具体化并给足社交正当性"
+    platform_implications: "以互动信号为权重的排序算法天然放大高唤醒内容，形成愤怒偏差；运营方需要冷静期、事实标签等机制对冲，而非仅追热点。"
+    related_nodes: [discrete_emotion_sharing_profiles, affect_heuristic, mood_congruence, stepps_sharing_framework, word_of_mouth_drivers, curiosity_gap, psychological_reactance, algorithmic_amplification]
+    source_ids: [S59, S60, S06, S105]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Berger 2013（S59，唤醒与传播）+ Nahon & Hemsley 2013（S60，情绪驱动）+ Barrett 2017（S06，建构情绪理论：core affect 含效价×唤醒两维，作为唤醒解读的边界提示）"
+      effect_size: "高唤醒情绪增强分享与传播（Berger & Milkman 2012 数据）"
+      replication_status: "唤醒-传播关联在多个分享数据集方向稳定"
+      context_dependency: "情绪效价×唤醒交互；传播目标调制"
+      downgrade_upgrade_reason: "2026-09 实取 S06 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 审计移除 S90 错位列名"
+    provenance:
+      primary_sources: [S59]
+      supporting_evidence: [S60, S06]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: affect_heuristic
+    canonical_name_en: Affect Heuristic
+    canonical_name_zh: 情感启发式
+    aliases: [情感捷径, affect shortcut]
+    domain: emotion
+    definition: "情感启发式指人们以对判断对象的即时好恶感受（affect）作为决策捷径，用『我对它感觉如何』替代概率与收益的运算。与 mood_congruence 的区别：本节点是对象层面的判断策略（感受替代推理），mood_congruence 是状态层面的心境污染。"
+    core_claim: "对风险与收益的判断随即时好恶感受系统性偏移：感觉好的对象被低估风险、高估收益。"
+    mechanism: "复杂决策所需的信息与运算远超注意与工作记忆容量，感受作为一种压缩了既往经验的信息摘要被直接调用（S01、S07）；Damasio 的躯体标记假说认为情绪标记帮助快速排除劣势选项，缺少情绪信号反而导致决策瘫痪；但当感受来源与判断对象无关时，替代就产生系统性偏差。"
+    causal_chain: "即时好恶感受 → 替代概率/收益运算 → 风险与收益判断偏移 → 选择与传播行为偏差"
+    variables:
+      inputs: [对象的即时感受效价, 生动性, 与自身经验的距离]
+      moderators: [时间压力, 认知负荷, 专业知识水平, 感受来源与对象的相关性]
+      mediators: [对象层面的 affect 评价]
+      outputs: [风险感知, 收益感知, 购买与分享选择]
+    evidence:
+      supporting:
+        - "Slovic 团队的风险-收益感知系列实验：情绪效价改变风险与收益的判断方向（实验研究）"
+        - "Damasio 躯体标记假说：腹内侧前额叶损伤病人在决策任务中表现出选择缺陷（神经心理学观察）"
+      conflicting:
+        - "专业知识可显著抑制该捷径；感受替代主要出现在低专业、高时间压力场景（边界研究）"
+      replication:
+        - "方向在多个风险感知任务中重复；作为解释框架的精确边界仍有争论。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "判断对象缺乏客观数据、需要主观评估时更明显"
+      - "受众处于低卷入、快节奏的信息流场景"
+    failure_conditions:
+      - "受众具备领域专业知识且有时间核对数据时，感受替代让位于分析加工"
+      - "感受来源与判断对象明显无关且被提醒时"
+    common_misinterpretations:
+      - "把情感启发式理解成『感性战胜理性』的道德叙事；它是一种节省认知资源的信息压缩，多数时候自适应"
+    ethical_risks:
+      - "利用无关的情绪唤起（性感模特、悲情配乐）为高风险产品制造好感的操作，属于利用判断捷径的误导"
+    examples:
+      original_cases: ["Thinking, Fast and Slow（S01）中关于风险与收益感知随好恶移动的讨论（原书内容，S01 EP 未实取该条）"]
+      research_cases: ["Slovic 团队的风险感知实验；Damasio 实验室的决策神经心理学研究"]
+      modern_cases: ["种草内容用氛围与美感替代理性参数；负面舆情一旦形成好恶基调，后续同品牌信息均被负面解读"]
+    communication_implications: "内容先建立好恶基调（审美、故事、身份认同），参数信息作为辩护材料后置；同时警惕竞品先建立的基调如何扭曲受众对你数据的解读。"
+    community_implications: "社群对产品/制度的评价常由集体情绪基调先定，运营需在事实澄清之外同步处理情绪基调。"
+    content_applications:
+      opening: "先给一个情绪锚点（真实场景或人物），再给参数与证据"
+      body: "把抽象数据翻译成可感受的对比场景，降低运算负担"
+    platform_implications: "信息流的高速度与低核对成本放大感受替代；富媒体（图像、配乐）比参数表更能启动该捷径。"
+    related_nodes: [dual_process_theory, availability_heuristic, mood_congruence, loss_aversion, gain_loss_framing, peripheral_route_processing]
+    source_ids: [S01, S07, S166]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Damasio 1994《Descartes' Error》（S07，躯体标记假说：情绪作为快速决策信号）+ Kahneman 2011（S01，直觉替代）"
+      effect_size: "情感反应替代复杂计算引导判断（快速启发式）"
+      replication_status: "情感启发式在风险感知研究中方向稳健"
+      context_dependency: "时间压力/信息复杂度/情绪唤起度调制"
+      downgrade_upgrade_reason: "2026-09 实取 S07 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 审计移除 S12 错位列名（S166 风险-收益证据已在库）"
+    provenance:
+      primary_sources: [S07]
+      supporting_evidence: [S01, S166]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: discrete_emotion_sharing_profiles
+    canonical_name_en: Discrete Emotion Sharing Profiles
+    canonical_name_zh: 离散情绪的分享档案
+    aliases: [具体情绪与传播, awe/anger/anxiety 差异]
+    domain: emotion
+    definition: "不同离散情绪有不同的传播档案：敬畏（awe）为高唤醒正性情绪，最促进分享；愤怒与焦虑为高唤醒负性情绪，促进分享但伴极化风险；满足（contentment）为低唤醒正性情绪，抑制转发但利于收藏与陪伴型消费；悲伤处于分享低位。与 emotional_arousal 的分工：该节点讲唤醒总方向，本节点讲离散情绪的差异化档案。"
+    core_claim: "控制唤醒维度后，离散情绪类别仍能独立预测分享行为的差异。"
+    mechanism: "各情绪携带不同的行动倾向与社交功能：敬畏拓宽注意并制造『需要告诉他人』的宏大感；愤怒与焦虑触发威胁监视与群体动员；满足与放松对应休息状态、无需行动；悲伤驱动内省与寻求支持而非公开扩散（S59、S46）。情绪的社会功能决定了它是否被当作社交货币使用。"
+    causal_chain: "特定离散情绪唤起 → 该情绪特有的行动倾向与社交功能 → 差异化的分享/收藏/评论行为"
+    variables:
+      inputs: [内容主情绪类型, 情绪纯度, 唤醒水平]
+      moderators: [话题争议性, 身份相关性, 平台规范, 受众人口特征]
+      mediators: [行动倾向, 社交表达效用, 自我呈现考量]
+      outputs: [分享率, 收藏率, 评论倾向, 极化程度]
+    evidence:
+      supporting:
+        - "Berger & Milkman 2012 按离散情绪分类的分析：敬畏、愤怒、焦虑正相关，悲伤负相关（期刊论文）"
+      conflicting:
+        - "愤怒的分享促进集中在与受众身份一致的对象上，跨阵营愤怒更易引发反驳而非转发（研究观察）"
+      replication:
+        - "敬畏-分享与悲伤-抑制方向复制较稳；焦虑与愤怒的分离效应随议题变化。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "公开、可一键分享的社交平台环境"
+      - "情绪类别测量基于内容编码或读者自报，覆盖面有限"
+      - "离散情绪档案为内容编码层面的实证规律，与同域 S06 建构情绪理论「情绪类别非天生指纹」的立场存在张力，引用时需注明"
+    failure_conditions:
+      - "焦虑内容若同时被视为低可信（贩卖焦虑标签）会被规避"
+      - "满足型内容在强时效话题环境中可能被直接跳过而非收藏"
+    common_misinterpretations:
+      - "把『愤怒最传播』当成策略：长期愤怒内容会损耗社群信任并吸引对抗性受众"
+    ethical_risks:
+      - "刻意制造焦虑（贩卖焦虑）换取打开率，对脆弱人群造成心理伤害并引发平台治理处罚"
+    examples:
+      original_cases: ["Contagious（S59）对各情绪文章分享差异的章节分析"]
+      research_cases: ["Berger & Milkman 2012 的离散情绪编码分析"]
+      modern_cases: ["自然奇观与宏大叙事视频的高转发（敬畏）；维权与争议话题的高评论（愤怒）；治愈系内容的收藏行为（满足）"]
+    communication_implications: "按传播目标配情绪：要扩散用敬畏/义愤，要留存用满足与共鸣，要转化用信任与安心；忌单一情绪打天下。"
+    community_implications: "社群内容日历应有情绪配比（敬畏型分享、陪伴型内容、动员型通知交替），防止情绪结构单一化。"
+    content_applications:
+      title: "敬畏型选题模板：宏大尺度+认知反差（如时间、数量、自然力量）"
+      emotion: "明确标注目标情绪并检查其行动倾向是否与目标行为匹配"
+      cta: "敬畏型内容配『转发以震撼更多人』，满足型内容配『收藏起来慢慢看』"
+    platform_implications: "平台互动按钮设计（转发/收藏/评论分离）决定了各情绪的变现出口；算法对愤怒类内容的加权放大已有多来源观察记录。"
+    related_nodes: [emotional_arousal, fear_appeals_eppm, curiosity_gap, stepps_sharing_framework, narrative_transportation]
+    source_ids: [S59, S60, S46, S105]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Berger & Milkman 2012 NYT 研究（S105，仅摘要级支持，另参作者通俗版正文）：高唤醒积极（敬畏）/消极（愤怒、焦虑）更易分享，低唤醒（悲伤）更难"
+      effect_size: "唤醒维度预测效应稳健"
+      replication_status: "多平台研究复现效价+唤醒对分享的作用"
+      context_dependency: "以文本新闻内容为样本；情绪由文本编码"
+      downgrade_upgrade_reason: "2026-09 补充一手研究证据（S105），升级为 PARTIALLY_VALIDATED；2026-09-09 审计删除 Keltner & Haidt 条（EP 未实取）并补 S105 摘要级声明"
+    provenance:
+      primary_sources: [S105]
+      supporting_evidence: [S59, S60]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: emotional_contagion
+    canonical_name_en: Emotional Contagion
+    canonical_name_zh: 情绪感染
+    aliases: [情绪传递, emotional spread]
+    domain: emotion
+    definition: "情绪感染指情绪状态经由表情、语言、姿态模仿与反馈调节在人际间趋同的过程，线上文本交互同样可传导。EVIDENCE.md 将其定级为 B，并要求携带 2014 年社交平台新闻流大规模实验（Kramer 等）的伦理争议说明。"
+    core_claim: "个体接触到的他人情绪表达会系统性改变其自身情绪表达与体验，且该过程在纯文本线上环境中同样成立。"
+    mechanism: "模仿-反馈回路：无意识模仿他人表情与语言风格，本体感受反馈反过来影响自身情绪；语言与故事唤起共同情感评价；线上环境中算法聚合的同质化接触进一步放大情绪趋同（S57；S92 为方向性解读，其 EP 实载个性化与极化，未直载情绪趋同）。Kramer 等 2014 年对数十万用户信息流的实验显示情绪表达可经信息流传导，但因未获知情同意引发伦理争议与学术界的表达关切，此类实验的合规门槛此后显著提高。"
+    causal_chain: "接触他人情绪表达 → 模仿与反馈调节 → 自身情绪状态改变 → 自身表达与行为改变 → 进一步传导"
+    variables:
+      inputs: [接触内容的情绪效价, 接触频率与密度, 关系强度]
+      moderators: [表达通道丰富度, 群体同质性, 个体易感性与情绪调节能力]
+      mediators: [无意识模仿, 情感共鸣, 归属反馈]
+      outputs: [情绪趋同, 表达风格改变, 参与行为改变]
+    evidence:
+      supporting:
+        - "线下非语言情绪传导的实验室研究（Hatfield 等的系列工作，库外文献、EP 未实取）；线上文本情绪传导的观察与实验证据（S57、S92 及相关论文）"
+        - "Kramer 等 2014 新闻流实验显示信息流情绪构成影响用户后续表达（大规模田野实验，伦理有争议）"
+      conflicting:
+        - "社交网络情绪扩散的观察性分析受网络自选择与同质性混淆困扰，因果解释有方法学争议（S57 作者团队亦承认该限制）"
+      replication:
+        - "基础感染现象稳健（B）；线上大田野实验的规模与伦理限制使其难以常规复制，后续多为小规模实验与观察研究"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "需存在情绪表达线索可接收的通道（文字、表情、图像、语音）"
+      - "传导强度随关系距离增加而衰减"
+    failure_conditions:
+      - "受众采用情绪调节策略（认知重评）或对信源有防御性解读时"
+      - "跨语言、跨文化的情绪线索被误读时，感染方向不可预测"
+    common_misinterpretations:
+      - "把情绪感染理解为纯模仿表演；它包含内在体验改变，不只是表面附和"
+    ethical_risks:
+      - "以未经同意的用户实验操纵信息流情绪（如 2014 年案例）破坏知情同意伦理；情绪操纵对抑郁与焦虑人群风险更大"
+    examples:
+      original_cases: ["Connected（S57）对社交网络中情绪扩散的分析（附方法学争议说明）"]
+      research_cases: ["Hatfield 等的非语言感染研究（库外文献，EP 未实取）；Kramer 等 2014 新闻流田野实验（伦理争议案例）"]
+      modern_cases: ["社群刷屏式庆祝或集体哀悼；评论区情绪基调影响后来者表达"]
+    communication_implications: "评论区与社群首屏情绪是内容资产的一部分：置顶引导、氛围维护与冷启动评论的基调管理，直接影响后续传播走向。"
+    community_implications: "设立情绪基调维护角色与处置流程（冲突降温、哀伤事件响应），把情绪感染当作需要治理的系统性力量。"
+    content_applications:
+      comments: "设计前几条评论的基调（真实用户视角、共情表达），避免冷场与负向螺旋"
+      emotion: "集体仪式节点（跨年、项目上线）主动提供共享情绪出口"
+    platform_implications: "信息流的情绪聚合效应意味着平台排序策略实质上在选择『群体情绪食谱』；同质化接触放大趋同，跨阵营内容则可能放大冲突。"
+    related_nodes: [emotional_arousal, mood_congruence, collective_effervescence, social_reinforcement, complex_contagion, filter_bubble_echo_chambers]
+    source_ids: [S57, S92, S107]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Kramer et al. 2014 Facebook 大规模实验（S107 已实取摘要+方法，含伦理声明）"
+      effect_size: "效应存在但幅度需原文核实；作为线上情绪传染的实验证据"
+      replication_status: "方向被多项线上情感传染研究支持；该实验本身有伦理争议（PNAS EoC）"
+      context_dependency: "线上信息流情境成立；须同时声明伦理边界（知情同意缺失）"
+      downgrade_upgrade_reason: "2026-09 补充一手实验证据（S107），升级为 PARTIALLY_VALIDATED；引用时须并行标注伦理声明；2026-09-09 审计移除 S46 错位列名"
+    provenance:
+      primary_sources: [S107]
+      supporting_evidence: [S57, S92]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: mood_congruence
+    canonical_name_en: Mood Congruence
+    canonical_name_zh: 心境一致性
+    aliases: [心境一致效应, mood-congruent memory]
+    domain: emotion
+    definition: "心境一致性指当前心境使同效价的材料更易被注意、学习、回忆，并被判断为更真实或更可能发生。与 affect_heuristic 的区别：affect heuristic 是对象层面的判断替代，mood_congruence 是状态层面——当下心境为整批信息染色。"
+    core_claim: "改变受众当下心境，可同向改变其对模糊信息的回忆、评价与真实性判断。"
+    mechanism: "心境作为检索线索提升同效价记忆的可得性；心境同时作为信息来源被并入判断（『我感觉好，所以事情应该不错』）；正向心境还拓宽注意与认知分类，负向心境收窄并聚焦威胁。Forgas 的情感注入模型（Affect Infusion Model）指出注入程度取决于加工策略：启发式加工时最强，动机性加工时可被抵消（库外文献，EP 未实取）。"
+    causal_chain: "当下心境 → 同效价材料可得性与真实性判断上升 → 记忆、评价与决策被心境染色"
+    variables:
+      inputs: [受众当下心境, 信息效价, 模糊性]
+      moderators: [加工动机, 心境来源是否被意识到, 时间压力]
+      mediators: [检索可得性, 判断中的心境并入]
+      outputs: [回忆率, 评价倾向, 真实性与可能性判断]
+    evidence:
+      supporting:
+        - "Bower 团队的心境一致性记忆系列实验（实验研究）"
+        - "Forgas 情感注入模型的现场与实验室研究（库外文献，EP 未实取）"
+      conflicting:
+        - "强目标导向任务中，心境效应被任务结构抵消（边界研究）"
+      replication:
+        - "实验室复制并非稳定：后续心境依赖检索复制不完全稳定（Bower & Mayer 1985 自身报告复制失败），催眠诱发方法存在生态效度争议（S164 EP 原文）；效应量随任务与测量方式波动较大。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "信息足够模糊、可作多效价解读时效应最强"
+      - "受众未把心境来源归因于无关事件时"
+    failure_conditions:
+      - "受众意识到坏心情来自无关事件（如下雨）并做归因校正时"
+      - "信息完全清晰、无需解释空间时"
+    common_misinterpretations:
+      - "把心境一致性当成『好心情万能』；负向心境在威胁监督内容（如风险警示）中反而提高接受度"
+    ethical_risks:
+      - "刻意把受众置于特定心境后投放匹配信息（如深夜悲情内容后推高风险产品），构成对状态性脆弱的利用"
+    examples:
+      original_cases: ["The Seven Sins of Memory（S05）中记忆偏差维度对心境与记忆交互的讨论"]
+      research_cases: ["Bower 的心境一致性记忆实验；Forgas 的情感注入现场实验"]
+      modern_cases: ["音乐/氛围内容后接种草信息；用户在负面舆情事件后对同品牌其他内容的宽容度下降"]
+    communication_implications: "发布时机与前置体验决定解读滤镜：同一内容在庆祝场景与危机场景中的传播结果完全不同，需按场景排期与调性校准。"
+    community_implications: "社群重大负面事件后应暂停促销性内容推送，先修复氛围再恢复商业信息。"
+    content_applications:
+      opening: "用与目标心境一致的场景开场（轻松内容配轻快开场，警示内容配严肃开场）"
+      body: "减少与目标心境冲突的杂讯（如严肃提醒中插入娱乐梗）"
+    platform_implications: "平台展示环境（前后内容、时段）构成心境前菜，程序化投放若不考虑环境上下文，素材效果测量会系统性失真。"
+    related_nodes: [affect_heuristic, availability_heuristic, emotional_contagion, encoding_specificity, peak_end_rule]
+    source_ids: [S05, S01, S164]
+    provenance:
+      primary_sources: ['S05', 'S01', 'S164']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: empathy_induced_helping
+    canonical_name_en: Empathy-Induced Helping
+    canonical_name_zh: 共情-助人
+    aliases: [共情利他, empathy-altruism]
+    domain: emotion
+    definition: "对具体个体的共情唤起（共情关怀）可独立于自利考量驱动帮助行为，即 Batson 的共情-利他假说；『可识别受害者效应』（identifiable victim effect，库外文献、EP 未实取）进一步显示：一个具体、有名有姓的受助者比统计意义上的群体获得更多援助。"
+    core_claim: "指向具体个体的共情唤起增加帮助行为，即使帮助不能带来声誉或回避内疚等自利收益。"
+    mechanism: "共情把他人福祉纳入自我关切，具体形象使痛苦变得可想象、可回应；统计数字触发分析加工与无力感（『帮不过来』），具体个人触发行动脚本（可识别受害者效应）；叙事与视角采择增强心理联结，从而提高帮助意愿与投入（S21）。"
+    causal_chain: "具体受助者的生动呈现 → 共情关怀唤起 → 帮助动机与行动 → 捐助/支援行为"
+    variables:
+      inputs: [受助者具体性, 故事生动度, 视角接近性]
+      moderators: [受助群体规模（越多越稀释）, 与受众的身份距离, 成本与效能感知]
+      mediators: [共情关怀, 心理联结, 自我效能感]
+      outputs: [捐助金额与转化, 志愿报名, 分享扩散]
+    evidence:
+      supporting:
+        - "Batson 系列实验：在排除多种自利解释的条件下，共情仍提升帮助（实验研究）"
+        - "Small 与 Loewenstein 等的可识别受害者效应实验：具体个体比统计群体获得更多资源（库外文献，EP 未实取）"
+      conflicting:
+        - "共情可被操纵且存在圈层偏向（偏向可识别的、与我相似者），可能造成资源错配（理论争论）"
+      replication:
+        - "可识别受害者效应方向多次重复，但幅度与条件（是否提示统计背景）有波动。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "帮助成本适中、受众有可执行的行动路径时最有效"
+      - "受助者与受众存在可感知的相似性或联结点"
+    failure_conditions:
+      - "呈现过多需要帮助者的『统计画面』引发无力感与 Compassion fade（共情衰减，库外文献、EP 未实取）"
+      - "受众怀疑故事真实性或认为组织低效时，共情被信任缺失抵消"
+    common_misinterpretations:
+      - "把共情叙事等同于悲情营销：过度悲情化会同时损害受助者尊严与组织可信度"
+    ethical_risks:
+      - "虚构或夸大个体苦难故事骗取捐助；未经同意展示受助者可识别信息构成隐私与尊严伤害"
+    examples:
+      original_cases: ["The Social Animal（S21）对旁观者干预与助人研究的综合讨论"]
+      research_cases: ["Batson 的共情-利他实验范式（S165）；可识别受害者效应系列实验（库外文献，EP 未实取）"]
+      modern_cases: ["公益平台的具体受助者故事页；众筹项目以单个家庭叙事而非群体统计呈现"]
+    communication_implications: "公益与求助内容遵循『一个具体的人+一个可完成动作』结构；规模数据放在行动之后作补充，而非开头的说服主角。"
+    community_implications: "社群互助板块把请求结构化（具体需求+可交付动作+进度反馈），把共情转化为持续参与而非一次性感动。"
+    content_applications:
+      title: "以具体人物与具体困境命名标题，避免『数百万人的危机』式开头"
+      cta: "给出单一、明确、成本可感知的帮助动作（捐一餐、转一次）"
+      narrative: "受助者作为主角呈现能力与处境，而非纯粹被拯救对象"
+    platform_implications: "平台对公益内容的信任标签与资金透明度展示，决定共情能否转化为行动；纯情绪内容在信任机制薄弱的平台转化率受限。"
+    related_nodes: [anecdote_vs_statistics, story_character_identification, narrative_transportation, reciprocity_norm, ostracism_effects]
+    source_ids: [S21, S165]
+    provenance:
+      primary_sources: ['S21', 'S165']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

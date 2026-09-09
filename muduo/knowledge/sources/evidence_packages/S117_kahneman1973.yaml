@@ -1,0 +1,10 @@
+# Evidence Package 墓碑 — S117 Kahneman 1973（Attention and Effort）
+# T1 同书重复登记合并（2026-09-09）：S117 与 S02 为同一本书（Prentice-Hall 1973）。
+# 保留方：S02（annotated，substantial_excerpt，4 个独立渠道交叉实取容量分配模型）；
+# 本包原为 found 级元数据登记，content_obtained 为 S02 子集。原 EP 内容见 git 历史（本文件合并前版本）。
+source_id: S117
+merge_status: MERGED_INTO
+merged_into: S02
+merged_date: "2026-09-09"
+merge_reason: "同书重复登记（title/authors/year/出版社同一）；S02 content_obtained 更实质，本包仅元数据级（found）。全部节点引用已重定向至 S02。"
+relevant_nodes: []

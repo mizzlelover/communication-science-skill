@@ -1,0 +1,27 @@
+# Evidence Package — S130 Tversky & Kahneman 1974（Judgment under Uncertainty）
+# 标准格式。access_level 如实标注。
+source_id: S130
+title: "Judgment under Uncertainty: Heuristics and Biases"
+authors: "Amos Tversky; Daniel Kahneman"
+year: 1974
+journal: "Science 185(4157): 1124-1131"
+doi: "10.1126/science.185.4157.1124"
+url: "https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf"
+access_level: full_text
+research_status: read
+content_obtained: "UCSD 心理学课程（Prof. Craig McKenzie, Psych 209）托管的 JSTOR 版全文 PDF（10 页，curl 实际下载并 pdftotext 提取，含三大启发式全文与全部实验数据）+ PubMed/CNCB 官方摘要交叉核对（PMID 17835457，DOI 与刊期信息一致）"
+research_question: "人们在不确定条件下如何评估概率与预测数值？直觉判断是否系统性偏离规范统计模型，偏差由什么认知机制产生？"
+core_claims:
+  - "人们依赖有限数量的启发式把复杂概率评估简化为简单判断操作：代表性（representativeness，按 A 与 B 的相似度评估 A 属于 B 的概率）、可得性（availability，按事例进入脑海的容易程度评估频率/概率）、锚定与调整（anchoring and adjustment，从初始值出发调整，调整通常不充分）"
+  - "代表性导致系统性偏差：忽视先验概率（工程师/律师实验：先验 70/30 与 30/70 两组的判断几乎相同，而贝叶斯比应为 5.44；给无信息描述时仍忽略先验）、对样本量不敏感（大/小医院出生性别实验 21/21/53；估计 2 人委员会数中位 70 vs 8 人委员会 20，正确答案均为 45）、有效性错觉、以及误解回归均值（飞行训练奖励/惩罚例）"
+  - "可得性导致系统性偏差：可检索性偏差（更出名的性别名单被误判为数量更多）、可想象性偏差（容易构想的实例被高估频率）、错觉相关（Chapman & Chapman 的临床判断实验）"
+  - "锚定导致系统性偏差：转盘实验（随机起点 10 组对联合国非洲国家百分比的中位估计 25，起点 65 组为 45；奖励准确不消除效应）；5 秒乘法估算（升序表达式中位估计 512 vs 降序 2250，正确答案 40320）"
+  - "锚定也造成联合事件概率被高估、析取事件概率被低估（Bar-Hillel 实验：多数被试押注概率 0.48 的联合事件而非 0.50 的简单事件），并使主观概率分布过窄（赋予 0.10 概率的事件实际发生 24%；0.34 的事件实际发生 26%）"
+  - "这些偏差不是动机性扭曲（鼓励准确与奖励正确答案时仍出现），且受过统计训练的研究者在直觉判断时同样易犯（对经验研究者的'小数定律'信念研究）"
+method: "系列纸笔问卷/实验室判断实验（工程师-律师先验概率、医院样本量、委员会想象、轮盘锚定、乘法估算、主观概率分布校准等，多个引自作者既往研究）+ 对已有研究（Chapman & Chapman 错觉相关、Bar-Hillel 复合事件）的系统整合"
+results: "三大启发式普遍使用且通常高效，但在可预测的条件下产生系统性错误；具体效应包括先验概率忽视、样本量不敏感、锚定不充分（起点 10 vs 65 → 估计 25 vs 45）、联合事件高估/析取事件低估、置信区间过窄"
+limitations: "多数实验为纸笔假设情境、样本为大学生；论文为现象学综述性质，各启发式的边界条件由后续研究界定（如 Gigerenzer 生态理性批评、双系统理论重释）"
+boundary_conditions: "适用于不确定条件下的直觉概率判断与数值预测；启发式在快速、自动直觉加工中触发；规范基准为贝叶斯/统计模型；后续研究（Kahneman & Frederick 2002 属性替换）修正了机制表述"
+relevant_nodes: [anchoring_effect, representativeness_heuristic, availability_heuristic]
+notes: "行为经济学与判断决策领域奠基文献（三大启发式首次系统化）。全文经 UCSD 课程公开 PDF 实际获取，核心内容为原文可溯源，未编造。"
+last_verified: "2026-09"

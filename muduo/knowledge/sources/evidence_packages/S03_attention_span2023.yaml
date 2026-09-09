@@ -1,0 +1,27 @@
+# Evidence Package — S03 Gloria Mark 2023（Attention Span）
+# 标准格式。access_level 如实标注。
+source_id: S03
+title: "Attention Span: A Groundbreaking Way to Restore Balance, Happiness and Productivity"
+authors: "Gloria Mark"
+year: 2023
+journal: Hanover Square Press（美国）/ William Collins（英国）（专著，ISBN 9780008526009）
+doi: "无 DOI（专著）"
+url: "https://www.aftertone.io/common-productivity-questions/what-does-gloria-marks-research-say-about-interruptions"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：(1) Aftertone 研究综述（WebFetch 全文）——2008 年 Gudith & Klocke 现场研究：外部打断后平均 23 分 15 秒回到原任务（期间通常经过约两个中间任务）；2004 年 Gonzalez 研究：单任务平均连续工作时间约 3 分 05 秒；自我打断≈外部打断（约一半打断为自发）；2016 年研究：日均查邮件 77 次、看手机 85 次；屏幕平均注意时长从 2004 年 2.5 分钟降至近年约 47 秒；(2) 当当英文原版书目——'We spend an average of just 47 seconds on any screen…it takes 25 minutes to bring our attention back…we interrupt ourselves more than we're interrupted by others'；书中提出四种注意力类型，并以 kinetic attention（动态注意力）框架取代 flow 作为数字世界的解释框架；(3) Speakwise/Takeroon/Vidico 数据综述——'8 秒注意力（比金鱼短）'出自 2015 年微软市场报告（数据可追溯至 Statistic Brain，无同行评审研究支撑，已被 BBC/《华尔街日报》质疑并证伪）；Mark 的实测数据为 47 秒；(4) 澎湃新闻——Mark 2004 年 2.5 分钟 → 2021 年 47 秒"
+research_question: "数字环境中人的注意力如何被技术重塑？注意力的'缩短'、切换成本与恢复机制是什么？"
+core_claims:
+  - "屏幕平均注意时长实测下降：2004 年约 2.5 分钟 → 2012 年约 75 秒 → 近年约 47 秒（特定研究队列与方法的测量平均值，非普遍生物学容量变化）"
+  - "外部打断后平均需 23 分 15 秒才回到原任务，且通常先经过约两个中间任务——恢复成本远超打断本身的时长；同日恢复率约 81.9%"
+  - "自我打断与外部打断几乎一样多（约一半工作打断是自发的，非通知所致）；知识工作者单任务平均连续工作时间约 3 分钟，日均被打断约 275 次"
+  - "多任务实为快速任务切换，每次切换携带认知成本（switch cost）；高频切换与更高压力、挫折与心智负荷相关，损害而非提升生产力"
+  - "'8 秒注意力（比金鱼短）'是媒体讹传：源自 2015 年微软市场报告，无同行评审研究支撑；注意力变化本质是环境切换频率问题，而非生物容量缩水"
+  - "书中提出每日四种注意力类型，并以 'kinetic attention'（动态注意力）替代 flow 作为数字环境注意力的新解释框架"
+method: "20 年自然主义现场研究（UC Irvine，秒级粒度追踪知识工作者）+ 实验室研究 + 综合专著"
+results: "（实证+综合）数字注意力碎片化的决定性现场证据；'23 分钟恢复'与'2.5 分钟→47 秒'成为引用最多的数字"
+limitations: "关键数字为特定队列/环境的平均值，非固定生物学常数；恢复时长随任务复杂度与打断类型变化；'8 秒'讹传的澄清依赖媒体调查而非本书一手实验"
+boundary_conditions: "适用于数字知识工作环境中的注意力碎片化与切换成本分析；不得把 47 秒推广为人类注意力的普遍上限；切换成本在复杂任务中途被打断时最大"
+relevant_nodes: [attention_residue, novelty_preference, selective_attention, attention_capacity_limits, cognitive_fatigue]
+notes: "switch cost 与注意力碎片化数据为公开标准内容，多源交叉实取，未编造。'8 秒注意力'明确标注为媒体讹传。"
+last_verified: "2026-09"

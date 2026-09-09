@@ -1,0 +1,26 @@
+# Evidence Package — S83 Richardson, Huynh & Sotto 2019（Get Together）
+# 标准格式。access_level 如实标注。
+source_id: S83
+title: "Get Together: How to Build a Community With Your People"
+authors: "Bailey Richardson; Kevin Huynh; Kai Elmer Sotto"
+year: 2019
+journal: Stripe Press（专著；People & Company 2021 年被 Substack 收购）
+doi: "无 DOI（专著）"
+url: "https://press.stripe.com/get-together"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 Stripe Press 官方目录页（核心命题『build your community with people, not for them』、run crew/在线粉丝/K-12 教师运动三类案例、作者为 People & Company 创始人）+ 渠道2 v2ex『与 ChatGPT 一起读书系列』中文全书解读（完整章节大纲：点燃火焰→确定你的人群→一起做些什么→让人们开始交谈→煽动火焰→吸引新人→培养你的身份→注意谁一直在出现→传递火炬→创建更多的领导者→超级充电你的领导者→一起庆祝；以及各章行动项目）+ 渠道3 Audible 官方摘要（with people not for them 同命题、2h46m 有声书）+ 渠道4 豆瓣书单 Community:ology 评语（People & Company 方法论定位）"
+research_question: "普通人如何把一群有共同热情的人聚集起来，并让这个群体自己生长出身份、领导者与生命力？"
+core_claims:
+  - "核心命题：『Build your community with people, not for them』——社群不是为成员建造的场所，而是与成员共同建造的关系；无论线下跑步社群、在线粉丝群还是 K-12 教师运动，聚集热情人群的方法相同（Stripe Press 官方目录 + Audible 摘要）"
+  - "全书以火焰为喻组织为三阶段：点燃火焰（确定你的人群：写下社区将聚集谁、为何聚在一起；一起做第一次有目的的共享活动——如果人们渴望更多就重复，否则回到起点；让人们开始交谈：创建对话空间、提示对话让新手敢开口、建立行为准则）+ 煽动火焰（吸引新人：让起源故事可被找到、装备成员分享自己的故事、突出展示杰出成员；培养你的身份：视觉徽章代表身份、提升标志性仪式、发展独特共享语言；注意谁一直在出现：跟踪成员保留、密切关注最积极者——举手的人是未来的领导者）+ 传递火炬（创建更多的领导者、超级充电你的领导者、一起庆祝）（v2ex 章节级解读逐条实取）"
+  - "避免一次性活动：关系需要时间发展，一些人需要几个循环才能热身并积极贡献；第一次活动要有意识地设计为可重复的『与人群一起做的事』（v2ex）"
+  - "领导者要用聚光灯讲故事建立互惠文化：积极寻找杰出成员的故事并广泛分享以激励他人；庆祝活动自问『我们的徽章是什么？我们的仪式是什么？我们有任何古怪的术语吗？』——身份由符号、仪式与共享语言承载（v2ex）"
+  - "繁荣的社区源于无数小的合作行为：日常劳动中难以察觉的小行动，大规模累积后可以膨胀为重大影响；社群成长靠的是持续吸引真诚的人、鼓励共享的身份感、始终关注社区的脉搏（v2ex）"
+method: "从业者案例方法论（D 级）：People & Company（后并入 Substack）三位创始人基于为 Instagram、Squarespace、StoryCorps 等机构做社群咨询的实践，以真实社群案例（跑步社群、云朵爱好者社团、教师运动等）为素材的叙事型指南"
+results: "（从业者定位）以『与人共建』为核心的个人/组织社群启动指南；其『身份=徽章+仪式+语言』与新人承接/领导者培育设计被社群实践文献广泛引用"
+limitations: "案例驱动、无实证检验；框架以线下+线上小型热情社群为主，大规模商业社群、平台型社区的治理与商业模式问题覆盖有限；书中 shared purpose / shared practice / shared identity 三要素与 commitment 分层为 People & Company 方法论表述，本批开放渠道直接印证的是其章节化实践（培养身份/共同活动/承接新人），三要素术语未在抓取文本中逐字出现，如实标注"
+boundary_conditions: "适用于由热情驱动、规模可控的社群启动与早期成长（几十到几千人）；对以交易/服务为纽带的企业客户社群需与 Spinks(2021) 类商业框架互补"
+relevant_nodes: [sense_of_community, newcomer_onboarding, community_rituals, community_boundaries, participation_ladder, identity_signaling]
+notes: "从业者方法论（D 级），如实标注。with people not for them、三阶段火焰结构、徽章/仪式/语言、起源故事与杰出成员承接、重复性活动等均经 Stripe Press 官方目录与章节级中文解读交叉实取，未编造。shared purpose/practice/identity 三要素术语未逐字见于抓取文本，故未列入 core_claims。"
+last_verified: "2026-09"

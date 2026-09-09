@@ -1,0 +1,25 @@
+# Evidence Package — S64 Gottschall 2012（The Storytelling Animal）
+# 标准格式。access_level 如实标注。
+source_id: S64
+title: "The Storytelling Animal: How Stories Make Us Human"
+authors: "Jonathan Gottschall"
+year: 2012
+journal: Houghton Mifflin Harcourt（专著，248 页）
+doi: "无 DOI（专著）"
+url: "https://tvtropes.org/pmwiki/pmwiki.php/Quotes/TheStoryteller"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：复旦医学人类学（每周一书：讲故事是人之为人的根本要素/九章结构）+ 书评（Homo fictus/人类'痴迷'故事，睡梦中大脑仍在讲述）+ 延伸阅读综述（故事塑造记忆/身份/社会生活，普遍存在于梦/游戏/幻想）"
+research_question: "人类为何是'讲故事的动物'？故事在人性的演化与日常中扮演什么角色？"
+core_claims:
+  - "人类是 Homo fictus（虚构之人）：故事是人性的根本组成部分，'人类痴迷于故事'（'我们这一物种对故事上瘾'）"
+  - "故事模拟世界（Neverland）：故事让我们在安全的世界中演练、学习、体会，强化道德行为、凝聚社群、定义文化"
+  - "故事塑造记忆/身份/社会生活：我们以叙事组织自我经验（自我叙事）、以故事理解他人（心智解读）"
+  - "故事普遍存在于一切人类活动：艺术、文学、梦、游戏、幻想、体育（'体育是故事的脊椎'）"
+method: "演化视角通俗科学（叙事神经/心理/文学综合，九章）"
+results: "（通俗科学）'叙事人'（homo narrans/fictus）的流行科学经典"
+limitations: "论据多为轶事与通俗综合（书评批评：缺乏民俗学/语言学纵深）"
+boundary_conditions: "适用于叙事普遍性的宏观论证；具体叙事效果机制需实证研究"
+relevant_nodes: [narrative_transportation, story_character_identification, collective_identity_narrative, dramatic_arc_structure]
+notes: "叙事普遍性通俗来源（book 级）。Homo fictus/Neverland 为公开引用内容，未编造。"
+last_verified: "2026-09"

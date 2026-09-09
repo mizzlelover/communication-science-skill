@@ -1,0 +1,26 @@
+# Evidence Package — S141 Simons & Chabris 1999（Gorillas in Our Midst）
+# 标准格式。access_level 如实标注。
+source_id: S141
+title: "Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events"
+authors: "Daniel J. Simons; Christopher F. Chabris"
+year: 1999
+journal: "Perception 28(9): 1059-1074"
+doi: "10.1068/p281059"
+url: "https://pubmed.ncbi.nlm.nih.gov/10694957/"
+access_level: abstract_only
+research_status: read
+content_obtained: "渠道1 PubMed 官方摘要全文（PMID 10694957）；渠道2 Illinois experts 机构库记录（摘要+引用）；渠道3 UCF Pressbooks《Sensation and Perception》课程讲义（实验细节：近半数未察觉、大猩猩在屏约 9 秒）；渠道4 eLife 综述 digest（约半数未察觉）。作者主页 danieljsimons.com 抓取失败，未取得全文 PDF，access_level 如实标注。"
+research_question: "在持续注意任务中，观察者是否会漏掉动态场景中显著但未预期的物体？哪些因素决定察觉率？"
+core_claims:
+  - "没有注意，我们可能根本感知不到物体（inattentional blindness）；人们只感知和记住那些获得聚焦注意的对象与细节（摘要原文）"
+  - "未预期物体与画面中其他物体的相似度越高，越可能被察觉（摘要原文：the likelihood of noticing an unexpected object depends on the similarity of that object to other objects in the display）"
+  - "主要监测任务越困难，未预期物体的察觉率越低（摘要原文：how difficult the priming monitoring task is）"
+  - "关键未注意物体与注意位置的空间邻近不提高察觉——观察者注意的对象与事件而非空间位置（摘要原文）"
+  - "在动态传球视频场景中，约半数观察者未察觉穿大猩猩服装者（在屏约 9 秒）（UCF 课程讲义 + eLife digest 交叉确认）"
+method: "实验：参与者观看黑/白两队传球视频并计数白队传球次数，期间穿大猩猩服装者穿过画面；系统比较察觉率随任务难度与物体相似性的变化"
+results: "约半数观察者未察觉大猩猩；察觉率取决于未预期物体与显示中其他物体的相似性以及监测任务难度；空间邻近不影响察觉"
+limitations: "一手来源为摘要+课程讲义（未取得全文 PDF）；实验使用实验室视频场景，真实世界生态效度需结合后续研究（如专家观察者研究）评估"
+boundary_conditions: "注意被持续占用（计数任务）时出现；察觉率受相似性与任务难度调节；空间邻近不缓解；现象在专家领域（如放射科医生）中同样存在（Drew et al. 2013）"
+relevant_nodes: [inattentional_blindness, selective_attention, cocktail_party_effect]
+notes: "一句话定位：持续性无意视盲的奠基实验（大猩猩研究）。relevant_nodes 已在 attention.yaml 核实（inattentional_blindness/selective_attention/cocktail_party_effect 均真实存在）。'约半数未察觉、9 秒在屏'来自 UCF 课程讲义与 eLife digest，摘要原文给出相似性/任务难度/空间邻近三因素。未编造。"
+last_verified: "2026-09"

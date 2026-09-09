@@ -1,0 +1,337 @@
+# language_rhetoric — 语言与修辞（Language & Rhetoric）：从亚里士多德三诉求到词语层面的说服效应
+domain: language_rhetoric
+nodes:
+  - id: ethos_pathos_logos
+    canonical_name_en: Ethos, Pathos, Logos
+    canonical_name_zh: 三诉求（ethos、pathos、logos）
+    aliases: ["亚里士多德三诉求", "三种说服诉求", "修辞三要素"]
+    domain: language_rhetoric
+    definition: "亚里士多德《修辞学》提出的说服三诉求分类：ethos（言者品格与可信度）、pathos（听众情绪）、logos（论证与逻辑）。它是历史上最持久的说服结构框架——本身是分类学而非单一可检验效应，但其三个分支各自对应现代实证机制（信源可信度、情绪影响、论证质量），是组织说服内容的顶层坐标。"
+    core_claim: "完整的说服通常需要三诉求协同：ethos 决定是否值得听、logos 决定是否说得通、pathos 决定是否想行动——缺一则说服力打折，但配比依受众与场景而变。"
+    mechanism: "（作为组织框架）ethos 映射到现代的信源可信度机制（专业性/可信赖性/善意，见 source_credibility_model），在低卷入时作为启发式捷径、高卷入时作为论证佐证；logos 映射到论据质量与中心路径加工（见 elaboration_likelihood_model）；pathos 映射到情绪对注意、记忆与决策的影响（情绪启动、情感启发式）。三者的有效性彼此调制：无 ethos 的 logos 被怀疑，无 logos 的 pathos 是煽情，无 pathos 的 logos 难以转化为行动。"
+    causal_chain: "说服设计按三诉求配置（品格证据+论证结构+情绪唤起） → 三通道并行作用于受众 → 品格给许可、逻辑给理由、情绪给动力 → 态度改变与行动"
+    variables:
+      inputs: [品格证据（资历、立场、利益披露）, 论证质量, 情绪唤起设计]
+      moderators: [受众卷入度与知识水平, 场景正式度, 文化修辞传统]
+      mediators: [信源可信度知觉, 论点审查深度, 情绪状态]
+      outputs: [综合说服力（接受、认同、行动）, 各诉求的独立贡献可分离测量]
+    evidence:
+      supporting: ["《修辞学》的三诉求框架两千余年的实践检验（S66）", "各分支的现代实证对应：信源可信度研究（Hovland 传统）、ELM 论据质量研究、情绪与说服研究", "修辞学现代应用（S67）的案例综合"]
+      conflicting: ["三诉求的可分离性在现代实验中被部分质疑（情绪与认知加工难以干净分离）", "配比的最优解随场景剧烈变化，框架不提供处方"]
+      replication: ["框架作为组织工具被广泛采纳（分类学的有效性以实用性与映射稳定性为准）", "其分支的实证等级各自独立评估（不随框架 inherit）"]
+      meta_analysis: ["不适用于框架本身；各分支机制各有自己的元分析证据"]
+    evidence_grade: B
+    boundary_conditions: ["作为说服内容的组织与诊断框架使用（检查三诉求是否齐备）", "配比须按受众卷入度与场景调整（无万能配方）", "三诉求须内在一致（说一套情感一套导致可信度崩塌）"]
+    failure_conditions: ["单一诉求过度（纯 logos 的学术腔、纯 pathos 的煽情、纯 ethos 的资历堆砌）", "诉求间冲突（讲共情却推销高价）", "受众对修辞套路高度免疫（广告疲劳）"]
+    common_misinterpretations: ["把 pathos 等同于煽情——亚里士多德的 pathos 是理解听众情绪状态并恰当呼应，不是操纵情绪", "把 ethos 等同于自我介绍——它是整体言行呈现的可信度，包括承认反面与利益披露"]
+    ethical_risks: ["用三诉求结构包装操纵（ethos 伪装、pathos 恐吓、logos 伪逻辑）", "情绪诉求对弱势受众的剥削性使用"]
+    examples:
+      original_cases: ["亚里士多德《修辞学》对三诉求的系统论述（S66）", "《Thank You for Arguing》对三诉求的现代应用（S67）"]
+      research_cases: ["各分支的实证研究传统：信源可信度实验、论据质量×卷入度实验、情绪启动实验"]
+      modern_cases: ["品牌内容的 ethos 建设（创始人故事、价值观声明）+ logos（白皮书、测评数据）+ pathos（用户故事）的组合拳", "融资路演的黄金结构：痛点（pathos）→ 市场（logos）→ 团队（ethos）", "反例：情绪视频结尾硬广（pathos 被打断，ethos 崩塌）"]
+    communication_implications: "发布前用三诉求体检：这条内容里，凭什么信我（ethos）、凭什么成立（logos）、凭什么现在就动（pathos）——三问各有一个具体支撑才发布；长内容三诉求分段承担，短内容选主导诉求+最小辅助。"
+    community_implications: "社群的说服体系天然分层：公约与规则靠 ethos（谁在说、凭什么），深度内容靠 logos（论证与证据），活动动员靠 pathos（共同情绪体验）；运营者若只在 pathos 层发力（打卡鼓吹）而缺 logos 层供给，社群会积累浅参与人群。"
+    content_applications:
+      title: "标题按主导诉求选择：知识内容带 logos（为什么/机制词），故事内容带 pathos（处境词），专业内容带 ethos（资历词）"
+      body: "三诉求体检后再发布：ethos 段（资历与利益披露）、logos 段（证据与推理链）、pathos 段（与受众处境的呼应）各就其位"
+      evidence: "证据块服务 logos 与 ethos 双诉求：数据本身（logos）+数据来源与采集方法（ethos）"
+      comments: "评论区以 ethos 维护为主：对质疑的回应方式（承认合理部分）就是品格的现场展演"
+    platform_implications: "平台的分发指标（完播、点赞）对 pathos 类内容天然友好，logos 内容受限于时长与注意力，ethos 内容（自我介绍、背书）转化隐性——创作者需以内容组合而非单篇完成三诉求闭环；平台的认证与标签体系是 ethos 的制度化供给。"
+    related_nodes: [source_credibility_model, elaboration_likelihood_model, emotional_arousal, concreteness_in_language, metaphor_framing, narrative_transportation]
+    source_ids: [S66, S67, S34]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "亚里士多德《论修辞》（S66，book 级，公版 Kennedy 英译：ethos/pathos/logos 三诉求）+ ELM 信源研究（S34）"
+      effect_size: "可信度（ethos）→启发式接受；情感（pathos）→情绪反应驱动判断；逻辑（logos）→论证质量（中央路径）"
+      replication_status: "三诉求作为说服分类沿用 2500 年；现代实证（ELM/信源可信度）与 ethos/logos 双路径对应"
+      context_dependency: "三诉求需与受众/情境（kairos 时机）匹配；组合使用最强"
+      downgrade_upgrade_reason: "2026-09 实取 S66 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S66]
+      supporting_evidence: [S34, S67]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: concreteness_in_language
+    canonical_name_en: Concreteness in Language
+    canonical_name_zh: 语言具体性
+    aliases: ["具体性效应", "concrete language", "SUCCESs 之 C"]
+    domain: language_rhetoric
+    definition: "具体语言（可感、可想象、可操作的表述——『每天晚上 9 点在餐桌上和父母聊 10 分钟』）相对抽象语言（『加强亲子沟通』）在理解、记忆与行动转化上的系统性优势。《Made to Stick》将具体性列为 SUCCESs 的核心要素之一，认知层面与意象加工、编码特异性等机制相连。"
+    core_claim: "可想象的表述比抽象表述更容易被理解、记住并转化为行动——因为具体性给了大脑可执行的意象。"
+    mechanism: "具体语言触发情境模拟（situated simulation）：读到『餐桌、晚上9点、聊10分钟』时，相关感官与情境记忆被部分激活，形成可执行的 mental script；抽象语言（『加强沟通』）缺少模拟素材，只留下语义痕迹。具体性与记忆机制相连：意象编码提供多通道提取线索（编码特异性）；与行动机制相连：具体行为句接近 implementation intentions（何时何地做什么）的结构。抽象化是专家的通病（知识的诅咒，curse of knowledge）：专家默认的抽象概念对新手是空指针。"
+    causal_chain: "具体表述 → 情境模拟与意象激活 → 多通道编码+可执行脚本 → 理解、记忆与行动转化提升"
+    variables:
+      inputs: [表述的具体度（名词可感、动词可做、数字具体）, 感官通道丰富度]
+      moderators: ["受众领域知识（专家间抽象语言有效）", 内容目标（理解vs执行vs传播）", 抽象层级与受众经验的距离"]
+      mediators: [情境模拟, 心理意象, 编码深度]
+      outputs: [理解准确度提升, 记忆留存提升, 行为转化提升, 传播中的保真度（具体内容被转述时更不易失真）]
+    evidence:
+      supporting: ["具体词与抽象词的记忆与加工差异（认知心理学经典：具体性效应，concreteness effect）", "编码特异性与意象编码的研究传统", "《Made to Stick》对具体性的实践综合（S40）", "implementation intentions 具体行为句的效应（行为层对应）"]
+      conflicting: ["具体性优势在专家受众间衰减（领域内抽象术语已高度可达）", "过度具体在需要泛化的任务中限制迁移（具体例子绑定表面特征）", "具体性效应的记忆优势稳健，行为转化优势依赖内容类型"]
+      replication: ["具体性记忆优势是词汇加工研究中复制最好的效应之一", "传播与行动层的证据多为应用研究"]
+      meta_analysis: ["词汇具体性效应的记忆优势来自经典实验传统（跨语言稳健）；本库暂无独立元分析 EP"]
+    evidence_grade: "B+"
+    boundary_conditions: ["受众非领域专家（抽象术语未内化）", "目标是理解、记忆、行动转化或传播保真", "具体细节与核心信息一致（具体但跑题的细节是 seductive details）"]
+    failure_conditions: ["向专家受众过度解释（具体化被感知为降智）", "需要抽象迁移的教学目标（过度绑定具体案例）", "具体细节偏离主线（seducive detail 挤占核心）"]
+    common_misinterpretations: ["把具体性等同于细节多——具体性是可感可做（一张餐桌、一个动作），不是信息量大（三个图表、五个维度）", "以为口号比具体更有传播力：被广泛转述的恰是具体句（『每天走6000步』），抽象口号存活率低"]
+    ethical_risks: ["伪具体（编造具体细节制造可信感，与 trust_signals_content 的滥用面相连）", "以具体单一路径暗示唯一正确方法（压抑受众自主判断）"]
+    examples:
+      original_cases: ["《Made to Stick》的具体性章节与『知识的诅咒』讨论（S40）", "《The Sense of Style》对具体写作与知识诅咒的处理（S69）"]
+      research_cases: ["词汇具体性效应的记忆实验", "编码特异性与意象编码研究", "implementation intentions 的行为效应实验"]
+      modern_cases: ["健康科普的『每天一把坚果』vs『适量摄入不饱和脂肪酸』", "理财内容的具体话术（『发薪日先转10%』）", "社群公告的具体行动句（『今晚8点群内接龙』vs『请大家积极参与』）"]
+    communication_implications: "写作时执行『镜头测试』：每段核心句能否被拍成画面？能则保留、不能则改写为可拍摄版本；行动指令全部具体化到时间、地点、动作三要素，直接借用 implementation intentions 的句式。"
+    community_implications: "社群规则的执行力与具体度成正比：『禁止刷屏』（抽象、难执行）vs『单话题每次发言不超过三行、连发请用引用』（可执行）；新成员引导同理——具体到『第一条该发什么』的指引显著降低沉默率。"
+    content_applications:
+      body: "每个抽象概念后强制跟一个具体案例或动作句（『提高胜率——意思是只在月线向上时开仓』）"
+      cta: "CTA 三要素齐全：时间（今晚8点）+动作（打开清单）+第一步（勾选第1项）"
+      title: "标题用可拍成画面的词：『把奶茶换成3个鸡蛋』比『改变消费习惯』点击与转发皆高"
+      comments: "评论引导用具体话术（『你最近一次XXX是什么时候？』）而非抽象提问（『大家怎么看？』）"
+    platform_implications: "平台算法无法理解抽象概念但能捕捉具体实体（品牌名、数字、行为词），具体内容获得更好的语义匹配与搜索可达性；具体性也是 AI 时代对抗同质化内容的差异化资产（AI 擅长抽象综述，具体经验细节是人类的护城河）。"
+    related_nodes: [specificity_effect, processing_fluency, encoding_specificity, implementation_intentions, verb_concreteness_action_language, seductive_details_effect, fluency_truth_effect]
+    source_ids: [S40, S69, S70]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Heath & Heath 2007《Made to Stick》（S40，book 级，D 级实践框架：SUCCESs 具体性/知识诅咒）+ 具体性记忆/加工实验传统"
+      effect_size: "具体细节提高记忆与可信度（可感实体优于抽象概念）"
+      replication_status: "具体性优势在记忆与传播研究中稳健；框架本身未独立检验"
+      context_dependency: "需复述/记忆的公开信息最强；深度论证型内容另需结构"
+      downgrade_upgrade_reason: "2026-09 实取 S40 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S40]
+      supporting_evidence: [S69, S70]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: specificity_effect
+    canonical_name_en: Specificity Effect (Numbers and Details)
+    canonical_name_zh: 具体数字与细节的效能
+    aliases: ["精确数字效应", "specific numbers", "细节可信度"]
+    domain: language_rhetoric
+    definition: "精确数字与具体细节（『过去37个月，我们回撤最深的一次是11.4%』）相对模糊表述（『长期稳健，回撤很小』）在可信度、记忆与说服上的优势。与 concreteness_in_language 相邻：concreteness 是语言层的可感性，specificity 聚焦数字精度与细节可信度功能——精确数字暗示作者掌握了底层数据，因而『知道内情』。"
+    core_claim: "精确数字与独特细节提升可信与记忆（因为编不出），但伪造的精确同样有效——它是信任信号而非真实性保证。"
+    mechanism: "精确数字的可信路径：小数点与非常规数值（11.4% vs 10%）暗示测量与记录的真实性（凑整像编的，精确像查的），触发『作者有底层数据』的推断；细节的独特性同理（可核查的细节难凭空编造）。记忆路径：具体数字提供锚点与提取线索。但注意边界：精确效应是启发式——编造的精确细节同样提升可信（伪信息的标配手法），且过度精确（小数点后四位）在高卷入受众中反而触发怀疑（你在哪测的？）。"
+    causal_chain: "精确数字/独特细节暴露 → 『有底层数据』推断 → 可信度与记忆提升 → 接受与转发 → （被核查或过精度时）反噬"
+    variables:
+      inputs: [数字的精确度（整数vs小数）, 细节的独特性与可核查性, 数字的出现密度]
+      moderators: [受众核查能力与习惯, 领域利害度（高利害触发验证）, 数字与论点的相关度]
+      mediators: [『知晓内情』推断, 记忆锚点]
+      outputs: [可信度提升, 记忆留存提升, 转发保真度提升, （伪造被识破时）信任崩塌]
+    evidence:
+      supporting: ["语言形式影响力框架（S70 EP：六类语言与 you vs I、could vs should 等形式对比；其 EP 未载精确数字条目，精确数字一手 EP 未建）", "细节具体性对记忆与传播保真的认知证据（gist vs verbatim 传统：具体细节支持逐字记忆）", "《Made to Stick》的可信度设计（S40，可信=细节佐证）"]
+      conflicting: ["过精度反噬：超高精度的数字在高卷入受众中触发来源质疑", "数字密集不等于有效——无关数字是 seductive details", "精确效应可被伪造利用（伪精确是虚假信息的标准特征）"]
+      replication: ["精确性-可信度关联的方向稳健", "最优精度区间因领域与受众而异（缺乏统一处方）"]
+      meta_analysis: ["无独立 meta-analysis；以系列实验与语言研究综述为主"]
+    evidence_grade: B
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["数字与论点直接相关（支撑同一主张）", "精度匹配领域惯例（预算精确到元、占比精确到一位小数）", "受众能感知数字获取路径的合理性"]
+    failure_conditions: ["数字无法被任何合理途径获得（过精度=露馅）", "细节堆砌偏离论点（信息过载）", "被受众实际核查且对不上（一次证伪即全盘怀疑）"]
+    common_misinterpretations: ["以为数字越多越可信——无关数字是装饰且挤占注意力，只留支撑论点的关键数字", "把精确当真实性的替代品：精确是信号不是证明，信号必须可回溯到真实数据源"]
+    ethical_risks: ["伪精确（编造小数点数字制造可信感）", "精确数字的选择性呈现（真实数字的片面用法，与 emphasis framing 的滥用面相连）"]
+    examples:
+      original_cases: ["《Magic Words》对语言形式影响力的实验讨论（S70 EP：六类语言/you vs I/could vs should；未载精确数字条目）", "《Made to Stick》可信度章节的细节案例（S40）"]
+      research_cases: ["精确vs圆整数字的可信度对比实验", "细节具体性对逐字记忆与转述保真的研究（gist/verbatim 传统）"]
+      modern_cases: ["基金测评披露精确回撤点位与日期", "招聘文案的精确描述（『37人团队、平均司龄4.2年』）", "反例：编造的『92.7%的用户复购』被扒数据来源后翻车"]
+    communication_implications: "关键主张配 1-3 个支撑数字即可，数字精度以『你能给出处』为上限：能截图的才写到小数点，给不出来的用保守表述；每个数字旁标注时间与口径（截至X月、含/不含X），防止断章。"
+    community_implications: "社群内容规范应要求数字带口径（数据从哪来、什么时间、含不含什么）：数字口径文化是社群避免幸存者偏差与数字造假的免疫力；管理员带头标注口径，形成成员的数字素养。"
+    content_applications:
+      evidence: "数字三件套：数值+口径（怎么算的）+时间（截至何时），三者齐备才引用"
+      title: "标题数字优先于形容词：『3个月12篇笔记带来400个咨询』优于『高效获客经验』"
+      body: "核心数字在文中复现一次即可，重复堆数字触发对数的麻木"
+      comments: "对数字质疑直接贴原始记录（截图、链接），把核查行为变成可信度展示"
+    platform_implications: "平台的数字化指标文化（粉丝数、转化率截图）让精确数字成为身份货币，也催生截图造假产业链；平台对虚假数据的治理（成交额注水处罚）与创作者的口径透明化是同一枚硬币的两面。"
+    related_nodes: [concreteness_in_language, trust_signals_content, fluency_truth_effect, gist_vs_verbatim_memory, seductive_details_effect, emphasis_vs_equivalence_framing, source_credibility_model]
+    source_ids: [S70, S40, S69]
+    provenance:
+      primary_sources: ['S70', 'S40', 'S69']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: pronoun_perspective_effects
+    canonical_name_en: Pronoun Perspective Effects (You/We/I)
+    canonical_name_zh: 人称视角效应（你/我们/我）
+    aliases: ["人称效应", "second person address", "视角代词"]
+    domain: language_rhetoric
+    definition: "人称选择（你/您、我们/大家、我）对读者卷入感、责任归属与社群认同的影响：第二人称（你）制造直接对话感与自我相关处理；第一人称复数（我们）构建共同身份；第一人称单数（我）承载个人经验的真实性。新兴研究方向，证据以文本分析与小规模实验为主。"
+    core_claim: "人称是廉价而系统的视角开关：『你』拉近卷入、『我们』构建同盟、『我』建立经验真实——混用错位（假大空的我们、越界的你）会各自产生反效果。"
+    mechanism: "第二人称触发自我参照效应（self-referential processing）：与自我相关的信息获得优先加工与记忆优势，『你』让指令变成对话；第一人称复数激活集体身份（『我们这种人』绑定 social identity），但空泛的『我们』（无具体共同经验支撑）被感知为说教或绑架；第一人称单数以自我披露换取真实性知觉（个人经验不可辩驳性）。人称错位的典型：用『我们』替读者表态（『我们都知道』）触发逆反，用『你』控诉式指认（『你就是不自律』）触发防御。"
+    causal_chain: "人称选择 → 视角与自我相关处理激活 → 卷入/认同/真实性知觉改变 → 接受度与行动倾向变化"
+    variables:
+      inputs: [人称类型（你/我们/我）, 人称与内容的匹配（经验类配我、号召类配我们、指令类配你）]
+      moderators: ["读者与言者的关系距离", 文化中的礼貌传统（您/你敬语层级）", 称呼的越界感（熟不熟就说你）]
+      mediators: [自我参照加工, 集体身份激活, 真实性知觉]
+      outputs: [卷入度提升, 责任归属改变, 同盟感与认同, （错位时）逆反与防御]
+    evidence:
+      supporting: ["自我参照效应的记忆优势（社会认知经典）", "第二人称指令提升行为意向的应用研究（健康传播中的『你可以』句式研究）", "《Magic Words》对人称与语言形式影响的分析（S70）"]
+      conflicting: ["人称效应证据整体薄弱：多来自文本相关分析与小样本实验，缺乏大样本因果证据", "文化差异大：英语『you』的直接性在中文语境需经敬语系统重调", "错位人称的负面效应比正向效应证据更稳"]
+      replication: ["自我参照的记忆优势高度稳健；人称-说服链路的复制稀少", "属新兴应用方向，跨语言外推需谨慎"]
+      meta_analysis: ["无权威 meta-analysis；散见于语言心理学与传播学的系列研究"]
+    evidence_grade: C
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["人称与言者-受众真实关系匹配（不越界）", "人称策略与内容类型匹配（经验/号召/指令）", "共同身份有真实共同经验支撑（『我们』有据可依）"]
+    failure_conditions: ["空泛的『我们』（无共同史的集体身份绑架）", "控诉式第二人称（防御触发）", "正式场景使用过度熟稔的人称（礼貌违例）"]
+    common_misinterpretations: ["以为多用『你』总没错——控制式与指责式第二人称是防御触发器；『你』必须伴随选择权与尊重", "把『我们』当团队精神装饰：无共同经验的『我们』是伪同盟，读者能嗅出来"]
+    ethical_risks: ["利用人称制造伪亲密（假熟的『家人们』话术收割）", "用『我们』替读者表态实施群体绑架（『我们xxx人都知道』）"]
+    examples:
+      original_cases: ["《Magic Words》对人称语言的讨论（S70）", "《The Sense of Style》对视角与读者意识的写作指导（S69）"]
+      research_cases: ["自我参照效应的记忆实验", "健康信息人称框架的小规模实验研究"]
+      modern_cases: ["私域运营的人称策略（冷启动用您、熟客用你、社群用我们+具名）", "知识博主的『我』叙事（第一人称经验贴）与『你』指令（清单文）的体裁分工", "反例：客服自动回复的过度亲昵称呼引发反感"]
+    communication_implications: "体裁配人称：经验复盘用『我』（真实性的来源）、方法清单用『你』（对话感）、社群号召用『我们+具体共同经验』（同盟要有据）；称呼升级跟随关系进度（您→你），勿超前透支亲密。"
+    community_implications: "社群人称是关系温度计：运营者对新成员用『你』+具名，对老成员用『我们』+共同回忆（『我们上个月一起做完XX』）——人称随共同史推进；滥用『家人们』式伪亲密会稀释真正的关系表达。"
+    content_applications:
+      title: "标题人称匹配体裁：经验文用『我是如何…』，清单文用『你可以…』，共鸣文用『我们这些…』"
+      body: "指令句全部用第二人称+选择权（『你可以在今晚设置一个提醒，或者先收藏明天再说』）"
+      opening: "开场人称定调：『你可能也遇到过』（你+不确定性缓冲）优于『大家都知道』（伪我们）"
+      comments: "回复具名+人称对齐：对个体评论用你+名字，对群体话题用我们+具体事件"
+    platform_implications: "平台的个性化推送让人称数据化（称呼里插入用户名）——伪亲密的自动化风险；AI 生成内容的默认人称（混用、漂移）成为可感知的机器味来源，人称一致性正在成为『人味』的辨识信号。"
+    related_nodes: [verb_concreteness_action_language, rhetorical_question_engagement, self_presentation_impression_management, parasocial_relationship, social_identity_theory, authenticity_perception]
+    source_ids: [S70, S69]
+    provenance:
+      primary_sources: ['S70', 'S69']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: rhetorical_question_engagement
+    canonical_name_en: Rhetorical Question Engagement
+    canonical_name_zh: 设问与反问的参与效应
+    aliases: ["设问效应", "rhetorical questions", "疑问句说服"]
+    domain: language_rhetoric
+    definition: "以问句形式（设问：自问自答；反问：无需回答）呈现信息对加工深度与说服的影响：ELM 传统的研究表明设问的效果呈交互模式——高卷入受众对设问信息加工更深（与后续论据协同增强说服），低卷入时设问本身作为表面线索起作用。"
+    core_claim: "设问改变加工方式而非单向增强说服：它让高卷入者更认真地想（好论据被放大），让低卷入者留下浅印象（坏论据同样被放大）。"
+    mechanism: "问句触发隐式回答倾向：读者被诱导生成内部反应（自我参照+认知反应生成），从而改变 elaboration 水平——高动机读者在设问后投入更多论据审查（中心路径增强），低动机读者只处理问句本身并可能留下错误的肯定感。反问句（『难道不是吗？』）附带预设与压力，可能触发 reactance；设问句（『为什么会这样？』）打开信息缺口（curiosity gap）驱动继续阅读。"
+    causal_chain: "设问呈现 → 隐式回答与认知反应生成 → 加工深度改变（高卷入增强审查、低卷入浅处理） → 论据说服力被同向放大"
+    variables:
+      inputs: [问句类型（开放设问/引导反问/选择问）, 问句与后续论据的衔接, 论据本身的质量]
+      moderators: ["受众卷入度与动机", 论据质量（设问是放大器而非修正器）", 预设的争议性（反问的隐含立场）]
+      mediators: [认知反应生成, 加工深度改变, 信息缺口（curiosity）]
+      outputs: ["高卷入+强论据：说服增强；高卷入+弱论据：反噬加深", 低卷入：浅印象与错误肯定感, 继续阅读动机（设问的悬念功能）"]
+    evidence:
+      supporting: ["Petty, Cacioppo 与 Heesacker 的设问×卷入度实验：高卷入下设问增强论据加工（一手实验 EP 未建，标注记忆级）", "问句与 curiosity gap 的研究（信息缺口驱动注意，见 A1 域）", "标题问句对点击的影响（媒体与营销应用研究）"]
+      conflicting: ["设问效应高度依赖论据质量与卷入度交互，单向『问句更吸引人』的普及说法证据薄弱", "反问的对抗性在防御敏感受众中触发逆反", "标题党问句的过度使用造成期待违约（点进无答案）"]
+      replication: ["ELM 设问范式的基本交互可复制", "应用层（标题、开场）的证据多为观察与A/B测试，严格实验少"]
+      meta_analysis: ["无独立 meta-analysis；并入 ELM 与问句研究综述"]
+    evidence_grade: C
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Petty, Cacioppo & Heesacker 1981 设问×卷入实验为教科书级文献（一手 EP 未建，标注记忆级）；S34 EP 仅载 ELM 双路径框架，未收录该实验"
+      effect_size: "设问×卷入度交互方向（高卷入放大论据审查）；无一手效应量可引"
+      replication_status: "ELM 设问范式的基本交互见诸综述转述（记忆级），本库未核一手 EP"
+      context_dependency: "效应高度依赖论据质量与受众卷入度的交互"
+      downgrade_upgrade_reason: "2026-09 反向审计：核心实验证据未建 EP，S31（社会影响手册目录，未载设问）自 refs 移除，grade 维持 C 并如实标注记忆级，待建 Petty/Cacioppo/Heesacker 1981 EP 后升级"
+    boundary_conditions: ["问句后必须衔接真实答案或论据（设问必有后文）", "高卷入场景中论据质量过硬（放大器前提）", "问句预设与受众立场不过度冲突"]
+    failure_conditions: ["问句后无答案（期待违约，信任损耗）", "反问对防御敏感受众（逆反触发）", "低卷入场景中弱论据配设问（浅肯定被放大）"]
+    common_misinterpretations: ["把设问当万能开场——设问是加工放大器：放大好论据也放大坏论据，弱内容配设问死得更快", "把反问当强调——反问在书面语境中常被解读为对抗姿态"]
+    ethical_risks: ["以设问误导（只问不答、预设诱导式问句——『你还在用XX吗？』的贬损预设）", "标题党问句的期待违约"]
+    examples:
+      original_cases: ["Petty, Cacioppo 与 Heesacker 的设问实验（ELM 传统，S34 收录方向）", "《Thank You for Arguing》对修辞问句的分类讨论（S67）"]
+      research_cases: ["设问×论据质量×卷入度的交互实验", "信息缺口与标题问句的注意研究"]
+      modern_cases: ["标题的钩子问句（『为什么你的基金总亏？』→ 正文必须真给答案）", "直播话术的连环设问（『有没有人遇到这种情况？弹幕打1』）", "反例：『是什么让他们如此成功？』点进去全是软广（期待违约）"]
+    communication_implications: "设问的正确用法是『真问题的入口』：用受众真实困惑开场（你有没有过X困惑？），正文结构直接回应问题（先给答案再展开）；避免装饰性问句与诱导性反问——每次问而不答都在消耗信任账户。"
+    community_implications: "社群运营的提问是参与引擎：每周抛真问题（成员真实困境）而非反问式说教（『难道不该坚持吗？』）；结构化提问（选项+经验征集）比开放空问（大家聊聊？）产出高数倍。"
+    content_applications:
+      opening: "开场用受众真实困惑的原话式设问（『为什么明明没乱花钱，就是存不下钱？』），正文首段直接给答案梗概"
+      title: "标题问句必须在正文兑现答案（问句是承诺，不是诱饵）"
+      comments: "评论区用选择型问句（A还是B？）降低发言门槛，用开放问句（你的情况是？）收集素材"
+      body: "设问作为段落转轴（答案揭晓前的小停顿），控制每千字不超过2个，避免问句通胀"
+    platform_implications: "平台的互动组件（投票、提问贴纸）把设问产品化；算法偏好问句标题的点击但惩罚失望停留（完播/跳出反馈）——设问标题的存活率取决于兑现率，标题党问句会被数据自然淘汰。"
+    related_nodes: [elaboration_likelihood_model, central_route_processing, curiosity_gap, psychological_reactance, pronoun_perspective_effects, concreteness_in_language]
+    source_ids: [S34, S70]
+    provenance:
+      primary_sources: ['S34', 'S70']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: verb_concreteness_action_language
+    canonical_name_en: Action Language and Verb Concreteness
+    canonical_name_zh: 动作性语言与动词具体性
+    aliases: ["行动语言", "action verbs", "动词主导表达"]
+    domain: language_rhetoric
+    definition: "以具体动作动词（『打开、勾选、转账、复盘』）而非状态与抽象名词（『提升、优化、认知、体系』）组织语言对可执行感的影响：动作句让读者在阅读中模拟行为，缩短『知道』到『做』的距离。新兴应用方向，与具体性效应及实施意图研究相邻。"
+    core_claim: "动词驱动的句子让读者边读边『预演』行为，行为句密度高的内容有更高的行动转化——但证据处于新兴阶段。"
+    mechanism: "动作动词触发运动系统的具身模拟（embodied simulation）：阅读『拧开瓶盖』时运动皮层有可测量的激活，动作句因此比名词句更『可执行』；名词化表达（『实现对效率的优化』）把行为封装进抽象容器，模拟无从发生。行为句结构与 implementation intentions 同构（何时-何地-做什么），阅读即预演；但具身模拟对高阶抽象行为的模拟强度有限（模拟『复盘』弱于模拟『拿起笔写』），行为句需落到可感知动作。"
+    causal_chain: "动作动词暴露 → 运动系统具身模拟 → 行为预演 → 执行意向激活 → 实际行动转化提升"
+    variables:
+      inputs: [动词与名词的比例, 动词的可感知度（身体动作>抽象行为）, 行为句的三要素完整度（何时何地做什么）]
+      moderators: ["行为与读者的日常经验距离", 行为的复杂度（复杂行为需分解为动作链）", 受众的既有行为基础]
+      mediators: [具身模拟, 执行意向激活, 行为可行性知觉]
+      outputs: [行动意向提升, 行为转化提升, 内容的『可操作性』知觉]
+    evidence:
+      supporting: ["具身模拟的动作词加工研究（动作句的运动系统激活证据）", "implementation intentions 的行为句效应（何时何地做什么显著提升执行）", "《Magic Words》对语言形式与行为影响的分析（S70）"]
+      conflicting: ["具身模拟的可复制性存在争议（具身认知的部分发现复制不稳）", "动作句优势在决策型（需要思考）而非执行型任务中减弱", "行为转化证据多为应用观察而非受控实验", "S70 EP 载反例边界：身份语言（『你想成为什么样的人』）比行动语言更能激励坚持（饮食目标研究）——动词化并非总占优，须与目标类型匹配"]
+      replication: ["动作词的运动激活方向有支持也有复制波动", "与 implementation intentions 的结合应用证据较稳（后者本身是行为科学稳健发现）"]
+      meta_analysis: ["implementation intentions 的元整合支持具体行为句对执行的强效应（本节点最可靠的邻近证据）"]
+    evidence_grade: C
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["行为可分解为可感知动作（何时何地做什么）", "读者具备行为的基础能力（动作句不解决能力缺失）", "内容目标是行动转化（认知讨论类内容无需）"]
+    failure_conditions: ["抽象高层行为（『建立体系』）无法直接模拟——需先分解", "过度动作化损伤深度思考类内容（分析、论证需要名词概念承载）", "具身模拟的个体差异（运动经验相关）"]
+    common_misinterpretations: ["把动词化等同于口语化——动作句是精确的行为描述（『每晚睡前把手机放到客厅充电』），不是随便的白话", "以为动词越多越好：概念讨论需要名词承载，混合体裁按段配比"]
+    ethical_risks: ["动作句的自动化执行诱导（把高风险操作写成一键动作降低审慎）", "简化复杂决策为动作清单（掩盖风险提示义务）"]
+    examples:
+      original_cases: ["《Magic Words》对语言形式与行为的关系讨论（S70）", "《Tiny Habits》的行为句式设计（『在我X后，我就做Y』，S16 的实践框架）"]
+      research_cases: ["动作句的运动系统激活实验（具身认知方向）", "implementation intentions 的执行提升实验"]
+      modern_cases: ["健身 App 的动作指令（『起身、双脚与肩同宽、下蹲』）", "理财内容的行为句（『发薪日先转10%到单独账户』）", "反例：『赋能、抓手、闭环』式黑话（名词封装行为的反面教材）"]
+    communication_implications: "行动指引部分执行『动词审计』：把每个抽象名词还原为动作链（『优化资产配置』→『打开App、点持仓、卖掉单一基金超过30%的部分』）；概念分析部分保持名词精度——两种语言按内容目标分区使用。"
+    community_implications: "社群的行动号召（打卡、作业、活动报名）全部用动作句+最小第一步；群公告模板把『希望大家积极参与』替换为『今晚8点，点接龙，写下第一行』——社群活跃度的差距常在动词密度。"
+    content_applications:
+      body: "行动段执行动词审计：每条指令含动词+对象+触发条件（『每周日晚上，打开持仓页，看一眼单一资产是否超过30%』）"
+      cta: "CTA 用最小动作句（『现在点收藏，周末按清单过一遍』）而非状态句（『建议关注起来』）"
+      title: "标题植入动作词提升可执行预期：『每周只做一件事：检查这张表』"
+      comments: "打卡引导用行为句接龙（『我今晚做的第一步是……』），成员补全动作即完成自我承诺"
+    platform_implications: "平台的小程序挂载与一键组件把动作句产品化（读到即做到）；AI 生成内容趋向名词化综述腔，动作性语言（真实行为细节）是人类创作者的差异化信号——这也让动作句成为『人味』检测的代理特征之一。"
+    related_nodes: [concreteness_in_language, specificity_effect, implementation_intentions, self_efficacy, pronoun_perspective_effects, friction_reduction, hook_model]
+    source_ids: [S70, S69, S40, S16]
+    provenance:
+      primary_sources: ['S70', 'S69', 'S40', 'S16']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: politeness_face_theory
+    canonical_name_en: Politeness and Face Theory
+    canonical_name_zh: 面子与礼貌理论
+    aliases: ["面子理论", "politeness theory", "Brown & Levinson 礼貌原则", "消极面子/积极面子"]
+    domain: language_rhetoric
+    definition: "源自 Goffman 的『面子』概念并由 Brown 与 Levinson 系统化的理论：面子是公开自我形象的社会价值——积极面子（希望被认可与喜爱）与消极面子（希望行动不被强加）。语言选择（直接vs间接、命令vs请求）在不断做面子工作：威胁对方面子的言语行为（批评、请求、拒绝）需要礼貌策略缓和。"
+    core_claim: "一切沟通都在管理双方面子：修复面子的语言（给台阶、给选择、给认可）降低防御，面子攻击（当众纠正、命令式要求）触发逆反与关系损伤——即使内容正确。"
+    mechanism: "面子威胁度（face-threatening act 的重量）由三个社会变量加权：社会距离（亲疏）、相对权力（上下位）、文化中的强加度（该行为的冒犯系数）。威胁越大，需要的缓和策略越多：消极礼貌（给选择、道歉、模糊限制语『可能、也许』）保护行动自由，积极礼貌（认可、共同点、玩笑）满足被喜爱需求。营销与社群语境中，硬广（强加）、当众纠错（面子攻击）、催单（权力越位）都是高威胁行为——它们的失败常不在内容而在面子账。"
+    causal_chain: "言语行为 → 面子威胁评估（距离×权力×强加度） → 礼貌策略（缓和/直接） → 面子结果（保全/受损） → 防御或合作"
+    variables:
+      inputs: ["言语行为的面子威胁度", 双方社会距离与权力关系", 公开性（当众vs私下）]
+      moderators: ["文化面子规范差异（集体主义语境面子权重更高）", 关系历史与信任存量", 场景正式度"]
+      mediators: [面子威胁知觉, 自我形象防御动机]
+      outputs: ["合作或防御", 关系资产增减", 信息接受度（内容正确但面子受损仍被拒绝）", 社群中的公开冲突与潜水"]
+    evidence:
+      supporting: ["Brown 与 Levinson 的礼貌理论及跨文化验证研究（语用学经典传统，经典文献，未建包）", "Goffman 的前台/后台与印象管理框架（S24，拟剧理论）", "服务补救与危机沟通研究：道歉与给台阶对面子-信任的修复效应"]
+      conflicting: ["理论的普适性受批评：不同文化对『面子』的构成差异大（自主性面子vs关系性面子）", "过度礼貌在亲密关系中反而制造距离（策略被识破）", "线上语境的面子规则仍在演化（公开纠正的规范变化）"]
+      replication: ["核心区分（积极/消极面子与缓和策略）在语用学研究中广泛沿用", "跨文化外推需按本地面子规范校准"]
+      meta_analysis: ["无统一 meta-analysis；以语用学与应用语言学综述为主"]
+    evidence_grade: B
+    boundary_conditions: ["威胁行为的面子账与关系存量匹配（熟人直说 vs 陌生人缓和）", "面子策略与真实意图一致（礼貌不等于操纵）", "公开性被恰当管理（敏感反馈私下化）"]
+    failure_conditions: ["过度礼貌（绕弯到对方不知所云）", "策略被识破（礼貌被感知为套路）", "面子攻击已发生后仅靠语言补救（需要行为补偿）"]
+    common_misinterpretations: ["把礼貌当客套废话——面子工作是信息能否被接受的管道工程：同样一句纠正，加不给台阶决定对方是收下还是反击", "以为面子只在中国文化重要——消极面子（选择自由）与 reactance 是同源机制，跨文化通用"]
+    ethical_risks: ["利用面子压力实施公开处刑（挂人、当众羞辱式批评）", "以礼貌包装操纵（道德绑架式请求）", "利用他人怕丢面子的心理压制异议（谁质疑谁丢面子）"]
+    examples:
+      original_cases: ["Goffman 对前台/后台与印象管理的分析（S24）", "Brown 与 Levinson 的礼貌理论（语用学经典传统，经典文献，未建包）"]
+      research_cases: ["面子威胁度与礼貌策略的语用实验", "服务失败的道歉-补偿研究（面子修复与信任恢复）", "线上社群冲突中的面子动力学观察研究"]
+      modern_cases: ["社群管理的私聊先行原则（当众点名是面子攻击）", "客服话术的台阶设计（『可能是我们没说清楚』）", "知识社群的纠错礼仪（先肯定后商榷、私下更正公开致谢）", "直播间的催单面子压力（被识破后反噬）"]
+    communication_implications: "批评与纠错遵循面子三律：私下化（公开纠错给双方都留疤）、给台阶（『很多人都会』的普遍化归因）、给选择（『你可以试试X，也可以按你的来』）；请求而非命令的句式降低强加感——内容说服同样要给读者留『不同意也没关系』的出口。"
+    community_implications: "社群治理的核心语言技术就是面子管理：警告走私信、公开表彰走大群、纠错用『共识引用』（引用群规而非指责个人）；当众处理违规是社群冲突的头号放大器——程序正义（先私下、再公示）保全面子也保住规则权威。"
+    content_applications:
+      title: "标题避免指责式框架（『你还在犯的错』），用陪伴式（『我们都踩过的坑』）——面子安全的共鸣更利于传播"
+      body: "对读者既有做法的批评执行三明治：先认可合理性（当时那么做情有可原）→ 再给新信息 → 最后给选择权"
+      comments: "对错误评论的纠正用补充而非否定（『这里再补充一个角度：……』），当众保面子私下真纠正"
+      cta: "CTA 去催促化：把『限时逼单』换成『随时欢迎』+真实理由（本期名额的确有限），强加感与真实信息兼顾"
+    platform_implications: "平台的公开互动结构（评论、弹幕、引用）天然放大面子事件——公开纠正与被公开纠正都留档可查；平台的私信组件、匿名反馈与评论折叠设计是面子管理的制度化工具，创作者的评论区礼仪成为人设资产的一部分。"
+    related_nodes: [self_presentation_impression_management, psychological_reactance, normative_influence, community_governance, moderation_governance, ethos_pathos_logos, reciprocity_norm]
+    source_ids: [S24, S67, S82]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Heinrichs 2007《Thank You for Arguing》（S67，修辞工具清单：给台阶/concession/backfire）+ Goffman 1959（S24，前台/后台与印象管理）+ Goffman face-work（1955/1967）与 Brown & Levinson 1987 礼貌理论（经典文献，未建包）"
+      effect_size: "面子威胁度由距离×权力×强加度加权；缓和策略降低防御（语用学传统）"
+      replication_status: "核心区分（积极/消极面子与缓和策略）在语用学研究中广泛沿用；跨文化需校准"
+      context_dependency: "面子策略与关系存量匹配（熟人直说 vs 陌生人缓和）；公开性被恰当管理（敏感反馈私下化）"
+      downgrade_upgrade_reason: "2026-09 实取 S67 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S24]
+      supporting_evidence: [S67, S82]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"

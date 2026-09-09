@@ -1,0 +1,54 @@
+# Conflicts Index — 理论冲突与张力登记索引
+# 说明：本文件是本库已识别的理论冲突/张力的索引。每条登记一个 node_a vs node_b 的冲突，
+#       冲突类型限定：context（情境边界）| sample（样本差异）| methodology（方法学）| historical（时代演变）| definition（定义分歧）| effect_size（效应量分歧）。
+#       resolution 采用"在 X 情境更支持 A；在 Y 情境更支持 B"的情境化裁决格式。
+#       不得编造具体统计量；效应方向与幅度只做定性描述。
+#       source_ids 沿用 knowledge/sources/source_registry.yaml 的两位数编号（S01-S100）。
+
+- conflict_id: conflict_loss_aversion_vs_gain_sensitivity
+  node_a: loss_aversion
+  node_b: gain_loss_framing
+  conflict_type: effect_size
+  summary: "前景理论传统（Kahneman & Tversky 1979 起）将'损失比等量收益被赋予更大权重'当作选择行为的普遍特征；Gal & Rucker 等学者系统批评其普遍性，指出大量'损失厌恶'证据实际由参照点操作与框架效应等次生机制产生，且原始文献的效应幅度存在发表偏差与明显个体差异，固定的'损失:收益'权重比率缺乏稳健支持。"
+  resolution: "在原始选择范式（有明确参照点的赌局与交换任务）中更支持 A——损失厌恶作为现象存在；在外推到营销文案的通用规则（'任何损失表述都必然更有效'）时更支持 B——应改写为'框架不对称依情境出现'，幅度不可预设，须逐情境检验参照点是否真的被激活。"
+  source_ids: [S01, S11, S12]
+
+- conflict_id: conflict_choice_overload_vs_information_overload
+  node_a: choice_overload
+  node_b: information_overload
+  conflict_type: effect_size
+  summary: "公共叙事常把'选项越多越难选'当作与信息过载同级的稳健现象；但选择过载的元分析传统（Scheibehenne 等 2010 报告平均效应接近零；Chernev 等 2015 的再分析确认效应仅在有明确调节变量时显著）表明其平均效应极小。与之相对，工作记忆容量限制意义上的信息过载证据稳健得多——两者在民间话语中被混为一谈，证据地位却不对等。"
+  resolution: "在用户缺乏清晰偏好、选项集难以互相比较、专业门槛高或存在决策目标模糊的情境中更支持 A——选择过载真实发生；在高意图、目标明确、选项可结构化比较的检索/比较任务中更支持 B——选项丰富不构成伤害，甚至提高匹配质量。设计上应先调节选项集的可比性，再谈缩减选项。"
+  source_ids: [S71, S72]
+
+- conflict_id: conflict_filter_bubble_echo_chambers_vs_homophily
+  node_a: filter_bubble_echo_chambers
+  node_b: homophily
+  conflict_type: context
+  summary: "过滤气泡/回音室概念（Pariser 2011）声称算法个性化会系统性窄化信息暴露；后续大样本实证（含对社交平台暴露结构的自然实验与多国新闻暴露研究）给出混合证据：算法推荐呈现的暴露面常常比用户的自主选择更多样，回音室效应更多由人际同质性、自选择与用户主动回避驱动，且在不同平台、议题与人群间差异极大。"
+  resolution: "在人际转发链与强同质性社区（熟人社交、立场化社群、小组制社区）中更支持 A——窄化主要由同质性自选择驱动；在算法分发为主、用户意图模糊的被动消费场景中更支持 B——算法窄化常被高估，且算法有时增加暴露多样性。诊断回音室时必须先区分'算法窄化'与'自选择窄化'，治理手段才不会打错靶子。"
+  source_ids: [S93, S92, S100]
+
+- conflict_id: conflict_nudge_mechanism_vs_default_option_effect
+  node_a: nudge_mechanism
+  node_b: default_option_effect
+  conflict_type: methodology
+  summary: "Maier 等 2022 对 nudge 文献的系统再分析显示：控制发表偏差后，nudge 的平均效应大幅缩水，部分经典结论的幅度存疑；与此并存的是若干高调政策成功案例（器官捐献默认项、退休储蓄自动加入等）持续被引用为 nudge 有效的标志。'平均效应'与'标志性个案'之间的张力主要源于发表偏差、异质性与按类型分层的必要性。"
+  resolution: "把 nudge 当作普遍有效的行为工具箱、引用其平均效应时更支持 A 的修正版——平均效应被高估，应按证据等级 C 对待；具体到结构清晰的默认项设计（default option）等强子类，更支持 B——默认效应在多场景复现较好。实务上：逐个 nudge 类型评估证据，默认项可优先采用，其余类型须本地化试点验证。"
+  source_ids: [S11, S20]
+
+- conflict_id: conflict_conformity_asch_vs_social_proof
+  node_a: conformity_asch
+  node_b: social_proof
+  conflict_type: historical
+  summary: "Asch 线段判断实验报告了强从众效应，长期作为'人会屈从群体压力'的标志性证据；后续跨时代、跨文化的复制与元分析（如 Bond & Smith 1996 一线）显示效应量显著缩小，且随年代与文化和任务性质变异。与此同时，自然情境下描述性规范信息（social proof）的现场效应保持稳健——实验室符号的证据地位与田野机制的证据地位出现分化甚至反转。"
+  resolution: "在人工实验室的知觉判断任务、个体被试层面更支持 A 的修正版——从众存在但幅度小、受时代与文化强调节，Asch 原始数字不可直接引用；在真实选择场景中提供可信的'多数人怎么做'信息时更支持 B——描述性规范的现场效应稳健且可操作。实务上：用 social proof 做设计，但幅度预期来自田野数据，不用 Asch 数字，也不因实验室复制缩水而否定规范信息的田野价值。"
+  source_ids: [S21, S31, S32]
+
+- conflict_id: conflict_anecdote_statistics_vs_narrative_transportation
+  node_a: anecdote_vs_statistics
+  node_b: narrative_transportation
+  conflict_type: context
+  summary: "'个案压倒统计'（识别效应：单个生动案例对信念与行动的影响常超过大样本统计）与'叙事传输降低反驳'（被故事卷入的受众更少启动批判加工）是两条均获支持的说服路径，但方向相反：个案与叙事提高共情和行动意愿，却系统性扭曲概率判断与代表性；统计信息准确但加工门槛高、易被心理免疫与回避抵御。这是'有力 vs 准确'的结构性张力，不存在普适裁决。"
+  resolution: "当目标是促成理解与行动（教学、公益动员、品牌故事、入门科普）时更支持 B——叙事优先，并可用'数据嵌故事'（故事携带统计锚点）补足准确性；当目标是建立准确的概率与风险判断（健康、金融、政策沟通、风险提示）时更支持 A——统计为主、个案仅作入口，并显式标注个案的代表性限制，防止识别效应制造误判。"
+  source_ids: [S40, S63, S35]

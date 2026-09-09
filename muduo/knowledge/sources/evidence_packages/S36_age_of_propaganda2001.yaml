@@ -1,0 +1,25 @@
+# Evidence Package — S36 Pratkanis & Aronson 2001（Age of Propaganda）
+# 标准格式。access_level 如实标注。
+source_id: S36
+title: "Age of Propaganda: The Everyday Use and Abuse of Persuasion (Rev. ed.)"
+authors: "Anthony R. Pratkanis; Elliot Aronson"
+year: 2001
+journal: W. H. Freeman（专著；首版 1992）
+doi: "无 DOI（专著）"
+url: "https://m.winxuan.com/product/1202931141"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：中文全译目录（39 章八部分：宣传时代/日常劝导心理学/预劝导/传播者可信度/信息与传递/激发情感/信息失灵/还击宣传策略）+ 英文摘要（构建影响力四大策略）+ 学术引用（合理化动物/劝导技术分类）"
+research_question: "个人与大众媒体如何运用各种劝导技术影响人们？宣传的社会心理机制是什么？"
+core_claims:
+  - "构建影响力的四大策略：预劝导（设定舞台）/传播者可信度（真实与人造）/信息的构建与传递方式/激发情感（触动心灵说服头脑）"
+  - "人类是'合理化动物'：自诩理性，实为事后为行为辩护；劝导走外周/核心两种路径"
+  - "具体技术：有魔力的字眼/头脑中的画面/诱饵威力/伪事实心理学/生动性/重复/分心/得寸进尺（door-in-the-face）/单双面辩论/恐惧诱导/内疚/互惠/忠诚/身体力行/稀缺"
+  - "抵制策略：预先警示、了解劝导方法、监控自身情绪反应（第 37-38 章）"
+method: "社会心理学实验文献综合 + 宣传史案例（第三帝国/广告/政治竞选）"
+results: "（应用综合）宣传/劝导技术分类的权威参考（39 章系统化）"
+limitations: "实践导向综合（非新实验）；案例时代背景（2001 版）"
+boundary_conditions: "适用于理解劝说技术机制与防御；各技术证据强度需按具体研究评估"
+relevant_nodes: [fear_appeals_eppm, door_in_the_face, pre_suasion_attention_channeling, argumentation_structure, inoculation_theory, pseudo_authority]
+notes: "宣传/劝导技术分类来源（book 级）。四大策略/39 章为出版社公开目录实取，未编造。"
+last_verified: "2026-09"

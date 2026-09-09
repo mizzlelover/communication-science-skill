@@ -1,0 +1,24 @@
+# Evidence Package — S153 Kahneman, Fredrickson, Schreiber & Redelmeier 1993（When More Pain Is Preferred to Less: Adding a Better End）
+# 标准格式。access_level 如实标注。
+source_id: S153
+title: "When More Pain Is Preferred to Less: Adding a Better End"
+authors: "Daniel Kahneman; Barbara L. Fredrickson; Charles A. Schreiber; Donald A. Redelmeier"
+year: 1993
+journal: "Psychological Science 4(6): 401-405"
+doi: "10.1111/j.1467-9280.1993.tb00589.x"
+url: "https://www.behavioraleconomics.com/resources/mini-encyclopedia-of-be/peak-end-rule/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "渠道1：Behavioral Economics 迷你百科《Peak-end rule》词条（实抓）确认引文与核心发现（人们宁愿重复「更痛但结尾更好」的经历；remembered utility 与 total utility 的分离）；渠道2：renascence.io《The Peak-End Rule》（实抓）对实验程序的转述：被试将手浸入极冷水中 60 秒，再重复一次但结尾追加 30 秒稍温（仍不适）的水，被试一致偏好更长的那次试验；渠道3：PubMed 综述（PMID 39018885，实抓）参考文献确认 DOI 10.1111/j.1467-9280.1993.tb00589.x 与卷期；渠道4：豆瓣读书笔记（实抓）对具体参数（14°C 60s vs 14°C 60s + 15°C 30s）的转述"
+research_question: "对一段痛苦经历的回顾性评价由什么决定——总体验（时长加权）还是峰值与结尾？在一段更长的痛苦末尾附加一段「稍好的结尾」，是否会使其被评价为更可取？"
+core_claims:
+  - "对一段经历的事后评价不由总体验（时长加权平均）决定，而主要由峰值强度与结束时刻决定（duration neglect 的源头证据之一）"
+  - "冷加压实验中，被试系统性地偏好「更长的痛苦（60s 冷水 + 30s 稍温水）」胜过「较短的痛苦（60s 冷水）」——因为前者的结尾不那么痛"
+  - "更长的痛苦可以被更好的结尾「重写」为更可取的记忆：体验自我（逐时感受）与记忆自我（回顾评价）分离"
+method: "冷加压（冰水）实验：被试两次将手臂浸入冷水——一次 60s（约 14°C），另一次 60s（约 14°C）+ 额外 30s 稍温（约 15°C）的结尾；随后询问被试愿意重复哪一次体验"
+results: "被试一致偏好（并愿意重复）总时长更长但结尾较缓的那次试验，尽管它包含更多总痛苦——回顾性评价由结尾（与峰值）主导而非总时长"
+limitations: "官方摘要/正文未直接抓取（Wiley 付费墙），实验参数（60s+30s、14°C/15°C）经两独立二手来源交叉一致、DOI 经 PubMed 综述核实；经典峰终证据链还包括 Fredrickson & Kahneman 1993 与 Redelmeier & Kahneman 1996（结肠镜研究），本包仅针对本 1993 冷压论文；效应受情节边界等条件调制"
+boundary_conditions: "适用于有明确情节边界的经历（一次服务/活动/剧情/疗程）；对连续弥散的慢性体验适用性弱；应用上：结尾与峰值设计优先，中间均匀用力性价比最低，但结尾彩蛋不能掩盖全程糟糕（被识破则反噬信任）"
+relevant_nodes: [peak_end_rule]
+notes: "峰终定律的奠基实验论文（paper 级）。冷压实验参数经 renascence.io 与豆瓣读书笔记两独立来源交叉一致，DOI 经 PubMed 综述核实，未编造。注意：著名的结肠镜研究为 Redelmeier & Kahneman 1996，非本篇。支撑 memory.yaml peak_end_rule。"
+last_verified: "2026-09"

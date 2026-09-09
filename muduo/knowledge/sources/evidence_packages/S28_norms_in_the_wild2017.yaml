@@ -1,0 +1,27 @@
+# Evidence Package — S28 Bicchieri 2017（Norms in the Wild: How to Diagnose, Measure, and Change Social Norms）
+# 标准格式。access_level 如实标注。
+source_id: S28
+title: "Norms in the Wild: How to Diagnose, Measure, and Change Social Norms"
+authors: "Cristina Bicchieri"
+year: 2017
+journal: Oxford University Press（专著；2016-12 出版，2017 平装）
+doi: "无 DOI（专著）"
+url: "https://www.amazon.com/dp/0190622040"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：Amazon 出版社简介与书评（条件性从众偏好/经验-规范预期/自动协调与聚焦点/UNICEF 应用）+ Guala 学术书评全文（semanticscholar PDF：五章结构/1993 与 2006 定义/面向实践者）+ 豆瓣书评『规范在野』（依存性行为/习俗之别/明智的无赖与搭便车/变革工具）+ 豆瓣书目页（目录与内容简介）"
+research_question: "社会规范是什么、如何测量、如何通过操纵预期来改变？"
+core_claims:
+  - "社会规范=条件性从众偏好：个体遵从规范仅当（a）相信多数人遵从（经验预期 empirical expectations，对事实的判断）且（b）相信他人期待自己遵从（规范预期 normative expectations，价值判断）；规范行为是依存性行为，许多选择在无 deliberation 下由聚焦点（cues）自动触发"
+  - "规范区别于习俗/惯例：习俗能满足人们的需要、不依赖社会预期也能维持；规范必须依赖经验与规范双重预期"
+  - "规范变革的核心是改变预期而非直接改变偏好：先减弱经验预期（让大家相信越来越少人遵从）比直接动摇规范预期更有效；规范消亡需先瓦解经验预期"
+  - "变革工具（第四章）：法律手段仅在制度受信任且变化温和时有效；经济激励易腐蚀行为；信息运动、媒体叙事（进步肥皂剧）与公开讨论可带来可测量改变；『明智的无赖』（聪明地破坏规则又不被发现、维系名声者）与搭便车者阻碍集体变革"
+  - "趋势引领者（trendsetters/自主的『第一行动者』）：带头公开违反或要求改变既定规范（可能是坏的但人人遵从的规范），是规范变革的关键启动者"
+  - "背景：与 UNICEF 及 NGO 合作治理女性割礼、童婚、露天排便、母乳喂养禁令等对传统政策干预高度顽固的实践"
+method: "理论与实操手册（博弈论理论+UNICEF 田野应用；五章结构：诊断规范/测量规范（共识与从众）/规范变革/变革工具/趋势引领者）"
+results: "（理论+实践手册）提供规范诊断-测量-变革的可操作框架；为理解为何同样的大规模干预在某些情境有效、在另一些失效提供解释"
+limitations: "作者明确不与替代理论框架辩论，面向实践者而非研究者；正文部分获取（学术书评全文+出版社简介+中文详评）；规范性预期未必反映实践或价值上的审慎，可能只是与周边价值信念强相关"
+boundary_conditions: "规范变革需同步性（population-wide simultaneous change）与公共性；指标性/负面实践依赖经验与规范双重预期；规范信息须真实（虚假规范易被识破）"
+relevant_nodes: [norm_perception_accuracy, norm_messaging_effects, descriptive_injunctive_norms, norm_enforcement_reputation]
+notes: "S28 为 core_30 正规登记。2026-09-09 同书重复登记 S123（B3 批次，Guala 书评全文）已并入本包（MERGED_INTO，见 S123 墓碑）——本包 content_obtained 为其超集。norm 诊断框架直接支撑规范误知觉与规范信息传达节点。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

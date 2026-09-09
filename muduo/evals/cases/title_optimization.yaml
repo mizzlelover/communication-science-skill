@@ -1,0 +1,548 @@
+# ============================================================
+# 标题优化评测集（Title Optimization Benchmark）
+# 共 20 案例：TIT-001 .. TIT-020
+# 平台覆盖：小红书 x4 / 公众号 x4 / 抖音口播 x3 / 知乎 x3 / B站 x3 / 朋友圈 x3
+# 特殊能力测试：
+#   - "原标题不错不该大改"：TIT-014 / TIT-015 / TIT-016
+#   - 低信息量输入（应先追问）：TIT-017 / TIT-018
+# 失败模式覆盖：抽象名词堆砌 / 无信息差 / 无身份信号 / 承诺断裂 /
+#   过度标题党 / 关键词缺失 / 情绪过载 / 数字滥用 / 伪权威 / AI 腔模板化
+# 所有数据均为演示数据；标题与账号均为虚构，不指向真实品牌。
+# ============================================================
+
+# ---------- 小红书 ----------
+
+- case_id: TIT-001
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户是职场成长类博主，写了一篇克服拖延的方法笔记。原标题："关于个人成长与认知能力
+    提升的一些思考"。正文摘要：分享她亲测有效的 3 个具体方法（25 分钟启动法、当日三件事
+    清单、每周复盘模板），约 800 字，含 1 张复盘模板截图。平台：小红书，目标：点击与收藏。
+    受众：22-30 岁毕业生与职场新人。
+  context: {platform: xiaohongshu, goal: click, audience: "22-30岁职场新人"}
+  expected_behavior: >-
+    1. 诊断出标题由抽象名词堆砌构成（"成长/提升/认知/思考"均无具体场景），处理流畅性
+    （processing_fluency）低，读者 1 秒内无法构建画面；
+    2. 指出正文有 3 个具体方法未被标题利用，违背具体性效应（specificity_effect）；
+    3. 给出改写方向：具体方法/结果 + 身份场景词 + 搜索关键词（如"拖延"）；
+    4. 给出边界：数字只是具体性的一种实现，不机械堆数字，改写须与正文兑现一致。
+  key_mechanisms: [processing_fluency, specificity_effect, concreteness_in_language]
+  material_ref: "XHS-B-LOW-005"
+  material_note: "对应真实内容样本：小红书低互动干货笔记标题——'关于Ai大营销模型一定要了解的底层架构'（'关于……的……'抽象结构、概念密集无钩子，收藏143>赞98，coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案抽象名词堆砌标题同型"
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns:
+    - "只说'标题不够吸引人'而不做机制归因"
+    - "机械套用'加数字'模板而不诊断"
+    - "给出正文无法兑现的新标题"
+
+- case_id: TIT-002
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户是理财科普博主，写了一篇给攒下第一笔存款的年轻人看的入门笔记。原标题：
+    "理财入门指南"。正文摘要：讲解 25-30 岁上班族拿到第一个 10 万存款时的处理顺序
+    （应急金→保障→低风险理财→指数定投），含每步的收益率与风险对比表（演示数据）。
+    平台：小红书，目标：收藏。受众：25-30 岁刚有存款的都市白领。
+  context: {platform: xiaohongshu, goal: save, audience: "25-30岁有存款的都市白领"}
+  expected_behavior: >-
+    1. 诊断"入门"是泛化词，无身份信号：目标人群 1 秒内认不出"与我有关"
+    （social_identity_theory / identity_signaling）；
+    2. 诊断无信息差："指南"是宣告式框架词，未指出"不知道什么"（curiosity_gap，证据等级 B）；
+    3. 指出"理财"是竞争性大词，应嵌入长尾搜索关键词（如"第一个10万/存款怎么理"）；
+    4. 给出条件化身份词建议：身份词应匹配目标人群的自我归类（如"月光族/存款5w+"
+    一类该人群语言），而非作者视角词汇。
+  key_mechanisms: [identity_signaling, social_identity_theory, curiosity_gap, answer_engine_visibility]
+  material_ref: "XHS-B-FAILED-001"
+  material_note: "对应真实内容样本：小红书失败笔记标题——'AI时代，重新理解PC营销价值'无信息缺口、无人群、无数字利益点，点赞2收藏0（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'理财入门指南'泛化词无身份信号同型"
+  scoring_focus: [diagnostic_quality, platform_fit, actionability]
+  anti_patterns:
+    - "只说'标题太宽泛'而不给机制归因"
+    - "用震惊体改写来补信息差"
+
+- case_id: TIT-007
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户是美食博主，发了一篇一人食笔记。原标题："这就是夏天的味道！！"。正文摘要：
+    6 道适合一人食的凉拌菜做法，每道标注食材成本（2-8 元）与用时（合计 30 分钟内做完），
+    文末附一键可抄的采购清单；封面是 9 宫格成品图。平台：小红书，目标：搜索流量与收藏。
+    受众：22-30 岁独居人群。
+  context: {platform: xiaohongshu, goal: save, audience: "22-30岁独居人群"}
+  expected_behavior: >-
+    1. 诊断标题完全缺失搜索关键词："凉拌菜/一人食/做法"等词一个未出现，
+    搜索场景无法命中（answer_engine_visibility）；
+    2. 指出小红书封面大字与笔记标题的职能分工：封面负责情绪，标题负责搜索，
+    情绪词应上封面而非标题；
+    3. 指出正文"30 分钟内/采购清单"是高收藏价值点，标题应具体传达
+    （specificity_effect）；
+    4. 给出边界：原标题情绪价值本身不差，问题是职能错配——建议保留原句作封面文案，
+    标题换为含关键词的版本，而非宣告原标题"全错"。
+  key_mechanisms: [answer_engine_visibility, specificity_effect, gestalt_grouping]
+  material_ref: "XHS-A-MEDIUM-002"
+  material_note: "对应真实内容样本：小红书美食笔记标题正面对照——'不开玩笑，这样炖的牛肉真的很好吃‼️'具体菜品承诺+搜索关键词前置（'炖牛肉/红烧牛肉'是用户会搜的词，Apifox 接口文档真实响应示例，见 content_corpus survivorship_note），与本案标题完全缺失'凉拌菜/一人食/做法'搜索词形成对照"
+  scoring_focus: [platform_fit, diagnostic_quality, actionability]
+  anti_patterns:
+    - "宣告原标题毫无价值并整体重写"
+    - "忽视小红书封面与标题的分工机制"
+    - "关键词堆砌成串破坏可读性"
+
+- case_id: TIT-011
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户是情感博主，写了一篇亲密关系红缐科普笔记。原标题："姐妹们快收藏！男朋友有这
+    行为立刻分手！！不信你试试！！"。正文摘要：分析 3 种危险信号行为（冷战式回避、
+    掌控财务与社交、贬低式沟通），建议部分实际写的是"先观察频率与场景，再设定边界
+    沟通"，并提醒个体差异。平台：小红书，目标：互动与关注。受众：20-28 岁恋爱中的女性。
+  context: {platform: xiaohongshu, goal: engagement, audience: "20-28岁恋爱中的女性"}
+  expected_behavior: >-
+    1. 诊断"立刻分手"与正文"先观察再沟通"承诺断裂：标题承诺结论，正文是审慎建议，
+    会引发评论区反噬（负面情绪型评论触发）；
+    2. 指出"姐妹们快收藏"在小红书属高重复度模板话术，无差异化信息；
+    3. 改写建议应保留情绪张力但与建议强度匹配：用具体行为+场景（如冷战持续天数/
+    具体贬低话术）承载唤醒（emotional_arousal），而非替读者做重大决定；
+    4. 给出伦理与平台边界：替他人做"分手决定"式表达有价值观争议与举报风险。
+  key_mechanisms: [emotional_arousal, trust_calibration, discrete_emotion_sharing_profiles]
+  material_ref: "XHS-B-FAILED-003"
+  material_note: "对应真实内容样本：小红书承诺-交付断裂失败笔记——标题有轻钩子但正文无内容可得（'肯德基的AIGC尝试，有点像万圣节广告～'正文仅3个标签无图片无文案，点赞3，coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'立刻分手'标题承诺与正文审慎建议断裂同型"
+  scoring_focus: [diagnostic_quality, ethical_safety, platform_fit]
+  anti_patterns:
+    - "认定'立刻分手'式标题互动高而予以保留"
+    - "忽视标题与正文建议强度的矛盾"
+
+# ---------- 公众号 ----------
+
+- case_id: TIT-003
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户经营一个面向企业主的观察类公众号，写了一篇组织内沟通的论证文。原标题：
+    "为什么沟通对企业很重要"。正文摘要：约 3000 字，论证内部沟通质量决定跨部门协作
+    成本，引用 2 个企业案例与 1 项组织行为学研究，结论是沟通是隐性成本大头。
+    平台：公众号（标题即封面，决定打开率），目标：打开。受众：28-45 岁中小企业主与
+    市场负责人。
+  context: {platform: wechat_account, goal: open, audience: "28-45岁中小企业主与市场负责人"}
+  expected_behavior: >-
+    1. 诊断无信息差："为什么X很重要"是结论宣告式结构，读者可完全预测文章走向
+    （X 很重要），打开无预期收益（curiosity_gap，B 级）；
+    2. 指出公众号平台特性：标题即封面，全部注意力预算在标题上，信息差必须由标题
+    独立承载；
+    3. 给出"具体未知点"改写方向：具体代价（跨部门决策损耗的场景/数字）或反直觉
+    发现，同时收窄"企业沟通"的泛化场景词；
+    4. 边界：改写必须能被正文兑现，不得用与论证强度不符的夸张承诺。
+  key_mechanisms: [curiosity_gap, specificity_effect, framing_effects]
+  material_ref: "XHS-A-MEDIUM-004"
+  material_note: "对应真实内容样本：小红书中等互动情绪视频——'靠近我就是晴天'标题即全部信息、无信息缺口（curiosity_gap 缺失，Apifox 接口文档真实响应示例，约1,207赞，见 content_corpus survivorship_note），与本案'为什么沟通对企业很重要'结论宣告式无信息差同型"
+  scoring_focus: [diagnostic_quality, platform_fit, actionability]
+  anti_patterns:
+    - "用'震惊/揭秘'词汇强行制造唤醒"
+    - "只说'标题太正式太无聊'"
+
+- case_id: TIT-008
+  category: title_optimization
+  difficulty: hard
+  input: >-
+    用户是教育类公众号运营。原标题："家长必看：这 9 个学区房坑会毁掉孩子一生"。
+    数据（演示数据）：打开率 8.2%（账号历史均值 5.5%），平均阅读时长 47 秒（历史均值
+    2 分 10 秒），读完率 11%，取关率升至平日 3 倍。正文摘要：实际内容是对学区政策
+    趋势的客观分析，指出多数城市学区价值在弱化，全文既没有 9 个坑，也没有"毁掉一生"
+    论述。平台：公众号，目标：长期信任与关注。受众：3-12 岁孩子家长。
+  context: {platform: wechat_account, goal: follow, audience: "3-12岁孩子的家长"}
+  expected_behavior: >-
+    1. 先做漏斗定位：打开率高+停留极低+取关飙升，指向期望失配（标题-内容一致性断裂）
+    为首因，明确"只改标题"不能解决问题；
+    2. 机制诊断：标题承诺"9 个坑/毁掉一生"与正文政策分析不符，承诺契约破裂
+    （trust_calibration）；恐惧框架制造高唤醒但正文无对应威胁-效能配比
+    （fear_appeals_eppm），认知失调导致取关（cognitive_dissonance）；
+    3. 给出双向修复方案：或补足正文兑现承诺，或降级标题到正文可兑现的真实信息差，
+    并给出降级后的候选方向；
+    4. 边界声明：高打开率是短期收益，取关是长期信任成本；本案目标是 Trust/Follow
+    而非 Reach，评价基准不同。
+  key_mechanisms: [trust_calibration, cognitive_dissonance, fear_appeals_eppm]
+  material_ref: "CASE-FAL-007"
+  material_note: "对应真实案例：广州增城标题党团伙——惊悚标题（《万分紧急！广州明日一个不留！》《广州危急！明日戒严封城》）骗取点击、承诺与事实系统性差额、诱发抢购等社会行为后公司被查封（新华社/羊城晚报等报道，见 cases.yaml CASE-FAL-007 original_material），与本案恐惧框架标题承诺断裂同型"
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns:
+    - "只优化标题而不处理标题-内容断裂"
+    - "引用高打开率证明标题成功而无视停留数据"
+    - "承诺具体流量提升数字"
+
+- case_id: TIT-012
+  category: title_optimization
+  difficulty: hard
+  input: >-
+    用户写了一篇职场睡眠与效率的文章。原标题："哈佛研究证明：晚上 9 点后睡觉的人
+    不是笨，而是更容易成功"。正文摘要：引用了一项睡眠时长与认知表现的研究（作者自述
+    并非哈佛研究，样本约 1000 人，观察性设计），加上作者评论与个人经历。平台：公众号，
+    目标：长期信任与关注。受众：25-40 岁都市白领。
+  context: {platform: wechat_account, goal: follow, audience: "25-40岁都市白领"}
+  expected_behavior: >-
+    1. 识别伪权威（pseudo_authority）："哈佛研究证明"与研究实际来源不符，属归属
+    错误；Skill 应主动提示核实义务与被举报风险，而不是当作修辞接受；
+    2. 诊断权衡：反差结构本身有信息差价值，但权威错挂一旦被识破，信任崩塌代价远大于
+    打开收益（source_credibility_model；authority_influence 被滥用）；
+    3. 改写方向：保留反直觉信息差，将归属降级为准确表述（"有研究发现"+样本规模/
+    设计局限），标题强度与研究证据等级匹配；
+    4. 边界：如无法核实来源，必须移除权威归属；明确"挂权威名头"属反模式而非技巧。
+  key_mechanisms: [pseudo_authority, authority_influence, source_credibility_model]
+  material_ref: "CASE-FAL-019"
+  material_note: "对应真实案例：张悟本伪权威崩塌——虚构'四代中医世家''卫生部首批高级营养专家'等头衔，被卫生部及院校公开否认后连锁崩塌、图书下架节目停播（百度百科词条/民生周刊报道，见 cases.yaml CASE-FAL-019 original_material），与本案'哈佛研究证明'错挂权威同型"
+  scoring_focus: [ethical_safety, theory_accuracy, overclaiming]
+  anti_patterns:
+    - "把'哈佛'错挂当作氛围修辞予以接受"
+    - "不提示来源核实义务"
+    - "为打开率保留不实归属"
+
+- case_id: TIT-016
+  category: title_optimization
+  difficulty: hard
+  input: >-
+    用户是公众号亲情叙事专栏作者。原标题："我妈学会了发语音，然后不打电话了"。
+    数据（演示数据）：打开率 9.8%（账号均值 6%），分享率 4.1%（账号均值 2.3%），
+    评论区大量读者讲自己的父母。正文是约 2500 字叙事散文：父母学会智能手机后的
+    沟通方式变化，结尾是代际关系的自省。用户请求："给标题加个数字吧，比如'我妈教会
+    我的 5 个沟通细节'，显得更像爆款。"
+  context: {platform: wechat_account, goal: share, audience: "25-45岁与父母异地的都市人"}
+  expected_behavior: >-
+    1. 正确行为是拒绝大改并说明理由：原标题是反直觉微叙事结构（"学会了发语音→不打电话"
+    行为反差），好奇心缺口（curiosity_gap）完整，且现有数据（9.8% vs 6%）已验证
+    有效性——判断依据是数据而非个人口味；
+    2. 条件化使用机制：数字提供具体性（specificity_effect，B 级），但在身份共鸣型/
+    故事型标题中，数字结构会切断情绪连续性，削弱"学会发语音→不打电话"的叙事张力
+    （emotional_arousal / identity_signaling 是本标题的主导机制）；
+    3. 指出用户示例"5 个沟通细节"把故事型改为清单型，与散文正文结构错配，
+    属于新的期望失配风险；
+    4. 边界：若正文确为清单结构，数字策略成立——必须给出机制的条件边界，
+    而不是"数字万能/数字无用"的单边断言。
+  key_mechanisms: [curiosity_gap, specificity_effect, emotional_arousal]
+  material_ref: "XHS-A-HIGH-005"
+  material_note: "对应真实内容样本：小红书反预期瞬间爆款——'考完后的弟弟！'生活瞬间强情绪+戏剧性反差（'考完'与弟弟状态对比落差，schema_violation，Apify 抓取示例输出，1万+赞，见 content_corpus survivorship_note），与本案'学会了发语音→不打电话'行为反差微叙事同型"
+  scoring_focus: [theory_accuracy, diagnostic_quality, overclaiming]
+  anti_patterns:
+    - "顺从用户要求改写成'5个细节'清单式标题"
+    - "简单否定数字而不给机制条件边界"
+    - "无视已验证数据而凭偏好重写"
+
+# ---------- 抖音口播 ----------
+
+- case_id: TIT-004
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户是金融科普博主，准备一条口播视频。开场文案原文："这个消息可能会下架！99%的
+    人不知道的真相！看完能帮你省下几十万！"实际内容是讲解银行定期存款自动转存的
+    3 个隐藏条款（转存利率按挂牌价、分档计息、提前支取规则），并给出核对步骤。
+    平台：抖音，目标：完播与关注。受众：30-45 岁普通存款家庭。
+  context: {platform: douyin, goal: watch_through, audience: "30-45岁普通存款家庭"}
+  expected_behavior: >-
+    1. 诊断承诺-价值严重错配："下架/省几十万"与"3 个转存条款"的真实信息价值不匹配，
+    短期点击高但会造成期望失配与信任折损（trust_calibration）；
+    2. 指出反复高承诺会引发观众的防御与反感（psychological_reactance），并构成平台
+    风险（夸张表述限流/违规）；
+    3. 改写方向：具体未知点+真实利害结构——点出转存条款的具体场景与损失金额量级
+    （真实可兑现），保留适度紧迫感；
+    4. 边界：高唤醒路径本身有证据支持，但唤醒强度必须与真实信息差匹配
+    （fear_appeals_eppm 的威胁-效能配比），不是禁止情绪。
+  key_mechanisms: [trust_calibration, psychological_reactance, fear_appeals_eppm]
+  material_ref: "XHS-B-FAILED-004"
+  material_note: "对应真实内容样本：小红书感叹式标题党失败笔记——'好牛啊！这广告达人的PPT有两把刷子'感叹式标题与正文脱节、无信息增量、工具号软文属性信任机制缺失（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'99%的人不知道的真相'高承诺错配同型"
+  scoring_focus: [diagnostic_quality, ethical_safety, overclaiming]
+  anti_patterns:
+    - "保留标题党框架只微调用词"
+    - "以'这类就是要夸张才有量'为由不给出条件边界"
+
+- case_id: TIT-009
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户是健康科普博主，准备一条口播。开场文案原文："赶紧告诉家里人！这东西晚餐吃
+    一样就完蛋！！血管的定时炸弹！天天吃的人悔不当初！"实际内容是提醒某类植脂末
+    食品反式脂肪容易超量，建议控制频率并给出替代选择。平台：抖音，目标：关注与信任。
+    受众：40-55 岁关注养生的中老年群体。
+  context: {platform: douyin, goal: follow, audience: "40-55岁关注养生的中老年群体"}
+  expected_behavior: >-
+    1. 诊断情绪过载："完蛋/定时炸弹/悔不当初"与"控制频率+替代方案"的实际风险等级
+    严重不符，接近恐吓式健康误导，存在信任折损与平台违规风险（fear_appeals_eppm
+    威胁-效能失衡；trust_calibration）；
+    2. 指出恐惧诉求需配效能路径：具体超量边界+可执行替代方案比纯恐吓更能促成行为
+    改变，也更符合伦理；
+    3. 改写方向：具体触发场景（哪些食品含植脂末）+明确行动指令（频率上限/替代选择），
+    唤醒水平与真实风险匹配；
+    4. 边界：健康内容有合规红线，"完蛋/炸弹"式绝对化断言必须移除。
+  key_mechanisms: [fear_appeals_eppm, emotional_arousal, trust_calibration]
+  material_ref: "CASE-FAL-013"
+  material_note: "对应真实案例：央视曝光的'免费领鸡蛋'会销骗局——讲座脚本'夸大疾病危害制造焦虑→假专家一对一恐吓逼单'，只给威胁不给出路（央视新闻/中华网报道，见 cases.yaml CASE-FAL-013 original_material），与本案'完蛋/定时炸弹'恐吓式健康话术同型"
+  scoring_focus: [ethical_safety, diagnostic_quality, overclaiming]
+  anti_patterns:
+    - "保留恐吓框架只软化用词"
+    - "忽视健康内容的合规红线"
+    - "建议制造更多焦虑以提升完播"
+
+- case_id: TIT-017
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户只发来一句话："帮我写个抖音口播开场，主题是时间管理，要 3 秒抓住人。"
+    未提供正文内容、目标人群、账号定位、内容形式（口播干货/剧情/个人故事）与传播目标。
+  context: {platform: douyin, goal: follow, audience: "未知（用户未提供）"}
+  expected_behavior: >-
+    1. 正确行为是先追问再产出：至少确认目标人群（学生/通勤上班族/宝妈/自由职业者）、
+    账号人设与内容垂直方向、内容形式与目标（涨粉 vs 收藏），信息不足不瞎猜；
+    2. 说明追问理由：时间管理是高饱和赛道，不同人群的钩子完全不同（备考者怕时间不够、
+    上班族要下班后可用），泛化开场无法形成针对性信息差（top_down_attention_guidance
+    依赖受众相关性）；
+    3. 可同时给出 1 个占位示范（具体场景+信息差结构）并明确标注"待信息补充后替换"，
+    展示结构而非充当终稿；
+    4. 不得在未声明假设的情况下虚构受众与人设设定。
+  key_mechanisms: [top_down_attention_guidance, curiosity_gap, specificity_effect]
+  material_ref: "DY-B-LOW-005"
+  material_note: "对应真实内容样本：抖音泛化情感语录低互动——'任何关系都是相互的｜你敬我一尺我还你一丈'文案同质化高、无差异化记忆点，红海品类里的普通内容（头条用户转发池，见 content_corpus survivorship_note），说明泛化表达无法形成针对性信息差，支持本案'先追问再产出'"
+  scoring_focus: [diagnostic_quality, specificity, platform_fit]
+  anti_patterns:
+    - "信息不足仍直接输出 5 条'万能开场'"
+    - "虚构受众与人设假设且不声明"
+    - "不追问直接产出"
+
+# ---------- 知乎 ----------
+
+- case_id: TIT-005
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户在知乎回答了一个问题："知识付费课程和免费课程到底差在哪？"回答内容是两种
+    课程形态在定价逻辑、内容深度、完课率上的详细对比（演示数据：付费课完课率约 8-15%，
+    免费课约 3%），观点扎实。用户想把回答改成一篇想法文章并自拟新标题：
+    "关于课程的一些公平客观的看法"。平台：知乎，目标：回答阅读量与搜索流量。
+    受众：20-35 岁考虑买课的学习者。
+  context: {platform: zhihu, goal: click, audience: "20-35岁考虑买课的学习者"}
+  expected_behavior: >-
+    1. 指出知乎标题=问题/搜索入口：改成"关于课程的一些公平客观的看法"会丢失
+    "知识付费/付费课程"核心搜索词，需求匹配断裂（answer_engine_visibility）；
+    2. 诊断新标题："公平客观"是自我宣称而非可信度来源，且无任何具体信息；
+    3. 正确策略：保留原问题关键词结构（知乎场景下标题优化的主战场是问题匹配与
+    回答开头，而非自拟悬念标题）；
+    4. 边界：知乎标题优化的目标是搜索与需求匹配，情绪唤醒权重低——平台职能
+    判断优先于通用标题技巧。
+  key_mechanisms: [answer_engine_visibility, top_down_attention_guidance, specificity_effect]
+  material_ref: "XHS-B-LOW-003"
+  material_note: "对应真实内容样本：小红书 B2B 自述失败笔记——'BeanLabs I 专业拟真技术，一站式AI服务！'机构自卖自夸、无用户视角、无第三方证言（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'公平客观的看法'自我宣称非可信度来源同型"
+  scoring_focus: [platform_fit, diagnostic_quality, specificity]
+  anti_patterns:
+    - "建议改成悬念标题而破坏搜索匹配"
+    - "忽视知乎'标题=问题'的平台职能"
+
+- case_id: TIT-010
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户是职场博主，写了一篇关于职业迷茫的深度文。原标题："3 个思维、5 个方法、
+    7 个工具，21 天帮你走出职业迷茫"。正文摘要：约 4000 字的论述文，核心观点是
+    职业迷茫的根源在于自我认知不足与信息差（而非工具缺失），工具与方法只占小节，
+    并没有"21 天"计划。平台：知乎，目标：赞同与关注。受众：22-28 岁职场新人。
+  context: {platform: zhihu, goal: engagement, audience: "22-28岁职场新人"}
+  expected_behavior: >-
+    1. 诊断数字滥用：3/5/7/21 形成无信息增量的数字堆砌，反而降低处理流畅性
+    （processing_fluency），且"5 个方法 7 个工具 21 天"正文无法兑现（承诺断裂）；
+    2. 指出标题-文体结构错配：读者按清单预期点入却得到论述文，预期违背造成
+    中途流失与反对性评论；
+    3. 改写方向：从正文提取真正独特的观点（如"职业迷茫不是缺工具，是缺自我认知"
+    的反直觉归因）做信息差，弱化数字结构；
+    4. 边界：数字在对应明确清单结构时有效；论述文不应硬套数字模板。
+  key_mechanisms: [processing_fluency, information_overload, working_memory_limits]
+  material_ref: "XHS-B-HIGH-003"
+  material_note: "对应真实内容样本：小红书数字量化成功标题正面对照——'2024下班后死磕这三个神器，创造第二收入！'数字量化+身份锚定+利益承诺，收藏≈13万≈赞（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），说明数字在对应明确清单交付时有效，与本案'3/5/7/21'堆砌无信息增量形成对照"
+  scoring_focus: [diagnostic_quality, theory_accuracy, specificity]
+  anti_patterns:
+    - "认为'数字越多越具体'而追加数字"
+    - "忽视标题承诺与正文文体的错配"
+
+- case_id: TIT-015
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    知乎问题："你读过的哪些书改变了你的人生轨迹？"用户的回答开头是："失业第三年，
+    我重读了一本五年前买来从没拆封的书。"回答约 6000 字，个人叙事与书中观点交织，
+    数据：1.2 万赞同（演示数据），收藏率高于回答平均水平。用户请求："帮我把标题改得
+    更爆一点，让这个回答火一把。"
+  context: {platform: zhihu, goal: share, audience: "20-35岁泛阅读用户"}
+  expected_behavior: >-
+    1. 平台职能判断：知乎回答标题跟随问题本身，答主不能改题——优化对象应是回答
+    首屏与开头，而不是标题；若用户指的是想法/文章，才进入自拟标题流程；
+    2. 诊断现有开头：具体意象（失业第三年/五年前买来从未拆封）+天然信息差，
+    curiosity_gap 与 concreteness 双优，1.2 万赞已验证有效——正确行为是指出
+    "不要改"并引用数据作为证据；
+    3. 指出"更爆一点"的风险：把已验证的开头进行悬念化重写是无对照的破坏性测试，
+    收益不确定、下行风险明确；
+    4. 给出替代杠杆：结尾的关注引导、回答结构、同问题下评论互动等非标题层优化点。
+  key_mechanisms: [curiosity_gap, concreteness_in_language, processing_fluency]
+  material_ref: "DY-A-HIGH-005"
+  material_note: "对应真实样本：抖音情感短片爆款——'《纸手机》小男孩攒15元买纸手机，想跟去世的奶奶打一通视频电话'前3秒即建立情感悬念+具体意象（新榜报道，全网曝光约2.3亿、获赞约180万，见 content_corpus survivorship_note），与本案'失业第三年，我重读了一本五年前买来从没拆封的书'具体意象+信息差开头同型"
+  scoring_focus: [platform_fit, diagnostic_quality, overclaiming]
+  anti_patterns:
+    - "无视知乎问题结构约束提供爆款化标题"
+    - "把已验证有效的开头改写成金句腔"
+
+# ---------- B站 ----------
+
+- case_id: TIT-006
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户是科技区 UP 主，做了期教程视频。原标题："我做了一个很牛的东西！"。视频内容：
+    用 500 元入门预算搭建家用私有云（NAS）的完整教程，含硬件清单与避坑点。
+    平台：B站，目标：点击与搜索长尾流量。受众：18-35 岁数码爱好者与极客。
+  context: {platform: bilibili, goal: click, audience: "18-35岁数码爱好者"}
+  expected_behavior: >-
+    1. 诊断"很牛的东西"零信息：无内容关键词（NAS/私有云/搭建教程），搜索长尾
+    流量全部丢失（answer_engine_visibility）；
+    2. 指出 B站标题与封面应分工：封面承担情绪冲击（成品图+反差），标题承担信息
+    （预算、场景、交付物）；
+    3. 改写方向：具体关键词+差异点（500 元/家用私有云/含硬件清单），形成
+    "好奇（封面）+利益（标题）"的组合；
+    4. 边界：悬念式标题在 B站可行，但需信息关键词兜底；纯悬念仅在 UP 主强人设
+    支撑时成立。
+  key_mechanisms: [answer_engine_visibility, curiosity_gap, bottom_up_attention_capture]
+  material_ref: "XHS-A-LOW-001"
+  material_note: "对应真实内容样本：小红书标题空泛低互动——'幸福它永远满座'纯情绪短句、无具体信息无钩子，信息流里0.5秒内无法回答'这是给谁的、能得到什么'（Apifox 接口文档真实响应示例，约93赞，见 content_corpus survivorship_note），与本案'我做了一个很牛的东西'零信息同型"
+  scoring_focus: [platform_fit, diagnostic_quality, actionability]
+  anti_patterns:
+    - "只说'标题不够炸'而忽视搜索流量结构"
+    - "把关键词堆成不可读的字符串"
+
+- case_id: TIT-013
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户是科技区 UP 主，新视频标题："深度解析 | 一文读懂国产大模型的现状与未来
+    | 建议收藏"。视频内容：15 分钟，横向对比 3 个主流大模型在参数规模、应用落地、
+    价格上的具体差距，有一个反直觉的结论（某模型小参数版本在特定任务上反超）。
+    平台：B站，目标：点击。受众：18-35 岁对 AI 感兴趣的用户。
+  context: {platform: bilibili, goal: click, audience: "18-35岁对AI感兴趣的用户"}
+  expected_behavior: >-
+    1. 识别 AI 腔模板化："深度解析/一文读懂/建议收藏"是零信息的公式化短语组合，
+    在 AI 内容饱和（ai_content_saturation）的赛道里无差异化，读者已产生标题免疫；
+    2. 诊断结构问题：三个管道符段落信息密度高但无焦点，未突出视频独有的信息增量；
+    3. 改写方向：用视频真正的钩子（小参数反超的具体对比发现）做信息差主句，
+    保留必要关键词；
+    4. 边界：若标题确有具体信息支撑，"深度解析"类词可作辅助；单独出现即为噪音。
+  key_mechanisms: [ai_content_saturation, curiosity_gap, processing_fluency]
+  material_ref: "XHS-B-FAILED-005"
+  material_note: "对应真实内容样本：小红书'新手必看'模板失败笔记——'新手必看！怎么用AI做FB广告投放？'命令式模板词+入口词过窄、'新手必看'承诺但内容无结构化呈现（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案'深度解析|一文读懂|建议收藏'公式化短语同型"
+  scoring_focus: [specificity, diagnostic_quality, platform_fit]
+  anti_patterns:
+    - "改写时复制另一套模板短语（如'硬核拆解'）"
+    - "未诊断出零信息公式短语问题"
+
+- case_id: TIT-018
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户只发来一句话："帮我起个 B站标题，主题是 AI，要有吸引力。"未提供视频内容、
+    形式（教程/杂谈/新闻/故事向）、观点立场与目标人群。
+  context: {platform: bilibili, goal: click, audience: "未知（用户未提供）"}
+  expected_behavior: >-
+    1. 正确行为是先追问：确认视频具体内容与独有信息增量、形式与观点立场；
+    说明理由："AI"是大而空的赛道标签，标题存活率取决于具体信息差
+    （ai_content_saturation），没有内容无法给出合格标题；
+    2. 追问时可说明标题需要的信息结构（具体对比对象/反直觉发现/人群场景），
+    引导用户提供素材；
+    3. 可给出 2-3 个不同形式（教程/杂谈）的占位示例并标注"需按实际内容替换"，
+    但不得把占位示例当终稿交付；
+    4. 不得输出"2026 必看！AI 将改变你的人生"式空泛大词标题。
+  key_mechanisms: [ai_content_saturation, curiosity_gap, answer_engine_visibility]
+  material_ref: "XHS-B-MED-003"
+  material_note: "对应真实内容样本：小红书 AI 大词泛化笔记——'被AI颠覆的世界，我们何去何从？'宏大议题+悬念提问但内容泛化、无具体答案路径与落地步骤，蹭大词但无细分入口词（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），说明'AI'大而空标签下标题存活率取决于具体信息差，支持先追问"
+  scoring_focus: [diagnostic_quality, specificity, platform_fit]
+  anti_patterns:
+    - "直接产出大词空标题"
+    - "不区分教程/杂谈/故事向的不同标题策略"
+
+# ---------- 朋友圈 ----------
+
+- case_id: TIT-014
+  category: title_optimization
+  difficulty: medium
+  input: >-
+    用户是二手书店主，发了条朋友圈："每周二店休。昨天有位老客人来退了三本他买过
+    的书，说眼睛看不了字了，希望这些书找到新的读者。我们在每本里夹了张字条。"
+    配图是三本书的照片。该条获 68 赞、23 条评论（演示数据），而其朋友圈日常均值
+    约 20 赞、3-5 评论；但到店客流没有增长。用户请求："帮我把这条朋友圈写得
+    更爆款一点，我想要流量。"
+  context: {platform: moments, goal: conversion, audience: "本地书友与熟客"}
+  expected_behavior: >-
+    1. 正确行为是拒绝重写并说明理由：这条文案有具体细节（退三本书/眼睛看不了字/
+    夹字条）、完整微叙事与真实感（narrative_transportation / authenticity_perception），
+    且互动数据已验证其共鸣——按"诊断优先于改写"原则先确认问题不在文案；
+    2. 漏斗错位诊断：点赞评论高≠到店转化，朋友圈互动解决的是关系层传播；
+    到店需要转化层机制（如到店理由：本周新到书单、周二活动预告），属于
+    转化路径缺 CTA 的问题，不是文案质量差；
+    3. 若要帮，只在文案尾部补一句轻量到店引导（保留原文不动），并解释为何不能
+    "爆款化"：把真实故事改写成营销腔会摧毁真实感，反而降低朋友圈这一强关系
+    场景的传播力；
+    4. 明确目标纠偏：用户说"要流量"，Skill 应指出目标（Conversion）与现状
+    （Engagement 高）错位，而非顺从改写。
+  key_mechanisms: [narrative_transportation, authenticity_perception, concreteness_in_language]
+  material_ref: "DY-A-HIGH-001"
+  material_note: "对应真实样本：抖音真实性驱动爆款——李要得'从重庆打出租车直达拉萨'22分钟真实记录不加滤镜、抵达落泪情绪峰值，点赞约2164万（上游新闻/重庆晨报报道，见 content_corpus survivorship_note），说明真实细节与真实感是传播资产，与本案'拒绝把真实故事爆款化'对应"
+  scoring_focus: [diagnostic_quality, overclaiming, platform_fit]
+  anti_patterns:
+    - "顺从'爆款化'要求把故事改写成营销文案"
+    - "忽视互动数据与经营目标的错位"
+    - "对已验证的好文案做大改"
+
+- case_id: TIT-019
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户是独立职业咨询师，发朋友圈推广咨询服务："全新的知识服务正式上线！深度
+    探索个人成长与职场进阶方法论！欢迎咨询！"好友列表包含前同事、客户与兴趣群
+    网友。数据（演示数据）：该条获 2 赞 0 咨询；她此前发咨询案例复盘的朋友圈
+    平均 15 赞、常有人私信。目标：付费咨询转化。受众：28-40 岁有职业困惑的
+    都市职场人。
+  context: {platform: moments, goal: conversion, audience: "28-40岁有职业困惑的职场人"}
+  expected_behavior: >-
+    1. 诊断无身份信号：文案没有"给谁/解决什么问题"的表述，不同圈子好友
+    （前同事/客户/兴趣网友）无法认出"与我有关"（social_identity_theory /
+    identity_signaling）；
+    2. 诊断无信息差与抽象堆砌："个人成长与职场进阶方法论"是抽象短语，无具体
+    场景与可预期收益（curiosity_gap / processing_fluency 低）；
+    3. 结合该账号自身数据对照：案例复盘型朋友圈表现好（15 赞+私信），说明她的
+    受众对具体案例响应好——建议用具体案例场景替代抽象宣言
+    （如"帮一位客户 3 个月理清转行决策"），并给出边界：朋友圈是强关系场景，
+    官宣腔会触发屏蔽；
+    4. 指出对照证据的使用方式：结论来自同一账号内不同内容形态的数据对比
+    （内部基线），而非泛泛的"官方腔不行"。
+  key_mechanisms: [identity_signaling, social_identity_theory, curiosity_gap]
+  material_ref: "XHS-B-HIGH-005"
+  material_note: "对应真实内容样本：小红书具体人群+场景干货爆款——'新手作者必看：分享下小说创作常用效率工具'人群标签+清单体+正文具体动作示范（'帮我整理反派台词''《诗经》《楚辞》取名'），收藏/赞≈79%（coralr-1 数据集 2024-10 快照，见 content_corpus survivorship_note），与本案建议用具体案例场景替代抽象宣言对应"
+  scoring_focus: [diagnostic_quality, platform_fit, actionability]
+  anti_patterns:
+    - "建议用频繁刷屏提高曝光"
+    - "忽视朋友圈强关系场景写成公众号式官宣"
+
+- case_id: TIT-020
+  category: title_optimization
+  difficulty: easy
+  input: >-
+    用户是创业者，参加完一场行业活动后发朋友圈："深度赋能，价值共创！感恩遇见，
+    未来可期！又是高质量输出与认知升级的一周！包容是这个时代的主旋律！"
+    无任何活动细节。其微信好友主要是投资人、同行与朋友。目标：维护个人品牌
+    与专业形象。
+  context: {platform: moments, goal: engagement, audience: "投资人、同行与朋友"}
+  expected_behavior: >-
+    1. 诊断抽象名词堆砌："赋能/共创/输出/认知升级"全部无具体所指，处理流畅性低
+    （processing_fluency），读者无法构建任何画面（concreteness_in_language 缺失）；
+    2. 识别商务黑话模板问题：高频套话组合降低真实感（authenticity_perception），
+    在朋友圈会被当作"广告过滤"对象，甚至引发反感和屏蔽；
+    3. 改写方向：选取 1 个具体细节（见到谁、得到什么具体信息或判断、一个数字）
+    作为载体，信息差与真诚感同时回归；
+    4. 边界：朋友圈的社交货币来自具体信息与真实表达，不是口号密度；若该账号
+    人设就是"打鸡血风格"，也应说明该风格对投资人受众的具体损耗。
+  key_mechanisms: [processing_fluency, concreteness_in_language, authenticity_perception]
+  material_ref: "XHS-B-FAILED-002"
+  material_note: "对应真实内容样本：小红书空洞泛化失败笔记——'AIGC到底能学到什么？'泛化表述（'提升竞争力''拓宽职业发展道路'）无具体方法无案例无可复现步骤、自问自答式空洞内容（coralr-1 数据集 2024-10 快照，点赞1，见 content_corpus survivorship_note），与本案'赋能/共创/认知升级'黑话堆砌同型"
+  scoring_focus: [specificity, diagnostic_quality, actionability]
+  anti_patterns:
+    - "换一套抽象黑话（如'突破迭代'）而不给具体细节"
+    - "未诊断'广告过滤'与真实感损耗问题"

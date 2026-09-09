@@ -1,0 +1,26 @@
+# Evidence Package — S17 Nir Eyal 2014（Hooked）
+# 标准格式。access_level 如实标注。
+source_id: S17
+title: "Hooked: How to Build Habit-Forming Products"
+authors: "Nir Eyal"
+year: 2014
+journal: Portfolio / Penguin（专著）
+doi: "无 DOI（专著）"
+url: "https://test.sobrief.com/books/hooked"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：sobrief 全书摘要（Hook 四阶段定义/5 Whys 找内部触发/三类可变奖励：社交验证、资源猎取、自我掌控）+ therapy-aligned 临床百科（四阶段循环/与 Skinner 可变强化及 Fogg 行为模型的谱系）+ 12min 摘要（外部 vs 内部触发/可变奖励/用户投入）+ 中文产品社区解读（触发→行动→可变奖励→投入/适用边界/伦理争议）+ 韩文创业指南（投资=切换成本/内部触发形成）"
+research_question: "如何通过产品设计制造用户的习惯性使用（habit-forming products）？"
+core_claims:
+  - "Hook 模型是四阶段循环：触发（trigger）→行动（action）→可变奖励（variable reward）→投入（investment），循环往复直至行为自动化、用户『自动驾驶』式返回（sobrief；therapy-aligned；12min）"
+  - "触发分外部与内部：外部触发（通知、广告）成本高不可持续，目标是建立内部触发——把产品连到负性情绪（无聊→开 Twitter、孤独→开 Facebook、不确定性→开 Google），用 5 Whys 法追溯用户使用的情绪根源（sobrief；12min）"
+  - "可变奖励源自 Skinner 操作性条件反射的可变强化程序：不可预测的奖励制造渴望（craving），可预测的奖励变得隐形失效；Eyal 把可变奖励归为三类——社交验证（部落奖赏）、资源猎取（猎物奖赏）、自我掌控（自我奖赏）（sobrief；therapy-aligned）"
+  - "行动阶段借用 Fogg 行为模型逻辑：『让做比想更容易』，简化动作（提升能力）比提升动机回报更高，靠技术移除步骤（sobrief；therapy-aligned）"
+  - "投入阶段让用户存入数据、关系、内容与个性化设置，抬高沉没成本与切换成本，同时为下一轮循环装载内部触发（sobrief；12min；韩文解读）"
+method: "从业者产品设计框架：产品案例分析 + 心理学/行为学原理整合（D 级实践框架，非实证研究）"
+results: "（定位）Hook 模型成为硅谷增长团队与产品设计的通用语言，销量超百万册、译 30+ 语言（therapy-aligned 转述）"
+limitations: "无系统性独立实证检验；作者本人称需『产品价值 + 道德使用』为前提；依赖产品真实价值，否则钩子只能延缓流失"
+boundary_conditions: "适用于高频、低成本、奖励可设计的数字产品（社交/内容/游戏天然匹配）；低频工具型产品强行加钩子无效；奖励需与用户真实价值相关"
+relevant_nodes: [hook_model, variable_ratio_reward, zeigarnik_effect]
+notes: "从业者实践框架（D 级），与 hook_model 节点 evidence_grade D 一致。四阶段结构、三类可变奖励、内外部触发均为公开内容，未编造。"
+last_verified: "2026-09"

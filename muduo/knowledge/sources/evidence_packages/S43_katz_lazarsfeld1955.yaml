@@ -1,0 +1,26 @@
+# Evidence Package — S43 Katz & Lazarsfeld 1955（Personal Influence）
+# 标准格式。access_level 如实标注。
+source_id: S43
+title: "Personal Influence: The Part Played by People in the Flow of Mass Communications"
+authors: "Elihu Katz; Paul F. Lazarsfeld"
+year: 1955
+journal: Free Press（专著；基于 1944 伊利县选举研究与 1940 年代迪凯特研究）
+doi: "无 DOI（专著）"
+url: "https://sk.sagepub.com/ency/edvol/publicrelations/chpt/twostep-flow-theory"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "两级传播核心内容经多源交叉实取：SAGE 百科词条（含 People's Choice 5% 数字）/HandWiki 详述/学术研讨会论文综述/中文传播学教材解读——媒介→意见领袖→大众两级路径、意见领袖特征、有限效果范式"
+research_question: "大众媒介对个人态度与行为的影响是直接的，还是被人际关系网络调节？"
+core_claims:
+  - "两级传播：媒介信息先流向接触媒介较多、社交活跃的意见领袖，再经人际渠道流向大众——媒介效果被信任关系过滤与放大"
+  - "1944《The People's Choice》：仅约 5% 选民因直接媒介暴露被说服；人际接触对投票意向改变作用超过媒介直接说服"
+  - "意见领袖并非稳定层级：接触媒介更多、为他人提供解释；Merton 1949 区分正式权威与日常非正式影响者（单态/多态）"
+  - "人际传播比大众媒介更有效的原因：面对面信息可判断可信度、可即时调整说服、可施以友好压力"
+  - "该研究奠定'有限效果范式'（limited effects paradigm），与魔弹论相对"
+method: "1940 年代迪凯特（Decatur）消费决策实地研究 + 伊利县选举面板研究 + 多议题（时尚/购物/公共事务）系统化"
+results: "（经典实证+理论）人际影响对媒介效果的调节；意见领袖概念系统化"
+limitations: "原书全文订阅受限；后续研究修正为'多级流动'（网络化多跳影响与直接命中并存），两级结构在新媒体中不再普遍成立"
+boundary_conditions: "议题需解释成本或风险（投票/健康/高价购买）；存在活跃转述者的社会网络"
+relevant_nodes: [two_step_flow, opinion_leadership, gatekeeping_dynamics, parasocial_relationship]
+notes: "two_step_flow / opinion_leadership 的一手奠基来源（book 级）。5% 数字来自 SAGE 百科对 People's Choice 的引用，未编造。"
+last_verified: "2026-09"

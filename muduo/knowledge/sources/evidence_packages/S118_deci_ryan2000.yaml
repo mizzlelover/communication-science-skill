@@ -1,0 +1,24 @@
+# Evidence Package — S118 Deci & Ryan 2000（SDT）
+# 标准格式。access_level 如实标注。
+source_id: S118
+title: "The 'What' and 'Why' of Goal Pursuits: Human Needs and the Self-Determination of Behavior"
+authors: "Edward L. Deci; Richard M. Ryan"
+year: 2000
+journal: Psychological Inquiry 11(4), 227-268
+doi: "10.1207/S15327965PLI1104_01"
+url: "https://www.ncbi.nlm.nih.gov/pubmed/26300805/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "期刊引用+元数据（NSTL）+ SDT 理论综述（多源：中文综述 + 元分析确认 Deci, Koestner & Ryan 1999 对 128 项实验）"
+research_question: "追求什么目标（内容）与为何追求（动机调节）如何影响幸福感与行为？"
+core_claims:
+  - "三种基本心理需要：自主（autonomy）、胜任（competence）、归属（relatedness）；满足与否决定内在动机与心理健康"
+  - "动机从外在调节到内在调节的连续谱（内化/整合）；外在奖励对内在动机的挤出效应（overjustification）"
+  - "元分析确认（Deci, Koestner & Ryan 1999）：有形预期奖励显著削弱内在动机；口头表扬等正向反馈增强"
+method: "理论综述 + 整合大量实验/现场研究 + 元分析（128 项实验）"
+results: "（综述）基本需要满足→内在动机/幸福感；外在激励可挤出内在动机"
+limitations: "理论综述（Psychological Inquiry 目标文章+评论）；具体效应量需查元分析原文"
+boundary_conditions: "挤出效应依赖奖励的预期性与任务原本的内在趣味；自主支持情境是关键调节"
+relevant_nodes: [self_determination_needs, intrinsic_extrinsic_motivation, goal_setting_effectiveness]
+notes: "SDT 核心论文；S14 图书的论文级一手来源。英文摘要未直接抓到，依赖多源引用+综述确认——如实标注 abstract_only。"
+last_verified: "2026-09"

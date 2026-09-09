@@ -1,0 +1,327 @@
+# ============================================================
+# 传播复盘评测集（Postmortem Benchmark）
+# 共 10 案例：PST-001 .. PST-010
+# 覆盖漏斗环节：
+#   - 曝光高点击低 x2（PST-001 / PST-002）→ attention/relevance 层
+#   - 点击高停留低 x2（PST-003 / PST-004）→ expectation mismatch / 认知过载
+#   - 收藏高分享低 x1（PST-005）→ personal utility 强 / social currency 弱
+#   - 评论高转化低 x1（PST-006）→ friction / CTA 结构
+#   - 阅读高关注低 x1（PST-007）→ 账号层定位不连贯
+#   - 全链路好转化低 x1（PST-008）→ offer/friction 而非内容
+#   - 外生变量 x2（PST-009 限流期 / PST-010 投流占比高）→ 必须先声明外生变量
+# 所有数字均为演示数据；账号与场景均为虚构，不指向真实品牌。
+# ============================================================
+
+- case_id: PST-001
+  category: postmortem
+  difficulty: medium
+  input: >-
+    用户经营小红书家居账号，拿来一篇笔记求复盘。数据（演示数据）：曝光 18.5 万，
+    点击率 1.1%（该账号此前 10 篇均值 4.8%），互动率（点击后）与历史持平，但收藏
+    评论绝对值随点击等比下滑。封面是一张杂乱的客厅实拍图（未整理），标题：
+    "分享我的收纳心得和一些布局建议"。正文约 600 字，质量与以往持平。
+    受众：25-35 岁租房青年。
+  context: {platform: xiaohongshu, goal: click, audience: "25-35岁租房青年"}
+  expected_behavior: >-
+    1. 漏斗定位：曝光高+点击率暴跌至基线的约 1/4，而点击后互动率持平——问题定位在
+    Attention/Relevance 层（封面+标题），不在正文；禁止先诊断正文；
+    2. 封面诊断：杂乱实拍图无视觉层级与图形-背景分离（visual_hierarchy /
+    figure_ground_separation），无法在信息流中形成自下而上的注意捕获，也未传达
+    "整理后"的结果预期；
+    3. 标题诊断："心得/建议"是抽象框架词，无身份信号（租房）与信息差
+    （identity_signaling / curiosity_gap），目标人群 1 秒内认不出"与我有关"
+    （selective_attention 的目标相关过滤）；
+    4. 基线方法正确性：结论应基于账号自身历史基线（1.1% vs 4.8%）做平台内对比，
+    而不是引用跨账号绝对值标准；建议封面大字承载具体结果、标题承载搜索关键词。
+  key_mechanisms: [selective_attention, bottom_up_attention_capture, top_down_attention_guidance]
+  material_ref: "XHS-A-LOW-001"
+  material_note: "演示场景映射的真实材料：标题/封面未完成'这是给谁的、能得到什么'的注意捕获与相关性传达导致点击低迷（语料样本：同账号爆款 2.9 万赞 vs 空泛标题 93 赞对照，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, platform_fit, specificity]
+  anti_patterns:
+    - "建议重写正文而忽略点击层"
+    - "引用跨账号绝对值标准而不做账号内基线对比"
+    - "把点击率下滑归因于'账号权重'等不可验证因素"
+
+- case_id: PST-002
+  category: postmortem
+  difficulty: easy
+  input: >-
+    用户经营一个行业观察类公众号。本篇图文获得信息流推荐展示 12 万次，打开率 2.3%
+    （账号近半年均值 7.1%），打开后的读完率正常（演示数据）。标题：
+    "关于制造业现状的一些观察与思考"。封面：编辑器默认纯色无字封面。
+    正文约 4000 字，含独家渠道获得的具体数据与一个反直觉发现（某环节利润变化）。
+    受众：制造业从业者与投资人。
+  context: {platform: wechat_account, goal: open, audience: "制造业从业者与投资人"}
+  expected_behavior: >-
+    1. 漏斗定位：曝光充足（平台已给流量）+打开率不足基线 1/3，而打开后表现正常
+    ——问题在标题/封面的 Attention 层，与正文质量无关；
+    2. 标题诊断："观察与思考"零信息差，"制造业"是无差异大词；目标读者无法判断
+    这篇文章有什么不知道的东西（curiosity_gap B 级），也没有相关性信号支持
+    自上而下的注意引导（top_down_attention_guidance / selective_attention）；
+    3. 封面诊断：默认纯色封面浪费公众号信息流中的视觉资源，自下而上注意捕获为零
+    （bottom_up_attention_capture）；
+    4. 建议方向：把正文中的反直觉发现提取进标题（具体环节+具体变化方向），
+    封面放核心数据图——并提醒标题承诺必须与正文兑现一致。
+  key_mechanisms: [curiosity_gap, specificity_effect, bottom_up_attention_capture]
+  material_ref: "XHS-B-LOW-004"
+  material_note: "演示场景映射的真实材料：行业观察/报告类标题'大而全无聚焦、无具体利益点'导致打开低迷（语料样本：'完整版??2024年数字媒体营销趋势研究报告'点赞 24/收藏 11，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, platform_fit, actionability]
+  anti_patterns:
+    - "归因于'曝光不够'而建议投流"
+    - "忽视默认封面的资源浪费"
+    - "未利用正文已有的反直觉发现"
+
+- case_id: PST-003
+  category: postmortem
+  difficulty: medium
+  input: >-
+    用户是财经知识类抖音账号。视频数据（演示数据）：3 秒播放率 42%（高于同行
+    参考区间 30-38%），平均播放时长 19 秒（视频总长 2 分 40 秒），完播率 7%，
+    评论区和私信大量出现"具体怎么操作""我去哪办"。开场文案：
+    "一招教你不花钱每月多拿几千块！公积金白交了这么多年！"。实际内容是讲解
+    住房公积金提取的条件与流程（一次性提取已有余额，非每月收入），信息准确但
+    与开场承诺明显不符。受众：25-40 岁上班族。
+  context: {platform: douyin, goal: watch_through, audience: "25-40岁上班族"}
+  expected_behavior: >-
+    1. 漏斗定位：3 秒率高于同行+完播率极低+"怎么操作"型评论——先按漏斗规则指向
+    期望失配（expectation violation）：开场承诺与内容不符是首因，禁止只建议
+    "把开头做得更快更强"；
+    2. 机制诊断：承诺契约破裂导致信任折损（trust_calibration）；"一招/每月多拿
+    几千块"把有政策门槛的一次性余额提取夸大为每月现金流，事实性夸大触发
+    认知失调与取关（cognitive_dissonance）；
+    3. 用评论证据支撑诊断："具体怎么操作"说明观众有真实需求但被承诺误导后
+    未获得可执行价值（信息气味断裂）；
+    4. 修复方案：开场降级到真实利害（"公积金什么条件下能取、能取多少"）或升级内容
+    覆盖承诺；并声明这是 Watch/Retention 目标案例，不能拿 3 秒率单独证明健康。
+  key_mechanisms: [trust_calibration, cognitive_dissonance, peak_end_rule]
+  material_ref: "CASE-FAL-002"
+  material_note: "演示场景映射的真实材料：标题/开场承诺与内容兑现的差额即信任负债——标题党账号'点开即失望'预期违背累积、互动质量下滑、平台降权后分发崩塌（中央网信办'清朗'行动点名治理），来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns:
+    - "只建议加快开场节奏而不处理承诺失配"
+    - "忽视'每月多拿几千块'的事实性夸大与合规风险"
+    - "以高 3 秒率认定开头没问题"
+
+- case_id: PST-004
+  category: postmortem
+  difficulty: hard
+  input: >-
+    用户是知识区 UP 主。视频数据（演示数据）：封面点击率 9.2%（正常），平均观看
+    进度 23%，进度条退出分析显示 45% 的流失集中在 0 分 40 秒-1 分 10 秒区间，
+    其余部分流失平缓。标题与封面信息诚实（"区块链底层原理：从哈希到共识"），
+    不存在夸大。视频 18 分钟：0-3 分钟连续讲解哈希函数、非对称加密、Merkle 树
+    三个概念，术语密度高、无生活化类比；3 分钟后开始有类比，进度留存明显变好。
+    受众：无计算机背景的技术爱好者。
+  context: {platform: bilibili, goal: watch_through, audience: "无计算机背景的技术爱好者"}
+  expected_behavior: >-
+    1. 漏斗定位：点击率正常+标题诚实→排除期望失配；流失集中在固定 30 秒区间
+    且之后留存变好→按漏斗规则走"认知过载（cognitive load）/信息气味"分支，
+    而非标题问题；
+    2. 机制诊断：0-3 分钟连续高密度术语超过工作记忆容量（working_memory_limits），
+    无类比锚点导致内在认知负荷无脚手架支撑（intrinsic_cognitive_load），
+    处理流畅性骤降触发放弃；
+    3. 用数据结构支撑诊断：单一时间窗集中流失+后续留存恢复，是负荷曲线问题的
+    典型形态，而非全片性内容质量下滑；
+    4. 修复方案：开场先用一个生活化类比建立图式再进入术语；把最难概念后移；
+    在流失窗口前给出"接下来你会得到什么"的价值预告。边界：内容深度不应为
+    流失率砍掉，受众设定决定密度节奏。
+  key_mechanisms: [working_memory_limits, intrinsic_cognitive_load, processing_fluency]
+  material_ref: "CASE-PLT-001"
+  material_note: "演示场景映射的真实材料：内容信息密度与注意力容量的张力——短视频生态'强开头、快节奏、信息前置'演化的公开讨论（中央网信办《中国网信》披露抖音推荐逻辑演进、人民日报海外版报道），来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, theory_accuracy, specificity]
+  anti_patterns:
+    - "误诊为期望失配而要求改标题"
+    - "建议整体压缩时长而不处理负荷结构"
+    - "忽视流失时间窗与留存恢复的数据形态"
+
+- case_id: PST-005
+  category: postmortem
+  difficulty: medium
+  input: >-
+    用户经营一个知识管理类公众号。本篇文章数据（演示数据）：阅读 2.8 万，收藏 3400，
+    点赞 890，分享仅 210。收藏/阅读约 12%，分享/阅读约 0.75%（账号历史分享率均值
+    3%）。标题："我的知识管理系统：12 个工具 + 4 层仓库结构 + 3 个复盘流程"。
+    正文是一篇可直接上手的完整方法论，含工具配置表与仓库结构图。用户困惑：
+    "明明最有用的一篇，为什么没人转发？"目标：扩大传播。
+  context: {platform: wechat_account, goal: share, audience: "22-35岁知识工作者"}
+  expected_behavior: >-
+    1. 漏斗定位：收藏远高于基线、分享低于基线→符合"个人实用价值（Personal Utility）
+    强、社交货币（Social Currency）弱"的模式，收藏目标已达成，问题只出在分享环节
+    （identity_signaling / stepps_sharing_framework）；
+    2. 机制诊断：清单式结构存储价值高（goal_gradient / specificity），但"我的系统"
+    是私人方案叙事，缺少读者可借表达自我形象、引发讨论的转发动机——转发达成
+    需要身份信号或话题性，实用内容默认触发"存起来自己看"；
+    3. 目标先行声明：先确认传播目标——若目标是收藏/留存，这组数据是健康的；
+    只有目标是 Share 时才构成问题（防止把"收藏高分享低"当缺陷无脑修）；
+    4. 修复方案：在不稀释实用价值的前提下，在文末增加一个可转发动机
+    （如"你用哪个工具"的站队式话题、一个反直觉结论的浓缩卡片），并说明
+    utility 与 share 两目标的取舍边界。
+  key_mechanisms: [identity_signaling, stepps_sharing_framework, self_presentation_impression_management]
+  material_ref: "XHS-B-MED-006"
+  material_note: "演示场景映射的真实材料：实用价值强、传播动机弱——'收藏≈赞'型清单/盘点内容有收藏无讨论（语料样本：AIGC 营销案例盘点收藏/赞≈95%、评论仅 3，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, theory_accuracy, platform_fit]
+  anti_patterns:
+    - "把分享低当作缺陷要求改成情绪文"
+    - "忽视收藏/分享的目标差异与数据基线"
+    - "为转发稀释实用价值"
+
+- case_id: PST-006
+  category: postmortem
+  difficulty: medium
+  input: >-
+    用户是独立理财咨询师，做小红书内容引流。单篇笔记数据（演示数据）：曝光 9.6 万，
+    点击 8200，点赞 1200，评论 380 条（大量为"怎么报名""多少钱""可以一对一吗"），
+    私信咨询 9 人，最终成交 2 单。主页简介只有个人兴趣介绍，无服务说明；
+    笔记正文无价格区间、无服务流程、无任何行动指引；私信由博主碎片时间手写回复，
+    平均滞后 14 小时。受众：28-40 岁有理财规划需求的人群。用户请求：
+    "帮我看看这篇内容哪里写得不好，为什么没人买。"
+  context: {platform: xiaohongshu, goal: conversion, audience: "28-40岁有理财规划需求人群"}
+  expected_behavior: >-
+    1. 漏斗定位：评论 380 条中大量为购买意向提问→讨论意愿与需求都强；问题不在
+    内容说服力，而在行为路径断裂——按漏斗规则定位 friction/CTA 结构，
+    并纠正用户"内容写得不好"的预设；
+    2. 摩擦点诊断：无价格锚点（报价不透明抬高风险感知与询问门槛，
+    perceived_purchase_risk / anchoring_effect 缺失）；无服务流程说明；
+    主页无服务信息；私信响应滞后 14 小时（每个环节都是流失点，
+    friction_reduction 视角）；
+    3. 机制映射：friction_reduction（路径步数）、perceived_purchase_risk
+    （信任与风险信号缺失）、anchoring_effect（无价格区间）；
+    4. 修复方案：内容外路径修复优先——主页服务说明、常见问题自动回复、
+    正文尾部明确 CTA；并提醒小红书对营销导流内容的合规边界（不引导站外交易）。
+  key_mechanisms: [friction_reduction, perceived_purchase_risk, anchoring_effect]
+  material_ref: "DY-A-LOW-003"
+  material_note: "演示场景映射的真实材料：价格锚点与决策摩擦对转化的影响（语料对照：蝉妈妈榜单'一杯奶茶钱'价格锚点降低决策成本 vs 演示场景缺价格锚点致转化低，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, actionability, specificity]
+  anti_patterns:
+    - "顺从'内容不好'的预设去改写内容"
+    - "建议激进导流话术而忽视平台合规边界"
+    - "未诊断私信响应滞后等路径外摩擦"
+
+- case_id: PST-007
+  category: postmortem
+  difficulty: hard
+  input: >-
+    用户是自由职业写作者，经营公众号两年。本篇数据（演示数据）：阅读 8.5 万
+    （其中约 6 万来自看一看/推荐信息流），涨粉 96，关注转化率约 0.11%；本篇
+    读完率 61%，高于账号均值。账号历史内容依次为：个人散文、数码产品测评、
+    行业评论、短篇小说，四类内容轮流发布，无栏目结构；简介是"记录一些想法"。
+    文末引导语为"喜欢的话点个关注吧"。用户请求："帮我看看这篇哪里写得不行，
+    为什么这么多人看却没人关注。"
+  context: {platform: wechat_account, goal: follow, audience: "泛阅读人群（推荐流量）"}
+  expected_behavior: >-
+    1. 漏斗定位与纠偏：单篇读完率高→单篇价值成立；关注转化率极低→按漏斗规则
+    定位在账号层预期价值（定位连贯性 / parasocial_relationship），而非本篇内容
+    ——明确纠正用户"这篇写得不行"的归因；
+    2. 机制诊断：关注是"对账号未来价值下注"；账号四类内容无定位，读者无法形成
+    "关注后我会持续得到什么"的预期（self_presentation_impression_management
+    混乱 / 账号级 mental_availability 未建立），对推荐流冷启动受众尤其如此
+    （parasocial_relationship 无从积累）；
+    3. CTA 诊断："喜欢的话点个关注"没有提供关注理由，对定位混乱的账号更是
+    无法自圆其说；
+    4. 修复方案：先收敛定位与栏目结构，简介改为账号价值陈述，文末用
+    "持续能得到什么"替代"喜欢就关注"；并声明推荐流受众的转化基线本就低于
+    粉丝转发场景，应纵向对比自身历史而非追高绝对值。
+  key_mechanisms: [parasocial_relationship, self_presentation_impression_management, mental_availability]
+  material_ref: "XHS-B-FAILED-002"
+  material_note: "演示场景映射的真实材料：账号定位/人设与内容脱节导致关注转化低（语料样本：留学机构号'泛职场鸡汤'人设与内容脱节、标题自问自答空洞，点赞 1，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, theory_accuracy, evidence_accuracy]
+  anti_patterns:
+    - "在文末加重关注诱导话术而不处理定位问题"
+    - "顺从用户归因把单篇内容改掉"
+    - "用泛行业关注率基准评判推荐流冷启动受众"
+
+- case_id: PST-008
+  category: postmortem
+  difficulty: hard
+  input: >-
+    用户是知识付费讲师，用短视频+主页承接卖一门 1999 元的课程。全链路数据
+    （演示数据）：曝光 50 万 → 点击 2.5 万（CTR 5%，高于同行参考）→ 3 秒率 51%
+    → 完播率 38% → 主页访问 4100 → 课程详情页访问 1900 → 支付 31 单
+    （详情页转化 1.6%；同类课程参考区间 3-5%）。视频评论区反馈正面，
+    多人主动问价。课程详情页当前只有一句课程名与价格，无大纲、无退款政策、
+    无学员案例。受众：25-35 岁职业技能学习者。用户请求："帮我看看视频哪里
+    要优化，为什么转化这么差。"
+  context: {platform: douyin, goal: conversion, audience: "25-35岁职业技能学习者"}
+  expected_behavior: >-
+    1. 漏斗定位：CTR/完播/主页访问均高于基准，流失集中在详情页→购买环节
+    （1.6% vs 3-5%参考）——定位 offer/承接页摩擦，而非内容；明确拒绝从
+    "转化低"倒推去改视频（内容链路健康有数据支撑）；
+    2. 详情页摩擦诊断：无大纲（交付物不可预期，perceived_purchase_risk 高）、
+    无退款政策（风险逆转机制缺失）、无学员证据（social_proof 缺失）、
+    1999 元无价值锚定（anchoring_effect 缺失，价格悬空）；
+    3. 机制映射：perceived_purchase_risk / friction_reduction / social_proof /
+    anchoring_effect；
+    4. 修复方案：先补齐详情页信任要素再考虑其他动作；若修复后仍低，
+    再检验价格-人群匹配；禁止未诊断就直接建议降价。
+  key_mechanisms: [perceived_purchase_risk, friction_reduction, social_proof]
+  material_ref: "CASE-COM-005"
+  material_note: "演示场景映射的真实材料：高客单价付费产品的'交付可预期性'与信任——知识星球付费社群'门槛必须由持续对等的交付支撑，承诺落差即'割韭菜'信任折损'，来源见该案例 original_material"
+  scoring_focus: [diagnostic_quality, specificity, actionability]
+  anti_patterns:
+    - "从转化终点倒推去改视频内容"
+    - "未诊断详情页摩擦就建议降价"
+    - "忽视评论区已主动问价的需求证据"
+
+- case_id: PST-009
+  category: postmortem
+  difficulty: medium
+  input: >-
+    用户是小红书美妆账号主理人："最近两周浏览量掉了 70%，我制作水准和以前
+    完全一样，帮我诊断内容哪里出问题了，我怀疑是最近标题起得太差。"复盘补充信息
+    （演示数据）：该账号两周前有一条内容因违反社区规范被下架，账号目前处于平台
+    限流处罚期；这两周各篇笔记的曝光、点击、收藏、评论同步等比例下滑，
+    点击率（4.9%）、收藏率等环节比率与限流前 30 天均值基本一致；
+    历史上有过一次类似处罚，恢复后数据回到原有水平。
+  context: {platform: xiaohongshu, goal: reach, audience: "20-35岁美妆爱好者"}
+  expected_behavior: >-
+    1. 先声明外生变量（必须第一步）：账号处于平台限流处罚期，曝光下滑无法归因
+    于内容质量——处罚期内的一切内容层诊断都缺乏有效基线，这是定位判断的前置
+    声明，且需明确纠正用户"标题太差"的预设归因；
+    2. 用数据形态支撑判断：曝光、点击、互动同步等比例下滑、环节比率（点击率/
+    收藏率）与限流前一致，是"流量源头被切断"的分布层特征；内容质量问题通常
+    表现为环节比率变化（如点击率下滑）而非全链路等比萎缩；
+    3. 机制映射：限流是平台权力与分发层的机制（platform_power_gatekeeping /
+    gatekeeping_dynamics / algorithmic_amplification），发生在内容机制的上游，
+    不属于文案或选题问题；
+    4. 正确行动建议：核查平台违规通知与申诉渠道、等待处罚期结束；处罚期内不做
+    内容改动并以此期数据下结论（无对照基线）。
+  key_mechanisms: [platform_power_gatekeeping, algorithmic_amplification, gatekeeping_dynamics]
+  material_ref: "DY-A-FAIL-003"
+  material_note: "演示场景映射的真实材料：限流是分发层机制而非单条内容质量问题——抖音初级限流'内容违规/搬运触发、账号权重降级、新内容无法进入初始流量池'（行业讨论公开材料，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, evidence_accuracy, overclaiming]
+  anti_patterns:
+    - "顺从'标题太差'的归因直接诊断内容"
+    - "用限流期数据做内容层归因"
+    - "忽视全链路等比下滑与环节比率稳定的证据形态"
+
+- case_id: PST-010
+  category: postmortem
+  difficulty: hard
+  input: >-
+    某消费品牌在抖音的企业号做月度传播复盘。月度数据（演示数据）：总曝光 200 万，
+    其中付费投流占 160 万（80%），自然曝光 40 万；自然流量点击率 2.1%，
+    自然流量完播率 22%；内容渠道带来的销售额环比无增长。负责人结论：
+    "今年投放翻倍、总曝光是去年同期 3 倍，但转化没起色，肯定是内容团队水平不行，
+    帮我从内容角度诊断一下哪里差。"
+  context: {platform: douyin, goal: conversion, audience: "25-40岁目标消费人群"}
+  expected_behavior: >-
+    1. 先声明外生变量（必须第一步）：80% 曝光来自付费投流，"总曝光 3 倍"主要由
+    投放预算驱动，不能作为内容质量的证据；自然流量数据（40 万曝光、CTR 2.1%、
+    完播 22%）才是评估内容质量的唯一有效基线——混合口径数据无法衡量内容；
+    2. 指出负责人结论中的归因谬误：预算投放（媒介层）与内容质量（内容层）
+    被混为一谈；同时不对"内容团队不行"的人际归因表态附和，转译为可检验的
+    数据问题；
+    3. 机制映射：投流是放大器（algorithmic_amplification / ranking_signal_weighting），
+    放大器放大的是内容现有转化效率——内容侧转化效率不变时，投放增长只会带来
+    曝光增长而非销售增长（attention_economics 的注意力-转化分离）；
+    4. 正确行动建议：按付费/自然拆分全漏斗分别归因；若自然流量转化健康而付费
+    流量差，问题在定向人群与 offer 匹配，而非内容；给出需要补充的数据清单
+    （分渠道 CTR/完播/转化、投放定向设置）后再下结论。
+  key_mechanisms: [algorithmic_amplification, attention_economics, ranking_signal_weighting]
+  material_ref: "DY-A-LOW-004"
+  material_note: "演示场景映射的真实材料：付费投流与自然内容质量需分开评估（语料对照：品牌自播靠精准流量/付费投流承接转化、互动量低——'互动量不是唯一目标，Virality ≠ Conversion'，URL 见 content_corpus.yaml）"
+  scoring_focus: [diagnostic_quality, evidence_accuracy, overclaiming]
+  anti_patterns:
+    - "用混合口径数据评估内容质量"
+    - "附和'内容团队不行'的人际归因"
+    - "跳过渠道拆分直接给出内容修改建议"

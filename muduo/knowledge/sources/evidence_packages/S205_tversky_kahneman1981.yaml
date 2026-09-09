@@ -1,0 +1,25 @@
+# Evidence Package — S205 Tversky & Kahneman 1981（亚洲疾病问题）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S205
+title: "The framing of decisions and the psychology of choice"
+authors: "Amos Tversky; Daniel Kahneman"
+year: 1981
+journal: Science, 211(4481), 453-458
+doi: "10.1126/science.7455683"
+url: "https://doi.org/10.1126/science.7455683"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心数据经 4 个独立源交叉核实（教科书转载与系统综述）：①亚洲疾病问题：600 人将死于疾病，两个方案——正框架（N=152）：『A 方案 200 人将获救』72% 选择 vs 『B 方案 1/3 概率 600 人全救』28%；负框架（N=155）：『C 方案 400 人将死』22% vs 『D 方案 2/3 概率 600 人全死』78%——期望值相同、偏好反转；②正框架下约 75% 偏好确定方案（Kühberger 2023 系统综述转述）；③框架效应概念由本文首次提出（心理科学进展综述：对同一问题的等价描述导致不同偏好，违背不变性原则）；④系统性：Kühberger 2023（EXCLI J 22:1012-1031）系统综述确认框架效应为可靠实证发现（数百篇论文），并提出适应性而非纯非理性的解读"
+research_question: "等价描述（救人 vs 死人）是否会系统改变风险偏好？"
+core_claims:
+  - "框架效应：同一期望值的选项，正框架（获救）下多数人风险厌恶选确定项，负框架（死亡）下多数人风险寻求选赌注——偏好系统性反转"
+  - "数字：正框架 72% 选 A（确定救 200） vs 负框架 78% 选 D（赌局）；N=152/155"
+  - "理论基础：前景理论价值函数——收益凸（风险厌恶）、损失凹（风险寻求）+ 参照点依赖"
+  - "对传播的推论：同一数据的『得/失』表述是决策杠杆；医疗/理财/政策沟通的框架选择有真实行为后果"
+method: "实验室问卷实验（亚洲疾病问题，正/负框架组间设计）"
+results: "（经典）框架效应成为行为决策最著名发现之一；Kühberger 2023 系统综述确认其可靠性"
+limitations: "摘要级+教科书转载核实；学生样本假想决策；效应量随领域与被试经验波动（综述确认异质性）"
+boundary_conditions: "数值小/有真实经验/领域专家时效应减弱；图形/跨期框架为扩展范式；描述不变性失效本身有适应论解释"
+relevant_nodes: [gain_loss_framing]
+notes: "gain_loss_framing 节点的原始实验 EP（前景理论 S113 已在库）。核心数字多源一致，未编造。"
+last_verified: "2026-09"

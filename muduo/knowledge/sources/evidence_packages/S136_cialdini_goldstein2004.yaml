@@ -1,0 +1,24 @@
+# Evidence Package — S136 Cialdini & Goldstein 2004（Social Influence: Compliance and Conformity）
+# 标准格式。access_level 如实标注。
+source_id: S136
+title: "Social Influence: Compliance and Conformity"
+authors: "Robert B. Cialdini; Noah J. Goldstein"
+year: 2004
+journal: "Annual Review of Psychology 55: 591-621"
+doi: "10.1146/annurev.psych.55.090902.142015"
+url: "https://pubmed.ncbi.nlm.nih.gov/14744228/"
+access_level: abstract_only
+research_status: read
+content_obtained: "渠道1 PubMed（PMID 14744228）完整摘要 + 渠道2 BMJ 外部引用页（annualreviews DOI 记录页，同文完整摘要）交叉一致 + 渠道3 annualreviews.org 目录页（页码/关键词）；正文受订阅墙限制未取得"
+research_question: "1997-2002 年间 compliance（顺从）与 conformity（从众）研究有哪些新进展？目标的易受影响性由哪些原则与过程决定？"
+core_claims:
+  - "综述覆盖 1997-2002 年 compliance 与 conformity 研究，以人类功能的三项根本目标组织易受影响性原则：形成对现实的准确知觉并据此反应（accurate perceptions of reality）、发展并维持有意义的社会关系（develop and preserve meaningful social relationships）、维护良好的自我概念（maintain a favorable self-concept）"
+  - "当代社会影响过程日益被理解为微妙、间接、且发生在觉知之外（subtle, indirect, and outside of awareness）"
+  - "综述覆盖的关键机制包括 norms（规范）、obedience（服从）、foot-in-the-door、door-in-the-face 等顺从技术（期刊关键词）"
+method: "文献综述（Annual Review of Psychology 邀请综述，聚焦 1997-2002 年 compliance/conformity 文献）"
+results: "以三大目标框架整合社会影响机制；强调影响过程的微妙性与自动化（觉知之外）；为规范、互惠、承诺一致、权威等机制提供综述定位"
+limitations: "仅覆盖 1997-2002 年文献窗口；本包为摘要级获取，各机制细节未经正文逐条核验"
+boundary_conditions: "框架性综述：三大目标（准确知觉/关系维持/自我概念）与外部力量交互，共同驱动目标的易受影响性"
+relevant_nodes: [authority_influence, reciprocity_norm, commitment_consistency, social_proof]
+notes: "Gate A 一手综述：Cialdini 六原则的学术综述版。注意『六原则』框架出自 Cialdini 1984《Influence》（S32），本综述以三大目标组织机制，不把六原则直接归于本文；核心内容为公开摘要（PubMed+BMJ 双来源），未编造。"
+last_verified: "2026-09"

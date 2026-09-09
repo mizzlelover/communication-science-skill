@@ -1,0 +1,27 @@
+# Evidence Package — S82 Jono Bacon 2012（The Art of Community, 2nd ed.）
+# 标准格式。access_level 如实标注。
+source_id: S82
+title: "The Art of Community: Building the New Age of Participation（2nd Edition）"
+authors: "Jono Bacon"
+year: 2012
+journal: O'Reilly Media（专著；2009 第 1 版，2012-05-30 第 2 版；中文译名《社区运营的艺术》电子工业出版社 2017）
+doi: "无 DOI（专著）"
+url: "https://www.linux.com/news/art-community-second-edition-released/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 linux.com 作者本人公告《The Art of Community Second Edition Released》(2012-06-12)（第二版修订内容清单：社区社会基础/社区策略/有效沟通/简单高效流程/协作工作流与设施/制造热度/衡量社区与增长/治理与结构/冲突解决/活动/招聘社区经理，新增 Chris Anderson 序）+ 渠道2 O'Reilly 官方 press release（『what makes people stay for the long haul is when they feel like they belong』、第二版新增 accountability/衡量成功/识别瓶颈、12 位社区管理领袖访谈含 Linus Torvalds/Tim O'Reilly/Mike Shinoda）+ 渠道3 豆瓣书目页（第二版内容简介：制定目标与战略/非官僚流程/工具与基础设施/创造热度/跟踪优化工作/代表性治理/冲突与难缠人格管理；2012-5-30，ISBN 9781449312060，576 页）+ 渠道4 Linux Foundation 2014 访谈（三大核心特征：清晰的参与入口 on-ramps/庆祝持续贡献/无 entitlement 的归属感；先定义使命→搭建沟通基础设施→贡献文化→开放透明）+ 渠道5 豆瓣书单评语（『书中提到社区的本质是归属感（belonging），或许就是《The Business of Belonging》的理念源头』）+ 渠道6 Intel 访谈（平等化权力动态、entitlement 是开源暗面、radical candor、kindness 基底）"
+research_question: "开源与在线社区的管理者如何从战略、流程、治理、衡量到冲突处理，系统地建设并运营一个让成员长期留下来的社区？"
+core_claims:
+  - "归属感（belonging）是成员长期留存的根本：『Communities are vibrant entities... what makes people stay for the long haul is when they feel like they belong』；社区的本质是归属感，此命题被中文社群书单视为《The Business of Belonging》的理念源头（O'Reilly press release + 豆瓣书单）"
+  - "第二版全书覆盖社区管理完整主题：社区的社会基础、社区策略（明确 objectives and goals）、有效沟通、简单非官僚的流程、协作工作流与工具基础设施、制造 buzz、衡量社区与增长（tracking progress）、治理与社区结构、冲突解决（含难缠人格）、创建与运行活动、招聘社区经理；并新增 accountability、衡量成功、识别瓶颈与解决（linux.com 作者本人 + O'Reilly press release + 豆瓣）"
+  - "优秀社区三大核心特征：1) 一系列清晰的参与入口（crisp on-ramps）——成员能学会如何参与、获得所需知识、找到可做的事、感到贡献被庆祝；2) 庆祝重要且持续的贡献（而非单次工作）；3) 建设归属感——让人感到『被需要』但不滋生 entitlement（Linux Foundation 访谈）"
+  - "建设路径：先定义清晰使命（mission 是成员自愿投入时间精力的动机）→ 搭建成员需要的沟通与基础设施 → 讨论首个发布计划 → 培育『贡献为王』的文化（避免 bike-shedding）→ 开放透明、给贡献者尊重与提交权限；社区经理的角色是鸟瞰全局又能俯冲到任意层级优化协作、帮助成员成功（Linux Foundation 访谈）"
+  - "治理与冲突：探索有代表性、能胜任的治理策略；识别并管理冲突、处理分裂性人格（豆瓣/出版社目录）；权力动态需平等化（equalizing power dynamics），entitlement 是开源的暗面，需 radical candor 与明确的边界声明（Intel 访谈）"
+  - "衡量与持续改进：避免虚荣指标，验证比事件更重要；用量化指标跟踪社区与活动『运行状况』，围绕正确的行动跟踪，克服对失败的恐惧（Microsoft Open Source Show 中文摘要）"
+method: "从业者经验框架（D 级）：作者担任 Ubuntu 社区经理约 10 年、后任 XPRIZE 社区高级总监、GitHub 等组织顾问，融合十年社区管理一线经验；第二版含 12 位社区管理领袖访谈（Linus Torvalds、Tim O'Reilly、Mike Shinoda 等）"
+results: "（从业者定位）开源/在线社群运营的奠基性实操手册，从战略到治理的系统覆盖；『归属感』论点成为后续商业社群书籍（Spinks 2021）的直接理念源头"
+limitations: "经验法则与规范性建议为主，无实证检验；案例集中于开源软件社区（Ubuntu 等），商业品牌社群适配需调整；第二版为内容扩充修订而非全新理论框架"
+boundary_conditions: "适用于有明确使命、以自愿贡献者为核心的开源/在线协作社区；对纯消费型品牌社群、无贡献结构的粉丝群需降低流程与治理部分权重"
+relevant_nodes: [sense_of_community, newcomer_onboarding, community_rituals, status_systems, community_governance, participation_ladder, collective_effervescence, community_boundaries]
+notes: "从业者经验框架（D 级），如实标注。归属感论点经 O'Reilly 官方 press release 与作者本人 linux.com 文章双重确认；三大特征/使命优先/治理与冲突/衡量等均来自可抓取的访谈与书目内容，未编造。第二版出版年 2012 经作者本人公告与豆瓣书目双重确认（2009 为第 1 版）。"
+last_verified: "2026-09"

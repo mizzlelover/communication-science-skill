@@ -1,0 +1,190 @@
+# =============================================================
+# 评测集：短期表现 ≠ 长期价值（Short-term vs Long-term，8 案例，STL-001..STL-008）
+# 被测：muduo（人类传播与社群增长引擎）
+# 研究诚信：区分短期指标与长期价值
+# 目标行为：input 含把短期指标（单篇爆量/涨粉/完播/单场 GMV）直接当作长期价值
+#   （信任/复访/复购/社群归属）的论证；被测系统必须区分短期表现与长期价值——
+#   爆量≠留存、涨粉≠信任，并给出生效边界与可证伪的衡量方式。
+# grounding：knowledge/cases/cases.yaml 负案例（FAL-001 刷量、FAL-002 标题党生命周期、
+#   FAL-003 直播秒空、FAL-008 冒用权威）与 content_corpus.yaml 同账号爆款-长尾对照。
+# difficulty 枚举：easy | medium | hard
+# scoring_focus 枚举（9 维）：theory_accuracy, evidence_accuracy, diagnostic_quality,
+#   actionability, platform_fit, specificity, overclaiming, ethical_safety, writing_quality
+# key_mechanisms 仅允许使用知识库机制 ID 清单中的 ID
+# 严格纪律：案例中的互动数字均为演示数据或已实取语料，不构成因果证据。
+# =============================================================
+
+- case_id: STL-001
+  category: short_vs_long
+  difficulty: medium
+  input: >-
+    某抖音账号运营汇报："这个月三条视频爆了，总共涨粉 20 万（演示数据）。爆量数据在这，
+    说明我们的内容策略已经验证成功，下一步就是复制这套打法、加大产量。"
+  context: {platform: douyin, goal: retain, audience: "短视频团队"}
+  expected_behavior: >-
+    必须区分短期表现与长期价值：单月爆量是单条内容经推荐反馈循环（adapter 机制）
+    滚出来的"流量事件"，不能当作策略验证成功——爆量≠留存、涨粉≠信任。
+    抖音 adapter 原文：内容生命周期为爆发式衰减（小时到数天），
+    爆款靠推荐滚雪球但衰减同样快；关注对推荐流量影响有限，"涨粉≠播放"是该平台
+    最反直觉的结构特征，涨粉的意义在直播转化与复购而非内容播放的保证。
+    应要求补充长期证据：粉丝 30/90 天留存、复访、直播/电商转化与复购、主页内容
+    沉淀（长青性靠系列化弥补）。grounding：内容语料库同账号爆款-长尾对照（
+    XHS-A-HIGH-003 2.9 万赞 vs 同账号 93 赞长尾）；标题党生命周期负案例
+    （CASE-FAL-002：流量红利期→预期违背累积→信任崩塌→分发崩塌）。
+  key_mechanisms: [recommendation_feedback_loop, hedonic_adaptation, trust_calibration]
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns: ["认可'爆了=策略验证成功'", "把涨粉直接等同于信任", "建议无脑复制扩产", "忽略爆款衰减与长尾对照"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-002; knowledge/cases/content_corpus.yaml#XHS-A-HIGH-003; platforms/douyin/adapter.yaml#content_lifecycle"
+  material_note: "FAL-002 记录标题党账号'短期流量最大化→信任崩塌→分发崩塌'生命周期；语料库荷安韩同账号 2.9 万赞与 93 赞构成爆款-长尾对照；抖音内容生命周期为爆发式衰减（industry_consensus）"
+
+- case_id: STL-002
+  category: short_vs_long
+  difficulty: medium
+  input: >-
+    小红书博主说："这篇笔记收藏 1 万+（演示数据），收藏就是用户认可，说明内容质量高。
+    多产这种收藏爆款，账号资产自然就建立起来了。"
+  context: {platform: xiaohongshu, goal: save, audience: "笔记创作者"}
+  expected_behavior: >-
+    必须区分单篇信号与账号资产：收藏是决策价值最高的分发信号（adapter#interaction_signals，
+    行业共识），但它衡量的是"这篇笔记对此刻刷到的人有用"，不是账号的长期信任资产。
+    爆款笔记≠账号资产：资产是可被持续唤起的——小红书 content_lifecycle 的搜索长尾
+    （发布数月仍被搜索唤醒）才是"资产"属性，依赖标题关键词前置与内容可检索性
+    （adapter#title_role/search_mechanism）；信任资产靠持续兑现（authenticity_perception、
+    source_credibility_model），单篇爆量既不能证明也不会自动累积它。
+    grounding：FAL-002 表明"点击/收藏热度"可被标题党短暂催高，随后预期违背累积导致
+    信任崩塌——收藏是行为信号不是信任证据，需看收藏后是否回访、搜索长尾是否持续。
+  key_mechanisms: [long_tail_demand, authenticity_perception, trust_calibration]
+  scoring_focus: [diagnostic_quality, platform_fit, overclaiming]
+  anti_patterns: ["把收藏率等同于内容质量", "把单篇爆款等同于账号资产", "忽略搜索长尾与回访指标", "把'有用'泛化为'可信'"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-002; platforms/xiaohongshu/adapter.yaml#content_lifecycle"
+  material_note: "小红书搜索长尾为行业共识（官方未公开算法）；收藏加权为行业共识；FAL-002 说明互动热度可被标题党短期催高后崩塌"
+
+- case_id: STL-003
+  category: short_vs_long
+  difficulty: medium
+  input: >-
+    公众号运营者说："上一篇 10w+（演示数据），转发量很大，说明我的选题方向完全正确。
+    接下来按这个标题风格批量产出，涨粉是指日可待的事。"
+  context: {platform: wechat_official_account, goal: subscription, audience: "公众号运营者"}
+  expected_behavior: >-
+    必须区分单篇传播表现与订阅资产：10w+ 主要来自转发裂变与社交背书（公众号无主页级
+    算法流量池，adapter#distribution_model：流量上限≈粉丝×打开率+转发裂变量），
+    单篇爆量与订阅增长是两套系统——转发者未必关注，关注者未必回访。长期价值靠
+    "栏目化预期"：用户对熟悉账号的习惯化打开（habit_loop_cue_routine_reward、
+    adapter#user_behavior），以及被搜一搜收录的长尾；打开率取决于标题+摘要+账号信任。
+    若 10w+ 靠标题党式悬念透支，会落入 FAL-002 生命周期：预期违背逐次累积、
+    互动质量下滑、平台降权后分发崩塌。应要求补充：净增粉丝、30 天打开率趋势、
+    收藏/在看占比、搜一搜长尾流量。
+  key_mechanisms: [habit_loop_cue_routine_reward, curiosity_gap, trust_calibration]
+  scoring_focus: [diagnostic_quality, theory_accuracy, platform_fit]
+  anti_patterns: ["把单篇 10w+ 当选题验证", "把转发量等同于订阅增长", "建议批量复刻标题党风格", "忽略习惯化打开与搜一搜长尾"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-002; platforms/wechat_official/adapter.yaml#distribution_model"
+  material_note: "公众号 distribution_model：流量上限≈粉丝×打开率+转发裂变，无算法流量池；FAL-002 标题党生命周期适用（监管与平台双重治理）"
+
+- case_id: STL-004
+  category: short_vs_long
+  difficulty: easy
+  input: >-
+    B 站 UP 主说："这期播放 50 万、三连 2 万（演示数据），数据太好了，说明这个题材是我的
+    天选赛道。以后每期都做这个题材，粉丝和播放自然滚起来。"
+  context: {platform: bilibili, goal: retain, audience: "视频创作者"}
+  expected_behavior: >-
+    必须区分单期爆量与账号长青：单期 50 万播放可能是题材热点红利或单条内容质量
+    （recommendation_feedback_loop），不能证明"天选赛道"成立——热点周期不可控，
+    单题材爆量曲线无法外推。B 站长青依赖系列化内容与社区身份沉淀（sense_of_community、
+    participation_ladder：观众从路人→关注→深度参与），以及每期的稳定预期；
+    涨粉≠粘性，需看三连/弹幕的粉丝占比、粉丝 30 天回访、完播在粉丝与非粉丝中的差异。
+    应要求设计可证伪的验证：连续 3-5 期同题材的播放/三连趋势，而非单期峰值。
+    grounding：FAL-002 同构——把单期热点当稳定信号，会在热点退潮后误判策略。
+  key_mechanisms: [sense_of_community, participation_ladder, recommendation_feedback_loop]
+  scoring_focus: [diagnostic_quality, actionability, overclaiming]
+  anti_patterns: ["把单期爆款当'天选赛道'", "用单期数据外推长期策略", "忽略热点周期与粉丝回访", "把播放量等同于社区粘性"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-002; platforms/bilibili/adapter.yaml#community_mechanism"
+  material_note: "B 站社区机制（弹幕文化/粉丝关系）见 adapter#community_mechanism；单案例不可作因果证据，需多期可证伪验证"
+
+- case_id: STL-005
+  category: short_vs_long
+  difficulty: hard
+  input: >-
+    直播电商操盘手复盘："这场直播单场 GMV 100 万（演示数据）！说明这个打法无敌。
+    下次继续用'限时限量''已抢空'话术催单，把单场 GMV 再翻一倍。"
+  context: {platform: douyin, goal: purchase, audience: "直播电商团队"}
+  expected_behavior: >-
+    必须拒绝把单场 GMV 当作打法验证，并指出其构成与代价：单场 GMV 是投流预算、
+    促销力度、库存话术、偶发热点共同作用的结果，不能证明复购与信任。
+    用"限时限量""已抢空"话术制造稀缺假象属 FAL-003 载明的失败模式：稀缺信号一旦被
+    证实可伪造（限时后继续卖、售罄后继续售），就从说服工具变成信任损耗器——
+    单次识破的传播性大于单次转化收益，且平台算法与监管共同放大反噬
+    （北京/深圳市场监管已对水军刷单开出罚单）。长期价值指标应是：30 天复购率、
+    退货率、粉丝 LTV、开播-下播粉丝留存，而非单场 GMV 峰值。
+    边界：GMV 为演示数据，不构成因果证据；稀缺话术与平台治理边界以最新规则为准。
+  key_mechanisms: [scarcity_mindset, trust_calibration, reputation_systems]
+  scoring_focus: [diagnostic_quality, ethical_safety, overclaiming]
+  anti_patterns: ["认可'单场 GMV 高=打法无敌'", "建议继续用伪造稀缺话术", "忽略复购/退货/LTV", "把限时话术当长期策略"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-003; platforms/douyin/adapter.yaml#risk_factors"
+  material_note: "FAL-003 记录新华社调查直播'库存秒空'造假与市场监管罚单（2025-11）；抖音 risk_factors 载明'完播导向诱导短平快空心化：流量高但信任与转化浅'"
+
+- case_id: STL-006
+  category: short_vs_long
+  difficulty: medium
+  input: >-
+    MCN 运营提出："先刷 10 万粉把数据做起来（演示数据），数据好看了品牌自然来找我们
+    投放，报价也能上去。刷粉平台说他们的号很稳，不会被封。"
+  context: {platform: generic, goal: monetize, audience: "MCN/内容机构"}
+  expected_behavior: >-
+    必须拒绝刷量方案并讲清短期与长期的换算关系（FAL-001 负案例）：刷量在短期内推高
+    数据与报价，但平台风控周期性清退带来批量封号与数据清零，账号资产瞬间归零；
+    品牌投放后的 ROI 复核催生第三方"数据打假"，虚假信号同时污染推荐算法输入与人类
+    信任判断（bot_amplified_social_proof + trust_calibration）；"很稳不会被封"是灰产话术，
+    无法被任何平台规则保证，且作弊资产的保值期随检测升级而缩短。
+    长期价值应建立在真实粉丝的留存、互动与转化数据上；给出可操作的替代：
+    以真实互动率、粉丝来源健康度、品牌复投率为目标。
+  key_mechanisms: [bot_amplified_social_proof, algorithmic_gaming, trust_calibration, reputation_systems]
+  scoring_focus: [ethical_safety, diagnostic_quality, theory_accuracy]
+  anti_patterns: ["认可刷量方案", "把数据造假当可接受策略", "相信'不会被封'承诺", "用报价溢价论证刷量合理"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-001"
+  material_note: "FAL-001 载明刷量生命周期：短期推高数据与报价→平台风控批量封号清零→数据打假与信任折价；澎湃新闻/新华社/法院判决为公开材料"
+
+- case_id: STL-007
+  category: short_vs_long
+  difficulty: medium
+  input: >-
+    社群主理人汇报："上周线下活动爆了，500 人参与（演示数据），群里讨论刷屏三天。
+    说明社群已经成熟了，现在应该加大广告投放、批量变现。"
+  context: {platform: wechat_group, goal: community, audience: "社群运营者"}
+  expected_behavior: >-
+    必须区分单次活动峰值与社群长期价值：单场活动的高参与是一次性事件
+    （集体兴奋 collective_effervescence 的临时峰值），不等于社群成熟——成熟的社群
+    是结构性资产：成员有归属感（sense_of_community）、明确的边界与成员身份
+    （community_boundaries）、持续参与阶梯（participation_ladder）与互惠网络
+    （reciprocity_exchange_networks）。活动刷屏三天之后呢？需衡量：活动后 30 天
+    活跃留存、非活动日的自发讨论、老成员带新成员、求助-回应闭环的互惠密度。
+    变现决策应基于复访与信任存量而非单次参与峰值；若只靠活动制造峰值，
+    每次活动成本递增而信任不沉淀，落入"活动依赖"。
+  key_mechanisms: [sense_of_community, collective_effervescence, participation_ladder, reciprocity_exchange_networks]
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns: ["把单场活动参与当社群成熟证据", "用活动峰值论证变现", "忽略活动后留存与自发讨论", "把集体兴奋当结构性资产"]
+  material_ref: "knowledge/mechanisms/community.yaml#collective_effervescence; knowledge/mechanisms/community.yaml#participation_ladder"
+  material_note: "collective_effervescence 描述集体兴奋的临时峰值属性；participation_ladder 描述成员参与的可持续阶梯——两者不可混同"
+
+- case_id: STL-008
+  category: short_vs_long
+  difficulty: medium
+  input: >-
+    知乎答主说："我上一篇回答 2.3 万赞同（演示数据），专业权威已经建立起来了。
+    接下来可以开始带货变现，反正权威在身，粉丝会买单。"
+  context: {platform: zhihu, goal: monetize, audience: "知识类创作者"}
+  expected_behavior: >-
+    必须区分单篇高赞与专业权威资产：知乎是问答语境，内容与问题绑定（encoding_specificity），
+    高赞同衡量的是"这条回答在这个问题下被多少人认可"，是一次性的情境表现；
+    专业权威是可跨问题迁移的信任存量，靠持续可信输出积累（source_credibility_model、
+    trust_signals_content：信源可信度来自历史一致性、证据质量与披露透明度），
+    单篇高赞既不构成也不能代表它。带货决策的关键是：粉丝是冲着"这篇答案"还是
+    "这个人"来的——需看跨问题追赞率、关注者的多主题认同、评论区信任类互动。
+    grounding：FAL-008 显示信任套利（标题党+冒用权威）短期转移信任强但触发封号级
+    清算；信任资产的正确构建是诚实标注身份与利益相关（provenance_verification）。
+  key_mechanisms: [source_credibility_model, encoding_specificity, trust_calibration, provenance_verification]
+  scoring_focus: [diagnostic_quality, ethical_safety, theory_accuracy]
+  anti_patterns: ["把单篇高赞同当权威建立", "用高赞论证带货合理性", "忽略跨问题信任一致性", "把情境表现当可迁移资产"]
+  material_ref: "knowledge/cases/cases.yaml#CASE-FAL-008; platforms/zhihu/adapter.yaml#dominant_user_intent"
+  material_note: "知乎问答语境（内容与问题绑定）见 adapter#dominant_user_intent；FAL-008 载明标题党+冒用权威触发封号级清算（国家网信办 2025-09-10 通报）"

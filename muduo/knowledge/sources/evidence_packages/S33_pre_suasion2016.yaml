@@ -1,0 +1,26 @@
+# Evidence Package — S33 Cialdini 2016（Pre-Suasion: A Revolutionary Way to Influence and Persuade）
+# 标准格式。access_level 如实标注。
+source_id: S33
+title: "Pre-Suasion: A Revolutionary Way to Influence and Persuade"
+authors: "Robert B. Cialdini"
+year: 2016
+journal: Simon & Schuster（专著）
+doi: "无 DOI（专著）"
+url: "https://pulserevops.com/knowledge/bs0038"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：英文深读笔记①（privileged moments 定义与 75.7% vs 33% 先导提问实验/what's focal is causal 警讯摄影视角实验/attractors 与 magnetizers 两类注意指挥官/联想优先与 3-5 分钟衰减/第七原则 unity）+ 英文深读笔记②（frontloading of attention『先呈现什么改变后呈现什么的体验』/29%→77.3% 乐于助人提问实验/咖啡杯 warm 启动研究/教室公文包启动研究/注意衰减时限）+ 实践向解读（unity 与『people who are me』/consistency cue/注意引导的机制）+ 中文视频解读（priming 科学性争议：elderly 行走启动复制失败/Kahneman 自承高估/一致性：献血者电话承诺提升 12% 跟进）"
+research_question: "在说服信息呈现之前的那一刻（先导期），如何通过引导注意力与联想来改变后续信息的接受度？"
+core_claims:
+  - "预说服（pre-suasion）：最有效的说服者不是打磨信息本身，而是设计信息到达前的时刻——先导性引导（提问、情境、线索）将注意力锚定于某些联想，决定后续信息被解释的框架；核心句『先呈现什么，改变人们如何体验随后呈现的内容』（frontloading of attention）"
+  - "特权时刻（privileged moments）：注意力集中且可被引导的短暂窗口；现场实验显示先问『你觉得自己乐于尝试新事物吗』使留邮箱率从 33% 升至 75.7%，先问『你觉得自己乐于助人吗』从 29% 升至 77.3%——单个先导问题即产生约 42-48 个百分点的摆动"
+  - "注意的指挥官分两类：attractors（性、威胁、新奇等自动夺取注意的刺激，是双刃剑——吸引打开但正文不兑现则信任崩塌）与 magnetizers（未完成、神秘、自我相关等锁住注意的刺激，如 Zeigarnik 效应）；『处于焦点即被认为因果』（what's focal is causal）：警讯摄像头指向嫌疑人使陪审员更倾向判定供述自愿"
+  - "联想优先（primacy of associations）：思维即联想——印有『warm』的咖啡杯使被试把陌生人评为更友好；先导线索约 3-5 分钟不强化即衰减"
+  - "在 1984 年《Influence》六原则（互惠/喜好/社会认同/权威/稀缺/承诺一致）基础上增补第七原则 unity（共享身份『people who are me』，区别于 liking 的『people like me』）；且六原则都需先导注意预调其生效语境"
+method: "作者三十年田野研究（含卧底销售/筹款/培训项目）与所引社会心理学实验的综合"
+results: "（从业者综合）把说服研究从『说什么』推进到『说之前先让受众想到什么』，成为行为科学影响研究的新标杆"
+limitations: "书中引用的部分底层 priming 证据（如环境符号直接改变行为）在大规模复制项目中失败——该框架的稳健部分是注意/联想引导通道，行为 priming 类通道不可靠"
+boundary_conditions: "先导引导需自然、不被识破为操纵；先导联想与后续内容必须真实同向，否则落差触发逆反；注意引导的有效窗口短（分钟级）"
+relevant_nodes: [pre_suasion_attention_channeling, selective_attention, top_down_attention_guidance, framing_effects]
+notes: "从业者实践框架（D 级，如实标注）。privileged moments、channeled attention、unity 等核心概念为公开内容，未编造；与 priming 复制危机的边界已在 pre_suasion_attention_channeling 节点标注（S126）。"
+last_verified: "2026-09"

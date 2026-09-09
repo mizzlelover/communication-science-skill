@@ -1,0 +1,25 @@
+# Evidence Package — S194 McGuire 1964（预防接种理论纲领）
+# 标准格式。access_level 如实标注。
+source_id: S194
+title: "Inducing resistance to persuasion: Some contemporary approaches"
+authors: "William J. McGuire"
+year: 1964
+journal: Advances in Experimental Social Psychology, Vol. 1 (L. Berkowitz 编), 191-229, Academic Press
+doi: "无 DOI（书章；当代综述普遍引用 191-229 页码）"
+url: "https://doi.org/10.1016/S0065-2601(08)60052-0"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "章节元数据与理论核心经 4 个独立源交叉核实（未取得书章全文）：①多个书目/综述（Review of Communication 2025 接种理论综述注释、多部当代 prebunking 书目）一致引用：McGuire 1964, Advances in Experimental Social Psychology 1: 191-229——接种研究纲领的纲领性陈述；②理论核心：以医学疫苗类比态度抵抗——预先暴露于弱化形式的攻击论点（refutational pretreatment：两-sided 信息给出反方论点并逐条驳倒）动员防御动机（threat）与反论证生成，使个体对后续更强说服攻击产生抵抗；③实验基础（同纲领 McGuire & Papageorgis 1961 Sociometry 24(2):184-197，多源核实）：以『文化真理』（cultural truisms，如饭后刷牙有益等人人认同却从未被辩护过的信念）为材料，支持性防御（仅给支持论点）vs 反驳性防御——反驳性条件一致优于支持性条件；④推广效应：对某一具体攻击的接种可迁移至同一信念上的不同攻击（Papageorgis & McGuire 1961，JASP 62(3):475-481）；⑤当代延续：van der Linden 等 2017 气候错误信息接种、Roozenbeek & van der Linden 2019 Bad News 游戏与 2022 Science Advances 五国预注册预驳研究——技术型接种在真实错误信息场景延续该框架"
+research_question: "如何让态度在遭受攻击前就建立抵抗？什么样的预先处理最有效？"
+core_claims:
+  - "接种类比：预先暴露弱化版反方攻击+驳斥，比单纯支持性强化更能建立对后续说服的抵抗"
+  - "两成分机制：威胁感知（意识到信念会被攻击）+ 反论证预备（主动生成反驳）——缺一效果受限"
+  - "文化真理悖论：最被广泛认同的信念最脆弱（从未被辩护过）；接种恰恰对其最有效"
+  - "推广性：接种产生的免疫可跨越具体论点泛化到同信念的其他攻击（后续技术型接种/预驳研究的理论桥梁）"
+method: "系列实验室实验（文化真理材料）：防御类型（支持性 vs 反驳性）× 攻击时序的析因设计，后测态度抵抗"
+results: "（经典纲领）反驳性接种效应确立，60 余年被健康/政治/科学传播延续（预驳 prebunking）"
+limitations: "书章全文未获取（多源理论陈述交叉核实）；文化真理材料与当代错误信息情境的差异由当代研究 bridging；实验室短时程，接种衰减与『加强针』为后续议题"
+boundary_conditions: "威胁须适度（过强反被说服/过弱不设防）；反驳须先行于攻击；对已被深度说服者的修复弱于预防"
+relevant_nodes: [inoculation_theory]
+notes: "inoculation_theory 节点『McGuire & Papageorgis 接种实验一手 EP 未建』标注的建包来源（1964 纲领章覆盖 1961 实验系列）。理论陈述为公开标准内容，未编造。"
+last_verified: "2026-09"

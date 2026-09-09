@@ -1,0 +1,25 @@
+# Evidence Package — S183 Elliot & Maier 2014（Color Psychology）
+# 标准格式。access_level 如实标注。
+source_id: S183
+title: "Color Psychology: Effects of Perceiving Color on Psychological Functioning in Humans"
+authors: "Andrew J. Elliot; Markus A. Maier"
+year: 2014
+journal: "Annual Review of Psychology 65: 95-120"
+doi: "10.1146/annurev-psych-010213-115035"
+url: "https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010213-115035"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：Annual Reviews 官方论文页摘要；渠道2：官网 docserver 公开 PDF（摘要、目录结构与引言全文）"
+research_question: "感知颜色如何影响人类的心理功能（情绪、认知、行为），而不仅仅是审美？"
+core_claims:
+  - "颜色承载重要含义，对人的情感、认知与行为有实际影响（超越美学层面）"
+  - "实证证据集中在成就情境（红色与绩效）与亲和/吸引情境，并覆盖消费行为与食品饮料评估消费"
+  - "该领域仍处早期阶段：边界条件、调节变量与真实世界可推广性需要大量后续工作，才能支撑强的概念性陈述与应用建议"
+  - "近十年理论（颜色-意义-功能框架方向）与方法论（标准化颜色刺激、情境操纵）进步克服了早期工作的缺陷"
+method: "综述（历史与方法论回顾 + 成就/亲和吸引/消费/食品饮料领域的实证发现梳理）"
+results: "颜色效应确实存在但受情境强烈调制；方法论进步修正了早期颜色混淆与主观性问题"
+limitations: "综述作者明确警告：现有证据不足以支撑强应用断言；边界条件与调节变量研究不足"
+boundary_conditions: "颜色效应依赖情境、文化编码与个体经验；成就（红）与吸引情境证据相对集中；消费领域效应较弱且不稳定"
+relevant_nodes: [color_emotion_associations, emotional_arousal, affect_heuristic, visual_hierarchy, distinctive_brand_assets]
+notes: "颜色心理学的权威综述，与色彩-情绪联想节点（强调文化/语境依赖、反对普适对照表）定位一致；内容来自官方摘要与公开 PDF，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,24 @@
+# Evidence Package — S106 Vosoughi 2018
+# 标准格式。access_level 如实标注。
+source_id: S106
+title: "The Spread of True and False News Online"
+authors: "Soroush Vosoughi; Deb Roy; Sinan Aral"
+year: 2018
+journal: Science 359(6380), 1146-1151
+doi: "10.1126/science.aap9559"
+url: "https://www.science.org/doi/10.1126/science.aap9559"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "结构化摘要（NSTL 收录）+ 补充材料正文大段（S1-S10，含方法/数据描述/定义；Science 官方 SM PDF 实际抓取）+ 正文 PDF 链接（订阅墙）"
+research_question: "2006-2017 年 Twitter 上经核实的真假新闻，传播模式有何差异？"
+core_claims:
+  - "数据覆盖约 12.6 万条新闻故事、约 300 万用户、450 万+ 次转发（结构化摘要）"
+  - "真相与谣言以级联（cascade）定义；假新闻传播速度、深度、广度系统性优于真新闻"
+  - "（正文主张以摘要与 SM 为准；具体效应量以原文核实）"
+method: "六家独立事实核查机构验证真伪（n≈126,000 stories）；Twitter 数据 2006-2017；移除 bot 后比较级联的传播规模/速度/结构"
+results: "（摘要级）假新闻比真新闻传播更快更远；新颖性（novelty）与情绪反应是解释变量（见 SM 讨论）"
+limitations: "Twitter 单一平台；'新闻'定义宽泛；bot 移除方法学有讨论（SM 已登记）"
+boundary_conditions: "适用于社交平台谣言级联研究；结论是平台数据相关，非实验因果"
+relevant_nodes: [bot_amplified_social_proof, algorithmic_amplification, misinformation_velocity]
+notes: "正文受 Science 订阅墙限制 → 主要依据摘要+补充材料（substantial_excerpt）；未编造效应量。"
+last_verified: "2026-09"

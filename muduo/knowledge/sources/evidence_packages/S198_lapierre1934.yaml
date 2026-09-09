@@ -1,0 +1,25 @@
+# Evidence Package — S198 LaPiere 1934（态度 vs 行为）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S198
+title: "Attitudes vs. Actions"
+authors: "Richard T. LaPiere"
+year: 1934
+journal: Social Forces, 13(2), 230-237
+doi: "10.2307/2570339"
+url: "https://doi.org/10.2307/2570339"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心结果经 4 个独立源交叉核实（未取得原文）：①期刊页码两源一致（Social Forces 13:230-237，迈尔斯《社会心理学》教学页与中文教材引用）；②实验：1930-31 年与一对年轻中国夫妇环美旅行 3 个月，途经 184 家餐馆与 66-67 家旅馆/汽车营地（两源口径差 1 家，如实并记），仅 1 家旅馆拒绝接待；③数月后向同一批商家发问卷：约 128 份回复中 90% 以上表示不愿接待中国人——口头态度与实际行为严重背离；④后续解读（迈尔斯教材）：态度特殊性/时间间隔/自我意识/态度强度/可接近性五因素调节预测力"
+research_question: "口头的种族态度能否预测实际接待行为？"
+core_claims:
+  - "现场观察：251 家住宿/餐饮场所中仅 1 家实际拒绝接待中国夫妇，而问卷回复 90%+ 拒绝——态度与行为系统性背离的经典演示"
+  - "方法论启示：泛化态度（对『中国人』群体）预测具体单次行为时预测力崩塌——态度-行为特殊性匹配原则的起点"
+  - "社会规范解释（LaPiere 自述）：合乎规范的当面请求压倒 privately 持有的偏见——规范性压力在场时态度失效"
+  - "现代校正（Ajzen/Fishbein 传统与 meta）：整体态度-行为相关约 r=.36（Greenwald 等 2009），特殊性匹配与聚合可大幅提升预测"
+method: "现场参与式观察（真实旅行中的隐秘记录）+ 事后问卷法对照"
+results: "（经典）态度-行为背离首次系统演示；催生 TPB 等预测修正传统"
+limitations: "未取得原文（多源转述交叉核实）；单对中国夫妇、非随机抽样；旅店数 66/67 口径差异如实并记；1930s 美国特定种族语境的外推边界"
+boundary_conditions: "当面规范化请求情境下态度预测失效；问卷等价于泛化态度测量；高特殊性、直接经验、强态度时预测恢复（Fazio 可接近性研究）"
+relevant_nodes: [attitude_behavior_gap]
+notes: "attitude_behavior_gap 节点 LaPierre 经典文献的建包来源。核心数字多源一致，未编造。"
+last_verified: "2026-09"

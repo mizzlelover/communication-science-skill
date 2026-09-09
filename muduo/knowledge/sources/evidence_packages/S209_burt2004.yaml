@@ -1,0 +1,25 @@
+# Evidence Package — S209 Burt 1992/2004（结构洞与好想法）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S209
+title: "Structural Holes and Good Ideas"
+authors: "Ronald S. Burt"
+year: 2004
+journal: American Journal of Sociology, 110(2), 349-399（理论专著：Structural Holes, Harvard University Press, 1992）
+doi: "10.1086/421787"
+url: "https://doi.org/10.1086/421787"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "官方摘要全文实取（NBER 工作论文版全文 + IEEE/万方/集智三处引用交叉）：假设——群体内观点与行为比群体间更同质，跨群体连接的人更熟悉替代性思维方式与行为方式，跨越结构洞的经纪提供『视野优势』（vision of options otherwise unseen），这是经纪成为社会资本的机制。实证：美国大型电子公司经理人讨论网络（组织内充满结构洞）——薪酬、正面绩效评估、晋升与好想法不成比例地集中在网络跨越结构洞的人手中；跨群体经纪人更可能表达想法、更少被否决、更可能被评为有价值。理论专著：Burt 1992《Structural Holes: The Social Structure of Competition》（Harvard UP）定义结构洞、约束度（constraint）与经纪收益"
+research_question: "跨越结构洞的网络位置为何带来优势？其机制是什么？"
+core_claims:
+  - "经纪的社会资本机制=视野优势：跨洞者接触异质信息流，更早看到并综合出好想法"
+  - "实证：大型电子公司中薪酬/好评/晋升/好想法集中于跨洞位置——经纪与创意产出的强关联"
+  - "过程性结果：经纪人更可能表达想法、更少被否决、更多被评为有价值——表达、存活、评价三环节均受益"
+  - "理论谱系：Simmel 交叉群体归属/Merton 角色丛 → 1992 结构洞形式化 → 2004 创意实证"
+method: "组织网络问卷（大型美国电子公司经理人讨论网络）+ 结构洞指标（约束度）与绩效/创意产出的关联分析"
+results: "（经典）结构洞理论的社会资本实证核心；组织网络分析的标配引用"
+limitations: "单家公司样本；横断面关联（因果方向依赖理论论证与后续纵向研究）；经纪收益受文化情境调节（东亚样本有争议发现）"
+boundary_conditions: "层级制/团队协作文化中经纪收益减弱；洞的价值取决于群体间信息异质性——若群体已同质（算法信息茧房内）则无洞可跨"
+relevant_nodes: [structural_holes_bridging]
+notes: "structural_holes_bridging 节点的核心 EP（1992 专著+2004 实证合包）。摘要为官方文本，未编造。"
+last_verified: "2026-09"

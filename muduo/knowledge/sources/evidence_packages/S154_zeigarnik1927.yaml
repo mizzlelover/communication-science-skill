@@ -1,0 +1,24 @@
+# Evidence Package — S154 Zeigarnik 1927（Über das Behalten von erledigten und unerledigten Handlungen；On Finished and Unfinished Tasks）
+# 标准格式。access_level 如实标注。
+source_id: S154
+title: "Über das Behalten von erledigten und unerledigten Handlungen（On Finished and Unfinished Tasks）"
+authors: "Bluma Zeigarnik"
+year: 1927
+journal: "Psychologische Forschung 9: 1-85（德文原文；英文译本：Zeigarnik, B. 1938. On finished and unfinished tasks. In W. D. Ellis (Ed.), A source book of Gestalt psychology, pp. 300-314）"
+doi: "未知"
+url: "https://pubmed.ncbi.nlm.nih.gov/32291585/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "渠道1：MacLeod 2020《Zeigarnik and von Restorff: The memory effects and the stories behind them》（Mem Cognit 48:1073-1088, PMID 32291585，实抓）权威综述摘要：确认 Zeigarnik（Psychologische Forschung, 9, 1-85, 1927）首次报告「中断任务记忆优于完成任务」（蔡格尼克效应），并概述其毕业论文研究；渠道2：all-about-psychology.com（实抓）转述起源（维也纳咖啡馆侍者能记住未结账订单、结账即忘）与实验（拼图/黏土/折纸盒等任务，部分被故意中断）；渠道3：中文百科/科普多源（enc.newdu、wiki8.cn，实抓）转述实验设计（约 22 件简单任务、仅半数允许做完、顺序随机、结束后立即回忆，未完成回忆更优）与准需求/张力解释；渠道4：CSCD 引文多条 + Hanspub 引文确认页码 9:1-85；渠道5：京师心理大学堂科普文（xinli001，实抓）转述未完成任务回忆量约为已完成的 1.9 倍（个别达 5 倍，数值源自二手中文转述）"
+research_question: "被中断而未完成的任务与已完成的任务，哪个更容易被记住？（源自咖啡馆侍者能记住未结账订单、结账后即忘的现象观察）未完成状态如何在心理上维持激活？"
+core_claims:
+  - "未完成（被中断）的任务比已完成的任务回忆更好——蔡格尼克效应"
+  - "任务启动后形成未满足的「准需求」（quasi-need），在心理场（Lewin 场论）中维持张力（tension），使任务表征保持活跃直至完成；完成后张力释放、记忆随之消退"
+  - "中断点越接近完成，回忆优势越明显（二手转述）；后续研究表明效应受目标承诺/动机等调节，并非无条件成立"
+method: "实验室记忆实验：让被试执行一系列简单任务（约 22 件，时长相近），其中一半允许做完、一半在未完成时被中断（两类任务顺序随机安排）；实验结束后立即让被试自由回忆做过哪些任务，比较未完成与已完成任务的回忆数量"
+results: "未完成任务比已完成任务回忆更好（二手中文科普转述：平均约 1.9 倍，个别达 5 倍——数值仅见于二手中文转述，未在英文综述中复核）；Zeigarnik 以准需求/心理张力解释该效应"
+limitations: "原文为 1927 年德文（无 DOI），本包未获取原文正文；核心效应经权威综述（MacLeod 2020）+ 多源科普/百科转述交叉核实；「1.9 倍/5 倍」具体数值仅见于二手中文科普，使用需谨慎；后续复制结果有波动（效应依赖任务卷入与动机）"
+boundary_conditions: "需要真实目标承诺——用户不在乎的任务中断不产生效应；进度可见且可完成时动机最强；应用上：分集/连载/任务卡制造未完成点以获得回访，但每个未完成点必须值得回来，超量未完成状态会转为焦虑与逃避（红点疲劳）"
+relevant_nodes: [zeigarnik_effect]
+notes: "蔡格尼克效应原始论文（1927，德文原文；paper 级）。重要勘误：任务书所写页码「9:185」与多源通行引文「9:1-85」不符（CSCD×2、MacLeod 2020、Hanspub 均作 9:1-85），本包以通行引文为准并如实标注。核心内容为综述/百科转述，未编造。支撑 memory.yaml zeigarnik_effect。"
+last_verified: "2026-09"

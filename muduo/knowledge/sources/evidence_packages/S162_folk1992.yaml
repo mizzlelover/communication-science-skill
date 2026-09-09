@@ -1,0 +1,24 @@
+# Evidence Package — S162 Folk, Remington & Johnston 1992（Involuntary Covert Orienting Is Contingent on Attentional Control Settings）
+# 标准格式。access_level 如实标注。
+source_id: S162
+title: "Involuntary Covert Orienting Is Contingent on Attentional Control Settings"
+authors: "Charles L. Folk; Roger W. Remington; James C. Johnston"
+year: 1992
+journal: "Journal of Experimental Psychology: Human Perception and Performance 18(4): 1030-1044"
+doi: "10.1037/0096-1523.18.4.1030"
+url: "https://pubmed.ncbi.nlm.nih.gov/1431742/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed 一手完整摘要（4 个实验设计与结果）+ hanspub 中文论文及中文综述引用确认（条件性捕获/自上而下调节）+ tandfonline 引文列表交叉确认"
+research_question: "非自愿的注意捕获是完全刺激驱动（任意显著刺激都捕获），还是取决于当前任务设定的注意控制设置？"
+core_claims:
+  - "非自愿注意转移取决于诱发事件属性与任务所需属性之间的关系（contingent capture 条件性捕获）"
+  - "实验 1：无效突现线索只对突现目标产生代价、对颜色目标无代价；实验 2：颜色线索只对颜色目标产生更大代价；实验 3 汇聚一致证据；实验 4 检验颜色线索捕获的边界条件与时间进程"
+  - "注意捕获受任务诱发的注意控制设置调节，而非单纯由刺激物理显著性决定"
+method: "空间线索范式变体共 4 个实验，系统操纵线索属性与用于定位目标的属性之间的关系"
+results: "捕获效应与任务相关属性一致：突现线索捕获突现目标，颜色线索捕获颜色目标；不支持纯粹的刺激驱动捕获"
+limitations: "与 Theeuwes 的纯刺激驱动捕获之争延续至今；Awh、Belopolsky 等后续提出 top-down/bottom-up 二分本身失败的批评"
+boundary_conditions: "适用于视觉空间注意；需存在明确的目标相关特征（注意控制设置）；无目标浏览时更可能退化为自下而上驱动"
+relevant_nodes: [top_down_attention_guidance]
+notes: "条件性捕获（contingent capture）奠基论文，top_down_attention_guidance 节点的关键实验来源；PubMed 完整摘要+多源交叉，未虚标正文级。"
+last_verified: "2026-09"

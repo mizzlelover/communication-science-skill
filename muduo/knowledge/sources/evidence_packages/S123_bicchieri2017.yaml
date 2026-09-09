@@ -1,0 +1,11 @@
+# Evidence Package 墓碑 — S123 Bicchieri 2017（Norms in the Wild）
+# T1 同书重复登记合并（2026-09-09）：S123 与 S28 为同一本书（OUP 2016-12/2017）。
+# 保留方：S28（core_30 正规登记，annotated，substantial_excerpt）——S28 的 content_obtained
+# 为本包超集（Guala 书评全文 + Amazon 出版社简介 + 豆瓣详评/目录 + trendsetters 章与 UNICEF 应用）。
+# 原 EP 内容见 git 历史（本文件合并前版本）；引用一律使用 S28。
+source_id: S123
+merge_status: MERGED_INTO
+merged_into: S28
+merged_date: "2026-09-09"
+merge_reason: "同书重复登记（title/authors/year/出版社同一）；S28 content_obtained 为本包超集且节点覆盖更全（含 norm_enforcement_reputation）。全部节点引用已重定向至 S28（原 norm_change_intervention 幽灵引用随合并消除）。"
+relevant_nodes: []

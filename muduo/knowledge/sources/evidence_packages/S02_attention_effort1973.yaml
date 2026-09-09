@@ -1,0 +1,26 @@
+# Evidence Package — S02 Kahneman 1973（Attention and Effort）
+# 标准格式。access_level 如实标注。
+source_id: S02
+title: "Attention and Effort"
+authors: "Daniel Kahneman"
+year: 1973
+journal: Prentice-Hall（专著）
+doi: "无 DOI（专著）"
+url: "https://www.kaoyan.cn/ky/14138"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经 4 个独立中文教育/科普渠道交叉实取（均为对容量模型的公开转述，未见原文正文）：(1) 掌上考研 kaoyan.cn 注意章节——注意能量分配模型（Kahneman 1973《注意与努力》）：可用资源与唤醒相连、数量随情绪/药物等因素变化；分配方案受唤醒因素、当前意愿、对作业要求能量的评价及个人长期意向制约；资源有限过程 vs 材料有限过程；(2) 新东方在线考研白皮书——双作业中资源总需要量超过可用总能量时双作业操作发生干扰，一个作业所用资源增加量即另一作业可用资源减少量；(3) 中国社会科学网/注意力经济学——注意力稀缺，大脑把注意力配置在风险最高或收益最大的机会上，配置需付出巨大努力，观测努力方向与程度可推断注意力配置；(4) 双任务训练综述——该模型为双任务范式奠定理论基础，双任务损耗（DTC）成为量化资源竞争的指标"
+research_question: "注意的容量与分配机制是什么？努力（effort）如何作为注意分配的指标？"
+core_claims:
+  - "注意力是有限容量的认知资源，可同时分配至两个以上不同刺激，但资源总量有限——容量模式/注意能量分配模型"
+  - "可用资源数量与唤醒水平相连，随情绪、药物等因素变化；分配方案受唤醒因素、当前意愿、对作业要求能量的评价及个人长期意向制约"
+  - "只要总需求不超过可用能量，人可同时接收多个输入或从事多种活动；双作业中资源总需要量超过可用总能量时即发生干扰（一个作业所用资源增加量 = 另一作业可用资源减少量）"
+  - "资源有限过程 vs 材料有限过程：前者因资源限制而无法有效完成，后者即使分配更多资源也无法改善操作"
+  - "努力作为分配政策的观察指标：注意力的合理配置需付出努力，观测人们的努力方向与程度即可推断其注意力配置（经济学解读）"
+method: "实验心理学专著：双耳分听/选择性注意实验传统 + 双任务范式，综合为容量与分配理论（Kahneman 1973）"
+results: "（经典理论）容量有限注意模型成为注意研究的奠基框架，双任务范式的理论基础；后经多资源模型（Wickens）扩展"
+limitations: "本轮核心框架基于 4 个独立二手转述渠道交叉确认，未取得专著原文正文；单一资源模型的内部争论（vs 多资源模型）未在书中完全解决"
+boundary_conditions: "适用于解释任务间资源竞争与干扰；总需求不超容量时可并行；高度自动化任务可低代价并行；唤醒水平调节可用容量"
+relevant_nodes: [attention_capacity_limits, selective_attention, cocktail_party_effect, attention_residue, inattentional_blindness]
+notes: "capacity theory 核心论点经多源交叉实取为公开教学内容，未编造。2026-09-09 同书重复登记 S117（found 级元数据）已并入本包（MERGED_INTO，见 S117 墓碑）。"
+last_verified: "2026-09"

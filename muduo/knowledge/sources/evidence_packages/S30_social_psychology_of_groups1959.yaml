@@ -1,0 +1,27 @@
+# Evidence Package — S30 Thibaut & Kelley 1959（The Social Psychology of Groups）
+# 标准格式。access_level 如实标注。
+source_id: S30
+title: "The Social Psychology of Groups"
+authors: "John W. Thibaut; Harold H. Kelley"
+year: 1959
+journal: "John Wiley & Sons（专著；1978 年续作《Interpersonal Relations: A Theory of Interdependence》）"
+doi: "无 DOI（专著）"
+url: "https://journal.psych.ac.cn/xlkxjz/EN/article/downloadArticleFile.do?attachType=PDF&id=2341"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：心理科学进展综述全文（赵菊/佐斌《情境与互动：人际互倚及其模式》：结果矩阵/CL/CLalt/互倚情境模式）+ 腾讯阅读社会交换理论章节（Thibaut & Kelley 结果矩阵与二元交互/交换理论四分支定位）+ Oxford Reference 词典定义（interdependence theory/behaviour control/fate control）"
+research_question: "小群体中个体之间如何相互依赖，人们如何评估关系并决定维持、调整或离开？"
+core_claims:
+  - "互倚（interdependence）：小群体中个体之间是相互依附关系——『关系的本质是社会成员之间的互动以及在互动中每个成员试图影响对方的行为与结果，即个体之间行为结果的相互依附』（outcome interdependence）"
+  - "结果矩阵（outcome matrix）：以矩阵作为基本概念工具分析二元交互过程——任一方行为都会影响结果，同时任一方行为的结果都依赖于另一方的行为；后续由结果矩阵发展到转换细目表（transition list）以研究动态互倚"
+  - "比较水平（CL, Comparison Level）：个体判断关系满意度的标准——个体能够从特定关系中感受到或获得的积极结果的最低水平，基于对先前关系状况的经验形成；关系结果高于 CL 则满意，满意度=结果与标准的比较"
+  - "可选择性比较水平（CLalt, Comparison Level for Alternatives）：面对其他可选关系时维持现关系所需的最低积极结果水平；CLalt 决定个体是否保持或离开现关系——关系的积极结果总和须高于 CLalt 才维持"
+  - "fate control 与 behaviour control：一方对另一方结果的控制类型——行为控制指 A 对 B 结果的控制以 B 的行为为条件，双方共同影响 B 的结果"
+  - "理论定位：社会交换理论四大分支之一（Homans 交换行为主义、Blau 交换结构主义、Thibaut & Kelley 交换结果矩阵、Emerson 交换网络理论）；1963/1978 年作者持续扩展，1984 年 Kelley 再发展"
+method: "理论专著（小群体分析与二元互动结构分析；博弈论式结果矩阵形式化）"
+results: "（理论）奠定互倚理论（interdependence theory），成为关系满意度、稳定性与权力/控制分析的基础框架，被美国心理学会杰出科学贡献奖（Kelley）认可的理论源流"
+limitations: "专著正文未获取（中文权威综述+词典定义交叉确认）；1959 年初版概念较初步，作者在 1978 年《人际关系》中大幅系统化；交换理论被批评对宏观社会结构解释力有限"
+boundary_conditions: "适用于二元/小群体互动分析；关系满意与稳定性（CL/CLalt）的解释力强；宏观社会结构层面需与其他理论（Blau 宏观交换、Emerson 网络）衔接"
+relevant_nodes: [need_to_belong, reciprocity_exchange_networks]
+notes: "为互倚理论（结果矩阵、CL/CLalt、fate/behaviour control）提供奠基证据，为 need_to_belong（关系评估与满意度标准）与 reciprocity_exchange_networks（二元互倚与结果互依结构）提供关系评估机制背景。社会交换（social_exchange）在机制库中不存在独立节点，未列入。核心概念为公开内容，多源交叉确认，未编造。"
+last_verified: "2026-09"

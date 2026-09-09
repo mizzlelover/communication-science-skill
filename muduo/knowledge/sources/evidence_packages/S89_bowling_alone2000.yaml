@@ -1,0 +1,26 @@
+# Evidence Package — S89 Robert D. Putnam 2000（Bowling Alone）
+# 标准格式。access_level 如实标注。
+source_id: S89
+title: "Bowling Alone: The Collapse and Revival of American Community"
+authors: "Robert D. Putnam"
+year: 2000
+journal: Simon & Schuster（专著）
+doi: "无 DOI（专著）"
+url: "https://ciaotest.cc.columbia.edu/olj/psq/psq_win00b.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经 4 渠道交叉实取：① Columbia CIAO 转载《Political Science Quarterly》书评（Robert Y. Shapiro 撰）：『bowling alone』隐喻、社会资本定义（书中 p.19 原文）、bonding/bridging 之分与『darker side』、自 1960s 起政治/公民/宗教/工作参与同步下降、成因归因（电视世代约 25%/二战世代消退约 50%/双职工家庭约 10%/通勤与郊区化约 10%）、青少年志愿服务上升与互联网效果未明 ② Zenodo 学术论文（Claridge, Functions of Social Capital）：bonding 是『getting by』、bridging 是『getting ahead』（Putnam 2000），术语源自 Gittell & Vidal 1998，含 within/between、强/弱关系对照表 ③ modeldiplomat 词条：社会资本=网络/规范/信任三构件，bonding 同质内聚 vs bridging 跨群体联结、linking 补充（Woolcock），美国结社成员数、投票率与非正式社交下降 ④ 耶鲁大学 2023 毕业演讲（中文版）：保龄球联盟隐喻——打保龄的人多了、参加联赛的人少了，PTA/红十字会/狮子会成员下降"
+research_question: "美国的社会资本（公民参与、结社、人际信任）自 1960-70 年代以来如何变化、为何下降、有何后果，能否复兴？"
+core_claims:
+  - "社会资本定义：『connections among individuals—social networks and the norms of reciprocity and trustworthiness that arise from them』（书中 p.19；PSQ 书评引原话）——由网络、互惠规范与信任三构件组成（modeldiplomat）"
+  - "『Bowling alone』隐喻：打保龄球的美国人增多但参加联赛的人减少，以此概括美国公民与社会参与自 1960s 起的大规模同步下降（PSQ 书评+耶鲁 2023 毕业演讲）"
+  - "bonding vs bridging 社会资本：bonding 在相似群体内部（同质、内向、封闭，『getting by』），bridging 跨群体联结（包容、外向、开放，『getting ahead』）；bonding 有『darker side』（排他与乡愿），bridging 带来更广的社会联结、信任与信息流（PSQ 书评+Zenodo Claridge；Putnam 将术语归于 Gittell & Vidal 1998）"
+  - "下降成因归因：电视与电视世代约 25%、二战世代消退约 50%、双职工家庭压力约 10%、通勤与郊区蔓延约 10%（PSQ 书评）；反向趋势：青少年志愿服务与自助小组上升，互联网的社会资本效果在当时尚不明朗"
+  - "后果与复兴：社会资本下降伴随人际信任下降与公民冷漠，损害经济、社会、心理与政治产出；书末以进步时代的社会资本生产经验为鉴，讨论复兴路径（PSQ 书评）"
+method: "大规模定量社会学研究：整合 General Social Surveys、Roper Social and Political Trends、DDB Needham Life Style 等调查数据，跨 1960s-1990s 追踪政治、公民、宗教、工作、休闲参与趋势（24 章、96 图、100 页附录与注释）"
+results: "（社会学/政治学里程碑）社会资本概念进入主流政策话语，bonding/bridging 成为社会资本研究的标准区分；同时引发大量方法学与解释之争"
+limitations: "趋势测量与成因归因存在学术争论（书评亦指出作者对批评的回应与个别数据更正）；电视/代际归因比例是估计值；以美国数据为主；后续批评（如 Skocpol）指其低估国家结构与大型组织的作用"
+boundary_conditions: "适用于民主社会公民参与/社区健康分析；bonding/bridging 二分在实践中难以严格分割（个体关系多重重叠）；网络时代的社会资本形态（互联网、线上社群）需另行检验"
+relevant_nodes: [third_place, sense_of_community, reciprocity_exchange_networks]
+notes: "社会资本下降叙事的奠基著作（book 级）。社会资本定义原文、bonding/bridging 及『getting by/getting ahead』表述均经学术书评与学术论文交叉确认；机制库无 social_capital 节点，以 third_place/sense_of_community/reciprocity_exchange_networks 三个真实节点承接。S89 已在 third_place 节点 source_ids 中登记。"
+last_verified: "2026-09"

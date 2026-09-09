@@ -1,0 +1,24 @@
+# Evidence Package — S156 Pirolli & Card 1999（Information Foraging）
+# 标准格式。access_level 如实标注。
+source_id: S156
+title: "Information Foraging"
+authors: "Peter Pirolli; Stuart K. Card"
+year: 1999
+journal: "Psychological Review 106(4): 643-675"
+doi: "10.1037/0033-295X.106.4.643（推断值：本批抓取源未直接显示 DOI 字符串，卷期页码已多源确认，待 Crossref 核实）"
+url: "https://arxiv.org/html/2406.04452v1"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "正文未直接获取。渠道1：arXiv 2406.04452（Srinivasa Ragavan & Alipour 2024《Revisiting Human Information Foraging》——IFT 综述：信息寻求=决策理论成本-价值判断、informavore 最大化单位成本的信息获取速率、补丁（patches）由链接（links）互连、气味跟随（scent-following）策略、对补丁停留时间的预测）；渠道2：ACL Anthology W16-2923（Connolly et al.《An Information Foraging Approach…》——信息觅食=最大化获取有价值信息速率的行为模型，补丁内收益递减须与转移到新补丁的时间成本权衡）；另多源确认卷期页码（PubMed AMIA 2014 引用、Cell 2020 引用：106:643-675）。"
+research_question: "信息获取行为如何服从收益最大化？读者/用户在信息环境中如何评估'哪个信息区值得进入、何时离开'？"
+core_claims:
+  - "信息获取被框架为决策理论成本-价值判断：'信息觅食者'（informavore）以最大化单位觅食成本的有价值信息获取速率为目标（arXiv 2406.04452 对 IFT 的概述）"
+  - "有用信息存在于补丁结构中且补丁由链接互连；补丁内持续搜索的收益递减必须与移动到新补丁的时间成本相权衡（ACL W16-2923）"
+  - "觅食者遵循气味跟随策略：通过线索（如链接文本）'嗅'出价值-成本回报，沿气味最强的路径前进，并据此决定在某个信息补丁上停留多久（arXiv 2406.04452）"
+method: "理论建模：将生态学最优觅食理论（optimal foraging theory）迁移到信息获取，构建决策理论模型并配以计算建模与网页信息搜寻情境的实验/模拟验证（1995 年起在 Xerox PARC 提出，1999 年系统化）"
+results: "信息觅食理论成功解释网页浏览等信息搜寻行为：用户沿信息气味线索评估补丁价值、在收益递减时离开；成为 HCI/信息检索领域基础理论，后续发展出 SNIF-ACT 等认知模型，并由基础模型→认知模型→行为预测模型演进（arXiv 2406.04452；中文图书《信息系统实证研究的20种重要理论与应用》综述）"
+limitations: "理论框架+计算建模性质；行为验证主要在网页导航等搜寻情境；具体参数（放弃阈值）因人与任务差异大；叙事沉浸型阅读不完全服从成本收益计算（comprehension.yaml information_foraging 节点 conflicting 证据一致）"
+boundary_conditions: "任务导向/搜寻型阅读与信息检索情境最强；叙事沉浸与社会义务型阅读中减弱；无替代信息源的封闭环境（如内部培训）中减弱（与 comprehension.yaml information_foraging 节点一致）"
+relevant_nodes: [information_foraging, information_scent]
+notes: "信息觅食理论一手来源（Xerox PARC）。核心论点经多源交叉确认（arXiv 2024 综述、ACL 2016 论文、公开网络综述），正文（APA）未直接获取。建议：将 S156 计入 comprehension.yaml information_foraging / information_scent 节点的 source_ids（当前为 S52/S49）。"
+last_verified: "2026-09"

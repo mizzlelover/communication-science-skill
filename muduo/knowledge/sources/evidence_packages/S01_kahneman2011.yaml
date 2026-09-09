@@ -1,0 +1,27 @@
+# Evidence Package — S01 Kahneman 2011（Thinking, Fast and Slow）
+# 标准格式。access_level 如实标注。
+source_id: S01
+title: "Thinking, Fast and Slow"
+authors: "Daniel Kahneman"
+year: 2011
+journal: Farrar, Straus and Giroux（专著；38 章）
+doi: "无 DOI（专著）"
+url: "https://www.primores.org/wiki/glossary/dual-process-thinking/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：深度书评/中文精读（五部分 38 章结构/双系统/启发式/前景理论/两个自我）+ 学术词条（双系统细节/认知放松作为说服杠杆/System 2 惰性）+ 澎湃文章（系统1/2 澄清为 useful fiction 非脑区）"
+research_question: "人类判断与决策的系统性偏差从何而来？两套思维系统如何运作与冲突？"
+core_claims:
+  - "双系统框架：系统1（快、自动、无意识、直觉）与系统2（慢、受控、费力、分析）；系统2 常处于低耗模式并默认盖章系统1 的输出（惰性）"
+  - "系统1/2 是 useful fiction（有用虚构）：功能抽象而非脑区，Kahneman 本人明示——不得做解剖学解读"
+  - "认知放松≈真相感：熟悉、清晰、押韵、重复的内容被更快接受（fluency→truth）；启发式（可得性/代表性/锚定）导致可预测的系统性偏差"
+  - "前景理论：损失厌恶、确定效应、参照点依赖（配套 S113 原始论文）"
+  - "两个自我：经验自我 vs 记忆自我；峰终定律与过程忽视主导记忆评价"
+  - "WYSIATI（What You See Is All There Is）：所见即全部，系统1 不追问缺失信息"
+method: "Kahneman & Tversky 数十年实验研究综合 + 双系统理论整合（Stanovich & West 术语）"
+results: "（理论综合）行为经济学与判断决策研究的集大成之作；2002 诺贝尔经济学奖基础"
+limitations: "双系统划分在神经科学层面非严格对应脑区；偏差的强解读有复制危机后的学术争论（相关节点已分级处理）"
+boundary_conditions: "适用于描述加工模式差异；不得用于推断脑区或『电量』式资源机制"
+relevant_nodes: [dual_process_theory, availability_heuristic, anchoring_effect, loss_aversion, framing_effects, metaphor_framing, emphasis_vs_equivalence_framing, peak_end_rule]
+notes: "知识库引用最广的核心专著（book 级）。配套一手论文 S113（前景理论）等已在 B2/B4c 登记。未编造。"
+last_verified: "2026-09"

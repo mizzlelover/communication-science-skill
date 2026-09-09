@@ -1,0 +1,25 @@
+# Evidence Package — S187 Sherif 1936（社会规范心理学·光点自动运动）
+# 标准格式。access_level 如实标注。
+source_id: S187
+title: "The Psychology of Social Norms"
+authors: "Muzafer Sherif"
+year: 1936
+journal: Harper & Brothers（专著；光点实验系列 1935-1937）
+doi: "无 DOI（专著）"
+url: "https://en.wikipedia.org/wiki/Muzafer_Sherif"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心框架经多源交叉核实（未取得专著全文）：①实验范式与结论经 IntechOpen 开放获取书章《Conformity, Obedience, Disobedience》（明载：Sherif 1936 把群体共识等同社会规范形成，光点自动运动错觉下被试在模糊情境中逐渐建立共同标准、判断收敛）；②英文教学参考（fiveable）核实：个体估计先高度分散→群体讨论后向共享模式漂移→规范形成→之后单独测试仍沿用群体标准（内化而非表面服从）；③中文百科（搜狗百科群体压力词条、科普中国从众词条）核实：谢里夫自动运动研究（1936/1937）显示模糊情境下群体规范形成且『群体影响能超越群体在场』（判断标准固定并在后续判断中发挥作用）"
+research_question: "在没有任何客观标准的模糊情境中，群体规范如何形成、传递并内化？"
+core_claims:
+  - "光点自动运动效应（暗室中静止光点看似移动）提供无客观标准的判断情境：个体单独估计差异很大"
+  - "群体情境中反复判断使个体估计逐渐收敛到群体共同标准——Sherif 把这一共识形成过程直接等同于社会规范的形成"
+  - "形成的规范会内化：之后单独测试时被试仍沿用群体标准（区别于表面服从）——信息性影响的经典演示：模糊情境中他人判断被当作现实线索"
+  - "规范可以在无人施压、无指令的情况下自发涌现；标准一旦固定会在后续判断中持续发挥作用（超越群体在场）"
+method: "实验室光点自动运动实验系列：个体估计→群体估计→再个体估计的多阶段设计（1935-1937 系列，1936 专著整合为规范形成理论）"
+results: "（经典理论）信息性社会影响与群体规范形成的奠基范式；与 Asch（明确情境/规范性）互补构成社会影响双路径的实验根基"
+limitations: "专著全文未获取，核心结论经书章+教学参考+中文百科三路交叉确认；样本量小、时代局限；自动运动幅度本身个体差异大恰为范式所需"
+boundary_conditions: "适用于无客观标准的模糊判断情境；任务有明确标准时该路径让位于规范性压力（Asch 范式）；规范内化后撤去群体仍持续"
+relevant_nodes: [informational_influence]
+notes: "informational_influence 节点『Sherif 自动运动实验，未建包』标注的建包来源。核心概念为公开标准内容，未编造。"
+last_verified: "2026-09"

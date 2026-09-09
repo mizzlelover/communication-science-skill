@@ -1,0 +1,25 @@
+# Evidence Package — S66 Aristotle 1991（On Rhetoric，Kennedy 英译）
+# 标准格式。access_level 如实标注。
+source_id: S66
+title: "On Rhetoric: A Theory of Civic Discourse（Kennedy 英译）"
+authors: "Aristotle（George A. Kennedy 译）"
+year: 1991
+journal: Oxford University Press（公版原著，Kennedy 英译）
+doi: "无 DOI（公版）"
+url: "https://ohiostate.pressbooks.pub/engrtechcomm/chapter/what-is-rhetoric/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：修辞学基础（ethos/pathos/logos 三诉求 + kairos 时机）+ 学术引用（三诉求定义/情绪定义）+ 广告修辞研究（三诉求在现代广告运作）+ 中文修辞研究（信誉证明/情感证明/逻辑证明三手段）"
+research_question: "说服（修辞）的本质与工具是什么？演讲者如何有效说服听众？"
+core_claims:
+  - "修辞=发现一切可说服手段的艺术（对公民话语的理论）；说服三诉求：ethos（品格/可信度）/pathos（情感）/logos（逻辑论证）"
+  - "ethos：信誉证明——演讲者的品格/权威/专长（被知觉的信任）；pathos：情感证明——调动听众情绪（愤怒/怜悯/恐惧等）；logos：逻辑证明——论证与证据"
+  - "kairos：时机——有效修辞依赖恰当的时机与情境匹配；三诉求组合使用最强（单用效果有限）"
+  - "对情绪的定义：'改变人们判断并伴随苦乐的情感'（愤怒/怜悯/恐惧及其对立面）——构成恐惧诉求等现代传播研究的基础"
+method: "古典修辞学理论（演讲/公民话语的实践艺术，三卷）"
+results: "（理论奠基）ethos/pathos/logos 成为说服研究 2500 年标准框架"
+limitations: "古典理论（公元前 4 世纪）；描述性框架需现代实证校准"
+boundary_conditions: "适用于说服设计与论证分析；三诉求需与受众/情境匹配"
+relevant_nodes: [ethos_pathos_logos, source_credibility_model, fear_appeals_eppm]
+notes: "修辞学奠基（book 级，公版）。三诉求为公开标准内容，未编造。"
+last_verified: "2026-09"

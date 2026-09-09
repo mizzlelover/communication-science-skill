@@ -1,0 +1,25 @@
+# Evidence Package — S193 Przybylski et al. 2013（FOMO）
+# 标准格式。access_level 如实标注。
+source_id: S193
+title: "Motivational, emotional, and behavioral correlates of fear of missing out"
+authors: "Andrew K. Przybylski; Kou Murayama; Cody R. DeHaan; Valerie Gladwell"
+year: 2013
+journal: Computers in Human Behavior, 29(4), 1841-1848
+doi: "10.1016/j.chb.2013.02.014"
+url: "https://doi.org/10.1016/j.chb.2013.02.014"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "引用元数据与核心结论经 4 个独立源交叉核实（未取得全文）：①PubMed 2024 年 PLOS ONE 范围综述（Groenestein 等，106 篇纳入）参考文献表：CHB 29(4):1841-8, DOI 10.1016/j.chb.2013.02.014；②2022 PLOS ONE 大学生 FOMO 研究参考文献：CHB 2013;29:1841-1848；③综述性书目（datafield）核实理论定位：FOMO 的严格学术定义与首个系统测量工具出自本文；以自我决定理论（SDT）为基础——FOMO 与胜任、自主、归属三种基本心理需要未被满足相关联；其十项量表（FOMO Scale）成为领域标准工具；④2024 范围综述补充当代共识：FOMO 的本质（由活动比较驱动的对错过社交体验的不快感受）有共识，但特质/状态之辩、概念边界与因果方向仍存争议（相关证据为主，因果研究不足）"
+research_question: "错失恐惧（FOMO）是什么心理构造？其动机、情绪与行为相关物是什么？"
+core_claims:
+  - "FOMO 被界定为一种对『他人在经历更有回报的体验』的泛化性担忧（错失恐惧），可用十项自陈量表稳定测量（领域标准工具）"
+  - "SDT 定位：FOMO 根源于基本心理需要（胜任/自主/归属）未被满足——不是单纯『社交媒体用多了』的产物"
+  - "相关证据：FOMO 与更低的一般情绪与生活满意度、更高的社交媒体卷入（含课堂等场合的强制性行为）相关"
+  - "当代边界（2024 范围综述 106 篇）：概念碎片化、特质/状态之辩未决、因果方向证据不足——FOMO 与数字技术使用的相互关系多为横断面相关"
+method: "量表开发与验证 + 相关研究设计（一般人群样本与大学新生样本；自陈测量 FOMO/基本需要满足/情绪福祉/社交媒体行为）"
+results: "（经典量表研究）FOMO 成为数字时代动机-情绪-行为研究的标准构念；与福祉负相关、与问题性使用正相关（相关级）"
+limitations: "未取得全文；横断面相关为主，因果方向未确立（2024 综述明确指出）；自陈量表共方法偏差"
+boundary_conditions: "相关而非因果——不得表述为『社交媒体导致 FOMO』或反向；特质与状态测量需区分；跨文化适配有后续研究"
+relevant_nodes: [fear_of_missing_out]
+notes: "fear_of_missing_out 节点『Przybylski et al. 2013 一手 EP 未建』标注的建包来源。SDT 定位与量表地位经多源核实，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,25 @@
+# Evidence Package — S197 Bandura 1997（自我效能：控制的实施）
+# 标准格式。access_level 如实标注。
+source_id: S197
+title: "Self-Efficacy: The Exercise of Control"
+authors: "Albert Bandura"
+year: 1997
+journal: W. H. Freeman and Company（专著，New York）
+doi: "无 DOI（专著）"
+url: "https://en.wikipedia.org/wiki/Self-Efficacy:_The_Exercise_of_Control"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心框架经 5 个独立源交叉核实（未取得专著全文）：①专著定义经多处学术引用核实（p.3：『个体对自己组织与执行行动、达成既定成就的信念』，Griffiths 等 2021 与综述多处一致引用）；②效能信念四来源（Bandura 1997，多源一致）：亲历的掌握性经验（mastery experiences，最强来源——成功完成相似任务的经历；失败若归因于可控因素反可提升效能）、替代性经验（vicarious experiences——观察相似他人的成功，榜样可比性关键）、言语说服（verbal persuasion——效果较弱且短暂，与现实脱节即失效）、生理与情绪状态（physiological and affective states——紧张/焦虑被解读为能力不足信号）；③效能→行为链条：高效能者设定更高目标、坚持更久、挫折后恢复快、加工更深入；④领域特异性：某域高效能不泛化到其他域（多源一致强调）；⑤后续实证背景：学业与职业领域多项元分析支持效能-表现关联（库内节点 ev.meta 已记），2023 挪威 1453 人追踪显示学业自我效能-主动学习-GPA 的正向反馈环（Educational Psychology）"
+research_question: "个体对自己能力的信念如何形成、如何影响动机与行为？"
+core_claims:
+  - "自我效能=对『自己能否组织并执行达成特定成就所需行动』的能力信念（p.3 定义），区别于自尊、一般自信与实际能力"
+  - "四来源框架：掌握性经验（最强）>替代性经验>言语说服>生理情绪状态；四来源经认知加工整合为效能信念"
+  - "效能信念通过选择（设定更高目标）、努力、坚持与思维模式四条路径影响表现——低效能者放大障碍、过早放弃、陷入焦虑循环"
+  - "领域特异性与可塑性的并存：效能信念高度任务特异，但可经四来源系统性干预（渐进成功体验/可比榜样/具体反馈/生理再解读）"
+method: "理论专著（社会认知理论框架下整合数十年实验与田野证据；1977 单篇论文《Self-efficacy: Toward a unifying theory of behavioral change》的体系化扩展）"
+results: "（理论奠基）自我效能成为动机研究与实践干预的核心构念；为库内 self_efficacy 节点 C 级恢复提供一手理论来源"
+limitations: "专著全文未获取（定义+四来源+领域特异性经多源交叉核实）；效能-表现关联的元分析证据在库外（节点 ev.meta 记忆级转述）；跨文化与集体效能维度为作者后续工作"
+boundary_conditions: "领域特异性——不得跨域外推；效能须基于现实能力否则冒进；过度保护削弱『我能行』证据链；集体主义情境下群体效能感可能更关键"
+relevant_nodes: [self_efficacy]
+notes: "self_efficacy 节点『Bandura 四来源框架，未建包』标注的建包来源。定义与四来源为公开标准内容，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,26 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.trae/
+.vscode/
+
+# Agent workspace files (local only)
+.specstory/
+.claude/
+
+# Local drafts & internal briefs — not part of the published skill
+/x_series_draft/
+/ChatGPT 6 Astra.md
+/ChatGPT 6 Astra_X优化版.md
+/ChatGPT 6 Astra_X Article.html
+/ChatGPT 6 Astra_推广串.md
+/2025年 极早期AI 原生开发体系构建实践回顾.md
+/writing-block.md
+/长篇文章优化能力增量构建提示词.md
+/image2.5.md
+/AGENTS.md
+/CLAUDE.md
+
+# Python
+__pycache__/
+*.pyc

@@ -1,0 +1,26 @@
+# Evidence Package — S100 Chayka 2024（Filterworld）
+# 标准格式。access_level 如实标注。
+source_id: S100
+title: "Filterworld: How Algorithms Flattened Culture"
+authors: "Kyle Chayka"
+year: 2024
+journal: Doubleday（专著；《纽约客》撰稿人）
+doi: "无 DOI（专著）"
+url: "https://innovirtuoso.com/book-reviews/filterworld-by-kyle-chayka-review-how-algorithms-flattened-culture-kindle-edition/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：深度书评（机制：优化互动奖励同质化/网络效应使爆款更爆/推荐系统利用历史选择/创作者向算法调整）+ 评论文章交叉引用（Spotify 数据炼金术发现最泛化歌曲吸引最广受众）+ 豆瓣序言翻译（指责 TikTok/Instagram 算法平台扁平化文化）"
+research_question: "推荐算法如何塑造我们消费的文化，并最终塑造被生产出来的文化？"
+core_claims:
+  - "Filterworld=算法策展的『新常态』：不仅塑造我们看到的内容，也塑造我们去的场所（咖啡馆审美趋同）与偏好的美学"
+  - "算法没有品味，只有指标：优化互动即优化『过去有效的东西』，反馈循环把文化推向中位数——安全、熟悉、无摩擦"
+  - "扁平化机制：优化互动奖励可预测的格式与美学 + 网络效应让爆款成为巨爆款、压缩怪异的空间 + 推荐系统利用历史选择把用户框进『更多同样』+ 创作者适应算法、选择可能流行的而非冒险的"
+  - "创作者与平台之间：一旦算法成为引导品味的『无形之手』，创作者会内化它——在分享前预演它将如何被表现、在录制前预演它将如何被播放"
+  - "后果：无缝消费侵蚀形成品味所需的小摩擦（偶遇、可信策展人、慢发现）；匿名浏览/手动策展/独立创作者是反制策略"
+method: "文化史 + 科技评论（基于平台公开机制、Spotify/Netflix 工程师材料、创作者访谈）"
+results: "（文化批判）算法同质化论题成为 2024 年文化讨论的重要框架"
+limitations: "论点为文化评论性质（非实证研究）；『扁平化』强度缺乏系统度量"
+boundary_conditions: "适用于推荐算法主导的平台与文化生产；对人工策展/小众社区需修正"
+relevant_nodes: [ai_content_saturation, recommendation_feedback_loop, algorithmic_amplification, novelty_preference, creator_incentive_structures]
+notes: "ai_content_saturation / recommendation_feedback_loop 的文化层来源（book 级）。机制描述为公开内容交叉确认，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,25 @@
+# Evidence Package — S35 Perloff 2023（The Dynamics of Persuasion）
+# 标准格式。access_level 如实标注。
+source_id: S35
+title: "The Dynamics of Persuasion: Communication and Attitudes in the 21st Century (8th ed.)"
+authors: "Richard M. Perloff"
+year: 2023
+journal: Routledge（教科书；首版 1993）
+doi: "无 DOI（教科书）"
+url: "https://www.routledge.com/The-Dynamics-of-Persuasion-Communication-and-Attitudes-in-the-21st-Century/Perloff/p/book/9781032268187"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "教科书结构与理论框架经出版社目录与学术摘要实取：第 8 版 490 页四部分 18 章（态度结构与功能/强态度/自动态度与 priming/ELM/信源可信度与吸引力/恐惧与内疚诉求/认知失调/人际说服/广告营销/健康传播）+ 新增错误信息/极化内容"
+research_question: "说服理论的核心框架是什么？信源、信息、渠道如何改变态度？"
+core_claims:
+  - "说服研究框架：态度定义与结构（平衡理论/可达性/理性行动理论）→ 态度功能与强态度 → 加工路径（ELM）→ 信源（魅力/权威/Milgram 争议；可信度/社会吸引力）→ 信息（恐惧与内疚诉求）→ 认知失调"
+  - "恐惧诉求框架（EPPM 扩展平行过程模型）是健康传播核心；认知失调理论覆盖态度-行为不一致"
+  - "第 8 版新增：错误信息、健康传播（Covid）、种族不公、气候、极化受众的说服障碍"
+  - "说服需要自由选择：自我说服是成功影响的钥匙（coercion 与 persuasion 的边界）"
+method: "说服研究教科书（社会心理+传播学实证文献综合，18 章）"
+results: "（教科书经典）说服理论的标准教学框架；被 10+ 知识节点引用"
+limitations: "教科书综述性质；各理论证据强度按具体研究评估"
+boundary_conditions: "适用于说服机制的系统教学与设计参照"
+relevant_nodes: [elaboration_likelihood_model, source_credibility_model, fear_appeals_eppm, cognitive_dissonance]
+notes: "说服域标准教科书（book 级，被 10+ 说服/态度节点引用）。18 章结构为出版社公开目录实取，未编造。"
+last_verified: "2026-09"

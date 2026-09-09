@@ -1,0 +1,26 @@
+# Evidence Package — S68 Nancy Duarte 2010（Resonate）
+# 标准格式。access_level 如实标注。
+source_id: S68
+title: "Resonate: Present Visual Stories that Transform Audiences"
+authors: "Nancy Duarte"
+year: 2010
+journal: John Wiley & Sons（Wiley，2010）
+doi: "无 DOI（专著）"
+url: "https://www.duarte.com/blog/ultimate-guide-to-contrast/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：作者公司官方博客（Presentation Sparkline™ 框架/what is vs what could be 对比/报告式与推销式演讲的失败形状/对比有效三机制/叙事对比与声音对比）+ 作者公司官方博客 2（故事框架 beginning-middle-end/turning points：call to adventure 与 call to action/Big Idea/new bliss 结尾/杜阿尔特原话引文）+ 出版社官方简介（微信读书收录 Wiley 文案：make audience the hero and presenter the mentor、如写纪录片、Al Gore 奥斯卡获奖片《难以忽视的真相》幻灯片作者）+ TEDx 演讲页与完整转录（研究电影与文学/亚里士多德三幕结构/Joseph Campbell 英雄之旅/观众是英雄演讲者是导师/ideas 经故事传播）+ 独立书评与教程（sparkline 图形化分析著名演讲：MLK 与 Steve Jobs 发布会对比）"
+research_question: "为什么大多数演示无法打动听众、无法推动行动？伟大演讲（如马丁·路德·金《我有一个梦想》、乔布斯 iPhone 发布会）共享什么叙事结构，如何将其用于自己的演讲？"
+core_claims:
+  - "核心结构：Presentation Sparkline™——在'what is'（当下现实/痛点）与'what could be'（应然愿景）之间反复交替制造对比张力（contrast），而非只在结尾对比一次；报告式（全程讲现状）与推销式（全程讲未来）演讲皆因缺乏交替而失去听众参与与信任"
+  - "演讲即故事：按 beginning（建立 what is 基线 + call to adventure 打破平衡）、middle（what could be 与 what is 交替的系列对比、小困境与解决的节奏）、end（new bliss 愿景 + call to action 行动号召）组织；turning points 引导听众走完全程"
+  - "观众是英雄、演讲者是导师：逆转'演讲者是主角'的传统范式，借用 Joseph Campbell 英雄之旅——观众是平凡世界中的英雄，演讲者担任 mentor 帮助他们从当下世界进入应然世界"
+  - "对比为何有效三机制：捕获注意（大脑天然注意差异）、澄清信息并引导听众、唤起情绪——制造并释放张力使听众保持投入；杜阿尔特原话：'在听众心中制造渴望，再展示你的想法如何满足这一渴望，人们就会采纳你的视角——这是故事的核心'"
+  - "方法：以 sparkline 图形化分析大量著名演讲（MLK 演讲、Steve Jobs 产品发布会、Al Gore《难以忽视的真相》等）提取共性结构；方法灵感源自电影与文学研究（亚里士多德三幕结构、诗学与修辞学、英雄原型）"
+method: "演讲结构分析（对海量真实演讲做 sparkline 图形化对比分析）+ 电影与文学叙事研究（三幕结构、英雄之旅）提炼的从业者框架"
+results: "（定位）'当下-应然'交替模型成为演讲与演示传播领域最具影响力的结构框架之一（作者同名 TED 演讲被播放 380 余万次，杜阿尔特为 Al Gore 奥斯卡获奖片制作幻灯片）"
+limitations: "从业者框架而非受控实证研究：结构'有效'依托叙事传输等实证机制，但结构本身未经系统对照检验（证据等级 D 级实践框架）；案例为作者对著名演讲的解读"
+boundary_conditions: "适用于以说服/激励为目标的演讲、演示与视频叙事设计；作为组织工具使用、不作科学规律引用；以传输为目标时适用（查询型/清单型/纯信息型内容不宜强套弧线）"
+relevant_nodes: [dramatic_arc_structure, narrative_transportation]
+notes: "演讲叙事结构代表作（book 级，D 级实践框架）。核心概念为公开内容，多源交叉实取，未编造。任务提及的 Star Wars 具体片段分析未获直接网页证据，故未写入 core_claims。"
+last_verified: "2026-09"

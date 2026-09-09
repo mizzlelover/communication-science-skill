@@ -1,0 +1,25 @@
+# Evidence Package — S27 Bicchieri 2006（The Grammar of Society）
+# 标准格式。access_level 如实标注。
+source_id: S27
+title: "The Grammar of Society: The Nature and Dynamics of Social Norms"
+authors: "Cristina Bicchieri"
+year: 2006
+journal: Cambridge University Press（专著）
+doi: "无 DOI（专著）"
+url: "https://ideas.repec.org/b/cup/cbooks/9780521574907.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：RePEc/剑桥摘要（社会心理学/实验经济学/演化博弈论整合；规范如何出现/何时遵从）+ 学术论文（实证预期 empirical expectations 与规范预期 normative expectations 双框架）+ 论文（博弈论规范变化模型 Bicchieri 2005/2016）"
+research_question: "社会规范（公平/合作/互惠）的本性与动态是什么？人们为什么以及何时遵从规范？"
+core_claims:
+  - "社会规范=条件性偏好：个体遵从规范因为（a）相信多数人遵从（实证预期 empirical expectations）且（b）认为他人期待自己遵从（规范预期 normative expectations）"
+  - "整合社会心理学、实验经济学与演化博弈论：规范如何涌现、为何遵从、何时被关注（焦点），以及低效规范为何存续"
+  - "个人心理倾向既可能损害社会效率（低效规范存续），也可能自然演化出接近现代社会的公平规范"
+  - "规范变化可用博弈论建模：基于实证预期（他人会如何做）的遵从/违反决策（Bicchieri 2005/2016）"
+method: "跨学科理论专著（博弈论+实验+心理整合）"
+results: "（理论奠基）期望框架成为社会规范研究标准；规范诊断框架（S28《Norms in the Wild》）的前身"
+limitations: "理论专著（非单一实验）；期望的测量需实验设计支持"
+boundary_conditions: "规范需同时存在实证与规范预期；习俗/惯例不需社会预期"
+relevant_nodes: [norm_perception_accuracy, descriptive_injunctive_norms, reciprocity_norm]
+notes: "社会规范理论奠基（book 级）；配套 S28（Norms in the Wild 2017 实践版，已吸收原 S123 重复登记）。期望双框架为公开标准内容，未编造。"
+last_verified: "2026-09"

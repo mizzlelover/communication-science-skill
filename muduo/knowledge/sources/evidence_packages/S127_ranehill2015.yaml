@@ -1,0 +1,26 @@
+# Evidence Package — S127 Ranehill et al. 2015（power posing 复制）
+# 标准格式。access_level 如实标注。
+source_id: S127
+title: "Assessing the Robustness of Power Posing: No Effect on Hormones and Risk Tolerance in a Large Sample of Men and Women"
+authors: "Eva Ranehill; Anna Dreber; Magnus Johannesson; Susanne Leiberg; Sunhae Sul; Roberto A. Weber; ...; Colin F. Camerer"
+year: 2015
+journal: Psychological Science 26(5), 653-656
+doi: "10.1177/0956797614553946"
+url: "https://spsp.org/news-center/character-context-blog/does-power-posing-alter-intrapsychic-experience-power"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "复制结论经多源交叉实取：N=200（原研究 N=42）的预注册式复制——高权姿态组自报更强大，但睾酮/皮质醇无差异、风险承担无差异 + 后续 p-curve 分析（Simmons & Simonsohn 2017：33 项研究分布与零效应+选择性报告一致）+ Carney 2016 撤回激素主张 + Gronau 2018 meta（55 项：主观感受稳健、激素弱）"
+research_question: "Carney, Cuddy & Yap 2010 的权力姿态效应（激素变化/风险承担）能否在更大样本中复制？"
+core_claims:
+  - "N=200 大样本复制：扩展姿态组自报权力感显著提升（主观感受效应复制成功）"
+  - "但睾酮与皮质醇无显著差异、风险承担无显著差异（激素与行为效应复制失败）"
+  - "Simmons & Simonsohn 2017 p-curve：Carney 等回应的 33 项研究 p 值分布与零效应+选择性报告不可区分"
+  - "Carney（2010 一作）2016 年公开声明不再相信 power posing 效应；Gronau 2018 meta 确认主观感受稳健、激素证据弱"
+method: "大样本（N=200）复制实验 + p-curve 再分析 + 后续 meta"
+results: "主观感受效应稳健；激素/行为效应失败——EVIDENCE.md 定级 E（感受效应有、生理/行为效应复制失败）"
+limitations: "主观感受效应的稳健性获 meta 支持；『感受层可用、机制层不可用』为当前共识"
+boundary_conditions: "针对 2 分钟姿态改变激素与行为的强主张；姿态对主观状态与外显感知的温和影响不被否定"
+relevant_nodes: []
+no_consumer_node: "power_posing 节点已删除（激素/行为效应复制失败）；本包保留为 rechecks_registry power_posing 复核判定的证据源与反引入守卫，不挂靠节点（2026-09-09 T3 前收口处置）"
+notes: "#8 复核清单 power posing 条目的决定性复制证据（paper 级）。未编造：N=200/激素无差异/自报提升。"
+last_verified: "2026-09"

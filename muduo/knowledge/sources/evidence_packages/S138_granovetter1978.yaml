@@ -1,0 +1,26 @@
+# Evidence Package — S138 Granovetter 1978（Threshold Models of Collective Behavior）
+# 标准格式。access_level 如实标注。
+source_id: S138
+title: "Threshold Models of Collective Behavior"
+authors: "Mark Granovetter"
+year: 1978
+journal: "American Journal of Sociology 83(6): 1420-1443"
+doi: "10.1086/226707"
+url: "https://hal.science/hal-05321562"
+access_level: substantial_excerpt
+research_status: read
+content_obtained: "渠道1：Semantic Scholar API（curl 成功，完整摘要 + 元数据确认 HAL 开放存档 hal.science/hal-05321562 为 GREEN/CC-BY）；渠道2：斯坦福作者主页（WebFetch 成功，书目 AJS 83）；渠道3：scispace 论文页（经搜索结果取得 TL;DR 摘要）；渠道4：人大《社会学评论》门槛模型专文（经搜索结果取得：100 人暴动门槛分布 0,1,2,...,99 的级联例子与均衡点分析）；渠道5：NBER WP32847（2024，经搜索结果取得全文）与 arXiv 1211.0654（MIT）确认阈值模型应用于 riots、创新扩散、投票、谣言与罢工。HAL 全文因 Anubis 反爬未能直接抓取正文。"
+research_question: "当个体的成本/收益取决于有多少其他人选择了同一行动时，集体行为（暴动、罢工、谣言传播、投票）如何在群体层面爆发或沉寂？"
+core_claims:
+  - "为'个体面临两个选项、且各选项成本/收益取决于其他选择者数量'的情境建立集体行为模型"
+  - "核心概念是阈值（threshold）：某行动者在行动前必须有多少他人先行选择——即该行动者净收益开始超过净成本之点"
+  - "给定阈值频数分布，模型可计算最终（均衡）采取行动的人数；均衡结果对阈值分布的变动存在稳定性问题（不同变化的稳定性被考察）"
+  - "强调精确阈值分布（而非平均值）对结局的决定性：平均偏好相似的群体可能产生截然不同的集体行为结果；典型例：广场 100 人暴动门槛 0,1,2,...,99 的连锁触发"
+  - "阈值模型被后续文献广泛用于解释创新扩散、投票、谣言传播、暴动与罢工等聚合行为（线性阈值模型）"
+method: "形式化数学建模：以异质性个体阈值频数分布为输入，推导均衡参与人数；分析均衡对阈值分布变化的稳定性；二选一行动框架"
+results: "群体结果由阈值分布形状而非均值决定；相似平均偏好可导致完全不同的集体行为结局；为后续线性阈值模型与网络级联研究奠基"
+limitations: "纯理论模型，缺乏当时的大规模实证检验；假设行动二选一且个体阈值固定；对'谁影响谁'的网络结构未显式建模（由后续网络阈值模型补足）"
+boundary_conditions: "适用于成本/收益依赖他人选择数目的二选一情境（暴动、扩散、从众、集体行动）；不适用于偏好独立于他人选择的行为"
+relevant_nodes: [network_threshold_models, critical_mass_threshold]
+notes: "与 Schelling 1978 同年提出阈值思想，为线性阈值模型与网络级联研究奠基。核心内容可溯源：S2 完整摘要 + 人大《社会学评论》专文（暴动例子与均衡分析）+ NBER/MIT 综述确认；HAL 作者开放存档（CC-BY）已确认存在但正文因反爬未直接抓取，如实标 substantial_excerpt，未编造。"
+last_verified: "2026-09"

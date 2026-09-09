@@ -1,0 +1,130 @@
+# 案例基准（真实材料）
+# 目的：为「传播≠社群」提供可核实的 benchmark 案例语料。本文件由并行批次 agent 合并写入：
+#   批次 A（VCB-001~004）：传播×社群 四象限 —— high_virality_no_community（高传播无社区）/
+#                            low_virality_strong_community（低传播强社区）
+#   批次 B（VCB-005~008）：互动×归属 四象限 —— high_interaction_low_belonging（高互动低归属）/
+#                            low_interaction_high_retention（低互动高留存）
+# 两批次共同点：两组象限分别证明「传播量」「互动量」均不等于「社群/归属」。
+# 纪律：case_id 命名 VCB-{序号}；机制 id 仅使用 knowledge/mechanisms/ 真实节点（已逐一核对）；
+#       数字只写实际核实（标口径），口径冲突时并列标注，禁止编造；
+#       材料均经 WebSearch/WebFetch 实际检索核实（部分 URL 因平台反爬不可直连，以搜索引擎实取内容为准并标注）；
+#       outcome_status=MEDIA_REPORTED（媒体/公开报道口径）；causal_status=case_inference
+#       （单案例仅作 illustration / hypothesis generation，不作因果证据，升级需 ≥3 独立案例）。
+# 对应机制参考：belonging.yaml（need_to_belong）、community.yaml、platform_algorithmic.yaml、
+#       emotion.yaml、identity.yaml、network_effects.yaml、social_norms.yaml、behavioral_economics.yaml、social_comparison.yaml
+
+# ============ 批次 A：传播×社群 四象限（high_virality_no_community / low_virality_strong_community） ============
+
+- case_id: "VCB-001"
+  quadrant: high_virality_no_community
+  case_type: benchmark_case
+  context: "2014 年 10 月，美国得州 Frisco 的 16 岁少年 Alex Lee 在 Target 超市兼职时被顾客偷拍的一张照片在 Twitter 上爆红（#AlexFromTarget），成为美国全国媒体头条与全网级 meme，本人随后受邀上《艾伦秀》。传播端极广（照片数日内席卷全美媒体与社交网络），但全程没有任何社区/粉丝组织形态存在。"
+  mechanisms: [algorithmic_amplification, parasocial_relationship, novelty_preference, need_to_belong]
+  result: "热度在数日内达峰后快速终结：当事人遭遇骚扰、人肉与威胁，公开表示'有点害怕走出家门'（参考消息 2014）；约两年内退出公众视野。2024 年 Dallas Observer 十年复盘：其已完全退网、社交媒体存在为零。从未形成任何成员关系/复访群体/粉丝组织，'粉丝'随热度同步归零。"
+  original_material: "参考消息网/中国日报 2014-11-14《美国少年因太帅收到死亡威胁 称害怕出家门》（https://world.chinadaily.com.cn/2014-11/14/content_18914432.htm，WebSearch 实取全文）：推特粉丝从 144 名增至约 73 万（该报口径；另有自媒体回顾'约 60 万'口径）、收到死亡威胁、上《艾伦秀》；Dallas Observer 2024-10《It's Been 10 Years Since #AlexFromTarget. What Have We Learned About Filming Strangers in Public?》（https://www.dallasobserver.com/arts/10-years-after-alexfromtarget-filming-strangers-is-more-common-than-ever-18854747，WebSearch 实取全文）：2014 年爆红过程、当事人及其家人/女友遭骚扰与人肉、如今零社媒存在"
+  observable_outcome: "爆红期关注者数字急剧上升（约 73 万，参考消息口径）但未沉淀任何可观察的成员关系、复访互动或粉丝社群组织；当事人退网后无任何留存群体继续存在——'粉丝'是一次性注意力存量而非社区。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "传播量的极端（单张照片的全网级认知）与社区的形成（成员资格、相互影响、需求满足、共享情感联结）是两条独立曲线：一次性新奇/情绪驱动的曝光制造'粉丝'数字，但不制造'我们'。本例直接例证 need_to_belong 的边界条件——大众关注无法替代少量持久关怀关系（Baumeister & Leary）；且 sense_of_community 四要素无一在场，故传播再广也不构成社群。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://world.chinadaily.com.cn/2014-11/14/content_18914432.htm"
+
+- case_id: "VCB-002"
+  quadrant: high_virality_no_community
+  case_type: benchmark_case
+  context: "2024 年 5 月，抖音主播郭有才在山东菏泽南站翻唱《诺言》爆火：约 10 天涨粉千万（网易/腾讯新闻等自媒体口径，数字略有出入），直播间最高在线约 150 万、单场观看超 2700 万（自媒体口径），成为 2024 年现象级爆款创作者；获聘菏泽文旅推荐官。传播端为千万级，但粉丝与创作者之间仅有单向观看/打赏关系，无社群容器。"
+  mechanisms: [algorithmic_amplification, emotional_arousal, parasocial_relationship, engagement_optimization_bias]
+  result: "红星新闻（2024-12-27，澎湃新闻转载）报道：爆火 7 个月后其迎来低谷期、直播在线人数跌至十几万，本人公开表示有'流量焦虑'，需靠改版直播形态与专业团队'想办法留住观众'；后续自媒体口径（2025-2026）称日常直播在线仅数千人、粉丝量从峰值区间回落。千万级粉丝未能转化为可留存、可复访的社群关系——停播/调整后流量不自动回归。"
+  original_material: "红星新闻（澎湃新闻转载）2024-12-27《2024未完待续｜郭有才草根逆袭千万级网红后：直播在线人数跌至十几万，也会有流量焦虑》（https://m.thepaper.cn/newsDetail_forward_29773304，已 WebFetch 实取全文）：2024 年 5 月爆火、1600 万粉丝、'爆火过去 7 个月……直播在线人数跌至十几万'、2024-12-24 联动直播在线 17 万；网易新闻 2026-09-08《郭有才直播间人少了，但他的排期表吓我一跳》（https://163.com/dy/article/L6A84TPR0553R3NO.html，WebSearch 实取全文，自媒体）：10 天涨粉 1000 万、直播间 150 万在线跌至十几万"
+  observable_outcome: "千万级粉丝数与直播间在线人数（十几万→数千，多来源口径）在数月内严重背离；打赏/观看依赖单条内容与单次情绪热度而非成员关系，热度退潮后无留存群体承接——涨粉速度与留存能力无正相关。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "爆款创作者的高粉丝数与高传播量不自动生成社群粘性：粉丝是被单条内容/单一情绪（emotional_arousal）一次性吸引的注意力存量，社群则需要重复互动、双向可见的关系与共同事件（sense_of_community 四要素）。郭有才案例说明'涨粉千万'与'留住观众'是两套系统：算法分发（algorithmic_amplification）负责前者，归属结构负责后者，前者可完全独立于后者发生。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://m.thepaper.cn/newsDetail_forward_29773304"
+
+- case_id: "VCB-003"
+  quadrant: low_virality_strong_community
+  case_type: benchmark_case
+  context: "V2EX（v2ex.com）：站长刘昕（Livid）2006 年 3 月编写社区软件 Project Babel 起家，定位'创意工作者的社区'的中文技术讨论社区；十多年几乎无商业化、无营销推广，用户量级为'几十万'（创始人 2025 年访谈口径），相对大众平台传播规模有限；在程序员/设计师圈层内有极高知名度（被形容为'精神家园'），圈外传播有限。"
+  mechanisms: [sense_of_community, community_boundaries, status_systems, two_step_flow, critical_mass_threshold]
+  result: "持续运行至今（2026 年仍在运营，近 20 年）。创始人 2025 年访谈称其十多年未商业化却成为程序员与设计师的'精神家园'，并自述增长依赖临界质量后的网络效应而非推广；2013 年站内帖显示用户多经博客/推特/搜索/口碑自发聚集（无营销投放）。站内规范（反'顶/沙发'、反全文转载、发帖 300 秒后不可编辑、欢迎'有信息量的讨论'）构成清晰边界与共同符号。"
+  original_material: "欧科云链 OKX 专栏（odaily.news）2025-09-02《对话Livid：从60块钱卖掉一枚比特币说起，开发者社区V2EX的十四年》（https://www.odaily.news/zh-CN/post/5206053，已 WebFetch 实取全文）：2006 年 Project Babel 起家、'从一个想法到几十万用户的社区'、'十多年来都没有商业化，却成为了程序员和设计师心中的精神家园'、临界质量/网络效应论述；V2EX 站内帖 https://v2ex.com/t/61277（2013）《V2EX的用户都是怎么聚集起来的呀？》（WebSearch 实取）：用户自述经博客/推特/搜索/口碑聚集、'一来就走不了了'"
+  observable_outcome: "无营销投入下维持近 20 年高留存（多位用户自述'一天不上不舒服''一来就走不了了'）；成员以共同规范与身份认同区别于外部；规模封顶于圈层（几十万级）但成员投入度高——高质量互助问答构成互惠循环，声望与站务互动构成地位系统。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "低传播（相对大众平台）可以与强社区并存：V2EX 的增长来自圈内口碑（two_step_flow）与临界质量（critical_mass_threshold）的网络效应而非算法放大；其粘性来自 sense_of_community 四要素——边界（社区规范与节点结构）、影响（站务互动与声望）、需求满足（高质量互助问答）、共享联结（近 20 年共同经历），这些要素与传播量无正相关。对照 VCB-001/002：千万级的一次性注意力不构成社区，几十万成员的口碑网络构成社区。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://www.odaily.news/zh-CN/post/5206053"
+
+- case_id: "VCB-004"
+  quadrant: low_virality_strong_community
+  case_type: benchmark_case
+  context: "Something Awful（somethingawful.com）：1999 年由 Richard 'Lowtax' Kyanka 创办的英文喜剧网站与论坛社区；2001 年起对论坛注册收取约 $9.95/$10 费用；成员自称 'Goons'；论坛累计注册账号超 12 万（Wikipedia 口径，另有超 10 万口径），相对大众平台规模极小；但被公认为最老牌、文化影响力最大的在线社群之一（'meme 工厂'、Let's Play 现象诞生地）。"
+  mechanisms: [community_boundaries, community_rituals, sense_of_community, newcomer_onboarding, status_systems]
+  result: "持续运行 25 年以上。付费门槛加尖刻文化将社群规模封顶在约十万级注册量，但成员身份认同极强：自称 'Goons'（共同身份符号）、每周 'Photoshop Phriday' 仪式、入会 e-hazing 式社会化、词汇过滤等共同黑话；社群的文化产物（meme、Let's Play 形式、Goonswarm 公会等）向全网扩散，而社群本身保持封闭、高留存。2022 年同行评议论文（Internet Histories）以 LP 子论坛 2007-2020 全部公开帖子为样本研究其社区参与，确认该子论坛为 Let's Play 现象诞生地。"
+  original_material: "Know Your Meme《Something Awful》条目（https://knowyourmeme.com/memes/sites/something-awful，WebSearch 实取）：1999 年创立、2001 年起 $9.99 注册费、成员自称 Goons、每周 Photoshop Phriday、论坛成员创办 4chan、被描述为 meme 工厂；Wikipedia（https://taggedwiki.zubiaga.org/new_content/36f7896091ae86b680d1dd4ece13b332 快照，WebSearch 实取）：论坛累计超 12 万账号、2001 年起 $9.95 激活费；Internet Histories 2022 论文摘要《Let's play something awful: a historical analysis of 14 years of threads》（https://m.booksci.cn/literature/46672758.htm，WebSearch 实取，DOI 10.1080/24701475.2022.2084823）：LP 子论坛为 Let's Play 诞生地"
+  observable_outcome: "社群规模长期封顶于约十万级注册量（付费门槛筛选），成员留存与身份认同极高（25 年连续存在、共同符号与每周仪式、e-hazing 社会化）；社群的文化产物对外传播极广而成员关系本身未被稀释——'产物传播'与'成员规模'两个变量分离。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "SA 展示'低传播强社区'的结构性路径：边界（付费 + 文化门槛）主动限制扩张以保护成员质量与认同（community_boundaries）；每周仪式与共同符号（Photoshop Phriday、Goons 身份、词汇过滤）周期性再生产社区感（community_rituals、sense_of_community）；新人通过 e-hazing 式社会化进入地位阶梯（newcomer_onboarding、status_systems）。对照 VCB-001：传播越广的内容越不依赖社群结构，社群越强的组织越主动限制传播——'传播'与'社群'是两个正交变量，可互相独立变动。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://knowyourmeme.com/memes/sites/something-awful"
+
+# ============ 批次 B：互动×归属 四象限（high_interaction_low_belonging / low_interaction_high_retention） ============
+
+- case_id: "VCB-005"
+  quadrant: high_interaction_low_belonging
+  case_type: benchmark_case
+  context: "微博平台引战对立内容生态：互撕谩骂、拉踩引战、煽动对立类博文与评论区的规模现象（热搜引战话题下路人围观吵架、饭圈阵营互撕）。2026 年 8 月 12 日微博官方（@微博创作者中心）发布《金橙V规则升级公告》，首次把'引战对立'内容产生的数据从创作者有效统计中整体剔除——间接证明此前这类内容长期是微博高互动（阅读量、铁粉、评论）的主要来源之一。"
+  mechanisms: [engagement_optimization_bias, algorithmic_amplification, emotional_arousal, in_group_favoritism, attention_economics]
+  result: "官方公告可公开核实：微博创作者中心 2026-08-12 17:39 发布《金橙V规则升级公告》，'对于涉及引战对立（包括但不限于互撕谩骂、拉踩引战、煽动对立等）、虚假互动、低俗等行为的博文及互动讨论，其产生的铁粉数与阅读数将不再纳入金橙V数据统计'；新浪财经（看点资讯）2026-08-13 解读文章标题即《微博金橙V新规如何判定“引战对立”内容？》，称'靠“撕”博流量的路径被彻底堵死'——说明引战内容此前确实能带来高互动数据，平台官方判定其不属于有效内容价值。"
+  original_material: "微博创作者中心《金橙V规则升级公告》全文（2026-08-12，用户转帖快照实取，原始发布方为微博创作者中心）https://m.weibo.cn/detail/5331391823743369 ；新浪财经·看点资讯《微博金橙V新规如何判定“引战对立”内容？》（2026-08-13，WebSearch 实取全文，列举互撕谩骂/拉踩引战/煽动对立三类行为及'铁粉数不计入、阅读数不计入、动态剔除机制'）https://cj.sina.com.cn/articles/view/7879996022/1d5af327606801ummq"
+  observable_outcome: "可观察事实：2026-08-12 官方公告上线；公告确认引战对立博文及互动讨论此前会产生铁粉数与阅读数（否则无需专门剔除）；新浪财经 2026-08-13 报道确认规则细节与目的（'让金橙V的发博与互动讨论真正回归优质内容本身'）。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "对比结论：引战话题下的'热闹'是情绪唤起（愤怒/对立）与阵营化反应（饭圈互撕、地域对骂）驱动的任务式互动——参与者是路过吵架的路人，吵完即散，彼此无持久关怀关系，也无归属承诺（need_to_belong 的两个条件：频繁互动+持久关怀框架均不成立）。平台官方把引战互动数据从'有效统计'中剔除，等于用规则确认：互动量 ≠ 内容/社区价值。这是'互动≠归属'的平台机制级例证：流量逻辑奖励的是情绪强度，社区逻辑需要的是关系框架，二者在引战内容上完全解耦。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://cj.sina.com.cn/articles/view/7879996022/1d5af327606801ummq"
+
+- case_id: "VCB-006"
+  quadrant: high_interaction_low_belonging
+  case_type: benchmark_case
+  context: "百度贴吧'孙笑川吧'（简称孙吧）：以游戏主播孙笑川命名的虚拟社区，早期为讨论主播的主题贴吧，2017 年后随'抽象文化'扩散演变为以'口嗨、嘴臭、抽象'为常态的亚文化聚集地；吧内以'挂人'（从其他平台搬运女性照片供评论区辱骂）、互骂、玩梗为高频内容。规模（媒体引吧内页面截图口径）：截至 2024 年 1 月发帖数量超过一亿五千条。2023 年 3 月因大量侮辱女性帖文被媒体报道，百度贴吧官方开展'全面清查'。"
+  mechanisms: [emotional_contagion, in_group_favoritism, identity_signaling, normative_influence]
+  result: "可公开核实：2023-03-23 澎湃新闻报道孙吧存在大量侮辱女性帖文（受害者称照片被搬运后'带有色情内容的辱骂整整持续了一天'），百度贴吧官方账号'贴吧阿Sir'发布公告开展'孙笑川吧'不良信息整顿，'全面清查吧内侮辱谩骂、恶意攻击、不实言论等信息'；孙笑川本人回应'请大家理智冲浪'。南方人物周刊 2024-01-31 报道：被挂者汤欣欣起诉发帖者姚某胜诉（2023 年 12 月末宣判，法院认定侵犯名誉权），报道引孙吧页面截图称'孙笑川吧截止目前发帖数量超过一亿五千条'，并引一位混迹多年的吧友评价孙吧为'人的精神上厕所的地方，用户可以在这里集中释放各类负面情绪'（南方周末采访口径）。"
+  original_material: "澎湃新闻 2023-03-23《百度孙笑川吧被指有大量侮辱女性帖文，贴吧：全面清查》（鞭牛士转载版 WebFetch 实取全文；原发澎湃新闻）https://www.bianews.com/news/details?id=145933 ；南方人物周刊 2024-01-31《照片被挂在孙笑川吧后，我起诉了挂我的人》（WebFetch 实取全文，含 1.5 亿+ 发帖量、汤欣欣案判决、'精神上厕所'评价）https://static.nfnews.com/content/202401/31/c8563320.html"
+  observable_outcome: "可观察事实：孙吧保持极大规模内容产出（1.5 亿+ 发帖量，南方人物周刊引吧内截图口径）；2023 年 3 月被官方点名整顿（百度贴吧官方公告）；2023 年 12 月被挂者起诉发帖人胜诉（司法确认'大量网友辱骂、被告未及时删除管理'构成侵权）；报道称'整顿并不奏效'，挂人-辱骂内容在整顿后持续存在。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "对比结论：孙吧互动量巨大（发帖超 1.5 亿条），但成员关系结构是'反粉丝'——以互骂、挂人、玩梗取乐为联结方式，成员身份是匿名的'嗨粉/狗粉丝'（以'巴不得主播死'为核心），对'吧'无承诺、随时可匿名流动，彼此之间不存在持久关怀关系。热度来自负面情绪（emotional_contagion）的集中宣泄与'会玩梗才算自己人'的圈内身份（in_group_favoritism + identity_signaling），而非归属满足。规模与热度（Virality）和成员归属（Community）完全解耦：这是'传播≠社群'的社群级例证，也说明以负面情绪为互动燃料的'社群'实质是情绪垃圾场，官方与司法层面的反复整顿无法改变其结构。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://static.nfnews.com/content/202401/31/c8563320.html"
+
+- case_id: "VCB-007"
+  quadrant: low_interaction_high_retention
+  case_type: benchmark_case
+  context: "家族微信群（'相亲相爱一家人'类）：以血缘关系为边界绑定的微信家庭大群，中国微信生态中最普遍的群形态之一。典型状态：多数成员常年潜水不发言，但几乎无人退群（退群的社会成本极高），并保持'偶尔点开看看'的弱参与。树洞倾诉 2026-08-14 发布《2026'群聊潜水'调查》：2026 年 8 月 7 日-13 日调查 50 位 18-35 岁年轻人，88% 自述在大多数群聊中潜水，家族群典型状态为'我就看我爸妈他们聊天，抢红包我最快，说话我从来不在'（受访者原话）。"
+  mechanisms: [strong_ties_support, need_to_belong, reciprocity_norm, community_rituals]
+  result: "可公开核实：多个公开来源独立指向同一现象——家族群低互动、高留存。树洞倾诉 2026-08 调查（50 位 18-35 岁受访者）88% 自述潜水，'工作群、家族群、同学群，大部分群都是免打扰，偶尔点开看看，从来不说话'；小宇宙播客《41.家庭群聊的数字囚笼》（Think&Talk，约 2025 年发布，WebFetch 实取）以家庭微信群为切入点，分析其演变为'算法化亲情监狱'：情感压迫、被动接收、不能自由回应、'数字逃亡：沉默、潜水、退群'；头条自媒体文章《家庭群里，为什么越来越沉默？》描述'大部分亲戚常年潜水、从不发言、默默围观'但保持群成员关系。"
+  original_material: "搜狐·树洞倾诉《2026'群聊潜水'调查：群里99+，我一句话不说》（2026-08-14，WebSearch 实取全文；调查口径为自媒体自报，非严谨抽样）https://m.sohu.com/a/1062676391_122854318/ ；小宇宙播客《41.家庭群聊的数字囚笼》（WebFetch 实取节目纲要）https://www.xiaoyuzhoufm.com/episode/6813213547ebeede7e53aa21"
+  observable_outcome: "可观察事实：家族群成员留存率极高（血缘绑定+退群社会成本高，普遍经验现象，多篇公开文章独立印证）；日常互动趋近于零，仅剩节日红包、'早上好'问候、长辈转发养生内容等低频仪式性发言；成员保持'偶尔点开看看'的弱参与（观察性留存）。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "对比结论：家族群证明'低互动+高留存'可以完全由关系约束驱动而非价值创造驱动——成员留下来是因为'不能退、不该退'（血缘义务、面子、社会规范），不是因为有归属回报。归属基本需要（need_to_belong）要求'频繁互动+持久关怀框架'两个条件，家族群满足后者（血缘承诺天然持久）却长期缺乏前者，成员以'潜水'维持最低限度的在场（第三空间式低义务在场，third_place 的弱形态）。对运营者的警示：高留存率本身不证明社群健康，必须区分'约束性留存'（人走不了）与'吸引力留存'（人不想走）——前者是负债不是资产，任务式、义务式的'回来'不能当作社群价值证据。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://www.xiaoyuzhoufm.com/episode/6813213547ebeede7e53aa21"
+
+- case_id: "VCB-008"
+  quadrant: low_interaction_high_retention
+  case_type: benchmark_case
+  context: "毕业班级微信群：以共同求学经历为边界的学生班级群（小学/初中/高中/大学群）。普遍生命周期：毕业初期热闹（晒近况、回忆杀），3-10 年内集体沉默为常态（小学群变僵尸群、初中群分裂、大学群潜水、高中群只剩零星发言），但成员几乎不退群（'想退群又犹豫不决'），群在关键时刻（同学聚会、老师募捐、校庆、新年红包）可被唤醒。"
+  mechanisms: [collective_identity_narrative, sunk_cost_fallacy, fear_of_missing_out, strong_ties_support]
+  result: "可公开核实：网易新闻（何圣君，2026-01-31）《同学微信群，是怎么变成'死群'的？》描述同学群从热闹到沉默的路径：'群还在，人散了'，成员'默默开启免打扰，有人干脆退群，更多人选择潜水'，但多数人'看着死寂的同学群，想退群又犹豫不决'；搜狐（牧场数字大脑，2025-07-09）《毕业后的同学群，为什么越来越安静了？》同样描述低互动状态与'屏蔽群消息，甚至退出群聊'的个体差异；头条自媒体《毕业10年，所有同学群全凉了！》描述'大学群：毕业三五年就集体潜水'、'红包发了有退回，张罗10周年聚会四五十人凑不出5个'。"
+  original_material: "网易·何圣君《同学微信群，是怎么变成'死群'的？》（2026-01-31，WebSearch 实取全文）https://c.m.163.com/news/a/KKJKROCH0544BBTK.html ；搜狐·牧场数字大脑《毕业后的同学群，为什么越来越安静了？》（2025-07-09，WebSearch 实取全文）https://www.sohu.com/a/912178278_122425606"
+  observable_outcome: "可观察事实：班级群成员数量长期保持满员（几乎无人退群）而日常发言趋近于零；沉默后仍可被低频事件（聚会、募捐、新年红包）部分唤醒；公开文章普遍描述'潜水/沉默/不发言但不退群'为绝大多数成员的行为模式。"
+  outcome_status: MEDIA_REPORTED
+  causal_status: case_inference
+  lesson: "对比结论：班级群的低互动高留存由'关系资本存量'（共同经历、青春记忆形成的集体身份叙事）而非'当下的互动供给'驱动——成员承诺的对象是'这段关系'而不是'这个群'本身。留存机制是组合的：集体记忆（collective_identity_narrative）提供情感锚点、沉没成本（sunk_cost_fallacy：多年群龄与同学身份，退群=承认关系终结）阻止退出、怕错过（fear_of_missing_out：怕错过聚会/消息/人情）维持弱在场。对运营者的启示：社群可以在零互动的状态下长期存在，'留存'要配合'关键时刻唤醒成功率'一起看；靠记忆存量维持的社群是'休眠资产'，一旦唤醒失败（聚会凑不齐人），沉默会进一步自我确认，最终连唤醒通道也关闭。"
+  corpus_status: SOURCE_CONFIRMED
+  material_ref: "https://c.m.163.com/news/a/KKJKROCH0544BBTK.html"

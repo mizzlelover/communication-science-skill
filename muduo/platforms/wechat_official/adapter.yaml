@@ -1,0 +1,172 @@
+platform_name: 微信公众号（WeChat Official Account）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：微信公众平台的产品形态（订阅/推送/留言/搜一搜收录）为公开可见规则，
+  群发频率等属官方文档长期载明的约束；推荐与搜索的具体权重为行业共识。
+  2026-09-08 已实取官方源并登记于 platform_sources（S1-S3）：腾讯客服《微信公众号群发次数说明》
+  （订阅号每日 1 次/服务号每月 4 次）、腾讯客服《公众平台订阅号与服务号有什么区别》、
+  腾讯知识产权保护平台《微信公众平台运营规范》内容规范摘录，正文均实际抓取核验。
+  known_platform_patterns 已逐条标注 evidence_level（L1=官方文档实际读到并支持；L2=已验证观察；
+  L3=行业共识；L4=推测）、source_ref 与 last_verified: "2026-09"。
+  后续仍以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {ref_id: S1, source: "腾讯客服《微信公众号群发次数说明》http://kf.qq.com/faq/120911VrYVrA150921mUbeya.html", source_owner: "腾讯（微信团队客服）", source_type: official, claim_supported: "订阅号每天可群发1次消息、服务号每月（自然月）可群发4次消息，次数不累加且不支持增加", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {ref_id: S2, source: "腾讯客服《公众平台订阅号与服务号有什么区别》https://kf.qq.com/touch/wxappfaq/150722fYnA7n150722iAZN3m.html", source_owner: "腾讯（微信团队客服）", source_type: official, claim_supported: "订阅号/服务号产品区分：订阅号每天群发1次、服务号每月群发4次；服务号可使用自定义菜单与高级接口", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {ref_id: S3, source: "腾讯知识产权保护平台《协议与规则》（含《微信公众平台运营规范》内容规范）https://ipr.tencent.com/policy/content/1", source_owner: "腾讯", source_type: official, claim_supported: "公众号发送内容规范与违规处理：未经授权发送他人原创文章/隐私资料等侵权内容将按违规程度处理（删除内容、限制功能、封禁账号等）", published_date: "未知（页面持续更新）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "图文推送（单图文/多图文）"
+  - "视频/音频消息"
+  - "纯文字/图片消息"
+  - "H5 页面与小程序卡片"
+
+dominant_user_intent:
+  - "订阅后主动阅读（带着对账号的既有预期点开）"
+  - "搜一搜检索（问题驱动查资料）"
+  - "朋友转发点开（社交背书进入，无账号预期）"
+
+distribution_model: >-
+  订阅分发为主：触达发生在"订阅号消息列表"，打开率取决于标题+摘要+账号信任，
+  而非算法；辅以看一看的社交化推荐（[industry_consensus]）与搜一搜的长尾搜索。
+  没有主页级算法流量池——流量上限≈粉丝量×打开率+转发裂变量，这是与算法平台
+  最本质的区别。
+
+recommendation_model: >-
+  无通用推荐信息流。"看一看"引入社交关系+算法混合推荐，把文章带出订阅关系
+  [industry_consensus]；具体权重不公开，任何"打开率公式"均为 experience_speculation。
+
+social_graph_characteristics: >-
+  单向关注+强触达通道：粉丝是可重复触达的私域资产（推送直达会话列表）；
+  陌生人推荐占比极低，增长几乎全部依赖转发裂变与搜一搜。
+
+content_lifecycle: >-
+  长青+收藏长尾：打开集中在推送后 24 小时内（会话挤压效应），之后进入长尾；
+  被搜一搜收录的文章可数月持续获得查询流量 [industry_consensus]。
+
+primary_entry_points:
+  - "订阅号消息列表（红点+未读数）"
+  - "好友转发卡片（朋友圈/群/单聊）"
+  - "看一看"
+  - "搜一搜"
+  - "菜单栏与历史文章页"
+
+attention_environment: >-
+  列表式非沉浸环境：用户在"处理未读"心态下扫读列表，每条只有标题+摘要+
+  小图的一瞥时间；点开后才是长文深读场景，容忍度高于任何信息流平台。
+
+user_behavior: >-
+  用户对熟悉的账号有栏目化预期（habit_loop_cue_routine_reward）；
+  转发行为发生在读完之后，是 identity_signaling 的社交表达；
+  收藏与"在看"是两种不同的承诺强度。
+
+interaction_signals:
+  - "在看：社交背书信号，会把文章推给好友的看一看 [official_rule-产品形态，以最新版本为准]"
+  - "点赞：态度认可，成本低于在看"
+  - "留言（精选后公开）：评论区是二次内容位，精选权在运营者手里 [official_rule-产品形态]"
+  - "赞赏：最强认可，金钱投票"
+  - "转发：不可见于后台完整数据，却是增长的第一驱动 [industry_consensus]"
+  - "收藏/常读：长尾与忠诚信号，'常读用户'打开率显著更高 [industry_consensus]"
+
+sharing_mechanism: >-
+  转发到朋友圈/群是主要增长引擎；转发卡片由标题+摘要+封面图构成，
+  卡片质量决定二次点击——标题承担"让转发者显得有品位"的社交货币职责
+  （self_presentation_impression_management）。站外无公开流量入口，生态封闭。
+
+search_mechanism: >-
+  搜一搜收录公众号文章：标题关键词+账号权重+内容质量影响排名
+  [industry_consensus]；问题型标题与垂直深耕账号有长期 SEO 红利。
+
+community_mechanism: >-
+  留言区=编辑部与读者的公开对话剧场；账号人格化（作者人设）维系 parasocial_relationship；
+  深度社群沉淀需外链到微信群/企业微信（公众号本身不是社群容器）。
+
+algorithmic_features:
+  - "看一看社交推荐流 [industry_consensus-权重不公开]"
+  - "搜一搜排序（账号权重/质量分）[industry_consensus]"
+  - "广告主互选与返佣商品（创作者侧商业化，official_rule-产品存在）"
+
+content_constraints:
+  - "[official_rule] 订阅号每日可群发 1 次，服务号每月 4 次（以平台最新公告为准）"
+  - "[official_rule] 图文标题上限 64 字，摘要约 120 字（以平台最新公告为准）"
+  - "[official_rule] 单次多图文上限 8 条（以平台最新公告为准）"
+  - "[industry_consensus] 列表页实际可见标题更短，前 13-16 字定生死（以机型显示为准）"
+
+title_role: >-
+  打开率的第一决定因素：订阅列表与转发卡片里唯一醒目的文本。
+  机制上同时承担 curiosity_gap（悬念缺口）、身份点名（self_categorization：
+  "写给谁看"）与搜索关键词三重职责；标题党能赢一次打开，但透支账号信任
+  （trust_calibration）。
+
+cover_role: >-
+  转发卡片与看一看流的第一视觉：单图文大封面、多图文小封面；
+  封面与标题的一致性降低理解成本（processing_fluency），冲突则制造流失。
+
+opening_role: >-
+  订阅读者已带预期，开场可短；转发来的新读者需要 3 秒内确认"值得读"——
+  首段决定读完率与"在看"转化；长文中段靠小标题与分段维持
+  （attention_capacity_limits）。
+
+tag_role: >-
+  无标签流量入口；关键词必须内嵌于标题与正文服务搜一搜，
+  "话题标签"在公众号生态内无分发功能 [official_rule-产品形态]。
+
+comment_role: >-
+  精选留言=可策划的二次内容：置顶神评制造 social_proof，
+  作者回复塑造人设温度；留言质量常被读者当作"读者画像"参考。
+
+follow_role: >-
+  关注=订阅承诺，进入私域触达通道；涨粉是长期资产而非单篇爆量——
+  公众号的复利来自"常读用户"比例而非粉丝绝对数 [industry_consensus]。
+
+risk_factors:
+  - "[industry_consensus] 标题党透支信任：单次打开率上升，长期打开率下滑（打开率衰减是行业普遍观察）"
+  - "[industry_consensus] 内容同质化与打开率大盘下滑：订阅制红利的消退，倒逼转向搜一搜与视频号"
+  - "[official_rule] 过度营销/诱导分享触发平台处罚（诱导分享规则为官方明文，以最新规则为准）"
+  - "[industry_consensus] 内容合规（时事/医疗/财经领域收紧），失联即失去全部触达"
+
+known_platform_patterns:
+  - pattern: "标题身份点名+悬念缺口（'为什么XX'/'写给XX的人'）"
+    mechanism_links: [curiosity_gap, self_categorization, selective_attention]
+    fact_type: industry_consensus
+    note: "在非沉浸列表里，标题要让目标读者 1 秒内认领'这是我'并留下未闭合缺口。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+  - pattern: "摘要补全标题承诺而非重复标题"
+    mechanism_links: [framing_effects, processing_fluency]
+    fact_type: industry_consensus
+    note: "标题给钩子、摘要给证据感，两者信息互补降低点击犹豫。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+  - pattern: "精选留言置顶引导从众与讨论"
+    mechanism_links: [social_proof, normative_influence]
+    fact_type: industry_consensus
+    note: "置顶一条高质量留言为评论区定调，后来者倾向对齐该规范。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识；'留言精选权在运营者手里'为产品形态，见 interaction_signals 标注）"
+    last_verified: "2026-09"
+  - pattern: "转发卡片三件套（标题+摘要+封面）一致性设计"
+    mechanism_links: [processing_fluency, trust_signals_content]
+    fact_type: industry_consensus
+    note: "卡片是被转发者的'脸面'；协调一致的卡片提高二次点击并降低转发者社交风险。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+  - pattern: "搜一搜关键词布局（问题式标题+垂直深耕）"
+    mechanism_links: [answer_engine_visibility, long_tail_demand, encoding_specificity]
+    fact_type: industry_consensus
+    note: "文章按查询意图组织，让数月后的搜索仍能唤醒内容。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识；搜一搜收录公众号文章为产品形态，具体排序权重不公开）"
+    last_verified: "2026-09"
+  - pattern: "固定栏目与固定推送时间养成常读习惯"
+    mechanism_links: [habit_loop_cue_routine_reward, mere_exposure, parasocial_relationship]
+    fact_type: industry_consensus
+    note: "稳定线索→固定栏目→阅读奖励的习惯闭环，是打开率的复利来源。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+
+confidence: medium

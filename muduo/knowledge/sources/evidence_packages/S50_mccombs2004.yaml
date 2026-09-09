@@ -1,0 +1,25 @@
+# Evidence Package — S50 McCombs 2004（Setting the Agenda）
+# 标准格式。access_level 如实标注。
+source_id: S50
+title: "Setting the Agenda: The Mass Media and Public Opinion"
+authors: "Maxwell McCombs"
+year: 2004
+journal: Polity Press（专著；议程设置理论综合）
+doi: "无 DOI（专著）"
+url: "https://wiki.mbalib.com/zh-tw/The_agenda_setting_theory"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "议程设置核心内容经多源交叉实取：Chapel Hill 研究（1968 总统选举，15 项目相关系数 0.967/0.979）+ 第一层（议题显著性转移）+ 第二层（属性议程设置，『该想什么』vs『该怎么想』）+ 媒介议程→公众议程的显著性转移"
+research_question: "大众媒介能否决定公众『想什么』？议题的重要性排序如何从媒介议程转移到公众议程？"
+core_claims:
+  - "大众传播不能决定人们怎么想，但能显著影响人们想什么（第一层议程设置：议题显著性转移）"
+  - "第二层议程设置（属性议程）：媒体强调议题的某些属性而忽略其他属性，影响受众对同一议题『该怎么想』——与强调框架同构"
+  - "Chapel Hill 研究：选民对重要问题的判断与媒介反复报道之间存在高度对应（主要项目 r=0.967，次要项目 r=0.979）"
+  - "媒介议程与公众议程的一致性受受众媒介接触量调节；议程设置是认知层面的中长期宏观效果"
+method: "Chapel Hill 调查 + 内容分析（1968 美国大选）+ 五十余年间大量复制研究综合"
+results: "（理论综合）议程设置成为媒介效果研究的支柱理论；第一/第二层框架沿用至今"
+limitations: "专著综述；后续研究提示社交媒体时代议程设置主体多元化（传统媒体不再是唯一议程设定者）；只强调设置面、少谈反映面"
+boundary_conditions: "认知层面（显著性）而非态度/行为层面；效果需较长时间跨度的持续报道"
+relevant_nodes: [emphasis_vs_equivalence_framing, gatekeeping_dynamics, top_down_attention_guidance]
+notes: "emphasis_vs_equivalence_framing 的属性议程来源（book 级）。Chapel Hill 相关系数为公开标准数据，未编造。"
+last_verified: "2026-09"

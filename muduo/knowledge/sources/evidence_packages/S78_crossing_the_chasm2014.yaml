@@ -1,0 +1,26 @@
+# Evidence Package — S78 Moore 2014（Crossing the Chasm: Marketing and Selling Disruptive Products to Mainstream Customers）
+# 标准格式。access_level 如实标注。
+source_id: S78
+title: "Crossing the Chasm: Marketing and Selling Disruptive Products to Mainstream Customers"
+authors: "Geoffrey A. Moore"
+year: 2014（第 3 版；首版 1991）
+journal: HarperBusiness（专著）
+doi: "无 DOI（专著）"
+url: "https://grahammann.net/book-notes/crossing-the-chasm-geoffrey-moore"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：英文深读笔记（技术采用生命周期五段/鸿沟定义/D-Day 滩头策略『big fish, small pond』/愿景者要变革代理 vs 实用主义者要生产力改进/pragmatists 买 whole product 而非核心产品/同类客户参考证据）+ 英文深读笔记②（1991 首版、1999 与 2014 修订/D-Day 类比/bowling pin 扩段/whole product 四层 Levitt 模型：generic-expected-augmented-potential/compelling reason to buy 出现 50 余次/ARR 1-20M 停滞区）+ 章节式摘要（Target-Customer Scenario 工作坊/竞争定位罗盘/分销策略）+ 中文解读（鸿沟定义/五类消费者占比 2-14-34-34-16/早期市场 vs 主流市场/先取空白细分市场获绝对领导权再扩大战果四步骤）+ 补充资料（niche 市场与 whole product 要点）"
+research_question: "高科技产品在赢得早期采用者（愿景者）之后，为何大多数会死在进入主流市场（早期大众）的路上？如何跨越这道鸿沟？"
+core_claims:
+  - "鸿沟：早期采用者（愿景者，为 10 倍突破买单、容忍不完整产品）与早期大众（实用主义者，要求完整方案、同类参考案例与品类领导证明）之间存在一道决策逻辑完全相反的鸿沟——愿景者的背书反而排斥实用主义者，多数高科技产品死在这里"
+  - "跨越策略（D-Day/海滩登陆 + bowling pin）：不全面铺开，而是选定一个滩头细分市场（beachhead），集中压倒性资源取得该细分的绝对领导权，再以该细分建立的参考基地逐段扩张到相邻细分（保龄球瓶式击倒）"
+  - "whole product 完整产品：实用主义者购买的是完整解决方案而非核心产品——借用 Levitt 四层模型（generic 出厂产品/expected 顾客默认应有/augmented 服务培训集成等周边/potential 生态可扩展），任何一层缺失（如缺 PMS 集成、实施伙伴、行业参考客户）都会让交易失败"
+  - "目标客户画像与 compelling reason to buy：用 Target Customer Characterization 工作坊（8-10 个一日生活场景）选出唯一滩头细分；只有『维持现状的痛苦超过改变』（通常是有可计量美元成本的问题流程）才是真实购买理由，『可有可无』不是滩头"
+  - "愿景者要的是『变革代理/竞争跳板』（evolution 不，revolution 要），早期大众要的是『经过验证的生产力改进』——跨越阶段必须更换叙事、渠道与证据（从愿景背书换成同类客户案例）"
+method: "作者基于高科技营销咨询经验的案例归纳（从业者框架，非系统实证检验）"
+results: "（实践框架）B2B 高科技创业公司进入市场（go-to-market）的奠基读本；chasm/beachhead/whole product 成为行业通用语汇"
+limitations: "基于案例与咨询经验，无系统对照检验，幸存者偏差未排除；假设的单一清晰品类在当代平台型/生态型市场中不再总是成立"
+boundary_conditions: "主要适用于高不确定性、高单价、需改变工作方式的高科技品类；日用品与娱乐内容不适用；成立前提是早期与主流客户决策逻辑确实断裂"
+relevant_nodes: [chasm_crossing, adopter_categories, diffusion_of_innovations]
+notes: "从业者实践框架（D 级，与 diffusion.yaml 中 chasm_crossing 节点标注一致）。鸿沟、bowling pin、whole product 等概念为公开内容，未编造。"
+last_verified: "2026-09"

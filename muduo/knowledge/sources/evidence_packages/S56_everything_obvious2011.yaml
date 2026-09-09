@@ -1,0 +1,26 @@
+# Evidence Package — S56 Watts 2011（Everything Is Obvious）
+# 标准格式。access_level 如实标注。
+source_id: S56
+title: "Everything Is Obvious: Once You Know the Answer"
+authors: "Duncan J. Watts"
+year: 2011
+journal: Crown Business（专著）
+doi: "无 DOI（专著）"
+url: "https://m.toutiao.com/group/7662582186444440083/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：中文深度解读（八大颠覆结论：事后诸葛亮幻觉/音乐实验室/无关键意见领袖/专家预测不如模型/运气主导/群体愚蠢/历史不可预测/因果倒置）+ 学术评论（常识属后见之明/预测困难/需要更好的测量）+ 图书馆简介"
+research_question: "为什么'常识'（common sense）无法预测复杂社会现象？社会科学的正确路径是什么？"
+core_claims:
+  - "常识是事后自圆其说：成功不存在必然逻辑——音乐实验室实验（同一批歌曲，独立评分组与可见他人下载的社交组结果完全不同，从众/随机/传播顺序权重远超内容质量）"
+  - "'关键意见领袖'神话被修正：流行根基是海量普通人的弱关系传播；移除头部网红传播仅小幅放缓，移除中层普通传播者热度归零"
+  - "专家长期预测不如极简统计模型（Tetlock 20 年研究：专家预测略好于随机、低于简单模型；越自信误差越大）"
+  - "运气（随机性）是多人竞争赛道的核心区分变量；群体智慧有严苛前提，现实中群体常放大偏见（群体愚蠢）"
+  - "历史是单一不可重复的偶然路径，不能作为预测工具；需要更好的测量与中层理论（对比物理学 Kepler 阶段）"
+method: "社会科学研究综合（音乐实验室/社交网络大数据/Tetlock 专家预测）+ 批判论证"
+results: "（理论批判）常识推理的局限系统化；'影响者神话'修正的普及版"
+limitations: "批判性论证为主（非新实验）；'运气主导'强解读有争议"
+boundary_conditions: "适用于复杂社会系统预测；简单可控情境常识仍有效"
+relevant_nodes: [opinion_leadership, algorithmic_amplification, human_ai_co_creation, network_threshold_models, structural_holes_bridging]
+notes: "影响者神话/常识局限的修正来源（book 级）。音乐实验室/6 万实验为公开研究，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,533 @@
+# memory — 记忆（Memory）：被留下来的才是真正传播过的
+domain: memory
+nodes:
+  - id: encoding_specificity
+    canonical_name_en: Encoding Specificity
+    canonical_name_zh: 编码特异性
+    aliases: [提取线索匹配, cue-dependence —— 与 context_cue_stability 的区别：本节点是记忆的编码-提取匹配原则，后者是行为设计的线索稳定性原则]
+    domain: memory
+    definition: 提取效果取决于提取线索与编码时情境的匹配程度（Tulving 的编码特异性原则）。记忆不是录像带，而是按线索重建的过程：编码时伴随的环境、心境与任务框架都会成为未来的提取线索。
+    core_claim: 记忆提取的成功率由编码情境与提取情境的匹配度决定，而非记忆痕迹的绝对强度。
+    mechanism: 编码时激活的关联网络（环境、情绪、语义）成为记忆痕迹的一部分；提取时线索与编码特征重叠越多，激活扩散越容易到达目标。Godden 与 Baddeley 1975 的潜水员实验提供了最著名的展示：水下学的单词水下回忆更好，陆地同理（经典文献，已建包 EP S214）。
+    causal_chain: "编码情境特征被存储 → 提取情境提供线索 → 线索重叠度决定提取成功率"
+    variables: {inputs: [编码环境, 心境状态, 编码任务框架], moderators: [间隔时长, 线索类型（物理或语义）], mediators: [线索重叠度, 激活扩散], outputs: [回忆率, 再认率, 应用迁移]}
+    evidence:
+      supporting:
+        - "Tulving 与 Thomson 1973 的编码特异性原则论文"
+        - "Godden 与 Baddeley 1975 的潜水员情境依存记忆实验（经典文献，已建包 EP S214）"
+      conflicting:
+        - "心境依存效应弱于情境依存效应，复制结果波动较大"
+      replication:
+        - "线索匹配总原则稳健；物理环境线索的作用随间隔拉长而衰减"
+      meta_analysis: []
+    evidence_grade: A
+    boundary_conditions:
+      - "语义线索通常强于物理环境线索"
+      - "环境线索对短间隔回忆影响大，长间隔后衰减"
+    failure_conditions:
+      - "在教室学、在家里用——提取场景与编码场景断裂"
+      - "文案语境与投放场景不匹配，记忆无法在购买现场被激活"
+    common_misinterpretations:
+      - "只要记住了随时都能用——孤立记忆常因缺线索而调用失败"
+      - "以为重复次数决定记忆——线索匹配往往比次数更关键"
+    ethical_risks:
+      - "上下文广告制造与场景错配的熟悉感，误导消费判断"
+    examples:
+      original_cases:
+        - "S04 对编码与提取关系的系统阐述"
+      research_cases:
+        - "潜水员实验：学习与回忆环境一致组的自由回忆显著更好"
+      modern_cases:
+        - "收银台旁的最后一眼陈列复现广告信息（在购买场景重建线索）；社群打卡的固定时间与固定地点"
+    communication_implications: 让品牌信息在与购买决策相似的情境中出现，等于给记忆装上现场钥匙；内容要内置未来被提取的场景词。
+    community_implications: 社群仪式固定时间固定场景（每周三晚直播），是把编码情境制度化为提取线索。
+    content_applications:
+      body: "在内容中预埋使用场景句（当你准备……的时候）"
+      opening: "用受众真实使用场景开场，绑定未来的提取线索"
+      cta: "把行动指令与具体场景挂钩（下次开会前打开这条）"
+    platform_implications: 平台的情境标签（地理位置、时段推送）是线索匹配的工程化；跨平台投放的线索断裂是记忆资产流失的暗坑。
+    related_nodes: [context_cue_stability, testing_effect, spaced_repetition, gist_vs_verbatim_memory, mood_congruence]
+    source_ids: [S04, S05, S149, S214]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Tulving & Thomson 1973 编码特异性原则论文（S149，substantial_excerpt：再认失败范式实验细节经中科院心理所综述+第三方词条多源交叉核实）"
+      effect_size: "S149 实验 1：线索回忆 P(Rc)=0.63 vs 目标词再认 P(Rn)=0.26；『能回忆但不能再认』与反向之比 15:1（ground-COLD 范式）"
+      replication_status: "编码-提取线索匹配总原则稳健；语义线索通常强于物理环境线索，物理环境线索作用随间隔拉长衰减（Tulving-Wiseman 函数刻画边界条件）"
+      context_dependency: "线索有效性取决于编码时是否实际加工该信息，而非线索-目标的绝对联想强度"
+      downgrade_upgrade_reason: "2026-09 反向审计：原 grade_justification 系自 working_memory_limits 错位复制的工作记忆内容（容量 4±1/语音环 1-2 秒），按 S149 EP 编码特异性本体重写；primary_sources 由 S116 改为 S149（S116 EP 无编码特异性内容）；Godden & Baddeley 1975 潜水员实验为经典文献未建包，标注记忆级；S04/S05 降为背景；2026-09-09 同书重复登记合并 S116→S04（S04 为 annotated 实质版），引用重定向至 S04，S116 标 MERGED_INTO 移出注册表"
+    provenance:
+      primary_sources: [S149]
+      supporting_evidence: [S04, S05, S214]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: serial_position_effect
+    canonical_name_en: Serial Position Effect
+    canonical_name_zh: 系列位置效应（首因与近因）
+    aliases: [首因近因效应, primacy-recency —— 与 peak_end_rule 的区别：本效应针对序列材料的即时记忆，峰终定律针对整段经历的事后评价]
+    domain: memory
+    definition: 序列呈现的项目中，开头（首因，依托长时记忆的复述）与结尾（近因，仍留在工作记忆）记忆最好，中间塌陷。Murdock 1962 的自由回忆研究与 Glanzer 与 Cunitz 1966 对两种成分的分离是经典基础。
+    core_claim: 呈现顺序系统性塑造记忆：首位与末位享有记忆特权，中间位置付出代价。
+    mechanism: 首因项获得更多复述时间与更深的编码加工，得以转入长时记忆；近因项尚未被替换，直接从工作记忆读出；延迟回忆或插入分心任务会消除近因而保留首因，证明两者机制不同。
+    causal_chain: "序列呈现 → 首位获得复述优势 + 末位保持工作记忆 → 首尾回忆优势 → 中间塌陷"
+    variables: {inputs: [呈现顺序, 序列长度, 呈现节奏], moderators: [延迟与分心任务, 项目差异度, 受众卷入], mediators: [复述量, 工作记忆保持], outputs: [自由回忆率, 关键信息留存, 选择偏好]}
+    evidence:
+      supporting:
+        - "Murdock 1962 的自由回忆系列位置曲线"
+        - "Glanzer 与 Cunitz 1966 用延迟回忆分离首因与近因"
+      conflicting:
+        - "长序列与快节奏会加剧塌陷；高强度独特项目可打破位置规律"
+      replication:
+        - "序列位置曲线是记忆研究最稳定的发现之一"
+      meta_analysis: []
+    evidence_grade: A
+    boundary_conditions:
+      - "依赖序列长度：超长列表中间塌陷加剧"
+      - "延迟或分心会消除近因成分"
+    failure_conditions:
+      - "把最想让人记住的卖点放在中段"
+      - "结尾被无关琐事占据，浪费近因红利"
+    common_misinterpretations:
+      - "平均分配每个卖点的篇幅——忽略位置权重的平摊等于自费放弃首位优势"
+      - "以为开头只要吸睛——开头还承担最深编码的第一波信息"
+    ethical_risks:
+      - "把免责或费用信息放在记忆最差的中段位置"
+    examples:
+      original_cases:
+        - "S72 消费者行为教科书中广告位置与记忆的研究传统"
+      research_cases:
+        - "自由回忆实验的位置曲线：首尾高、中间低的 U 形"
+      modern_cases:
+        - "视频前 3 秒与结尾 5 秒的信息卡位；直播讲品的开场与压轴安排；榜单第一名效应"
+    communication_implications: 结构即记忆策略：最强论点放开头做深编码，行动指令放结尾吃近因，中间只放支撑性内容。
+    community_implications: 社群活动的议程设计同理——最重要的事放在开场与收尾，中段用来执行事务。
+    content_applications:
+      title: "标题首位放核心利益词"
+      body: "三点式结构中把最不可妥协的论点放在第一点"
+      cta: "结尾 10 秒重复唯一行动指令"
+    platform_implications: 信息流位置拍卖本质上是对首位记忆与注意特权的定价；内容端的对策是把位置结构内化到素材自身。
+    related_nodes: [working_memory_limits, peak_end_rule, mental_availability, category_entry_points, anchoring_effect]
+    source_ids: [S04, S72, S150]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Baddeley 2007（S04，序列位置与工作记忆）+ Solomon 2017（S72，位置-记忆在营销的应用）"
+      effect_size: "首位与末位项目回忆优势（经典序列位置效应）"
+      replication_status: "序列位置效应为记忆研究最稳健现象之一"
+      context_dependency: "列表长度/呈现速度/提取测试方式调制"
+      downgrade_upgrade_reason: "2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S04]
+      supporting_evidence: [S72]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: von_restorff_effect
+    canonical_name_en: Von Restorff Effect (Isolation Effect)
+    canonical_name_zh: 隔离效应（冯·雷斯托夫效应）
+    aliases: [隔离效应, 独特性效应, distinctiveness —— 与 schema_violation 的区别：隔离是列表内知觉层面的异类优势，图式违背是语义知识层面的预期破坏]
+    domain: memory
+    definition: 与背景同质项目显著不同的项目更易被记住（von Restorff 1933）。异类获得记忆优先权——注意被捕获且编码更具区分性，提取时它也是独一无二的线索。
+    core_claim: 在同质序列中，唯一的异类享有记忆特权；但异类属性本身不决定好恶。
+    mechanism: 异类同时触发两道工序：自下而上的注意捕获与区分性编码（Hunt 的区分性框架）——它被编码为那个不一样的，提取线索因此独一无二。记忆搜索时，普通项目互相干扰，异类无干扰可循。
+    causal_chain: "同质背景 + 单一异类 → 捕获与区分性编码 → 独特提取线索 → 记忆优势"
+    variables: {inputs: [异类属性强度, 背景同质程度, 异类的语义相关性], moderators: [列表长度, 呈现通道, 受众先验], mediators: [注意捕获, 区分性编码], outputs: [回忆率, 再认率, 品牌识别]}
+    evidence:
+      supporting:
+        - "von Restorff 1933 的隔离实验"
+        - "Hunt 对记忆中区分性的理论化与实验传统"
+      conflicting:
+        - "背景同质性不足时效应消失；全部特异等于没有特异"
+      replication:
+        - "列表学习的隔离效应稳健复制；向品牌场景的推广属合理外推而非直接证据"
+      meta_analysis: []
+    evidence_grade: A-
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "依赖背景同质性——在都试图特异的市场中，必须升级特异维度"
+      - "异类属性最好与品牌语义相关，否则记住了梗忘了品牌"
+    failure_conditions:
+      - "为异而异的猎奇创意（ vampire creativity：创意吸血了品牌的注意力）"
+      - "行业集体追求同一类特异（全行业都在喊贵）导致差异化抵消"
+    common_misinterpretations:
+      - "只要与众不同就能赢——特异性必须绑定可识别品牌资产与定位语义"
+      - "把特异理解成怪异——冒犯性差异换来的记忆可能附带负面效价"
+    ethical_risks:
+      - "用冒犯性或争议性差异博取记忆（博眼球的底线竞赛）"
+    examples:
+      original_cases:
+        - "S40 的意外原则；S76 对可识别品牌资产的强调提供了应用层参照"
+      research_cases:
+        - "字母与数字混合序列中被隔离染色的项目回忆率显著更高"
+      modern_cases:
+        - "品牌色彩与声音符号（固定音效、固定色块）的长期资产化；货架上的异形包装"
+    communication_implications: 在同质化信息流里，差异是记忆的入场券；但差异必须长在品牌资产上，让记住异类等于记住你。
+    community_implications: 社群的独特仪式（只有本群有的梗、口号、称呼）就是成员记忆中的隔离项，是社群区别于群聊的关键。
+    content_applications:
+      title: "在标题中制造与同类内容的一个显性差异点"
+      visual: "封面在平台同侪中保持单一独特符号（固定色块或版式）"
+      body: "核心概念用一个独家隐喻承担区分性编码"
+      cta: "给社群行动一个专属名称，形成记忆隔离"
+    platform_implications: 算法对差异的奖励是短期的（新颖性点击），平台模板化又在抹平差异；长期资产要建立在平台外也可识别的符号上。
+    related_nodes: [distinctive_brand_assets, mental_availability, schema_violation, bottom_up_attention_capture, positioning_mechanism]
+    source_ids: [S40, S76, S155]
+    provenance:
+      primary_sources: ['S40', 'S76', 'S155']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: zeigarnik_effect
+    canonical_name_en: Zeigarnik Effect
+    canonical_name_zh: 蔡格尼克效应
+    aliases: [未完成情结, 未完成任务效应 —— 与 curiosity_gap 的区别：好奇缺口是信息层面的缺口动机，蔡格尼克是任务层面的中断记忆与动机；与 attention_residue 的区别：后者是切换后的资源残留]
+    domain: memory
+    definition: 未完成的任务比已完成的任务更容易被记住，并在心理上持续保持激活（Zeigarnik 1927 受咖啡馆侍者记忆现象启发）。中断让目标维持开启状态，直到完成或被心理上关闭。
+    core_claim: 中断的任务保持认知激活，产生侵入性想法与完成动机，完成或关闭后释放。
+    mechanism: 目标系统的运行方式是未达成即保持可及性：未完成目标的表征持续处于高激活状态，更容易被想到、也更容易侵入当前思维；目标完成或被合理放弃后激活解除。后续研究显示效应受目标承诺与失败线索调节，并非无条件成立。
+    causal_chain: "任务启动 → 中断 → 目标保持激活 → 侵入性想法与完成动机 → 完成后释放"
+    variables: {inputs: [任务中断点, 任务个人相关性, 进度可见性], moderators: [目标承诺, 完成可能性, 时间压力], mediators: [目标激活水平], outputs: [任务记忆, 完成动机, 侵入性想法, 回访行为]}
+    evidence:
+      supporting:
+        - "Zeigarnik 1927 的中断任务回忆实验"
+      conflicting:
+        - "后续复制结果有波动：效应大小依赖目标承诺与动机，部分研究未发现差异"
+      replication:
+        - "现象被广泛引用且在应用设计中反复奏效，但实验层面的复制一致性中等"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "需要真实的目标承诺——用户不在乎的任务中断不产生效应"
+      - "进度可见且可完成时动机最强"
+    failure_conditions:
+      - "过多并行未完成任务产生焦虑与逃避而非动力（红点疲劳）"
+      - "虚假进度被识破后信任崩塌"
+    common_misinterpretations:
+      - "吊胃口永远有效——仅对用户已经承诺的目标有效"
+      - "把未读红点当万能钩子——超量未完成状态训练出的是关闭而非回访"
+    ethical_risks:
+      - "故意阻断任务体验制造沉没感（自动续费、进度惩罚、倒计时强迫）"
+    examples:
+      original_cases:
+        - "S17 的触发-行动-多变奖励-投入模型中，投入阶段大量借用未完成效应的直觉"
+      research_cases:
+        - "中断实验：被打断的任务在自由回忆中的再现率高于已完成任务"
+      modern_cases:
+        - "剧集的自动连播与下一集倒计时；拼团进度条；任务清单与学习 streak；红点未读设计"
+    communication_implications: 内容可以在中途设置未完成点（分集、连载、任务卡）以获得回访，但每个未完成点都必须值得回来。
+    community_implications: 社群的成长路径与成就系统用未完成感维持参与，但要控制未完成总量以免焦虑驱逐活跃。
+    content_applications:
+      opening: "开头声明本系列共几集，制造系列未完成感"
+      cta: "把行动定义为下一步而非终点（完成第一步，还差两步）"
+      body: "在关键节点留下明确的进度标记"
+    platform_implications: 平台的连续性机制（streak、追番列表、收藏夹）把蔡格尼克效应产品化；同时通知过载正在训练用户批量关闭它。
+    related_nodes: [curiosity_gap, suspense_structure, goal_gradient_effect, hook_model, endowed_progress_effect, attention_residue]
+    source_ids: [S05, S17, S154]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Schacter 2001（S05，记忆七宗罪：未完成记忆优势/建构性）+ Eyal 2014（S17，Hook 未完成钩子应用）"
+      effect_size: "未完成任务回忆优势（Zeigarnik 经典效应）"
+      replication_status: "效应方向经典；幅度与任务卷入相关"
+      context_dependency: "任务中断/自我相关调制效应"
+      downgrade_upgrade_reason: "2026-09 实取 S05 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S05]
+      supporting_evidence: [S17]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: testing_effect
+    canonical_name_en: Testing Effect (Retrieval Practice)
+    canonical_name_zh: 测试效应（提取练习）
+    aliases: [提取练习, retrieval practice, 检索练习 —— 与 germane_load_learning 的关系：测试效应是深加工中证据最强的一种具体操作]
+    domain: memory
+    definition: 提取练习（自测、回忆、闭卷作答）比重复阅读更能巩固长期记忆。Roediger 与 Karpicke 2006 的系列实验确立了其独立于重复学习的地位；测试不只是测量，它本身就是最强有力的学习事件之一。
+    core_claim: 成功的提取行为本身改变并巩固记忆，其长期效果超过等时的重复阅读。
+    mechanism: 提取重建并强化记忆通路，同时增加提取线索的多样性（在不同情境下被成功提取的记忆拥有更多入口）；难度适中的提取构成必要难度（Bjork），失败后立即反馈同样有效。重读则相反——它制造流畅性错觉，让人误以为自己学会了。
+    causal_chain: "提取尝试 → 通路重建 + 线索多样化 → 长期保持提升 → 后续提取更容易"
+    variables: {inputs: [提取尝试次数, 提取难度, 反馈及时性], moderators: [材料难度, 学习者水平, 提取与反馈间隔], mediators: [提取成功, 线索多样性], outputs: [延迟测验成绩, 迁移能力, 学习效率]}
+    evidence:
+      supporting:
+        - "Roediger 与 Karpicke 2006 的学习-测试对比实验"
+        - "课堂现场的重复实验与多项元分析支持"
+        - "Bjork 的必要难度框架提供了机制解释"
+      conflicting:
+        - "极难或无反馈的提取可能挫伤动机；选择题猜测的收益有限"
+      replication:
+        - "被多国多年龄段样本稳健复制，是认知心理学应用于教育最成功的发现之一"
+      meta_analysis:
+        - "多项元分析确认提取练习优于重读的平均优势（一手元分析 EP 未建，已建包 EP S190）"
+    evidence_grade: A-
+    boundary_conditions:
+      - "需要成功或快速反馈的提取，难度要落在可达区间"
+      - "复杂技能需结合应用情境，不能只靠回忆式自测"
+    failure_conditions:
+      - "纯选择题连猜无加工，收益趋近于零"
+      - "高焦虑考试情境可能反向损害表现"
+    common_misinterpretations:
+      - "反复读就是复习——重读的流畅性错觉恰恰掩盖了没记住的事实"
+      - "把测试当压力工具——低风险自测才是正确用法"
+    ethical_risks:
+      - "用挫败感测试制造焦虑再售卖解决方案（伪测评营销）"
+    examples:
+      original_cases:
+        - "S04 对提取与记忆巩固的讨论"
+      research_cases:
+        - "学习-重读组与学习-自测组的对比：一周后自测组的保持显著更好，尽管当下自我感觉更差"
+      modern_cases:
+        - "Anki 与间隔复习软件；社群每日问答打卡；知识付费的结营测验"
+    communication_implications: 把受众从读者变成答题者：每条内容附一个可自答的问题，是性价比最高的记忆投资。
+    community_implications: 社群的问答文化（每周一题、案例复盘提问）把测试效应制度化为集体学习资产。
+    content_applications:
+      body: "每节末尾加一个自测问题"
+      cta: "邀请读者先自答再展开评论区对照"
+      opening: "用一道前置小题激活相关旧知识"
+    platform_implications: 平台的问答、投票与测验组件是现成的提取工具；但纯互动指标不区分猜测与真提取，效果要靠设计保证。
+    related_nodes: [spaced_repetition, germane_load_learning, encoding_specificity, gist_vs_verbatim_memory, processing_fluency]
+    source_ids: [S04, S05, S190]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "提取练习效应方向由教科书级文献共识支撑（S04/S05 相邻概念），但 Roediger & Karpicke 2006 与元分析一手 EP 未建，内容来自记忆蒸馏，待建 EP 后升级；2026-09-09 一手 EP 已建（S190）"
+      effect_size: "提取练习优于等时重读（方向由教科书共识支撑；一手元分析未建包，无一手效应量可引）"
+      replication_status: "『多项元分析确认』『多国多年龄段稳健复制』等表述超出 S04/S05 EP 所载，回退为记忆级转述"
+      context_dependency: "提取难度/反馈/间隔调制效应"
+      downgrade_upgrade_reason: "2026-09 反向审计：核心实验证据（Roediger & Karpicke 2006、课堂复制、Bjork 必要难度、多项元分析）在 S04/S05 EP 均未载且未建包，grade 由 A 降为 C，validation_status 回退 MEMORY_BASED，待建 EP 后升级"
+    provenance:
+      primary_sources: [S190]
+      supporting_evidence: [S04, S05]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: spaced_repetition
+    canonical_name_en: Spaced Repetition (Spacing Effect)
+    canonical_name_zh: 间隔重复（间隔效应）
+    aliases: [间隔效应, distributed practice —— 与 mere_exposure 的区别：单纯曝光目标是好感，间隔重复目标是记忆保持；两者对重复安排的结论同向]
+    domain: memory
+    definition: 相同总时长下，间隔安排的复习比集中安排产生更持久的记忆（spacing effect）。Ebbinghaus 1885 的遗忘曲线研究奠基；最优复习点大致位于将忘未忘之际。
+    core_claim: 间隔化的重复接触显著提升长时记忆，即使总接触时间完全相同。
+    mechanism: 间隔迫使出现部分遗忘，使下一次提取更费力，费力而成功的提取产生更强巩固（与 testing_effect 协同）；集中复习当下流畅但缺乏提取难度，短期可看、长期速朽。遗忘曲线定义了间隔的节奏依据。
+    causal_chain: "间隔安排 → 部分遗忘 → 提取难度上升 → 成功提取的巩固增强 → 长期保持"
+    variables: {inputs: [重复次数, 间隔长度, 间隔递增安排], moderators: [材料稳定性, 目标保持期, 学习者水平], mediators: [提取难度, 巩固过程], outputs: [延迟记忆成绩, 遗忘速率, 触达效率]}
+    evidence:
+      supporting:
+        - "Ebbinghaus 1885 的记忆与遗忘曲线经典研究"
+        - "Cepeda 等 2006 的间隔效应元分析"
+        - "Zielske 1959 的广告记忆与遗忘现场研究传统"
+      conflicting:
+        - "间隔过长导致遗忘超过可提取范围；最优间隔随目标保持期而变"
+      replication:
+        - "间隔效应是记忆研究中最稳健的现象之一，跨越实验室与真实课堂"
+      meta_analysis:
+        - "元分析确认间隔优于集中的平均优势，并支持扩展间隔安排（Cepeda 2006 一手 EP 未建，已建包 EP S191）"
+    evidence_grade: A
+    boundary_conditions:
+      - "间隔需要落在部分遗忘但可提取的区间"
+      - "目标保持期越长，最优间隔越宽"
+    failure_conditions:
+      - "考前突击（集中学习）短期可用、长期速朽"
+      - "品牌投放一次集中轰炸后归于沉寂"
+    common_misinterpretations:
+      - "集中曝光一周就够——遗忘曲线决定持续小幅触达优于集中爆发（对记忆目标而言）"
+      - "把间隔重复误解为机械重复——必须配合提取练习才有完整效果"
+    ethical_risks:
+      - "利用间隔推送制造永远在线的依赖感（策略性唤醒与召回轰炸）"
+    examples:
+      original_cases:
+        - "S76 的触达优先与持续性投放原则提供了营销层的对应"
+      research_cases:
+        - "Ebbinghaus 的无意义音节节省法；广告现场研究中分散投放的回忆优势"
+      modern_cases:
+        - "Anki 类工具；社群的回访节奏设计；广告投放的脉冲策略与频次规划"
+    communication_implications: 传播是遗忘管理：与其赌一条爆款，不如设计可预期的重复节奏，让正确信息在遗忘发生前再次出现。
+    community_implications: 社群的回访与唤醒体系（新人 7 日路径、老客月度召回）本质是对间隔效应的运营化。
+    content_applications:
+      title: "系列内容按递增间隔推送（当天、三天、一周）"
+      body: "同一核心信息的不同变体而非原样复读"
+      cta: "在遗忘拐点安排下一次触达（关注、订阅、预约）"
+    platform_implications: 平台频次控制与重访召回算法是间隔机制的工程实现；跨平台记忆分散要求运营者自建触达节奏。
+    related_nodes: [testing_effect, mere_exposure, encoding_specificity, mental_availability, context_cue_stability, hedonic_adaptation]
+    source_ids: [S04, S76, S191, S211]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Ebbinghaus 1885、Cepeda 等 2006 元分析、Zielske 1959 广告现场研究均为教科书/经典文献，三者一手 EP 均未建；S04 EP 无间隔内容、S76 EP 无『触达节奏与记忆』内容，证据来自记忆蒸馏；2026-09-09 一手 EP 已建（S191）"
+      effect_size: "间隔复习优于集中复习（方向由教科书级共识支撑；一手元分析未建包）"
+      replication_status: "『跨实验室与真实课堂稳健』『Cepeda 2006 meta』为记忆级转述，未核一手 EP"
+      context_dependency: "最优间隔随目标保持期而变（遗忘拐点）"
+      downgrade_upgrade_reason: "2026-09 反向审计：三项核心证据（Ebbinghaus 1885/Cepeda 2006/Zielske 1959）均未建 EP，S04/S76 EP 亦无对应内容，grade 由 A 降为 C，validation_status 回退 MEMORY_BASED，待建 Cepeda 2006 元分析 EP 后升级"
+    provenance:
+      primary_sources: [S191]
+      supporting_evidence: [S76, S04, S211]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: gist_vs_verbatim_memory
+    canonical_name_en: Gist vs Verbatim Memory (Fuzzy-Trace Theory)
+    canonical_name_zh: 要旨记忆与逐字记忆（模糊痕迹理论）
+    aliases: [模糊痕迹理论, fuzzy-trace theory —— 与 memory_sins 的区别：本理论解释为什么细节丢失是常态，七宗罪框架对记忆失真做系统分类]
+    domain: memory
+    definition: 模糊痕迹理论（Brainerd 与 Reyna）主张经验并行留下两种痕迹：要旨（gist，意义骨架）与逐字（verbatim，表面细节）。要旨更持久并支持推理，逐字精确但迅速衰退。人们主要依赖要旨做判断。
+    core_claim: 细节记忆的迅速丢失是设计而非故障——判断主要由要旨驱动，逐字痕迹只是短期资产。
+    mechanism: 逐字表征精确但脆弱，随时间快速衰减；要旨表征抽象但抗衰减，且判断场景（风险选择、道德决策）天然调用要旨。同一命题的要旨可以随框架改变——90% 存活率与 10% 死亡率的要旨不同，这正是框架效应的记忆层解释。
+    causal_chain: "经验编码 → 要旨与逐字双痕迹 → 逐字衰退、要旨存续 → 判断依赖要旨"
+    variables: {inputs: [信息呈现框架, 数字精度, 语义结构], moderators: [延迟时长, 受众年龄与专长, 任务类型], mediators: [痕迹类型可得性], outputs: [决策倾向, 细节复述能力, 误传率]}
+    evidence:
+      supporting:
+        - "Brainerd 与 Reyna 的模糊痕迹理论系列研究"
+        - "与 Loftus 错误记忆研究一致的细节脆弱性证据"
+      conflicting:
+        - "高专业经验者能在熟悉的数字域维持逐字精度；短延迟内逐字可用"
+      replication:
+        - "要旨优先的总模式稳健，是风险认知与发展心理学的主流框架之一"
+      meta_analysis: []
+    evidence_grade: A-
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "延迟越长、任务越偏向评价，要旨主导越明显"
+      - "数字敏感决策（价格、剂量）不能依赖受众记忆细节"
+    failure_conditions:
+      - "要求受众复述精确数字或条款的设计注定失败"
+      - "重要数字若无外部线索（可收藏、可回查），传播中必然失真"
+    common_misinterpretations:
+      - "给足细节就能让受众记住细节——受众只会带走要旨"
+      - "以为纠正细节就能纠正印象——印象附着在要旨上，细节更正未必触及"
+    ethical_risks:
+      - "利用要旨嫁接做误导（研究发现式要旨贴到无关研究上）"
+    examples:
+      original_cases:
+        - "S01 对框架与要旨评价的讨论；S05 的记忆扭曲证据群"
+      research_cases:
+        - "风险框架实验：同一概率的生存与死亡框架改变选择，符合要旨差异预测"
+      modern_cases:
+        - "用户复述不出保险条款但记得挺好的；谣言传播中细节快速丢失与骨架变形"
+    communication_implications: 为要旨设计，不为细节设计：决定你希望受众带走的唯一一句话，其余信息为其服务或转为可查附录。
+    community_implications: 社群口碑传播的是要旨，任何复杂定位都会被压缩成一句话——运营者要主动设计这句被压缩的话。
+    content_applications:
+      title: "标题就是那句话——先设计要旨再填充论据"
+      body: "每个论点结尾用一句要旨句收束"
+      evidence: "关键数字配可视化外置记忆，不要求受众记住数字本身"
+    platform_implications: 平台的转发与二次创作加速逐字丢失，要旨竞争决定长尾印象；摘要与截图文化放大了要旨选择权的重要性。
+    related_nodes: [memory_sins, anecdote_vs_statistics, framing_effects, misinformation_velocity, encoding_specificity, testing_effect]
+    source_ids: [S05, S01, S151]
+    provenance:
+      primary_sources: ['S05', 'S01', 'S151']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: peak_end_rule
+    canonical_name_en: Peak-End Rule
+    canonical_name_zh: 峰终定律
+    aliases: [峰终效应, peak-end —— 与 serial_position_effect 的区别：峰终针对整段经历的事后评价与时长忽略，系列位置针对序列材料的即时回忆]
+    domain: memory
+    definition: 对一段经历的回顾性评价主要由峰值时刻与结束时刻决定，经历时长几乎被忽略（duration neglect）。Kahneman 与 Redelmeier 的医疗程序研究确立了这一记忆自我与体验自我的分离。
+    core_claim: 记忆自我用峰终重构评价，体验自我的逐时感受在回顾时基本丢失。
+    mechanism: 回顾时人依赖代表性时刻（最痛、最爽）与结局做快速重构，而非逐点求和；时长在评价中权重极低，于是更长的痛苦未必换来更差的回忆，更好的结尾可以改写全程记忆。
+    causal_chain: "经历展开 → 峰值与终点被采样 → 忽略时长 → 回顾性评价由峰终决定"
+    variables: {inputs: [峰值体验强度, 结束时刻体验], moderators: [经历类型, 情节边界清晰度, 个体差异], mediators: [代表性时刻重构], outputs: [回顾性评价, 重购与复访意愿, 口碑推荐]}
+    evidence:
+      supporting:
+        - "Redelmeier 与 Kahneman 1996 的医疗程序实时与回顾评分研究（经典文献，未建包；S153 EP 明示结肠镜研究非本篇）"
+        - "冷加压实验的时长操纵研究（S01 论述；S153 EP 载 1993 冷压实验，仅摘要级支持）"
+      conflicting:
+        - "边界依赖：部分持续不适的体验中时长确实影响评价；个体与情境差异明显"
+      replication:
+        - "核心模式被多种经历类型复制，但作为普适定律的表述过强"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "适用于有明确情节边界的经历（一次服务、一次活动、一段剧情）"
+      - "对连续弥散的慢性体验适用性弱"
+    failure_conditions:
+      - "靠结尾彩蛋掩盖全程糟糕——当预期被识破，结尾反噬信任"
+      - "平淡无峰的漫长好体验被低估，公平体验得不到公平记忆"
+    common_misinterpretations:
+      - "最后一分钟营销等于全部体验设计——没有峰值的平淡结尾救不了体验"
+      - "把峰终理解成只做结尾——峰值通常是投入最重的那个环节"
+    ethical_risks:
+      - "演出式客服：结尾热情服务掩盖核心承诺未兑现"
+    examples:
+      original_cases:
+        - "S01 的结肠镜与冰水实验（结肠镜 1996 研究为经典文献，未建包，S153 EP 明示非本篇）"
+      research_cases:
+        - "医疗程序研究：实时疼痛积分与回顾评价相关性弱，与峰值及终末疼痛相关性强"
+      modern_cases:
+        - "电商售后体验设计（退货顺滑成就记忆）；线下活动的散场伴手礼；游戏与剧集的结局工程"
+    communication_implications: 内容与活动的体验设计要规划峰值（最强价值时刻）与终值（最后交互），两者之外的均匀用力性价比最低。
+    community_implications: 社群活动的散场仪式（合影、总结、下一次预告）决定成员对整场活动的记忆评分与复购意愿。
+    content_applications:
+      opening: "快速建立一个可兑现的小峰（首个价值交付）"
+      body: "在中段安排一次强峰值（核心干货或情感时刻）"
+      cta: "结尾给确定性收束与下一次的期待"
+    platform_implications: 平台的评分与回忆式点评放大峰终权重；算法摘要（如年度总结）本身就是在替用户执行峰终重构。
+    related_nodes: [serial_position_effect, affect_heuristic, hedonic_adaptation, memory_sins, dramatic_arc_structure]
+    source_ids: [S01, S153]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Kahneman 2011（S01，两个自我与峰终定律）；S153（1993 冷压实验，仅摘要级支持）；Redelmeier & Kahneman 1996 结肠镜研究为经典文献，未建包"
+      effect_size: "体验评价由峰值与结尾而非总时长决定（回顾性评价）"
+      replication_status: "峰终效应在体验评价研究中多源复现（一手结肠镜 EP 未建，冷压证据为摘要级）"
+      context_dependency: "回顾评价任务/记忆整合方式调制"
+      downgrade_upgrade_reason: "2026-09 反向审计：S12 EP 为心理账户/禀赋效应内容，与峰终无关，移除其全部引用；Redelmeier & Kahneman 1996 结肠镜研究未建包（S153 EP 明示非本篇），保留 S153 冷压实验并维持仅摘要级声明"
+    provenance:
+      primary_sources: [S01]
+      supporting_evidence: [S153]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: memory_sins
+    canonical_name_en: The Seven Sins of Memory
+    canonical_name_zh: 记忆七宗罪框架
+    aliases: [Schacter 七宗罪, memory failures taxonomy —— 与 gist_vs_verbatim_memory 的区别：七宗罪是失真的分类框架，模糊痕迹是其中细节丢失的机制解释]
+    domain: memory
+    definition: Schacter《记忆七宗罪》（S05）对记忆系统性失真的分类：短暂性（transience）、心不在焉（absent-mindedness）、阻塞（blocking）、错认（misattribution）、暗示感受性（suggestibility）、偏差（bias）与纠缠（persistence）。每宗罪都是适应性系统的副产品而非随机故障。
+    core_claim: 记忆失真是可预测、可分类、各有功能根源的系统性现象——七宗罪同时是记忆的代价与能力。
+    mechanism: 每宗罪对应不同过程：痕迹随时间衰减（短暂）；注意失败导致未编码（心不在焉）；提取线索竞争导致话到嘴边说不出（阻塞）；来源混淆把想象当经历（错认）；外部信息改写记忆（暗示，Loftus 范式）；当前知识重写过去（偏差）；负性事件反刍不散（纠缠）。前三种为遗漏之罪（omission：transience/absent-mindedness/blocking），后四种为佣金之罪（commission：misattribution/suggestibility/bias/persistence）——以 S05 EP 原文口径为准（S152 摘要口径为 3 遗忘+3 失真+1 侵入，与之有出入）。
+    causal_chain: "编码与提取的系统特性 → 七类失真机制 → 可预测的记忆偏差 → 传播与决策后果"
+    variables: {inputs: [时间间隔, 注意分配, 事后信息, 提问方式], moderators: [情绪状态, 年龄, 事件重要性], mediators: [衰减, 干扰, 来源监测, 重建过程], outputs: [记忆失真类型与幅度, 证词可靠性, 口碑变形]}
+    evidence:
+      supporting:
+        - "S05 对七宗罪的框架化综合与各实验室证据"
+        - "Loftus 的错误记忆与误导信息范式（暗示感受性的支柱证据）"
+      conflicting:
+        - "框架是分类工具而非单一机制，各宗罪证据强度不一（纠缠的适应性解释仍有争论）"
+      replication:
+        - "各宗罪的底层实验（如误导信息效应）被广泛复制"
+      meta_analysis: []
+    evidence_grade: A
+    boundary_conditions:
+      - "不同罪的强度因年龄、情绪与事件类型而异"
+      - "部分罪（如纠缠）在特定情境是保护机制而非缺陷"
+    failure_conditions:
+      - "把七宗罪当记忆改进清单逐条修复——部分是特性不是缺陷"
+      - "以为提醒就能消除失真——错认与偏差在无意识层运作"
+    common_misinterpretations:
+      - "用户证言与目击回忆就是事实——错认与暗示感受性要求对记忆证据做来源校验"
+      - "把记忆当存储硬盘——记忆是重建，每次提取都可能改写"
+    ethical_risks:
+      - "诱导性提问植入虚假记忆（审讯式销售、引导式调研、伪回忆营销）"
+      - "利用偏差重写群体记忆（叙事劫持）"
+    examples:
+      original_cases:
+        - "S05 全书即本节点的原始来源，各章对应一宗罪"
+      research_cases:
+        - "误导信息范式：事后错误信息改变对原始事件的记忆报告"
+      modern_cases:
+        - "社群集体记忆被后来叙事改写（当时我们其实说过……）；用户访谈中的记忆污染（提问即植入）"
+    communication_implications: 传播者要为受众的记忆失真负责：重复、提问方式与事后信息都会改写他们记得的版本——用这套机制建立正确记忆，也用它审查自己是否在制造错误记忆。
+    community_implications: 社群的历史记录（公告存档、时间线）是对集体记忆七宗罪的工程补偿；用户调研必须培训无诱导提问。
+    content_applications:
+      evidence: "在关键事实首次出现时给出可回查的存档链接，对抗短暂性与错认"
+      comments: "调研与访谈用开放式提问，禁止预装情节"
+      body: "重要信息在结构上防阻塞（多重线索编码）"
+    platform_implications: 平台的搜索与存档功能部分补偿短暂性与阻塞，但截图文化的断章取义放大了错认与偏差；内容溯源（provenance）是对暗示感受性的制度回应。
+    related_nodes: [gist_vs_verbatim_memory, peak_end_rule, misinformation_velocity, encoding_specificity, provenance_verification]
+    source_ids: [S05, S152]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Schacter 2001《The Seven Sins of Memory》（S05，七宗罪分类/omission+commission/适应性副产品）"
+      effect_size: "七宗罪为记忆失误的系统分类（广泛沿用的组织框架）"
+      replication_status: "七宗罪分类广泛沿用（1999 Am Psychol 论文+专著）"
+      context_dependency: "各宗罪诱因不同（时间/负荷/暗示/偏差等）"
+      downgrade_upgrade_reason: "2026-09 实取 S05 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S05]
+      supporting_evidence: []
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

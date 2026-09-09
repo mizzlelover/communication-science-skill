@@ -1,0 +1,27 @@
+# Evidence Package — S131 Kahneman, Knetsch & Thaler 1990（Endowment Effect & Coase Theorem）
+# 标准格式。access_level 如实标注。
+source_id: S131
+title: "Experimental Tests of the Endowment Effect and the Coase Theorem"
+authors: "Daniel Kahneman; Jack L. Knetsch; Richard H. Thaler"
+year: 1990
+journal: "Journal of Political Economy 98(6): 1325-1348"
+doi: "未知"
+url: "https://pages.uoregon.edu/sdhodges/458regrt.htm"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "UOregon 课程讲义《The Endowment Effect, Loss Aversion, and Status Quo Bias》对 KKT 1990 实验的详细转述（Study 1 mug 市场与 Study 2 三组实验，含全部关键数字）+ MBA 智库百科禀赋效应条目（44 名大学生代币券/杯子/钢笔市场实验、V/V* 比率与对科斯定理的挑战）+ tandfonline 方法论文章《Experimenting with the Coase theorem》摘要交叉确认（随机分配设计、杯子与信封重复实验）"
+research_question: "禀赋效应在面临真实市场约束和重复交易机会时是否依然存在？若存在，是否构成对科斯定理（零交易成本下初始产权分配不影响最终配置）的实证反驳？"
+core_claims:
+  - "禀赋效应：物品一旦成为个人禀赋的一部分，其价值评估即上升——卖出者要求的补偿（WTA）系统性地高于买入者愿意支付的价格（WTP）"
+  - "Study 1（经济学本科生、Cornell 咖啡杯、四轮市场、随机抽取一轮真实成交）：成交量远低于理论预测；中位卖价约 $5.25，中位买价仅 $2.25-$2.75，卖价约为买价的两倍"
+  - "Study 2（77 名学生随机分三组：Sellers/Buyers/Choosers，价格 $0.25-$9.25 序列）：中位要价 Sellers $7.12、Buyers $2.87、Choosers $3.12——Choosers 行为接近 Buyers，说明低交易量主要源于拥有者不愿放弃禀赋（损失厌恶），而非买家不愿付钱"
+  - "44 名大学生市场实验对照：代币券（价值确定）市场实际成交量/期望成交量 V/V*=1.0，无交易不足；换成咖啡杯（V/V*=0.20）与钢笔（V/V*=0.41）后成交量大幅低于预期，且重复交易不消除该现象——交易者未通过经验学会弥合买卖价差"
+  - "对科斯定理的挑战：交易规则与成本与代币券市场相近的实物市场效率却大打折扣，可归因于禀赋效应；初始产权分配因此对最终资源配置具决定性作用，与零交易成本下配置与产权无关的科斯预言相悖"
+  - "禀赋效应由损失厌恶驱动（参照点依赖：失去已拥有物品的负效用大于获得同等物品的正效用，文献估计损失厌恶系数约 2）"
+method: "实验室市场实验：真实支付诱导的定价清单法（posted-offer 市场）；多轮交易含代币券/咖啡杯/钢笔三种标的物对照；三组（Sellers/Buyers/Choosers）被试间设计"
+results: "WTA/WTP 差距约 2 倍（$5.25 vs $2.25-$2.75；$7.12 vs $2.87）；实物市场 V/V* 仅 0.20（杯子）与 0.41（钢笔），代币券市场为 1.0；重复交易不消除禀赋效应"
+limitations: "样本为本科生；杯/笔为低价值消费品，效应量可能受商品类型调节；后续研究（List 2003）显示市场经验可减弱禀赋效应，提示其在专业交易者中边界有限"
+boundary_conditions: "适用于个人消费品的非重复交易情境；价值模糊（无法唯一货币定价）的商品效应最强；为转售/套利而持有（价值明确）时效应消失（代币券实验）"
+relevant_nodes: [endowment_effect, status_quo_bias, sunk_cost_fallacy]
+notes: "禀赋效应实验奠基文献（mug 实验），实证挑战科斯定理。经课程讲义+百科+学术评论多源交叉获取关键数据，未取到期刊正文，已如实标注。"
+last_verified: "2026-09"

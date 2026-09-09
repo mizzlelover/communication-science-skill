@@ -1,0 +1,26 @@
+# Evidence Package — S21 Aronson 2018（The Social Animal）
+# 标准格式。access_level 如实标注。
+source_id: S21
+title: "The Social Animal (12th ed.)"
+authors: "Elliot Aronson"
+year: 2018
+journal: Worth Publishers（专著；首版 1972）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/annotation/150160483/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：中文全书总结（认知失调为灵魂/自我辩护四机制/从众/归因/偏见/利他/说服）+ 章节总结（情境力量/失调/Asch/Milgram/斯坦福）+ 英文逐章摘要"
+research_question: "社会情境与认知机制如何塑造人的思考、感受与行为？"
+core_claims:
+  - "核心立场：情境力量＞性格（破除性格决定论）；『做出疯狂举动的人未必疯狂』——斯坦福监狱实验/米尔格拉姆实验/阿希实验为支柱"
+  - "认知失调理论（全书灵魂）：行为与信念冲突产生不适→自我辩护（理由不充分效应/登门槛/伪善范式/决策后失调）；1 美元 vs 20 美元实验"
+  - "从众：阿希实验约 75% 至少一次跟随错误多数；信息性从众（不确定时信多数）vs 规范性从众（怕排斥）"
+  - "社会认知：认知吝啬鬼、基本归因错误、自利偏差、证实偏差"
+  - "说服三要素（信源/信息/渠道）、人际吸引（接近性/出丑效应/得失理论）、旁观者效应、偏见机制"
+method: "社会心理学综合教科书（Asch/Milgram/Zimbardo/Festinger 等经典实验系统化 + 多版更新）"
+results: "（教科书经典）社会心理学的标准综合；第 12 版仍为全球标准教材"
+limitations: "教科书综合性质；各结论的原始证据强度需按具体研究评估（复制危机后的再评估在知识库节点已处理）"
+boundary_conditions: "社会情境决定论需结合个体差异调节；服从/从众效应受情境结构与权威强度调节"
+relevant_nodes: [cognitive_dissonance, conformity_asch, foot_in_the_door, social_identity_theory, anecdote_vs_statistics, attitude_behavior_gap, attitude_strength_accessibility, commitment_consistency, commitment_escalation, downward_social_comparison, empathy_induced_helping, fear_appeals_eppm, identity_protective_cognition, informational_influence, minority_influence, need_to_belong, norm_perception_accuracy, normative_influence, ostracism_effects, pluralistic_ignorance, psychological_reactance, reciprocity_norm, self_presentation_impression_management, upward_social_comparison]
+notes: "社会心理学综合教科书（book 级，被 30+ 节点引用）。75%/1 美元实验等为公开标准内容，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,25 @@
+# Evidence Package — S39 Berger 2020（The Catalyst: How to Change Anyone's Mind）
+# 标准格式。access_level 如实标注。
+source_id: S39
+title: "The Catalyst: How to Change Anyone's Mind"
+authors: "Jonah Berger"
+year: 2020
+journal: Simon & Schuster（专著；中译《催化：让一切加速改变》）
+doi: "无 DOI（专著）"
+url: "https://greatesthitsblog.com/the-catalyst-jonah-berger/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：英文书评（REDUCE 五障碍逐一解释：Reactance 推则反推/Endowment 眷恋现状/Distance 超出接受区反增对立/Uncertainty 暂停按钮与试用/Corroborating Evidence 集体证据；态度卵石-巨石与 sprinkler-fire hose 证据部署类比）+ First Round 深度访谈（催化剂化学隐喻/『为什么他们还没改变』提问/REDUCE 五步框架/免费试用与 freemium）+ 豆瓣书评（REDUCE 框架中文表述：抗拒心理/眷恋现状/距离/不确定性/补强证据）+ 吴晓波频道中文解读（反说服雷达/给菜单式选择/迪卡侬体验降低不确定性/试驾与免费样品）+ 数字营销文章（从改变阻碍而非加大力度出发重构说服）"
+research_question: "当加大说服与推动力度失效时，如何通过移除障碍来催化他人改变？阻碍改变的五大障碍是什么？"
+core_claims:
+  - "催化剂隐喻：像化学催化剂降低反应能垒一样，改变他人的关键是移除/降低障碍而非施加更大推力——先问『为什么他们还没改变、什么在阻碍他们』，而非『我该怎样说服』"
+  - "REDUCE 五障碍框架：Reactance（心理抗拒——被推就反推，警告反而成为建议：宣传吸烟有害反而增加兴趣；解法是让人们自己说服自己、提供『菜单式』选择保有控制感）、Endowment（禀赋效应/眷恋现状——除非情况很糟否则不想变；解法是指出不作为的真实代价）、Distance（距离——信息超出接受区（zone of acceptance）反而强化对立；解法是缩小距离、先要小改变）、Uncertainty（不确定性——像暂停按钮；解法是让尝试变容易：免费样品、试驾、freemium 降低上手成本）、Corroborating Evidence（补强证据——一个人的推荐不够；解法是寻找集体证据与社会验证）"
+  - "反直觉核心：推得越用力越招致反推；提供选择权（给菜单）比命令更能让对方走到你希望的方向（如让求职者在『多一周假期 vs 多 2 万元奖金』间自选）"
+  - "证据部署策略：态度像卵石（pebbles）只需少量证据即可推动，像巨石（boulders）则需要大量补强证据——按目标态度强度选择 sprinkler（喷洒式）或 fire hose（高压水枪式）证据策略，并决定动员谁、何时间隔投放证据"
+method: "作者（沃顿商学院营销教授）对其研究与数十位变革推动者（顶级销售、创始人、谈判专家、成瘾咨询师、育儿专家）的访谈归纳 + 实证研究综合"
+results: "（从业者综合）把『改变他人』从推力思维重构为障碍移除思维，提供可操作的 REDUCE 清单"
+limitations: "框架为研究+访谈归纳的实践模型，未经系统对照检验；五障碍的独立因果贡献未量化"
+boundary_conditions: "适用于高抗拒、高惯性的态度/行为改变情境；障碍识别需以真实受众反馈为准，不能机械套用清单"
+relevant_nodes: [psychological_reactance, endowment_effect, friction_reduction, attitude_behavior_gap]
+notes: "从业者实践框架（D 级，如实标注）。REDUCE 五要素为公开内容，未编造。"
+last_verified: "2026-09"

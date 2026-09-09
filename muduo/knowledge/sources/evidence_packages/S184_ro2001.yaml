@@ -1,0 +1,25 @@
+# Evidence Package — S184 Ro, Russell & Lavie 2001（Changing Faces）
+# 标准格式。access_level 如实标注。
+source_id: S184
+title: "Changing Faces: A Detection Advantage in the Flicker Paradigm"
+authors: "Tony Ro; Charlotte Russell; Nilli Lavie"
+year: 2001
+journal: "Psychological Science 12(1): 94-99"
+doi: "10.1111/1467-9280.00317"
+url: "https://pubmed.ncbi.nlm.nih.gov/11294237/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：PubMed 官方记录（全文摘要+MeSH 词）；渠道2：中文综述引用核对（杨青、闫国利 2013 等，DOI 与卷期页码一致）；渠道3：flicker 范式相关研究群引用（多篇后续论文）"
+research_question: "在闪烁范式（flicker paradigm）诱发的变化盲视中，人脸变化是否比普通物体变化更易被检测？"
+core_claims:
+  - "观察者在闪烁/大瞬变后检测图像变化的能力出奇地差（变化盲视）"
+  - "人脸变化被检测的速度与准确率显著高于其他普通物体（如衣物）"
+  - "该优势仅出现在多物体阵列中的正立人脸；单张照片显示或图片倒置时优势完全消失"
+  - "结果支持面孔在视觉注意竞争中具有特殊作用，支持面孔加工不同于低生物学显著性刺激的既有主张"
+method: "变化盲视闪烁范式实验：比较正立/倒置人脸与普通物体的变化检测（单照片 vs 多物体阵列）"
+results: "多物体阵列中正立人脸的变化检测显著更快更准；倒置或单对象显示时优势消失"
+limitations: "实验室刺激（照片阵列）；未直接测量真实场景；被试为成人"
+boundary_conditions: "优势依赖正立与多对象竞争条件；社会性任务中最强，纯工具性任务可让位；与面孔识别的专门性（倒置效应）一致"
+relevant_nodes: [facial_attention_priority, bottom_up_attention_capture, selective_attention, inattentional_blindness]
+notes: "面孔注意优先（facial_attention_priority）节点的关键实验证据；内容来自 PubMed 摘要与多源交叉，未编造。"
+last_verified: "2026-09"

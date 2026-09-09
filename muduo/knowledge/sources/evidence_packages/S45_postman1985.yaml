@@ -1,0 +1,25 @@
+# Evidence Package — S45 Postman 1985（Amusing Ourselves to Death）
+# 标准格式。access_level 如实标注。
+source_id: S45
+title: "Amusing Ourselves to Death: Public Discourse in the Age of Show Business"
+authors: "Neil Postman"
+year: 1985
+journal: Viking（专著）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/subject/4010341/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：豆瓣/出版社内容简介（媒介即隐喻/印刷与电视/赫胥黎预言）+ 中文全译目录（11 章）+ 深度书评（印刷文化逻辑/娱乐化公共话语/信息-行动比失调）"
+research_question: "电视（及后续数字媒介）如何改变公共话语的内容与意义？文化如何被娱乐化？"
+core_claims:
+  - "媒介即隐喻：强势媒介以隐蔽而强大的暗示力量重新定义现实，塑造时代文化精神；印刷机塑造了理性连贯的公共话语，电视则把公共话语变成娱乐（躲躲猫世界）"
+  - "赫胥黎预言 vs 奥威尔预言：毁掉我们的不是我们憎恨的东西（奥威尔式外部压迫），而是我们热爱的东西（赫胥黎式娱乐沉迷）——赫胥黎的《美丽新世界》是更准确的预言"
+  - "电视使政治/宗教/教育/商业等一切公共领域以娱乐方式呈现：信息-行动比严重失调（大量信息但无法导致有意义行动）；严肃公众对话变成婴儿语言"
+  - "警示不针对一切电视：垃圾娱乐无害（A-Team/Cheers），危险的是把严肃信息娱乐化（60 Minutes/新闻）"
+method: "媒介生态学批判（印刷史+电视时代话语分析）"
+results: "（批判经典）媒介即隐喻/娱乐化公共话语成为媒介批评标准框架"
+limitations: "批判性论证（非系统实证）；电视-印刷的二分被后续研究简化处理"
+boundary_conditions: "适用于媒介形态对公共话语的整体塑造；适用于娱乐化平台的内容生态分析"
+relevant_nodes: [attention_economics, engagement_optimization_bias]
+notes: "媒介批判经典（book 级）。媒介即隐喻/赫胥黎预言为公开标准内容，未编造。"
+last_verified: "2026-09"

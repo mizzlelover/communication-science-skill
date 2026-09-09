@@ -1,0 +1,25 @@
+# Evidence Package — S34 Petty & Cacioppo 1986（Communication and Persuasion）
+# 标准格式。access_level 如实标注。
+source_id: S34
+title: "Communication and Persuasion: Central and Peripheral Routes to Attitude Change"
+authors: "Richard E. Petty; John T. Cacioppo"
+year: 1986
+journal: Springer（专著；ELM 全书版）
+doi: "10.1007/978-1-4612-4964-1"
+url: "https://wiki.mbalib.com/wiki/Elaboration_Likelihood_model"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "ELM 全书框架经多源交叉实取：MBA 智库词条（双路径/详尽可能性/动机能力决定因素/印刷 vs 广播媒体差异）+ 学术引用（elaboration 定义/高卷入走中央、低卷入走外周）+ 教科书综述（中央路径适用高动机能力、外周路径适用低动机能力）"
+research_question: "说服如何通过中央/外周两条路径改变态度？详尽化可能性如何决定路径选择？"
+core_claims:
+  - "ELM 双路径：中央路径（对议题相关论点的深度认知加工，态度改变持久）vs 外周路径（依赖表面线索如信源魅力/专家头衔/人数，态度改变短暂易变）"
+  - "详尽化可能性（elaboration likelihood）决定路径：动机（卷入度/个人相关/认知需要）与能力（知识/时间/分心）高→中央路径，论据质量主导；低→外周路径，线索主导"
+  - "同一变量可经由增强或削弱信息审查来影响说服（核心假设：变量可作为论据/线索/影响加工程度）"
+  - "媒体差异：印刷广告比快节奏广播/电视广告导致更高详尽化（中央路径）；广播/电视更可能走外周路径"
+method: "理论专著（Springer 全书）+ 整合态度改变实验的冲突结果（Petty et al. 1983 考试改革实验等）"
+results: "（理论奠基）ELM 成为态度改变/说服研究最核心框架之一"
+limitations: "元理论性质（非单一可检验假设）；具体预测依赖变量分析"
+boundary_conditions: "中央路径需动机+能力；高卷入重要议题走中央，低卷入边缘线索走外周"
+relevant_nodes: [elaboration_likelihood_model, central_route_processing, peripheral_route_processing, source_credibility_model]
+notes: "ELM 全书（book 级）；配套 S119（AESP 论文版）与 S35（Perloff 教科书综合）。双路径/详尽化可能性为公开标准内容，未编造。"
+last_verified: "2026-09"

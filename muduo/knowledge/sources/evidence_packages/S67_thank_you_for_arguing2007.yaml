@@ -1,0 +1,26 @@
+# Evidence Package — S67 Jay Heinrichs 2007（Thank You for Arguing）
+# 标准格式。access_level 如实标注。
+source_id: S67
+title: "Thank You for Arguing: What Aristotle, Lincoln, and Homer Simpson Can Teach Us About the Art of Persuasion"
+authors: "Jay Heinrichs"
+year: 2007
+journal: Three Rivers Press（首版 2007；第四版 Crown 2020，ISBN 9780593237380，480 页）
+doi: "无 DOI（专著）"
+url: "https://www.penguinrandomhouse.com/books/646966/thank-you-for-arguing-fourth-edition-revised-and-updated-by-jay-heinrichs/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：Quizlet 学习指南（三诉求/三种修辞类型/kairos 时机/ethos 与 pathos 工具清单/enthymeme 与 concession 等逻辑工具）+ Quizlet 术语卡片集（90 术语：decorum、framing 类、arrangement 五段、rhetorical fouls、logical fallacies 清单）+ AP 学生阅读日志（章节级引文：ch3 Control the Tense 议题三分 blame/values/choice、ch4 Soften Them Up 三诉求定义引文、ch9 Control the Mood pathos 最不被尊重却最有效）+ 出版社官网（第四版书介：Chandler Bing Adjustment/Belushi Paradigm/Yoda Technique 等说服技巧、fake news 新增章节）+ 中文书评（机械工业出版社 2020 中译本《说服的艺术》）"
+research_question: "如何把古希腊修辞学（亚里士多德、西塞罗、林肯）应用到现代日常争论与说服中，赢得争论而不制造敌对？"
+core_claims:
+  - "现代应用亚里士多德三诉求：ethos（言者品格与可信度）、pathos（听众情绪）、logos（论证逻辑），并配 kairos（抓住时机的艺术）与三种修辞类型（deliberative 未来选择/forensic 过去罪责/demonstrative 当下价值）"
+  - "ethos 工具清单：Tactical Flaw（坦承小弱点显得可信）、Virtue Pose（展示道德品格）、Reluctant Conclusion（不情愿得出的结论）、Eddie Haskell Ploy（假谦卑）；pathos 工具：Enargeia（生动描述制造心理意象）、Pathetic Ending（情感收尾）、Backfire Technique（夸大反对意见以安抚听众）；logos 工具：induction/deduction、enthymeme（省略前提的三段论）、concession（先让步再反击）"
+  - "修辞术语表与说服词汇：decorum（得体，五风格美德 proper language/clarity/vividness/decorum/ornament 之一）、framing（界定争论边界：definition jujitsu/judo、term change）、arrangement（intro-narration-proof-refutation-conclusion）、rhetorical fouls（阻止争论达成共识的犯规，如 humiliation、threatening、innuendo）与 logical fallacies（false comparison、hasty generalization、red herring、straw man、slippery slope 等）"
+  - "区分 argument（以说服为目的的理性对话）与 fight（以击败对手为目的的冲突）；争论议题判定三分：blame（过去）/values（当下）/choice（未来）——对应三种修辞类型"
+  - "pathos 是最不被尊重却可能最有效的说服形式；书中引亚里士多德：最有效改变听众情绪的手段之一是详细叙事（细节丰富的故事唤起情感）"
+method: "修辞实践指南（以幽默叙述 + 现代案例（林肯/丘吉尔/荷马·辛普森/奥巴马）+ 工具清单 + ArgueLab 练习编排的通俗修辞学手册）"
+results: "（定位）让三诉求、kairos、decorum 等古典术语进入现代日常说服语言的畅销入门书（2007 首版，2020 第四版新增 fake news/政治极化材料）"
+limitations: "实践框架而非实证研究：案例与工具为轶事性综合，未经受控检验；以古希腊-罗马西方修辞传统为中心"
+boundary_conditions: "适用于说服设计与话语分析（三诉求体检、工具选配、术语识别）；其术语体系与古典修辞传统绑定，机制层面需与 ELM、信源可信度等实证模型区分引用"
+relevant_nodes: [ethos_pathos_logos, source_credibility_model, rhetorical_question_engagement, politeness_face_theory]
+notes: "修辞学现代应用代表作（book 级，D 级实践框架）。核心概念为公开内容，多源交叉实取，未编造。"
+last_verified: "2026-09"

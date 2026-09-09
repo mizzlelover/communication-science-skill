@@ -1,0 +1,409 @@
+# motivation — 动机（Motivation）：人为什么开始、坚持与放弃
+domain: motivation
+nodes:
+  - id: self_determination_needs
+    canonical_name_en: Self-Determination Needs (Autonomy, Competence, Relatedness)
+    canonical_name_zh: 自我决定三需要（自主/胜任/归属）
+    aliases: [SDT 三需要, 基本心理需要, basic psychological needs]
+    domain: motivation
+    definition: "自我决定理论（Self-Determination Theory, SDT；Deci & Ryan）提出三项基本心理需要：自主感（autonomy，行为出于自愿认同）、胜任感（competence，感到有效）、归属感（relatedness，与他人真实相连）。三需要的满足程度预测内在动机、坚持与幸福感。注意与流行简化『需求金字塔』区分：SDT 是动机过程理论，不是静态层级清单。"
+    core_claim: "三需要满足度越高，内在动机、投入与坚持越强；削弱任一需要的激励设计会损害动机质量。"
+    mechanism: "当环境允许自主选择、提供最优挑战（可胜任）并回应联结需要时，人把外部要求内化为自我认同的一部分，行为从『不得不』转为『我想做』；内化程度决定持久性。控制性干预（监视、奖惩压迫、期限胁迫）即使短期见效，也削弱自主感，长期降低动机质量（S14）。"
+    causal_chain: "环境支持自主/胜任/归属 → 三需要满足 → 内在动机与规范内化 → 投入、坚持与自发传播"
+    variables:
+      inputs: [选择权设计, 挑战-技能匹配, 联结与回应信号, 反馈质量]
+      moderators: [文化背景, 领域对个体的意义, 个体的需要强度差异]
+      mediators: [自主感, 胜任感, 归属感]
+      outputs: [内在动机, 参与频率与坚持度, 幸福感, 自发口碑]
+    evidence:
+      supporting:
+        - "Deci & Ryan 2000（S118，Psych Inquiry 11:227，abstract_only；S118 仅摘要级支持）与 Ryan & Deci 2017（S14，著作级背景）对三需要结构的理论整合与多领域证据（理论与综述）"
+        - "教育、工作、运动、健康领域的跨文化问卷研究重复出现需要满足-动机联结（多来源实证）"
+      conflicting:
+        - "三需要的普适性表述被部分学者质疑带有西方个人主义预设；需要强度的个体与文化差异存在（理论争论）"
+      replication:
+        - "大规模跨文化研究总体支持三因素结构，测量工具效度是主要争议点。评级按枚举记 A"
+      meta_analysis:
+        - "多项元分析支持基本需要满足与内在动机、幸福感、工作绩效的稳健关联（如 Van den Broeck 等的工作动机元分析方向；EP 外方向，未建包）"
+    evidence_grade: A
+    boundary_conditions:
+      - "适用于解释自愿性、持续性动机；对一次性强约束任务解释力有限"
+      - "三需要间存在权衡（如强归属规范可能压低自主感），需整体设计而非单点最大化"
+    failure_conditions:
+      - "把需要满足话术化（说『你可以自由选择』但实际无选择）会触发反向解读"
+      - "任务本身无意义时，需要支持只能维持短期参与"
+    common_misinterpretations:
+      - "把 SDT 等同于马斯洛需求层级的换皮；两者构念与机制不同"
+      - "以为归属感只是『拉群』；归属感以被回应和被认可为前提"
+    ethical_risks:
+      - "伪自主设计（表面给选择、实际操纵默认项）长期损害信任，属于对需要系统的欺骗"
+    examples:
+      original_cases: ["Self-Determination Theory（S14）中教育、医疗、运动场景的三需要支持案例"]
+      research_cases: ["Deci 的奖赏与内在动机实验系列；Ryan 与 Deci 的跨领域内化研究"]
+      modern_cases: ["用户可自选学习路径的社群课程；开源社区对贡献者自主与胜任的双向支持"]
+    communication_implications: "内容与服务话术从『你应该』改为『你可以选择』+『你已能胜任』+『这里有人同路』三件套，比单纯利益点更能驱动长期关系。"
+    community_implications: "社群角色设计（可选择的参与阶梯、可见的胜任成长、被回应的归属信号）应覆盖三需要，而非只做激励积分。"
+    content_applications:
+      title: "用『你可以……』替代『你必须……』的标题句式"
+      body: "给每一步行动附上『为什么值得做+你已具备什么』，同时支持胜任与自主"
+      cta: "提供可选路径（轻参与/深参与）而非单一强指令"
+    platform_implications: "平台的推送与推荐若以打断和诱导为主，会系统性削弱用户自主感；长期表现为通知疲劳与卸载。"
+    related_nodes: [intrinsic_extrinsic_motivation, flow_state, self_efficacy, sense_of_community, participation_ladder, need_to_belong]
+    source_ids: [S14, S15, S118]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Deci & Ryan 2000 SDT 核心论文（S118，Psych Inquiry 11:227，abstract_only）+ Deci, Koestner & Ryan 1999 元分析（128 项实验）"
+      effect_size: "三需要满足→内在动机/幸福感；预期性有形奖励对内在动机的削弱（过度理由效应）"
+      replication_status: "三因素结构与需要满足-动机联结获大量跨文化重复；测量工具效度是主要争议"
+      context_dependency: "挤出效应依赖奖励预期性与任务内在趣味；自主支持情境是关键调节"
+      downgrade_upgrade_reason: "2026-09 补充 SDT 一手奠基论文（S118，abstract_only 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S118]
+      supporting_evidence: [S14, S15]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: intrinsic_extrinsic_motivation
+    canonical_name_en: Intrinsic vs Extrinsic Motivation (Overjustification Effect)
+    canonical_name_zh: 内在动机与外在动机（过度理由效应）
+    aliases: [内在动机, 外部奖励, overjustification effect, 动机排挤]
+    domain: motivation
+    definition: "内在动机指行为本身即目的，外在动机指行为由外部奖惩驱动。过度理由效应（overjustification effect）指对本有内在兴趣的活动施加预期性外部奖励，会削弱之后的自发投入——奖励改变了行为的归因理由（『我做它是因为有奖』）。与 variable_ratio_reward 的关系：强化程序描述奖励如何塑造行为频率，本节点描述奖励何时侵蚀动机质量，两者构成张力。"
+    core_claim: "预期性、控制性的外部奖励会降低个体对原本有趣活动的后续自发参与。"
+    mechanism: "自我知觉与归因：当外部理由足够充分，个体把行为归因于奖励而非兴趣；奖励同时传递控制信号，削弱自主感（S14）。Deci 的实验与 Lepper、Greene、Nisbett 1973 年对儿童的画画奖励实验是经典证据；Deci、Koestner 与 Ryan 1999 的元分析确认削弱效应主要出现在预期性、实物性、与任务绩效挂钩的奖励上（S118 明文记载，abstract_only）；Eisenberger 与 Cameron 则对该效应的边界提出有力质疑，认为可感知胜任的奖励反而促进投入——争议聚焦于奖励类型与条件，而非『有无效应』（文献常识，未建包）。"
+    causal_chain: "预期性外部奖励 → 行为归因从兴趣转向奖励 + 自主感受损 → 内在动机削弱 → 撤奖后参与下降"
+    variables:
+      inputs: [奖励类型（实物/口头）, 奖励是否预期, 奖励是否与绩效挂钩, 任务内在趣味性]
+      moderators: [奖励的信息性 vs 控制性, 奖励规模的突兀度, 个体成就取向]
+      mediators: [归因变化, 自主感知损, 胜任反馈]
+      outputs: [无奖励期的自发参与度, 创造性表现, 长期留存]
+    evidence:
+      supporting:
+        - "Deci 1971 起的实验系列与 Deci、Koestner、Ryan 1999 元分析（128 项实验）：预期性实物奖励削弱后续内在动机；挤出依赖奖励预期性×任务内在趣味的边界条件（S118 明文记载：overjustification 效应 + DKR 1999 元分析 + 挤出边界条件，abstract_only）"
+        - "Lepper、Greene、Nisbett 1973 儿童绘画奖励实验（经典实验）"
+      conflicting:
+        - "Eisenberger 与 Cameron 的再元分析与批评：奖励若传递胜任信息则增强投入，削弱效应边界被高估（学术争议；文献常识，未建包）"
+      replication:
+        - "削弱效应在预期性、控制性奖励条件下复制较稳；对『一切奖励都有害』的解读不成立。评级按枚举记 B"
+      meta_analysis:
+        - "Deci、Koestner & Ryan 1999 元分析与 Eisenberger & Cameron 的再分析构成正反两面证据"
+    evidence_grade: B
+    boundary_conditions:
+      - "任务本身具有内在趣味时削弱效应才明显；枯燥任务上外部奖励通常促进投入"
+      - "奖励 unexpected（意外惊喜）或纯信息性（表扬进步）时，削弱效应弱或反向"
+    failure_conditions:
+      - "把奖励设计成对胜任的反馈（里程碑庆祝）而非交易筹码时"
+      - "任务完全外部驱动（补贴拉新）且无意培养内在兴趣时，该效应不构成问题"
+    common_misinterpretations:
+      - "『发奖励一定更好』：对兴趣型社区（创作、学习）滥发交易型奖励会赶走真正的核心贡献者"
+      - "『一切奖励都有害』：信息性、意外性奖励不触发过度理由效应"
+    ethical_risks:
+      - "以补贴制造依赖再撤资，转嫁学习成本给用户与创作者"
+    examples:
+      original_cases: ["Self-Determination Theory（S14）中的奖励排挤案例与教育情境讨论"]
+      research_cases: ["Lepper、Greene & Nisbett 1973 儿童绘画实验；Deci 的索玛方块实验系列"]
+      modern_cases: ["创作者平台补贴退坡后产量骤减；知识社群从现金激励转向荣誉与成长体系"]
+    communication_implications: "对 UGC 活动少用『投稿就给钱』框架，多用『作品被看见+能力被认证+社群被回馈』框架，奖励作为惊喜而非筹码。"
+    community_implications: "激励机制分层：交易型奖励留给需要量的任务，荣誉型、成长型信号留给需要质量的贡献。"
+    content_applications:
+      body: "把奖励描述为对过程的认可（『这是对你这轮练习的纪念』）而非完成条件"
+      cta: "邀请式而非交易式：『来把这件事做得更有趣』优于『做完拿红包』"
+    platform_implications: "平台的现金激励计划普遍遭遇『补贴依赖→撤资塌方』曲线，印证动机排挤；长期健康度取决于能否把外部理由转换为胜任与归属。"
+    related_nodes: [self_determination_needs, variable_ratio_reward, hedonic_adaptation, creator_incentive_structures, goal_setting_effectiveness]
+    conflicting_nodes: [variable_ratio_reward]
+    source_ids: [S14, S72, S118]
+    provenance:
+      primary_sources: [S118, S14]
+      supporting_evidence: [S72]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: goal_gradient_effect
+    canonical_name_en: Goal-Gradient Effect
+    canonical_name_zh: 目标梯度效应
+    aliases: [目标梯度, goal gradient hypothesis]
+    domain: motivation
+    definition: "目标梯度效应指投入动机随与目标距离缩短而加速：越接近完成，单位努力越大、速率越快。Hull 在动物学习中提出该假说，Kivetz、Urminsky 与 Zheng 于 2006 年在人类忠诚计划中给出经典现场证据。与 endowed_progress_effect 的关系：目标梯度描述『距离-速率』函数，人为进度效应则通过前移起点操纵该函数。"
+    core_claim: "剩余距离越短，达成目标的行为速率越高；感知进度而非实际进度驱动加速。"
+    mechanism: "接近目标提升了完成价值的感知权重与失败厌恶，剩余努力显得更可承受；进度反馈将抽象目标变为可感差异，触发『差一点点』的完成张力（与 zeigarnik_effect 的未完成张力相通）；距离感知重新校准努力分配（S71、S72）。"
+    causal_chain: "感知剩余距离缩短 → 完成价值与失败厌恶权重上升 → 行为速率提升 → 目标达成"
+    variables:
+      inputs: [感知剩余距离, 进度可见性, 目标价值]
+      moderators: [目标规模, 进度归因（努力 vs 意外）, 奖励吸引力]
+      mediators: [完成张力, 沉没投入感, 期望-价值评估]
+      outputs: [行为速率, 复购与续用, 任务完成率]
+    evidence:
+      supporting:
+        - "Kivetz、Urminsky & Zheng 2006 咖啡忠诚卡现场实验：进度越快者后续购买越快（经典文献，未建包）"
+        - "S146（Nunes & Drèze 2006，abstract_only）：效应取决于对任务完成度的感知而非沉没成本——支撑『感知进度驱动努力』半边（S146 仅摘要级支持）"
+        - "Hull 1932 动物学习的目标梯度假说及后续学习理论传承（经典理论）"
+      conflicting:
+        - "目标过大或进度缓慢时出现反向放弃；梯度效应在价值感低的目标上消失（边界研究）"
+      replication:
+        - "现场实验与会员数据分析多次重复方向。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "目标对个体有价值且进度可被感知"
+      - "剩余距离处于『可完成』区间（过远则梯度不启动）"
+    failure_conditions:
+      - "规则复杂到进度不可理解（跨年清零、复杂倍率）时，梯度感消失"
+      - "目标被感知为商家操纵（永远差一格）时触发抗拒"
+    common_misinterpretations:
+      - "把目标梯度当成『把目标设大点更努力』；过大的目标只产生放弃，梯度发生在可完成区间内"
+    ethical_risks:
+      - "用虚假进度或人为抬高门槛诱导过度消费（凑单、刷任务）"
+    examples:
+      original_cases: ["营销管理（S71）等对忠诚计划积分设计的讨论"]
+      research_cases: ["Kivetz、Urminsky & Zheng 2006 忠诚卡实验；Hull 的动物学习研究"]
+      modern_cases: ["会员成长进度条、打卡距下一奖励还差 N 次、众筹进度百分比"]
+    communication_implications: "所有进度型沟通都应显示『还差多少』与『已完成多少』，并把中间里程碑做成可庆祝节点。"
+    community_implications: "社群挑战（如 21 天活动）公开成员集体进度，用群体接近感放大个体梯度。"
+    content_applications:
+      title: "进度外显式标题：『已完成 80%，最后两步』"
+      body: "在内容中段与结尾重复显示进度反馈，维持完成张力"
+    platform_implications: "平台把任务进度做成默认可见组件（连续签到、等级条）即是在系统层面安装目标梯度；进度条设计质量直接决定留存曲线。"
+    related_nodes: [endowed_progress_effect, zeigarnik_effect, goal_setting_effectiveness, variable_ratio_reward, participation_ladder]
+    source_ids: [S71, S72, S146]
+    provenance:
+      primary_sources: ['S71', 'S72', 'S146']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: goal_setting_effectiveness
+    canonical_name_en: Goal-Setting Effectiveness
+    canonical_name_zh: 目标设定效应
+    aliases: [目标设定理论, goal-setting theory]
+    domain: motivation
+    definition: "Locke 与 Latham 的目标设定理论：具体且困难（且被接受）的目标比『尽力而为』或模糊目标带来更高绩效。注意 SMART 是实践口诀而非实证理论，其核心实证是『具体+困难+承诺+反馈』四要素。"
+    core_claim: "在个体接受目标且获得反馈的条件下，具体而具挑战性的目标系统性地提升绩效。"
+    mechanism: "具体目标提供明确的达标标准，把注意导向任务相关活动；困难目标动员更多努力并延长坚持；反馈闭环让个体校准策略；承诺（自我设定或参与设定）决定目标被翻译成行动的程度（S14、S20）。"
+    causal_chain: "具体+困难目标（被接受） → 注意聚焦与努力动员 + 反馈校准 → 绩效提升"
+    variables:
+      inputs: [目标具体性, 目标难度, 承诺度, 反馈频率]
+      moderators: [任务复杂度, 自我效能, 目标来源（指派/参与）]
+      mediators: [注意聚焦, 努力动员, 策略搜索]
+      outputs: [任务绩效, 坚持时长, 完成率]
+    evidence:
+      supporting:
+        - "Locke 与 Latham 数十年研究计划与综述：具体困难目标优于模糊目标（研究传统共识，一手 EP 未建）"
+        - "组织与管理领域大量现场研究（文献方向；S20 政策场景中仅有应用讨论，不含目标设定主效应原文）"
+      conflicting:
+        - "『Goals Gone Wild』方向的批评：过窄目标诱发不道德行为、损害复杂任务的探索与学习（理论争论，Ordóñez 等方向）"
+      replication:
+        - "主效应复制稳健的说法基于研究传统共识（一手 EP 未建）；在复杂、探索性任务上的负面效应同样被记录。评级按枚举记 C"
+      meta_analysis:
+        - "组织心理学中的元分析支持目标难度-绩效关系（在承诺与反馈条件下）"
+    evidence_grade: A-
+    boundary_conditions:
+      - "个体接受目标、具备基本能力且能获得进展反馈"
+      - "任务相对直接；复杂学习任务需配合学习目标（掌握目标）"
+    failure_conditions:
+      - "目标过窄导致指标游戏（只为数字服务、损害质量与协作）"
+      - "目标被指派且无承诺来源，或难度远超能力引发放弃"
+    common_misinterpretations:
+      - "把 SMART 当成经过验证的理论逐字执行；SMART 是记忆口诀，核心变量是具体性与难度"
+      - "以为目标越公开越有效；公开对承诺高者有效，对能力不足者只是公开的失败"
+    ethical_risks:
+      - "指标压力诱发数据造假与损害用户利益的达标行为（指标游戏）"
+    examples:
+      original_cases: ["行为公共政策文集中关于目标与绩效管理的讨论（S20）"]
+      research_cases: ["Locke 与 Latham 的目标设定研究计划；组织现场的目标难度实验"]
+      modern_cases: ["内容团队用『每周一篇深度稿』替代『好好写』；社群运营的季度活跃目标"]
+    communication_implications: "对用户承诺目标时给出具体可检验的形式（『30 天读完 4 章』），并提供进度反馈机制，而非只有口号。"
+    community_implications: "社群挑战设计四件套：具体目标+适度难度+进度反馈+群体承诺，缺一而效果锐减。"
+    content_applications:
+      title: "把行动目标写成数字与期限：『21 天，每天 15 分钟』"
+      body: "内容内嵌自查清单与进度校准，帮助受众获得反馈"
+    platform_implications: "平台的成就系统即目标设定的规模化实施；难度分层不当会造成精英垄断或大面积放弃。"
+    related_nodes: [implementation_intentions, self_efficacy, goal_gradient_effect, commitment_consistency, commitment_escalation]
+    source_ids: [S14, S20, S118, S196]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Locke & Latham 目标设定理论一手 EP 未建；S118（Deci & Ryan 2000）是目标内容×动机调节的不同研究纲领，不支撑『具体困难目标→绩效』主效应；S14（SDT）与 S118 仅支撑『自主/内在目标内容→持续性』部分，S20 为政策手册辅助；2026-09-09 一手 EP 已建（S196）"
+      effect_size: "具体困难目标提升绩效（Locke & Latham 元分析方向）——内容来自记忆蒸馏，无一手 EP 载明；自主目标提升持续性有 S14 支撑"
+      replication_status: "主效应复制为研究传统共识（未建包）；自主性调制持续性有 S14 支撑（SDT 多领域重复）"
+      context_dependency: "目标具体性/难度/反馈/自主支持调制"
+      downgrade_upgrade_reason: "2026-09-09 反向审计降级 A→C：Locke & Latham 目标设定理论一手 EP 未建，S118 是目标内容×动机调节的不同研究纲领，内容来自记忆蒸馏，待建 EP 后升级"
+    provenance:
+      primary_sources: [S196, S14]
+      supporting_evidence: [S20]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: implementation_intentions
+    canonical_name_en: Implementation Intentions
+    canonical_name_zh: 执行意图
+    aliases: [if-then 计划, 如果-那么计划]
+    domain: motivation
+    definition: "执行意图（Gollwitzer）指把抽象目标改写为『若情境 X，则执行行为 Y』的 if-then 计划：预先把情境线索与具体行动绑定。证据评级 A-（按枚举记 A）：多项元分析（如 Gollwitzer 与 Sheeran 2006）显示中等偏大的稳健效应。与 goal_setting_effectiveness 的区别：目标设定回答『做什么、多难』，执行意图回答『何时何地如何启动』。"
+    core_claim: "给定同等目标，拥有 if-then 计划者的目标达成率显著高于仅有目标意图者。"
+    mechanism: "if-then 结构把情境线索的选择权交还给计划者，形成『线索-行动』的强关联；当线索出现时，行为几乎自动启动，绕过了当下的意志努力与竞争目标干扰；它同时压缩了『何时做』的决策成本（S14、S20）。"
+    causal_chain: "if-then 计划 → 情境线索与行动强绑定 → 线索出现时自动启动行为 → 达成率提升"
+    variables:
+      inputs: [线索具体性, 行动具体性, 计划与目标的兼容性]
+      moderators: [目标承诺, 线索出现频率, 任务难度与冲突目标数量]
+      mediators: [线索-行动关联强度, 启动即时性]
+      outputs: [目标达成率, 行为频率, 放弃率下降]
+    evidence:
+      supporting:
+        - "Gollwitzer 1999 的理论化与系列实验；Gollwitzer 与 Sheeran 2006 元分析汇总上百项研究显示稳健效应（元分析）"
+        - "健康、学习、环保等多领域应用研究（S20 政策应用方向）"
+      conflicting:
+        - "线索频繁失效或环境剧变时效果打折；对已被强习惯占据的行为替换较难（边界研究）"
+      replication:
+        - "预注册与多领域复制总体支持。评级按枚举记 A（A- 水平）"
+      meta_analysis:
+        - "Gollwitzer 与 Sheeran 2006 元分析是该领域的主要证据汇总"
+    evidence_grade: A
+    boundary_conditions:
+      - "目标本身有承诺（执行意图放大动机，不创造动机）"
+      - "if 线索可被稳定识别，then 行动单步可执行"
+    failure_conditions:
+      - "计划过于复杂（多重 if-then 链）导致执行负担"
+      - "情境大变（换工作、搬家）使线索失效"
+    common_misinterpretations:
+      - "把执行意图等同于定闹钟；核心是情境线索与动作的绑定，闹钟只是线索的一种"
+    ethical_risks:
+      - "营销把 if-then 用于诱导式消费触发（『无聊时打开我们』），将自动化机制用于非用户利益目标"
+    examples:
+      original_cases: ["行为公共政策文集中提高疫苗接种、体检等行为达成率的 if-then 应用（S20）"]
+      research_cases: ["Gollwitzer 的目标 pursuit 实验系列；元分析覆盖的健康与学习任务研究"]
+      modern_cases: ["健身社群『下课顺路去健身房』路线规划；学习打卡的『通勤时听一节』绑定设计"]
+    communication_implications: "行动号召给出具体 if-then 模板（『刷完牙后做 10 个深蹲』），把选择成本降为零。"
+    community_implications: "社群任务的参与说明应包含情境绑定示例，并允许成员自选线索，兼顾自动化与自主感。"
+    content_applications:
+      body: "教程结尾固定给『把这一步放进你已有的一天』的绑定示例"
+      cta: "『现在选一个你每天都会经过的场景，绑定这个动作』"
+    platform_implications: "提醒、日历与自动化工具是执行意图的产品化载体；通知泛滥说明许多产品设计只复制了触发器而丢了用户自选线索这一核心。"
+    related_nodes: [goal_setting_effectiveness, behavior_model_bmap, friction_reduction, context_cue_stability, habit_loop_cue_routine_reward]
+    source_ids: [S14, S20]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Gollwitzer 执行意图研究 + Ryan & Deci 2017（S14，自主内化与目标持续性）+ 政策应用手册（S20）"
+      effect_size: "如果-那么计划提升目标达成（meta 支持）"
+      replication_status: "执行意图效应多研究支持（健康/学习/消费场景）"
+      context_dependency: "线索可及/目标承诺/自主选择调制效应"
+      downgrade_upgrade_reason: "2026-09 实取 S14 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S14]
+      supporting_evidence: [S20]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: self_efficacy
+    canonical_name_en: Self-Efficacy
+    canonical_name_zh: 自我效能
+    aliases: [自我效能感, perceived self-efficacy]
+    domain: motivation
+    definition: "自我效能（Bandura）指个体对自己能否组织并执行达成特定任务所需行动的信念。它不同于自尊（自我价值判断）与一般自信；自我效能是任务域特定的。注意自我效能与能力可以脱节：高信念低能力即过度自信。"
+    core_claim: "自我效能水平预测面对困难时的努力、坚持与最终表现，超越单纯能力差异。"
+    mechanism: "效能信念通过四个来源建立（Bandura 四来源框架，已建包 EP S197）：掌握性经验（成功史，权重最大）、替代性经验（观察相似他人的成功）、言语说服（可信者的鼓励）、生理与情绪状态（把紧张误读为无能）。高效能者把困难解读为可克服的挑战并投入策略搜索；低效能者把失败解读为能力不足并提前退出。与 SDT 的胜任需要互补：胜任感是需要的满足，自我效能是其信念载体（S14、S15）。"
+    causal_chain: "掌握/替代/说服/生理状态输入 → 效能信念 → 努力、坚持与策略 → 表现 → 新的成功经验（循环）"
+    variables:
+      inputs: [成功经验, 榜样相似性, 说服可信度, 生理唤起解读]
+      moderators: [任务难度与模糊性, 归因方式, 反馈情境]
+      mediators: [效能信念, 目标承诺, 策略生成]
+      outputs: [努力与坚持, 表现, 抗挫折恢复速度]
+    evidence:
+      supporting:
+        - "Bandura 1977/1997 的理论与研究计划；学业领域元分析（Multon、Brown 与 Lent 方向）支持效能与成绩关联（Bandura 四来源框架与主效应证据，已建包 EP S197）"
+        - "恐惧管理与健康行为领域的干预研究（文献方向；S14、S15 仅支撑与 SDT 胜任需要互补的衔接一句，不支撑主效应与四来源框架）"
+      conflicting:
+        - "横断研究中效能与表现的因果方向部分互为因果；干预证据在真实情境的持久性有限（方法学批评）"
+      replication:
+        - "效应方向为研究传统共识（一手 EP 未建），作为干预杠杆的效果随领域与剂量变化。评级按枚举记 C"
+      meta_analysis:
+        - "学业与职业领域的多项元分析支持效能-表现关联"
+    evidence_grade: B+
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "任务在受众能力可达范围内，效能信念才能转化为表现"
+      - "反馈环境允许成功经验积累（零成功场景无法建立效能）"
+    failure_conditions:
+      - "只做口头鼓励而无真实小胜利（说服与经验脱节）"
+      - "榜样的成功被归因于天赋或外力，替代经验失效"
+    common_misinterpretations:
+      - "把自我效能等同于打鸡血；它依赖结构性的小胜利设计而非口号"
+      - "忽视其域特异性：对写作高效能不等于对直播高效能"
+    ethical_risks:
+      - "制造不切实际的效能承诺（『人人都能月入十万』）诱导付费，失败后归咎学员"
+    examples:
+      original_cases: ["Flow（S15）与 SDT（S14）中关于胜任与最佳体验的衔接讨论"]
+      research_cases: ["Bandura 的恐惧管理实验与替代性经验研究"]
+      modern_cases: ["社群新手任务给『必赢的第一局』；课程设计先给可完成的小作品"]
+    communication_implications: "教程与活动展示『相似的人如何做到』（替代经验）+拆出必胜的第一步（掌握经验），比展示大神更有动员力。"
+    community_implications: "新人融入设计以小胜利序列为核心：可完成的首次发言、首次作品、首次被回应。"
+    content_applications:
+      title: "标题给能力许诺而非结果许诺：『哪怕零基础，第一步只要 5 分钟』"
+      body: "呈现相似背景的真实学员案例，标注起点与路径"
+    platform_implications: "平台的难度分层与新手引导质量直接决定效能积累速率；把高手内容无差别推给新人会摧毁效能感与留存。"
+    related_nodes: [self_determination_needs, goal_setting_effectiveness, flow_state, foot_in_the_door, attitude_behavior_gap]
+    source_ids: [S14, S15, S197]
+    provenance:
+      primary_sources: [S197]
+      supporting_evidence: [S14, S15]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: flow_state
+    canonical_name_en: Flow State
+    canonical_name_zh: 心流
+    aliases: [心流体验, optimal experience]
+    domain: motivation
+    definition: "心流（Csikszentmihalyi）指挑战与技能平衡、目标清晰、反馈即时条件下产生的全神贯注体验：行动与意识融合、时间感扭曲、自我意识减弱。与 self_determination_needs 的关系：心流是胜任感满足的高峰体验形式，也是一种强内在动机来源。"
+    core_claim: "当挑战与技能动态匹配且目标与反馈清晰时，个体进入高效且自愿重复的深度投入状态。"
+    mechanism: "注意力全部分配给当前任务，无余资源用于自我监控与焦虑（与 attention_capacity_limits 的容量约束一致）；清晰目标把每次行动转译为即时反馈，形成『感知-行动』闭环；挑战略高于技能时产生最佳张力，过低则无聊、过高则焦虑。Csikszentmihalyi 用经验取样法（ESM）在真实生活中捕捉该状态（S15）。"
+    causal_chain: "挑战-技能平衡 + 清晰目标 + 即时反馈 → 注意完全投入 → 心流体验 → 自愿重复与时间投入"
+    variables:
+      inputs: [挑战水平, 技能水平, 目标清晰度, 反馈即时性]
+      moderators: [自主性, 任务意义感, 干扰源密度]
+      mediators: [注意完全分配, 行动-意识融合]
+      outputs: [深度投入时长, 技能增长, 自愿复返率]
+    evidence:
+      supporting:
+        - "Csikszentmihalyi 的经验取样研究计划与跨领域（攀岩、艺术、工作）访谈证据（S15）"
+        - "S174（Csikszentmihalyi & LeFevre 1989，ESM）：绝大多数心流体验报告发生在工作时而非休闲时；人们在休闲时动机更高——对『休闲=最优体验』构成实证反证（两条摘要级发现）"
+        - "后续工作与教育情境的 ESM 及问卷研究（多来源）"
+      conflicting:
+        - "心流主要依赖主观报告，客观测量与因果操纵有限；挑战-技能双通道模型的具体边界被修正过（方法学批评）"
+      replication:
+        - "状态描述与挑战-技能关系的方向总体可重复；单次效应的个体差异大。评级按枚举记 B"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "任务有明确目标结构与可感知反馈（开放混乱环境难以进入心流）"
+      - "个体具备基本技能并自愿投入（被迫任务难以产生心流）"
+    failure_conditions:
+      - "打断密集（通知、中断）破坏注意闭环"
+      - "挑战与技能错配（无聊区/焦虑区）"
+    common_misinterpretations:
+      - "把心流等同于放松或娱乐；心流是高投入状态，常常伴随费力感"
+      - "以为心流可被直接『制造』；环境只能移除阻碍与提供条件"
+    ethical_risks:
+      - "把心流机制用于延长无价值消耗（无限信息流），用户『时间消失』而收益归平台"
+    examples:
+      original_cases: ["Flow（S15）中攀岩者、作曲家、外科医生的心流案例"]
+      research_cases: ["Csikszentmihalyi 的经验取样研究"]
+      modern_cases: ["游戏关卡难度曲线、编程专注时段、社群共创马拉松"]
+    communication_implications: "长内容需要分段目标与即时反馈（小结、进度、可动手的练习）帮助读者维持投入；提醒用户中断点反而提升好感。"
+    community_implications: "共创活动按技能分层分组并给明确目标与即时反馈，让不同水平成员都能进入各自的挑战区。"
+    content_applications:
+      body: "把长教程拆成带即时反馈的小循环（学一节-做一步-看结果）"
+      emotion: "营造挑战可及感，避免展示巨大难度差劝退新手"
+    platform_implications: "短视频与信息流是被工程化的低门槛心流机器——挑战极低、反馈极快；这也意味着该机制在伦理上处于『投入价值』与『时间收割』的边界。"
+    related_nodes: [self_determination_needs, intrinsic_extrinsic_motivation, attention_capacity_limits, engagement_optimization_bias, zeigarnik_effect]
+    source_ids: [S15, S14, S174]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Csikszentmihalyi 1990《Flow》（S15，book 级，substantial_excerpt：9 成分/三前提/ESM 经验取样）"
+      effect_size: "挑战-技能平衡→深度投入；状态描述方向稳健、个体差异大"
+      replication_status: "ESM 与问卷研究多领域复制；挑战-技能边界被后续修正"
+      context_dependency: "任务需清晰目标与即时反馈；技能与自愿投入是前提"
+      downgrade_upgrade_reason: "2026-09 实取 S15 心流理论核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S15]
+      supporting_evidence: [S14, S174]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

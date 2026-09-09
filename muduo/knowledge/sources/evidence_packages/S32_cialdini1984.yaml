@@ -1,0 +1,25 @@
+# Evidence Package — S32 Cialdini 1984（Influence）
+# 标准格式。access_level 如实标注。
+source_id: S32
+title: "Influence: The Psychology of Persuasion"
+authors: "Robert B. Cialdini"
+year: 1984
+journal: William Morrow（专著；New & Expanded 2021 增补第七原则）
+doi: "无 DOI（专著）"
+url: "https://www.primores.org/wiki/glossary/persuasion-principles/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：学术词条（click-whirr 固定行为模式/六原则触发特征/Regan 25 美分可乐研究/Langer 复印机研究）+ 深度书评（六原则逐一+对策）+ 播客访谈（第七原则 Unity）+ 中文书评"
+research_question: "人们为何会顺从那些有时并不合理的请求？影响力如何运作？"
+core_claims:
+  - "六原则：互惠（reciprocity）/承诺与一致（commitment & consistency）/社会认同（social proof）/喜好（liking）/权威（authority）/稀缺（scarcity）；2021 增补第七原则联盟（unity）"
+  - "click-whirr 框架（源自动物行为学）：人类在刺激饱和环境中依赖『如果X则Y』的自动反应捷径，触发特征被模仿即可激活顺从"
+  - "经典证据：Regan 研究（25 美分可乐使彩票购买翻倍且独立于喜好）；Langer 复印机研究（『因为』一词即足够）；贵=好 珠宝店提价反畅销"
+  - "基于三年卧底研究（销售/筹款/广告行业）归纳：六原则跨文化普遍、双向可用（进攻与防御）"
+method: "三年卧底参与观察 + 社会心理学实验文献综合"
+results: "（实证综合）影响力六原则成为说服研究与实践标准框架"
+limitations: "原则为从业者综合+既有研究支持；各原则效应幅度与边界需按具体研究评估"
+boundary_conditions: "六原则触发自动顺从，但被识破时引发逆反与信任损失"
+relevant_nodes: [social_proof, authority_influence, reciprocity_norm, commitment_consistency, scarcity_mindset, reciprocity_exchange_networks, cognitive_dissonance]
+notes: "social_proof 等枢纽节点的一手来源（book 级）。六原则与经典实验为公开标准内容，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,25 @@
+# Evidence Package — S40 Heath & Heath 2007（Made to Stick）
+# 标准格式。access_level 如实标注。
+source_id: S40
+title: "Made to Stick: Why Some Ideas Survive and Others Die"
+authors: "Chip Heath; Dan Heath"
+year: 2007
+journal: Random House（专著）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/subject/1963552/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：中文书评（SUCCESs 六原则/好奇心缺口/知识诅咒/高质概念）+ 英文书评（human scale principle/Velcro Theory of Memory/curiosity gaps/肾脏偷窃都市传说解剖）+ 亚马逊引言全文（Kidney Heist 都市传说开头）"
+research_question: "为什么有些想法/信息能『粘住』而另一些快速消亡？如何提高理念的传播与记忆？"
+core_claims:
+  - "SUCCESs 六原则：简单（Simple，提炼核心）/意外（Unexpected，打破预期+好奇心缺口）/具体（Concrete，可感细节）/可信（Credible，权威+细节佐证）/情感（Emotional，人本尺度）/故事（Stories，模拟与激励）"
+  - "知识诅咒（Curse of Knowledge）：一旦拥有知识便难以想象无知者视角——是让想法不粘的首要障碍"
+  - "粘性想法的解剖：肾脏偷窃都市传说（简单情节/具体细节/情感恐惧/故事载体）与 Barry Marshall 喝幽门螺杆菌（可信的具体行动）"
+  - "基于认知心理（记忆/注意/情感）的实践综合；不是原创实验而是组织化框架"
+method: "理念传播案例分析（都市传说/广告/公益/教育）+ 认知心理文献综合"
+results: "（实践框架）SUCCESs 成为内容/广告/教学设计的标准清单"
+limitations: "实践综合框架（非独立检验的因果模型）；六原则重叠、无严格预测力——证据等级 D"
+boundary_conditions: "适用于需要记忆与复述的公开信息；深度论证型内容另需结构"
+relevant_nodes: [concreteness_in_language, curiosity_gap, specificity_effect, retrieval_cue_design, anecdote_vs_statistics, germane_load_learning, gestalt_grouping, schema_violation, seductive_details_effect, trust_signals_content, verb_concreteness_action_language, von_restorff_effect]
+notes: "concreteness/故事化的实践框架来源（book 级，D 级）。六原则为公开标准内容，未编造。"
+last_verified: "2026-09"

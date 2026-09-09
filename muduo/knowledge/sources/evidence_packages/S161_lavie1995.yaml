@@ -1,0 +1,24 @@
+# Evidence Package — S161 Lavie 1995（Perceptual Load as a Necessary Condition for Selective Attention）
+# 标准格式。access_level 如实标注。
+source_id: S161
+title: "Perceptual Load as a Necessary Condition for Selective Attention"
+authors: "Nilli Lavie"
+year: 1995
+journal: "Journal of Experimental Psychology: Human Perception and Performance 21(3): 451-468"
+doi: "10.1037/0096-1523.21.3.451"
+url: "https://pubmed.ncbi.nlm.nih.gov/7790827/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed 一手完整摘要（3 个研究范式与结论）+ 心理科学进展中文综述（魏萍/周晓林 2005，理论机制复述：低负载资源外溢=晚选择/高负载资源耗尽=早选择）+ tandfonline 等多篇后续实验引文交叉确认"
+research_question: "早期选择与晚期选择之争如何解决？相关信息的知觉负载是否决定无关干扰刺激被加工的程度？"
+core_claims:
+  - "知觉负载决定选择性加工：相关任务知觉负载高时资源耗尽、干扰刺激被排除（类早选择），负载低时资源自动外溢加工干扰刺激（类晚选择）"
+  - "3 个研究均采用反应竞争范式测量无关加工，干扰效应仅在低负载条件下出现"
+  - "物理分离不是选择性知觉的充分条件，知觉过载同样是必要条件——对早/晚选择两种观点构成折中"
+method: "3 个行为实验（response competition 范式）；知觉负载经相关显示集大小或对相同显示的不同处理要求操纵（联合特征 vs 孤立特征；简单检测 vs 困难识别大小与位置）"
+results: "干扰只在低负载条件下出现；高负载下分心刺激干扰消失，支持知觉负载理论"
+limitations: "负载操纵与显示中额外项目数量（稀释效应）的混淆在后续研究中受挑战（Tsal & Benoni 2010 等）；负载 vs 稀释的归因有争论"
+boundary_conditions: "适用于视觉注意的选择性；干扰刺激需与目标无关；高知觉负载削弱自下而上注意捕获（对 bottom_up_attention_capture 的边界限定）"
+relevant_nodes: [attention_capacity_limits, bottom_up_attention_capture]
+notes: "知觉负载理论的开山论文，attention_capacity_limits 节点的关键一手实验来源；PubMed 完整摘要+中文综述交叉，未虚标正文级。"
+last_verified: "2026-09"

@@ -1,0 +1,25 @@
+# Evidence Package — S49 Carr 2010（The Shallows）
+# 标准格式。access_level 如实标注。
+source_id: S49
+title: "The Shallows: What the Internet Is Doing to Our Brains"
+authors: "Nicholas Carr"
+year: 2010
+journal: W. W. Norton（专著；2011 普利策非虚构入围）
+doi: "无 DOI（专著）"
+url: "https://www.nicholascarr.com/?page_id=16"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：作者官网（Is Google Making Us Stupid/深阅读 vs 浅浏览/2020 十周年版后记：智能手机与社媒）+ 中文解读（链接/多任务/神经可塑性/F 形阅读轨迹/前 3 页引文）+ 学术引用（'互联网是中断系统'）"
+research_question: "互联网的使用如何改变大脑的阅读与深度思考能力？"
+core_claims:
+  - "神经可塑性：互联网使用重塑大脑——持续切换注意力使深度聚焦变难（2000 年 12 秒→2013 年 8 秒注意力趋势；链接干扰阅读）"
+  - "互联网是中断系统：'它攫取我们的注意力，然后把它打散'——浅层浏览（F 形阅读：只看第一行/前半段）取代深度线性阅读"
+  - "深阅读能力的丧失：研究显示学生 46% 引文来自参考文献第一页、77% 来自前三页；严肃作品的持续深入思考能力下降"
+  - "技术与认知代价权衡：享受互联网丰富性的同时，我们牺牲了深读与深思的能力（'浅薄的现代经典'）"
+method: "认知神经科学/心理学文献综合 + 个人体验叙事"
+results: "（批判经典）互联网改变认知的流行科学经典；引发'我们变笨了吗'的公共辩论"
+limitations: "部分'大脑改变'主张的证据强度有学术讨论；8 秒注意力为媒体误读（EVIDENCE.md 谣言条目）"
+boundary_conditions: "适用于理解互联网环境下的浅层加工与深度阅读张力；个体差异大"
+relevant_nodes: [cognitive_fatigue, attention_economics, information_foraging, information_scent, extraneous_cognitive_load, information_overload]
+notes: "数字认知批判经典（book 级）。F 形阅读/中断系统为公开内容；8 秒谣言已在知识库澄清。未编造。"
+last_verified: "2026-09"

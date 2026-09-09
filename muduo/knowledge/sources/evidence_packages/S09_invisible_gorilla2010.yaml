@@ -1,0 +1,26 @@
+# Evidence Package — S09 Chabris & Simons 2010（The Invisible Gorilla）
+# 标准格式。access_level 如实标注。
+source_id: S09
+title: "The Invisible Gorilla: And Other Ways Our Intuitions Deceive Us"
+authors: "Christopher Chabris; Daniel Simons"
+year: 2010
+journal: Crown Publishers（专著）
+doi: "无 DOI（专著）"
+url: "https://www.bps.org.uk/research-digest/did-you-perceive-invisible-gorilla-after-all"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：(1) BPS（英国心理学会）研究摘要——1999 年 Simons & Chabris 实验为本科心理学教学标准案例：被要求数传球者中许多人未注意到走入场地中央的大猩猩装人员（约半数未报告）；inattentional blindness 定义；并记录 2024 年 eLife 大规模研究（约 2.5 万人、5 项研究）对'完全视盲'的挑战（自称没看见者仍可超机率回答刺激位置之外的特征）；(2) Telldear 长文（WebFetch 全文）——大猩猩出现约 9 秒、约半数计数被试未察觉；无计数任务者几乎全部注意到；书中主题：我们高估意识经验的完整性与可靠性；Mack & Rock 1998 命名 inattentional blindness；(3) Prezi 演示——2010 年书把实验扩展为六大日常错觉：注意错觉、记忆错觉、自信错觉、知识错觉、因果错觉、潜力错觉；(4) 武汉科技馆科普——75 秒视频变体中仅 44% 被试报告看到大猩猩；选择注意会过滤显眼但非预期的刺激"
+research_question: "我们的直觉如何高估心智能力？注意与记忆的'错觉'有哪些？"
+core_claims:
+  - "1999 年隐形大猩猩实验（Simons & Chabris，Perception）：要求被试计数传球时，约半数被试未察觉穿过画面中央、持续约 9 秒并捶胸的大猩猩装人员——持续性无意视盲（sustained inattentional blindness for dynamic events）"
+  - "未被注意分配的显眼刺激不会进入有意识察觉：计数任务是临界因素，无计数任务者几乎全部注意到大猩猩"
+  - "2010 年《The Invisible Gorilla》将实验扩展为六大日常错觉：注意、记忆、自信、知识、因果、潜力——我们对心智运作方式的直觉常常出错"
+  - "全书核心主题：人们系统性高估自己意识经验的完整性与可靠性（'看见'不等于注意，注意不等于记忆）"
+  - "边界更新：2024 年 eLife 大规模研究（N≈25,000）显示自称'没看见'的被试对刺激颜色/类型仍保留超机率的信息（位置/运动除外），'视盲是否完全'存在学术争议"
+method: "科普专著：以 1999 年原始实验（《Gorillas in Our Midst》）为基础，扩展至注意/记忆/推理/自信等多领域直觉错觉"
+results: "（科普经典）无意视盲最著名的公众化呈现；选择性注意盲区的标准教学案例"
+limitations: "科普性质，六大错觉为组织框架而非各自独立实验结论；'完全视盲'的强表述受 2024 年 eLife 研究挑战"
+boundary_conditions: "任务负载越高视盲越彻底；刺激与任务语义相关时察觉率上升；视盲与眼动落点无关（注视过仍可能没看见）"
+relevant_nodes: [inattentional_blindness, cocktail_party_effect, selective_attention]
+notes: "六大错觉与视盲实验为公开标准内容，多源交叉实取，未编造。2024 eLife 边界研究如实标注。"
+last_verified: "2026-09"

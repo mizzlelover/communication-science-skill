@@ -1,0 +1,26 @@
+# Evidence Package — S41 Lippmann 1922（Public Opinion）
+# 标准格式。access_level 如实标注。
+source_id: S41
+title: "Public Opinion"
+authors: "Walter Lippmann"
+year: 1922
+journal: Harcourt, Brace（专著；公版）
+doi: "无 DOI（公版专著）"
+url: "https://book.douban.com/annotation/150075063/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：中文超详细总结（拟态环境/刻板印象/三重不可见性/符号操纵/制造同意）+ 学术论文（'pictures in our heads' 引文/先定义后看见）+ 传播学史综述（Lippmann-Dewey 论战/制造同意/新闻业广告依赖）"
+research_question: "公众如何形成对世界的看法？民主假设『理性知情公民』是否成立？"
+core_claims:
+  - "人无法直接认识完整世界，只能通过『拟态环境』（pseudo-environment）与『刻板印象』理解现实——『我们先定义，后看见』（pictures in our heads）"
+  - "三重不可见性：时空屏障（事件在远方/过去/暗处）、社会屏障（审查/保密/权力遮蔽）、心理屏障（注意有限/情绪干扰/认知懒惰）→ 公众永远是局部知情者"
+  - "舆论不是理性公议，而是『情绪+符号+印象』的产物：事件被媒体筛选裁剪→套入刻板印象→符号口号触发共鸣→集体情绪固化为舆论"
+  - "『制造同意』（manufacture of consent）：舆论由精英/特殊利益塑造；新闻业受广告依赖与新闻取舍（方便性而非重要性）双重扭曲"
+  - "与杜威的著名论战：杜威相信公共讨论可教化，李普曼断言新闻不等于真相、公众讨论只会强化偏见"
+method: "新闻记者/评论家基于一战宣传经验的批判性政治理论 + 认知观察"
+results: "（理论奠基）拟态环境/刻板印象/制造同意成为传播学核心概念；现代舆论研究第一经典"
+limitations: "公版原书全文可得；论述为政治理论而非系统实证；精英主义立场受民主理论批评"
+boundary_conditions: "适用于媒体中介的公共议题认知；直接经验领域影响较弱"
+relevant_nodes: [framing_effects, availability_heuristic]
+notes: "传播学奠基专著（book 级，公版）。拟态环境/刻板印象/制造同意为公开标准内容，未编造。"
+last_verified: "2026-09"

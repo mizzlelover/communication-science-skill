@@ -1,0 +1,530 @@
+# network_effects — 网络效应（Network Effects）：关系结构如何决定传播、支持与机会
+domain: network_effects
+nodes:
+  - id: weak_ties_strength
+    canonical_name_en: The Strength of Weak Ties
+    canonical_name_zh: 弱连接优势
+    aliases: [弱关系理论, weak ties]
+    domain: network_effects
+    definition: "Granovetter 1973 年提出的经典命题：由强连接（亲友密友）与弱连接（点头之交、前同事）构成的社会网络中，新信息（工作机会、新观念）更可能经由弱连接传递。原因是弱连接连接了不同的社会圈子，充当了跨群体的「桥」，而强连接所在圈子信息高度冗余。"
+    core_claim: "对信息获取与新机会而言，弱连接的价值高于其表面亲密程度所暗示的水平，因为它们提供了本地圈子无法提供的非冗余信息。"
+    mechanism: "强连接之间彼此也相互认识，信息在圈内反复循环，新颖性低；弱连接连接两个原本不相连的圈子，信息跨越结构洞流动。因此弱连接在信息广度上是「桥」，尽管在情感支持与深度影响上不如强连接。这与 strong_ties_support 形成互补分工：弱连接传递信息，强连接提供支持与复杂影响。"
+    causal_chain: "圈子间存在弱连接 → 非冗余信息跨圈流动 → 个体获得本地无法获得的机会/观念 → 行为与生命机会改变"
+    variables:
+      inputs: [弱连接数量与跨度, 圈子间信息差]
+      moderators: [连接的维护成本, 平台对弱连接的激活机制（如点赞、转发）]
+      mediators: [非冗余信息流, 跨圈曝光]
+      outputs: [就业机会获取, 新观念触达, 圈层突破]
+    evidence:
+      supporting:
+        - "Granovetter 1973 对波士顿专业人士求职渠道的调查：多数人经由偶尔联系的熟人获得工作信息（经典论文）"
+        - "后续求职研究在多个国家与职业重复了「弱连接渠道」的方向（研究综述）"
+      conflicting:
+        - "不同劳动力市场结果不同：对弱势群体与低收入市场，强连接的担保作用可能更重要（后续研究讨论）"
+      replication:
+        - "弱连接信息优势在求职、创新采纳等多情境重复出现；效应幅度因市场与人群而异"
+      meta_analysis: []
+    evidence_grade: A-
+    boundary_conditions:
+      - "适用于信息与机会获取；情感支持、高风险决策支持不适用（那是强连接领域）"
+      - "前提是连接确实跨越不同圈子：如果弱连接也是同圈的（如同一小区的邻居），非冗余优势消失"
+    failure_conditions:
+      - "弱连接缺乏互动激活（加了好友从不交流）时，只是通讯录条目，不产生信息流"
+      - "需要信任背书的信息（如重大医疗选择）经弱连接传递时缺乏担保，影响力有限"
+    common_misinterpretations:
+      - "把「弱连接重要」读成「关系越弱越好」——原命题是弱连接在信息桥接上的结构性优势，不是亲密关系无用"
+      - "与 wide_bridges 混淆：weak_ties_strength 讲单条弱连接的信息桥作用；wide_bridges 讲复杂传染需要多条并行连接形成的宽带通道"
+    ethical_risks:
+      - "把弱连接工具化为「人脉资源」的功利化社交观，侵蚀关系的真诚性基础"
+    examples:
+      original_cases: [Granovetter 的求职研究：近期失业者更多从很少联系的熟人处获知工作机会]
+      research_cases: [对专业技术人员再就业渠道的跟踪调查（Granovetter 1974 年专著《Getting a Job》）]
+      modern_cases: [LinkedIn 式职业网络：不常互动的前同事提供跨行业机会, 微博「关注」机制大规模激活弱连接信息流]
+    communication_implications: "内容要为弱连接设计「轻量转发场景」：不需要对话基础、一条转发即可完成的价值传递；跨圈层传播的临界是让内容对圈子外的人也可理解。"
+    community_implications: "社群增长靠弱连接的外溢（成员把社群内容带到自己圈外），而非群内强连接的加深；设计「可转发到外部群」的内容资产，而非只做群内活跃。"
+    content_applications:
+      body: "正文避免过度依赖圈层内黑话与背景知识，为跨圈读者提供自足的理解上下文"
+      sharing: "把分享动作设计成「一条消息即可完成价值传递」（如金句卡、结论卡），适配弱连接的低互动成本"
+      comments: "欢迎圈外提问并给予友好回应，降低跨圈参与门槛"
+    platform_implications: "社交平台把弱连接维护成本降到近零（关注即可），极大扩展了弱连接网络规模；这是线上信息广度远超线下的结构原因（原则性判断）。"
+    related_nodes: [strong_ties_support, structural_holes_bridging, wide_bridges, network_threshold_models, two_step_flow]
+    source_ids: [S53, S55, S137]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Jackson 2008《Social and Economic Networks》（S53，book 级，substantial_excerpt：中心度四度量/结构位置优势）+ Granovetter 1973 弱连接研究"
+      effect_size: "弱连接提供非重复新信息（桥接不同社区）；复杂传染中强连接更关键"
+      replication_status: "弱连接信息优势多研究支持；复杂传染边界由 Centola 传统修正"
+      context_dependency: "信息传播弱连接优势；行为扩散需社会强化（强连接）"
+      downgrade_upgrade_reason: "2026-09 实取 S53 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S53, S137]
+      supporting_evidence: [S55]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: strong_ties_support
+    canonical_name_en: Strong Ties Support
+    canonical_name_zh: 强连接支持
+    aliases: [强关系支持, bonding social capital（黏合型社会资本）]
+    domain: network_effects
+    definition: "强连接（strong ties）指高频互动、情感亲密、彼此投入时间与资源的关系（家人、密友、挚友）。强连接网络提供情感支持、紧急资源援助与高信任影响力，Putnam 称之为 bonding social capital（黏合型社会资本）。它与弱连接形成功能互补：强连接支持个体，弱连接连接机会。"
+    core_claim: "在情感支持、高风险决策与行为深度改变上，少数强连接的影响力与支持力超过大量弱连接。"
+    mechanism: "强连接建立在高互动频率与相互投入之上，形成情感承诺与声誉抵押（彼此了解对方历史，背书有真实代价）。因此强连接的信息虽冗余但可信度极高，其影响可以承受复杂传染所需的多重确认；在危机时刻强连接是实际的资源来源。代价是强连接网络维护成本高、规模天然受限，且圈外信息稀薄。"
+    causal_chain: "高频互动与相互投入 → 情感亲密与信任积累 → 高可信度影响 + 实际资源支持 → 深度行为改变与危机缓冲"
+    variables:
+      inputs: [互动频率, 情感强度, 相互投入历史]
+      moderators: [关系中的互惠平衡, 生活阶段的可支配时间]
+      mediators: [信任, 情感承诺, 声誉抵押]
+      outputs: [情感支持获得, 高风险决策影响, 紧急资源援助]
+    evidence:
+      supporting:
+        - "社会支持研究一致显示强关系网络缓冲压力与危机（综述证据）"
+        - "健康行为干预研究显示强连接的多重确认更能改变行为（复杂传染方向，Centola 相关研究讨论）"
+      conflicting:
+        - "强连接圈子的信息冗余与同质化可能强化回音室与错误信念的相互担保（研究讨论）"
+      replication:
+        - "强连接的情感与资源支持功能跨文化重复；其网络规模上限因文化个体主义程度波动"
+      meta_analysis: []
+    evidence_grade: B+
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "适用于需要信任与持续投入的情境；信息获取与新机会类需求弱连接更优"
+      - "强连接的影响依赖关系健康：控制型或毒性关系中「强」意味着更强的伤害能力"
+    failure_conditions:
+      - "强连接网络过度封闭时，形成信息孤岛与群体思维，群体决策质量下降"
+      - "把社群当强连接机器运营：强连接需要真实时间投入，无法靠运营手段批量制造"
+    common_misinterpretations:
+      - "「社群就是要把所有成员关系做强」——强连接天然规模有限，健康社群是少数强连接核心 + 大量弱连接外围的分层结构"
+      - "把 strong_ties_support 与 weak_ties_strength 当作对立理论——两者是功能分工：支持 vs 桥接，Putnam 的 bonding/bridging 二分正是此意"
+    ethical_risks:
+      - "利用强连接的信任进行杀熟式营销与传销裂变，是社交信任最高级别的透支"
+    examples:
+      original_cases: [Granovetter 对 tie strength 多维度定义的原始讨论（互动频率、情感强度、互惠服务）, Putnam 对 bonding vs bridging 社会资本的区分]
+      research_cases: [社会支持文献中亲密网络对压力缓冲的重复发现（综述转述）]
+      modern_cases: [家庭群里的健康产品团购（强连接信任的变现）, 私密小群（闺蜜群、死党群）中的深度相互影响与高转化推荐]
+    communication_implications: "面向强连接场景的内容应提供「值得转给最亲近的人」的分量：深度、诚意与实用，而非轻量娱乐；强连接转发是高信任背书，内容质量门槛更高。"
+    community_implications: "健康社群结构是核心强连接小团体（活跃核心）+ 弱连接大外围；运营目标是保住核心的强连接质量（线下见面、共同项目），同时让外围弱连接随时能被激活。"
+    content_applications:
+      body: "为强连接场景写作时放慢节奏、加深细节：这类读者会读完全文而非三秒划过"
+      narrative: "讲述真实关系中的故事（陪伴、亏欠、和解），激活强连接语境的情感共鸣"
+      sharing: "提供「转给在意的人」的深度内容入口（长文、报告），区别于广场式转发"
+    platform_implications: "平台架构决定连接强度上限：私聊与朋友圈分组可见保护强连接场景，公开广场类产品会把关系自然拉向弱连接化（原则性判断）。"
+    related_nodes: [weak_ties_strength, complex_contagion, social_reinforcement, reciprocity_exchange_networks, need_to_belong]
+    source_ids: [S89, S53, S176, S137, S58]  # S137 载 Granovetter tie 强度多维定义；S58 载复杂传染多重强化；S53 仅对应「连接收益 vs 维系成本」的讨论
+    provenance:
+      primary_sources: ['S89', 'S53', 'S176', 'S137', 'S58']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: homophily
+    canonical_name_en: Homophily
+    canonical_name_zh: 同质性
+    aliases: [同配性, "相似相吸原则（love of the same）"]
+    domain: network_effects
+    definition: "同质性（homophily）指相似的人更可能相互连接、互动与影响的普遍倾向，相似维度包括人口特征、价值观、兴趣与行为。McPherson 等人 2001 年的综述《Birds of a Feather: Homophily and Social Networks》系统总结了该现象：我们的人际网络在种族、教育、年龄等维度上远比随机网络更同质（McPherson 2001 经典综述，未建包，EP 待补）。"
+    core_claim: "社会网络因同质性形成高度聚类，导致人们暴露于高度相似的信息、观念与行为环境，这既促进圈内凝聚也造成圈外隔阂。"
+    mechanism: "同质性通过两条路径产生：机会结构（我们遇到谁由学校、职场、社区等社会分层决定）与选择偏好（我们主动选择相似者交往）。网络一旦同质化，圈内信息冗余、规范相互强化、异见稀缺；同时跨圈信息流动受阻，圈层间的理解与信任衰减。同质性既是社群凝聚的引擎，也是圈层割裂的结构根源。"
+    causal_chain: "社会分层与选择偏好 → 相似者相互连接 → 高聚类网络 → 圈内强化 + 圈外隔离 → 观念与行为的圈层分化"
+    variables:
+      inputs: [社会分层结构（居住、教育、职业）, 个体选择偏好]
+      moderators: [平台推荐算法的相似性偏好, 跨圈层接触制度（如公共空间）]
+      mediators: [连接形成概率, 信息暴露的圈层化]
+      outputs: [网络聚类系数, 圈内规范强化程度, 圈层间隔阂]
+    evidence:
+      supporting:
+        - "McPherson 等人 2001 年综述：个人网络在多个人口维度上的同质性远超随机基准（McPherson 2001 经典综述，未建包，EP 待补）"
+        - "线上社交平台的好友形成与内容互动同样呈现显著同质性（多篇平台研究，方向一致）"
+      conflicting:
+        - "研究显示线上环境可提供比线下更多跨立场内容暴露（Bakshy 等人 2015 关于算法与个体选择的比较研究，结果混合，S147 EP 已载，另见 filter_bubble_echo_chambers）"
+      replication:
+        - "同质性作为网络形成规律被跨平台、跨文化反复复制，是该领域最稳定的发现之一"
+      meta_analysis:
+        - "McPherson 等人的系统综述是该领域的基准文献（综述级证据；McPherson 2001 经典综述，未建包，EP 待补）"
+    evidence_grade: A
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "同质性是统计倾向而非定律：跨圈连接始终存在，且受制度设计（多元社区、公共空间）影响"
+      - "不同维度（种族、兴趣、价值观）的同质性强度不同，不能一概而论"
+    failure_conditions:
+      - "把同质性当作设计原则推向极端：完全同质的社群会因信息冗余与观点单一而失去活力与判断力"
+      - "忽视基率：同质性描述的是连接概率分布，个体层面跨圈友谊完全正常"
+    common_misinterpretations:
+      - "「同质性=回音室」——回音室还需算法或制度强化；同质性本身是中性的连接规律，其后果取决于信息是否有多样性补充"
+      - "与 filter_bubble_echo_chambers 混淆：homophily 是人类社会网络的古老属性，filter bubble 是算法时代的放大器问题"
+    ethical_risks:
+      - "精准营销利用同质性做群体画像固化与歧视性排除（如差异化定价、信贷歧视）"
+      - "社群运营刻意制造「我们 vs 他们」的边界强化，助长群体极化"
+    examples:
+      original_cases: [McPherson 综述中对个人网络种族与教育同质性的系统量化（描述性发现；McPherson 2001 经典综述，已建包 EP S208）]
+      research_cases: [线上社交网络好友与互动同质性的平台研究（方向一致，多篇）]
+      modern_cases: [兴趣算法推荐形成的内容圈层（球鞋圈、母婴圈、投资圈各自的封闭话语体系）, 学区房与教育分层造成的儿童网络同质化]
+    communication_implications: "破圈内容的本质是制造「跨同质性」的共同关注点（灾害、节日、体育、梗）；圈内内容则可放心使用圈层黑话与深度假设。"
+    community_implications: "同质性是社群凝聚的燃料也是天花板：入群门槛与共同身份带来归属，但过度同质会让社群失去新鲜信息流；健康的社群保留异质性的「有限张力」。"
+    content_applications:
+      body: "圈内正文可用圈层共识作为省略前提；破圈正文则显式补足背景，照顾圈外读者"
+      narrative: "破圈叙事用普适情感关系（亲情、努力、幽默）替代圈层特定冲突"
+      sharing: "设计「圈内梗卡」（强化归属）与「圈外解释卡」（帮助转出）双版本分享物"
+      comments: "对圈外评论者主动补课与欢迎，防止评论区成为同质性的守门层"
+    platform_implications: "推荐算法以互动预测为目标时会系统性放大同质性（相似内容→相似互动→更多相似推荐）；这是算法时代同质化的加速度来源（原则性判断）。"
+    related_nodes: [network_density, filter_bubble_echo_chambers, in_group_favoritism, social_identity_theory, weak_ties_strength]
+    source_ids: [S53, S147, S208]  # S53 仅载「人以群分→碎片化→固化」；S147 为 Bakshy 2015 算法与个体选择比较研究；S55/S92 错位引用已移除（2026-09-09 反向审计）
+    provenance:
+      primary_sources: ['S208']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: network_density
+    canonical_name_en: Network Density
+    canonical_name_zh: 网络密度
+    domain: network_effects
+    definition: "网络密度（network density）指网络中实际存在的连接数与可能连接总数之比，衡量群体成员间相互连接的完备程度。高密度网络（如紧密的部落、家族）信息流动快、规范执行强，但信息冗余高、圈外信息少；低密度网络信息多样但协调与信任建立慢。"
+    core_claim: "网络密度是简单信息传播速度与规范执行强度的正向预测因子，但与信息新颖性负相关——密度是双刃剑，其最优值取决于群体目标。"
+    mechanism: "在高密度网络中，任何信息可通过多条路径快速到达所有节点，且任何越轨行为都被多个目击者看见，规范执行与集体动员能力强；但成员彼此知道的信息高度重合，网络作为信息源的价值低。低密度网络每个节点连向不同的圈外世界，信息多样但传播慢、信任链长。社群与产品网络的最优密度因此取决于其功能：情感共同体需要高密度，信息集散地需要适度低密度。"
+    causal_chain: "密度 ↑ → 传播路径冗余 + 违规可见性 ↑ → 信息扩散加速 + 规范执行强化；同时信息冗余 ↑ → 信息新颖性 ↓"
+    variables:
+      inputs: [成员数, 实际连接数]
+      moderators: [群体规模（大群体天然低密度）, 连接的方向性与强度]
+      mediators: [传播路径数, 行为可见性]
+      outputs: [传播速度, 规范执行强度, 信息多样性]
+    evidence:
+      supporting:
+        - "网络科学教材对密度与传播、凝聚关系的标准论述（Easley & Kleinberg 教材；S52 EP 仅实取第 19/21 章，密度论述所在第 2-3 章待补读后再引）"
+        - "Coleman 关于网络闭合（closure）与规范执行的分析传统（经典文献，未建包，方向一致）"
+      conflicting:
+        - "过密网络的群体思维与信息同质化后果在组织研究中被反复指出（组织研究讨论）"
+      replication:
+        - "密度与传播速度的正向关系在模拟与实证中稳定；「最优密度」的具置因群体功能而异，无普适常数"
+      meta_analysis: []
+    evidence_grade: A-
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "密度的效应依赖群体规模：同为「紧密社群」，30 人与 3000 人的可达成密度完全不同"
+      - "密度对规范执行的作用前提是成员在乎声誉（存在声誉抵押）"
+    failure_conditions:
+      - "把高密度当万能目标：信息型社群过度追密度会陷入信息冗余与闲聊化"
+      - "人工强行连接所有人（大群互加）制造的是虚假密度——连接存在但无互动"
+    common_misinterpretations:
+      - "「社群越紧密越好」——密度与信息多样性存在权衡（trade-off），运营目标应与社群功能匹配"
+      - "把密度等同于活跃度：密度是结构指标（连接存在），活跃是行为指标（连接使用），高密度低活跃的死群很常见"
+    ethical_risks:
+      - "高密度网络中的规范执行可演变为群体监视与排斥机制，压制异见的成本极低"
+    examples:
+      original_cases: [教科书对 dense vs sparse 网络传播特性的对比分析（Easley & Kleinberg）]
+      research_cases: [Coleman 关于网络闭合与规范执行的经典分析（经典文献，已建包 EP S210）]
+      modern_cases: [百人小群的高互动密度与转发速度（一条消息全员可见、规范自发执行）, 超大群的低密度与信息沉没（发言无人回应、规范涣散）]
+    communication_implications: "面向高密度群体（社群、粉丝团）的内容可以预设共识与梗，传播快但需控制重复疲劳；面向低密度受众（公域流量）的内容必须自足且争取算法初始曝光。"
+    community_implications: "社群运营应按功能管理密度：核心层（高密度强规范）→ 活跃层（中密度）→ 关注层（低密度信息触达）；分层结构比单一「大群」健康得多。"
+    content_applications:
+      body: "高密度群内正文允许指代共同经历（「上次那件事」）；公域正文必须完全自足"
+      sharing: "高密度群体的分享物做成「接龙/打卡」形态利用路径冗余；低密度场景做成「一次转发」的自足卡片"
+      comments: "高密度社群用固定互动仪式（每日签到、周度总结）维持连接使用率，防止结构密度变行为死区"
+    platform_implications: "平台群组功能的产品上限决定可达密度（群人数上限、消息折叠逻辑）；设计者实际上在为社群设定密度天花板（原则性判断）。"
+    related_nodes: [homophily, network_threshold_models, strong_ties_support, community_boundaries, network_exposure_effects]
+    source_ids: [S52, S53, S137, S139, S210]
+    provenance:
+      primary_sources: ['S210']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: structural_holes_bridging
+    canonical_name_en: Structural Holes and Bridging
+    canonical_name_zh: 结构洞与桥接
+    aliases: [Burt 结构洞理论, broker（中介人）]
+    domain: network_effects
+    definition: "结构洞（structural holes，Ronald Burt 提出）指网络中两个群体之间互不连接的空隙。跨越结构洞的个体（broker，中介人）因同时接触多个不相连圈子的信息而获得信息优势与控制优势：他们更早知道、更早理解跨圈组合创新，并能在群体间做「翻译」。这是弱连接优势的机制化深化。"
+    core_claim: "占据结构洞位置的个体与组织在信息新颖性、创新机会与谈判地位上系统性地优于封闭网络中的个体，代价是维持桥接位置的关系投入与两端归属感较低。"
+    mechanism: "封闭网络内信息冗余且观念同质；跨洞位置让 broker 同时获得多个圈子的非冗余信息流，形成「视野套利」：把 A 圈的常识变成 B 圈的洞见。Burt 进一步论证，好想法本身常来自跨圈组合而非天才个体（Burt 2004 好想法研究，已建包 EP S209）。控制优势则来自信息不对称：两端都依赖 broker 传递。风险是两端都视其为「外人」，信任需持续经营。"
+    causal_chain: "跨结构洞位置 → 非冗余信息汇聚 + 翻译能力 → 信息/创新优势 + 中介谈判力 → 机会与回报优势"
+    variables:
+      inputs: [网络中结构洞的存在, 个体占据跨洞位置]
+      moderators: [两端圈子的差异度（太相似无洞可占）, broker 的翻译与信任经营能力]
+      mediators: [非冗余信息流, 两端的依赖度]
+      outputs: [创新产出, 职业回报, 中介收益]
+    evidence:
+      supporting:
+        - "Burt 对大型企业经理人的研究：跨洞位置与晋升、绩效、好想法的提出相关（Burt 1992/2004 经典研究，未建包，EP 待补）"
+        - "「跨域组合更易产生好想法」在组织与创新研究中方向一致地重复（综述转述）"
+      conflicting:
+        - "封闭网络的规范执行与深度信任优势由 Coleman 传统强调——两种网络价值取决于情境（组织研究讨论）"
+        - "broker 位置在强关系文化（如部分集体主义文化）中回报可能低于预期（跨文化研究讨论）"
+      replication:
+        - "结构洞与绩效/创新的相关在多个组织情境重复；因果方向（位置带来绩效 vs 绩效带来位置）存在双向讨论"
+      meta_analysis: []
+    evidence_grade: A
+    boundary_conditions:
+      - "结构洞价值依赖两端圈子确有信息差：完全相似的圈子之间无洞可占"
+      - "broker 需具备翻译能力与两端的基本信任，否则只是「两端都知道的边缘人」"
+    failure_conditions:
+      - "两端圈子之一切断连接或自行连通（去中介化），桥接价值瞬间归零"
+      - "broker 过度利用信息不对称牟利，被识别后遭两端同时排斥"
+    common_misinterpretations:
+      - "把结构洞等同于「人脉广」——关键是跨不相连圈子，认识再多同一个圈子的人也不占结构洞"
+      - "把 broker 角色等同于 opinion_leadership：broker 的价值在信息位置与翻译，opinion leader 的价值在被信任的影响，一个靠结构，一个靠关系内容"
+    ethical_risks:
+      - "broker 的信息不对称优势可被滥用于操控（向两端传递对己有利的失真版本）"
+    examples:
+      original_cases: [Burt 书中对经理人社会网络与绩效关系的分析案例（书籍综合；Burt 经典研究，已建包 EP S209）]
+      research_cases: [组织网络研究中跨部门 broker 与创新提案数量的相关研究（方向一致）]
+      modern_cases: [跨行业社群的主理人天然占据结构洞（把 A 行业玩法带入 B 行业）, 「翻译型博主」把学术圈/科技圈概念转译给大众而获得影响力]
+    communication_implications: "内容生态位中的结构洞策略：定位为两个受众群之间的翻译者（学术↔大众、技术↔业务），比在单一红海圈里竞争更易建立独特价值。"
+    community_implications: "社群间的 broker（同时深度参与多个社群的成员）是社群的信息动脉；识别并善待他们，他们的跨社群搬运决定社群信息的新鲜度，但他们对单一社群的忠诚度天然较低。"
+    content_applications:
+      body: "正文使用「A 领域的人都知道，但 B 领域的人还没意识到」的翻译句式，显式化 broker 价值"
+      narrative: "讲述「一个概念如何从原领域走到新领域」的旅程故事"
+      sharing: "制作双版本内容（圈 A 版与圈 B 版），分别适配两端读者的语境"
+    platform_implications: "平台推荐机制可能自动「填洞」（把相似内容推给所有人），压缩 broker 的套利空间；跨圈内容的稀缺性在算法时代反而可能上升（原则性判断）。"
+    related_nodes: [weak_ties_strength, opinion_leadership, small_world_property, wide_bridges]
+    source_ids: [S53, S56, S137, S209]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Jackson 2008《Social and Economic Networks》（S53，book 级：结构位置优势/经纪度量）+ Watts 2011（S56，影响者修正：结构决定级联）+ Burt 结构洞传统"
+      effect_size: "跨结构洞的经纪人（broker）获得信息与机会优势；级联规模由结构而非个体决定"
+      replication_status: "结构洞优势在组织网络研究中多方向支持；影响者作用被结构修正"
+      context_dependency: "连接不同社区的节点优势最大；算法『填洞』压缩套利空间"
+      downgrade_upgrade_reason: "2026-09 实取 S53/S56 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S209, S53]
+      supporting_evidence: [S56]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: network_threshold_models
+    canonical_name_en: Threshold Models of Collective Behavior
+    canonical_name_zh: 网络阈值模型
+    aliases: [阈值模型, Granovetter 阈值]
+    domain: network_effects
+    definition: "阈值模型（threshold models）由 Granovetter 于 1978 年提出，用于解释集体行为的突然爆发：每个人加入某一行为（参与、购买、转发）都有一个「阈值」——需要看到多少人已经行动自己才行动。群体的总体结果不取决于平均阈值，而取决于阈值在整个群体中的分布。"
+    core_claim: "集体行为的爆发与否由个体阈值的分布形态决定：两个平均阈值完全相同的群体，可能一个爆发一个沉默，仅仅因为阈值分布的方差不同。"
+    mechanism: "个体决策是相互依赖的递归过程：我看到 k 个人行动后若超过我的阈值就加入，我的加入又成为他人的观察信号。这个过程是自我放大的：低阈值者启动，中阈值者跟进，最终高阈值者也被卷入，形成雪崩式级联；若低阈值者太少或断档，级联在中间熄火。因此「多数人其实都愿意」但「没人先动」的 pluralistic_ignorance 困境，与「少数激进者点燃全场」的爆发，都能在同一框架内解释。"
+    causal_chain: "阈值分布 + 初始行动者 → 相互观察的递归采用 → 达到或未达到自持级联 → 集体行为爆发/熄火"
+    variables:
+      inputs: [个体阈值分布, 初始行动者数量与位置]
+      moderators: [网络可见性（能否看到他人行动）, 行为的风险与可逆性]
+      mediators: [相互观察的信号传递]
+      outputs: [集体行为是否爆发, 爆发规模与速度]
+    evidence:
+      supporting:
+        - "Granovetter 1978 的形式化模型与暴动/罢工/谣言传播/投票等集体行为案例的逻辑解释（S138 EP 实载：分布形状而非均值决定结局、暴动 0-99 级联）"
+        - "网络科学教材把阈值模型作为扩散基本模型之一系统讲授（Easley & Kleinberg 教材）"
+      conflicting:
+        - "真实个体阈值难以直接测量，多数应用依赖事后拟合，预测检验有限（方法学讨论）"
+      replication:
+        - "模型逻辑在模拟与多种情境（集体行动、技术采纳、时尚）中被广泛重演；直接田野复制较少"
+      meta_analysis: []
+    evidence_grade: B+
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions:
+      - "个体能看到他人的行动信号（可见性是模型的隐含前提）；匿名或隔离环境中阈值机制无法运转"
+      - "阈值稳定于观察窗口内；若风险或奖励随时间剧变，分布本身在移动"
+    failure_conditions:
+      - "把「平均阈值低」当成爆发保证——分布的形状（低阈值者是否足够且连续）才是关键"
+      - "用模型解释需要深思熟虑的慢决策；阈值模型最适合快速、可见、相互依赖的简单决策"
+    common_misinterpretations:
+      - "「找到最先行动的人就能引爆」——初始行动者的数量、网络位置与阈值断档共同决定结果，单点点火常熄火"
+      - "把阈值模型与 critical_mass_threshold 混为一谈：阈值模型是自下而上的个体异质性模型，临界规模更多用于网络产品与集体收益语境"
+    ethical_risks:
+      - "阈值机制被利用做「托儿」：制造虚假行动者信号操纵他人跟进（虚假抢购、虚假热度）"
+    examples:
+      original_cases: [Granovetter 1978 论文中的 riot 模型：相同平均阈值、不同方差的两个群体结局相反]
+      research_cases: [对集体行动与技术采纳的模拟研究重演阈值效应（教材转述）]
+      modern_cases: [直播间「扣1」氛围的相互依赖爆发（前几十条的可见性决定后续）, 股市挤兑与银行挤提的相互观察结构, 线下活动「冷场 vs 全场合唱」的阈值断档现象]
+    communication_implications: "制造可见的早期行动者（真实案例、首批参与者展示）是为中阈值人群提供「允许自己加入」的信号；内容设计要让「已经有很多人在做」可见且可信。"
+    community_implications: "社群活动的冷启动就是阈值问题：运营者要亲自扮演低阈值行动者，并让行动可见（接龙列表、报名榜），把个体犹豫变成集体惯性。"
+    content_applications:
+      body: "正文展示「已行动者」的具体清单或故事，给中间阈值读者提供跟随的正当性"
+      narrative: "讲述「第一个人如何犹豫、如何行动、其他人如何跟上」的过程叙事"
+      sharing: "转发按钮旁展示真实参与人数与熟人动态，激活阈值观察"
+      comments: "运营以真实身份带头示范行动（而非灌水），并置顶真实参与者的反馈"
+    platform_implications: "平台的计数器（点赞数、参与人数）就是阈值模型的信号基础设施；平台可以自由「显示什么数字」，从而实质性地操纵集体行为阈值（原则性判断）。"
+    related_nodes: [critical_mass_threshold, pluralistic_ignorance, diffusion_of_innovations, complex_contagion, network_density]
+    source_ids: [S52, S56, S138]  # S140 无阈值内容（错位引用已移除，2026-09-09 反向审计）；其枢纽-级联锚点待补
+    provenance:
+      primary_sources: ['S52', 'S56', 'S138']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: small_world_property
+    canonical_name_en: Small-World Property
+    canonical_name_zh: 小世界特性
+    aliases: [小世界网络, six degrees（六度分隔）]
+    domain: network_effects
+    definition: "小世界（small world）指同时具备高聚类系数（朋友的朋友多为朋友）与短平均路径长度（任意两人间只需少量中间人）的网络结构。Watts 与 Strogatz 1998 年在《Nature》上的模型表明：在规则网络中随机重连少量边即可产生小世界结构——既有局部的紧密性，又有全局的可达性。"
+    core_claim: "真实社会与信息网络普遍呈小世界结构：局部高度抱团，同时任何两人之间只隔少数几跳，这使信息可以「远距离快速传播」而不牺牲局部信任。"
+    mechanism: "少量跨群「捷径边」（即弱连接式的长程连接）以极低的成本大幅缩短全局路径，而保留的高聚类维持局部信任与规范。Milgram 的小世界实验（让陌生人通过熟人链把信件寄给目标）在人际网络层面验证了短路径的存在；后续研究同时指出：路径「存在」不等于个体能「找到」路径——可搜索性（searchability）依赖对方向的有用线索（如职业、地理层级）（Kleinberg 可搜索性，未建包，EP 待补）。"
+    causal_chain: "高聚类（局部信任）+ 少量捷径边（全局可达）→ 信息兼具局部深度与全局广度的传播潜力"
+    variables:
+      inputs: [网络聚类系数, 捷径边数量与分布]
+      moderators: [个体对「方向线索」的掌握（可搜索性）, 平台是否提供跨群连接机制]
+      mediators: [平均路径长度, 局部信任结构]
+      outputs: [信息全局可达速度, 跨圈传播潜力]
+    evidence:
+      supporting:
+        - "Watts & Strogatz 1998 对小世界网络的模型化与多类真实网络验证（经典论文）"
+        - "Milgram 的连锁信实验显示陌生人间经由少量中介连通（经典研究，Watts 书中回顾与讨论其局限）"
+      conflicting:
+        - "连锁信实验的完成率很低且样本有偏，被批评高估了「人人可及」的程度（Milgram 完成率批评，未建包，后续方法学讨论）"
+      replication:
+        - "大规模在线社交网络数据反复确认平均路径极短（网络科学共识）"
+      meta_analysis: []
+    evidence_grade: A-
+    boundary_conditions:
+      - "短路径是网络属性而非个体能力：普通人在没有平台辅助时往往找不到短路径"
+      - "结构成立依赖少量跨群捷径的存在；完全孤立的圈层结构会破坏小世界性"
+    failure_conditions:
+      - "把「六度分隔」当成传播保证：可达性 ≠ 会被传递，长链上的每次转递都有衰减与扭曲"
+      - "在信息被算法按兴趣切断的平台上，物理连接存在但信息捷径未必被使用"
+    common_misinterpretations:
+      - "「世界很小所以内容自然传遍全球」——小世界提供的是潜力结构，传播仍需经过每一跳的守门与意愿"
+      - "把 small_world 与 preferential_attachment 混淆：前者描述路径结构（多短、多聚），后者描述度分布形成机制（枢纽如何长出）"
+    ethical_risks:
+      - "小世界结构同样是谣言与恐慌的快速通道：局部信任 + 全局可达 = 危险信息的高效组合"
+    examples:
+      original_cases: [Watts & Strogatz 1998 的重连模型（从规则环状网络到小世界）, Milgram 连锁信实验]
+      research_cases: [在线社交网络的大规模路径测量研究（网络科学文献，方向一致）]
+      modern_cases: [「你转发的内容我三度人脉内必有人见过」的熟人圈重叠感, 行业会议上的「原来你们互相认识」现象]
+    communication_implications: "利用小世界结构做「接力传播」设计：内容在每跳都需保留可转递性（署名、可引用、无圈层黑话），让短路径真的被走通。"
+    community_implications: "社群网络的小世界性来自「每个成员自带圈外捷径」；鼓励成员把社群内容带回各自圈子，是低成本扩大全局可达性的方式。"
+    content_applications:
+      body: "为接力设计：正文每个段落都包含独立可引用的完整信息点，防止链条传播中的意义衰减"
+      sharing: "分享物内嵌「下一个该转给谁」的提示（同行、家人、决策者），利用方向线索提高可搜索性"
+      comments: "鼓励评论区出现「我是从某某那里看到的」溯源互动，让传播链条可见、可经营"
+    platform_implications: "社交平台的关注与转发机制把小世界的「找路径」难题自动化（推荐跨圈内容、一键转发），实质性地提高了信息通过捷径的流量占比（原则性判断）。"
+    related_nodes: [weak_ties_strength, preferential_attachment, structural_holes_bridging, wide_bridges]
+    source_ids: [S55, S52, S139]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Watts 2003《Six Degrees》（S55，book 级，substantial_excerpt：WS 模型/2003 邮件实验 6 跳）+ Watts & Strogatz 1998 原始论文"
+      effect_size: "短平均路径+高聚类的小世界结构普遍存在；随机重连少量链接创造捷径"
+      replication_status: "小世界现象多网络类型重复（神经/社交/经济/互联网）；Facebook 3.57 度"
+      context_dependency: "稀疏连接的巨大网络；平均路径与聚类需同时考量"
+      downgrade_upgrade_reason: "2026-09 实取 S55 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S55, S139]
+      supporting_evidence: [S52]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: preferential_attachment
+    canonical_name_en: Preferential Attachment
+    canonical_name_zh: 优先连接
+    aliases: [富者愈富, Barabási-Albert 模型, scale-free network（无标度网络）]
+    domain: network_effects
+    definition: "优先连接（preferential attachment）由 Barabási 与 Albert 于 1999 年提出：网络通过「增长 + 新节点优先连接已有较多连接的节点（富者愈富）」的机制，自发形成少数枢纽（hubs）拥有极多连接、多数节点连接很少的 scale-free（无标度）结构。该机制被用于解释网页链接、引用网络与社交网络的头部集中现象。"
+    core_claim: "在增长型网络中，连接（注意力、粉丝、引用）的分布天然趋向头部集中：先发者与已有声望者获得新连接的概率更高，枢纽地位会自我强化。"
+    mechanism: "新进入者面对庞大网络时，利用可见度作为质量捷径——连接多的节点更显眼、更可信、更易被找到，于是获得新连接的概率与其现有连接数成正比。这一正反馈使早期微小优势指数放大为枢纽地位。但需注意适用性边界：并非所有网络都是无标度的，近年对真实网络的大规模检验发现严格的幂律分布其实较少见；平台环境中的枢纽形成还叠加了算法推荐与运营干预，不纯粹是优先连接的产物。"
+    causal_chain: "网络增长 → 新节点依据可见度选择连接目标 → 高连接节点获得更高连接概率 → 枢纽自我强化 → 头部集中分布"
+    variables:
+      inputs: [网络增长速率, 新节点的连接选择规则]
+      moderators: [节点「fitness」（内在质量差异；Bianconi-Barabási 2001 fitness 模型，未建包，EP 外方向性讨论）, 算法推荐的可见性分配, 先发时间窗]
+      mediators: [可见度与可信度的正反馈]
+      outputs: [度分布的头部集中度, 枢纽节点存续]
+    evidence:
+      supporting:
+        - "Barabási & Albert 1999 对万维网等网络的幂律度分布发现（经典论文）"
+        - "引用网络、合作网络等多类增长网络呈现头部集中（网络科学综述）"
+      conflicting:
+        - "对真实网络的大规模重检验发现严格幂律并不普遍，多种分布均能拟合（网络科学方法学讨论，方向性结论）"
+        - "平台枢纽的崛起常由运营与算法扶持驱动，优先连接只能解释部分（平台研究讨论）"
+      replication:
+        - "「头部集中 + 优势自我强化」的方向被广泛复制；「严格无标度」的普适性已不被主流接受"
+      meta_analysis: []
+    evidence_grade: B+
+    boundary_conditions:
+      - "适用于开放增长、连接成本低、可见度透明的网络；封闭小社群或需要维护成本的关系网络不典型"
+      - "节点质量差异（fitness）会修正纯优先连接：后来但更优者仍可快速崛起"
+    failure_conditions:
+      - "平台算法改变可见性分配（去中心化推荐、流量再分配）时，先发优势被显著削弱"
+      - "把幂律当作宿命：网络类型不同（如强约束的邻里网络、双边匹配市场）未必呈现头部集中"
+    common_misinterpretations:
+      - "「头部集中是算法的错」——优先连接是人类网络与增长过程的固有倾向，算法只是放大或削弱其强度"
+      - "把 preferential_attachment 与 long_tail_demand 混为一谈：前者是网络形成机制，后者是需求分布描述；两者相关但层面不同"
+    ethical_risks:
+      - "富者愈富的马太效应固化注意力不平等；平台若利用该机制售卖「维持可见度」的服务，等于把结构性优势货币化"
+    examples:
+      original_cases: [Barabási 书中对万维网枢纽与「富者愈富」的论述（《Linked》）]
+      research_cases: [引用网络中论文引用分布高度偏斜的重复发现（网络科学综述）]
+      modern_cases: [短视频平台头部账号涨粉速度远超腰部（同等内容质量下）, 新平台早期的「流量红利期」实为优先连接未被固化的时间窗]
+    communication_implications: "在增长网络中，起步阶段（网络尚未固化枢纽）的投入回报最高；内容策略应优先抢占早期平台与新兴圈层的「未被占据的连接位」。"
+    community_implications: "社群内的声望系统天然趋向优先连接（老成员更易被提及、被关注）；新成员需要制度化的曝光设计（新人秀、轮值主持）对冲马太效应。"
+    content_applications:
+      body: "早期内容优先做「可被引用/被转发」的节点型资产（清单、数据、观点卡），主动积累连接位"
+      narrative: "用「第一批关注者见证成长」的叙事，把时间先发优势转化为关系资产"
+      sharing: "分享物突出账号/社群的独特身份标识，让每次转发都在为新节点做可见度广告"
+      comments: "积极回评早期评论者，在低连接阶段手动完成「优先连接」的种子积累"
+    platform_implications: "平台是优先连接的裁判：推荐算法决定新连接的初始分配，可在「扶新」与「保头部」间选择；平台政策变化（如扶持腰部创作者）直接改写度分布（原则性判断）。"
+    related_nodes: [small_world_property, critical_mass_threshold, long_tail_demand, algorithmic_amplification, network_density]
+    source_ids: [S54, S52, S140]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Barabási 2002《Linked》（S54，book 级，substantial_excerpt：无标度网络/优先连接/BA 模型）"
+      effect_size: "新节点优先连接高连接节点→幂律度分布（富者愈富）；对枢纽攻击脆弱"
+      replication_status: "优先连接机制多网络类型重复；幂律普适性有边界讨论"
+      context_dependency: "增长型网络（新节点持续加入）最强；静态/小网络需谨慎"
+      downgrade_upgrade_reason: "2026-09 实取 S54 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S54, S140]
+      supporting_evidence: [S52]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: network_exposure_effects
+    canonical_name_en: Network Exposure Effects
+    canonical_name_zh: 网络暴露效应
+    aliases: [同伴效应, peer effects, 三度影响（contested）]
+    domain: network_effects
+    definition: "网络暴露效应（network exposure effects）指个体的态度、情绪与行为受其网络中他人状态影响的现象——朋友的健康行为、情绪状态与消费选择会「外溢」到自己身上。Christakis 与 Fowler 在《Connected》中提出影响可延伸至「三度人脉」，但该主张存在显著方法学争议。"
+    core_claim: "网络邻居的行为与状态对个体存在可测量的影响，但影响范围（直接邻接还是三度扩散）与因果强度存在激烈的方法学争论。"
+    mechanism: "三条通路产生网络暴露：直接影响（同伴示范与劝说）、同质选择（相似者本就聚在一起，行为相关未必是影响）与环境共享（同处一个物理或制度环境）。区分三者是该领域的核心难题：同样的行为相关性，可能来自真实传染，也可能只是物以类聚。严格的因果检验需要随机化或精细的准实验设计。"
+    causal_chain: "网络邻居行为/状态改变 → 示范、劝说或共同环境 → 个体行为/状态改变（或仅为同质性伪相关）"
+    variables:
+      inputs: [网络邻居的行为分布, 暴露频率与强度]
+      moderators: [关系强度, 行为的可观察性, 个体易感性]
+      mediators: [社会示范, 规范感知, 情绪传染]
+      outputs: [健康行为、消费、情绪的邻里相关]
+    evidence:
+      supporting:
+        - "Christakis 与 Fowler 对大型社交网络中健康行为「外溢」的分析（《Connected》及其研究传统）"
+        - "受控小规模实验（如健康行为网络干预）显示网络结构影响行为改变（Centola 相关研究方向）"
+      conflicting:
+        - "方法学批评指出：未处理的同质选择与环境混淆可产生「伪传染」；三度影响主张被多篇再分析质疑（方法学争论，方向性结论）"
+      replication:
+        - "直接邻接层的同伴效应在实验设计中可重复；三度扩散主张复制不稳定"
+      meta_analysis: []
+    evidence_grade: B
+    boundary_conditions:
+      - "暴露效应需区分直接邻居与远端网络：多数可靠证据集中在一度与二度连接"
+      - "行为需可观察且与身份相关；纯私密行为的社会外溢弱"
+    failure_conditions:
+      - "把相关性当传染：未分离同质性与共同环境前，任何「朋友的朋友胖了所以我也会胖」式推论都不成立"
+      - "用网络暴露为干预效果背书时若缺乏对照，几乎必然高估"
+    common_misinterpretations:
+      - "「朋友的情绪会传染到三度之外」——三度影响假说有争议，谨慎使用范围为直接网络"
+      - "把 network_exposure_effects 与 emotional_contagion 混淆：后者是面对面/媒介互动中的情绪传递机制，前者是网络结构层面的行为相关现象"
+    ethical_risks:
+      - "「你的朋友的数据可以预测/影响你」的网络暴露逻辑被用于隐性画像与诱导，个体并未同意被他人的行为所代表"
+    examples:
+      original_cases: [《Connected》对肥胖、吸烟、幸福感在网络中聚集成片的分析案例]
+      research_cases: [对「同质性 vs 传染」区分方法的研究争论（S57 EP 实载：Lyons 等方法学批评）, 聚类网络干预实验显示行为改变在网络条件间差异（Centola 传统）]
+      modern_cases: [健身 App 好友排行榜对个人运动量的拉动, 「朋友圈都在考研/买房」氛围对个体决策的压力]
+    communication_implications: "传播设计中使用「你认识的人已经在做」比「很多人在做」更有力——一度人脉示范的因果证据最强；但必须真实，伪造熟人动态是操纵。"
+    community_implications: "社群干预应按「暴露结构」分组：把想推广的行为先安插在相互连接的小团内，让成员间互为证据；孤立成员接触不到该行为信号。"
+    content_applications:
+      body: "正文引用「同类人群中的真实变化故事」而非抽象统计，激活同伴示范通路"
+      narrative: "以「社群里大家都开始……」的集体行动叙事呈现，让读者感到行为有网络支撑"
+      sharing: "展示真实参与者的变化轨迹（用户生成内容），作为可传染的暴露素材"
+      comments: "促成成员间相互回应（而非只回应官方），让评论层成为真实的暴露网络"
+    platform_implications: "平台把「好友动态」直接注入信息流，相当于强制提高网络暴露密度；这既是增长杠杆，也是焦虑与比较压力的来源（原则性判断）。"
+    related_nodes: [strong_ties_support, homophily, emotional_contagion, social_reinforcement, network_density]
+    source_ids: [S57, S58, S101]  # S92 EP 无网络暴露内容（错位引用已移除，2026-09-09 反向审计）
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Centola 2010 网络实验（S101 已实取全文级）：网络暴露（邻居采用数）与行为采纳的量化关系"
+      effect_size: "多邻居强化显著提升采纳概率"
+      replication_status: "方向在多领域网络干预中重复"
+      context_dependency: "高成本/有社会风险行为更依赖网络暴露"
+      downgrade_upgrade_reason: "2026-09 补充一手实验证据（S101），升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S101]
+      supporting_evidence: [S57, S58]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

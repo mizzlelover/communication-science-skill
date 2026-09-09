@@ -1,0 +1,26 @@
+# Evidence Package — S20 Eldar Shafir (Ed.) 2013（The Behavioral Foundations of Public Policy）
+# 标准格式。access_level 如实标注。
+source_id: S20
+title: "The Behavioral Foundations of Public Policy"
+authors: "Eldar Shafir (Editor)"
+year: 2013
+journal: Princeton University Press（学术手册/编著；初版 2012-12）
+doi: "无 DOI（专著）"
+url: "https://ideas.repec.org/h/pup/chapts/9888-1.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：普林斯顿大学出版社官方引言（RePEc 收录，跨学科专家阵容/覆盖议题清单/『政策塑造行为轨迹』论点）+ JSTOR 完整章节目录（选择架构与退休储蓄/行为改变的心理学杠杆/默认决策/选择架构/行为知情监管等章）+ Amazon 出版信息（536 页/PUP/2012-12-16）+ 白宫 SBST 论文引用（该书为行为公共政策领域标准参考）+ 同行学术引用（2013 版，行为经济学 HIV 预防应用）"
+research_question: "行为科学（心理学、行为经济学、决策研究等）的发现如何系统地应用于公共政策的设计与实施？"
+core_claims:
+  - "手册汇集心理学、决策研究、政策分析、经济学、政治学、法学、医学、哲学各领域一流专家，探讨政策相关情境中的人类行为及其对公共政策的启示（PUP 官方引言）"
+  - "行为研究覆盖领域广泛：行为金融、劳动合同、慈善、储蓄与贫困分析、目击者指认与量刑、种族与性别偏见、健康行为、投票等，发现常反直觉且对政策制定有严肃含义（PUP 官方引言）"
+  - "核心论点：人的动机、能力、态度与感知与标准假设（理性人）存在深刻差异，因此公共政策不只是便利人类事务，而是实际塑造行为轨迹（PUP 官方引言）"
+  - "章节体系覆盖行为政策工具箱：选择架构与退休储蓄计划、行为改变的心理学杠杆、默认决策（Decisions by Default）、选择架构、行为知情监管、贫困情境中的决策、心理麻木与大规模暴行、目击者指认与错判等（JSTOR 目录）"
+  - "该卷被行为公共政策领域（如白宫社会与行为科学团队 SBST）作为标准参考引用，标志行为洞察进入联邦政策执行（Sagepub SBST 论文）"
+method: "学术手册/编著：跨学科专家分章综述，整合理论、实验与政策应用案例"
+results: "（定位）行为科学政策应用领域的里程碑式参考手册（536 页、20+ 章），与各国行为洞察团队实践互相印证"
+limitations: "编著性质，各章立场不统一；政策应用效果因领域与实施规模差异大（助推平均效应后经 Maier 2022 复核缩水）"
+boundary_conditions: "行为政策工具（默认、执行意图、简化）对低卷入行为最有效；结构性障碍需配合制度性干预"
+relevant_nodes: [goal_setting_effectiveness, implementation_intentions, nudge_mechanism, default_option_effect]
+notes: "学术手册（编撰综述定位）；goal_setting_effectiveness 与 implementation_intentions 节点的政策应用侧支撑。核心论点（跨学科覆盖面、选择架构/默认/心理杠杆章节、政策塑造行为）均出自上述公开来源，未编造。"
+last_verified: "2026-09"

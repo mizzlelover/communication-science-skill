@@ -1,0 +1,26 @@
+# Evidence Package — S108 Maier 2022
+# 标准格式。access_level 如实标注。
+source_id: S108
+title: "No Evidence for Nudging After Adjusting for Publication Bias"
+authors: "Maximilian Maier; František Bartoš; T. D. Stanley; David R. Shanks; Adam J. L. Harris; Eric-Jan Wagenmakers"
+year: 2022
+journal: PNAS 119(31), e2200300119
+doi: "10.1073/pnas.2200300119"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9351501/"
+access_level: full_text
+research_status: read
+content_obtained: "PMC 全文（Letter 全文正文：RoBMA 方法、Egger 系数、BF01、Table 1 校正前后对比）+ PNAS 目录页 + 同行回应（Szaszi 2022 / Mertens 2022 Reply）"
+research_question: "调整发表偏倚后，助推（nudge）干预是否有可靠效应证据？"
+core_claims:
+  - "Mertens et al. 的 nudge meta 报告'中等发表偏倚'才是真正头条；校正后无 nudge 有效性证据"
+  - "Mertens 报告的 Egger 系数 b=2.10 被判定为'严重'（severe）发表偏倚"
+  - "用新提出的稳健贝叶斯 meta 分析（RoBMA）同时应用选择模型 + PET-PEESE 校正"
+  - "Table 1：未校正结果 vs 发表偏倚校正结果；校正后效应量大幅缩水至无证据区间"
+  - "按领域/干预类型拆分亦无一致效应（BF01>1 支持零假设）"
+method: "对 Mertens et al. 的 nudge meta 数据集重新分析：RoBMA（robust Bayesian meta-analysis）+ Egger 检验 + 贝叶斯因子；忽略/处理三层级结构两种方式"
+results: "调整发表偏倚后无 nudge 有效性的稳健证据；原'中等偏倚'实为严重偏倚"
+limitations: "Letter 形式；存在同行回应（Mertens et al. Reply 持反对意见）；'平均无证据'不否定具体干预有效"
+boundary_conditions: "助推效应因具体干预类型/领域而异；评估须逐类而非看平均"
+relevant_nodes: [nudge_mechanism, default_option_effect]
+notes: "PMC 全文实读（full_text）→ 从 abstract_only 升级为 read。EVIDENCE.md nudge→C 的一手复核来源；引用时须说明存在同行回应争议。"
+last_verified: "2026-09"

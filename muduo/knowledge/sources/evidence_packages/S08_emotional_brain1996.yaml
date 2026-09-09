@@ -1,0 +1,27 @@
+# Evidence Package — S08 LeDoux 1996（The Emotional Brain）
+# 标准格式。access_level 如实标注。
+source_id: S08
+title: "The Emotional Brain: The Mysterious Underpinnings of Emotional Life"
+authors: "Joseph E. LeDoux"
+year: 1996
+journal: Simon & Schuster（专著）
+doi: "无 DOI（专著）"
+url: "https://www.simonandschuster.biz/books/The-Emotional-Brain/Joseph-Ledoux/9780684836591"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：Simon & Schuster 官方出版页（书定位：探索恐惧、爱、愤怒等情绪的脑机制，许多情绪属于进化为生存而演化的复杂神经回路；作者为 NYU 神经科学中心教授）+ Nature 书评（Barrett 撰文回顾：杏仁核回路对非意识防御行为如僵住/逃跑的关键作用；『恐惧回路』标签造成的误读及作者后期改为『生存回路』；意识性恐惧由前额叶/工作记忆相关脑区支持的观点）+ 壹心理科普（high road 与 low road 双通路：low road 感官→丘脑→杏仁核的快速皮层下通路、high road 经皮层慢速分析）+ neurolaunch 理论综述（双通路细节、恐惧条件化、生存回路 vs 意识恐惧的区分、暴露疗法机制）+ 道客巴巴书评（LeDoux 对 MacLean 边缘系统理论的批判：边缘系统概念缺乏证据）+ Rogan & LeDoux 1997 Nature 论文（恐惧条件化诱导杏仁核 LTP：CS-US 配对改变杏仁核外侧核听觉诱发电位，平行于恐惧习得行为）"
+research_question: "恐惧等情绪在大脑中是如何产生与加工的？威胁信息如何被快速检测并转化为生存反应？"
+core_claims:
+  - "情绪（尤其恐惧）源于进化为生存而演化的复杂神经回路，而非单一脑区的统一产物（本书主题定位）"
+  - "双通路模型：low road 为感官→丘脑→杏仁核的快速皮层下通路（快而粗糙，先触发应激反应，易误判）；high road 经丘脑→皮层慢速分析（慢而准确，含语境判断）"
+  - "杏仁核在非意识的威胁检测与防御行为（freezing/fleeing）中起核心作用，是生存相关刺激的警报/显著性加工结构"
+  - "恐惧条件化：中性刺激（CS）与厌恶刺激（US）配对后，杏仁核（尤其外侧核）编码并长期保存威胁记忆；恐惧条件化诱导杏仁核 LTP 样可塑性（Rogan 等 1997 直接证据）"
+  - "对边缘系统理论的批判：LeDoux 认为 MacLean 的『边缘系统』概念缺乏证据支撑，不能作为情绪加工的特化系统"
+  - "后期修正（含本书出版后的立场）：LeDoux 主张杏仁核回路不足以（且可能不必要）产生意识性恐惧体验，将之改称『生存回路』，意识性恐惧由涉及工作记忆的前额叶区域支持"
+method: "神经科学专著：大鼠恐惧条件化动物模型 + 神经解剖追踪与损毁实验 + 行为与电生理研究，面向公众的综述性写作"
+results: "（实验综述）杏仁核恐惧回路与双通路模型成为威胁加工研究的范式；LeDoux 本人后期对『恐惧回路』标签与意识性恐惧机制作了重要修正"
+limitations: "动物模型到人类主观恐惧体验的外推有限（作者本人后期亦承认并修正）；书中『杏仁核=恐惧中枢』的简化表述已被作者弃用；专著全文未获取"
+boundary_conditions: "双通路与恐惧条件化主要针对威胁/恐惧类情绪加工；意识性恐惧与生存回路（非意识防御行为）是两个分离过程，引用时需区分"
+relevant_nodes: [emotional_arousal]
+notes: "fear_conditioning / threat_detection 节点在 mechanisms 中不存在，以 emotional_arousal（恐惧回路是高唤醒反应的神经基础）为锚。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

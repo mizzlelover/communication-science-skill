@@ -1,0 +1,25 @@
+# Evidence Package — S171 White 1950（The "Gate Keeper": A Case Study in the Selection of News）
+# 标准格式。access_level 如实标注。
+source_id: S171
+title: "The \"Gate Keeper\": A Case Study in the Selection of News"
+authors: "David Manning White"
+year: 1950
+journal: "Journalism Quarterly 27(4): 383-390"
+doi: "10.1177/107769905002700403"
+url: "https://journals.sagepub.com/doi/10.1177/107769905002700403"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "① SAGE 官方期刊页（两次抓取 /doi/ 与 /doi/abs/）完整官方摘要：对一家非都市报纸一周内所有使用与拒绝的通讯社稿件按内容分类，并分析电讯编辑的选择理由；② 上海社科院图书情报研究所（sklib）中文详述：1949 年研究、编辑 Mr. Gates（25 年经验、报纸最大发行量三万、当地人口十万）、一周内来自多家通讯社的全部来稿、约 90% 稿件未被采用、约 1/3 因编辑对故事内容的个人价值判断被拒、2/3 因版面限制或已有类似报道；③ Grokipedia 条目（Lewin 1943 把关概念 → White 1950 应用于新闻；单把关人/单周/自我报告理由的局限；Shoemaker 等后续多层级把关扩展）；④ 胡泳（财新专栏）把关理论综述（怀特实证证明 Lewin 结论、把关人建构社会现实）；⑤ yalu-lib 云南大学图书馆、semanticscholar 等中文文献与引用数据库确认卷期页码。"
+research_question: "新闻编辑在大量通讯社来稿中如何选择？把关人（gatekeeper）的新闻价值判断在多大程度上是主观的、个人化的，而不是客观反映事件重要性？"
+core_claims:
+  - "对一家非都市报纸电讯编辑（化名 Mr. Gates）一周内所有采用与拒绝的通讯社稿件按内容分类并分析其选择理由——这是该领域最早的此类研究之一（SAGE 官方摘要）"
+  - "新闻选择高度主观：约 1/3 稿件因编辑对故事内容的个人价值判断被拒，2/3 因版面限制或已有类似报道被拒；一周来稿约 90% 未被采用（sklib 详述）"
+  - "研究首次把 Lewin 的『渠道/把关』概念应用于大众传播新闻生产，确立了把关人在新闻选择中的个体层面决定性角色：以编辑为代表的把关人拥有建构社会现实的权力（sklib/胡泳/Grokipedia 一致）"
+  - "局限（原文及后续评述均承认）：仅单个把关人、观察期一周、依赖自我报告理由（可能漏掉无意识偏见），且忽略组织与社会情境对选择的约束——后续 Shoemaker 等发展为多层级把关模型（Grokipedia）"
+method: "个案研究（single case）：对某非都市报纸电讯编辑的稿件采用/拒绝记录做内容分类，并收集编辑逐条给出的拒绝理由进行分析"
+results: "（开创性个案）证明新闻是被人工建构的产品而非现实的透明反映；确立『把关人』为新闻生产研究的核心概念，开启后续 60 余年把关研究传统（后扩展为多层级/网络化把关）"
+limitations: "单一编辑、一周样本、自我报告理由；未考虑组织惯例、消息来源与广告等结构性因素；个体主义视角在 1960s 后被 Shoemaker 等多层级模型修正"
+boundary_conditions: "适用于传统编辑主导的新闻生产流程；数字时代把关权力分散到算法、平台与超级节点（对应 diffusion.yaml 的 networked gatekeeping 扩展）；单一个人把关者结论不可外推到组织化筛选"
+relevant_nodes: [gatekeeping_dynamics]
+notes: "把关研究经典起点（Mr. Gates 研究），与 S60《Going Viral》的网络化守门、S94 Gillespie 平台守门直接衔接。已实取 SAGE 官方摘要 + 多源详细研究描述，未编造。"
+last_verified: "2026-09"

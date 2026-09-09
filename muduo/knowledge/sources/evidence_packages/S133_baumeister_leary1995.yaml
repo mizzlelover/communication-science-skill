@@ -1,0 +1,26 @@
+# Evidence Package — S133 Baumeister & Leary 1995（The Need to Belong）
+# 标准格式。access_level 如实标注。
+source_id: S133
+title: "The Need to Belong: Desire for Interpersonal Attachments as a Fundamental Human Motivation"
+authors: "Roy F. Baumeister; Mark R. Leary"
+year: 1995
+journal: "Psychological Bulletin 117(3): 497-529"
+doi: "10.1037/0033-2909.117.3.497"
+url: "https://pubmed.ncbi.nlm.nih.gov/7777651/"
+access_level: abstract_only
+research_status: read
+content_obtained: "渠道1 PubMed（PMID 7777651）完整摘要 + 渠道2 Duke Scholars 机构库（scholars.duke.edu/publication/677016，Mark R. Leary 机构主页记录）同文完整摘要交叉一致；正文全文未取得（APA PsycNet 被拦截，Semantic Scholar openAccessPdf=CLOSED）"
+research_question: "形成并维持强而稳定的人际关系的需要，是否构成一项基本的、强有力的、无处不在的人类动机？"
+core_claims:
+  - "归属假说（belongingness hypothesis）：人类有形成并维持强而稳定人际关系的假设性需要；该需要的满足条件是『在持续的关系联结（ongoing relational bond）内进行频繁、非厌恶的互动（frequent, nonaversive interactions）』——两成分缺一不可"
+  - "在大多数条件下人们易于形成社会依恋，并抗拒既有纽带的解体（people form social attachments readily under most conditions and resist the dissolution of existing bonds）"
+  - "归属对情绪模式与认知过程具有多重强效应；缺乏依恋与健康、适应和幸福的一系列不良后果相关"
+  - "饱和（satiation）、替代（substitution）与行为后果等证据与假设一致；若干表面反例经检验未证伪假设"
+  - "结论：现有证据支持归属需要是一种强大、基本且极其普遍（powerful, fundamental, and extremely pervasive）的动机"
+method: "理论综述（系统评估实证文献，检验归属需要是否符合基本动机标准）"
+results: "证据支持归属需要为基本动机；两成分界定（频繁非厌恶互动 + 持续关怀联结）；依恋形成容易、解体受抵抗；缺乏依恋导致情绪/认知/健康不良后果"
+limitations: "综述基于既有文献综合而非新实验；对表面反例（如部分独处偏好）采用条件化解释处理，其普遍性依赖后续研究"
+boundary_conditions: "满足需要的是『少量持久、积极关怀的关系』而非人际数量或关注度；频繁互动与持续关怀联结两条件必须同时成立"
+relevant_nodes: [need_to_belong, belonging_uncertainty, ostracism_effects]
+notes: "Gate A 一手经典：归属需要理论源头。核心内容来自 PubMed 与 Duke Scholars 机构库两份完整摘要（交叉一致），未取得正文全文，未编造页码级细节；两成分界定与摘要原文直接对应。"
+last_verified: "2026-09"

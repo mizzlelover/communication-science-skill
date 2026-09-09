@@ -1,0 +1,26 @@
+# Evidence Package — S23 Milgram 1974（Obedience to Authority: An Experimental View）
+# 标准格式。access_level 如实标注。
+source_id: S23
+title: "Obedience to Authority: An Experimental View"
+authors: "Stanley Milgram"
+year: 1974
+journal: Harper & Row（专著；1963 年先发实验论文，1974 年汇集成书）
+doi: "无 DOI（专著）"
+url: "https://iasnova.com/psychology/milgram-obedience-experiment-modern-replications/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：IAS NOVA 完整应试指南（65% 结果/agentic state/变式/伦理批评/Burger 2009/VR 与波兰复制/档案争论）+ Haslam & Reicher 2017 Annual Review 综述（agentic state 原句引用与 engaged followership 再解释）+ Quizlet 学习卡（agentic shift/binding factors/合法性理论/跨文化复制）+ 中文解读（聚观点，艾希曼问题与情境因素）"
+research_question: "普通人会在什么条件下服从权威指令去伤害他人？艾希曼式的『我只是服从命令』能否成立？"
+core_claims:
+  - "基线实验：40 名成人被试中 26 人（65%）在实验者指令下施加至 450V 最高档（XXX 档）电击；仅 7 人（17.5%）在 150V 或更低档停手（Haslam & Reicher 2017 综述与 IAS NOVA 指南均复述此数字）"
+  - "agentic state（代理状态）：进入后个体把自己定义为『执行他人意愿的工具』，『评价机制完全缺席』，责任被转移给权威；agentic shift 指从自主状态（autonomous state）转入代理状态的过程，binding factors 让人在代理状态中忽略/最小化行为的伤害性以缓解道德压力（Haslam & Reicher 引原书 pp.151,164）"
+  - "服从率不是固定的人性数字：受权威合法性知觉、权威在场与离场、受害者物理/心理距离、同伴反抗（变式中同伴拒绝时 40 人中 36 人拒绝最大电击）、渐进承诺（每次只比上一次高 15V）等情境变量系统调节"
+  - "跨文化复制差异大：Kilham & Mann 1974 澳大利亚复制仅 16% 服从至 450V；Mantell 1971 德国复制达 85%——服从率随社会化的服从取向而变"
+  - "现代再解释：Haslam & Reicher 主张『engaged followership』——被试服从是因认同实验者的事业并相信行为正当，而非机械盲从；档案再分析（Perry 等）质疑原始记录完整性，完整复制因伦理限制不可行，现代证据来自 Burger 2009 部分复制（150V 停点）、VR 与波兰『obedience-lite』研究"
+method: "耶鲁实验室受控观察实验（欺骗设计：『记忆与电击』掩护故事，learner 为同盟者，假电击发生器 15-450V 逐档递增；1974 年成书汇总系列变式与理论解释）"
+results: "（定位）社会心理学最具争议的经典研究：确立情境力量对服从的塑造作用，但 65% 这一原始数字不可直接外推——最稳健的发现是程序变式系统改变服从率"
+limitations: "伦理问题（欺骗、心理困扰、知情同意不充分）；方法学批评（需求特征、选择偏差、宣传式呈现）；档案再分析显示部分原始数据记录不一致；现代完整复制不可行，Burger 2009 仅部分复制"
+boundary_conditions: "权威须被知觉为合法（耶鲁/实验室背书）且在场；指令渐进、每次增幅小；责任可被情境性转移与稀释；结论应表述为『情境变量显著改变服从率』这一稳健内核而非具体数字"
+relevant_nodes: [authority_influence, psychological_reactance, credentialing_symbols]
+notes: "为 authority_influence 节点提供奠基一手来源；伦理争议与方法学复核（Burger 2009 部分复制、Haslam/Reicher 档案争论）已并入 authority_influence 的 replication/conflicting 栏。核心概念为公开内容，多源交叉确认，未编造原文引文。"
+last_verified: "2026-09"

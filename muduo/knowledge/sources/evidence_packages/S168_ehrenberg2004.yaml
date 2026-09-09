@@ -1,0 +1,24 @@
+# Evidence Package — S168 Ehrenberg, Uncles & Goodhardt 2004（Understanding Brand Performance Measures: Using Dirichlet Benchmarks）
+# 标准格式。access_level 如实标注。
+source_id: S168
+title: "Understanding Brand Performance Measures: Using Dirichlet Benchmarks"
+authors: "Andrew S. C. Ehrenberg, Mark D. Uncles, Gerald J. Goodhardt"
+year: 2004
+journal: "Journal of Business Research 57(12): 1307-1325"
+doi: "未知（Elsevier PII: S0148-2963(03)00179-6；IDEAS/RePEc 未列 DOI）"
+url: "https://ideas.repec.org/a/eee/jbrese/v57y2004i12p1307-1325.html"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "论文在 IDEAS/Elsevier 均无公开摘要（IDEAS 页面显示 No abstract，ScienceDirect 需订阅且被反爬拦截）。实际获取：① IDEAS/RePEc 官方元数据页（作者三人/卷期页码/Elsevier 全文链接/完整参考文献与被引记录）+ 配套 Reply（JBR 57(12):1329-1330）；② 多篇后续论文交叉确认其方法定位：Trinh, Romaniuk & Tanusondjaja 2016《Marketing Letters》以该文为 NBD-Dirichlet 基准源头（'revisits the theoretical norms of the NBD-Dirichlet model benchmarks'，新品牌首年购买者比基准更多但更不忠诚）；Barker-Trowse 等 2026《JBR》承继其渗透主导增长/双危机框架（tiny brands 增长主要来自渗透增加而非购买频率）；Dawes 2020（Natural Monopoly effect：大品牌购买者平均品类购买频率更低）；③ 中文实证回响：王高等 2006《中国管理科学》《基于Dirichlet模型的品牌绩效测量实证研究》（Dirichlet 模型可准确预测稳定市场结构下品牌绩效各指标）；④ Sharp, Wright & Goodhardt 2002 引其 forthcoming 版并说明 NBD-Dirichlet 拟合 repertoire/subscription 两类忠诚市场。"
+research_question: "用 Dirichlet（NBD-Dirichlet）随机模型为品牌绩效指标（渗透率、购买频率、市场份额、品类需求份额、忠诚度）建立理论基准，判断品牌实际绩效偏离正常模式的方向与幅度——品牌绩效指标背后是否存在可预测的经验规律？"
+core_claims:
+  - "Dirichlet 模型可为品牌绩效指标（渗透率 penetration、购买频率 purchase frequency、份额等）生成理论基准：在稳定市场结构下可准确预测各品牌绩效指标，据此判断品牌绩效是否偏离正常（王高 2006 实证应用；Trinh 2016 以该文为 NBD-Dirichlet 基准规范源头）"
+  - "品牌绩效指标间存在系统性经验规律：小品牌双危机（购买者更少且购买频率/忠诚更低）；品牌增长主要由渗透驱动而非购买频率提升（Barker-Trowse 2026 承继：tiny brands 增长来自渗透增加；与 S76 双危机定律一致）"
+  - "NBD-Dirichlet 模型同时拟合两类忠诚结构：repertoire markets（多品牌备选、极少单一忠诚）与 subscription markets（大量单一忠诚），忠诚差异由 Dirichlet 的切换参数 S 捕捉（Sharp, Wright & Goodhardt 2002 引用该文及其框架）"
+method: "品牌科学实证综述（Ehrenberg-Bass 传统）：对多国多品类重复购买面板数据（扫描数据）拟合 NBD-Dirichlet 模型，把模型预测值作为品牌绩效指标的理论基准并与观测值比较（基于引用链与后续应用交叉确认；论文正文/摘要未直接获取）"
+results: "确立『用 Dirichlet 基准衡量品牌绩效』的规范方法：稳定市场下品牌绩效指标可预测；偏离基准（超额忠诚/超额渗透）才是值得解释的信号；小品牌双危机与渗透主导增长为常态规律"
+limitations: "无公开摘要与正文，核心论点依赖第三方引用与应用文献交叉确认（证据链间接）；Dirichlet 基准适用于稳定市场结构，对动态/新兴市场的适用性由后续研究（如 Trinh 2016 新品牌偏差）另行检验"
+boundary_conditions: "基于重复购买品类（快消/零售）面板数据；适用于稳定市场结构下的绩效基准化；不适用于一次性/耐用品购买行为（其购买规律属另一模型传统）"
+relevant_nodes: [double_jeopardy_law, mental_availability, category_entry_points]
+notes: "Ehrenberg-Bass 学派品牌科学的综述性奠基论文（与 S76 互为表里：S76 为书级综合、S168 为期刊综述），Dirichlet 基准是双危机定律与渗透主导增长的模型化工具。本文档内容全部来自公开元数据与引用链，无摘要/正文，未编造。"
+last_verified: "2026-09"

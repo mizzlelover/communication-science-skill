@@ -1,0 +1,25 @@
+# Evidence Package — S52 Easley & Kleinberg 2010（Networks, Crowds, and Markets）
+# 标准格式。access_level 如实标注。
+source_id: S52
+title: "Networks, Crowds, and Markets: Reasoning About a Highly Connected World"
+authors: "David Easley; Jon Kleinberg"
+year: 2010
+journal: Cambridge University Press（康奈尔公开课程教材）
+doi: "10.1017/CBO9780511761942"
+url: "https://www.cs.cornell.edu/home/kleinber/networks-book/"
+access_level: open
+research_status: annotated
+content_obtained: "确认教材全本免费开放（pre-publication draft，networks-book.pdf，736 页）；跨学科网络科学框架（图论/博弈论/信息网络/群体动态）；级联与扩散章节对应 Granovetter 线性阈值模型（LTM）与流行病传播模型；正文（第 19 章级联行为、第 21 章流行病）可整章实读"
+research_question: "网络结构如何决定信息、行为、创新与疾病的扩散？个体决策如何在网络中聚合为群体结果？"
+core_claims:
+  - "扩散的正式框架分两类：简单传播（流行病模型，如 SI/SIR，每接触一次即可能传播）与复杂传播/阈值模型（需多个邻居同时激活才采用，Granovetter LTM）"
+  - "网络结构（强/弱连接、枢纽、聚类系数、小世界）决定级联能否传播：少数初始节点+合适结构可触发全网络级联"
+  - "临界规模（critical mass）与正反馈是网络产品自我维持增长的核心（传真机/电话网络经典分析）"
+  - "信息级联（information cascade）：个体观察他人行为后放弃私人信号，导致群体锁定次优惯例（Bikhchandani 等）"
+method: "跨学科教材（图论 + 博弈论 + 计算 + 社会学 + 经济学），基于康奈尔本科生课程；正式模型+案例"
+results: "（教材）网络科学的标准教学框架：扩散二分（简单/复杂）、阈值模型、网络结构效应、信息级联"
+limitations: "教材级综述（非一手实验）；模型多为形式化与模拟；具体阈值高度情境化"
+boundary_conditions: "模型预测依赖网络结构与行为类型（简单 vs 复杂传播）前提；真实世界需实证校准"
+relevant_nodes: [critical_mass_threshold, network_exposure_effects, complex_contagion, wide_bridges, diffusion_of_innovations, network_density, network_threshold_models, preferential_attachment, reputation_systems, small_world_property, social_reinforcement, viral_coefficient]
+notes: "网络科学教材（textbook 级，open access 全本免费）。S52 与 S53（Jackson）同域：本教材侧重网络-行为交叉，S53 侧重数学基础。未实读全本，据公开结构与关键章节实取——如实标注。"
+last_verified: "2026-09"

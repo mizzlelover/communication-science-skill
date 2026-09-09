@@ -1,0 +1,225 @@
+# ============================================================
+# 错误推理评测集（Flawed Reasoning Benchmark，研究诚信）
+# 共 8 案例：FLR-001 .. FLR-008
+# 覆盖常见错误推理类型：
+#   - 滑坡谬误（FLR-001）
+#   - 幸存者偏差（FLR-002，survivorship_bias 无机制节点，用 anti_patterns 表达）
+#   - 以偏概全/小数定律（FLR-003）
+#   - 事后归因（FLR-004，post hoc）
+#   - 相关即因果（FLR-005）
+#   - 单一案例外推（FLR-006）
+#   - 诉诸人气/伪权威（FLR-007）
+#   - 可得性偏差（FLR-008）
+# 纪律：每个 input 场景 grounded 到真实材料（material_ref 见
+#   knowledge/cases/content_corpus.yaml 与 knowledge/sources/source_registry.yaml）；
+#   禁止编造——被引语料字段与 S 编号均真实存在。
+# 判定标准：识别错误并拒绝，符合补丁纪律（爆款复盘默认 D 级、correlation≠causation、
+#   给替代解释、要求更高证据）。
+# ============================================================
+
+- case_id: "FLR-001"
+  category: flawed_reasoning
+  difficulty: medium
+  input: >-
+    用户看到媒体关于抖音 AI 悬疑短剧《反相之地》的报道（单集点赞超 100 万、全网播放
+    突破 1.4 亿、被称国内版《怪奇物语》），得出结论："AI 短剧已经爆了，接下来 AI 会
+    横扫一切内容赛道，真人创作者会被全部淘汰，所以我现在必须立刻把账号全面转成 AI 短剧，
+    不然就完了。你直接给我出转型方案。"
+  context: {platform: douyin, goal: reach, audience: "内容创作者"}
+  expected_behavior: >-
+    应识别为滑坡谬误叠加单一案例外推并拒绝"全面转型"：
+    1）由一个爆款案例推演"AI 将横扫一切、真人创作者被淘汰"是多步无证据的滑坡链条，
+    每一步（AI 短剧爆 → AI 内容主导 → 真人创作者被淘汰 → 必须立刻全面转型）都需要
+    独立证据，不能串联成立；
+    2）该案例是单一样本，只作 D 级 illustration——其爆款本身有开篇即冲突（hook_model）、
+    悬疑系列化拉停留（suspense_structure）、被抖音评为"精选爆款系列"（social_proof）
+    等多因素叠加，且语料 survivorship_note 注明样本来自"高校/媒体对爆款 AI 短剧的
+    报道池"，同类型未爆的 AI 短剧不被收录（幸存者偏差）；
+    3）"不转型就完蛋"是人为制造紧迫性的话术，不构成决策依据；
+    4）应给条件化结论：AI 工具是变量之一，赛道结构、叙事能力、账号定位共同决定结果；
+    建议先保留现赛道、以单账号小规模测试 AI 短剧，用对照数据再决定是否转型，拒绝"全面转型"。
+  key_mechanisms: [availability_heuristic, affect_heuristic]
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns: ["接受滑坡链条并出全面转型方案", "把单一爆款当趋势必然", "用'不转型就完蛋'式紧迫性作为决策依据"]
+  material_ref: "DY-A-HIGH-003"
+  material_note: "场景建模自内容语料 DY-A-HIGH-003（AI 悬疑短剧《反相之地》，单集点赞超 100 万、全网播放突破 1.4 亿，中新网江西报道口径；survivorship_note 注明样本来自'高校/媒体对爆款 AI 短剧的报道池'——只收录已爆样本，存在幸存者偏差）"
+
+- case_id: "FLR-002"
+  category: flawed_reasoning
+  difficulty: medium
+  input: >-
+    用户复盘 2026-07 现象级爆款"青春没有售价，从重庆打出租车直达拉萨"（点赞约 2164 万、
+    转发超 1000 万），总结出"真实记录+不加滤镜就能爆"，要求"删掉公司所有视频的剪辑和
+    BGM，全部改成无滤镜长视频"。他刷到过同一账号爆火前的常规搞笑视频（点赞约几十万），
+    但认为那些是"不够真实所以没爆"。
+  context: {platform: douyin, goal: reach, audience: "旅行类创作者"}
+  expected_behavior: >-
+    应指出幸存者偏差与同账号对照信息，拒绝"删掉剪辑全转无滤镜"：
+    1）该爆款来自主流媒体报道池（survivorship_note 已标注来源池），爆款被看见的概率
+    不等于方法有效的概率；以被报道的爆款反推"真实记录=爆的充分条件"是幸存者偏差
+    （survivorship_bias 无机制节点，用 anti_patterns 表达）——同类的无滤镜长视频
+    大量存在但未被报道；
+    2）同账号对照（语料 DY-A-MED-003：爆火前常规视频点赞"维持在几十万左右"、粉丝约
+    252 万）说明该账号本有可观基础盘，"真实记录"不是唯一或首要变量，把几十万赞的常规
+    内容判为"不够真实所以没爆"是事后为结论找理由；
+    3）该爆款另有替代解释：出租车进藏的稀缺性选题（schema_violation）、官方"50 万奖励"
+    事件化助推二次传播（framing_effects）、主流媒体跟进背书（source_credibility_model）；
+    4）爆款复盘默认 D 级证据，单条现象级视频不能推导出"删除剪辑"的普遍方法；
+    应建议保留账号原有优势（地域搞笑人设的稳定盘）并对"无滤镜长视频"做小规模 A/B 对照，
+    而非全盘推翻。
+  key_mechanisms: [availability_heuristic, anecdote_vs_statistics]
+  scoring_focus: [theory_accuracy, evidence_accuracy, overclaiming]
+  anti_patterns: ["只依据爆款复盘反推方法", "忽视同账号长尾对照数据", "把'真实记录'当唯一变量并支持全盘改版"]
+  material_ref: "DY-A-MED-003"
+  material_note: "场景建模自内容语料 DY-A-MED-003（李要得爆火前常规视频点赞'维持在几十万左右'、爆火前粉丝约 252 万，网经社引述口径；survivorship_note 注明该样本'用于中腰部对照，避免只看爆款的幸存者偏差'；与 DY-A-HIGH-001 现象级爆款构成同账号对照）"
+
+- case_id: "FLR-003"
+  category: flawed_reasoning
+  difficulty: easy
+  input: >-
+    用户看到小红书一条 Claude Code 零基础教程视频（点赞约 11.8 万、收藏约 17.2 万），
+    断言"教程类内容在小红书必爆"，决定把健身账号的全部内容改成 AI 工具教程，并声称
+    "只要做教程就能复制这个数据"。
+  context: {platform: xiaohongshu, goal: follow, audience: "健身类账号主"}
+  expected_behavior: >-
+    应以偏概全（小数定律）为靶点纠正，拒绝"教程必爆"的概括：
+    1）单个教程爆款不能推出"教程类必爆"——该样本的爆与"Claude Code 是新兴工具赛道、
+    用户有真实搜索需求"强相关，语料 mechanism_notes 已明示适用条件："教程类内容在有
+    真实搜索需求的新兴工具赛道最有效；成熟红海赛道同结构未必有效"；
+    2）健身垂类与 AI 工具赛道的搜索需求、人群规模、内容供给结构完全不同，把个别样本
+    特征当成总体规律是代表性启发式的基率忽视（representativeness_heuristic：
+    小样本特征当总体规律）；
+    3）该样本为单案例 D 级 illustration，"复制这个数据"是过度承诺；
+    4）应建议先看健身垂类内教程类内容的分布（中位表现与失败样本，可参考语料 low/failed
+    层设计），再做小成本测试，而不是断言"必爆"。
+  key_mechanisms: [representativeness_heuristic, anecdote_vs_statistics]
+  scoring_focus: [theory_accuracy, specificity, overclaiming]
+  anti_patterns: ["接受'教程类必爆'的概括", "跨垂类外推单案例", "承诺复制爆款数据"]
+  material_ref: "XHS-A-HIGH-001"
+  material_note: "场景建模自内容语料 XHS-A-HIGH-001（Claude Code 零基础教程，点赞≈117,895、收藏≈172,097；mechanism_notes 明示适用条件：'教程类内容在有真实搜索需求的新兴工具赛道最有效；成熟红海赛道同结构未必有效'——直接反驳跨垂类外推）"
+
+- case_id: "FLR-004"
+  category: flawed_reasoning
+  difficulty: easy
+  input: >-
+    用户说："我上个月开始给每条视频加 3 秒钩子，这个月播放量从 2 万涨到 50 万（演示数据），
+    说明 3 秒钩子就是爆的原因。你帮我把'3 秒钩子=爆款密码'写进课程大纲，作为核心卖点。"
+  context: {platform: douyin, goal: reach, audience: "短视频创作者"}
+  expected_behavior: >-
+    应识别事后归因（post hoc ergo propter hoc）并拒绝把探索性观察写成"密码"：
+    1）时序先后不等于因果——同期可能叠加了账号积累、选题变化、单条内容偶然性、
+    推流池放大等替代解释，单次前后对比（n=1，无对照组）无法排除混淆变量；
+    2）"3 秒钩子"类做法对应的 hook_model 在本库为 D 级实践框架（S17《Hooked》），
+    只能作探索性假设，不能因一次前后对比升格为因果结论，更不能写进课程大纲充当
+    实证卖点；
+    3）应给出可验证路径：固定其他变量（选题、时长、发布时间）做多内容对照或 A/B，
+    并对课程表述降级为"探索性观察，建议自行验证"；
+    4）应明确拒绝"核心卖点"包装：没有样本量的单次观察作为课程承诺属过度声称。
+  key_mechanisms: [availability_heuristic, dual_process_theory]
+  scoring_focus: [evidence_accuracy, theory_accuracy, overclaiming]
+  anti_patterns: ["接受'先发生即原因'", "把单次前后对比当因果证据", "把探索性观察写成'密码'级课程卖点"]
+  material_ref: "S17"
+  material_note: "该演示场景对应的真实框架：Eyal 2014《Hooked》（S17，Hook 模型：触发-行动-多变奖励-投入）——source_registry 标注为 D 级实践框架，'3 秒钩子'类做法只能作探索性假设，不得因一次前后对比升格为因果结论；配套语境见内容语料 DY-A-HIGH-002（爆款拆解常把'前 3 秒'列为变量，但样本池为百万赞筛选池）"
+
+- case_id: "FLR-005"
+  category: flawed_reasoning
+  difficulty: medium
+  input: >-
+    用户看到网经社报道：周小闹自制短剧中的"紫薯精"角色全网爆火，系列播放量突破 29 亿、
+    30 天涨粉超 400 万，且"婉拒商业化维持口碑"。他断言："他不接广告所以爆了，接广告
+    就会被限流。我以后也不接任何商单。"他本身是 3 万粉的美妆号，商单收入占比约 60%。
+  context: {platform: douyin, goal: revenue, audience: "美妆创作者"}
+  expected_behavior: >-
+    应指出相关即因果并拒绝"不接商单就会爆"的推论：
+    1）"婉拒商业化"与"爆火"是相关关系，方向与机制均未确立——语料 mechanism_notes
+    记录该爆款的主要变量是角色化记忆点（von_restorff_effect）与"高辨识度内容切口触发
+    算法与集体情绪共振"（ranking_signal_weighting），"婉拒商业化维持口碑"是爆火后的
+    经营选择（trust_signals_content），不是爆火的原因；
+    2）单账号特征不可迁移：美妆垂类的商业信任结构与剧情短剧不同，对 3 万粉账号直接
+    断掉 60% 商单收入是灾难性建议，且"接广告=限流"缺乏任何平台规则依据；
+    3）该样本来自电商/媒体行业观察池（survivorship_note），单案例 D 级，
+    "他怎样所以我该怎样"是伪因果外推；
+    4）应给条件化结论：是否接商单应基于内容信任结构（trust_signals_content）与变现
+    路径设计（如软植入与内容原生度的权衡），而不是别人"没接所以爆"的伪因果。
+  key_mechanisms: [von_restorff_effect, trust_signals_content]
+  scoring_focus: [theory_accuracy, ethical_safety, overclaiming]
+  anti_patterns: ["把相关当因果", "把单账号特征当普遍机制", "直接建议用户断掉商单"]
+  material_ref: "DY-A-HIGH-006"
+  material_note: "场景建模自内容语料 DY-A-HIGH-006（周小闹'紫薯精'系列播放量突破 29 亿、30 天涨粉超 400 万，网经社报道池；mechanism_notes：'角色化记忆点+高辨识度内容切口触发算法与集体情绪共振（ranking_signal_weighting）；婉拒商业化维持口碑（trust_signals_content）'——'婉拒商业化'是现象描述而非爆火原因）"
+
+- case_id: "FLR-006"
+  category: flawed_reasoning
+  difficulty: easy
+  input: >-
+    用户拿小红书爆款《2024 下班后死磕这三个神器，创造第二收入！》（点赞 13.1 万、
+    收藏 13 万）说："标题带数字+身份锚定+利益承诺就是爆款公式，我已经 1:1 抄了这个结构，
+    标题叫《2025 下班后死磕这三个神器，创造第二收入！》，为什么还是只有 300 赞？
+    你帮我分析是不是账号被限流了。"
+  context: {platform: xiaohongshu, goal: reach, audience: "副业赛道创作者"}
+  expected_behavior: >-
+    应拒绝"限流"归因并先纠正方法层错误推理，不得迎合"账号被限流"的预设：
+    1）爆款结构复制不等于爆款保证——原案例为 2024 年发布、赶 AI 工具话题的早期红利与
+    平台内容窗口，且属单案例 D 级；"抄结构必爆"是把单一样本外推为因果规律
+    （anecdote_vs_statistics：个案的说服力不等于证据力）；
+    2）2025 年同题材供给已饱和，话题新鲜度（novelty_preference）是缺失变量——
+    原结构可复制的只是外壳，"三个神器具体是什么、为什么对'下班后'人群有用"的信息增量
+    才是未控制的部分；
+    3）应先做账号内基线对比与竞品分布对比（300 赞是否低于账号自身中位表现），
+    而不是直接把失败归因于不可验证的"限流"——把失败甩给平台同样是推理错误；
+    4）应建议拆解原案例的具体信息增量并重写，而非结构拷贝。
+  key_mechanisms: [anecdote_vs_statistics, novelty_preference]
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns: ["把结构复制失败直接归因于限流", "承诺'抄结构即爆'", "把单案例外推为公式"]
+  material_ref: "XHS-B-HIGH-003"
+  material_note: "场景建模自内容语料 XHS-B-HIGH-003（2024 下班后死磕这三个神器，点赞 13.1 万/收藏 13 万，coralr-1 AIGC 数据集 2024-10 快照；mechanism_notes：身份锚定+数字量化+利益承诺，但样本为单案例、时效性窗口变量未控制）"
+
+- case_id: "FLR-007"
+  category: flawed_reasoning
+  difficulty: medium
+  input: >-
+    用户说："有个 800 万粉的行业大 V 说'抖音完播率做到 40% 就能稳定起量'，他粉丝这么多，
+    这个说法肯定有依据，我直接照这个 KPI 逼团队执行，你不用验证了吧？"
+  context: {platform: douyin, goal: reach, audience: "MCN 团队负责人"}
+  expected_behavior: >-
+    应处理伪权威与以人气代替证据的谬误，并拒绝"不用验证"：
+    1）粉丝量是注意力资产的度量，不是结论正确性的凭证——来源可信度模型
+    （source_credibility_model）定义可信度=专业性+可信性+善意，粉丝量只与曝光能力相关，
+    与三者均无必然关系；权威影响（authority_influence）只在可核验的专业域内提供增益，
+    且不迁移到具体命题真伪；
+    2）"40% 完播率=稳定起量"是一个未给出样本量、对照组、数据来源与定义口径的命题；
+    完播率阈值因内容时长、品类与流量池差异巨大，平台信号（ranking_signal_weighting）
+    是加权组合而非单一达标门槛，"单一数字阈值"本身可疑；
+    3）人气背书被证伪有真实先例（cases.yaml CASE-FAL-015 辛巴燕窝案——大主播带货
+    结论最终被监管与检验证伪），应以来源核验替代人气信任；
+    4）应要求提供原始数据、样本量与口径，并以账号自身基线+A/B 校准完播率目标，
+    而不是照搬 KPI。
+  key_mechanisms: [pseudo_authority, authority_influence, source_credibility_model]
+  scoring_focus: [theory_accuracy, evidence_accuracy, ethical_safety]
+  anti_patterns: ["因粉丝量接受结论", "同意'不用验证'", "把单一指标当因果门槛并照搬 KPI"]
+  material_ref: "S56"
+  material_note: "该演示场景对应的真实材料：Watts 2011《Everything Is Obvious》（S56）——对'影响力神话'与事后归因的系统修正（音乐实验室/运气主导），粉丝量大不等于结论正确；人气背书被证伪的真实反例见 cases.yaml CASE-FAL-015（辛巴燕窝案）"
+
+- case_id: "FLR-008"
+  category: flawed_reasoning
+  difficulty: hard
+  input: >-
+    用户说："我刷到的抖音视频全是百万赞，评论区也都说'这都不爆？'，所以现在抖音没百万赞
+    就是失败，低于这个数就是废号。我要把 5 万赞以下的内容全部下架重做。"
+  context: {platform: douyin, goal: retention, audience: "账号运营者"}
+  expected_behavior: >-
+    应指出可得性偏差与互动基线差异，拒绝"没百万赞就是废号"与无依据下架：
+    1）算法按互动放大内容、信息流只呈现被推出来的爆款，刷到的样本是过滤后的可见层，
+    与真实分布系统性脱钩（availability_heuristic：曝光量与真实分布脱钩）——"刷到的
+    全是百万赞"恰恰是可得性偏差本身，不是总体证据；
+    2）"百万赞才成功"忽略内容类型决定互动基线：工具/带货类内容平均点赞仅数百
+    （语料 DY-A-LOW-006：蝉妈妈工具号 167 条作品平均点赞约 506），跨类型横向比赞
+    本身错误，且低互动可能伴随高转化（Virality ≠ Conversion）；
+    3）下架低赞内容会打断账号权重的长线积累（cold_start_dynamics）与搜索长尾价值，
+    "废号"判断没有任何基率依据；
+    4）应建议以账号自身分层基线（高/中/低/失败四层，见 content_corpus 设计）评估，
+    而非以全站可见爆款作参照。
+  key_mechanisms: [availability_heuristic, engagement_optimization_bias]
+  scoring_focus: [theory_accuracy, diagnostic_quality, platform_fit]
+  anti_patterns: ["把算法可见样本当总体分布", "跨内容类型横向比赞", "支持无依据下架重做"]
+  material_ref: "DY-A-LOW-006"
+  material_note: "场景建模自内容语料 DY-A-LOW-006（蝉妈妈官方抖音号：作品数 167、总点赞约 8.5 万、平均点赞约 506，飞瓜数据公开页口径；mechanism_notes：'内容类型决定互动基线，不能跨类型横向比赞'——直接反驳'无百万赞即失败'）"

@@ -1,0 +1,243 @@
+# narrative — 叙事（Narrative）：故事如何绕过防御、传递信念并建立关系
+domain: narrative
+nodes:
+  - id: narrative_transportation
+    canonical_name_en: Narrative Transportation
+    canonical_name_zh: 叙事传输
+    aliases: ["叙事沉浸", "transportation", "Green & Brock 传输量表方向"]
+    domain: narrative
+    definition: "Green 与 Brock 2000 年系统化的概念：读者/观众被故事『传送』进叙事世界的沉浸状态——注意力集中于叙事、产生生动的心理意象、失去对现实的接入感。传输状态下的受众对故事中嵌入的信念与态度的抵抗力显著下降。"
+    core_claim: "传输中的受众更少反驳、更多接受：沉浸绕过了与说服信息对峙的日常防御，且传输后常无被说服感。"
+    mechanism: "传输同时占用注意与心理意象资源，反驳性认知（counterarguing）所需的认知资源被挤占——无法边沉浸在剧情里边逐句审查论点；叙事的体验性降低了对不一致信息的觉察；传输引发的情绪与对角色的共情使结论随剧情被整体接受。传输效应的关键边界：不一致的既有强态度可打断传输（读者跳出）；故事被识破为虚构时对现实信念的说服下降。"
+    causal_chain: "叙事要素（人物/情节/意象） → 注意与意象的沉浸投入 → 反驳性认知被挤占 → 故事内信念被顺滑接受 → 传输结束后态度改变留存"
+    variables:
+      inputs: [叙事质量（情节连贯、人物生动）, 情象（imagery）唤起力, 受众对故事的先验熟悉度]
+      moderators: [受众对故事主题的既有强态度（强态度打断传输）, 故事的现实标注（fiction vs 事实框架）, 媒介形态与不受扰环境]
+      mediators: [传输状态（注意投入+意象+情感卷入）, 反驳性认知的减少]
+      outputs: [故事一致的态度改变, 故事一致的行为意向, 传输后的回味与分享]
+    evidence:
+      supporting: ["Green 与 Brock 2000 的传输量表与实验：高传输者更少产生反驳性认知、态度改变更大（Green & Brock 实验传统，已建包 EP S192）", "传输对虚构故事改变现实信念的效应（传输错觉研究传统）", "健康与政治传播中的叙事说服对比研究：叙事>统计在低卷入受众中更明显"]
+      conflicting: ["对主题持有强既有态度的受众传输被中断（跳出并反驳）", "被标注为虚构时对现实态度的影响减弱（但对虚构世界的态度仍可改变）", "效应量随叙事质量波动大"]
+      replication: ["传输-说服关联在多研究中重复（该方向是叙事说服研究中最稳健的发现）", "测量上依赖自陈量表，行为层的证据相对少"]
+      meta_analysis: ["叙事说服的元整合支持传输对态度改变的中介作用"]
+    evidence_grade: "A-"
+    boundary_conditions: ["受众无强先验反对态度（否则跳出）", "故事质量足以维持沉浸（连贯、生动、无出戏瑕疵）", "无频繁打断（信息流环境的杀手）"]
+    failure_conditions: ["叙事瑕疵触发出戏（逻辑断裂、明显说教）", "受众识破说教意图（传输中段跳出且产生被操纵感）", "主题与受众身份强冲突（identity 防御接管）"]
+    common_misinterpretations: ["把叙事传输等同于『讲故事就好』——没有传输质量的故事（流水账、说教插入）不产生效应", "误以为传输中可以塞硬广：传输状态被广告打断即出戏，产品植入必须与叙事融合"]
+    ethical_risks: ["利用传输状态植入未经审视的信念（软性宣传、隐性营销）", "以真实为名虚构（编造的『真实故事』被识破后信任反噬）"]
+    examples:
+      original_cases: ["Green 与 Brock 2000 的传输量表与实验（叙事说服研究的基石）", "《Storytelling Animal》对故事改变信念的综合论证（S64）"]
+      research_cases: ["传输量表的开发与中介效应实验（反驳性认知作为中介）", "虚构标注对说服的影响实验", "叙事vs统计信息的对比说服研究"]
+      modern_cases: ["长视频广告的微型叙事（用户主动看完而非跳过）", "理财内容的故事化（某用户的三年账本）比利率罗列传播更远", "播客的沉浸式案例讲述", "短视频前3秒的剧情钩子"]
+    communication_implications: "高防御主题（理财、健康、保险）的最优通道是叙事：让受众先进入故事（有名字、有处境、有转折的人物），把信息作为剧情的组成部分而非作者的说教；传输结束后留讨论区承接回味。"
+    community_implications: "社群故事库（成员真实案例、翻身故事、翻车复盘）是最强的传输素材库：新人通过旧成员的故事完成对社群价值观的传输式吸收，比任何公约宣讲都有效。"
+    content_applications:
+      body: "案例写作三要素：具体人物（有名字有处境）+ 转折（困境-尝试-结果）+ 细节（可感的数字与场景），信息全部溶解在剧情里"
+      opening: "开场即入戏：『2023 年 3 月，李姐把最后一笔定期取出来那天，手是抖的』——人物+时间+动作，3 秒完成传输启动"
+      comments: "评论区用『后来呢？』式追问延长传输（楼主补结局），传输的延长线就是内容的停留时长"
+      cta: "传输结束后的 CTA 隐藏在剧情出口（『像李姐这样开始的第一步是』），而非跳出故事硬推"
+    platform_implications: "平台的完播率与时长指标直接奖励传输质量（传输与停留高度相关）；短平快的信息流形态与长传输天然冲突——平台通过系列化（连续剧式内容）与钩子结构（悬念衔接）在碎片环境中重建传输链。"
+    related_nodes: [story_character_identification, anecdote_vs_statistics, dramatic_arc_structure, parasocial_relationship, suspense_structure, empathy_induced_helping]
+    source_ids: [S64, S63, S65, S192]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Green & Brock 2000 传输量表与实验传统未建 EP；S63/S64/S65（双思维/Homo fictus/叙事处理器）保留为背景支撑，不含传输实验内容；2026-09-09 一手 EP 已建（S192）"
+      effect_size: "传输程度与态度改变正相关；沉浸感提升故事说服力与记忆——内容来自记忆蒸馏，无一手 EP 载明"
+      replication_status: "传输-说服关联为叙事说服实验传统共识（未建包）；书源不提供实验证据"
+      context_dependency: "角色认同与情节悬念增强传输；强既有态度打断传输与虚构标注边界出自 Green & Brock 2000 实验传统（未建包）"
+      downgrade_upgrade_reason: "2026-09-09 反向审计降级 B+→C：核心『反驳性认知被挤占』及虚构标注/强态度边界出自 Green & Brock 2000（JPSP）实验传统，EP 未建，validation_status 回退 MEMORY_BASED，待建 EP 后升级"
+    provenance:
+      primary_sources: [S192]
+      supporting_evidence: [S65, S63, S64]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: story_character_identification
+    canonical_name_en: Character Identification
+    canonical_name_zh: 角色认同
+    aliases: ["角色代入", "identification", "Cohen 认同量表方向"]
+    domain: narrative
+    definition: "受众在叙事过程中采纳角色（人物）的视角、目标与情感的过程：暂时『成为』角色，以其眼睛看世界。Cohen 的认同量表区分了认同的维度：共享身份、内视角（借用角色的眼睛看）、共情与动机内化。认同是叙事说服的关键通道——被认同角色的行为与信念随认同被接受。"
+    core_claim: "受众认同谁，就吸收谁的视角与信念：认同使角色的选择成为受众的虚拟经验，其说服力来自『亲历感』而非论证。"
+    mechanism: "认同通过视角采借降低自我-角色边界：受众以角色视角加工情节，角色的成功与失败被部分体验为自我经验（替代性经历）。这使角色行为产生与直接经验类似的态度效力（直接经验形成强态度，见 attitude_strength_accessibility）。认同的建立依赖：角色的可及性（与我相似或可向往）、目标清晰、以及叙事视角技术（第一人称、限制视角）。"
+    causal_chain: "角色相似性/向往性 → 视角采借 → 共情与动机内化 → 角色经验被部分编码为自我经验 → 角色一致的态度与行为倾向"
+    variables:
+      inputs: [角色的相似性（与我像）或向往性（我想成为）, 角色目标的清晰度, 叙事视角技术（第一人称/限制视角）]
+      moderators: [受众自我概念与角色的重叠区, 角色的道德地位（道德瑕疵角色抑制认同）, 沉浸环境质量]
+      mediators: [视角采借, 共情反应, 动机内化]
+      outputs: [角色一致的态度改变, 替代性行为意向（角色做了我也想试）, 对角色的准社会依恋]
+    evidence:
+      supporting: ["认同量表研究传统（Cohen 方向）：认同与叙事说服、态度改变的正相关", "视角采借实验：以角色视角阅读后对角色行为的接受度提升", "角色认同与健康叙事干预中的行为意向改变（叙事健康传播传统）"]
+      conflicting: ["认同不可强求：道德可疑角色在部分受众中触发道德脱离与拒斥", "认同与传输相关但可分离（可高传输低认同）"]
+      replication: ["认同-说服关联获得多研究支持", "认同的因果操纵（视角技术）实验结果部分一致"]
+      meta_analysis: ["叙事健康传播的整合综述支持角色认同作为行为改变的中介"]
+    evidence_grade: "B"
+    boundary_conditions: ["角色与受众存在相似或向往的重叠区", "角色行为在受众道德框架内（或叙事完成道德救赎）", "视角技术使受众能进入角色视野"]
+    failure_conditions: ["角色与受众完全异质且无向往价值", "角色的关键行为触犯受众道德底线", "说教式角色（工具人）无法承载真实动机"]
+    common_misinterpretations: ["把角色认同等同于『主角光环』——认同是视角采借，反派与配角同样可承载（甚至更安全的）认同", "以为代言明星=认同通道：明星的向往性只在其人设与受众自我理想重叠时生效"]
+    ethical_risks: ["利用认同让受众接纳有害行为（问题角色被浪漫化的示范效应）", "操纵认同实施身份营销（只有X类人才配……）"]
+    examples:
+      original_cases: ["Cohen 的角色认同量表与理论（叙事研究传统）", "《Storytelling Animal》对替代性经验功能的讨论（S64）"]
+      research_cases: ["视角采借与行为接受度的实验", "健康叙事中角色示范对筛查意向的影响研究"]
+      modern_cases: ["理财内容的『普通人视角』主角（月薪8千的小林）比富豪案例更可认同", "游戏中玩家对角色的行为内化", "短剧的代入式主角设计"]
+    communication_implications: "案例内容的主角选择决定说服半径：主角与目标受众越相似（同收入段、同困境），认同通道越宽；给角色清晰目标与可复制的具体行为，让认同直接转化为『我也可以这么做』的意向。"
+    community_implications: "社群的『明星成员』是认同基础设施：运营者选择展示谁的成长故事，就在为新人设定认同对象；维护一组多元但可及的成员榜样（不同起点的翻身样本）比单一头部故事更有效。"
+    content_applications:
+      body: "案例主角按受众画像定制（同处境、同起点），行为路径具体到可模仿（工具、步骤、时间线）"
+      opening: "开场建立认同锚点：『如果你也是月薪一万、攒不下钱的那类人——这个故事的起点和你一模一样』"
+      narrative: "用限制视角讲述（只写主角知道与感受到的），让读者必须透过角色眼睛看情节"
+      comments: "引导读者自比角色（『你处在他的哪一步？』），把认同转化为自我定位"
+    platform_implications: "平台的人设经济本质是规模化的角色认同供给（每个账号是一个可认同的角色）；算法按认同信号（关注、追更）聚类受众——认同对象的多样性影响圈层的开放度，单一认同结构加剧圈层固化。"
+    related_nodes: [narrative_transportation, parasocial_relationship, empathy_induced_helping, self_presentation_impression_management, attitude_strength_accessibility, self_efficacy]
+    source_ids: [S63, S64, S24]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Gottschall 2012（S64，替代性经验功能）+ Bruner 1986（S63，叙事思维与身份）+ Goffman 1959（S24，角色与前台）"
+      effect_size: "角色认同增强叙事说服（认同-态度改变关联）"
+      replication_status: "认同-说服关联多研究支持（叙事健康传播传统）"
+      context_dependency: "角色相似性/道德可接受性/视角技术调制"
+      downgrade_upgrade_reason: "2026-09 实取 S24/S64 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S64]
+      supporting_evidence: [S63, S24]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: anecdote_vs_statistics
+    canonical_name_en: Anecdote vs Statistics
+    canonical_name_zh: 个案与统计的说服力差距
+    aliases: ["个案谬误", "vividness effect", "个案vs基率"]
+    domain: narrative
+    definition: "说服研究中反复观察到的现象：单个生动个案（有面孔、有细节的故事）在改变信念与行为上常胜过抽象的统计汇总（基率），尽管统计在规范意义上更有证据效力。Hamill, Wilson 与 Nisbett 的经典实验显示：关于假想人物的生动个案能改变对群体（如福利领取者）的判断，且对样本来源的提示几乎不削弱效应。"
+    core_claim: "人脑为一个有名字的人动容，却对『成千上万』无感——个案的说服力来自可模拟性，统计的说服力来自规范正确性，两者走完全不同的认知通道。"
+    mechanism: "个案通过可模拟性（ease of simulation）与情感可达性起作用：具体人物激活心理模拟与共情，判断被个案生成的直观感觉引导（availability 与 affect heuristic 的结合）；统计数字缺乏模拟素材，其效力依赖训练过的统计思维。个案还自带因果叙事（为什么会这样），而基率只是比例。但个案的证据效度取决于其代表性——被选中的个案常来自偏差样本（幸存者偏差），这正是『个案有力而不可靠』的结构性根源。"
+    causal_chain: "生动个案暴露 → 心理模拟+共情激活 → 直观感觉引导判断 → 个案压过基率 → （样本偏差时）系统性误判"
+    variables:
+      inputs: [个案的生动度（细节、面孔、因果叙事）, 统计信息的呈现形式, 个案与总体的代表性关系]
+      moderators: [受众统计素养, 个案与受众自我相关性, 加工时间与动机]
+      mediators: [心理模拟, 情感反应（affect heuristic）, 可得性样本]
+      outputs: [信念向个案方向移动, 判断脱离基率, 传播差异化（个案被转发、统计被忽略）]
+    evidence:
+      supporting: ["Hamill, Wilson 与 Nisbett 的个案改变群体判断实验（且样本偏差提示几乎不削弱效应）", "生动性对判断影响的研究传统（S01 的可得性启发式框架）", "健康传播中叙事vs统计信息的效果对比研究（叙事在情绪与行为意向上常占优）"]
+      conflicting: ["高统计素养或高卷入受众中统计信息的说服力回升", "『个别案例不能代表总体』的显性教育可部分对冲", "纯风险沟通领域（如药物副作用）统计信息的行为影响力在特定任务中更强"]
+      replication: ["个案优势的方向性结果稳健", "效应大小随信息设计（个案质量、统计呈现方式）波动大"]
+      meta_analysis: ["叙事vs统计说服的整合综述支持叙事在情绪与意向层面的优势、统计在准确信念层面的价值"]
+    evidence_grade: "B"
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["受众低到中卷入、依赖直觉判断时个案优势最大", "个案自带因果叙事与可模拟细节", "统计信息以抽象汇总形式呈现"]
+    failure_conditions: ["统计被翻译为个案化形式（『每100人中约有3人』的自然频次）或可视化", "受众被训练过代表性核查（个案来源意识）", "高利害决策场景中的制度化审核（风控、临床）依赖统计"]
+    common_misinterpretations: ["以为个案说服=个案正确——说服力与证据力是两回事，个案优势恰恰是幸存者偏差的放大器", "以为统计无效所以不用——统计的困境是呈现方式而非价值：自然频次+个案化载体可兼得"]
+    ethical_risks: ["用挑选的个案误导风险判断（晒盈利者不晒亏损者的幸存者偏差营销）", "以个案替代证据推销产品（『我邻居用了就好』式健康误导）"]
+    examples:
+      original_cases: ["Hamill, Wilson 与 Nisbett 的福利个案实验（社会认知经典）", "《Made to Stick》对具体与故事的说服力综合（S40）"]
+      research_cases: ["生动个案对群体态度的改变实验", "自然频次呈现提升统计理解的研究（风险沟通传统）", "健康传播中叙事与统计信息的对照实验"]
+      modern_cases: ["理财内容的晒单文化（个案偏差的规模化）", "健康产品的见证营销（个案替代证据）", "反例的正面示范：把生存率转为『每 100 位同类患者中……』的自然频次表述"]
+    communication_implications: "证据呈现的最优解是个案与统计的编队：统计给效度骨架、个案给动机引擎——『数据显示X（基率），比如小A就是这样（个案）』；同时主动标注个案的样本偏差（『这是做得好的1%，还要看到……』），把偏差披露做成可信度。"
+    community_implications: "社群的数据文化（公开分布、中位数、亏损样本）与故事文化（成员故事）需要并轨：只讲故事会造成幸存者偏差的集体误判，只晒数据则缺乏行动唤起——用『分布+典型』双轨内容维持两通道。"
+    content_applications:
+      evidence: "双轨证据结构：先自然频次统计（每100人中有X人）建立效度，紧跟一个具名个案建立动机，并标注个案的代表性边界"
+      body: "把统计翻译为个案化载体：『这个比例意味着，你们班当年 50 个人里有 2 个……』——基率的可模拟化"
+      title: "标题个案先行、统计殿后：『小A三年翻倍的背后：同期样本的真实分布』"
+      comments: "对晒单个案的评论补发分布视角（『同期的另一个样本是……』），维持群体的基率感知"
+    platform_implications: "平台的内容分发天然偏好个案（故事化内容互动高），统计内容结构性弱势——这使平台生态的群体判断系统性偏向可得性样本；平台以『数据可视化』加权与创作者自律部分对冲（风险沟通领域尤需）。"
+    related_nodes: [narrative_transportation, availability_heuristic, affect_heuristic, representativeness_heuristic, gist_vs_verbatim_memory, misinformation_velocity]
+    source_ids: [S40, S01, S21]
+    provenance:
+      primary_sources: ['S40', 'S01', 'S21']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: dramatic_arc_structure
+    canonical_name_en: Dramatic Arc Structure
+    canonical_name_zh: 戏剧弧线结构
+    aliases: ["故事结构", "三幕结构", "Freytag 金字塔", "叙事弧"]
+    domain: narrative
+    definition: "写作与演讲实践中的叙事结构框架（而非实证机制）：从 Freytag 金字塔（开端-上升-高潮-回落-结局）到当代的三幕结构与演讲叙事设计（如 Duarte 的『当下与应然』交替模型），用于组织故事以维持张力与传输。它是从业者经验的沉淀，其『有效』建立在 narrative_transportation 等实证机制之上，本身未经系统检验。"
+    core_claim: "按张力曲线（悬念-冲突-解决）组织叙事能更稳定地维持传输——这是被长期实践验证的工程框架，其原理依托传输与悬念机制，但结构本身是经验法则。"
+    mechanism: "（作为实践框架的『机制』）弧线结构管理受众的预期与张力：开端建立人物与稳定态（供受众完成认同），冲突打破稳定（激活悬念与未完成感，见 suspense_structure 与 zeigarnik_effect 的未完成张力），高潮释放张力（情绪峰值，与 peak_end_rule 的记忆机制交互），结局提供意义闭合。Duarte 模型进一步提出在『现状』与『应然』之间往复拉升（对比结构的演讲应用）。这些设计之所以常有效，是因为它们适配了注意、悬念与传输的底层机制——但适配不等于因果证明。"
+    causal_chain: "弧线结构组织（稳定-冲突-高潮-闭合） → 悬念与未完成张力的周期性唤起与释放 → 注意与传输的维持 → 内容完成度提升"
+    variables:
+      inputs: [结构选择（三幕/金字塔/英雄之旅/演讲交替模型）, 张力的唤起-释放节奏, 人物与目标的建立质量]
+      moderators: [媒介时长限制（短视频的压缩弧线）, 受众对结构套路的熟悉度（套路疲劳）, 内容类型（干货文vs故事文）]
+      mediators: [悬念与期待, 传输维持, 情绪峰谷布局]
+      outputs: [完读/完播提升, 记忆留存（峰值-结尾效应）, 分享意愿, （套路化时）预测疲劳与出戏]
+    evidence:
+      supporting: ["写作与演讲实践传统的长期沉淀（Freytag 结构、三幕剧、S65 的认知科学写作综合、S68 的演讲结构）", "悬念与未完成张力对注意维持的实证支持（suspense_structure 相关机制研究）", "叙事作品的结构分析传统（故事学、剧作学）"]
+      conflicting: ["无对照实验证明某一特定弧线优于其他结构（最佳结构主张均为从业者经验）", "反线性结构（多线、反高潮）作品的成功说明弧线非唯一解", "套路化结构的受众疲劳现象（对『有效』的边界警示）"]
+      replication: ["不适用——结构有效性缺乏受控复制；其依托的传输与悬念机制各自有实证基础"]
+      meta_analysis: ["不适用"]
+    evidence_grade: "D"
+    boundary_conditions: ["作为组织工具使用（帮助规划张力与节奏），不作为科学规律引用", "适用于以传输为目标的内容（故事、演讲、案例）", "受众未对该结构产生强套路疲劳"]
+    failure_conditions: ["干货查询型内容（用户要的是信息检索效率而非张力）", "结构套路化到被受众预测（模板感即出戏）", "为弧线牺牲真实（强行制造冲突与反转的叙事造假）"]
+    common_misinterpretations: ["把『三幕结构』当科学定律引用——它是剧作经验框架，证据等级 D，使用时必须明示", "误以为所有内容都该套弧线：查询型、清单型、工具型内容套弧线反而损害效率"]
+    ethical_risks: ["为戏剧性扭曲真实案例（编造冲突、夸大反转）——叙事结构对真实素材的暴力", "利用弧线结构伪装营销内容为真实故事（广告不标注）"]
+    examples:
+      original_cases: ["Freytag 的戏剧结构金字塔（剧作学经典）", "Duarte《Resonate》的『当下与应然』演讲交替结构（S68）", "《The Science of Storytelling》的认知科学写作视角（S65）"]
+      research_cases: ["不适用（从业者框架）；相关底层机制见 narrative_transportation 与 suspense_structure 的研究案例"]
+      modern_cases: ["短视频的三秒钩子-冲突-反转-价值模板", "知识博主的『我曾经和你一样-转折-方法论』案例结构", "年度演讲的困境-探索-愿景弧线", "反例：强行反转的标题党（结构与内容脱节）"]
+    communication_implications: "把弧线结构当编辑工具箱而非模板：先确定传输目标与真实素材，再选结构（三幕、交替、清单配故事）；关键是张力曲线的真实性——真实素材的冲突与解决本身就是最好的结构，编造的弧线经不起细节追问。"
+    community_implications: "社群叙事的弧线管理：成员成长故事按『起点困境-社群介入-转变-新问题』组织，为每期社群活动建立张力（预告-进行-揭晓-复盘），把社群时间线本身编成连续剧——但集体记忆会核对真实性，编造弧线会反噬社群信任。"
+    content_applications:
+      narrative: "结构规划三问：稳定态是什么（受众可代入的现状）？打破它的是什么冲突？解决给受众留下什么行动出口？——先答这三问再动笔"
+      title: "标题预告张力而不剧透：『她把存款做了三件事，第三件几乎没人想到』（悬念结构，内容须真实承接）"
+      body: "干货文与故事文的混合结构：弧线承载案例，清单承载方法——案例段走张力曲线，方法段走检索效率"
+      comments: "在评论区制造续集钩子（『下一篇讲她踩的坑』），把单篇弧线接入连载结构"
+    platform_implications: "平台的内容模板（钩子-冲突-反转）是弧线结构的算法化，模板套用获得流量红利也加速套路疲劳；平台用『模板新鲜度』的隐性偏好轮换有效结构，创作者需在结构纪律与结构迭代间平衡。"
+    related_nodes: [narrative_transportation, suspense_structure, story_character_identification, peak_end_rule, zeigarnik_effect, curiosity_gap]
+    source_ids: [S65, S68, S64]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Duarte 2010《Resonate》（S68，D 级实践框架：当下与应然交替/演讲即故事）+ Storr 2019（S65，叙事认知：变化检测/信息缺口）+ Gottschall 2012（S64，叙事普遍性）"
+      effect_size: "不适用（从业者框架）；其依托的传输/悬念机制各自有实证基础"
+      replication_status: "不适用——结构有效性缺乏受控复制"
+      context_dependency: "作为组织工具使用（帮助规划张力与节奏）；适用于传输目标内容；套路疲劳是边界"
+      downgrade_upgrade_reason: "2026-09 实取 S68 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S68]
+      supporting_evidence: [S65, S64]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: parasocial_relationship
+    canonical_name_en: Parasocial Relationship
+    canonical_name_zh: 准社会关系
+    aliases: ["拟社会互动", "parasocial interaction", "单方面关系"]
+    domain: narrative
+    definition: "Horton 与 Wohl 1956 年提出的概念（准社会构念源头，未建包）：媒介受众与媒介人物（主持人、角色、创作者）之间发展出的单向『关系』——受众对其产生熟悉感、情感依恋与友谊式的期待，而对方并不知晓。长期观看使创作者从『陌生人』变为受众生活里的『熟悉的陪伴者』，这种关系影响信任、忠诚与消费。"
+    core_claim: "重复暴露+自我披露+直接感（视线、称呼、回应感）足以让受众对从未谋面的创作者形成真实运作的情感依恋——它影响信任、购买与留存，如同现实友谊般起作用。"
+    mechanism: "媒介人物以高频率、近距离感（直视镜头、称呼『你』）、持续自我披露出现在受众生活中，触发现实社会认知的常规程序（熟悉→喜欢→信任）；受众单方面积累关于创作者的『共同经历』（其生活、失败、成长），形成关系史错觉。准社会关系的强度预测：信任转移（推荐接受度）、忠诚（容忍瑕疵）、以及失去时的真实哀伤（断更、塌房的情感冲击）。直播与 vlog 形态因高频与即时而显著强化该机制。"
+    causal_chain: "高频曝光+直接感+自我披露 → 熟悉与亲密感累积 → 关系史错觉 → 准社会依恋 → 信任转移与忠诚消费"
+    variables:
+      inputs: [内容频率与持续性, 自我披露深度（生活、弱点、成长）, 直接感设计（视线、称呼、回应评论）]
+      moderators: [受众的孤独感与归属需求, 创作者人设的真实一致性（塌房风险的反面）, 媒介形态（直播>vlog>图文）]
+      mediators: [熟悉感, 亲密错觉, 关系史积累]
+      outputs: [信任转移（推荐接受）, 忠诚与容忍, 付费支持（打赏、会员）, 失联时的情绪反应]
+    evidence:
+      supporting: ["Horton 与 Wohl 1956 的概念提出与电视观察（媒介效果研究经典；Horton & Wohl 构念，未建包）", "准社会关系的测量研究传统：其强度与信任、忠诚、购买意向的正相关", "直播与创作者经济中的准社会-消费关联研究", "S46、S72、S43 降为相邻背景支持（均不含准社会关系构念原文）", "S47（Blumler & Katz 1974）：『身份认同（人物情境代入）』需要类别为相邻支撑，不含准社会关系构念"]
+      conflicting: ["准社会关系对功能性消费（工具、刚需）的影响弱于情感性消费", "高强度人设依赖使关系随人设变化而骤变（脆弱性证据）", "受众的准社会依恋存在个体差异（高孤独感者更强）"]
+      replication: ["准社会关系与信任/忠诚的关联在多媒介研究中重复", "因果关系多为相关证据，实验操纵较少"]
+      meta_analysis: ["准社会关系研究的整合综述支持其与说服、消费变量的稳定相关"]
+    evidence_grade: "C"
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["内容具人格化载体（有脸、有声音、有生活）——纯工具账号难建立", "频率足以累积熟悉（周更以下明显衰减）", "披露与人设一致（塌房反噬的核心防线）"]
+    failure_conditions: ["创作者人设崩塌（真实与呈现的断裂暴露）", "过度商业化（关系被识破为变现通道）", "内容停更导致关系衰减（准社会关系需要喂养）"]
+    common_misinterpretations: ["把准社会关系当『粉丝滤镜』贬低——它是有实证基础的正常社会认知过程，强度可测且真实影响行为", "以为涨粉=关系建立：关注数不等于依恋，高频人格化互动的小账号常比大号有更深准社会关系（转化率差异的根源）"]
+    ethical_risks: ["刻意制造亲密错觉收割（假性回应、人工化的『家人们』）", "利用受众依恋推销劣质产品（信任转移的变现滥用）", "断更焦虑与情感操控（用失联威胁维持订阅）"]
+    examples:
+      original_cases: ["Horton 与 Wohl 1956 对电视人物与观众准社会互动的分析（媒介研究经典）", "《Personal Influence》的两级传播与意见领袖研究（S43，相邻背景；『媒介人物影响连续性』表述无 S43 原文对应）"]
+      research_cases: ["准社会关系量表与信任/消费关联的调查-实验研究", "主播直播中的准社会互动与打赏行为研究"]
+      modern_cases: ["直播间的『家人们』与陪伴式带货", "播客听众的长期准社会信任（广告转化率高的重要原因）", "虚拟主播（VTuber）的准社会关系强度", "创作者塌房事件中的粉丝哀伤与脱粉潮"]
+    communication_implications: "内容的人格化设计（固定开场、称呼受众、生活披露、回应评论区）是准社会关系的建设性投入：它把信息流关系变成关系史；但商业化节奏要与人设一致——变现方式本身就是人设的一部分。"
+    community_implications: "社群把准社会关系升级为成员间的真实关系（从关注博主到结识同好）是留存的最深护城河：创作者在社群中的角色要从『被仰望者』转为『在场者』——真实互动一次胜过十条精心剪辑。"
+    content_applications:
+      opening: "固定开场白+直呼式称呼（『早上好，这里是XX的第137期』），制造直接感与关系史的连续性"
+      body: "保留适度的真实披露（过程、失败、日常），为关系史提供素材——完美人设无法积累亲密"
+      comments: "高频真实回复评论区（点名回应），把单向关系拉成回应感——回应感是准社会的氧气"
+      cta: "付费类 CTA 与关系史绑定（『老听众都知道我从XX走到现在』），让购买成为关系行为而非交易行为"
+    platform_implications: "直播与短视频平台的产品形态（高频、面对面、即时互动）是准社会关系的工业化基础设施；平台的私域组件（粉丝群、会员制）把准社会关系转化为可运营资产——同时也放大了情感收割与塌房系统性风险。"
+    related_nodes: [story_character_identification, self_presentation_impression_management, narrative_transportation, source_credibility_model, authenticity_perception, opinion_leadership]
+    source_ids: [S46, S43, S72, S47]
+    provenance:
+      primary_sources: ['S46', 'S43', 'S72', 'S47']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

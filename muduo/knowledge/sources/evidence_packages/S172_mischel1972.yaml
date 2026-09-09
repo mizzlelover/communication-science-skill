@@ -1,0 +1,26 @@
+# Evidence Package — S172 Mischel, Ebbesen & Zeiss 1972（Cognitive and Attentional Mechanisms...）
+# 标准格式。access_level 如实标注。
+source_id: S172
+title: "Cognitive and Attentional Mechanisms in Delay of Gratification"
+authors: "Walter Mischel; Ebbe B. Ebbesen; Antonette Raskoff Zeiss"
+year: 1972
+journal: "Journal of Personality and Social Psychology 21(2): 204-218"
+doi: "10.1037/h0032198"
+url: "https://pubmed.ncbi.nlm.nih.gov/5010404/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed 记录页（PMID 5010404，无摘要但有 MeSH 词：Attention/Cognition/Frustration/Imagination/Reward/Time Factors）+ datafield.dev『Marshmallow Test 变异』案例研究（1972 论文定位：3-5 岁儿童、认知策略预测等待、论文核心是认知机制而非人生结局预测、Bing 幼儿园样本与 Watts 2018 复制修正）+ 中文教研转帖（实验一/二/三细节：转移注意延长等待约 20 倍；想有趣的事 13 分钟 vs 想悲伤的事 5 分钟 vs 只想奖品 4 分钟；奖品实物不可见时『想奖品』等待骤降至约 1 分钟）+ Britannica Mischel 词条（背景与后续追踪）"
+research_question: "学前儿童能否以及如何通过注意与认知策略抵御诱惑、延长延迟满足的等待时间？"
+core_claims:
+  - "对奖励物的注意聚焦破坏延迟：看得见奖励实物且未获注意转移手段的儿童等待最短（PubMed MeSH：Attention/Reward/Imagination 为关键变量；中文教研转帖实验一：无转移手段组等待时间最短）"
+  - "注意转移/分心是有效的延迟策略：提供玩玩具等转移手段后等待时间延长约 20 倍（中文教研转帖实验一）"
+  - "思想内容操纵决定等待：『想有趣的事』组平均等 13 分钟，『想悲伤的事』组 5 分钟，『只想奖品』组仅 4 分钟——把注意力导向奖励本身反而破坏延迟（中文教研转帖实验二）"
+  - "奖励实物不可见时效应逆转：拿走实物奖励后，被鼓励『想奖品』的儿童约 1 分钟即放弃，而『想有趣的事』组仍保持约 14 分钟（中文教研转帖实验三）"
+  - "该论文回答的是『什么认知机制让等待成为可能』（注意分配与心理重构），而非『等待能力预测人生结局』——后者是后续 1988/1990 追踪与大众化转述的产物（datafield.dev）"
+method: "学前儿童（斯坦福 Bing 幼儿园，3-5/3-6 岁，转述源年龄表述略有出入）延迟满足实验系列，含 3 个实验：奖励实物可见性（暴露 vs 隐藏）× 注意转移手段（有无）× 思想内容（有趣/悲伤/奖品）操纵；因变量为按铃放弃前的等待时长"
+results: "转移注意与将奖励作认知重构（如不想它的味道、看作不可食之物）显著延长等待；注视/思考奖励实物显著缩短等待；奖励实物可见性与思想内容的交互决定等待时长"
+limitations: "样本为斯坦福附幼的白人中上层家庭儿童，社会经济同质性强；样本量小；本研究为机制性实验室实验，非对人生结局的预测；1972 原文无摘要（PubMed 仅 MeSH 索引），实验细节来自多源转述交叉，个别转述（如样本年龄 3-5 vs 3-6）存在出入；后续 Watts 2018 大样本复制对『延迟→人生结局』相关大幅缩水（datafield.dev 记录）"
+boundary_conditions: "适用于儿童短期延迟情境与注意策略层面；『意志力宿命论』解读不成立——环境信任与样本背景调节效应（与 immediate_vs_delayed_rewards 节点的 Kidd/Watts 修正一致）"
+relevant_nodes: [immediate_vs_delayed_rewards]
+notes: "棉花糖实验系列的开篇机制论文，支撑『即时奖励 vs 延迟奖励』节点的注意/认知机制层；核心内容为公开来源（PubMed+多源转述）交叉，未编造。access_level 如实：无官方摘要，实质内容靠多源交叉转述（substantial_excerpt/annotated）。"
+last_verified: "2026-09"

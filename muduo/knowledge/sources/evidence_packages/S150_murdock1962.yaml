@@ -1,0 +1,24 @@
+# Evidence Package — S150 Murdock 1962（The Serial Position Effect of Free Recall）
+# 标准格式。access_level 如实标注。
+source_id: S150
+title: "The Serial Position Effect of Free Recall"
+authors: "Bennet B. Murdock, Jr."
+year: 1962
+journal: "Journal of Experimental Psychology 64(5): 482-488"
+doi: "10.1037/h0045106"
+url: "https://www.simplypsychology.org/primacy-recency.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：SimplyPsychology《Serial Position Effect (Glanzer & Cunitz, 1966)》页面（实抓）对 Murdock 1962 的完整程序与结果转述：103 名被试分 6 组（列表长度 10/15/20/30/40 词 × 呈现速率 1 词/秒或 1 词/2 秒），立即自由回忆；结果：首因+近因、近因覆盖最后约 8 个序列位置、中段平坦渐近线、Murdock 本人以前摄/倒摄抑制解释曲线形态；渠道2：NGDC OpenLB（OLB-PM-33574605）参考文献确认 DOI 10.1037/h0045106；渠道3：logrocket/unanswered.io/studysmarter 等 3+ 独立来源交叉确认 10-40 词列表设计"
+research_question: "自由回忆中，单词在列表中的呈现位置如何决定其被回忆的概率？系列位置曲线的形态是否指向两种不同的记忆存储（短时/长时）？"
+core_claims:
+  - "自由回忆的回忆概率是序列位置的函数：开头（首因）与结尾（近因）回忆最好，中间塌陷，形成 U 形系列位置曲线"
+  - "近因效应延伸至最后约 8 个序列位置，且列表长至 40 词时依然存在"
+  - "首因源于开头项目获得更多复述而进入长时记忆；近因源于结尾项目仍停留在短时（工作）记忆——延迟回忆/分心任务消除近因而保留首因（Glanzer & Cunitz 1966 分离证据）"
+method: "103 名被试分 6 组，组间设计：列表长度（10/15/20/30/40 词）× 呈现速率（1 词/秒或 1 词/2 秒）六种组合；词表呈现后立即按任意顺序自由回忆；因变量为每个序列位置的回忆概率（该位置被正确回忆的被试比例）"
+results: "系列位置曲线呈首尾高、中间平的形态：近因效应覆盖最后约 8 个位置且不随列表增长消失；首因效应在开头 3-4 个位置后趋平；中段为平坦渐近线（短列表更不明显）；Murdock 提出前摄/倒摄抑制结合解释曲线形状"
+limitations: "仅限无关单词列表的即时自由回忆范式，未覆盖其他刺激类型与延迟条件（短时/长时成分分离由 Glanzer & Cunitz 1966 完成）；原文全文付费墙，程序与结果经 SimplyPsychology 等教科书级来源多源转述交叉核实"
+boundary_conditions: "序列长度、呈现速率、延迟与分心任务调制曲线形态：延迟回忆/插入分心消除近因而保留首因；应用上：关键信息放开头（深编码）与结尾（近因红利），中段只放支撑内容"
+relevant_nodes: [serial_position_effect]
+notes: "系列位置效应的经典奠基实验（paper 级）。103 人/6 组/10-40 词/1-2s 呈现等程序细节经 4+ 独立来源交叉核实，未编造。支撑 memory.yaml serial_position_effect。"
+last_verified: "2026-09"

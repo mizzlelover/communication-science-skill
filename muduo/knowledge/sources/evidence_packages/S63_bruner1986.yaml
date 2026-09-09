@@ -1,0 +1,25 @@
+# Evidence Package — S63 Bruner 1986（Actual Minds, Possible Worlds）
+# 标准格式。access_level 如实标注。
+source_id: S63
+title: "Actual Minds, Possible Worlds"
+authors: "Jerome Bruner"
+year: 1986
+journal: Harvard University Press（专著）
+doi: "无 DOI（专著）"
+url: "https://psychology.fas.harvard.edu/people/jerome-bruner"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：哈佛官方传记（叙事思维 vs 范式思维定义）+ 中文百科（两种思维模式/意义建构/世界模式）+ 学术论文（逻辑数学 vs 叙事两种互补思维模式）+ 教育研究（叙事思维教育价值比较）"
+research_question: "人类心智的两种基本思维模式是什么？它们如何组织经验与建构意义？"
+core_claims:
+  - "两种不可互相还原的思维模式：范式/论证式思维（paradigmatic，逻辑证明/分类/抽象普遍原理）vs 叙事式思维（narrative，处理意向/行动及其变化与结果，重整体过程与特殊经验）"
+  - "叙事思维是人类意义建构、文化理解与自我认同的不可替代基础；逻辑思维是科学与学术教育的基石"
+  - "当代教育过度偏重逻辑思维，导致'意义危机'——应平衡发展两种思维（叙事弥合认知与文化鸿沟）"
+  - "人的认知是主动意义建构（意义建构/世界模式）：知觉、记忆、判断都以已有图式组织经验（认知革命核心）"
+method: "认知心理学/文化心理学理论专著（认知革命传统）+ 教育应用"
+results: "（理论奠基）叙事/范式双思维模式成为叙事研究与认知科学标准区分"
+limitations: "理论专著（非单一实验）；叙事思维的可检验性较弱（学术讨论）"
+boundary_conditions: "适用于理解思维模式区分与叙事价值；具体测量需操作化"
+relevant_nodes: [narrative_transportation, schema_formation, story_character_identification]
+notes: "叙事思维理论奠基（book 级）。双思维模式为公开标准内容，未编造。"
+last_verified: "2026-09"

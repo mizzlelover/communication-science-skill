@@ -1,0 +1,206 @@
+platform_name: 跨平台基线（Generic Baseline）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  本文件不描述任何具体平台，只提炼一切内容平台共有的结构事实：创作者—平台—受众三角、
+  四种基本分发模型、互动信号的通用语义分层、内容元素的角色分工。概念层框架为行业共识
+  （industry_consensus 级，evidence_level L3），不含任何具体平台的硬数字约束。
+  2026-09 联网实取 3 个官方源交叉支撑通用机制声明：YouTube 官方博客（推荐驱动观看量
+  超过订阅与搜索）、X 官方开源推荐算法仓库（In-Network/Out-of-Network 候选、
+  显式+隐式互动信号、推荐架构覆盖全产品表面）、Meta 官方透明度中心（Feed 排序四步、
+  "分享=高价值信号"）。据此 distribution_model / recommendation_model /
+  interaction_signals 的机制层面描述获官方交叉支撑（L1 级），known_platform_patterns
+  的内容策略归纳仍为行业共识（L3）；content_constraints 首条原标 [official_rule]
+  因 generic 层未实取各平台格式约束官方文档而降为 [industry_consensus]。将本基线适配到
+  具体平台时，必须替换 distribution_model / content_lifecycle / title_role /
+  cover_role / sharing_mechanism / community_mechanism 等平台差异字段，并按
+  update_platform_knowledge 流程对该平台事实做分级复核。
+
+platform_sources:
+  - source: "YouTube 官方博客《On YouTube's recommendation system》 https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/"
+    source_owner: "YouTube（Google）官方工程博客"
+    source_type: official
+    claim_supported: "推荐系统驱动的观看量超过订阅与搜索（算法分发主导）；推荐系统基于上千信号持续学习、无公开'配方书'（权重黑箱）；用户互动与观看历史为个性化核心输入"
+    published_date: "2021-09-15"
+    accessed_date: "2026-09-08"
+    freshness: current
+    confidence: high
+  - source: "X 官方开源推荐算法仓库（twitter/the-algorithm） https://github.com/twitter/the-algorithm"
+    source_owner: "X（原 Twitter）官方"
+    source_type: official
+    claim_supported: "推荐算法覆盖 For You 时间线/Search/Explore/Notifications 等全部产品表面；候选源分 In-Network（关注）与 Out-of-Network（算法外推），关注分发与算法分发并存；显式信号（点赞/回复）与隐式信号（主页访问/推文点击）驱动排序；visibility-filters 对内容做硬过滤与降权"
+    published_date: "2023-03"
+    accessed_date: "2026-09-08"
+    freshness: current
+    confidence: high
+  - source: "Meta 官方透明度中心《Ranking and content on Facebook Feed》 https://transparency.meta.com/en-gb/features/ranking-and-content/"
+    source_owner: "Meta（Facebook）官方"
+    source_type: official
+    claim_supported: "Feed 排序四步（Inventory→Signals→Predictions→Relevance score）；已连接内容（朋友/关注）与推荐内容混合；显式（点赞/评论/转发）与隐式（浏览时长）信号；'分享'被官方确认为高价值信号；100+ 预测模型，权重因人因内容而异"
+    published_date: "2025-06-11"
+    accessed_date: "2026-09-08"
+    freshness: current
+    confidence: high
+
+content_units:
+  - "图文/文章类（可深度展开，承载 central_route_processing 式深加工）"
+  - "短视频/中视频（节奏压缩，注意力竞争最激烈）"
+  - "纯文本短帖（低创作摩擦、高频发布）"
+  - "直播/音频（实时共同在场，社区黏性最强）"
+  - "问答/社群消息（需求驱动，用户带着问题来）"
+
+dominant_user_intent:
+  - "打发时间（休闲刷，无明确目标，注意力最廉价也最易流失）"
+  - "主动检索（带着任务/问题来，容忍更长内容）"
+  - "关系维护（看熟人/追更，信任先于内容）"
+
+distribution_model: >-
+  一切平台都是四种基本分发的配比组合：关注分发（订阅/好友关系决定触达）、
+  算法分发（平台按互动信号决定曝光）、社交分发（用户转发把内容带入关系链）、
+  搜索分发（用户主动查询唤醒存量内容）。适配具体平台时：替换为该平台的
+  配比描述 + 主导模型，并标注 [official_rule / industry_consensus]。
+
+recommendation_model: >-
+  基线：平台以互动信号（完播/点击/互动/留存）为反馈，按 ranking_signal_weighting
+  决定内容的下一次曝光；新内容通常经历小流量测试→数据达标→放大的过程
+  （cold_start_dynamics + recommendation_feedback_loop）。各平台权重黑箱程度不同，
+  具体权重一律 [industry_consensus] 或 [experience_speculation]，禁止伪装官方规则。
+
+social_graph_characteristics: >-
+  基线：关注关系（单向/双向）决定"订阅型触达"，关系强弱决定"信任背书强度"。
+  强关系平台（熟人互见）信任高但增速慢；弱关系平台（陌生人推荐）增速快但信任薄。
+  适配时替换为该平台的关系密度描述。
+
+content_lifecycle: >-
+  基线三类：爆发衰减型（热点内容小时/天级衰减）、长青搜索型（数月数年被查询唤醒）、
+  订阅长青型（粉丝资产带来稳定复看）。适配时写明该平台三类的主次。
+
+primary_entry_points:
+  - "推荐流/信息流（默认首页，注意力最贵）"
+  - "搜索框（意图最明确）"
+  - "关注页/会话（关系最稳）"
+  - "转发回流（社交背书二次入场）"
+
+attention_environment: >-
+  基线：用户总注意力受 attention_capacity_limits 约束，任一平台内内容互相竞争
+  selective_attention；沉浸式环境（全屏单列）剥夺用户选择权但保留滑动否决权，
+  选择式环境（多列列表）把竞争前移到标题/封面。适配时写明该平台是哪种环境。
+
+user_behavior: >-
+  基线：用户以 satisficing 而非最优解方式浏览——"够好就点，不好就划"；
+  大多数互动是 dual_process_theory 的快系统直觉决策，只有目的性阅读才进入慢加工。
+
+interaction_signals:
+  - "态度型（点赞/赞同）：低成本认可，量大价值低"
+  - "保留型（收藏/保存/稍后再看）：内容对用户有工具价值，与长尾需求强相关"
+  - "扩散型（转发/分享）：最高价值信号，自带社交背书与 new audience"
+  - "讨论型（评论/回复）：参与深度高，平台权重通常高于态度型"
+  - "关系型（关注/订阅/加好友）：把单次注意转为可复用资产"
+  - "时长型（完播/停留）：平台推断内容质量的间接信号"
+
+sharing_mechanism: >-
+  基线：分享动机由 stepps_sharing_framework（实用/情绪/身份/社交货币）驱动，
+  分享去向（站内/站外/私域）与阻碍（外链限制、口令化、隐私顾虑）各平台差异极大，
+  是适配时必换字段。
+
+search_mechanism: >-
+  基线：搜索流量 = 存量内容 × 查询需求匹配。标题/正文/标签的关键词覆盖决定
+  answer_engine_visibility；长尾平台（搜索占比高）适合做耐久内容，
+  爆发平台（搜索占比低）适合追热点。
+
+community_mechanism: >-
+  基线：社群由共同身份（collective_identity_narrative）、规范（descriptive_injunctive_norms）、
+  仪式（community_rituals）与身份分层（status_systems）构成；
+  粉丝数 ≠ 社区，viral 播放 ≠ 归属感（Virality ≠ Community）。
+
+algorithmic_features:
+  - "互动信号加权排序（各平台权重不同，一律不写具体百分比）"
+  - "新内容冷启动测试（cold_start_dynamics）"
+  - "付费加热工具（各平台均有，产品存在性需到该平台 adapter 实取官方推广产品页后方可标 official_rule；generic 层 2026-09 未实取，暂按 industry_consensus）"
+  - "创作者激励计划（改变供给结构，creator_incentive_structures）"
+
+content_constraints:
+  - "[industry_consensus] 各平台均有格式硬约束（图数/字数/时长），具体数值必须到该平台 adapter 查证并以平台最新公告为准（2026-09 复核：原标 official_rule，generic 层未实取各平台格式约束官方文档，无 L1 支撑，降为行业共识 L3）"
+  - "[industry_consensus] 界面展示截断（标题折叠/首屏可见区）通常比数据上限更影响实际效果"
+
+title_role: >-
+  基线：标题是点击前的第一信息承诺，承担 curiosity_gap 制造与关键词匹配双重职责；
+  在选择式环境里权重最高，沉浸式环境里部分让渡给首帧/开场。
+
+cover_role: >-
+  基线：封面是 bottom_up_attention_capture 的第一触发器；
+  在多列/列表平台决定 CTR，在单列全屏平台弱化为主页与搜索场景的资产。
+
+opening_role: >-
+  基线：开场决定留存曲线——serial_position_effect（首因）+ zeigarnik_effect（未闭合悬念）
+  让用户越过"弃读阈值"；开场承诺必须被正文兑现，否则触发信任折价。
+
+tag_role: >-
+  基线：标签是内容分类信号，帮助平台理解与聚合，不是"流量卡"；
+  把标签当玄学的用法在任何平台都属 experience_speculation。
+
+comment_role: >-
+  基线：评论区是内容的延伸现场——social_proof 的可视化、需求信号的采集器、
+  二次创作的发生地；作者回复强化 parasocial_relationship 与 reciprocity_norm。
+
+follow_role: >-
+  基线：关注是用户给出的"复看承诺"，把单次流量转为 relationship asset；
+  但在算法分发主导的平台，关注对触达的保证程度各不相同——适配时必换字段。
+
+risk_factors:
+  - "[industry_consensus] 标题承诺与内容不匹配：短期 CTR 高，长期信任与打开率衰减（trust_calibration 破坏）"
+  - "[industry_consensus] 追热点流量脉冲：来快去快，不沉淀粉丝资产（hedonic_adaptation + attention_economics）"
+  - "[industry_consensus] 互动优化偏置：平台奖励易互动内容，可能诱导低质供给（engagement_optimization_bias）"
+  - "[industry_consensus] AI 生成内容饱和：同质化供给稀释注意力，真实感成为稀缺资产（ai_content_saturation + authenticity_premium）"
+  - "[industry_consensus] 平台规则变动：分发机制随时调整，任何策略都要以平台最新公告为准（platform_power_gatekeeping）"
+
+known_platform_patterns:
+  - pattern: "首元素决定去留（标题/封面/首帧是点击前唯一信息）"
+    mechanism_links: [selective_attention, bottom_up_attention_capture, attention_capacity_limits]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: [S1, S2, S3]
+    last_verified: "2026-09"
+    note: "跨平台成立：用户在同一屏比较多个选项，先被捕获的注意力先被消费。官方侧仅确认点击/浏览类隐式信号被采集（S2：tweet clicks；S3：点击与浏览时长预测模型），'首元素决定去留'为行业共识归纳，官方文档无直接表述。"
+  - pattern: "具体承诺优于抽象口号（数字/场景/对象具体化）"
+    mechanism_links: [specificity_effect, concreteness_in_language, curiosity_gap]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: [S1, S2, S3]
+    last_verified: "2026-09"
+    note: "具体化降低想象成本，同时制造可验证的期待；抽象大词则依赖用户脑补。本批官方源均未涉及标题/文案措辞策略，属沟通科学行业共识而非平台规则。"
+  - pattern: "给用户'转发的理由'（身份表达/社交货币/实用利他）"
+    mechanism_links: [self_presentation_impression_management, stepps_sharing_framework, social_identity_theory]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: [S3]
+    last_verified: "2026-09"
+    note: "分享是用户的自我表达行为，内容只是载体；帮用户在关系链里'好看'才有扩散。官方侧 L1 支撑点：Meta 官方明确'预测用户是否会分享是高价值信号'（S3），但分享动机分层（stepps）属学术框架，整体维持 L3。"
+  - pattern: "保留型信号（收藏/保存）指向工具型内容的长尾价值"
+    mechanism_links: [encoding_specificity, long_tail_demand]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: [S2, S3]
+    last_verified: "2026-09"
+    note: "被收藏的内容匹配未来场景检索，适合做教程/清单/决策类供给。收藏/保存类行为各平台普遍采集（X/Meta 均存在书签类交互），但'工具型长尾价值'语义为本层归纳；本批官方源未逐条列出收藏信号，需在具体平台 adapter 实取确认。"
+  - pattern: "持续更新的栏目化供给培养复看习惯"
+    mechanism_links: [habit_loop_cue_routine_reward, mere_exposure, parasocial_relationship]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: [S1, S2, S3]
+    last_verified: "2026-09"
+    note: "固定时间/固定结构降低用户决策成本，把偶发观看转为仪式。官方源仅确认平台按观看/互动历史个性化分发（S1/S2/S3），'栏目化培养复看'为行为科学推断，无官方文档直接表述。"
+  - pattern: "结尾决定记忆与下一步动作"
+    mechanism_links: [peak_end_rule, goal_gradient_effect]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: [S1, S2, S3]
+    last_verified: "2026-09"
+    note: "峰终体验塑造整体评价；结尾的行动引导比中段任何一次呼吁都有效。官方侧仅有'浏览/完播时长被采集'的间接支撑（S1/S2/S3），峰终定律为心理学理论，属行业共识。"
+
+how_to_adapt:
+  - "新建平台 adapter：复制本文件，逐字段替换为平台事实；禁止沿用基线措辞冒充平台规则"
+  - "必须替换字段：distribution_model / recommendation_model / content_lifecycle / title_role / cover_role / sharing_mechanism / community_mechanism"
+  - "硬数字约束只写能确证的 [official_rule]，其余写 [industry_consensus] 并加'以平台最新公告为准'"
+  - "mechanism_links 只能引用 Mechanism Graph 既有节点 ID，不得新造理论（Platform as Adapter）"
+
+confidence: high

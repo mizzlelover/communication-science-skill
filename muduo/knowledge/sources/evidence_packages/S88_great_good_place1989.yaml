@@ -1,0 +1,26 @@
+# Evidence Package — S88 Ray Oldenburg 1989（The Great Good Place）
+# 标准格式。access_level 如实标注。
+source_id: S88
+title: "The Great Good Place: Cafés, Coffee Shops, Bookstores, Bars, Hair Salons, and Other Hangouts at the Heart of a Community"
+authors: "Ray Oldenburg"
+year: 1989
+journal: Addison-Wesley（首版；Da Capo Press 再版）（专著）
+doi: "无 DOI（专著）"
+url: "https://www.pps.org/article/roldenburg"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经 5 渠道交叉实取：① Oxford Academic 期刊表格（Oldenburg 第三空间八特征及定义：中立地/去等级化/以对话为主要活动/可达与包容/常客/低调/游戏氛围/家外之家）② PPS.org Placemaking Heroes 纪念文（第三空间定义原话+特征+酒吧/咖啡馆/杂货店举例+『Free assembly 始于第三空间』引文）③ AS.com 对 Oldenburg 的访谈（《Cheers》酒吧类比、郊区化与家居化侵蚀、『Social well-being and psychological health depend upon community』引文）④ findthirdplace.com 与 ortegagroupug.com（八特征清单）⑤ 雪球解读（第三空间=自愿/包容/低门槛/可持续社交的公共环境，星巴克『第三空间』打法）"
+research_question: "在家庭（第一空间）与工作（第二空间）之外，维系社区感与公共生活的『第三空间』是什么、具备什么特征、为何在当代美国衰落？"
+core_claims:
+  - "第三空间定义：『a generic designation for a great variety of public places that host the regular, voluntary, informal, and happily anticipated gatherings of individuals beyond the realms of home and work』——家为第一空间、工作为第二空间，咖啡馆/酒吧/理发店/书店等为非正式公共聚集的第三空间（PPS.org 引 Oldenburg 原话）"
+  - "第三空间八特征（Oxford Academic 期刊表格）：neutral ground（中立地，来去自由无义务）/ leveler（去等级化，社会地位暂时悬置）/ conversation is the main activity（以对话为主要活动）/ accessibility & accommodation（易达且包容）/ the regulars（常客赋予场所气质并吸引新人）/ a low profile（低调无矫饰）/ the mood is playful（游戏氛围）/ a home away from home（家外之家）"
+  - "第三空间的社会功能：孵化公民结社习惯——『Free assembly does not begin with formally organized associations…Those bodies are drawn from a prior habit of association nurtured in third places』，即第三空间是正式公民组织与民主参与的前置土壤（PPS.org 引文）"
+  - "衰落归因：郊区化、单一用途分区、汽车文化与私人化休闲侵蚀第三空间，生活沦为『home-to-work-and-back-again shuttle』，助长孤独；Oldenburg 直言『Social well-being and psychological health depend upon community』（AS.com 访谈引《The Great Good Place》原文）"
+  - "例证与文化形态：美国酒吧（《Cheers》）、英国酒吧、法国咖啡馆、意大利广场、日本居酒屋、非裔理发店等在不同社会承担类似功能（AS.com + grokipedia）"
+method: "城市社会学/定性社会理论专著：基于欧美咖啡馆、酒吧、理发店等历史案例与观察的社会学分析；非实验、非大规模调查"
+results: "（社会理论）『第三空间』成为城市规划、社区营造与商业（如星巴克定位）广泛引用的标准概念"
+limitations: "论证以观察与历史材料为主，缺乏系统数据检验；以美国郊区生活为靶心的批判有特定历史语境；线上空间能否构成真正的第三空间存在争议（第三方文献讨论）"
+boundary_conditions: "适用于有可预期重复接触的场所型聚集；纯一次性活动、强商业压力场所（进店即推销）不构成第三空间；线上第三空间需具备『常来都能遇上人』的机制"
+relevant_nodes: [third_place, sense_of_community, community_boundaries]
+notes: "third_place 节点的原始出处（book 级）。八特征经 Oxford Academic 期刊表格与多来源交叉确认；引文均来自实取页面。S88 已在 community.yaml 的 third_place 节点 source_ids 中登记。"
+last_verified: "2026-09"

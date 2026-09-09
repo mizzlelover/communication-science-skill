@@ -1,0 +1,170 @@
+platform_name: 小红书（Xiaohongshu）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础（2026-09 实取官方材料后更新）：商业报备义务、导流治理、违规处理措施
+  有官方文档支持（L1：社区规范/社区公约2.0/蒲公英平台）；双列分发、搜索心智、
+  CES 互动评分、封面机制等仍为行业共识（L3，官方未公开算法）。
+  图文图片上限 18 张、正文 1000 字等原标 official_rule 的条目本次实取未获官方文档支持，
+  已降级标注为 L3。所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {source: "《小红书社区规范》https://agree.xiaohongshu.com/h5/terms/ZXXY20221213003/-1", source_owner: "小红书（行吟信息科技）", source_type: official, claim_supported: "导流治理（3.2.1 禁止手机号/微信号/邮箱等个人联系方式，3.2.2 禁止网址/二维码/水印等导流形式）；违规处理措施（6.2 限制展示/禁言/封禁等）；虚假宣传与扰乱市场秩序治理", published_date: "未知（terms 编号 2022-12-13）", accessed_date: "2026-09-08", freshness: current, confidence: medium}
+  - {source: "《小红书社区公约2.0》https://www.xiaohongshu.com/crown/community/agreement", source_owner: "小红书（行吟信息科技）", source_type: official, claim_supported: "真诚分享/友好互动价值观；拒绝虚假人设、反对虚假营销与恶意竞争、AI 内容需标识；有序经营（商业行为与真实表达绑定）", published_date: "2026-01-19", accessed_date: "2026-09-08", freshness: current, confidence: medium}
+  - {source: "小红书蒲公英平台 https://pgy.xiaohongshu.com/", source_owner: "小红书（行吟信息科技）", source_type: official, claim_supported: "商业合作报备体系（品牌-博主合作走平台下单）；官方保障/数据真实/价格透明；笔记投中批量加热（内容加热）；定制/批量/众测合作模式", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "图文笔记（1-18 张图）"
+  - "视频笔记"
+  - "直播"
+  - "瞬间（轻量短内容）"
+
+dominant_user_intent:
+  - "主动搜索（消费/生活方式决策前查真实经验）"
+  - "逛种草（双列闲逛，无明确目标地被激发需求）"
+  - "收藏备用（把笔记当工具书存）"
+
+distribution_model: >-
+  搜索+推荐双引擎：新笔记先经小流量推荐测试，数据达标后扩大曝光；
+  决策类内容随后长期进入搜索流量 [industry_consensus]。
+  关注分发占比很低——粉丝量不决定流量，单笔记质量决定流量
+  （去中心化分发 [industry_consensus]）。
+
+recommendation_model: >-
+  双列瀑布流：点击率+互动率决定二次推荐；业内流传 CES 互动评分体系
+  （收藏/评论/转发/点赞权重不同，收藏权重高）[industry_consensus-官方未公开，
+  任何具体分值均为 experience_speculation]。
+
+social_graph_characteristics: >-
+  弱关系社区：关注关系不主导分发，陌生人内容占绝对主体；
+  博主与粉丝是"信任咨询"关系而非"偶像-粉丝"关系（source_credibility_model）。
+
+content_lifecycle: >-
+  爆发期数天+搜索长尾数月：笔记可被长期搜索反复唤醒——
+  "发布两个月后还在出单"是该平台区别于抖音的标志性现象 [industry_consensus]。
+
+primary_entry_points:
+  - "双列发现页（默认首页）"
+  - "顶部搜索框（一级入口，心智地位极高）"
+  - "关注页"
+  - "视频页/附近"
+
+attention_environment: >-
+  双列选择式浏览：用户在"比较"状态，同屏竞争多条笔记——
+  封面+标题是入选赛，点进详情后才是沉浸阅读；注意力在列表层已被分配。
+
+user_behavior: >-
+  "遇事不决小红书"的搜索心智 [industry_consensus]；
+  用户带着防忽悠雷达消费内容——对广告高度敏感，对"真实素人经验"高度信任
+  （authenticity_perception）；收藏行为极高频（工具化使用）。
+
+interaction_signals:
+  - "收藏：决策价值最高信号——'我以后用得上'，与长尾需求强相关"
+  - "评论：讨论/求链接/求细节，是需求信号的采集器"
+  - "点赞：态度认可，权重低于收藏 [industry_consensus]"
+  - "转发：分享给具体的人（'你看看这个'），点对点背书"
+  - "关注：关系沉淀，但对后续分发影响有限 [industry_consensus]"
+
+sharing_mechanism: >-
+  站内以收藏为主；站外分享到微信受口令化限制（外链封闭生态）
+  [industry_consensus-产品形态]；"截图+微信发送"是真实存在的暗传播路径。
+
+search_mechanism: >-
+  搜索是核心心智：搜索联想词、笔记关键词匹配、账号垂类权重影响排名
+  [industry_consensus]；标题前段关键词、正文自然提及、评论区讨论都参与索引
+  [industry_consensus]。大量品类搜索已替代传统搜索引擎的决策场景
+  （answer_engine_visibility）。
+
+community_mechanism: >-
+  评论区=集体决策现场："蹲链接""蹲教程""姐妹们别买"构成互助规范
+  （normative_influence）；博主回复评论是转化关键动作；无强社群产品，
+  社群沉淀靠粉丝群与群聊功能（较轻量）。
+
+algorithmic_features:
+  - "双列点击与互动反馈排序 [industry_consensus]"
+  - "搜索联想词与搜索页流量 [L3-原标official_rule，2026-09 实取未获官方文档支持（搜索为公开产品功能，但排序机制官方未公开）]"
+  - "薯条/聚光等付费加热与投放工具 [official_rule-产品存在，S3 蒲公英平台确认'笔记投中批量加热'能力]"
+  - "品类标签与人群画像匹配 [industry_consensus]"
+
+content_constraints:
+  - "[L3-原标official_rule，2026-09 实取未获官方文档支持] 图文笔记图片上限 18 张（以平台最新公告为准）"
+  - "[L3-原标official_rule，2026-09 实取未获官方文档支持] 笔记正文 1000 字上限（以平台最新公告为准）"
+  - "[industry_consensus] 标题约 20 字截断（以实际显示为准）"
+  - "[official_rule-商业报备义务见于 S3 蒲公英报备体系与 S2 公约'有序经营'] 商业内容需走报备/标注义务（利益相关声明，以最新规范为准）"
+
+title_role: >-
+  双重职责：搜索结果页的关键词匹配件+双列流的信息承诺。
+  "关键词前置+人群/结果具体化"（如"新手|租房改造 500 元全屋"）是
+  机制驱动的常见有效结构 [industry_consensus]；纯悬念标题搜索流量差。
+
+cover_role: >-
+  第一决定要素——"封面即标题"：双列流里封面承担 80% 以上的点击决策
+  [industry_consensus-比例表述为经验值]；大字标题封面、对比图、
+  结果前置图是高频有效形态（bottom_up_attention_capture + processing_fluency）。
+
+opening_role: >-
+  详情页首屏决定收藏与读完：首图+首行文字需兑现封面承诺；
+  正文首行在部分信息流预览中可见，承担二次钩子。
+
+tag_role: >-
+  话题标签是内容分类器与搜索聚合入口，不是流量卡 [industry_consensus]；
+  精准的品类标签帮助算法匹配人群，堆砌无关标签反而稀释画像。
+
+comment_role: >-
+  评论区是信任证据链：真实提问与博主认真回复构成转化的临门一脚；
+  "评论区比正文有用"的社区文化让运营评论成为正式工作而非附加动作。
+
+follow_role: >-
+  关注权重弱：粉丝量不保证流量，单笔记质量决定分发 [industry_consensus]；
+  关注的价值在粉丝群运营与搜索场景的账号权重积累 [industry_consensus]。
+
+risk_factors:
+  - "[official_rule-虚假宣传治理见 S1 社区规范、S2 公约2.0'反对虚假营销'] 极限词/虚假宣传/医美等品类合规红线（以最新规范为准）"
+  - "[official_rule-报备义务见 S3 蒲公英、违规处理见 S1 6.2] 未报备商业笔记被判违规限流（平台治理'软广'，以最新规则为准）"
+  - "[industry_consensus] 素人信任被营销消耗：过度种草导致用户对'安利'整体脱敏（authenticity_premium 反噬）"
+  - "[industry_consensus] 搬运/同质化判重限流：伪原创与模板化内容的流量惩罚 [industry_consensus-治理方向]"
+
+known_platform_patterns:
+  - pattern: "封面大字标题（结果前置+人群点名）"
+    mechanism_links: [bottom_up_attention_capture, processing_fluency, visual_hierarchy]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1/S2（背景参考，封面机制官方未公开）"
+    last_verified: "2026-09"
+    note: "双列选择环境里，封面要在 0.5 秒内完成'这是给谁的、能得到什么'；大字降低理解成本。边界：字体过大挤占画面信息，反而降低真实感。"
+  - pattern: "干货清单体（步骤化/编号化正文）"
+    mechanism_links: [information_overload, extraneous_cognitive_load, encoding_specificity]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1/S2（背景参考，收藏加权机制官方未公开）"
+    last_verified: "2026-09"
+    note: "结构化清单降低认知负荷并提升'值得收藏'的工具感——收藏率是推荐加权信号 [industry_consensus]。"
+  - pattern: "标题关键词前置服务搜索长尾"
+    mechanism_links: [answer_engine_visibility, long_tail_demand, category_entry_points]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1/S2（背景参考，搜索排序机制官方未公开）"
+    last_verified: "2026-09"
+    note: "把用户会搜的词放进标题前段，让笔记数月后仍被查询唤醒；纯玩梗标题牺牲长尾。"
+  - pattern: "素人真实感叙事（踩坑/翻车/自用）"
+    mechanism_links: [authenticity_perception, source_credibility_model, in_group_favoritism]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S2（公约2.0'真诚分享/拒绝虚假人设'方向一致；'真实感降低推销防御'机制本身为行业共识）"
+    last_verified: "2026-09"
+    note: "'和我一样的普通人'的身份亲近感降低推销防御；缺点披露反而提升可信度（两面说服）。"
+  - pattern: "评论区运营作为转化现场"
+    mechanism_links: [social_proof, informational_influence, reciprocity_norm]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1/S2（背景参考，评论加权机制官方未公开）"
+    last_verified: "2026-09"
+    note: "认真回复'蹲细节'的评论既是利他也是公开的信任展示；热评补充了正文的决策证据。"
+  - pattern: "首图对比/前后变化制造反差"
+    mechanism_links: [schema_violation, von_restorff_effect, prediction_error]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1/S2（背景参考，内容机制官方未公开）"
+    last_verified: "2026-09"
+    note: "与预期的偏差触发注意捕获；但反差必须被内容兑现，否则收藏后取关并拉低信任。"
+
+confidence: medium

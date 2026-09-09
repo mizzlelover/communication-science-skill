@@ -1,0 +1,26 @@
+# Evidence Package — S144 Loewenstein 1994（The Psychology of Curiosity）
+# 标准格式。access_level 如实标注。
+source_id: S144
+title: "The Psychology of Curiosity: A Review and Reinterpretation"
+authors: "George Loewenstein"
+year: 1994
+journal: "Psychological Bulletin 116(1): 75-98"
+doi: "10.1037/0033-2909.116.1.75"
+url: "https://doi.org/10.1037/0033-2909.116.1.75"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "一手 PDF（CMU 两个直链、APA PsycNet）抓取均失败，如实标注。渠道1 PubMed 引用记录（PMID 39155851 等，确认 DOI 10.1037/0033-2909.116.1.75）；渠道2 教学资源 mzujuan.xkw.com 引用的论文原文关键句；渠道3 datafield.dev《The Curiosity Gap》章节（信息缺口理论阐述：缺口=好奇、倒 U 曲线、触发条件）；渠道4 arXiv 综述（2510.12943）与 Cambridge Episteme 确认理论归属。"
+research_question: "好奇心如何产生？能否用一个统一框架重新解释此前 Berlyne 等提出的分散的好奇心理论？"
+core_claims:
+  - "好奇心产生于注意聚焦到知识缺口时（原文引句，经教学资源引用）：'attention becomes focused on a gap in one's knowledge. Such information gaps produce the feeling of deprivation labeled curiosity'"
+  - "好奇的个体被驱动去获取缺失信息以消除匮乏感（原文引句）：'The curious individual is motivated to obtain the missing information to reduce the feeling of deprivation'"
+  - "好奇心需要一定的基础知识：对一无所知的事物不会好奇；知道一点后好奇心被唤起，并随知识增加而增强（教学资源对原文的阐述）"
+  - "好奇心与已有知识呈倒 U 型关系：知识太少无缺口、知识太满缺口已填，中间区间好奇心最强（datafield.dev 阐述）"
+  - "该文是对百年好奇心研究的综述与再解释（信息缺口理论），成为该领域奠基框架（arXiv / datafield / Cambridge 多源确认）"
+method: "综述（Psychological Bulletin）：回顾 Berlyne（1960）以来好奇心/探索行为研究（驱动理论、最优唤醒等）并重新解释为信息缺口框架"
+results: "提出信息缺口理论：好奇心=感知到'已知'与'想知'之间缺口所引发的匮乏感；解释了为何'知道一点点'比'一无所知'更令人好奇（倒 U）"
+limitations: "未取得一手摘要/全文（APA 付费墙，CMU 作者主页 PDF 直链失效），核心内容经引用与教学资源交叉确认；该文为理论提出性综述而非单一新实验"
+boundary_conditions: "需要个体已具备部分相关知识（完全无知或完全已知均不产生缺口）；信息缺口诱发好奇，区别于单纯的新颖性偏好（novelty_preference）"
+relevant_nodes: [curiosity_gap, novelty_preference]
+notes: "一句话定位：好奇心'信息缺口理论'的奠基综述（信息缺口诱发好奇）。relevant_nodes 已在 prediction_surprise.yaml 核实（curiosity_gap、novelty_preference 均真实存在）。一手来源（CMU PDF x2、PsycNet）抓取失败，如实标 abstract_only/二手确认；核心引句来自教学资源对原文的直接引用，未编造。"
+last_verified: "2026-09"

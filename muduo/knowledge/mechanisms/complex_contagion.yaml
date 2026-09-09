@@ -1,0 +1,194 @@
+# complex_contagion — 复杂传染（Complex Contagion）：行为为什么需要多重社会确认
+domain: complex_contagion
+nodes:
+  - id: complex_contagion
+    canonical_name_en: Complex Contagion
+    canonical_name_zh: 复杂传染
+    aliases: [复杂传播, wide-bridges contagion]
+    domain: complex_contagion
+    definition: "复杂传染（complex contagion）指需要来自多个邻居的多重确认/强化才会被采纳的行为传播——与 simple contagion（简单传染：一次接触即可传播，如消息、疾病、梗）相对。Damon Centola 与 Michael Macy 于 2007 年提出该框架，Centola 2010 年发表于《Science》的健康行为网络实验提供了关键实验证据：行为在聚类（高密度）网络中比在随机网络中传播得更广。"
+    core_claim: "信息走窄桥（单条弱连接即可），行为走宽桥：需要社会成本与多重确认的行为，在高度聚类、多重强连接的网络中传播得远比在随机长程连接网络中好。"
+    mechanism: "采用一个有社会风险或成本的行为（健康习惯、新技术、抗议参与）会带来质疑、成本与不确定性，单次接触提供的证据不足以克服；来自多个不同来源的重复强化同时提供「确认 + 支持 + 规范许可」，才使个体跨过采用门槛。因此传播路径的结构很关键：聚类网络让接触者被多个已采用者包围（强化充足），而长程桥接网络虽快但接触者只有孤立的单一来源（强化不足，传播常在桥的远端熄火）。这与 weak_ties_strength 的信息逻辑形成明确对照——那是 simple contagion 的世界。"
+    causal_chain: "多重社会确认（多个已采用邻居）→ 采用成本与风险被覆盖 → 个体采用 → 接触面内强化密度上升 → 行为在网络中持续传播"
+    variables:
+      inputs: [行为的社会成本/风险, 邻居中已采用者数量与可信度]
+      moderators: [网络聚类程度, 接触的可信性与多样性, 行为身份显著性]
+      mediators: [社会强化累积, 规范许可感]
+      outputs: [行为采用率, 传播在网络中的广度与持续性]
+    evidence:
+      supporting:
+        - "Centola & Macy 2007 的理论框架：宽桥（wide bridges）假说（经典论文）"
+        - "Centola 2010《Science》健康社交网络实验：聚类网络中健康行为传播显著广于随机网络（受控网络实验）"
+        - "Centola 团队 2018 年发表于《Science》的大规模广域田野实验：围绕劝说式接触（含逐户上门式劝投方向）推动社会惯例转变，发现少数派规模越过临界点后惯例发生转变（对应 S124 centola2018tipping；方向性证据，不给数字）"
+        - "关于深度劝说（deep canvassing）式重复人际对话的田野研究显示多次深入接触可产生较持久的态度改变（方向性证据；库外方向性文献，无对应 EP）"
+      conflicting:
+        - "并非所有行为都是复杂传染：低成本、低风险行为（点击、转发、兴趣表达）更接近简单传染逻辑（研究讨论）"
+        - "大型观测数据中区分复杂传染与同质性仍困难（方法学讨论）"
+      replication:
+        - "聚类网络促进行为传播的发现被多项后续网络干预实验复制（包括健康、合作与投票领域，方向一致）"
+      meta_analysis: []
+    evidence_grade: A-
+    boundary_conditions:
+      - "适用于需要克服社会成本、不确定性或规范阻力的行为（健康习惯、新技术、公开表态）；纯信息类内容遵循简单传染"
+      - "需要接触者能感知「多个来源」的独立性；同一人反复劝说效果远低于多个来源的独立确认"
+    failure_conditions:
+      - "把行为传播当信息传播做「广播式投放」：触达广但强化密度为零，采用率低"
+      - "强行为进窄桥：只靠一个 KOL 或一条爆款内容推动有社会风险的行为，传播常在桥远端消失"
+    common_misinterpretations:
+      - "「病毒式传播=行为会跟着火」——爆款内容（简单传染）与行为采纳（复杂传染）遵循不同网络逻辑，前者不保证后者"
+      - "把 complex_contagion 与 social_reinforcement 混为一谈：social_reinforcement 是复杂传染的内在微观机制（多重确认如何起作用），complex_contagion 是传播过程层面的分类框架"
+    ethical_risks:
+      - "多重确认机制可被操纵：制造大量虚假独立来源（机器人、演员）伪装社会共识，驱动高风险行为采纳"
+    examples:
+      original_cases: [Centola 2010 健康网络实验：受试者被随机分配到聚类 lattice 网络或随机网络中报名健康论坛（实验描述见《How Behavior Spreads》）]
+      research_cases: [Centola 2018 年 Science 广域实验：劝说式接触推动社会惯例转变的临界点方向发现, 南布朗克斯宽带采用网络干预（《How Behavior Spreads》记述）]
+      modern_cases: [社区团购的「楼栋多人已拼」比「全网爆火」更能促成下单, 线下活动报名显示「同小区/同公司已有 N 人参加」提高转化]
+    communication_implications: "对行为类目标（打卡、购买、投票、参与），传播设计的关键不是触达量而是「目标人群身边的确认密度」：让用户一次接触中看到多个可信来源已采用（群内多人晒单、评论区多人真实反馈）。"
+    community_implications: "把新行为先「种」进社群的强连接小团内再外溢：聚类子群是行为传染的孵化器；大水漫灌式广而告之对行为改变几乎无效。"
+    content_applications:
+      body: "正文展示多个独立可信来源的采用证据（不同身份、不同时间的真实反馈），制造多重确认"
+      narrative: "讲述「一个人身边先后有几个人都这样做了，TA 才跟着做」的过程，示范复杂传染的真实形态"
+      sharing: "分享卡片展示参与人数结构（多少同小区/同行/同龄人），而非单纯总数"
+      comments: "运营促成多位真实用户的独立反馈（而非一人刷屏），评论区是复杂传染的强化场"
+    platform_implications: "推荐算法天然是简单传染的机器（一次曝光即可触达），对复杂传染的「多重确认」不敏感；社群、私域与线下接触是行为改变不可替代的强化结构（原则性判断）。"
+    related_nodes: [social_reinforcement, wide_bridges, strong_ties_support, network_density, weak_ties_strength]
+    conflicting_nodes: [weak_ties_strength]
+    source_ids: [S58, S52, S101, S124, S202]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Centola 2010 受控网络实验 + 多项后续网络干预复制（方向一致）"
+      effect_size: "方向一致，效应量中等（未逐项核实）"
+      replication_status: "实验主发现在健康/合作/投票领域有复制"
+      context_dependency: "仅对高成本/有社会风险行为成立；低成本行为更近简单传染"
+      downgrade_upgrade_reason: "2026-09 补充一手实验证据（S101），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S202, S101, S124]
+      supporting_evidence: [S58]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: social_reinforcement
+    canonical_name_en: Social Reinforcement
+    canonical_name_zh: 多重社会强化
+    aliases: [社会强化, reinforcing signals]
+    domain: complex_contagion
+    definition: "社会强化（social reinforcement）指个体从多个网络邻居处接收到关于同一行为的重复确认信号，每次额外的独立确认都提高采用概率。它是复杂传染的微观机制：Centola 的网络实验将采用概率的增长归因于「被多个已采用邻居包围」所产生的累积强化，而非单次曝光的重复堆叠。"
+    core_claim: "多源确认的促进作用累积上升（S101：采纳概率随已采用邻居数显著上升；曲线形态因行为与人群而异）；同一来源的重复曝光无法替代多个独立来源的确认。"
+    mechanism: "多源确认同时完成三件事：证据叠加（独立来源都这样做，说明行为真的可行）、风险分摊（「大家都这样」意味着偏离常规的不是我）、身份许可（多重确认把行为从「冒险」重定义为「正常」）。单源重复只完成说服而不完成许可，因此效果弱得多。强化信号还必须是可见且可归因的——用户需要能数出「有多少不同的人」。"
+    causal_chain: "多个独立邻居已采用 → 累积确认信号 → 证据叠加 + 风险分摊 + 规范许可 → 采用概率累积上升 → 个体采用"
+    variables:
+      inputs: [已采用邻居的数量, 来源的独立性与可信度]
+      moderators: [邻居与个体的关系强度, 行为社会成本, 强化信号的时间跨度（同期 vs 长期）]
+      mediators: [证据叠加感, 规范许可感, 不确定性下降]
+      outputs: [采用概率的累积上升, 采用后的坚持度]
+    evidence:
+      supporting:
+        - "Centola 的受控网络实验：采用概率随已采用邻居数量上升（实验证据，见《How Behavior Spreads》）"
+        - "聚类网络条件优于随机网络条件的重复发现，指向强化的累积结构（后续网络干预实验方向一致）"
+      conflicting:
+        - "强化信号存在收益递减：第 5 个确认的边际效应远小于第 2 个（方向性讨论，S101 EP 未载曲线数据）"
+        - "若多个「来源」被识破为同一组织操纵（水军），强化感崩塌并转为怀疑"
+      replication:
+        - "「多源确认优于单源重复」在受控实验中方向一致；具体强化曲线形态因行为与人群而异"
+      meta_analysis: []
+    evidence_grade: B+
+    boundary_conditions:
+      - "来源必须被感知为独立且可信；感知到的同源信号不算多重确认"
+      - "强化的作用窗口有限：确认信号过于分散（隔年一条）难以累积成采用推力"
+    failure_conditions:
+      - "用同一 KOL 反复轰炸代替多源确认——重复曝光带来的是疲劳而非许可"
+      - "强化信号与用户身份错配（展示完全不同人群在用），确认感无法传导到「像我这样的人」"
+    common_misinterpretations:
+      - "「刷屏=强化」——同源重复是曝光逻辑（注意力），多重独立确认才是强化逻辑（许可）；两者经常被混用导致投放策略错误"
+      - "把 social_reinforcement 与 social_proof 混为一谈：social_proof 是「看到他人行为」的启发式，social_reinforcement 强调多源累积对采用概率的动态作用，是传染网络层面的概念"
+    ethical_risks:
+      - "伪造多源确认（批量小号、组织化刷评）是对强化机制的高级滥用，比单个假账号更难识别且危害更大"
+    examples:
+      original_cases: [Centola 实验中受试者面对多个已报名邻居时采用概率上升的发现（《How Behavior Spreads》）]
+      research_cases: [网络干预实验中聚类条件对比随机条件的采用差异（方向一致的多项研究）]
+      modern_cases: [电商评论区「翻了几页都是不同人真实使用图」带来的确认感, 知识付费社群内多位学员不同时段的成果打卡（而非官方刷屏）]
+    communication_implications: "把「让用户数得出来的独立确认」做进内容：多位真实用户的不同表达 > 一位大 V 的重复背书；评论区运营的目标是多样性而非数量。"
+    community_implications: "社群是天然的强化发生器：让新成员加入时「迎面撞上」多个不同身份老成员的真实使用状态（迎新流程设计），这是转化的黄金时刻。"
+    content_applications:
+      body: "正文并列呈现 3 个以上不同身份使用者的具体经历（职业、场景、时间各异），显式制造独立确认"
+      narrative: "叙事采用多线结构（几个人各自独立地做出同一选择），让读者体验强化的累积"
+      sharing: "晒单模板鼓励个性化表达，避免千篇一律（一致性太高会被识破为同源）"
+      comments: "区分对待：真实多样反馈置顶，同质刷屏清理——评论区的可信多样性是该机制的生命线"
+    platform_implications: "平台把「确认」数量化（点赞数、评价数），但数量可刷而多样性难造；展示结构化多样性（不同人群标签、时间分布）的平台更能承载强化逻辑（原则性判断）。"
+    related_nodes: [complex_contagion, wide_bridges, network_exposure_effects, social_proof, strong_ties_support]
+    source_ids: [S58, S52, S101]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Centola 2010 受控网络实验直接测量多邻居强化与采用概率的关系"
+      effect_size: "方向一致、效应明显（具体曲线以原文为准）"
+      replication_status: "方向一致，具体强化曲线因行为而异"
+      context_dependency: "强化作用依赖来源独立性与信号时间密度"
+      downgrade_upgrade_reason: "2026-09 补充一手实验证据（S101），升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S101]
+      supporting_evidence: [S58]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: wide_bridges
+    canonical_name_en: Wide Bridges
+    canonical_name_zh: 宽桥
+    aliases: [桥接冗余, bridging redundancy]
+    domain: complex_contagion
+    definition: "宽桥（wide bridges）指连接两个社群的多条并行关系通道：不仅「跨出去了」（bridge，桥），而且「跨得宽」（两个群体间存在多条相互冗余的连接）。Centola 与 Macy 提出：复杂传染要跨过群体边界，需要的是宽桥——单条窄桥（一条弱连接）足以传播信息，但不足以传播需要社会支持的行为。"
+    core_claim: "跨群体传播有社会风险的行为，依赖两个群体间并行连接的冗余度（桥的宽度），而非单条长程连接的存在。"
+    mechanism: "窄桥把个体从熟悉的强化环境带出后暴露在孤立状态：桥远端的人没有共同朋友为其背书，采用的成本无人分担，传播熄火。宽桥则在边界两侧维持多条通道，跨界的采用者身边仍有多个已采用的同伴（强化不断线），行为才能带着支持网络一起过桥。宽桥通常由强连接群与跨群弱连接共同构成——这不是对 Granovetter 弱连接的否定，而是对其适用范围（信息）的限定：宽桥概念将其扩展到有社会成本的行为。"
+    causal_chain: "群体间多条并行连接 → 跨界采用者仍被已采用同伴包围 → 强化不断线 → 行为跨边界持续传播"
+    variables:
+      inputs: [两群体间并行连接的数量与强度]
+      moderators: [连接的多样性（不同子群各有一桥）, 跨界者的中心位置]
+      mediators: [跨界后的强化存续, 边界信任传递]
+      outputs: [行为跨群传播成功率, 跨圈层扩散广度]
+    evidence:
+      supporting:
+        - "Centola & Macy 2007 的宽桥理论：基于扩散模型仿真对高社会成本行为传播的再解释，并讨论其对社会运动参与等历史案例的含义（经典论文；库外无 EP，经 S58 转述，EP 待建）"
+        - "网络实验与仿真均显示聚类跨群结构优于随机长程连接对行为传播的作用（后续研究方向一致）"
+      conflicting:
+        - "对纯信息类传播，宽桥无额外优势：窄桥更快更省（与弱连接优势并不矛盾，属于不同传染类型）"
+      replication:
+        - "宽桥逻辑在受控网络实验中被重复支持；田野层面对「桥宽」的直接测量较少"
+      meta_analysis: []
+    evidence_grade: B+
+    boundary_conditions:
+      - "针对复杂传染（有社会成本的行为）成立；信息类传播用窄桥即可"
+      - "桥的宽度指关系冗余而非粉丝数：一个 KOL 单点跨群是窄桥，多个普通成员各自跨群才是宽桥"
+    failure_conditions:
+      - "把宽桥误做成「一个大 V 进驻」：单点跨群无法携带强化网络，行为传播依旧熄火"
+      - "两群体间并行连接全部依赖同一中介（去中介化风险），桥宽是虚假的"
+    common_misinterpretations:
+      - "「宽桥推翻了弱连接理论」——不是推翻而是限定范围：弱连接传递信息（简单传染），宽桥传播行为（复杂传染），Granovetter 自己的框架本就区分信息流与影响流"
+      - "把 weak_ties_strength、strong_ties_support 与 wide_bridges 看作竞争理论：三者是分工——弱连接给信息、强连接给支持、宽桥让支持跨过边界"
+    ethical_risks:
+      - "刻意在异质群体间制造宽桥可用于渗透式影响力操作（在对方社群内培养多重内应）"
+    examples:
+      original_cases: [Centola & Macy 论文中对高社会成本行为为何难以跨窄桥传播的理论案例讨论]
+      research_cases: [受控网络实验中「聚类跨群」条件的行为传播优势（《How Behavior Spreads》）]
+      modern_cases: [品牌同时在多个妈妈群各培养几位真实用户（多桥并行），比赞助一位头部妈妈博主转化更稳, 高校社团间联合活动的「多校各来几人」模式使参与习惯跨校传播]
+    communication_implications: "跨圈传播行为类目标时，做「多桥铺设」而非「单点爆破」：在目标圈层内同时建立多个真实连接点（多位小 KOC、社群互访），让每次跨界都有同伴支持。"
+    community_implications: "社群增长中的「拉新团建」应成对/成组进行：新成员带着已有伙伴进入新社群（宽桥），比单人空降留存高得多；社群合作互换的是「桥宽」而非「曝光」。"
+    content_applications:
+      body: "面向跨圈层受众的正文同时回应两侧语境（旧群体的质疑 + 新群体的门槛），不让跨界读者感到孤立"
+      narrative: "讲述「一群人一起跨进新领域」的故事，而非孤胆英雄叙事，示范宽桥结构"
+      sharing: "发起「带上一位同伴」的参与机制，把分享行为设计成宽桥生成器"
+      comments: "在跨圈内容下安排多位圈内成员友好迎新，让跨界评论者被已采用者包围"
+    platform_implications: "平台转发是窄桥机制（一跳直达但无支持网络）；群聊、协作功能等「多对多跨群」空间才承载宽桥——行为类增长策略必须利用后者（原则性判断）。"
+    related_nodes: [complex_contagion, weak_ties_strength, strong_ties_support, small_world_property, homophily]
+    conflicting_nodes: [weak_ties_strength]
+    source_ids: [S58, S52, S53, S101]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Centola & Macy 2007 理论 + Centola 2010 受控网络实验"
+      effect_size: "方向一致（聚类跨群优于随机长程）"
+      replication_status: "受控实验重复支持；田野直接测量较少"
+      context_dependency: "仅复杂传染成立；信息类传播窄桥更优"
+      downgrade_upgrade_reason: "2026-09 补充一手实验证据（S101），升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S101]
+      supporting_evidence: [S58]
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"

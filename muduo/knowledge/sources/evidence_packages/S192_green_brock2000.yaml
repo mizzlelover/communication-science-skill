@@ -1,0 +1,25 @@
+# Evidence Package — S192 Green & Brock 2000（叙事传输）
+# 标准格式。access_level 如实标注。
+source_id: S192
+title: "The role of transportation in the persuasiveness of public narratives"
+authors: "Melanie C. Green; Timothy C. Brock"
+year: 2000
+journal: Journal of Personality and Social Psychology, 79(5), 701-721
+doi: "10.1037//0022-3514.79.5.701"
+url: "https://doi.org/10.1037/0022-3514.79.5.701"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（PubMed PMID 11079236 + ProQuest 收录页 + OLB 镜像三处交叉）：传输（transportation）被提出为叙事影响信念的机制——定义为对故事的沉浸（absorption），包含意象、情感与注意聚焦；开发并验证了传输量表（含与 Tellegen 吸收量表汇聚效度、与 need for cognition 区分效度，ProQuest 章节目录核实）。四个实验：实验 1（N=97）传输程度增强故事一致信念与主角好感评价；实验 2（N=69）高传输读者在故事中发现的假音符（false notes）更少；实验 3（N=274）与实验 4（N=258）复制信念与评价效应，后者用加工指令直接操纵传输——降低传输即降低故事一致信念。关键发现：将故事标注为事实或虚构，传输与相应信念一般不受影响"
+research_question: "叙事如何改变现实世界信念？沉浸（传输）是否是比论据质量更核心的说服机制？"
+core_claims:
+  - "传输是叙事说服的核心机制：沉浸度预测故事一致信念与主角评价（实验 1/3 复制）"
+  - "高传输削弱反驳性认知：被传输的读者对故事中的不一致（假音符）更不敏感（实验 2）——『传输挤占反驳』为库内核心机制表述的一手依据"
+  - "传输可被指令操纵，且降低传输即降低说服（实验 4）——因果方向而非仅相关"
+  - "虚构标注边界：事实 vs 虚构标签一般不影响传输与信念改变——传输错觉（fiction belief change）的直接证据"
+method: "量表开发与验证 + 四个实验（材料 'Murder at the Mall' 叙事；来源操纵/加工指令操纵；N=97/69/274/258）"
+results: "（经典+广泛引用）传输→信念改变的机制确立；叙事说服与 ELM/HSM 传统区分（享受+说服并行）"
+limitations: "大学生样本与单篇叙事材料；传输的个体差异（transportability）为后续研究方向；效应幅度未在摘要中给出精确值"
+boundary_conditions: "低传输者保留反驳能力；故事质量与沉浸门槛影响进入传输；虚构标注在『一般不影响』意义上成立，但降低传输的手段（如识破假音符）仍有效"
+relevant_nodes: [narrative_transportation]
+notes: "narrative_transportation 节点『Green & Brock 2000 传输量表与实验传统未建 EP』标注的建包来源。摘要为官方文本，未编造。"
+last_verified: "2026-09"

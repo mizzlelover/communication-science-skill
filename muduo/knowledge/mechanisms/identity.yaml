@@ -1,0 +1,302 @@
+# identity — 身份与群体认同（Identity）：人们如何定义"我们是谁"，并据此消费、表态与站队
+domain: identity
+nodes:
+  - id: social_identity_theory
+    canonical_name_en: Social Identity Theory
+    canonical_name_zh: 社会认同理论
+    aliases: ["SIT", "Tajfel-Turner 社会认同论"]
+    domain: identity
+    definition: "Tajfel 与 Turner 提出的社会心理学理论：个体自我概念的一部分来自所隶属的社会群体（social identity）。人们经由『社会分类—社会认同—社会比较』过程，从群体成员资格中获得自尊与意义，并倾向于积极评价内群体（in-group）。"
+    core_claim: "仅凭群体成员资格本身（哪怕是无实义的最低限度分组），就足以引发内群体偏好与内外群体差异评价。"
+    mechanism: "个体将自己归入某社会类别后，『群体自我』被激活：群体声誉成为自我评价的一部分，维护内群体的积极独特性（positive distinctiveness）等于维护自我价值。社会比较从个体层转移到群体层，资源分配、评价与情感投入随之偏向内群体。这一过程在身份显著（salient）时自动发生，无须真实利益冲突存在；与『情境力量＞性格』的社会心理学一般结论同向（S21）。"
+    causal_chain: "社会分类 → 身份激活 → 群体自尊卷入 → 内群体偏好/外群体贬损 → 身份一致性消费与公开表态"
+    variables:
+      inputs: [群体成员资格, 身份显著性, 群体间比较情境]
+      moderators: [身份认同强度, 群体地位与地位稳定性, 替代身份可得性, 个体自我建构（独立型vs互依型；S19 载独立/互依自我建构的文化差异）]
+      mediators: [群体自尊, 积极独特性需求, 内群体情感承诺]
+      outputs: [内群体偏好, 外群体贬损, 群体一致性消费与言论, 集体行动意愿]
+    evidence:
+      supporting: ["Tajfel 等的最小群体范式（minimal group paradigm）系列实验：以无意义标准分组仍产生内群体偏爱", "社会认同论系列研究（见 S25 综合）：群体身份显著化后评价与行为偏移方向可预测", "跨群体、跨文化研究广泛重复出内群体偏爱的方向性"]
+      conflicting: ["最小群体情境中的资源分配偏向幅度明显小于真实冲突情境", "强群体认同并不必然带来外群体敌意，存在不贬损外群体的积极认同形式"]
+      replication: ["最小群体范式在多国实验室中被多次复制，方向稳定", "线上社群身份效应多为相关证据，因果证据相对薄弱"]
+      meta_analysis: ["无覆盖全域的单一 meta-analysis；以系统综述与理论整合研究为主"]
+    evidence_grade: "A-"
+    boundary_conditions: ["身份在当下情境被激活且与自我评价相关时效应最强", "群体地位受威胁或存在可用比较对象时，偏向放大", "拥有多重身份的个体在身份冲突时更可能切换参照群体而非固守"]
+    failure_conditions: ["个体主义自我建构主导、身份线索被刻意淡化的情境", "更高层级的共同身份（superordinate identity）被激活时，内群体偏向显著减弱"]
+    common_misinterpretations: ["误读为『人天生仇恨外群体』——理论核心是内群体偏爱，外群体敌意是派生且条件依赖的", "误以为必须存在真实利益冲突才会出现群体偏向"]
+    ethical_risks: ["刻意制造内外群体对立以提升参与度（拉踩营销、身份挑衅式内容）", "将用户锁定在单一身份叙事中，加剧极化与污名化"]
+    examples:
+      original_cases: ["Tajfel & Turner 关于社会认同与群体间关系的理论阐述（S25）", "Goffman 拟剧论视角下的成员符号与身份舞台（S24）"]
+      research_cases: ["最小群体实验：按绘画偏好或随机方式分组后，被试仍把更多资源分给『自己人』", "群体地位受威胁情境下评价与分配偏移的实验研究"]
+      modern_cases: ["品牌社群粉丝名、专属昵称激发身份化消费与自发传播", "球鞋圈、汉服圈、理财圈的圈层黑话与『圈内人』认同", "平台阵营化话题（a 股 vs 基金、国产 vs 外资）触发站队式转发"]
+    communication_implications: "传播的对象不是抽象个体，而是某个被点名的身份：先给身份肯定再给信息，比单纯罗列功能更能驱动转发与辩护行为；内容一旦被解读为身份攻击，将触发防御而非说服。"
+    community_implications: "社群应提供可认领的身份阶梯（新人→贡献者→长老），让成员资格可见、可宣称；头衔、徽章、圈内黑话是低成本黏合剂，但需治理机制防止走向排外与党同伐异。"
+    content_applications:
+      title: "标题植入身份词与身份荣耀：『写给每一个熬过熊市的 holders』"
+      body: "先肯定身份、再给信息：『我们这种人最怕的不是亏钱，是错过周期』，把理性内容绑定在身份叙事上"
+      comments: "评论区以身份肯定运营：置顶『懂行的人才会注意到这一点』类评论，强化圈层认同"
+      cta: "邀请性 CTA 优于指令性：『点个赞，让同行的人看到』，把点赞重构为身份仪式"
+    platform_implications: "算法按兴趣与圈层聚类分发，身份词（黑话、梗、tag）成为特征信号；粉丝牌、等级、专属表情等产品化机制强化社会认同，同时系统性放大冲突性身份内容。"
+    related_nodes: [self_categorization, in_group_favoritism, identity_signaling, identity_protective_cognition, community_boundaries, collective_identity_narrative, status_systems]
+    source_ids: [S25, S19, S21, S120, S24]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Tajfel & Turner 1979 社会认同理论奠基书章（S120，abstract_only）+ 最小群体范式系列实验"
+      effect_size: "任意/最小分类→内群体偏好；分类→认同→比较三阶段过程"
+      replication_status: "最小群体范式多国实验室复制方向稳定；线上社群身份效应多为相关证据"
+      context_dependency: "身份显著性与群体地位/威胁情境调节效应强度；跨文化有差异"
+      downgrade_upgrade_reason: "2026-09 补充 SIT 奠基一手书章（S120，abstract_only 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S120]
+      supporting_evidence: [S25, S19]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: self_categorization
+    canonical_name_en: Self-Categorization Theory
+    canonical_name_zh: 自我归类理论
+    aliases: ["自我分类理论", "SCT"]
+    domain: identity
+    definition: "Turner 在社会认同论基础上发展的子理论：自我概念在不同抽象层级（个人—群体成员—人类）之间流动，情境中的比较线索决定哪一层『活的自我』被激活。身份显著性（salience）是输入×准备度（fit）的函数，而非稳定人格属性。（注：三层自我流动与输入×准备度函数为 SCT 原始文献表述，S25 EP 未载）"
+    core_claim: "哪个身份被激活取决于当下情境的比较结构，改变情境中的参照框架即可改变人的自我定义与行为。"
+    mechanism: "当某一分类能最大化组内相似性与组间差异性（meta-contrast 原则，SCT 原始文献表述，S25 EP 未载）时，该分类变得显著；显著身份一旦激活，个体发生自我刻板化（self-stereotyping）——以群体原型校准自己的态度与行为，个体差异被抑制。因此同一个人在不同情境下可以表现出截然相反的从众或独立行为。"
+    causal_chain: "情境比较线索 → 类别可及性×匹配度 → 身份显著化 → 自我刻板化 → 原型一致性态度与行为"
+    variables:
+      inputs: [比较情境, 类别先备可及性, 群体原型清晰度]
+      moderators: [匹配度（比较性vs规范性）, 群体规模与地位, 个人认同与群体认同的相对强度]
+      mediators: [自我刻板化, 原型感知, 去个体化]
+      outputs: [原型趋同行为, 群体规范性言论, 内群体情感, 群体间区分行为]
+    evidence:
+      supporting: ["身份显著性操纵改变行为基线的系列实验（S25 综合所述）", "去个体化与群体规模效应研究支持『显著类别化增强原型趋同』（去个体化传统据 S25 综合所述）", "社会认同论传统的群际行为研究广泛支持情境依赖的身份激活"]
+      conflicting: ["强个人认同者在显著群体身份下的趋同幅度有限", "原型模糊的松散社群中，自我刻板化证据较弱"]
+      replication: ["显著性操纵的方向性结果在多研究中重复", "自我刻板化的强度测量在不同情境间波动较大"]
+      meta_analysis: ["无独立 meta-analysis；通常并入社会认同论整体证据评估"]
+    evidence_grade: "B+"
+    boundary_conditions: ["类别在个体记忆中可及且与情境匹配时才显著", "群体原型清晰可辨时自我刻板化更强", "个人认同主导的个体或情境中效应减弱"]
+    failure_conditions: ["情境线索互相冲突、无主导比较框架时", "群体原型长期模糊或内部分裂的社群"]
+    common_misinterpretations: ["把身份当稳定人格标签——自我归类理论强调身份是情境函数，同一个人在不同群聊里是不同的『自我』", "混淆 self-categorization theory 与 categorical perception 等认知概念"]
+    ethical_risks: ["通过设计比较框架诱导用户进入高唤起的身份类别以操纵消费", "利用自我刻板化销售与群体原型绑定的危险产品（如借贷、赌博式投资）"]
+    examples:
+      original_cases: ["Turner 等关于自我归类与群际关系的理论论述（S25）", "Lewin 的 B=f(P,E) 人-情境视角（S19）；去个体化（原型去个性化）研究传统（S25 综合）"]
+      research_cases: ["改变比较维度即可翻转显著身份的实验：同一批被试在不同分组线索下表现出不同原型趋同", "群体规模影响身份显著性的实验研究"]
+      modern_cases: ["直播间『家人们』称呼瞬间构建临时身份类别", " subreddit、豆瓣小组等场景化标签使人在不同社区切换自我定义", "年终盘点类产品（年度报告）强化『某类人』身份叙事并驱动分享"]
+    communication_implications: "想改变行为，先改变受众当下被激活的类别：『你是一个理性投资者』与『你是被割韭菜的散户』指向同一批人，但唤起完全不同的态度与行动。"
+    community_implications: "社群运营的关键杠杆是显著性与原型：新场景（活动、危机、里程碑）会重置成员的显著身份；维护清晰、积极的群体原型比堆砌权益更能稳定行为一致性。"
+    content_applications:
+      opening: "开场直接执行类别激活：『点开这条的人，大概率是不甘心只拿死工资的人』"
+      body: "给出清晰群体原型画像（语言、习惯、困扰清单），让读者完成自我归类"
+      comments: "用提问引导成员互相确认身份：『你们是不是也这样？』制造原型对齐的回声"
+      title: "标题用类别词替代产品词：『低欲望青年存款自救指南』优于『某某理财课程介绍』"
+    platform_implications: "平台的兴趣标签与推荐聚类在结构上持续执行自我归类：算法喂什么比较线索，用户就显著化什么身份；跨圈曝光被削弱时，原型趋同与圈层极化同时增强。"
+    related_nodes: [social_identity_theory, in_group_favoritism, normative_influence, self_presentation_impression_management, collective_identity_narrative, community_boundaries]
+    source_ids: [S25, S19]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Hogg & Abrams 1988《Social Identifications》（S25，book 级，substantial_excerpt：自我分类+社会比较两过程/原型去个性化）"
+      effect_size: "身份显著性操纵改变行为基线；自我刻板化以原型校准态度与行为"
+      replication_status: "显著性操纵方向性结果多研究重复；自我刻板化强度测量波动"
+      context_dependency: "类别可及且与情境匹配时显著；原型清晰可辨时更强"
+      downgrade_upgrade_reason: "2026-09 实取 S25 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S25]
+      supporting_evidence: [S19]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: identity_signaling
+    canonical_name_en: Identity Signaling
+    canonical_name_zh: 身份信号
+    aliases: ["身份信号理论", "identity signaling theory"]
+    domain: identity
+    definition: "关于消费与言论如何作为身份信号（identity signaling）起作用的理论方向：当某种品味或行为成为群体的标志性信号时，人们会通过采纳或回避它来声明（或保护）自己的群体身份，信号价值常常压过产品本身的效用。（证据定位：EP 支持为消费-身份教科书框架（S72）与从业者观察（S59/S83/S85）；核心的 Berger & Heath 信号稀释系列实验为经典文献，未建包）"
+    core_claim: "当消费对象与特定身份强绑定后，『外人是否在场』决定了人们是炫耀它还是抛弃它——信号功能优先于功能价值。"
+    mechanism: "群体身份需要可见符号来维持与传递；当某符号被广泛识别为『某类人专属』时，使用它就是在向内群体发信号并划清与外群体的界限。一旦该信号被外群体大量采纳（signal dilution），内群体成员会转而放弃或贬低该符号，迁移到新符号上。这解释了品味与潮流的轮转以及『变了味』的社区退出潮。"
+    causal_chain: "符号与身份绑定 → 符号可见性 → 向内群体发信号/与外群体划界 → 外群体稀释 → 弃用并迁移新符号"
+    variables:
+      inputs: [符号与身份的绑定强度, 外群体采纳可见度, 观众构成]
+      moderators: [身份认同强度, 身份安全度（secure vs insecure）, 符号成本与门槛]
+      mediators: [信号发送动机, 身份威胁感知]
+      outputs: [选择性展示, 符号弃用与迁移, 品味轮转, 圈层退出]
+    evidence:
+      supporting: ["身份信号方向的系列实验与田野研究（Berger 与 Heath 等团队）：观众构成变化导致符号采用与弃用反转（经典文献，未建包）", "消费行为研究中身份威胁后转向替代符号的证据（S72 教科书综述）", "S85 的从业者观察：成熟期社群并非自我维持，成员流失需持续吸引新成员；S83 同向（社群成长靠持续吸引真诚的人与身份培养）"]
+      conflicting: ["低身份相关度、高功能价值的品类中，信号效应弱", "强身份安全者对外群体稀释不敏感，甚至欢迎扩散"]
+      replication: ["实验室内的信号调节效应有多项重复", "田野情境中效应大小高度依赖符号的可见性与可模仿性"]
+      meta_analysis: ["无专门 meta-analysis；证据以系列实验与案例研究为主"]
+    evidence_grade: "B"
+    validation_status: PARTIALLY_VALIDATED
+    boundary_conditions: ["符号必须公开可见且可被观众解读", "身份与符号的绑定需在目标人群中已有共识", "观众中内/外群体的构成决定信号方向"]
+    failure_conditions: ["匿名或无观众情境（信号无接收者）", "符号被平台大规模商品化后，原身份群体已整体迁离的场景", "纯粹功能型消费、身份关联极弱的品类"]
+    common_misinterpretations: ["误以为『破圈』只赚不赔——对身份型社群，破圈即信号稀释，伴随老用户流失", "误以为用户买的是产品本身，忽视了购买的是『向谁发信号、发什么信号』"]
+    ethical_risks: ["刻意制造身份排他符号实施阶层筛选或价格歧视", "用身份焦虑驱动符号性消费（ luxury-ification ）"]
+    examples:
+      original_cases: ["消费与身份绑定导致符号弃用与迁移的实验证据（S72 教科书所引研究传统）", "STEPPS 框架中『social currency / 公开性』与身份展示的论述（S59）"]
+      research_cases: ["观众构成操纵实验：当目标符号被外群体广泛采纳后，内群体成员的符号采用率下降", "身份威胁后转向替代符号的选择实验"]
+      modern_cases: ["小众乐队走红后老粉『粉转路人』", "某理财术语成为大众梗后，专业投资者改用更小众的表达", "汉服圈对『影楼风』的区隔与符号迁移"]
+    communication_implications: "内容本身就是身份信号：转发某篇文章等于佩戴某个符号。想让内容传播，先回答『转发它让转发者看起来像什么人』；同时警惕破圈双刃剑。"
+    community_implications: "社群扩张应管理符号供给：为老身份保留高门槛符号（进阶认证、内部黑话），为新人设计入门符号，避免核心身份被稀释引发核心用户出走。"
+    content_applications:
+      title: "标题让目标身份『被看见』：『一份只有长线持有者才会收藏的清单』"
+      cta: "把分享框定为身份声明：『转给你身边那个总说早知道的人』"
+      sharing: "设计可展示的成果符号（打卡图、持仓年化截图模板），降低转发成本同时提高信号辨识度"
+      comments: "引导成员用圈内黑话互评，维持符号边界与社区独特感"
+    platform_implications: "平台推荐加速符号扩散与稀释周期：小众符号从出现到大众化的时间被压缩，身份型社群的『迁居』频率随之提高；平台级符号（头像挂件、粉丝徽章）成为官方身份信号层。"
+    related_nodes: [social_identity_theory, in_group_favoritism, distinctive_brand_assets, status_systems, community_boundaries, stepps_sharing_framework, positioning_mechanism]
+    source_ids: [S59, S72, S83]
+    provenance:
+      primary_sources: ['S59', 'S72', 'S83']
+      last_verified: "2026-09-09"
+    last_reviewed: "2026-09"
+
+  - id: self_presentation_impression_management
+    canonical_name_en: Self-Presentation / Impression Management
+    canonical_name_zh: 自我呈现与印象管理
+    aliases: ["拟剧论", "dramaturgy", "Goffman 拟剧论"]
+    domain: identity
+    definition: "Goffman 在《日常生活中的自我呈现》提出的拟剧论（dramaturgy）：社会生活类似剧场，个体在『前台』按社会期望管理形象，在『后台』卸下表演；印象管理（impression management）是人们有意无意地控制他人对自己形成印象的过程。"
+    core_claim: "人的公开行为很大程度上是面向观众的表演，观众缺席时表演会松弛甚至反转。"
+    mechanism: "个体依据特定观众与舞台定义选择表演区域（front stage / back stage），通过服饰、语言、互动仪式维持『人设』；表演一旦穿帮（失面子）会触发补救行为。社交媒体把前台观众不可见地聚合（context collapse，情境坍缩），使印象管理的难度与风险上升：一个面向所有观众的表演必须更含糊、更安全。"
+    causal_chain: "观众在场 → 表演动机 → 形象管理行为 → 他人印象形成 → 正/负反馈调节后续表演"
+    variables:
+      inputs: [观众构成与可见度, 舞台规范, 面子 stakes]
+      moderators: [观众同质性, 匿名性, 记录与存档可能性, 自尊与自我监控水平]
+      mediators: [面子关切, 人设一致性需求]
+      outputs: [选择性自我暴露, 印象修饰行为, 失面子后的补救/退场, 后台行为转移至私密空间]
+    evidence:
+      supporting: ["Goffman 的互动民族志观察（S24）奠定了剧场模型，日常互动中广泛可辨", "社交媒体研究：匿名度与观众可见度改变自我呈现的强度与真实感", "自我监控（self-monitoring）个体差异研究支持印象管理倾向的稳定存在"]
+      conflicting: ["印象管理难以完全解释无观众的私人行为；纯内驱行为（兴趣、习惯）表现较少表演性", "部分线上行为更真实而非更表演（匿名披露研究）"]
+      replication: ["剧场框架作为观察模型被反复应用于线上行为研究", "量化复制的难点在于表演强度缺乏统一测量"]
+      meta_analysis: ["无统一 meta-analysis；以理论应用研究与质性证据为主"]
+    evidence_grade: "B"
+    boundary_conditions: ["存在可感知的观众与互动预期时最强", "高面子 stakes 场景（求职、婚恋、公开社群）表演强度更高", "匿名小圈子里表演让位于自发表达"]
+    failure_conditions: ["完全匿名且无记录的情境", "表演成本远高于收益的低利害互动", "观众因长期接触而拆穿人设的亲密关系"]
+    common_misinterpretations: ["把印象管理等同于『虚伪』——Goffman 认为表演是社会协作的常规部分，不是道德缺陷", "误以为线上人设必然崩塌；稳定舞台与稳定观众可长期支撑稳定人设"]
+    ethical_risks: ["利用失面子恐惧实施社交操控（人肉、挂人、公开处刑）", "以『真实』之名贩卖人设，长期侵蚀信任生态"]
+    examples:
+      original_cases: ["Goffman《日常生活中的自我呈现》的前台/后台、互动仪式与面子工作（S24）"]
+      research_cases: ["自我监控与表演倾向的个体差异研究传统", "情境坍缩情境下青年用户自我呈现策略的研究"]
+      modern_cases: ["朋友圈分组可见、微博小号/大号分离", "直播间人设（嘴替型、陪伴型、专业型）与后台花絮的『去表演化表演』", "知识博主被扒『后台』引发的信任危机"]
+    communication_implications: "内容要给受众『可表演的素材』：用户转发打卡图、晒收益截图，本质是替他们完成一次低成本高收益的表演；为用户的观众设计内容，而不只为用户本人设计。"
+    community_implications: "社群是剧场也是后台：需要公共表演舞台（成就展示、案例征集），也需要安全后台（内部吐槽、互助群）——只设计前台会让成员因表演疲劳而流失。"
+    content_applications:
+      opening: "开场降低表演焦虑：『这篇文章你可以收藏但不转发，没人知道你看过』，反而提高完读率"
+      visual: "提供美观、可晒、带圈层符号的结果模板（截图、证书、海报），替代用户自己做图"
+      sharing: "分享文案替用户写好『表演台词』：『我刚测完，居然是 XX 型，你呢？』"
+      comments: "评论区设计安全的『前台互夸』与『后台互怼』双区，满足不同表演需求"
+    platform_implications: "平台的可见性设计（公开/仅好友/匿名、阅后即焚、小号生态）直接决定表演强度；推荐算法把私人内容推向陌生人时，等于强行扩观众席，触发更保守或更极端的表演策略。"
+    related_nodes: [identity_signaling, self_categorization, parasocial_relationship, authenticity_perception, need_to_belong, status_systems]
+    source_ids: [S24, S21]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Goffman 1959 拟剧论奠基专著（S24，substantial_excerpt，前台/后台/印象管理四策略/批评面，多源交叉实取）"
+      effect_size: "前台-后台模型与印象管理四策略；情境坍缩下表演策略变化"
+      replication_status: "剧场框架作为观察模型被反复应用于线上行为研究；量化复制难点在表演强度测量"
+      context_dependency: "观众可见性与面子 stakes 调节表演强度；匿名与低利害场景表演减弱"
+      downgrade_upgrade_reason: "2026-09 补充拟剧论奠基专著（S122，abstract_only 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 同书重复登记合并 S122→S24（S24 为 substantial_excerpt 实质版），引用重定向至 S24，S122 标 MERGED_INTO 移出注册表"
+    provenance:
+      primary_sources: [S24]
+      supporting_evidence: [S21]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: identity_protective_cognition
+    canonical_name_en: Identity-Protective Cognition
+    canonical_name_zh: 身份保护性认知
+    aliases: ["motivated reasoning（动机性推理）", "身份保护推理"]
+    domain: identity
+    definition: "信息加工中的动机性推理（motivated reasoning）形式：当某结论与所属群体的立场绑定后，人们以保护群体身份为首要目标来评估证据——接受群体一致的弱证据，抵制群体不一致的强证据，且认知资源越充裕越擅长『精致地』辩护。"
+    core_claim: "对身份绑定的议题，加工证据的首要目标不是求真而是守护群体归属，于是聪明与信息量可能只放大偏差。"
+    mechanism: "群体成员资格承载自尊与关系利益，承认与群体相悖的事实会带来身份代价（被内群体惩罚）。因此证据评估由方向性动机驱动：对不一致证据提高质疑门槛、搜寻反驳框架，对一致证据降低门槛。该过程伴随情绪唤起（被威胁感），且在高卷入、强认同、高知识者身上更强——知识提供了更多『反驳弹药』。"
+    causal_chain: "议题与群体立场绑定 → 身份威胁 → 方向性动机 → 选择性证据评估 → 立场极化而非信念更新"
+    variables:
+      inputs: [议题与身份的绑定度, 证据与群体立场的方向, 认知能力与知识水平]
+      moderators: [群体认同强度, 内群体惩罚预期, 议题政治化/极化程度]
+      mediators: [身份威胁感, 反驳性论点生成, 情绪唤起]
+      outputs: [信念极化, 证据评价双标, 立场辩护行为, 拒绝改判]
+    evidence:
+      supporting: ["Kahan 等团队的文化认知（cultural cognition）研究：高科学素养者在争议议题上反而更极化（研究方向，经典文献未建包/未登记 EP）", "动机性推理的实验传统（S21、S26 综述所述）：对不一致证据的更严格审查可被实验诱导", "政治传播领域的证据评价双标研究（同一证据框架按立场打分不同）"]
+      conflicting: ["在议题未与身份绑定时，同样的个体表现出相当水平的准确推理", "精度动机（accuracy motivation）被激活（如 accountable 情境）可部分抵消方向性偏差"]
+      replication: ["方向性推理的基本范式有多团队重复", "『高知识者更极化』的结果在部分议题与样本中存在波动"]
+      meta_analysis: ["无权威 meta-analysis；以系列实验与调查-实验结合研究为主"]
+    evidence_grade: "B+"
+    boundary_conditions: ["议题已被政治化或阵营化时最强", "受众身份依赖该议题阵营时最强", "私人推理情境（无问责压力）中更强"]
+    failure_conditions: ["议题与身份脱钩、被框定为技术问题而非站队问题时", "存在跨阵营的共同身份与问责结构时", "成本外显、错误代价即时可见的决策场景"]
+    common_misinterpretations: ["误以为『多给事实、多科普』就能纠正——对身份绑定议题，事实供给反而提供弹药", "把动机性推理等同于智商问题，忽视了它是关系理性的产物"]
+    ethical_risks: ["利用身份威胁制造焦虑以固化受众（恐惧型私域话术）", "刻意阵营化议题以收割对抗性流量"]
+    examples:
+      original_cases: ["Haidt 对道德直觉先于推理的论述（S26）：推理常是直觉的律师", "Aronson 对认知失调与自我辩护的综述（S21）"]
+      research_cases: ["Kahan 等的文化认知实验：同一数学/科学任务，答案与立场冲突时正确率下降", "证据评价双标实验：同一研究摘要，按结论立场被赋予不同的方法学评价"]
+      modern_cases: ["投资社群中对负面基本面数据的集体无视", "粉丝社群对偶像负面新闻的框架化辩护", "健康话题（疫苗、偏方）在家族群的站队式传播"]
+    communication_implications: "对身份绑定议题，传播的第一战场是身份而非证据：降低身份代价（给台阶、给『转变不等于背叛』的叙事）、用内群体信源转述异见信息，比堆证据更有效。"
+    community_implications: "社群治理应在议题阵营化之前建立事实规范（共同信源、事实官机制）；一旦阵营化，管理员纠正反而被解读为身份背叛，纠错成本随时间指数上升。"
+    content_applications:
+      body: "用『我们曾都以为……后来我学会……』的自我修正叙事，把观点转变框定为身份升级而非背叛"
+      evidence: "证据由受众内群体的可信者转述（圈内意见领袖引用），而非直接抛出对立阵营信源"
+      comments: "预置『问得好，我也重新查过』类回应，给质疑者身份肯定以阻止防御升级"
+      opening: "开场先做身份确认再谈事实：『我们都想把钱管好，所以更值得把这件事看全』"
+    platform_implications: "算法按互动加权，身份冲突内容获得放大；推荐系统把异见信息推给强认同者时，常触发反驳式互动（负反馈反而加权），形成『越推越偏』的再生产循环。"
+    related_nodes: [cognitive_dissonance, in_group_favoritism, psychological_reactance, social_identity_theory, filter_bubble_echo_chambers, misinformation_velocity]
+    conflicting_nodes: [source_credibility_model]
+    source_ids: [S26, S21]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Haidt 2012《The Righteous Mind》（S26，book 级，substantial_excerpt：社会直觉模型/道德基础）+ Kahan 文化认知方向"
+      effect_size: "直觉先行、推理后置（骑象人/大象）；身份绑定议题上证据评估双标"
+      replication_status: "方向性推理范式多团队重复；高知识者更极化存在样本波动"
+      context_dependency: "议题与身份绑定；精度动机可部分抵消方向性偏差"
+      downgrade_upgrade_reason: "2026-09 实取 S26 道德心理学核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S26]
+      supporting_evidence: [S21]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"
+
+  - id: in_group_favoritism
+    canonical_name_en: In-Group Favoritism (Minimal Group Paradigm)
+    canonical_name_zh: 内群体偏爱（最小群体范式）
+    aliases: ["minimal group effect", "内群体偏好", "群内偏爱"]
+    domain: identity
+    definition: "Tajfel 最小群体范式揭示的现象：仅依据无意义标准（如美术偏好、掷硬币）把人临时分组，成员就会把更多资源、更高评价给予内群体，即使对自己毫无物质收益。它是社会认同理论的行为证据核心。"
+    core_claim: "『我们vs他们』的分类本身（不含任何利益、历史或接触信息）就足以产生系统性的分配与评价偏向。"
+    mechanism: "被分组后，归属感与自尊被捆绑于群体结果；把资源让渡给内群体是低成本的身份维护行为。分配策略上，人们常在『最大化内群体绝对收益』与『最大化内外差距』之间选择后者，说明相对地位比绝对所得更接近动机源头。该偏向在分配、评价、记忆、信任实验中广泛出现。"
+    causal_chain: "最小分类 → 归属激活 → 群体自尊卷入 → 相对优势偏好 → 资源/评价偏向内群体"
+    variables:
+      inputs: [任意分类标准, 分类的显著性, 分配决策权]
+      moderators: [分类是否有意义与正当性, 群体互动历史, 个体社会支配倾向]
+      mediators: [归属感, 群体自尊, 相对地位关切]
+      outputs: ["资源分配偏向（有时以牺牲绝对总量为代价）", "内群体正面评价与信任", "外群体同质化知觉"]
+    evidence:
+      supporting: ["Tajfel, Billig, Bundy 与 Flament 的最小群体实验：无意义分组下出现让渡绝对收益以扩大相对差距的分配", "最小群体范式在多国、多年龄样本中的重复", "评价、记忆与信任任务中的内群体偏向证据（S25 综合所述）"]
+      conflicting: ["部分复制发现效应幅度对任务结构与计分方式敏感", "强个人主义者或高互依文化样本中偏向模式存在差异"]
+      replication: ["方向性结果高度可复制，是最稳定的社会心理学现象之一", "『最大化差距vs最大化收益』的策略占比在不同研究间波动"]
+      meta_analysis: ["最小群体文献的综述整合支持偏向的稳健性；无独立权威 meta-analysis"]
+    evidence_grade: "A-"
+    boundary_conditions: ["分类标准被被试理解为真实的『某类人』划分时成立", "被试意识到自己在做分配决策、决策可见时更强", "对儿童与成人样本均成立，但幅度随年龄与文化背景变化", "群际接触在满足平等地位、共同目标、合作与制度支持四条件时可抑制偏向（接触假说，S22）"]
+    failure_conditions: ["分类被明确标注为随机且无社会含义时偏向减弱但不消失", "被更高层共同身份覆盖时偏向被抑制", "个体处于强烈个人目标竞争而非群际比较框架时"]
+    common_misinterpretations: ["误以为内群体偏爱必然伴随外群体仇恨——最小群体中的偏向主要表现为偏爱而非敌意", "误以为需要群体利益冲突才会出现偏向"]
+    ethical_risks: ["利用任意分类制造虚假对立以提升参与（拉踩式运营、站队话题）", "在内群体保护名义下合理化对外群体的排斥与歧视"]
+    examples:
+      original_cases: ["Tajfel 等的最小群体实验（按 Klee/Kandinsky 绘画偏好分组的资源分配）", "社会认同论对『偏爱优先于敌意』的理论阐述（S25）"]
+      research_cases: ["分配矩阵实验：被试在保证内群体绝对收益与最大化内外差距间选择", "最小群体下的信任与评价实验"]
+      modern_cases: ["电商平台粉丝团的应援式打投", "游戏公会的阵营对立叙事", "社群里『老用户 vs 小白』的隐性分层话语"]
+    communication_implications: "为受众提供一个值得偏爱的『我们』（共同标签、共同敌人是问题不是共同敌人是成就），可显著提升互推、抱团与留存；但要避免以贬损外群体为燃料的廉价动员。"
+    community_implications: "把内群体偏爱导向建设性出口：成员资格换互助、共创与守护社区规范，而非单纯排他；定期安排跨群体合作任务以抑制偏向硬化为敌意。"
+    content_applications:
+      title: "标题建立『我们』框架：『写给还在犹豫要不要开始定投的新手』而非泛化标题"
+      cta: "CTA 用内群体互惠语言：『转给同在路上的伙伴』"
+      comments: "置顶内群体成员的真实互助案例，把偏爱转化为社区资产"
+      body: "叙事中设置共同任务（挑战、打卡、共创），让偏爱有行为出口"
+    platform_implications: "平台的阵营化话题机制（对立投票、战队、pk 活动）直接调用最小群体逻辑提升互动；标签化分发强化『我们vs他们』的边界感知，需平台治理介入以防止偏向升级为骚扰。"
+    related_nodes: [social_identity_theory, self_categorization, identity_protective_cognition, community_boundaries, collective_effervescence, ostracism_effects]
+    source_ids: [S25, S22, S120]
+    validation_status: PARTIALLY_VALIDATED
+    grade_justification:
+      independent_studies: "Tajfel & Turner 1979《An Integrative Theory of Intergroup Conflict》奠基书章（S120，最小群体范式；S120 仅摘要级支持）+ Allport 1954《The Nature of Prejudice》（S22，book 级，substantial_excerpt：接触假说四条件，作边界条件来源）"
+      effect_size: "任意分类→内群体偏好；接触假说获 Pettigrew & Tropp meta 支持"
+      replication_status: "最小群体范式多国复制；接触条件满足时偏见降低稳健"
+      context_dependency: "身份显著性与群体地位/威胁情境调节；接触需四条件"
+      downgrade_upgrade_reason: "2026-09 补充最小群体范式一手书章（S120，abstract_only 如实标注），S22 调整为边界条件来源；由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
+    provenance:
+      primary_sources: [S120]
+      supporting_evidence: [S25, S22]
+      last_verified: "2026-09"
+    last_reviewed: "2026-09"

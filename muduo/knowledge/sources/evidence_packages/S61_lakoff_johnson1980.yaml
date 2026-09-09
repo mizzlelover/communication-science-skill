@@ -1,0 +1,25 @@
+# Evidence Package — S61 Lakoff & Johnson 1980（Metaphors We Live By）
+# 标准格式。access_level 如实标注。
+source_id: S61
+title: "Metaphors We Live By"
+authors: "George Lakoff; Mark Johnson"
+year: 1980
+journal: University of Chicago Press（专著）
+doi: "无 DOI（专著）"
+url: "https://www.cambridge.org/core/books/metaphor/conceptual-metaphors/2EB6E4BBB9E616C0343DEB77E31A2153"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "概念隐喻理论核心经多源交叉实取：Cambridge 教材章（CONCEPTUAL METAPHOR 定义与 LOVE IS A CONTAINER 等例）+ ACL 综述（ARGUMENT IS WAR/TIME IS MONEY/SAD IS DOWN）+ 中文深度解析（具身认知/隐喻分类/体验主义）"
+research_question: "隐喻只是修辞装饰，还是人类思维与行动的基本机制？"
+core_claims:
+  - "隐喻不是语言的修辞点缀，而是概念性的：『我们赖以思考和行动的普通概念系统本质上是隐喻性的』"
+  - "概念隐喻把抽象目标域映射到具身体验源域：ARGUMENT IS WAR / TIME IS MONEY / SAD IS DOWN / LOVE IS A JOURNEY"
+  - "隐喻系统性地凸显与遮蔽现实的某些方面；三分分类：方位隐喻/实体隐喻/结构性隐喻，最终奠基（grounded）于身体经验（具身认知）"
+  - "『争论是战争』不只是说话方式——我们真的会赢/输争论、攻击/防守立场：隐喻结构着我们在领域中的行为"
+method: "认知语言学理论专著（日常语言分析）+ 大量语言证据"
+results: "（理论奠基）概念隐喻理论成为认知语言学与具身认知的基石，被政治/法律/教育等领域广泛应用"
+limitations: "专著全文未获取；理论为语言学论证（非实验）；后续研究在神经与实验层面有所扩展"
+boundary_conditions: "隐喻效应依赖源域在受众文化中的默认联想；具体议题与硬数据在场时可被部分抵消"
+relevant_nodes: [metaphor_framing, framing_effects, negation_ironic_rebound]
+notes: "metaphor_framing 的一手理论来源（book 级）。ARGUMENT IS WAR 等经典例为公开标准内容，未编造。"
+last_verified: "2026-09"

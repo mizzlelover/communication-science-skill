@@ -1,0 +1,25 @@
+# Evidence Package — S203 Gouldner 1960（互惠规范）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S203
+title: "The Norm of Reciprocity: A Preliminary Statement"
+authors: "Alvin W. Gouldner"
+year: 1960
+journal: American Sociological Review, 25(2), 161-178
+doi: "10.2307/2092623"
+url: "https://doi.org/10.2307/2092623"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "引用元数据与理论主张经 4 个独立源交叉核实（未取得原文）：①页码与 DOI（ASR 25(2):161-178, 10.2307/2092623）经 Cambridge/SCIRP/tandfonline 参考文献表三处一致；②理论主张（教科书通行转述）：互惠规范是跨文化的普遍规范——受惠者有回报义务，拒绝回报会引发内疚与道德谴责；规范包含两组普遍成份：获益时应回报、回报时应再度获益（对施惠者的禁止性条款：不得索取过度）；③实证后续：Willer 等 2012 PLoS One（NBA 助攻数据）——直接互惠时间依赖（受助攻后回报概率最高、随时间衰减），未发现广义互惠『pay it forward』证据"
+research_question: "互惠作为道德规范的普遍结构是什么？"
+core_claims:
+  - "互惠规范是普遍性道德规范（而非仅交换策略）：两成份结构——(1)人们应帮助帮助过自己的人；(2)人们不应伤害施惠者"
+  - "互惠是大规模合作演化的基础：不回报者丧失合作声誉——规范在制度出现前已提供稳定化功能"
+  - "实证校正：互惠具有强时间依赖与直接性（Willer 2012：受助攻后回报概率立即最高），广义/间接互惠证据很弱——『及时回报』是规范激活窗口"
+  - "规范的非交易性条件：拟人化、个人化的给予触发互惠债务；制度化满减/促销不触发（与库内 reciprocity_norm 机制一致）"
+method: "理论综述与命题陈述（跨文化人类学与社会学证据整合）"
+results: "（理论奠基）互惠规范成为社会交换理论与社会资本的共同起点"
+limitations: "未取得原文；命题性综述（非实验）；『普遍性』的跨文化证据为定性归纳"
+boundary_conditions: "时间窗口：回报压力随时间衰减；给予被识别为套路时互惠反转为警惕；受惠者必须保有回报自由"
+relevant_nodes: [reciprocity_norm]
+notes: "reciprocity_norm 节点『Gouldner 1960 经典文献，未建包』的建包来源。页码/DOI/主张多源一致，未编造。"
+last_verified: "2026-09"

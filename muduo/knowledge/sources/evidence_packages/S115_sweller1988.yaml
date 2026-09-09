@@ -1,0 +1,24 @@
+# Evidence Package — S115 Sweller 1988
+# 标准格式。access_level 如实标注。
+source_id: S115
+title: "Cognitive Load During Problem Solving: Effects on Learning"
+authors: "John Sweller"
+year: 1988
+journal: Cognitive Science 12(2), 257-285
+doi: "10.1207/s15516709cog1202_4"
+url: "https://doi.org/10.1207/s15516709cog1202_4"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "原文引证+CLT 理论综述（多源：认知负荷理论综述/教学理论门户/中文综述，含三项原则：工作记忆极有限、长时记忆几乎无限、工作记忆过载则学习无效）"
+research_question: "问题解决过程本身是否产生认知负荷而损害学习？"
+core_claims:
+  - "工作记忆容量极其有限（认知负荷理论的起点）"
+  - "手段-目的（means-end）问题解决策略占用大量工作记忆资源，妨碍图式建构与自动化，损害学习"
+  - "目标自由问题与样例（worked examples）降低认知负荷、促进学习"
+method: "系列问题解决实验（数学问题求解）对比手段-目的 vs 目标自由/样例策略的学习效果"
+results: "手段-目的搜索产生高认知负荷；目标自由问题与样例显著改善迁移学习"
+limitations: "教学情境实验；后续理论发展为内在/外在/相关三类认知负荷（Sweller 2019 综述）"
+boundary_conditions: "适用于复杂任务学习；降低外在负荷、管理内在负荷、提升相关负荷"
+relevant_nodes: [information_overload, working_memory_limits, intrinsic_cognitive_load, extraneous_cognitive_load, germane_load_learning]
+notes: "1988 奠基论文摘要级获取；2011 Springer 专著与 2019 综述提供理论全貌（三类负荷/五原则）。cognitive_load 域核心一手来源。"
+last_verified: "2026-09"

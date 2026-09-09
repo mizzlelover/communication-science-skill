@@ -1,0 +1,25 @@
+# Evidence Package — S59 Berger 2013（Contagious）
+# 标准格式。access_level 如实标注。
+source_id: S59
+title: "Contagious: Why Things Catch On"
+authors: "Jonah Berger"
+year: 2013
+journal: Simon & Schuster（专著）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/people/50233632/annotation/35035099/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：中文版读书笔记（STEPPS 六原则/渐进改善/口碑为主渠道）+ 销售视角深度总结（六原则逐一机制/93% 口碑在线下/共享者显得聪明）+ 传播研究综述（Berger & Milkman 2012 NYT 6956 篇：愤怒+1SD 转发榜几率 +34%、敬畏 +30%、低唤醒悲伤抑制传播）"
+research_question: "为什么某些产品、思想、行为被广泛传播而其他没有？病毒性是否可以工程化？"
+core_claims:
+  - "STEPPS 六原则：社交货币（social currency）/触发物（triggers）/情绪（emotion）/公开性（public）/实用价值（practical value）/故事（stories）"
+  - "口碑是最有说服力的渠道：可信（信源无利害）且定向（只传给在乎的人）；约 93% 的口碑发生在线上之外（线下交谈）"
+  - "Berger & Milkman 2012（NYT 6956 篇文章）：情绪唤醒（而非效价）预测分享——愤怒 +34%、敬畏 +30%、低唤醒悲伤抑制传播"
+  - "病毒性可被设计：『让事物疯传的引擎是社交传播，而社交传播可被拆解为可操作原则』"
+method: "沃顿研究计划 + NYT 大数据实证（Berger & Milkman 2012）+ 案例分析与实验"
+results: "（实证+框架）STEPPS 成为病毒性传播的从业者标准框架"
+limitations: "框架为组织化清单（非独立检验的因果模型）；各原则权重因品类/平台而异；配 S105（Berger & Milkman 2012）实证支撑"
+boundary_conditions: "效应依赖平台分享机制与受众构成；解释『为何分享』不解释『为何看见』（分发由算法决定）"
+relevant_nodes: [stepps_sharing_framework, word_of_mouth_drivers, emotional_arousal]
+notes: "stepps_sharing_framework 的一手专著来源（book 级）；配套 S105 实证论文已登记。未编造：+34%/+30%/93% 为公开数据。"
+last_verified: "2026-09"

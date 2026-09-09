@@ -1,0 +1,25 @@
+# Evidence Package — S185 Simon 1971（Designing Organizations for an Information-Rich World）
+# 标准格式。access_level 如实标注。
+source_id: S185
+title: "Designing Organizations for an Information-Rich World"
+authors: "Herbert A. Simon"
+year: 1971
+journal: "书章：载于 Martin Greenberger (ed.), Computers, Communications, and the Public Interest, Baltimore: Johns Hopkins University Press, pp. 37-52"
+doi: "未知"
+url: "https://guaniunotes.github.io/posts/designing-for-information-rich-world/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：章节全文中文译本（guaniunotes.github.io，含关键段落全文与完整书目信息）；渠道2：quotepark 引文数据库（原文 pp. 40-41 关键引文逐字核对）；渠道3：Heitmayer 2025 注意力经济综述论文引用核对（『信息消耗注意力』出处）"
+research_question: "在信息丰富的世界中，组织（与信息系统）应如何设计以应对注意力的稀缺？"
+core_claims:
+  - "信息的丰富意味着另一种东西的匮乏：信息消耗接收者的注意力（what information consumes is the attention of its recipients）"
+  - "因此，丰富的信息造成注意力的贫困（a wealth of information creates a poverty of attention），需要把稀缺的注意力在过量的信息源之间有效分配"
+  - "组织与信息系统的设计必须把注意力作为稀缺资源来管理——该命题后成为注意力经济学的源头"
+  - "在信息处理技术评估与组织设计中，注意力配置效率是关键考量"
+method: "概念性论述/论文（1969-1970 约翰霍普金斯大学与布鲁金斯学会联合研讨会『计算机、通信与公共利益』的演讲稿）"
+results: "提出『信息消耗注意力』命题，确立注意力作为稀缺资源的分析框架，成为注意力经济学与信息过载研究的源头"
+limitations: "1971 年书章，非实证研究；论述面向组织设计而非平台经济，现代注意力经济应用属延伸"
+boundary_conditions: "适用于开放竞争的信息环境；注意力稀缺随内容供给增长加剧；筛选层（平台/算法/AI 中介）掌握注意力分配权"
+relevant_nodes: [attention_economics, attention_capacity_limits, information_overload, ai_information_intermediaries, zero_click_information]
+notes: "书章来源，按论文/章节来源登记；『信息消耗注意力』注意力经济命题的原始出处，与 attention_economics 节点溯源一致。核心论点可溯源，未编造。"
+last_verified: "2026-09"

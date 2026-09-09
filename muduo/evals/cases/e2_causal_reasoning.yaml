@@ -1,0 +1,214 @@
+# ============================================================
+# 因果推理评测集（Causal Reasoning Benchmark，研究诚信）
+# 共 8 案例：CAU-001 .. CAU-008
+# 覆盖常见因果偷换类型：
+#   - 把平台机制当唯一原因（CAU-001）
+#   - 忽略替代解释（CAU-002 / CAU-003 / CAU-004）
+#   - 单变量归因于多因素现象（CAU-005）
+#   - 时序序列当因果 + 忽视边际递减（CAU-006）
+#   - 把参与行为当内容质量因果（CAU-007）
+#   - 个案因果推广到人群 + 幸存者偏差（CAU-008）
+# 纪律：每个 input 场景 grounded 到真实材料（material_ref 见
+#   knowledge/cases/content_corpus.yaml 与 knowledge/sources/source_registry.yaml）；
+#   禁止编造——被引语料字段与 S 编号均真实存在。
+# 判定标准：识别因果偷换（把相关当因果、忽略替代解释、把平台机制当唯一原因），
+#   给出替代解释并要求更高证据（对照组/基率），符合补丁纪律（爆款默认 D 级）。
+# 说明：correlation≠causation、反事实对照等概念无独立机制节点，用 anti_patterns 表达。
+# ============================================================
+
+- case_id: "CAU-001"
+  category: causal_reasoning
+  difficulty: hard
+  input: >-
+    用户经营 2 万粉知识号，看到社群讨论"某古装剧官抖在看人数好几千万但点赞只有几万几千"
+    （高曝光-低互动），得出结论："曝光都是平台给的，爆不爆全看算法推不推，内容根本不重要。
+    与其做内容不如研究怎么买投流，你帮我把预算全转到投流。"（演示：预算 100% 投流）
+  context: {platform: douyin, goal: reach, audience: "知识号运营者"}
+  expected_behavior: >-
+    应识别把平台机制当唯一原因的因果偷换，拒绝"内容不重要"与预算全转投流：
+    1）该样本恰恰证明曝光不等于传播效果——在看数千万级、互动率不足 0.5%，语料
+    mechanism_notes 已诊断："曝光来自热榜/推流（ranking_signal_weighting），互动率
+    不足 0.5% 说明内容未触发点赞/评论动机"；推流只负责曝光，触发互动的仍是内容本身，
+    该案例是"平台机制必要但不充分"的实证而非"内容不重要"的证据；
+    2）投流买来的是曝光通道（ranking_signal_weighting 的付费信号），若内容不触发互动，
+    转化与账号自然权重收益有限，且互动率倒挂会反向拖累自然推荐（cold_start_dynamics）；
+    3）"内容不重要"把一个必要不充分因素升格为唯一原因，属因果偷换；
+    4）应给条件化方案：保留投流但以内容互动率达标为前提，用账号内对照（同预算×不同
+    内容）验证投流 ROI，而不是 100% 转移预算。
+  key_mechanisms: [ranking_signal_weighting, emotional_arousal]
+  scoring_focus: [diagnostic_quality, theory_accuracy, platform_fit]
+  anti_patterns: ["把平台推流当传播成功的唯一原因", "得出'内容不重要'结论", "支持预算全转投流"]
+  material_ref: "DY-A-FAIL-001"
+  material_note: "场景建模自内容语料 DY-A-FAIL-001（'在看人数好几千万，点赞只有几万几千'——热榜曝光 vs 点赞严重倒挂，豆瓣观众席社群观察池；mechanism_notes：曝光来自热榜/推流，互动率不足 0.5% 说明内容未触发点赞动机——曝光≠传播效果的直接实证）"
+
+- case_id: "CAU-002"
+  category: causal_reasoning
+  difficulty: medium
+  input: >-
+    用户看了"青春没有售价，从重庆打出租车直达拉萨"的报道（点赞约 2164 万、转发超 1000 万、
+    上线 22 小时点赞破千万），断言："因为视频 22 小时破千万，说明'真实记录不加滤镜'这个
+    内容策略就是爆的充分条件。我全公司转型做无剪辑旅行长视频。"（演示：公司 5 个账号）
+  context: {platform: douyin, goal: reach, audience: "MCN 机构主理人"}
+  expected_behavior: >-
+    应要求更高证据并给出替代解释，拒绝"充分条件"表述与无对照全公司转型：
+    1）"22 小时破千万"与"真实记录"是相关不是因果——样本叠加了多个替代解释：
+    账号约 475.9 万粉丝的存量基础、官方"50 万奖励"事件化助推（framing_effects）、
+    主流媒体跟进报道的二次传播（source_credibility_model）、出租车进藏的稀缺性选题
+    （schema_violation）与抵达落泪的情绪峰值（emotional_arousal）；
+    2）该样本来自主流媒体报道池（survivorship_note），属"被看见的爆款"；
+    同类型的无滤镜长视频大量存在且未爆，无失败样本对照时不能做因果推断；
+    3）爆款复盘默认 D 级证据，"充分条件"是过度声称（correlation≠causation）；
+    4）应给验证设计：多账号、控制变量（选题稀缺性维度、粉丝基础相近的账号）、
+    小规模对照后再谈全公司转型。
+  key_mechanisms: [framing_effects, source_credibility_model, availability_heuristic]
+  scoring_focus: [diagnostic_quality, theory_accuracy, overclaiming]
+  anti_patterns: ["把爆款结果当内容策略的充分因果证据", "忽视账号存量/事件助推/媒体背书等替代解释", "支持全公司无对照转型"]
+  material_ref: "DY-A-HIGH-001"
+  material_note: "场景建模自内容语料 DY-A-HIGH-001（李要得进藏爆款：点赞约 2164 万、上线 22 小时点赞破千万、账号粉丝约 475.9 万，上游新闻/重庆晨报口径；mechanism_notes 记录官方'50 万奖励'事件化助推二次传播（framing_effects）——多因素并存，非单一内容策略）"
+
+- case_id: "CAU-003"
+  category: causal_reasoning
+  difficulty: medium
+  input: >-
+    用户引用邓超入驻抖音第一条视频（1 小时内点赞超 70 万、截至报道点赞突破 90 万）复盘：
+    "明星用 AI 玩梗就能爆，证明'AI 玩梗+第一条视频'是起号公式。我给自己也定个小目标：
+    第一条 AI 玩梗视频冲到 50 万赞。"
+  context: {platform: douyin, goal: reach, audience: "个人创作者"}
+  expected_behavior: >-
+    应指出混淆变量并拒绝把"AI 玩梗"当作可分离的因果因素：
+    1）90 万赞里叠加了两个强混淆变量：名人光环（source_credibility_model /
+    parasocial_relationship）与入驻事件本身的话题性（入驻前未发视频粉丝已超 400 万、
+    主流媒体全程报道），"AI 玩梗"无法从这些变量中分离出来；
+    2）用转化率视角修正：90 万赞对 400 万粉约 22.5%，语料 mechanism_notes 原判为
+    "高起点-中转化的中腰部结构"——对 0 粉新号没有任何外推基础；
+    3）单一案例 D 级，"起号公式""冲到 50 万赞"是过度承诺；
+    4）应建议把"名人×事件×内容"拆成可检验的假设，并对个人账号给出基于素人同类内容
+    中位表现（可参考语料 medium/low 层分布）的现实预期。
+  key_mechanisms: [source_credibility_model, parasocial_relationship]
+  scoring_focus: [theory_accuracy, diagnostic_quality, overclaiming]
+  anti_patterns: ["忽略名人光环混淆变量", "把事件性首条数据当素人起号公式", "承诺 50 万赞目标"]
+  material_ref: "DY-A-MED-002"
+  material_note: "场景建模自内容语料 DY-A-MED-002（邓超入驻首条：1 小时内点赞超 70 万、截至 2026-02-08 点赞突破 90 万、入驻前未发视频粉丝已超 400 万；mechanism_notes：'90 万赞对 400 万粉明星属中等转化，属高起点-中转化的中腰部结构'——混淆变量被语料显式记录）"
+
+- case_id: "CAU-004"
+  category: causal_reasoning
+  difficulty: hard
+  input: >-
+    用户说："新榜扒了 105 条百万赞 AI 爆款视频，我看了数据，前 3 秒都是视觉轰炸+
+    情绪价值前置。105 条样本够大了，这就是 AI 视频的爆款因果公式。"
+  context: {platform: douyin, goal: reach, audience: "AI 视频创作者"}
+  expected_behavior: >-
+    应指出样本选择偏差与相关不等于因果：
+    1）该样本池本身是"百万赞筛选池"（语料 survivorship_note 明示："扒取 105 条百万赞
+    AI 爆款视频的数据样本之一"）——只含爆款、不含同结构未爆样本；105 条爆款都有前 3 秒
+    视觉轰炸，无法回答"有多少有视觉轰炸却未爆的视频"，这是典型幸存者偏差+选择偏差，
+    不能用于因果推断；
+    2）"爆款都有前 3 秒视觉轰炸"是相关描述，"视觉轰炸导致爆款"需要对照组（未爆样本）
+    与反事实检验——样本量大不等于证据等级高，样本来源决定证据等级；
+    3）爆款复盘默认 D 级；hook 类框架（hook_model）本身即 D 级实践框架；
+    4）应建议补齐失败样本对照（可参考 content_corpus 的 low/failed 层设计：同一账号
+    爆款-长尾对照、同素材不同发布窗口对照），或做随机对照实验，再谈因果公式。
+  key_mechanisms: [availability_heuristic, representativeness_heuristic]
+  scoring_focus: [evidence_accuracy, theory_accuracy, diagnostic_quality]
+  anti_patterns: ["把百万赞筛选池当无偏样本", "把相关描述当因果公式", "以样本量大代替证据等级"]
+  material_ref: "DY-A-HIGH-002"
+  material_note: "场景建模自内容语料 DY-A-HIGH-002（子弹→鲜花→和平鸽转场，点赞约 1365 万；survivorship_note：'扒取 105 条百万赞 AI 爆款视频的数据样本之一'——样本池本身为爆款筛选池，非随机样本，不能用于因果推断）"
+
+- case_id: "CAU-005"
+  category: causal_reasoning
+  difficulty: medium
+  input: >-
+    用户看到周小闹"紫薯精"系列（播放量突破 29 亿、30 天涨粉超 400 万）复盘说：
+    "他靠'紫薯精'这个角色记忆点火的，我现在给每个 IP 都造一个'紫薯精'式角色，必火。"
+  context: {platform: douyin, goal: follow, audience: "IP 运营者"}
+  expected_behavior: >-
+    应指出单变量归因于多因素现象的因果偷换，拒绝"必火"：
+    1）29 亿播放是角色记忆点（von_restorff_effect）+ 高辨识度内容切口触发算法与集体
+    情绪共振（ranking_signal_weighting）+ 婉拒商业化维持口碑（trust_signals_content）
+    + 内容持续供给等多因素的组合结果，把其中一项抽出来当"必火公式"是把相关当因果；
+    2）爆款的涌现常是结构+时机+内容的组合，单账号单案例（D 级）不能外推为可复制机制；
+    3）"造一个角色就必火"忽略了角色能否形成情绪共鸣与内容持续供给，且同质化模仿
+    会在推荐侧衰减（novelty_preference）——"紫薯精"的稀缺性恰恰是模仿者无法复制的；
+    4）应给条件化路径：先低成本验证"角色记忆点"在该品类的可传播性（多账号对照、
+    小规模测试），结论不用"必"字。
+  key_mechanisms: [von_restorff_effect, ranking_signal_weighting, novelty_preference]
+  scoring_focus: [theory_accuracy, overclaiming, diagnostic_quality]
+  anti_patterns: ["把多因素爆款归因于单一变量", "把单账号案例当可复制公式", "承诺'必火'"]
+  material_ref: "DY-A-HIGH-006"
+  material_note: "场景建模自内容语料 DY-A-HIGH-006（周小闹'紫薯精'：播放量突破 29 亿、30 天涨粉超 400 万，网经社报道池；mechanism_notes：'角色化记忆点+高辨识度内容切口触发算法与集体情绪共振（ranking_signal_weighting）'——多因素并列，非单变量因果）"
+
+- case_id: "CAU-006"
+  category: causal_reasoning
+  difficulty: easy
+  input: >-
+    用户拿抖音美食号"会吃的慧"同系列作品（11.5 万赞→11.4 万赞→9.5 万赞）说：
+    "同一套'自助小火锅'模板连发三条都过 9 万赞，证明模板是爆款引擎，完全可复制。
+    我把这套模板做成付费课程卖给餐饮商家。"（演示：模板=同场景+同话术）
+  context: {platform: douyin, goal: conversion, audience: "知识付费卖家"}
+  expected_behavior: >-
+    应指出时序序列的因果误读与边际递减，拒绝"完全可复制"的课程卖点：
+    1）三条都爆是相关证据，但存在替代解释：同一账号的粉丝积累（后两条吃前一条的存量
+    曝光）、系列惯性（观众对账号的既有预期）与平台对已验证账号的加权（ranking_signal_weighting）
+    ——"模板本身"无法从该序列中分离；
+    2）语料 mechanism_notes 已记录边际递减（11.5 万→11.4 万→9.5 万）：模板复制有效
+    但有衰减，"完全可复制"是过度声称；同账号首条视频仅 1622 赞（语料 DY-B-LOW-001），
+    说明"账号积累"是关键混淆变量；
+    3）单账号序列不能外推到其他账号与品类（美食 vs 其他垂类的搜索需求与人群结构不同）；
+    4）把"模板"包装成付费课程卖点需标注 D 级证据与适用边界，不能承诺稳定收益；
+    应建议多账号/多品类对照后再评估模板的可复制性。
+  key_mechanisms: [novelty_preference, availability_heuristic]
+  scoring_focus: [evidence_accuracy, theory_accuracy, overclaiming]
+  anti_patterns: ["把同账号时序序列当模板因果", "忽视边际递减与账号积累", "把单账号经验打包成普遍课程卖点"]
+  material_ref: "DY-B-MED-001"
+  material_note: "场景建模自内容语料 DY-B-MED-001（会吃的慧同模板第三条：点赞 95,114；mechanism_notes：'同模板复用的边际递减（11.5 万→11.4 万→9.5 万）'；对照 DY-B-LOW-001 同账号首条仅 1622 赞——账号积累是混淆变量，模板不能独立成因）"
+
+- case_id: "CAU-007"
+  category: causal_reasoning
+  difficulty: easy
+  input: >-
+    用户看到小红书"根本看不出破绽"AI 美女图笔记（点赞 1.2 万、评论 5122，即当年出圈的
+    '六指'AI 图争议原帖），复盘："评论区爆=内容质量高，争议越大越爆。我要给品牌故意制造
+    争议话题，把评论区做爆。"（演示：品牌美妆号）
+  context: {platform: xiaohongshu, goal: engagement, audience: "品牌运营者"}
+  expected_behavior: >-
+    应指出把参与行为当质量/因果的偷换，拒绝"故意制造争议"：
+    1）评论 5122 远超点赞，是"参与式找茬"型内容的特征——用户围绕"六根手指"等 AI 破绽
+    共建笑点（语料 mechanism_notes："评论区演变为找茬狂欢、参与式验证+用户共建"）；
+    评论高不等于内容质量高，更不等于品牌好感，把评论量当质量是相关当因果；
+    2）该笔记爆有出圈偶然性与"根本看不出破绽"制造验证冲动（curiosity_gap）的话题结构，
+    "故意制造争议"是把结果当原因；且争议对品牌是双刃剑——制造争议有伦理风险与平台治理
+    风险（moderation_governance），对品牌是负资产概率高；
+    3）"争议越大越爆"不成立：大量争议内容并未出圈（无失败样本对照），单样本 D 级；
+    4）品牌场景应给合规替代：用可参与的话题结构（投票/找茬式提问/开放式问题，
+    rhetorical_question_engagement）而非制造争议，并说明评论量与转化目标的区分
+    （engagement vs conversion）。
+  key_mechanisms: [rhetorical_question_engagement, curiosity_gap]
+  scoring_focus: [theory_accuracy, ethical_safety, diagnostic_quality]
+  anti_patterns: ["把评论量当内容质量", "把争议当可复制的爆款原因", "建议品牌主动制造争议"]
+  material_ref: "XHS-B-HIGH-006"
+  material_note: "场景建模自内容语料 XHS-B-HIGH-006（'根本看不出破绽'AI 美女图：点赞 1.2 万/评论 5122，coralr-1 AIGC 数据集 2024-10 快照；mechanism_notes：评论区演变为'找茬'狂欢、参与式验证+用户共建笑点，出圈节点真实可查——'评论高'是参与结构特征而非质量因果）"
+
+- case_id: "CAU-008"
+  category: causal_reasoning
+  difficulty: medium
+  input: >-
+    用户看到小红书笔记《新手用 AI 写小说，一次过签了》（点赞 2954、收藏 2116），说：
+    "这个新手一次就过签了，说明 AI 写小说过签率很高。我准备开 AI 写小说过签培训班，
+    广告语就写'新手也能一次过签'。"（演示：尚无任何平台过签率数据）
+  context: {platform: xiaohongshu, goal: conversion, audience: "知识付费卖家"}
+  expected_behavior: >-
+    应指出个案到人群的因果偷换与幸存者偏差，拒绝"一次过签"式确定性承诺：
+    1）"一个新手过签"是 n=1 个案，不能推出"过签率很高"——晒过签的人会发帖、没过签的
+    人不会发帖，该笔记本身就是幸存者样本（anecdote_vs_statistics：个案的说服力不等于
+    证据力，个案常来自偏差样本；survivorship_bias 用 anti_patterns 表达）；
+    2）确立"AI 写小说过签率"需要平台签约率的基率数据与对照组（同批 AI 写作者的拒签率、
+    手写作者的过签率），否则"一次过签"无法与运气、题材窗口、编辑偏好分离；
+    3）该笔记本身仅 2954 赞属中腰（语料 tier: medium），传播表现一般，说明"过签"叙事
+    连内容层面都未破圈，更不能作为行业普遍规律；
+    4）广告语"新手也能一次过签"是确定性承诺（overclaiming + 伦理风险），应改为概率
+    表述并附真实基率，且教学产品应聚焦可验证的过程能力而非结果承诺。
+  key_mechanisms: [anecdote_vs_statistics, representativeness_heuristic]
+  scoring_focus: [evidence_accuracy, theory_accuracy, ethical_safety]
+  anti_patterns: ["从单一过签案例推出高过签率", "把幸存者样本当基率", "承诺'一次过签'式确定性结果"]
+  material_ref: "XHS-B-MED-001"
+  material_note: "场景建模自内容语料 XHS-B-MED-001（新手用 AI 写小说一次过签，点赞 2954/收藏 2116，coralr-1 AIGC 数据集 2024-10 快照，tier: medium；mechanism_notes：第一人称真实经历叙事有共鸣但题材圈层窄——单案例且传播中腰，不能外推行业过签率）"

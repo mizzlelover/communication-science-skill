@@ -1,0 +1,27 @@
+# Evidence Package — S06 Barrett 2017（How Emotions Are Made）
+# 标准格式。access_level 如实标注。
+source_id: S06
+title: "How Emotions Are Made: The Secret Life of the Brain"
+authors: "Lisa Feldman Barrett"
+year: 2017
+journal: Houghton Mifflin Harcourt（专著）
+doi: "无 DOI（专著）"
+url: "https://lisafeldmanbarrett.com/books/how-emotions-are-made/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：作者官网（构建情绪理论：情绪由跨全脑交互的核心系统在当下构建，依赖终生学习；推翻『情绪位于特定脑区、普适表达识别』的经典观）+ SuperSummary 全书逐章摘要（theory of constructed emotion、内感受 interoception 与身体预算 body budget、情绪概念 emotion concepts、预测性思维、情绪粒度、对情绪『指纹』研究的否定、法律/道德应用）+ 豆瓣书评与摘录（『情绪是你构建的世界』、身体预算与内感受网络、情绪建构论）+ windowoftolerance 知识库（构建情绪三成分：核心情感 core affect＝唤醒+效价、情境、过去经验）+ unisonmentalhealth 文章（核心情感两维：效价+唤醒；大脑作为预测引擎；文化与习得的情绪概念）+ Frontiers 心理学论文（TCE 理论成分：core affect、概念化、注意、情绪言语化）"
+research_question: "情绪是天生固定的生物反应，还是大脑在当下构建出来的？"
+core_claims:
+  - "情绪不是天生固定、由特定脑区『读取』并普适表达的经典情绪观；情绪是大脑在当下构建的（constructed in the moment），由跨全脑的核心系统交互 + 终生学习协助完成"
+  - "构建的核心成分：核心情感（core affect，效价+唤醒的原始感觉）、内感受（interoception）与身体预算（body budget）、情境、过去经验与习得的概念（emotion concepts）"
+  - "大脑是预测引擎：情绪体验源于预测加工——大脑将感官输入、身体状态与经验整合，预先预测并解释当下情境，而非被动反应"
+  - "对『情绪指纹』的否定：对面部表情、身体信号与脑成像的研究未发现与特定情绪一一对应的普适指纹；同一情绪可由多种身体表达组合产生"
+  - "情绪粒度（granularity）：精细区分情绪状态的能力与情绪调节、心理健康与压力应对相关；语言与文化习得的情绪概念（含各文化特有情绪词）塑造可体验的情绪范围"
+  - "情绪概念对真实与法律判断有影响：作者主张构建情绪理论应纳入法律、教育、医学等实践（如反驳『激情犯罪』等基于本质主义情绪观的辩护）"
+method: "神经科学与心理学综述专著：整合面部表情研究、身体信号研究、脑成像与预测加工文献，面向大众的论证性写作"
+results: "（理论专著）构建情绪理论为情绪研究范式转换的核心文本，挑战经典情绪观；对情绪唤醒的单一生理信号解读构成直接批评"
+limitations: "理论本身有争议（经典情绪观支持者批评其证据解读）；本书为科普向专著，具体实验细节需回查期刊论文"
+boundary_conditions: "唤醒并非自动决定情绪的单一生理信号——同一唤醒状态可被解读为愤怒或兴奋，解读依赖情境与习得概念（对 emotional_arousal 节点的边界提示）"
+relevant_nodes: [emotional_arousal, mood_congruence]
+notes: "constructed_emotion 节点在 mechanisms 中不存在，本包以 emotional_arousal（其机制段已引用 S06）与 mood_congruence 为锚。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

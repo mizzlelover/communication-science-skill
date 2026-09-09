@@ -1,0 +1,25 @@
+# Evidence Package — S121 Mayer, Davis & Schoorman 1995（信任模型）
+# 标准格式。access_level 如实标注。
+source_id: S121
+title: "An Integrative Model of Organizational Trust"
+authors: "Roger C. Mayer; James H. Davis; F. David Schoorman"
+year: 1995
+journal: Academy of Management Review 20(3), 709-734
+doi: "10.5465/amr.1995.9508080335"
+url: "https://journals.aom.org/doi/10.5465/258792"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "期刊元数据+广泛引用确认（多源中文引用：三维度框架/组织内信任与员工投入/组织信任前因变量）+ 后续元分析（Dirks & Ferrin 2002）确认信任-绩效关系"
+research_question: "组织情境中信任的概念模型：信任的构成维度、前因与后果是什么？"
+core_claims:
+  - "信任=基于对被信任方会履行重要特定行动之期望而愿意承受脆弱性的意愿"
+  - "被信任方可信度三维度：能力（ability）、善意（benevolence）、诚信（integrity）"
+  - "信任倾向（propensity to trust）为个体差异前因；信任→风险承担→合作行为"
+  - "后续元分析（Dirks & Ferrin 2002）确认信任对态度/行为有显著正效应"
+method: "理论模型构建（AMR 理论文章）+ 后续大量实证验证（元分析）"
+results: "（模型）能力/善意/诚信→信任→风险承担；三维度框架成为组织信任研究标准"
+limitations: "理论文章，实证支持来自后续研究；组织情境为主"
+boundary_conditions: "信任评估依赖具体关系对象与情境；能力/善意/诚信相对权重因情境而异"
+relevant_nodes: [source_credibility_model]
+notes: "trust 域（S67 拆分的任务书基础）的经典一手来源；能力/善意/诚信三维度与信任拆分直接对应。摘要级获取。"
+last_verified: "2026-09"

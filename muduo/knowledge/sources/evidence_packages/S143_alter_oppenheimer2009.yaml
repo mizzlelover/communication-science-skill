@@ -1,0 +1,27 @@
+# Evidence Package — S143 Alter & Oppenheimer 2009（Uniting the Tribes of Fluency）
+# 标准格式。access_level 如实标注。
+# ⚠ 书目勘误：任务给定《Uniting the Tribes of Fluency on a Single Construct, JESP 45:755-764》经多方核实不存在；
+#   真实论文为 PSPR 13(3):219-235《Uniting the tribes of fluency to form a metacognitive nation》，见 notes。
+source_id: S143
+title: "Uniting the Tribes of Fluency to Form a Metacognitive Nation"
+authors: "Adam L. Alter; Daniel M. Oppenheimer"
+year: 2009
+journal: "Personality and Social Psychology Review 13(3): 219-235"
+doi: "10.1177/1088868309341564"
+url: "https://pubmed.ncbi.nlm.nih.gov/19638628/"
+access_level: abstract_only
+research_status: read
+content_obtained: "渠道1 PubMed 官方摘要全文（PMID 19638628）；渠道2 中国国家基因库 OpenLB 文献镜像（同摘要，OLB-PM-19638628）；渠道3 Taylor & Francis（J Cogn Psychol 2024）与 SAGE（Curr Dir Psychol Sci 2015）期刊引用页确认书目与 DOI。未取得全文 PDF（付费墙），如实标 abstract_only。"
+research_question: "不同加工流畅度操纵（语义、知觉、语言等）是否共享同一机制并产生一致的判断后果？"
+core_claims:
+  - "加工流畅度（处理信息时主观的轻松体验）可靠影响跨越广泛社会维度的判断（摘要原文）"
+  - "语义启动（概念流畅）、视觉清晰（知觉流畅）、语音简单（语言流畅）等看似不同的操纵产生显著一致的判断后果——例如都更可能把更流畅的刺激判断为'更真实'（摘要原文）"
+  - "该文提供此类机制及其对判断与决策启示的首个综合综述（摘要原文：the first comprehensive review）"
+  - "每个认知都落在从毫不费力到费力的连续体上并生成相应流畅体验，因此流畅是推理与社会判断中无处不在（ubiquitous）的元认知线索（摘要原文）"
+method: "综述（Pers Soc Psychol Rev）：整合概念流畅/知觉流畅/语言流畅等多类操纵的实证文献，论证其共同机制"
+results: "（综述）多种异质流畅操纵产生相似判断后果（如更真实、更偏好）；提出流畅作为统一元认知线索的理论框架"
+limitations: "综述非新实验；未取得全文，核心论点基于官方完整摘要；后续研究（如 Dechêne et al. 2010 真效应元分析）对其边界做了细化"
+boundary_conditions: "统一框架适用于语义/知觉/语言等不同流畅操纵；凡有认知加工即有流畅体验，使该线索在推理与社会判断中普遍可用"
+relevant_nodes: [processing_fluency, fluency_truth_effect, rhyme_as_reason, name_pronunciability, disfluency_deep_processing]
+notes: "⚠ 书目勘误：任务给定标题/出处（JESP 45:755-764《…on a Single Construct》）与真实文献不符——经 PubMed、SAGE、Taylor & Francis 等多方核实，2009 年该主题真实论文为 PSPR 13(3):219-235《Uniting the tribes of fluency to form a metacognitive nation》（PMID 19638628；JESP 45(4) 2009 上 Alter/Oppenheimer 另有 'Instructional manipulation checks', 867-872，非本主题）。已按可溯源信息修正，未编造。relevant_nodes 5 项已在 processing_fluency.yaml 全部核实存在。"
+last_verified: "2026-09"

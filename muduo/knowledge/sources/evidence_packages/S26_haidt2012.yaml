@@ -1,0 +1,25 @@
+# Evidence Package — S26 Haidt 2012（The Righteous Mind）
+# 标准格式。access_level 如实标注。
+source_id: S26
+title: "The Righteous Mind: Why Good People Are Divided by Politics and Religion"
+authors: "Jonathan Haidt"
+year: 2012
+journal: Pantheon/Vintage（专著）
+doi: "无 DOI（专著）"
+url: "https://coreofbooks.com/en/book/the-righteous-mind-why-good-people-are-divided-by-politics-and-religion-jonathan-haidt-2wxg"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：多个深度书评/总结（骑象人与大象/六道德基础/社会直觉模型/WEIRD 批判/蜂群开关/宗教的社会黏合功能）+ 中文解读"
+research_question: "道德判断由什么驱动？为什么好人在政治与宗教上严重对立？"
+core_claims:
+  - "道德直觉先行、策略性推理随后（社会直觉模型）：人快速情绪化地下判断，再事后建构合理化理由——骑象人（理性）服务于大象（直觉）"
+  - "道德基础理论（MFT）：六基础——关怀/伤害、公平/欺骗、忠诚/背叛、权威/颠覆、神圣/堕落、自由/压迫；不同个体/文化加权不同"
+  - "WEIRD 批判：西方个人主义道德域过窄（只重伤害与公平）；保守派均衡使用六基础、自由派重前两个——道德语法差异解释政治对立"
+  - "人类 90% 自私 10% 蜜蜂（groupish）：宗教/意识形态的主要功能是绑定群体（仪式/共享身份/集体义务）；道德僵局（moral dumbfounding）证明直觉先行"
+method: "道德心理学理论 + 大量实验综述（道德僵局/厌恶与道德判断/脑成像）+ 进化与文化分析"
+results: "（理论+实证综合）道德基础理论成为道德心理学与政治传播标准框架"
+limitations: "MFT 六基础为理论建构，跨文化检验有争议（后续研究对基础数量与独立性有讨论）"
+boundary_conditions: "适用于道德化/政治化议题的立场形成；非道德的技术性决策不适用"
+relevant_nodes: [identity_protective_cognition, dual_process_theory, cognitive_dissonance, relative_deprivation]
+notes: "identity_protective_cognition/道德基础的一手来源（book 级）。骑象人/大象与六基础为公开标准内容，未编造。"
+last_verified: "2026-09"

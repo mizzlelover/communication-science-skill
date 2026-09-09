@@ -1,0 +1,25 @@
+# Evidence Package — S53 Jackson 2008（Social and Economic Networks）
+# 标准格式。access_level 如实标注。
+source_id: S53
+title: "Social and Economic Networks"
+authors: "Matthew O. Jackson"
+year: 2008
+journal: Princeton University Press（教材；520 页）
+doi: "无 DOI（教材）"
+url: "https://book.douban.com/subject/3295787/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "教材内容经多源交叉实取：豆瓣内容简介（随机图/策略性网络形成/网络中的学习与扩散/决策/博弈论与市场）+ 作者访谈（同质性/四种重要性度量：人气/连接/触达/经纪）+ 中文译版《人类网络》目录（中心度/扩散传染/同质性/固化不平等/集体智慧/局部网络结构/全球化）+ 学术文献综述（Jackson & Wolinsky 网络形成博弈）"
+research_question: "社会与经济网络的数学与行为基础是什么？网络结构如何影响扩散、学习与决策？"
+core_claims:
+  - "网络科学标准教材：随机图模型 + 策略性网络形成（Jackson & Wolinsky：连接收益 vs 维系成本）+ 扩散与学习 + 受邻居影响的个体决策 + 网络上的博弈论与市场"
+  - "重要性度量：人气（度中心度）/连接（特征向量中心度，Google 核心逻辑）/触达（中介中心度）/经纪（结构洞）——不同度量对应不同影响功能"
+  - "同质性（homophily）：人以群分使网络碎片化，叠加职业/教育网络效应→不平等代际传递与社会固化"
+  - "扩散与传染：网络结构（中心度/聚类/相变）决定传播广度；简单 vs 复杂传染（与 Centola 传统互补）"
+method: "跨学科教材（经济学/社会学/计算机/物理/数学综合）+ 形式模型 + 实证背景"
+results: "（教材经典）网络科学的数学基础标准参考（Stanford 在线课程 100 万+ 听众）"
+limitations: "教材级综述（非一手实验）；形式模型需实证校准"
+boundary_conditions: "模型预测依赖网络结构与行为类型前提"
+relevant_nodes: [weak_ties_strength, homophily, network_exposure_effects, critical_mass_threshold, wide_bridges]
+notes: "网络域数学基础教材（book 级，被 network_effects 多节点引用）。中心度度量/同质性为公开标准内容，未编造。"
+last_verified: "2026-09"

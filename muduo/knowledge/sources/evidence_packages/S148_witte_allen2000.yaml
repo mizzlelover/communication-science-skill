@@ -1,0 +1,31 @@
+# Evidence Package — S148 Witte & Allen 2000（A Meta-Analysis of Fear Appeals: Implications for Effective Public Health Campaigns）
+# 标准格式。access_level 如实标注。
+# meta-analysis 全字段：number_of_studies / sample / main_effect / moderators。
+source_id: S148
+title: "A Meta-Analysis of Fear Appeals: Implications for Effective Public Health Campaigns"
+authors: "Kim Witte; Mike Allen"
+year: 2000
+journal: "Health Education & Behavior 27(5): 591-615"
+doi: "10.1177/109019810002700506"
+url: "https://journals.sagepub.com/doi/10.1177/109019810002700506"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "PubMed 官方摘要全文（PMID 11009129）+ SAGE 官方文章页摘要（journals.sagepub.com）+ CNCB-NGDC OpenLB PubMed 镜像（OLB-PM-11009129）三源确认；正文（含纳入研究表与效应量表）未开放获取，K/N 未披露"
+research_question: "恐惧诉求（fear appeals）作为说服与公共卫生传播策略总体是否有效？威胁强度与效能信息如何决定其成败（双路径：危险控制 vs 恐惧控制）？"
+core_claims:
+  - "强恐惧诉求产生高水平的感知严重性（severity）与感知易感性（susceptibility），比低/弱恐惧诉求更具说服力"
+  - "恐惧诉求同时驱动两类反应：适应性危险控制（danger control，如接受信息）与适应不良的恐惧控制（fear control，如防御性回避、心理抗拒/reactance）"
+  - "强恐惧诉求+高效能信息产生最大的行为改变（adaptive outcome）"
+  - "强恐惧诉求+低效能信息产生最高水平的防御性反应（defensive responses，maladaptive outcome）——威胁与效能双条件决定行为方向"
+method: "meta 分析（meta-analytical synthesis）：汇总恐惧诉求文献，按威胁强度与效能（反应效能/自我效能）对感知严重性/易感性、信息接受、防御回避等结局做效应量整合"
+results: "恐惧诉求总体正向且强诉求更有效；效能是决定性调节——高效能下强威胁转化为行为改变，低效能下强威胁触发防御性回避/抗拒（EPPM 双路径的经验支持）"
+limitations: "本包仅获取摘要层信息；纳入研究数（number_of_studies）与总样本量（sample）原文摘要未披露，未从公开渠道确证，如实标注未知；meta 的效应量数值区间未见摘要"
+boundary_conditions: "适用于公共卫生/风险沟通情境；威胁必须真实且配套高效能路径（自我效能+反应效能），否则触发防御回避/抗拒而非行为改变（见 anti_patterns Fear Exploitation）"
+meta_analysis:
+  number_of_studies: "未知（原文摘要未披露，公开渠道未确证；不得编造）"
+  sample: "未知（原文摘要未披露；同上）"
+  main_effect: "强恐惧诉求显著提升感知严重性/易感性并更具说服力；对态度/意图/行为的总体效应为正向（外部综述 Bigsby & Albarracín 2022, PMC12437762 将恐惧诉求 meta 总体效应量区间定为 d̄=0.08–0.52，含本 meta）"
+  moderators: "效能信息（反应效能/自我效能）：高效能+强威胁→最大行为改变；低效能+强威胁→最大防御反应（回避/抗拒）；威胁强度本身亦为调节"
+relevant_nodes: [fear_appeals_eppm, attitude_behavior_gap]
+notes: "EPPM 双路径（威胁×效能）的关键 meta 支撑（paper 级，abstract_only）。摘要层三源实取；K/N 与效应量数值因正文未开放而如实标注未知，待作者主页/机构库全文核验后补充。"
+last_verified: "2026-09"

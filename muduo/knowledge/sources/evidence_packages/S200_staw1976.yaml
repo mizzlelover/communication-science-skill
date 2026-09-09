@@ -1,0 +1,25 @@
+# Evidence Package — S200 Staw 1976（承诺升级）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S200
+title: "Knee-deep in the big muddy: A study of escalating commitment to a chosen course of action"
+authors: "Barry M. Staw"
+year: 1976
+journal: Organizational Behavior and Human Performance, 16(1), 27-44
+doi: "10.1016/0030-5073(76)90005-2"
+url: "https://doi.org/10.1016/0030-5073(76)90005-2"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心结果经 3 个独立源交叉核实（未取得全文）：①DOI 与页码（OBHDP 16(1):27-44）经 renascence 行为库与 Olivola 2018 Psych Science 参考文献一致；②实验设计：被试扮演新任财务副总裁为广告研发项目分配资金——上一任 VP 的决策已产生负结果时，对『个人对负结果负责』条件追加更多资源；③核心发现：个人对先前负结果的责任感驱动承诺升级（对失败行动追加投资）；④复制与扩展：Staw & Fox 1977（Human Relations 30:431-450，2×2×3 因子实验）复制升级效应并显示其随时间不稳定；后续系统化：Staw 1981 AMR 综述、Brockner 1992 理论整合、Olivola 2018 人际沉没成本（8 实验 N=6076）扩展"
+research_question: "为什么决策者会对失败的行动持续追加资源？"
+core_claims:
+  - "承诺升级：个人对负结果的责任感显著提高对失败行动的后续资源投入——沉没成本的政治/自我辩护维度"
+  - "机制：自我合理化（承认先前决策错误威胁自我形象）+ 项目惯性；与沉没成本效应（Arkes & Blumer 1985）共同构成升级双引擎"
+  - "边界：Staw & Fox 1977 显示升级效应在时间维度上不稳定——责任与资源效能变量与时点交互"
+  - "现代扩展：人际沉没成本效应（Olivola 2018，N=6076）——连他人沉没的成本也会诱发升级，现象比原假设更广"
+method: "实验室情境实验（R&D 预算分配案例；操纵先前决策的责任归属与结果正负）"
+results: "（经典）承诺升级成为组织决策研究最稳健的现象之一"
+limitations: "未取得全文；学生样本+假设情境；真实组织中的升级受政治与治理变量调节"
+boundary_conditions: "升级最强：个人负责+负结果+可追加资源；外部问责/明确止损规则/新任决策者可削弱"
+relevant_nodes: [commitment_escalation]
+notes: "commitment_escalation 节点 Staw 1976 的建包来源。DOI/页码/发现多源一致，未编造。"
+last_verified: "2026-09"

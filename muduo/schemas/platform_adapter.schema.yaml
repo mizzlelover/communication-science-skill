@@ -1,0 +1,81 @@
+# Platform Adapter Schema
+# 铁律：平台经验不得伪装成科学理论；所有事实必须标 fact_type 与 confidence。
+#
+# 研究诚信规则：
+#   - 证据四级 = L1-L4：official_rule=L1 · verified_observation=L2 ·
+#     industry_consensus=L3 · experience_speculation=L4（fact_type 保留原枚举）。
+#   - L1 Official Rule 必须实际读取官方材料正文；搜到第三方"算法揭秘"不得记为官方规则，
+#     来源登记进 platform_sources。
+#   - 时间戳三件套 published_date / accessed_date / last_verified；超期 → STALE_REVIEW_REQUIRED。
+#     阈值基准：official policy 12 个月 · algorithm observation 3-6 个月 · UI feature 1-3 个月。
+#   - 缺省规则：无 evidence_level 的 claim 按 L3 以下对待；无来源登记的 official_rule = UNVERIFIED。
+type: object
+required: [platform_name, last_updated, fact_confidence_summary, content_units, dominant_user_intent,
+           distribution_model, recommendation_model, social_graph_characteristics, content_lifecycle,
+           primary_entry_points, attention_environment, user_behavior, interaction_signals,
+           sharing_mechanism, search_mechanism, community_mechanism, algorithmic_features,
+           content_constraints, title_role, cover_role, opening_role, tag_role, comment_role,
+           follow_role, risk_factors, known_platform_patterns, confidence, platform_sources]
+properties:
+  platform_name:  {type: string}
+  last_updated:   {type: string, pattern: "^[0-9]{4}-[0-9]{2}$", description: "YYYY-MM；平台事实强制时效化"}
+  last_verified:  {type: string, pattern: "^[0-9]{4}-[0-9]{2}$", description: "最后实际核验时间；未联网核验必须如实写未核验并降级"}
+  fact_confidence_summary:
+    type: string
+    description: "本 adapter 整体可信度声明"
+  platform_sources:
+    type: array
+    description: " PLATFORM_SOURCE_REGISTRY：仅登记实际访问过的来源；2026-09 基线：各 adapter 尚未联网核验，此字段允许空数组但必须在 fact_confidence_summary 声明"
+    items:
+      type: object
+      properties:
+        source:         {type: string, description: "官方文档/公告 URL 或材料名"}
+        source_owner:   {type: string}
+        source_type:
+          type: string
+          enum: [official, platform_employee, research, third_party, creator_observation, industry_report]
+        claim_supported: {type: string, description: "该来源支持的具体主张"}
+        published_date: {type: string}
+        accessed_date:  {type: string}
+        freshness:      {type: string, enum: [current, aging, stale, STALE_REVIEW_REQUIRED]}
+        confidence:     {type: string, enum: [high, medium, low]}
+  # ---- 事实字段：每条内部可用 [official_rule | verified_observation | industry_consensus | experience_speculation] 标注 ----
+  content_units:                  {type: array, items: {type: string}}
+  dominant_user_intent:           {type: array, items: {type: string}}
+  distribution_model:             {type: string, description: "关注分发/算法分发/社交分发/搜索分发的构成"}
+  recommendation_model:           {type: string}
+  social_graph_characteristics:   {type: string, description: "关注关系/双向好友/陌生人推荐占比"}
+  content_lifecycle:              {type: string, description: "长青/爆发衰减/搜索长尾"}
+  primary_entry_points:           {type: array, items: {type: string}}
+  attention_environment:          {type: string, description: "用户在什么状态下刷：全屏沉浸/信息流/主动搜索"}
+  user_behavior:                  {type: string}
+  interaction_signals:            {type: array, items: {type: string}, description: "平台衡量的行为信号"}
+  sharing_mechanism:              {type: string, description: "分享去向与阻碍（站内/站外/私域）"}
+  search_mechanism:               {type: string}
+  community_mechanism:            {type: string, description: "社群/粉丝互动的组织方式"}
+  algorithmic_features:           {type: array, items: {type: string}}
+  content_constraints:            {type: array, items: {type: string}, description: "时长/字数/格式硬约束（标注 official_rule）"}
+  # ---- 元素角色：该平台里各元素承担的传播功能 ----
+  title_role:    {type: string}
+  cover_role:    {type: string}
+  opening_role:  {type: string}
+  tag_role:      {type: string}
+  comment_role:  {type: string}
+  follow_role:   {type: string}
+  risk_factors:            {type: array, items: {type: string}}
+  known_platform_patterns:
+    type: array
+    items:
+      type: object
+      properties:
+        pattern:   {type: string}
+        mechanism_links: {type: array, items: {type: string}, description: "关联机制节点 ID"}
+        fact_type: {type: string, enum: [official_rule, verified_observation, industry_consensus, experience_speculation]}
+        evidence_level: {type: string, enum: [L1, L2, L3, L4], description: "L1 官方规则 / L2 已验证观察 / L3 行业共识 / L4 假设推测；缺省按 L3 以下对待"}
+        source_ref: {type: string, description: "指向 platform_sources 条目；official_rule 必填"}
+        last_verified: {type: string, pattern: "^[0-9]{4}-[0-9]{2}$", description: "该条独立时间戳；缺省继承 adapter 级 last_updated"}
+        note:      {type: string}
+  confidence:
+    type: string
+    enum: [high, medium, low]
+    description: "整体置信度；China 平台多为 medium（行业共识为主）"

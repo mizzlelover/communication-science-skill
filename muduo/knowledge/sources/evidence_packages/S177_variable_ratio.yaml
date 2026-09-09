@@ -1,0 +1,26 @@
+# Evidence Package — S177 Laskowski et al. 2019（Can Slot-Machine Reward Schedules Induce Gambling Addiction in Rats?）
+# 标准格式。access_level 如实标注。
+source_id: S177
+title: "Can Slot-Machine Reward Schedules Induce Gambling Addiction in Rats?"
+authors: "Catherine S. Laskowski; Danika L. Dorchak; Kathleen M. Ward; Darren R. Christensen; David R. Euston"
+year: 2019
+journal: "Journal of Gambling Studies 35(3): 887-914"
+doi: "10.1007/s10899-019-09852-1"
+url: "https://pubmed.ncbi.nlm.nih.gov/31049772/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed 完整摘要（PMID 31049772，含 random-ratio vs fixed-ratio 反应率/暂停/三项成瘾样测试结果）+ wanfangdata 医学期刊页（书目、关键词、基金：Alberta Gambling Research Institute）+ NGDC OpenLB 记录页交叉确认书目与摘要"
+research_question: "长期暴露于类似老虎机的随机比率（variable/random-ratio）奖励程序，是否会在动物模型上诱导出类似药物成瘾的强迫性行为？不可预测奖励对行为频率与坚持有何效应？"
+core_claims:
+  - "与滥用药物类似，随机比率（random-ratio）奖励程序具有高度激励性，在人身上被认为助长赌博成瘾（PubMed 摘要原文）"
+  - "实证：经 6 周训练，随机比率（VR）组大鼠的反应率显著高于固定比率（FR）组，且奖励后的暂停（post-reward pause）显著更短——不可预测的奖励维持更高行为频率（PubMed 摘要原文）"
+  - "但三项成瘾样测试（无奖励提示期的反应抑制、渐进比率下的坚持、惩罚下的坚持）结果大体为阴性：VR 与 FR 组在提示无奖期、惩罚耦合、食物贬值、1 周延迟后的复吸测试中无组间差异（PubMed 摘要原文）"
+  - "唯一例外：实验二 VR 组在渐进比率测试中表现出更大坚持；口服多巴胺激动剂普拉克索（pramipexole）后，VR 组在渐进比率测试中的固执性进一步增强（PubMed 摘要原文）"
+  - "表面结论：random-ratio 程序有激励性（维持高频行为）但不必然成瘾；更长训练或更诱人的奖励可能改变这一结论（PubMed 摘要原文）"
+method: "动物行为实验（Wistar 大鼠，n 见原文）：两轮实验分别以随机比率（random-ratio）与固定比率（fixed-ratio）程序训练食物奖励反应 6 周，随后用三项成瘾样判据（无奖励提示期的反应抑制/渐进比率坚持/惩罚坚持）及食物贬值、复吸测试比较两组；实验二加用多巴胺激动剂普拉克索"
+results: "VR 组反应率更高、奖励后暂停更短（机制性确认：不可预测奖励维持行为频率）；成瘾样行为大部分阴性，仅渐进比率坚持在 VR 组与普拉克索条件下增强"
+limitations: "动物模型（大鼠）对人类赌博行为的推论有限；以食物为奖励（非金钱/赌博特有刺激）；成瘾样判据来自药物成瘾模型；『更长训练或更诱人奖励可能成瘾』的可能性未被排除（作者自述）"
+boundary_conditions: "支持 variable_ratio_reward 节点『不可预期奖励提高反应率与抗消退』的机制层（A 级经典程序结论）；但对『可变奖励=成瘾』的强版本给出反证——激励性≠成瘾性，成瘾还需奖赏价值、惩罚结构与个体易感性参与；向人类产品迁移仍需谨慎（与节点 B 级评级一致）"
+relevant_nodes: [variable_ratio_reward]
+notes: "variable_ratio_reward 节点（B 级）的现代实证锚点：random-ratio 高反应率+短暂停直接支撑『不可预测奖励维持行为频率』；同时如实记录成瘾样行为阴性的边界，避免过度外推。书目/DOI/PMID 均经 PubMed+wanfangdata+NGDC 三源核实。"
+last_verified: "2026-09"

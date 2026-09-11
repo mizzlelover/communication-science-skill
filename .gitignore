@@ -24,3 +24,4 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+evals/blind/r1_workspace/

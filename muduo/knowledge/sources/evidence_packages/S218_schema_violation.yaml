@@ -1,0 +1,22 @@
+# Evidence Package — S218（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S218
+title: Bayesian surprise attracts human attention
+authors: Laurent Itti; Pierre Baldi
+year: 2009
+journal: Vision Research 49(10):1295-1306（NeurIPS 2005 版本先行）
+doi: 10.1016/j.visres.2008.12.002
+url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2782645/
+access_level: full_text
+research_status: annotated
+content_obtained: PMC 作者稿（HHS Public Access）摘要+引言+理论节逐字实读（2026-09-11）；NeurIPS 2005 正式版全文（proceedings.neurips.cc）逐字实读
+research_question: 如何定量定义'惊喜'并检验它是否吸引人类注意/注视？
+core_claims:
+- Bayesian surprise 形式化定义：数据对观察者信念的影响=后验与先验分布的差异——只有实质改变信念的数据才产生惊喜（与 Shannon 信息量不同）
+- 真实电视/视频自由观看实验：72% 的注视转移指向高于平均惊喜度的位置；仅取全体观察者同时选中的区域时升至 84%
+method: 计算模型（低层视觉神经元模拟惊喜度）+ 大规模自然视频眼动数据对照
+limitations: 模型为低层感觉级惊喜；语义/叙事层惊喜未直接测量
+boundary_conditions: 自由观看情境；跨模态/抽象层级作者声明理论可扩展但未全部实测
+relevant_nodes:
+- schema_violation
+notes: schema_violation 核心主张（意外指向受众既有模型的失效点、获得认知特权）的一手实验证据：惊喜=对先验信念模型的偏离。真实数字 72%/84%。
+last_verified: 2026-09

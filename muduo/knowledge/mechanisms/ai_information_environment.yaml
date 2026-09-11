@@ -1,686 +1,1107 @@
 # ai_information_environment — AI 信息环境：生成式 AI 重塑传播条件的新增研究模块
-# 本域研究快速发展中：多数节点证据等级为 C/D，各节点内如实标注截至 last_reviewed（2026-09）的状态。
-# 机制解释均挂回底层人类机制节点：说明 AI 改变了什么条件、激活/削弱了哪条底层机制。
 domain: ai_information_environment
 nodes:
-  - id: ai_content_saturation
-    canonical_name_en: AI Content Saturation
-    canonical_name_zh: AI 内容饱和
-    aliases: [AIGC 供给爆炸, synthetic content flood, 内容过载加剧]
-    domain: ai_information_environment
-    definition: "AI 内容饱和指生成式 AI 将内容边际生产成本压缩至接近零后，平台内容供给急剧膨胀而人类注意力总量基本不变，导致单位内容获得的注意力被稀释、筛选压力向分发端与受众端双向转移的结构性状态。这是对条件变化的描述性概念，不是单一心理效应。"
-    core_claim: "内容供给的爆炸式增长不会扩大注意力总供给，只会加剧注意力竞争：多数内容的单位曝光价值下降，分发系统的筛选权力与受众的筛选负担同时上升。"
-    mechanism: "底层机制是注意力容量约束（attention_capacity_limits）：人类注意力总供给近似固定，历史上内容供给受生产成本约束，AI 移除了成本约束而无法扩大注意力，供需失衡因此加剧。对受众端，海量供给放大信息过载，处理流畅性（processing_fluency）被进一步倚重为快速筛选启发式，而生成模型恰好擅长产出高流畅性、模板化内容，加剧同质化并抬高『识别值得注意的内容』的门槛。对内容端，平均曝光价值下降推高对真实性、独特性信号的需求，构成 authenticity_premium 的结构性前提。AI 改变的条件是供给侧成本，而非人脑的接收端。"
-    causal_chain: "生成成本骤降 → 内容供给爆炸 → 注意力总量不变 → 单位内容注意力稀释 → 分发端筛选权力↑ + 受众端筛选负担↑ → 同质化加剧与真实性信号升值"
-    variables:
-      inputs: [AI 生成内容供给量, 人类注意力总供给（近似恒定）, 分发系统容量]
-      moderators: [平台分发机制的准入门槛, 受众筛选能力与工具, 品类内容生产成本结构, 平台对 AI 内容的披露政策]
-      mediators: [信息过载, 流畅性启发式的权重, 分发端排序权力]
-      outputs: [单位内容平均注意力下降, 内容同质化, 真实性/独特性信号溢价]
-    evidence:
-      supporting:
-        - "生成式 AI 的内容生产成本与速度优势是可广泛观察的行业事实；平台内容供给与 AI 生成量的增长为从业者共识（行业观察）"
-        - "注意力容量有限与信息过载的行为证据长期稳固，为稀释逻辑提供底层支持（底层心理学文献方向）"
-      conflicting:
-        - "『AI 生成内容占比』与『饱和对传播效果的实际影响』缺乏跨平台系统性量化研究，现有讨论多为案例与评论（研究缺口）"
-      replication:
-        - "截至 2026-09：作为新兴现象，尚无跨平台大规模独立复制研究；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    boundary_conditions:
-      - "在注意力总量近似恒定的媒介环境中成立；若内容消费场景本身扩张（新设备、新场景），稀释速度被部分抵消"
-      - "效应强度依赖分发端是否收紧供给准入：平台主动限制低质生成内容时，饱和压力部分转化为分发权力"
-    failure_conditions:
-      - "把『饱和』当作内容注定失败的理由——饱和改变的是平均条件，差异化内容仍可胜出"
-      - "假设所有品类同质饱和：强人格、强线下经验、强信任关系的内容受影响显著小于模板化信息类内容"
-    common_misinterpretations:
-      - "『内容越多流量越大』——供给增加不增加注意力总池，只增加竞争者数量"
-      - "把饱和归因于『受众变笨/变懒』——这是结构性供需失衡，与个体能力无关"
-    ethical_risks:
-      - "为在饱和中胜出而系统性采用高唤起、极端化包装，加剧注意力市场的劣化竞争"
-    examples:
-      original_cases: []
-      research_cases: []
-      modern_cases: ["批量生成的 SEO 与自媒体模板文充斥搜索与信息流（行业观察）", "平台开始要求或鼓励标注 AI 生成内容（原则性描述）"]
-    communication_implications: "策略重心从『生产更多』转向『值得被筛选出来』：投资难以被低成本复制的要素（真实经验、人格、关系与独特视角），并把真实性信号显性化。"
-    community_implications: "社群是人类筛选器的替代品：饱和环境中『谁帮你先筛过一遍』的信任价值上升，社群可把自己定位为高质量筛选层而非内容供给方。"
-    content_applications:
-      title: "标题避开模板化 AI 高频句式，用具体经验与具体对象命名"
-      body: "加入只有实际经历者才有的细节（时间、成本、失误），构成对纯生成内容的区分度"
-      emotion: "以真实情绪记录替代算法友好的标准化情绪模板"
-    platform_implications: "饱和使分发端权力进一步集中：排序算法成为事实上的注意力配给者，平台对 AI 内容的标识、限速与质量分层政策将直接决定可见性结构（原则性判断）。"
-    related_nodes: [attention_capacity_limits, processing_fluency, authenticity_premium, information_overload, attention_economics, creator_incentive_structures]
-    source_ids: [S48, S100]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Chayka 2024《Filterworld》（S100，book 级，substantial_excerpt：算法扁平化机制/创作者内化/Spotify 泛化数据）+ Tim Wu 注意力商业史（S48）"
-      effect_size: "优化互动奖励同质化；反馈循环把文化推向中位数（安全、熟悉、无摩擦）"
-      replication_status: "泛化内容吸引更广受众被平台数据方向性支持；『扁平化』强度缺乏系统度量"
-      context_dependency: "推荐算法主导的平台与文化生产；人工策展/小众社区需修正"
-      downgrade_upgrade_reason: "2026-09 实取 S100 核心论点，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S100]
-      supporting_evidence: [S48]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: synthetic_media_trust
-    canonical_name_en: Synthetic Media Trust
-    canonical_name_zh: 合成媒体的信任问题
-    aliases: [AIGC 信任危机, deepfake 信任侵蚀, synthetic media credibility]
-    domain: ai_information_environment
-    definition: "合成媒体信任问题指：当 AI 生成或篡改的文本、图像、音视频在感官层面难以与真实记录区分时，受众赖以建立信任的既有线索（视觉逼真度、权威外观、传播渠道）失去可靠性，导致默认信任水平下降、验证成本上移的系统性状态。"
-    core_claim: "合成内容的感官不可分辨性破坏了信任校准所依赖的环境线索，使信任从『默认给予』转向『需要理由』，真实内容因此被迫承担额外的证明成本。"
-    mechanism: "人类信任校准（trust_calibration）依赖线索稳定性：过去『像素即证据』『截图即记录』的线索与真实性高度相关。生成模型移除了这种相关性而保留线索本身——线索还在，但不再指向真实。真实性感知（authenticity_perception）所依赖的连贯性、自然感等启发式同样可被生成模型满足。后果有二：一是信任紧缩，对可疑线索一律降权；二是有法学与传媒研究提出的『说谎者红利』（liar's dividend）——真实内容也可被指控为合成，使否认成本下降。由于对 AI 生成内容的自动检测在技术上尚不可靠（学界的普遍共识），线索重建只能外移到溯源凭证、渠道信任与机构信誉上。"
-    causal_chain: "生成模型逼近感官真实 → 表面线索与真实性的相关性断裂 → 默认信任下降 + 验证成本上移 → 真实内容需额外证明 → 信任转向渠道/凭证/机构等替代线索"
-    variables:
-      inputs: [合成内容逼真度, 受众对 AI 生成能力的知晓度, 内容可验证性]
-      moderators: [议题风险程度（高风险议题校准更严）, 受众媒介素养, 平台披露与标注机制, 传播渠道的既有信任水平]
-      mediators: [信任校准线索的失效, 真实性感知]
-      outputs: [默认信任水平下降, 真实内容的证明成本上升, 信任向可验证线索迁移]
-    evidence:
-      supporting:
-        - "AI 生成内容自动检测的不可靠性是研究界普遍共识（方法学讨论，方向一致）"
-        - "受众调查显示对虚假与合成内容的担忧普遍存在（调查类证据，方向一致）"
-      conflicting:
-        - "日常低风险场景中多数受众并未系统性改变信任行为——担忧与行为之间存在落差（调查证据的常见发现）"
-      replication:
-        - "截至 2026-09：现象被广泛讨论，但『信任侵蚀』的因果链条缺乏大规模纵向实证；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "在高风险、高卷入信息（健康、财务、新闻证据）中效应最强；娱乐性内容受影响小"
-      - "依赖『感官逼真度=真实』线索的人群与场景受冲击最大；本就以渠道与机构为信任基础的场景相对稳定"
-    failure_conditions:
-      - "『合成媒体导致全面信任崩塌』的强断言不成立：低卷入场景中受众常按惯性行事"
-      - "把标注与检测当作充分解：检测不可靠时，仅靠事后检测无法恢复线索有效性"
-    common_misinterpretations:
-      - "『提高分辨率就能识别 AI 内容』——生成质量持续提升，基于感官质量的判断会持续失效"
-      - "把信任下降等同于怀疑一切——实际更多是信任向渠道、机构与凭证等替代线索重新分配"
-    ethical_risks:
-      - "利用合成内容冒充真实人物与事件，直接侵害个体权利并污染公共信息环境"
-      - "反向滥用：以『这是假的』指控真实内容以逃避证据约束（说谎者红利）"
-    examples:
-      original_cases: []
-      research_cases: ["对 AI 文本与图像检测器可靠性的评估研究普遍报告高错误率或不稳定性（综述方向，不给具体数字）"]
-      modern_cases: ["公众人物照片被指『像 AI 生成』引发的真假争论", "平台试行为 AI 生成内容添加可见或隐性标注（原则性描述）"]
-    communication_implications: "在高卷入传播中主动为真实性提供可验证支撑（过程记录、原始出处、可核查细节），不依赖『看起来真实』；同时避免过度声明导致真实性疲劳。"
-    community_implications: "社群内部信任以关系与历史为基础，受冲击小于公共信息环境；社群仍是成员核实可疑内容的第一站，应建立核验惯例而非人人自危。"
-    content_applications:
-      evidence: "引用可独立核查的原始出处，附过程性材料（原始记录、时间戳习惯）而非仅给结论"
-      visual: "视觉素材保留可验证的原始上下文信息（拍摄来源与原始文件的引用方式）"
-      comments: "对评论区真假质疑给出透明回应路径，把核验过程本身作为信任建设"
-    platform_implications: "平台从『审核内容真伪』转向『治理身份与凭证』：账号可信度、内容标注与来源展示成为新的信任基础设施，其设计质量决定线索重建速度（原则性判断）。"
-    related_nodes: [trust_calibration, authenticity_perception, provenance_verification, content_provenance, fluency_truth_effect, source_credibility_model]
-    source_ids: [S92, S01, S181]
-    provenance:
-      primary_sources: ['S92', 'S01', 'S181']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: personalized_persuasion
-    canonical_name_en: Personalized Persuasion
-    canonical_name_zh: 个性化说服
-    aliases: [精准说服, tailored persuasion, AI 定制化影响]
-    domain: ai_information_environment
-    definition: "个性化说服指基于个体画像（行为数据、兴趣、心理特征）为不同个体定制不同信息内容、时机与框架的实践。AI 使定制从『人群级细分』细化到『个体级生成』。说服效力提升与操纵风险并存是本概念的定义性张力。"
-    core_claim: "按个体画像定制信息通常能提升即时说服效力（相关性、时机与框架匹配），但效力提升与知情同意缺失、脆弱者剥削、心理逆反等风险同源同在——个性化程度越高，两类后果都越强。"
-    mechanism: "底层机制一：相关性提升卷入度。按精细加工可能性模型（elaboration_likelihood_model），与个体处境高度相关的信息更易触发中央路径加工并形成持久态度改变。机制二：框架与时机匹配作用于外围路径，在低卷入时尤其有效。机制三：当个体察觉『这是专门为我设计的说服』时，心理逆反（psychological_reactance）被激活，效力反转——这构成个性化说服的内在不稳定性。AI 改变的条件是：画像粒度与内容生成能力同时到位，使『一人一版』在成本上可行；超个性化与隐私的张力见 hyperpersonalization_privacy。"
-    causal_chain: "个体画像 → 定制内容/时机/框架 → 相关性与匹配度提升 → 中央或外围路径加工 → 态度/行为改变；定制被察觉 → 心理逆反 → 效力反转"
-    variables:
-      inputs: [画像数据质量与粒度, 生成式定制能力, 触达时机选择]
-      moderators: [个体对个性化的觉察, 数据使用的知情同意, 议题对个体的敏感度, 个体的自主需求强度]
-      mediators: [感知相关性, 卷入度（ELM 路径选择）, 心理逆反]
-      outputs: [即时转化与态度改变, 长期信任, 操纵与剥削风险敞口]
-    evidence:
-      supporting:
-        - "个性化信息与相关性匹配提升说服效果在传统细分与 tailored message 研究中方向一致（媒介与营销文献综述方向）"
-        - "《The Hype Machine》对社交平台个性化分发与大规模实验能力的讨论（书籍论证）"
-      conflicting:
-        - "过度个性化被识破后触发逆反与隐私担忧的实验证据在多个情境中出现（研究讨论）"
-        - "S93 EP 多源实证显示个性化/过滤效果远小于流行叙事：Bakshy 等 2015 估计算法使跨阵营内容暴露减少约 8%，模拟研究未在实验环境复现极端气泡——个性化说服效果的外推需同样谨慎（对照发现）"
-      replication:
-        - "截至 2026-09：个体级 AI 生成定制的实地效果缺乏公开的严格对照研究；多数结论由传统个性化研究外推，证据情境依赖"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "画像数据真实反映个体且与议题相关时定制增益成立；画像噪声大时增益消失甚至为负"
-      - "在用户知晓并接受个性化的场景（如自我选择的服务设置）中，逆反风险显著低于隐蔽个性化"
-    failure_conditions:
-      - "定制被察觉为操纵（尤其是利用敏感状态的定制）时，逆反与信任损失超过任何即时收益"
-      - "画像错误导致的『错误个性化』（用过时行为推断当前需求）会造成荒谬感并损害体验"
-    common_misinterpretations:
-      - "『个性化等于更有效，所以越多越好』——忽视被察觉后的逆反反转与长期信任损耗"
-      - "把个性化说服与操纵划等号——区分点在于知情同意、透明度与退出权，不在技术本身"
-    ethical_risks:
-      - "利用心理脆弱状态（成瘾倾向、财务困境、情绪低谷）进行定向说服，构成剥削性操纵"
-      - "在无有效知情同意下将敏感推断用于说服，侵犯自主性；部分情境涉及法律红线"
-    examples:
-      original_cases: []
-      research_cases: ["健康传播中 tailored message 对行为意向增益的研究传统（综述方向）"]
-      modern_cases: ["电商基于浏览行为替换产品叙事与推荐语（行业观察）", "『不同用户看到不同版本政治信息』的公共担忧被广泛讨论（原则性描述）"]
-    communication_implications: "个性化的正当边界是『帮用户更快找到相关价值』而非『绕过理性防御』：保持定制逻辑可解释、提供退出选项、避开敏感状态画像。"
-    community_implications: "社群内的『个性化』应以成员主动表达的需求（入群动机、自选标签）为基础，而非隐蔽监测；前者是服务，后者消耗社群信任。"
-    content_applications:
-      opening: "以用户可见的需求线索开头（而非隐秘画像推断），让相关性建立在明面上"
-      cta: "为不同需求场景准备可选路径，而非单一强制转化话术"
-      comments: "公开回应『你是不是在给我画像』式疑问，披露定制逻辑以化解逆反"
-    platform_implications: "平台掌握画像与分发两端，是个性化说服的实际守门者；其广告政策对敏感类目（健康、财务、政治）的限制直接划定实践边界（原则性判断）。"
-    related_nodes: [psychological_reactance, hyperpersonalization_privacy, elaboration_likelihood_model, central_route_processing, pre_suasion_attention_channeling, nudge_mechanism]
-    source_ids: [S92, S95]
-    provenance:
-      primary_sources: ['S92', 'S95']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: ai_information_intermediaries
-    canonical_name_en: AI Information Intermediaries
-    canonical_name_zh: AI 作为信息中介
-    aliases: [AI 守门层, answer engines as gatekeepers, AI 助手中介化]
-    domain: ai_information_environment
-    definition: "AI 信息中介指以对话助手、AI 搜索摘要、智能体（agent）等形态出现在用户与信息源之间的新守门层：它们替用户完成检索、筛选、综合与转述，使『谁被看到、如何被转述』的决定部分从搜索排名与信息流排序转移到 AI 系统的检索与综合逻辑。"
-    core_claim: "信息中介的守门功能从『排序内容』扩展为『生成答案』：AI 中介不仅决定先看到什么，还决定如何被转述，其引用与综合选择成为新的守门权力。"
-    mechanism: "传统守门机制（gatekeeping_dynamics）中，算法守门排序既有内容，用户仍需点击进入源内容；AI 中介把筛选与转述合并——它在训练语料、检索范围与综合策略的约束下生成单一答案，被略去的来源对用户不可见。这同时叠加平台权力（platform_power_gatekeeping）：中介由少数平台提供，其检索偏好与商业激励不透明。对受众，信息获取成本下降、便利性提升；代价是转述损耗、来源不可见与中介自身的选择性偏差。AI 改变的条件是：守门从『决定顺序』前移为『决定表述』。"
-    causal_chain: "用户提问 → AI 中介检索+筛选+综合 → 生成单一答案 → 用户少接触源内容与被略去的来源 → 中介的检索/综合逻辑成为新的守门权力"
-    variables:
-      inputs: [AI 中介的检索范围与策略, 训练与对齐语料构成, 用户提问方式]
-      moderators: [用户对 AI 答案的验证习惯, 中介产品的引用与溯源设计, 议题的争议性与时效性]
-      mediators: [答案的转述损耗, 来源可见性]
-      outputs: [信息触达结构改变, 源内容流量变化, 公共讨论的入口迁移]
-    evidence:
-      supporting:
-        - "主流搜索与 AI 产品向『直接给答案』方向演进是行业可见趋势（industry_consensus，产品方向层面）"
-        - "Gillespie 对平台作为内容守门者的分析与 van Dijck 等对平台化中介的分析构成理论先声（书籍论证）"
-      conflicting:
-        - "用户并未完全弃用传统检索：验证性、购物与浏览型需求仍流向原有入口（行为观察，混合格局）"
-      replication:
-        - "截至 2026-09：AI 中介对信息生态的系统性影响研究刚起步，以评论、调查与个案为主；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "对事实型、可概括型查询影响最强；对需要一手核验、实时信息或长尾深度内容的查询，直接访问仍然主导"
-      - "取决于中介产品是否展示来源链接：展示来源时守门权力部分让渡回内容方与用户"
-    failure_conditions:
-      - "『AI 中介将完全取代搜索与站点』的断言无依据：用户行为呈混合态而非全量迁移"
-      - "把 AI 答案等同于客观综合——其检索与综合选择内含偏差与盲区，不因『AI』而中立"
-    common_misinterpretations:
-      - "『AI 助手没有立场』——训练语料、检索范围与综合策略都是选择，选择即守门"
-      - "把 AI 中介与传统搜索引擎等同——差异在于从『排序引用』变为『生成转述』，溯源链路性质不同"
-    ethical_risks:
-      - "少数中介系统掌握公共信息的入口与转述权且逻辑不透明，构成问责难题"
-      - "中介答案中的错误与遗漏以高可信外观直达用户，纠错路径比传统搜索更隐蔽"
-    examples:
-      original_cases: []
-      research_cases: []
-      modern_cases: ["搜索引擎在结果页直接给出 AI 生成摘要（AI Overviews 类产品方向，industry_consensus）", "对话助手成为部分用户获取信息第一入口的用法趋势（原则性描述）"]
-    communication_implications: "把『被 AI 中介转述』纳入传播规划：信息要易于被准确检索、抓取与概括；同时保留直达受众的自有渠道，避免完全依赖中介层。"
-    community_implications: "社群问答沉淀（FAQ、置顶帖、结构化知识库）更容易被中介正确引用，成为社群对外影响力的一部分。"
-    content_applications:
-      body: "采用清晰的问答结构与可独立成立的小节，降低被中介转述时的失真概率"
-      evidence: "在正文中明示来源与依据，使中介引用时能带上可核查的溯源链"
-      title: "标题直接对应真实提问句式，提高被检索与引用的命中率"
-    platform_implications: "守门权力出现一次再集中：从『排名算法』向『生成式中介』迁移，内容方与平台的议价关系将被重新谈判，引用展示与流量回馈政策是关键变量（原则性判断）。"
-    related_nodes: [gatekeeping_dynamics, platform_power_gatekeeping, zero_click_information, answer_engine_visibility, algorithmic_amplification, recommendation_feedback_loop]
-    source_ids: [S94, S95, S93]
-    provenance:
-      primary_sources: ['S94', 'S95', 'S93']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: zero_click_information
-    canonical_name_en: Zero-Click Information
-    canonical_name_zh: 零点击信息
-    aliases: [零点击搜索, zero-click search, 答案页截流]
-    domain: ai_information_environment
-    definition: "零点击信息指用户的问题在搜索或 AI 结果页内直接得到满足（摘要、卡片、AI 概览、知识面板），无需点击进入源站点的信息消费形态。其传播后果是站内流量被结果页截留，内容方的『曝光—流量—品牌』链条被改写。"
-    core_claim: "当答案在结果页直接呈现时，信息触达与站点访问脱钩：内容可以被大量『看到』却几乎不带来访问，品牌与溯源价值从流量计量转向『被引用、被转述时的在场』。"
-    mechanism: "底层是注意力经济（attention_economics）与摩擦结构的变化：传统搜索中『看到结果→点击→站内消费』的摩擦把注意力转化为内容方可计量的资产；结果页直接给答案消除了这一步，注意力在中介侧完成闭环。对内容方，直接的品牌曝光减少，品牌显著性（mental_availability）的建立失去一个高频触点；而被答案引用的内容方获得中介转述形式的间接在场。平台侧，答案页提高单次会话效率与留存，强化中介价值，与 ai_information_intermediaries 描述的守门迁移互为表里。AI 改变的条件是：点击这一『注意力交接点』被系统性移除。"
-    causal_chain: "问题在结果页被直接回答 → 无需点击 → 站内流量与品牌曝光被截留 → 内容方计量体系失真 → 价值向『被引用在场』与自有触点转移"
-    variables:
-      inputs: [结果页答案的完整度, 问题的类型（事实型/复杂型）, 中介的引用展示设计]
-      moderators: [用户任务的深浅, 品类的转述难度, 用户对来源的信任需求]
-      mediators: [点击摩擦的消除, 来源可见性]
-      outputs: [站内流量结构变化, 品牌直接曝光减少, 被引用内容方的间接在场]
-    evidence:
-      supporting:
-        - "『大量查询未产生点击』的现象在 AI 摘要普及前已被搜索行为研究与从业者广泛讨论（观测与从业者共识）"
-        - "注意力收割与中介化商业模式的长期演化分析见《The Attention Merchants》（书籍论证）"
-      conflicting:
-        - "复杂任务、购买决策与深度内容查询仍大量产生点击；零点击对总流量的净影响因品类与方法学差异存在争议（讨论中）"
-      replication:
-        - "截至 2026-09：AI 摘要普及后的点击率系统性变化缺乏公开可比的跨来源数据，各方报告口径不一；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "事实型、单点型问题（定义、换算、时间）零点击比例最高；比较、决策与体验类问题仍需要站内内容"
-      - "对以广告变现的通用信息站影响直接；对以信任关系变现的品牌与社群影响更间接"
-    failure_conditions:
-      - "把零点击等同于『搜索入口死亡』——被引用、品牌词搜索与直访渠道仍在，是结构变化而非归零"
-      - "用单一点击率下降外推整体业务损失，忽视会话结构与品类差异"
-    common_misinterpretations:
-      - "『答案页引用等于免费流量』——被引用带来的是间接在场，转化路径变长且不可控"
-      - "把零点击当作纯用户福利——它同时是中介对注意力的进一步圈占（商业模式判断）"
-    ethical_risks:
-      - "中介截留注意力与流量却主要回馈自身生态，可能挤压独立内容方生存空间、降低信息来源多样性"
-    examples:
-      original_cases: []
-      research_cases: []
-      modern_cases: ["搜索结果页以 AI 概览/摘要卡直接回答事实型问题（产品方向，industry_consensus）", "内容方加强品牌词建设、邮件列表与社群直连以对冲截流（行业观察）"]
-    communication_implications: "把可被结果页直接引用的『答案型内容』与必须到场的『体验型内容』分层经营：在可截留的信息上经营在场与权威，在不可替代的信息上经营直达。"
-    community_implications: "社群与私域是零点击环境的对冲资产：结果页无法复制的归属感、互动与实时信息构成到访的独立理由。"
-    content_applications:
-      body: "正文前部提供可直接被引用的简洁答案块，后部展开需要到场的深度内容"
-      title: "对事实型需求页面采用问句式标题加直接答案结构，争当被引用源"
-      cta: "把到访理由从『获取答案』改为『获得社群/服务/更新』，重建独立访问动机"
-    platform_implications: "答案页是中介价值最大化的形态：平台在『用户效率』与『来源生态健康』之间存在结构性权衡，其引用与流量回馈政策决定内容方生存空间（原则性判断）。"
-    related_nodes: [ai_information_intermediaries, attention_economics, mental_availability, answer_engine_visibility, platform_power_gatekeeping, gatekeeping_dynamics]
-    source_ids: [S48, S94]
-    provenance:
-      primary_sources: ['S48', 'S94']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: answer_engine_visibility
-    canonical_name_en: Answer Engine Visibility (GEO/AEO)
-    canonical_name_zh: 答案引擎可见性（GEO/AEO）
-    aliases: [GEO（生成式引擎优化）, AEO（答案引擎优化）, AI 搜索优化]
-    domain: ai_information_environment
-    definition: "面向 AI 答案引擎的可见性优化实践（GEO，Generative Engine Optimization；AEO，Answer Engine Optimization）：通过结构化表达、可独立引用的答案单元、明确来源与权威信号，提高内容被 AI 中介检索、采用并转述的概率。注意：这是新实践领域，经验为主，非实证结论。"
-    core_claim: "（从业者经验主张）清晰结构、可独立引用的答案块、明确出处与权威信号能提高内容被 AI 答案引擎引用的概率；该主张目前主要来自从业者观察与少量初步研究，而非系统实证。"
-    mechanism: "（按从业者解释）AI 中介在检索与综合时偏好可解析、可概括、有可核查来源的内容：清晰的标题层级与问答结构降低解析成本；自包含的答案块降低转述改写成本；一致的外部权威信号（被其他可信来源提及、署名与出处完整）提高入选概率。这些解释与答案引擎的工程逻辑直觉一致，但各引擎的实际实现不公开，无法验证相对权重。底层关联：权威影响（authority_influence）与信源可信度（source_credibility_model）说明为何在缺乏直接验证手段时，权威信号被用作替代线索。"
-    causal_chain: "结构化 + 可引用 + 权威信号 → 中介解析与转述成本↓、入选概率↑ → 被答案引用 → 间接在场（联动 zero_click_information）"
-    variables:
-      inputs: [内容的结构化程度, 答案块的自包含性, 外部权威信号密度]
-      moderators: [具体引擎的检索与综合策略（不公开且持续变化）, 议题竞争密度, 内容时效性]
-      mediators: [被检索率, 被引用率]
-      outputs: [答案中的在场率, 品牌词搜索与直访的变化]
-    evidence:
-      supporting:
-        - "少量初步研究与大量案例报告称结构化与引用优化能提升被引用概率（初步研究+从业者报告，样本与可复制性有限）"
-        - "传统搜索优化中结构化与权威信号有效的历史经验被类比移植（从业者经验）"
-      conflicting:
-        - "各引擎实现差异大且频繁变化，单次实验结论难以稳定复制；市场上存在大量伪规律与工具营销话术（行业观察）"
-      replication:
-        - "截至 2026-09：无独立、跨引擎、预注册的系统性复制；实践经验为主，非实证结论"
-      meta_analysis: []
-    evidence_grade: D
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "结论依赖具体引擎的当前实现，引擎策略一变做法即可能失效"
-      - "对信息型内容帮助较大；对强人格、强社群型内容的可见性帮助有限"
-    failure_conditions:
-      - "堆砌伪结构化（为机器写作而牺牲人类可读性）会同时损害真实用户体验与长期信任"
-      - "把第三方工具的『AI 可见性评分』当可靠度量——多数工具的黑箱指标未经效度验证"
-    common_misinterpretations:
-      - "『GEO 就是新 SEO，照搬关键词堆砌』——转述机制不同于排序机制，关键词密度逻辑不成立"
-      - "『存在已验证的 GEO 秘诀』——引擎实现不公开，任何声称掌握内部权重的说法都不可核实"
-    ethical_risks:
-      - "为被引用而系统性美化或简化事实，使中介转述的偏差被放大并规模化"
-      - "工具与培训市场借信息不对称销售不可验证的『保证被引用』服务"
-    examples:
-      original_cases: []
-      research_cases: []
-      modern_cases: ["内容团队为 FAQ、定义页与对比页增加自包含答案块（行业实践）", "品牌经营百科类条目与权威第三方收录以积累引用信号（行业实践）"]
-    communication_implications: "以『可被诚实转述』为优化目标：写清楚、给来源、让答案块独立成立；面向人类读者的写作质量优先于面向机器的技巧。"
-    community_implications: "把社群沉淀的高频问答整理为公开的结构化知识库，既服务成员，也提高被答案引擎准确引用的概率。"
-    content_applications:
-      body: "每个核心问题用『一句话直接答案+展开依据+来源』的三段式写法"
-      evidence: "为关键事实附上可核查的出处与署名，积累被引用所需的可信信号"
-      title: "以用户的真实问句为标题，答案块紧跟标题之下"
-    platform_implications: "答案引擎的引用展示与流量回馈政策是本实践的外生变量：政策一次调整即可重写行业做法，不应把任何当前技巧当作长期稳定资产（原则性判断）。"
-    related_nodes: [zero_click_information, ai_information_intermediaries, authority_influence, source_credibility_model, mental_availability]
-    source_ids: [S48, S94]
-    provenance:
-      primary_sources: []
-      supporting_evidence: [S48, S94]
-      last_verified: "2026-09-09"
-    provenance:
-      primary_sources: ['S48', 'S94']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: content_provenance
-    canonical_name_en: Content Provenance
-    canonical_name_zh: 内容溯源
-    aliases: [内容凭证, provenance credentials, 媒体溯源]
-    domain: ai_information_environment
-    definition: "内容溯源指为媒体内容附加机器可验证的来源与编辑历史凭证（拍摄或生成方式、编辑操作链、署名）的技术与规范方向。代表性组织是内容真实性联盟 C2PA（Coalition for Content Provenance and Authenticity），其凭证标准已被多家相机、创意软件与平台厂商采纳或试用。它回答『这份内容从哪来、被怎么改过』，不直接判定『真或假』。"
-    core_claim: "当表面线索不可靠时，为内容附加端到端的可验证凭证可以重建信任线索：凭证不证明内容为真，但把『从何而来、是否被改』从猜测变为可核查事实。"
-    mechanism: "底层挂钩溯源验证（provenance_verification）：人类对证据的评估依赖来源链条可追溯；传统媒介时代链条由机构惯例（署名、档案）承载，合成媒体环境下链条断裂。凭证技术把链条写进内容本身并加以密码学保护，使信任校准（trust_calibration）重新获得稳定外部线索。其局限同样关键：凭证只能证明『链条完整』，不能证明内容本身无误导（拍得真不等于剪得诚实）；且凭证依赖全链路采纳——任一环节剥离凭证，线索即失效；对不查看凭证的受众，效用进一步打折。"
-    causal_chain: "内容创建/编辑时附加凭证 → 传播链路保留凭证 → 受众或平台可验证来源与操作历史 → 信任校准获得外部线索 → 合成内容治理获得技术抓手"
-    variables:
-      inputs: [凭证的覆盖率（多少内容带凭证）, 全链路保留率, 用户查看与理解凭证的能力]
-      moderators: [平台的凭证展示设计, 高风险场景（新闻/司法/金融）的规范要求, 剥离凭证的攻击成本]
-      mediators: [来源链条可追溯性]
-      outputs: [可验证来源的内容比例, 凭证缺失内容的信任折价, 深度伪造治理的执法抓手]
-    evidence:
-      supporting:
-        - "C2PA 联盟真实存在并有主流厂商参与标准制定与试点（可确证的组织与标准事实）"
-        - "来源与出处信息影响可信度判断有传播学证据方向支持（source credibility 文献方向）"
-      conflicting:
-        - "凭证的端到端保留率、普通用户查看率与实际防伪效果尚缺乏公开的系统评估（研究缺口）"
-      replication:
-        - "截至 2026-09：技术标准在推进，生态效果（是否实际改善公众信任行为）缺乏大规模独立研究；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "在凭证全链路保留且受众知晓查看途径的场景中有效；任一环节断裂即退化为普通元数据"
-      - "对『证明来源与改动』有效，对『证明内容陈述为真』无效——两层问题不应混淆"
-    failure_conditions:
-      - "凭证被系统性剥离或工具不支持时，带凭证内容反而成为少数派，保护效果逆转"
-      - "把凭证展示当成治理终点：不改变用户查看习惯时，凭证形同虚设"
-    common_misinterpretations:
-      - "『有凭证就是真实内容』——凭证只证明来源与编辑历史未被篡改，不担保内容本身诚实"
-      - "『没有凭证就是 AI 伪造』——大量旧设备与既有工作流不产凭证，缺凭证与伪造无关"
-    ethical_risks:
-      - "凭证体系若由少数厂商垄断标准与验证入口，可能形成新的平台权力与准入壁垒"
-      - "对无凭证内容的大规模降权可能误伤弱势内容方（预算有限者、旧设备用户）"
-    examples:
-      original_cases: []
-      research_cases: []
-      modern_cases: ["C2PA 标准在相机、创意软件与平台侧的试点与采纳（原则性描述）", "新闻机构为现场素材附加来源凭证的实践探索"]
-    communication_implications: "对高可信需求内容，从创建源头即引入凭证习惯，并向受众解释『凭证证明什么、不证明什么』，避免夸大宣传反噬。"
-    community_implications: "社群可把『查凭证、问来源』固化为核验惯例之一，但应同时保留内容层面的交叉验证，防止对单一技术线索的过度依赖。"
-    content_applications:
-      evidence: "关键素材注明拍摄或制作方式与出处，能附凭证则附凭证，并解释凭证含义"
-      visual: "视觉内容发布时保留原始文件与创作过程记录，作为可出示的辅助证据"
-      comments: "对真假质疑先给出凭证与来源信息，再进入内容层面的讨论"
-    platform_implications: "平台是凭证展示与强制化的关键节点：是否展示凭证、是否对无凭证内容降级，将直接改变内容生产工作流与信任分配（原则性判断）。"
-    related_nodes: [provenance_verification, synthetic_media_trust, authenticity_perception, trust_signals_content, trust_calibration]
-    source_ids: [S94, S92]
-    provenance:
-      primary_sources: ['S94', 'S92']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: authenticity_premium
-    canonical_name_en: Authenticity Premium
-    canonical_name_zh: 真实性溢价
-    aliases: [真实溢价, verified human premium, 真实性稀缺价值]
-    domain: ai_information_environment
-    definition: "真实性溢价指：当 AI 可低成本生成高仿真内容时，『可验证的人类真实』（亲历经验、现场在场、人工痕迹、真人关系）相对稀缺度上升，受众愿意为其支付更高注意力、信任与货币价格的现象。"
-    core_claim: "AI 内容泛滥抬升了可验证真实的稀缺性，稀缺性按稀缺机制转化为溢价：越难伪造、越易验证的真实性，溢价越高。"
-    mechanism: "底层是真实性感知（authenticity_perception）与稀缺机制的结合：真实性判断依赖不完美性、过程痕迹与个人化细节等启发式线索；生成模型能模仿风格表层，却难以自带『这段经历确实发生过』的背景证明。按稀缺原则（Cialdini 框架），感知稀缺放大价值判断——AI 使『风格上像真的』不再稀缺，使『可验证为真的』变得稀缺，价值向后者集中（稀缺心态 scarcity_mindset 的估值逻辑）。边界很重要：溢价属于『可验证或可信的真实』，而非一切自称真实的内容；在合成媒体信任紧缩的环境下（synthetic_media_trust），不可验证的真实性宣称反而可能贬值。"
-    causal_chain: "AI 生成内容供给↑ → 风格层真实性不再稀缺 → 可验证真实相对稀缺↑ → 稀缺机制抬升估值 → 真实性溢价（注意力/信任/货币）"
-    variables:
-      inputs: [AI 内容在品类中的渗透度, 真实性的可验证程度, 个体对 AI 内容的接触密度]
-      moderators: [品类对亲历性的依赖度（体验类高于资讯类）, 受众的 AI 暴露与素养, 验证凭证的可得性（联动 content_provenance）]
-      mediators: [稀缺感知, 真实性感知线索]
-      outputs: [注意力与信任向可验证真实集中, 『人味』成为卖点, 虚假真实宣称的贬值与风险]
-    evidence:
-      supporting:
-        - "对『AI 味』内容的反感与对真人内容偏好上升：行业观察与个案报告（未系统抽样，无已建 EP 的系统性消费者调查支持）"
-        - "稀缺提升估值的底层机制有长期实验传统支持（Cialdini 框架内的稀缺原则；S32 仅支持稀缺估值方向，不含消费者调查内容）"
-      conflicting:
-        - "『真实性』判定高度主观且可被表演：受众并不总能识别伪真实，部分场景中对 AI 内容的偏好并未下降（情境证据）"
-      replication:
-        - "截至 2026-09：作为市场现象被广泛讨论，定价层面的严格实证仍薄；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "溢价集中在高亲历性、高信任需求品类（体验、人物、手作、现场）；标准化信息类内容溢价弱"
-      - "前提是真实性可被感知或验证；无法验证时，宣称真实不产生溢价"
-    failure_conditions:
-      - "『伪真实』表演被识破时，惩罚超过普通造假——真实性承诺的违约代价更高"
-      - "过度贴『真人/手工』标签导致标签通胀，溢价被稀释"
-    common_misinterpretations:
-      - "『只要说是真人写的就有溢价』——不可验证的真实宣称在信任紧缩环境下反而触发怀疑"
-      - "把真实性溢价与怀旧审美混为一谈——前者是信任经济现象，后者是风格偏好"
-    ethical_risks:
-      - "把『真实性』做成表演性人设（伪素人、伪手工、伪现场），以真实性之名行欺骗之实"
-    examples:
-      original_cases: []
-      research_cases: []
-      modern_cases: ["创作者强调『未使用 AI』『一镜到底』『现场收音』作为内容卖点（行业观察）", "线下体验、现场活动与手作产品在营销叙事中强调不可复制性"]
-    communication_implications: "把真实性从『氛围宣称』升级为『可验证供给』：展示过程、保留痕迹、允许核查；溢价的可靠来源是可验证性而非形容词。"
-    community_implications: "社群是真实性的天然验证场：长期互动史使成员之间『真』的判定成本低；把老成员的真实经验做成内容，是溢价的最稳来源。"
-    content_applications:
-      narrative: "讲述失败、修正与过程性细节而非只呈现完美结果，以过程痕迹支撑真实感"
-      evidence: "为真实性宣称提供可核查的旁证（时间线、地点、第三方在场）"
-      emotion: "用具体个人语境的情绪（何时何地因何）替代通用情绪模板"
-    platform_implications: "平台对真人身份与 AI 生成的标识政策直接决定溢价分配：真实身份可低成本验证时溢价流向可验证者；不可验证时溢价流向最会表演者（原则性判断）。"
-    related_nodes: [authenticity_perception, scarcity_mindset, synthetic_media_trust, trust_calibration, self_presentation_impression_management, content_provenance]
-    source_ids: [S32, S100]
-    provenance:
-      primary_sources: ['S32', 'S100']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: human_ai_co_creation
-    canonical_name_en: Human-AI Co-Creation
-    canonical_name_zh: 人机共创
-    aliases: [AI 辅助创作, co-creation with AI, 人机协作内容生产]
-    domain: ai_information_environment
-    definition: "人机共创指人类与生成式 AI 在内容生产中的分工协作：人类负责意图、判断、经验素材与最终把关，AI 承担草稿、变体、扩写与格式化等执行工作。本节点关注分工方式如何影响内容质量与风格同质化，而非工作流本身。"
-    core_claim: "共创的质量取决于人类保留判断与独特素材的程度：以人类经验为锚的分工提升效率并保留差异；以 AI 默认输出为锚的分工把产出拉向模型均值，加剧同质化并诱发算法博弈式的内容趋同。"
-    mechanism: "生成模型输出本质上是训练分布的高概率表达：未经人类强约束的 AI 草稿天然向『平均答案』收敛（同质化压力）。人类介入点决定结果——若人类贡献独特经验、反常观点与把关标准，产出偏离分布均值、保有差异；若人类只做提示词搬运与采纳，产出趋同，并在创作者激励（creator_incentive_structures）与算法筛选（algorithmic_gaming）下互相模仿，形成『模型均值↔平台热门』的双向收敛回路。这与《Filterworld》描述的算法同质化同构，AI 把同质化从分发端前移到生产端，并与 ai_content_saturation 互为放大。"
-    causal_chain: "AI 默认输出偏向分布均值 → 人类介入深度决定偏离度 → 浅介入+算法筛选 → 创作者互相模仿与趋同 → 同质化加剧"
-    variables:
-      inputs: [人类提供的独特素材量, 人类的把关标准, 提示与约束的深度]
-      moderators: [创作者激励结构（奖励差异还是奖励套路）, 平台对同质内容的筛选偏好, 品类的经验依赖度]
-      mediators: [产出对模型分布均值的偏离度, 创作者之间的相互模仿]
-      outputs: [内容质量分布, 风格同质化程度, 生产效率与差异性的权衡]
-    evidence:
-      supporting:
-        - "写作与创意任务的初步实验显示 AI 辅助能提升个体产出的质量下限，但组内产出差异缩小（初步研究，方向一致）"
-        - "《Filterworld》对算法环境导致文化同质化的论证，可谨慎类推至生产端（书籍论证）"
-      conflicting:
-        - "部分研究发现，得当的人类约束与个人素材注入可同时提效与保差（初步研究，与『必然同质化』相悖）"
-      replication:
-        - "截至 2026-09：实验多为短周期、单任务、小样本设计，缺乏长期追踪与跨领域复制；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "在经验依赖型与观点型内容中，人类介入深度对结果影响最大；格式化、信息整合型内容中影响小"
-      - "同质化后果取决于平台筛选是否奖励差异：差异化激励可部分抵消均值收敛"
-    failure_conditions:
-      - "把 AI 当『质量保证』而放弃把关：事实错误与平均化风格同时进场"
-      - "以量取胜的共创流水线在饱和环境中边际收益递减，并加速账号信任折旧"
-    common_misinterpretations:
-      - "『AI 辅助等于提质增效双赢』——效率提升较确定，质量与差异性取决于人类介入深度，非自动成立"
-      - "把同质化归咎于工具本身——同质化是『默认输出+筛选激励』的结构产物，同样的工具可用于强化差异"
-    ethical_risks:
-      - "不披露 AI 参与而冒充纯人工产出，侵蚀真实性溢价的信任基础并可能违反平台披露要求"
-      - "用 AI 批量伪造『个人经验叙事』，污染以亲历性为基础的内容生态"
-    examples:
-      original_cases: []
-      research_cases: ["创意写作任务中 AI 辅助组产出趋同的初步实验（初步研究，不给具体效应量）"]
-      modern_cases: ["团队将 AI 用于初稿与变体、人类专注选题与事实把关的流程（行业观察）", "『AI 味』成为受众吐槽高频词，反向催生真人过程展示类内容"]
-    communication_implications: "把人类独特资产（真实经验、立场、案例库）前置为共创输入，把 AI 限定在执行层；以『能否说出只有我能写的那句话』作为差异检验。"
-    community_implications: "社群共创（成员经验+AI 整理）能产出高差异性内容：成员的真实素材正是模型分布之外的部分，社群因此成为共创时代的稀缺素材源。"
-    content_applications:
-      body: "先用人类经验与观点搭骨架，AI 只做扩写与润色，最后以人类把关收尾"
-      narrative: "保留个人叙事中的非标准化细节与不完美表达，避免被 AI 统一腔调"
-      comments: "公开说明共创分工与把关流程，以透明化维持真实信任"
-    platform_implications: "平台激励决定共创走向：若排序继续奖励已验证的热门模式，共创将向均值收敛；差异化与原创信号加权会改变创作者的分工选择（原则性判断）。"
-    related_nodes: [ai_content_saturation, algorithmic_gaming, creator_incentive_structures, processing_fluency, self_efficacy, distinctive_brand_assets]
-    source_ids: [S100, S56]
-    provenance:
-      primary_sources: ['S100', 'S56']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: misinformation_velocity
-    canonical_name_en: Misinformation Velocity
-    canonical_name_zh: 错误信息传播速度
-    aliases: [虚假信息传播速度, falsehood spread, viral falsehood dynamics]
-    domain: ai_information_environment
-    definition: "错误信息传播速度指虚假或低质量信息相对真实信息在社交平台上的传播速度、深度与广度差异。该方向最著名的实证锚点是 Vosoughi、Roy 与 Aral 于 2018 年发表的大样本 Twitter 研究：在控制机器人因素后，虚假新闻比真实新闻传播得更快、更深、更广，且差异主要来自人类的分享行为而非机器人。本节点对该研究作描述性引用，不引用具体数字。"
-    core_claim: "在社交平台环境中，新颖且情绪唤起强的虚假信息系统性获得传播优势；该优势主要由人类分享偏好而非机器人生成驱动，平台机制则将其进一步放大。"
-    mechanism: "三条底层机制汇流：其一，新颖性偏好（novelty_preference）——虚假信息常比真实信息更新奇，新奇信息获得更多注意与分享；其二，情绪唤起（emotional_arousal）——虚假叙事常携带更强的高唤起情绪（惊奇、愤怒），而高唤起促进分享（情绪的差异化分享画像 discrete_emotion_sharing_profiles 与之兼容）；其三，算法放大（algorithmic_amplification）——平台排序对早期互动信号的响应使高互动的错误信息获得更大分发。AI 时代的新条件：生成工具降低伪造成本、提高虚假内容的产量与定制化，使具备传播优势的内容供给增加；对速度优势本身，AI 是放大器而非起源。"
-    causal_chain: "新奇+高唤起的虚假内容 → 人类分享偏好 → 早期互动信号 → 算法放大 → 相对真实信息更快更深更广的传播"
-    variables:
-      inputs: [信息的新颖性与情绪唤起水平, 虚假内容供给量, 平台排序机制]
-      moderators: [议题的政治化程度, 协同虚假行为的占比, 平台治理强度, 用户分享前的辨识成本]
-      mediators: [人类分享行为, 早期互动信号, 算法分发加权]
-      outputs: [传播速度/深度/广度的相对差异, 真实信息的可见性劣势]
-    evidence:
-      supporting:
-        - "Vosoughi, Roy & Aral 2018（Science 期刊）对 Twitter 历史大样本的分析：虚假新闻传播更快、更深、更广；机器人对真假新闻的加速程度相当，差异主要归于人类分享（描述性引用，不给具体数字）"
-        - "高唤起情绪促进分享的独立证据线（Berger 及其合作者的研究方向）与该发现兼容"
-      conflicting:
-        - "后续研究对『虚假信息普遍占优』提出情境修正：不同平台、议题与时期的差异幅度不一；部分平台治理与产品调整后速度差距有所收窄（研究讨论）"
-      replication:
-        - "核心发现被多个平台与国家的数据部分复制，但效应大小随平台、时期与『虚假』的操作化定义而波动；全量转发链分析被视为该领域的重要方法学基准"
-      meta_analysis: []
-    evidence_grade: B+
-    boundary_conditions:
-      - "主要基于社交网络的转发结构环境；在强编辑把关（传统媒体）或强治理平台上差异幅度不同"
-      - "『更快更深更广』是相对真实新闻的群体层面结论，不意味着任何一条虚假信息都必然胜出"
-    failure_conditions:
-      - "把结论外推为『人们只信假的』——研究解释的是传播差异，不是相信程度本身"
-      - "把一切传播差异归因于机器人——原研究明确指出人类分享是主因（描述性引用）"
-    common_misinterpretations:
-      - "『假新闻赢是因为水军』——原研究的核心反直觉点恰是人类偏好：机器人无法解释真假之间的差异"
-      - "把速度优势等同于影响力优势——传播广度与态度改变之间仍有距离"
-    ethical_risks:
-      - "速度优势的机制可被反向利用：刻意制造新奇与高唤起以加速传播（包括用 AI 批量生产此类内容）"
-    examples:
-      original_cases: []
-      research_cases: ["Vosoughi, Roy & Aral 2018 的 Twitter 转发链大样本分析（描述性引用）", "高唤起情绪内容更易被分享的独立实验与观测证据线"]
-      modern_cases: ["突发事件中未经证实信息早于权威通报扩散的常见时序", "AI 生成的伪造现场图像在事实核查完成前已被大量转发（原则性描述）"]
-    communication_implications: "权威信息要参与速度竞争：预置事实基线、缩短从核实到发布的时延、用同等情绪与叙事质量传递真相；慢半拍的真实信息在结构上处于劣势。"
-    community_implications: "社群建立『转发前等一等』与快速勘误的规范，能显著改变本群内的速度竞争；管理员对高唤起未证实信息的延迟转发是低成本干预点。"
-    content_applications:
-      narrative: "辟谣内容避免复述谣言的框架与画面（防止重复强化），以新叙事承载正确信息"
-      emotion: "真实信息可采用高唤起但不失实的叙事结构参与竞争，而非仅依赖干瘪通报"
-      sharing: "给核心成员提供可立即转发的已核实版本，压缩正确信息的转发延迟"
-    platform_implications: "平台排序对早期互动的敏感度直接调节速度差距：慢速审核、快速标签与降权机制都在改变该机制的作用条件（原则性判断）。"
-    related_nodes: [emotional_arousal, novelty_preference, algorithmic_amplification, discrete_emotion_sharing_profiles, stepps_sharing_framework, fluency_truth_effect]
-    source_ids: [S92, S99, S60, S106]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Fisher 2022《The Chaos Machine》（S99，假新闻速度/愤怒放大调查）+ Aral 2020（S92，2018 Science 假新闻研究）+ Nahon & Hemsley 2013（S60）"
-      effect_size: "假新闻传播速度快于真新闻（Vosoughi 2018 数据）"
-      replication_status: "假新闻速度优势在 Twitter 数据多源复现"
-      context_dependency: "新奇性/情绪唤起/机器人放大调制"
-      downgrade_upgrade_reason: "2026-09 实取 S99 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S92]
-      supporting_evidence: [S99, S60]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: bot_amplified_social_proof
-    canonical_name_en: Bot-Amplified Social Proof
-    canonical_name_zh: 机器人放大社会认同
-    aliases: [刷量, bot-farmed engagement, 虚假互动, astroturfing（伪草根）]
-    domain: ai_information_environment
-    definition: "机器人放大社会认同指以自动化或半自动化账号批量制造点赞、评论、粉丝、转发等互动信号，伪造『他人都在做、都在认同』的表象，从而操纵受众社会认同判断的行为。AI 使批量账号的文本质量与人格维持能力显著提升。"
-    core_claim: "社会认同启发式默认『可见的他人行为是真实信息』；虚假互动在表层伪造该输入，短期操纵有效，但系统性使用会损害平台的信任基础设施，使社会认同信号整体贬值。"
-    mechanism: "底层是社会认同（social_proof，Cialdini 框架）：不确定情境中人们以他人行为作为正确性捷径，该捷径的生效前提是信号真实——而这恰是被攻击的对象。批量互动伪造规范性输入，扭曲规范感知准确性（norm_perception_accuracy，个体对『别人怎么想』的感知失真）；AI 生成评论使『看评论判断内容』的二级校准同时失效。个体层面：信息充足或发现刷量时操纵失效并触发信任惩罚，但检测成本持续上升。长期后果是信任紧缩：互动数与评论数的信号价值整体下降，受众与平台转向更强验证的信号。"
-    causal_chain: "批量账号制造互动 → 社会认同的输入被伪造 → 受众按被操纵的规范感知行动 → 识别与曝光 → 社会认同信号整体贬值 → 平台信任基础设施受损"
-    variables:
-      inputs: [虚假互动规模与拟真度, 受众的不确定程度, 信号的可见位置（排行/评论/粉丝数）]
-      moderators: [受众的检测能力与警觉, 平台反制（清理、限权、验证）, 决策卷入度（高卷入更谨慎）]
-      mediators: [社会认同判断, 规范感知准确性]
-      outputs: [短期行为操纵, 被识破时的信任惩罚, 信号体系的整体贬值]
-    evidence:
-      supporting:
-        - "平台与研究者多次披露协同虚假行为（coordinated inauthentic behavior）的存在（平台披露与学术报告方向）"
-        - "社会认同对判断与行为的影响有稳固基础（Cialdini 框架；social proof 文献）"
-      conflicting:
-        - "虚假互动对真实用户行为的净影响难以隔离测量：相关证据多，因果估计少且不一致（方法学讨论）"
-      replication:
-        - "截至 2026-09：AI 生成账号时代操纵有效性的公开严格对照研究缺乏，多数结论由前 AI 时代的伪草根研究外推；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    boundary_conditions:
-      - "对低卷入、依赖表面信号的决策（浏览、首屏选择）操纵窗口最大；高卷入决策中用户更多依赖私人信源"
-      - "平台信号越集中于单一可操纵指标（点赞/粉丝数），该机制的杠杆越大"
-    failure_conditions:
-      - "刷量被识别（评论区空洞、账号簇被曝光）时不仅无效，还产生反向社会证明"
-      - "平台强验证环境（实名、高门槛互动）中伪造成本上升，机制被压缩"
-    common_misinterpretations:
-      - "『刷点数据没有受害者』——它污染所有依赖该信号的决策者，属于负外部性转嫁"
-      - "把机器人操纵当作错误信息传播的主因——传播速度差异的主要驱动是人类（见 misinformation_velocity）"
-    ethical_risks:
-      - "伪造公众舆论（伪草根）直接破坏规范感知与公共讨论的真实性"
-      - "对竞争者反向刷量与举报轰炸构成商业打击与诬陷"
-    examples:
-      original_cases: []
-      research_cases: ["前 AI 时代对 astroturfing（伪草根营销）的案例与实验研究（方向性引用）"]
-      modern_cases: ["电商与内容平台持续治理刷单刷评与机器粉（原则性描述）", "AI 生成评论使『评论区可信度』成为新的受众疑虑点（行业观察）"]
-    communication_implications: "不购买虚假互动：短期杠杆对应长期信号贬值；将资源投向真实可验证的社会证明（可查证的用户故事与第三方评价）以对冲环境贬值。"
-    community_implications: "社群的真实互动密度是防伪资产：小而真的活跃信号在整体信号贬值环境中价值上升；运营者应主动展示真实性证据（成员活跃史、真实案例）。"
-    content_applications:
-      evidence: "用可核实的第三方评价与具体用户故事替代裸指标（粉丝数/点赞数）作社会证明"
-      comments: "运营真实问答与使用细节讨论，使评论区具备伪造者难以复制的信息密度"
-      sharing: "避免『已有 N 人在用』式话术，改用具体群体的真实场景证言"
-    platform_implications: "反操纵是平台信任基础设施的核心竞争点：识别与清理能力决定信号可信度；平台越依赖互动信号变现，治理与商业利益的冲突越尖锐（原则性判断）。"
-    related_nodes: [social_proof, norm_perception_accuracy, trust_calibration, reputation_systems, informational_influence, misinformation_velocity]
-    source_ids: [S92, S32, S94, S106]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Vosoughi, Roy & Aral 2018 Science 假新闻传播研究（S106 已实取摘要+SM）"
-      effect_size: "假新闻传播速度/广度/深度系统性优于真新闻（摘要级）"
-      replication_status: "方向被多项平台谣言研究支持"
-      context_dependency: "Twitter 平台数据相关；新颖性与情绪反应为解释变量"
-      downgrade_upgrade_reason: "2026-09 补充一手研究证据（S106），升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S106]
-      supporting_evidence: [S92, S32]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: hyperpersonalization_privacy
-    canonical_name_en: Hyperpersonalization and Privacy
-    canonical_name_zh: 超个性化与隐私
-    aliases: [超个性化, data-driven personalization tension, 个性化与隐私张力]
-    domain: ai_information_environment
-    definition: "超个性化与隐私指个性化能力逼近个体级（行为推断、情境感知、生成式定制）时，与隐私保护、知情同意及脆弱群体保护之间形成的结构性张力：个性化的有效性来自对个人的深入推断，而这种深入本身构成风险。"
-    core_claim: "个性化的增益与隐私风险同源于画像深度：画像越精细，内容越相关，但推断越敏感（含用户不自知的敏感状态）、同意越难真实达成、对脆弱群体的暴露面越大。"
-    mechanism: "个性化说服（personalized_persuasion）的有效性依赖画像相关性；当画像从声明数据（用户主动填写）扩展到推断数据（从行为猜测情绪状态、财务压力、健康疑虑），三个后果出现：其一，用户对『被知道』的感知滞后且不完整，知情同意失去信息基础；其二，推断出的敏感状态即使不准也会被用于定向（如情绪低谷期的冲动消费投放），脆弱状态被商业利用；其三，个体的自主感与控制感受损，触发心理逆反（psychological_reactance）并使信任校准（trust_calibration）下调。《The Platform Society》的分析指出，平台化个性化把公共价值（隐私、公平、自主）的权衡私有化给了商业平台。"
-    causal_chain: "画像深度↑（声明→观测→推断） → 个性化增益↑ 同时 敏感推断↑+同意失效↑ → 脆弱群体暴露↑ → 信任与自主感受损 → 用户反制与监管 → 增益受限"
-    variables:
-      inputs: [画像数据类型（声明/观测/推断）, 推断目标的敏感度, 用户控制权（查看/修正/退出）]
-      moderators: [监管与平台政策, 用户隐私素养与情境敏感度, 品类敏感度（健康/财务/政治最高）]
-      mediators: [知情同意的有效性, 被监视感, 心理逆反]
-      outputs: [个性化效果曲线, 信任与关系寿命, 脆弱群体的风险敞口]
-    evidence:
-      supporting:
-        - "隐私研究中『个性化—隐私悖论』被反复观察：用户声称重视隐私但行为上接受个性化（综述方向）"
-        - "《The Platform Society》对平台个性化与公共价值张力的系统分析（书籍论证）"
-      conflicting:
-        - "被监视感对接受度的影响因情境而异：明码交换（免费内容换个性化）与隐性追踪的容忍度差异大（研究讨论）"
-      replication:
-        - "截至 2026-09：生成式 AI 级别个体定制（超个性化）的实证研究极少，多数结论由传统推荐与广告研究外推；研究快速发展中"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "在用户理解并主动选择个性化的服务关系中张力可控；在隐性追踪与第三方数据场景中张力最大"
-      - "品类敏感度是分界线：通用兴趣个性化与基于脆弱状态（健康、财务、情绪）的个性化风险不可同日而语"
-    failure_conditions:
-      - "以『用户想要个性化』为一切推断辩护——想要相关性与愿意被推断敏感状态是两回事"
-      - "合规形式主义：同意弹窗不构成真实同意，用户照样因『被发现被画像』而反感"
-    common_misinterpretations:
-      - "『匿名化就安全』——碎片化推断可重建敏感画像，匿名不等于不可识别"
-      - "把隐私仅当作合规问题——它同时是说服有效性的变量：被监视感直接削弱说服与信任"
-    ethical_risks:
-      - "针对脆弱状态（成瘾、债务、情绪危机、未成年）定向营销，构成对弱势者的剥削"
-      - "以个性化之名建立用户无法知情、无法反驳的推断体系，损害自主与尊严"
-    examples:
-      original_cases: []
-      research_cases: ["个性化—隐私悖论的问卷与行为研究传统（综述方向）"]
-      modern_cases: ["监管对敏感类目定向广告的限制趋势（原则性描述）", "『刚聊过什么就推什么』引发的不适感成为常见舆情话题（行业观察）"]
-    communication_implications: "把个性化透明化为一项服务：告知用什么数据、能改什么、怎么退出；避开基于脆弱状态的定向，把相关性建立在用户主动声明的需求上。"
-    community_implications: "社群天然提供『用户主动表达的需求』（入群理由、发言、自选标签），是不依赖隐蔽画像也能个性化的健康数据源；社群的隐私惯例本身就是信任资产。"
-    content_applications:
-      opening: "以用户可见自选的兴趣或场景标签组织内容变体，替代隐性行为推断"
-      cta: "在转化路径中给用户选择与控制（选择接收频率/主题），把控制感设计进说服"
-      comments: "对『你们在监控我吗』类疑问给出直接、具体的回答与设置入口"
-    platform_implications: "平台处于张力中心：个性化是其商业模式核心，而隐私与脆弱群体保护日益成为监管与舆论的刚性约束；平台对敏感推断的自我限制将重塑行业做法（原则性判断）。"
-    related_nodes: [personalized_persuasion, trust_calibration, psychological_reactance, nudge_mechanism, self_presentation_impression_management, filter_bubble_echo_chambers]
-    source_ids: [S95, S92, S93]
-    provenance:
-      primary_sources: ['S95', 'S92', 'S93']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: ai_content_saturation
+  canonical_name_en: AI Content Saturation
+  canonical_name_zh: AI 内容饱和
+  aliases:
+  - AIGC 供给爆炸
+  - synthetic content flood
+  - 内容过载加剧
+  domain: ai_information_environment
+  definition: AI 内容饱和指生成式 AI 将内容边际生产成本压缩至接近零后，平台内容供给急剧膨胀而人类注意力总量基本不变，导致单位内容获得的注意力被稀释、筛选压力向分发端与受众端双向转移的结构性状态。这是对条件变化的描述性概念，不是单一心理效应。
+  core_claim: 内容供给的爆炸式增长不会扩大注意力总供给，只会加剧注意力竞争：多数内容的单位曝光价值下降，分发系统的筛选权力与受众的筛选负担同时上升。
+  mechanism: 底层机制是注意力容量约束（attention_capacity_limits）：人类注意力总供给近似固定，历史上内容供给受生产成本约束，AI 移除了成本约束而无法扩大注意力，供需失衡因此加剧。对受众端，海量供给放大信息过载，处理流畅性（processing_fluency）被进一步倚重为快速筛选启发式，而生成模型恰好擅长产出高流畅性、模板化内容，加剧同质化并抬高『识别值得注意的内容』的门槛。对内容端，平均曝光价值下降推高对真实性、独特性信号的需求，构成
+    authenticity_premium 的结构性前提。AI 改变的条件是供给侧成本，而非人脑的接收端。
+  causal_chain: 生成成本骤降 → 内容供给爆炸 → 注意力总量不变 → 单位内容注意力稀释 → 分发端筛选权力↑ + 受众端筛选负担↑ → 同质化加剧与真实性信号升值
+  variables:
+    inputs:
+    - AI 生成内容供给量
+    - 人类注意力总供给（近似恒定）
+    - 分发系统容量
+    moderators:
+    - 平台分发机制的准入门槛
+    - 受众筛选能力与工具
+    - 品类内容生产成本结构
+    - 平台对 AI 内容的披露政策
+    mediators:
+    - 信息过载
+    - 流畅性启发式的权重
+    - 分发端排序权力
+    outputs:
+    - 单位内容平均注意力下降
+    - 内容同质化
+    - 真实性/独特性信号溢价
+  evidence:
+    supporting:
+    - 生成式 AI 的内容生产成本与速度优势是可广泛观察的行业事实；平台内容供给与 AI 生成量的增长为从业者共识（行业观察）
+    - 注意力容量有限与信息过载的行为证据长期稳固，为稀释逻辑提供底层支持（底层心理学文献方向）
+    conflicting:
+    - 『AI 生成内容占比』与『饱和对传播效果的实际影响』缺乏跨平台系统性量化研究，现有讨论多为案例与评论（研究缺口）
+    replication:
+    - 截至 2026-09：作为新兴现象，尚无跨平台大规模独立复制研究；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 在注意力总量近似恒定的媒介环境中成立；若内容消费场景本身扩张（新设备、新场景），稀释速度被部分抵消
+  - 效应强度依赖分发端是否收紧供给准入：平台主动限制低质生成内容时，饱和压力部分转化为分发权力
+  failure_conditions:
+  - 把『饱和』当作内容注定失败的理由——饱和改变的是平均条件，差异化内容仍可胜出
+  - 假设所有品类同质饱和：强人格、强线下经验、强信任关系的内容受影响显著小于模板化信息类内容
+  common_misinterpretations:
+  - 『内容越多流量越大』——供给增加不增加注意力总池，只增加竞争者数量
+  - 把饱和归因于『受众变笨/变懒』——这是结构性供需失衡，与个体能力无关
+  ethical_risks:
+  - 为在饱和中胜出而系统性采用高唤起、极端化包装，加剧注意力市场的劣化竞争
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - 批量生成的 SEO 与自媒体模板文充斥搜索与信息流（行业观察）
+    - 平台开始要求或鼓励标注 AI 生成内容（原则性描述）
+  communication_implications: 策略重心从『生产更多』转向『值得被筛选出来』：投资难以被低成本复制的要素（真实经验、人格、关系与独特视角），并把真实性信号显性化。
+  community_implications: 社群是人类筛选器的替代品：饱和环境中『谁帮你先筛过一遍』的信任价值上升，社群可把自己定位为高质量筛选层而非内容供给方。
+  content_applications:
+    title: 标题避开模板化 AI 高频句式，用具体经验与具体对象命名
+    body: 加入只有实际经历者才有的细节（时间、成本、失误），构成对纯生成内容的区分度
+    emotion: 以真实情绪记录替代算法友好的标准化情绪模板
+  platform_implications: 饱和使分发端权力进一步集中：排序算法成为事实上的注意力配给者，平台对 AI 内容的标识、限速与质量分层政策将直接决定可见性结构（原则性判断）。
+  related_nodes:
+  - attention_capacity_limits
+  - processing_fluency
+  - authenticity_premium
+  - information_overload
+  - attention_economics
+  - creator_incentive_structures
+  source_ids:
+  - S48
+  - S100
+  - S234
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Chayka 2024《Filterworld》（S100，book 级，substantial_excerpt：算法扁平化机制/创作者内化/Spotify
+      泛化数据）+ Tim Wu 注意力商业史（S48）
+    effect_size: 优化互动奖励同质化；反馈循环把文化推向中位数（安全、熟悉、无摩擦）
+    replication_status: 泛化内容吸引更广受众被平台数据方向性支持；『扁平化』强度缺乏系统度量
+    context_dependency: 推荐算法主导的平台与文化生产；人工策展/小众社区需修正
+    downgrade_upgrade_reason: 2026-09 实取 S100 核心论点，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S100
+    - S234
+    supporting_evidence:
+    - S48
+    last_verified: 2026-09
+    case_sources:
+    - CASE-CNT-016
+    - CASE-CNT-019
+    - CASE-CNT-020
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: 2026-09
+- id: synthetic_media_trust
+  canonical_name_en: Synthetic Media Trust
+  canonical_name_zh: 合成媒体的信任问题
+  aliases:
+  - AIGC 信任危机
+  - deepfake 信任侵蚀
+  - synthetic media credibility
+  domain: ai_information_environment
+  definition: 合成媒体信任问题指：当 AI 生成或篡改的文本、图像、音视频在感官层面难以与真实记录区分时，受众赖以建立信任的既有线索（视觉逼真度、权威外观、传播渠道）失去可靠性，导致默认信任水平下降、验证成本上移的系统性状态。
+  core_claim: 合成内容的感官不可分辨性破坏了信任校准所依赖的环境线索，使信任从『默认给予』转向『需要理由』，真实内容因此被迫承担额外的证明成本。
+  mechanism: 人类信任校准（trust_calibration）依赖线索稳定性：过去『像素即证据』『截图即记录』的线索与真实性高度相关。生成模型移除了这种相关性而保留线索本身——线索还在，但不再指向真实。真实性感知（authenticity_perception）所依赖的连贯性、自然感等启发式同样可被生成模型满足。后果有二：一是信任紧缩，对可疑线索一律降权；二是有法学与传媒研究提出的『说谎者红利』（liar's
+    dividend）——真实内容也可被指控为合成，使否认成本下降。由于对 AI 生成内容的自动检测在技术上尚不可靠（学界的普遍共识），线索重建只能外移到溯源凭证、渠道信任与机构信誉上。
+  causal_chain: 生成模型逼近感官真实 → 表面线索与真实性的相关性断裂 → 默认信任下降 + 验证成本上移 → 真实内容需额外证明 → 信任转向渠道/凭证/机构等替代线索
+  variables:
+    inputs:
+    - 合成内容逼真度
+    - 受众对 AI 生成能力的知晓度
+    - 内容可验证性
+    moderators:
+    - 议题风险程度（高风险议题校准更严）
+    - 受众媒介素养
+    - 平台披露与标注机制
+    - 传播渠道的既有信任水平
+    mediators:
+    - 信任校准线索的失效
+    - 真实性感知
+    outputs:
+    - 默认信任水平下降
+    - 真实内容的证明成本上升
+    - 信任向可验证线索迁移
+  evidence:
+    supporting:
+    - AI 生成内容自动检测的不可靠性是研究界普遍共识（方法学讨论，方向一致）
+    - 受众调查显示对虚假与合成内容的担忧普遍存在（调查类证据，方向一致）
+    conflicting:
+    - 日常低风险场景中多数受众并未系统性改变信任行为——担忧与行为之间存在落差（调查证据的常见发现）
+    replication:
+    - 截至 2026-09：现象被广泛讨论，但『信任侵蚀』的因果链条缺乏大规模纵向实证；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 在高风险、高卷入信息（健康、财务、新闻证据）中效应最强；娱乐性内容受影响小
+  - 依赖『感官逼真度=真实』线索的人群与场景受冲击最大；本就以渠道与机构为信任基础的场景相对稳定
+  failure_conditions:
+  - 『合成媒体导致全面信任崩塌』的强断言不成立：低卷入场景中受众常按惯性行事
+  - 把标注与检测当作充分解：检测不可靠时，仅靠事后检测无法恢复线索有效性
+  common_misinterpretations:
+  - 『提高分辨率就能识别 AI 内容』——生成质量持续提升，基于感官质量的判断会持续失效
+  - 把信任下降等同于怀疑一切——实际更多是信任向渠道、机构与凭证等替代线索重新分配
+  ethical_risks:
+  - 利用合成内容冒充真实人物与事件，直接侵害个体权利并污染公共信息环境
+  - 反向滥用：以『这是假的』指控真实内容以逃避证据约束（说谎者红利）
+  examples:
+    original_cases: []
+    research_cases:
+    - 对 AI 文本与图像检测器可靠性的评估研究普遍报告高错误率或不稳定性（综述方向，不给具体数字）
+    modern_cases:
+    - 公众人物照片被指『像 AI 生成』引发的真假争论
+    - 平台试行为 AI 生成内容添加可见或隐性标注（原则性描述）
+  communication_implications: 在高卷入传播中主动为真实性提供可验证支撑（过程记录、原始出处、可核查细节），不依赖『看起来真实』；同时避免过度声明导致真实性疲劳。
+  community_implications: 社群内部信任以关系与历史为基础，受冲击小于公共信息环境；社群仍是成员核实可疑内容的第一站，应建立核验惯例而非人人自危。
+  content_applications:
+    evidence: 引用可独立核查的原始出处，附过程性材料（原始记录、时间戳习惯）而非仅给结论
+    visual: 视觉素材保留可验证的原始上下文信息（拍摄来源与原始文件的引用方式）
+    comments: 对评论区真假质疑给出透明回应路径，把核验过程本身作为信任建设
+  platform_implications: 平台从『审核内容真伪』转向『治理身份与凭证』：账号可信度、内容标注与来源展示成为新的信任基础设施，其设计质量决定线索重建速度（原则性判断）。
+  related_nodes:
+  - trust_calibration
+  - authenticity_perception
+  - provenance_verification
+  - content_provenance
+  - fluency_truth_effect
+  - source_credibility_model
+  source_ids:
+  - S92
+  - S01
+  - S181
+  provenance:
+    primary_sources:
+    - S92
+    - S01
+    - S181
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: personalized_persuasion
+  canonical_name_en: Personalized Persuasion
+  canonical_name_zh: 个性化说服
+  aliases:
+  - 精准说服
+  - tailored persuasion
+  - AI 定制化影响
+  domain: ai_information_environment
+  definition: 个性化说服指基于个体画像（行为数据、兴趣、心理特征）为不同个体定制不同信息内容、时机与框架的实践。AI 使定制从『人群级细分』细化到『个体级生成』。说服效力提升与操纵风险并存是本概念的定义性张力。
+  core_claim: 按个体画像定制信息通常能提升即时说服效力（相关性、时机与框架匹配），但效力提升与知情同意缺失、脆弱者剥削、心理逆反等风险同源同在——个性化程度越高，两类后果都越强。
+  mechanism: 底层机制一：相关性提升卷入度。按精细加工可能性模型（elaboration_likelihood_model），与个体处境高度相关的信息更易触发中央路径加工并形成持久态度改变。机制二：框架与时机匹配作用于外围路径，在低卷入时尤其有效。机制三：当个体察觉『这是专门为我设计的说服』时，心理逆反（psychological_reactance）被激活，效力反转——这构成个性化说服的内在不稳定性。AI
+    改变的条件是：画像粒度与内容生成能力同时到位，使『一人一版』在成本上可行；超个性化与隐私的张力见 hyperpersonalization_privacy。
+  causal_chain: 个体画像 → 定制内容/时机/框架 → 相关性与匹配度提升 → 中央或外围路径加工 → 态度/行为改变；定制被察觉 → 心理逆反 → 效力反转
+  variables:
+    inputs:
+    - 画像数据质量与粒度
+    - 生成式定制能力
+    - 触达时机选择
+    moderators:
+    - 个体对个性化的觉察
+    - 数据使用的知情同意
+    - 议题对个体的敏感度
+    - 个体的自主需求强度
+    mediators:
+    - 感知相关性
+    - 卷入度（ELM 路径选择）
+    - 心理逆反
+    outputs:
+    - 即时转化与态度改变
+    - 长期信任
+    - 操纵与剥削风险敞口
+  evidence:
+    supporting:
+    - 个性化信息与相关性匹配提升说服效果在传统细分与 tailored message 研究中方向一致（媒介与营销文献综述方向）
+    - 《The Hype Machine》对社交平台个性化分发与大规模实验能力的讨论（书籍论证）
+    conflicting:
+    - 过度个性化被识破后触发逆反与隐私担忧的实验证据在多个情境中出现（研究讨论）
+    - S93 EP 多源实证显示个性化/过滤效果远小于流行叙事：Bakshy 等 2015 估计算法使跨阵营内容暴露减少约 8%，模拟研究未在实验环境复现极端气泡——个性化说服效果的外推需同样谨慎（对照发现）
+    replication:
+    - 截至 2026-09：个体级 AI 生成定制的实地效果缺乏公开的严格对照研究；多数结论由传统个性化研究外推，证据情境依赖
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 画像数据真实反映个体且与议题相关时定制增益成立；画像噪声大时增益消失甚至为负
+  - 在用户知晓并接受个性化的场景（如自我选择的服务设置）中，逆反风险显著低于隐蔽个性化
+  failure_conditions:
+  - 定制被察觉为操纵（尤其是利用敏感状态的定制）时，逆反与信任损失超过任何即时收益
+  - 画像错误导致的『错误个性化』（用过时行为推断当前需求）会造成荒谬感并损害体验
+  common_misinterpretations:
+  - 『个性化等于更有效，所以越多越好』——忽视被察觉后的逆反反转与长期信任损耗
+  - 把个性化说服与操纵划等号——区分点在于知情同意、透明度与退出权，不在技术本身
+  ethical_risks:
+  - 利用心理脆弱状态（成瘾倾向、财务困境、情绪低谷）进行定向说服，构成剥削性操纵
+  - 在无有效知情同意下将敏感推断用于说服，侵犯自主性；部分情境涉及法律红线
+  examples:
+    original_cases: []
+    research_cases:
+    - 健康传播中 tailored message 对行为意向增益的研究传统（综述方向）
+    modern_cases:
+    - 电商基于浏览行为替换产品叙事与推荐语（行业观察）
+    - 『不同用户看到不同版本政治信息』的公共担忧被广泛讨论（原则性描述）
+  communication_implications: 个性化的正当边界是『帮用户更快找到相关价值』而非『绕过理性防御』：保持定制逻辑可解释、提供退出选项、避开敏感状态画像。
+  community_implications: 社群内的『个性化』应以成员主动表达的需求（入群动机、自选标签）为基础，而非隐蔽监测；前者是服务，后者消耗社群信任。
+  content_applications:
+    opening: 以用户可见的需求线索开头（而非隐秘画像推断），让相关性建立在明面上
+    cta: 为不同需求场景准备可选路径，而非单一强制转化话术
+    comments: 公开回应『你是不是在给我画像』式疑问，披露定制逻辑以化解逆反
+  platform_implications: 平台掌握画像与分发两端，是个性化说服的实际守门者；其广告政策对敏感类目（健康、财务、政治）的限制直接划定实践边界（原则性判断）。
+  related_nodes:
+  - psychological_reactance
+  - hyperpersonalization_privacy
+  - elaboration_likelihood_model
+  - central_route_processing
+  - pre_suasion_attention_channeling
+  - nudge_mechanism
+  source_ids:
+  - S92
+  - S95
+  - S215
+  provenance:
+    primary_sources:
+    - S92
+    - S95
+    - S215
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: ai_information_intermediaries
+  canonical_name_en: AI Information Intermediaries
+  canonical_name_zh: AI 作为信息中介
+  aliases:
+  - AI 守门层
+  - answer engines as gatekeepers
+  - AI 助手中介化
+  domain: ai_information_environment
+  definition: AI 信息中介指以对话助手、AI 搜索摘要、智能体（agent）等形态出现在用户与信息源之间的新守门层：它们替用户完成检索、筛选、综合与转述，使『谁被看到、如何被转述』的决定部分从搜索排名与信息流排序转移到
+    AI 系统的检索与综合逻辑。
+  core_claim: 信息中介的守门功能从『排序内容』扩展为『生成答案』：AI 中介不仅决定先看到什么，还决定如何被转述，其引用与综合选择成为新的守门权力。
+  mechanism: 传统守门机制（gatekeeping_dynamics）中，算法守门排序既有内容，用户仍需点击进入源内容；AI 中介把筛选与转述合并——它在训练语料、检索范围与综合策略的约束下生成单一答案，被略去的来源对用户不可见。这同时叠加平台权力（platform_power_gatekeeping）：中介由少数平台提供，其检索偏好与商业激励不透明。对受众，信息获取成本下降、便利性提升；代价是转述损耗、来源不可见与中介自身的选择性偏差。AI
+    改变的条件是：守门从『决定顺序』前移为『决定表述』。
+  causal_chain: 用户提问 → AI 中介检索+筛选+综合 → 生成单一答案 → 用户少接触源内容与被略去的来源 → 中介的检索/综合逻辑成为新的守门权力
+  variables:
+    inputs:
+    - AI 中介的检索范围与策略
+    - 训练与对齐语料构成
+    - 用户提问方式
+    moderators:
+    - 用户对 AI 答案的验证习惯
+    - 中介产品的引用与溯源设计
+    - 议题的争议性与时效性
+    mediators:
+    - 答案的转述损耗
+    - 来源可见性
+    outputs:
+    - 信息触达结构改变
+    - 源内容流量变化
+    - 公共讨论的入口迁移
+  evidence:
+    supporting:
+    - 主流搜索与 AI 产品向『直接给答案』方向演进是行业可见趋势（industry_consensus，产品方向层面）
+    - Gillespie 对平台作为内容守门者的分析与 van Dijck 等对平台化中介的分析构成理论先声（书籍论证）
+    conflicting:
+    - 用户并未完全弃用传统检索：验证性、购物与浏览型需求仍流向原有入口（行为观察，混合格局）
+    replication:
+    - 截至 2026-09：AI 中介对信息生态的系统性影响研究刚起步，以评论、调查与个案为主；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 对事实型、可概括型查询影响最强；对需要一手核验、实时信息或长尾深度内容的查询，直接访问仍然主导
+  - 取决于中介产品是否展示来源链接：展示来源时守门权力部分让渡回内容方与用户
+  failure_conditions:
+  - 『AI 中介将完全取代搜索与站点』的断言无依据：用户行为呈混合态而非全量迁移
+  - 把 AI 答案等同于客观综合——其检索与综合选择内含偏差与盲区，不因『AI』而中立
+  common_misinterpretations:
+  - 『AI 助手没有立场』——训练语料、检索范围与综合策略都是选择，选择即守门
+  - 把 AI 中介与传统搜索引擎等同——差异在于从『排序引用』变为『生成转述』，溯源链路性质不同
+  ethical_risks:
+  - 少数中介系统掌握公共信息的入口与转述权且逻辑不透明，构成问责难题
+  - 中介答案中的错误与遗漏以高可信外观直达用户，纠错路径比传统搜索更隐蔽
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - 搜索引擎在结果页直接给出 AI 生成摘要（AI Overviews 类产品方向，industry_consensus）
+    - 对话助手成为部分用户获取信息第一入口的用法趋势（原则性描述）
+  communication_implications: 把『被 AI 中介转述』纳入传播规划：信息要易于被准确检索、抓取与概括；同时保留直达受众的自有渠道，避免完全依赖中介层。
+  community_implications: 社群问答沉淀（FAQ、置顶帖、结构化知识库）更容易被中介正确引用，成为社群对外影响力的一部分。
+  content_applications:
+    body: 采用清晰的问答结构与可独立成立的小节，降低被中介转述时的失真概率
+    evidence: 在正文中明示来源与依据，使中介引用时能带上可核查的溯源链
+    title: 标题直接对应真实提问句式，提高被检索与引用的命中率
+  platform_implications: 守门权力出现一次再集中：从『排名算法』向『生成式中介』迁移，内容方与平台的议价关系将被重新谈判，引用展示与流量回馈政策是关键变量（原则性判断）。
+  related_nodes:
+  - gatekeeping_dynamics
+  - platform_power_gatekeeping
+  - zero_click_information
+  - answer_engine_visibility
+  - algorithmic_amplification
+  - recommendation_feedback_loop
+  source_ids:
+  - S94
+  - S95
+  - S93
+  - S237
+  provenance:
+    primary_sources:
+    - S94
+    - S95
+    - S93
+    - S237
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: zero_click_information
+  canonical_name_en: Zero-Click Information
+  canonical_name_zh: 零点击信息
+  aliases:
+  - 零点击搜索
+  - zero-click search
+  - 答案页截流
+  domain: ai_information_environment
+  definition: 零点击信息指用户的问题在搜索或 AI 结果页内直接得到满足（摘要、卡片、AI 概览、知识面板），无需点击进入源站点的信息消费形态。其传播后果是站内流量被结果页截留，内容方的『曝光—流量—品牌』链条被改写。
+  core_claim: 当答案在结果页直接呈现时，信息触达与站点访问脱钩：内容可以被大量『看到』却几乎不带来访问，品牌与溯源价值从流量计量转向『被引用、被转述时的在场』。
+  mechanism: 底层是注意力经济（attention_economics）与摩擦结构的变化：传统搜索中『看到结果→点击→站内消费』的摩擦把注意力转化为内容方可计量的资产；结果页直接给答案消除了这一步，注意力在中介侧完成闭环。对内容方，直接的品牌曝光减少，品牌显著性（mental_availability）的建立失去一个高频触点；而被答案引用的内容方获得中介转述形式的间接在场。平台侧，答案页提高单次会话效率与留存，强化中介价值，与
+    ai_information_intermediaries 描述的守门迁移互为表里。AI 改变的条件是：点击这一『注意力交接点』被系统性移除。
+  causal_chain: 问题在结果页被直接回答 → 无需点击 → 站内流量与品牌曝光被截留 → 内容方计量体系失真 → 价值向『被引用在场』与自有触点转移
+  variables:
+    inputs:
+    - 结果页答案的完整度
+    - 问题的类型（事实型/复杂型）
+    - 中介的引用展示设计
+    moderators:
+    - 用户任务的深浅
+    - 品类的转述难度
+    - 用户对来源的信任需求
+    mediators:
+    - 点击摩擦的消除
+    - 来源可见性
+    outputs:
+    - 站内流量结构变化
+    - 品牌直接曝光减少
+    - 被引用内容方的间接在场
+  evidence:
+    supporting:
+    - 『大量查询未产生点击』的现象在 AI 摘要普及前已被搜索行为研究与从业者广泛讨论（观测与从业者共识）
+    - 注意力收割与中介化商业模式的长期演化分析见《The Attention Merchants》（书籍论证）
+    conflicting:
+    - 复杂任务、购买决策与深度内容查询仍大量产生点击；零点击对总流量的净影响因品类与方法学差异存在争议（讨论中）
+    replication:
+    - 截至 2026-09：AI 摘要普及后的点击率系统性变化缺乏公开可比的跨来源数据，各方报告口径不一；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 事实型、单点型问题（定义、换算、时间）零点击比例最高；比较、决策与体验类问题仍需要站内内容
+  - 对以广告变现的通用信息站影响直接；对以信任关系变现的品牌与社群影响更间接
+  failure_conditions:
+  - 把零点击等同于『搜索入口死亡』——被引用、品牌词搜索与直访渠道仍在，是结构变化而非归零
+  - 用单一点击率下降外推整体业务损失，忽视会话结构与品类差异
+  common_misinterpretations:
+  - 『答案页引用等于免费流量』——被引用带来的是间接在场，转化路径变长且不可控
+  - 把零点击当作纯用户福利——它同时是中介对注意力的进一步圈占（商业模式判断）
+  ethical_risks:
+  - 中介截留注意力与流量却主要回馈自身生态，可能挤压独立内容方生存空间、降低信息来源多样性
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - 搜索结果页以 AI 概览/摘要卡直接回答事实型问题（产品方向，industry_consensus）
+    - 内容方加强品牌词建设、邮件列表与社群直连以对冲截流（行业观察）
+  communication_implications: 把可被结果页直接引用的『答案型内容』与必须到场的『体验型内容』分层经营：在可截留的信息上经营在场与权威，在不可替代的信息上经营直达。
+  community_implications: 社群与私域是零点击环境的对冲资产：结果页无法复制的归属感、互动与实时信息构成到访的独立理由。
+  content_applications:
+    body: 正文前部提供可直接被引用的简洁答案块，后部展开需要到场的深度内容
+    title: 对事实型需求页面采用问句式标题加直接答案结构，争当被引用源
+    cta: 把到访理由从『获取答案』改为『获得社群/服务/更新』，重建独立访问动机
+  platform_implications: 答案页是中介价值最大化的形态：平台在『用户效率』与『来源生态健康』之间存在结构性权衡，其引用与流量回馈政策决定内容方生存空间（原则性判断）。
+  related_nodes:
+  - ai_information_intermediaries
+  - attention_economics
+  - mental_availability
+  - answer_engine_visibility
+  - platform_power_gatekeeping
+  - gatekeeping_dynamics
+  source_ids:
+  - S48
+  - S94
+  - S217
+  provenance:
+    primary_sources:
+    - S48
+    - S94
+    - S217
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-023
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: answer_engine_visibility
+  canonical_name_en: Answer Engine Visibility (GEO/AEO)
+  canonical_name_zh: 答案引擎可见性（GEO/AEO）
+  aliases:
+  - GEO（生成式引擎优化）
+  - AEO（答案引擎优化）
+  - AI 搜索优化
+  domain: ai_information_environment
+  definition: 面向 AI 答案引擎的可见性优化实践（GEO，Generative Engine Optimization；AEO，Answer Engine Optimization）：通过结构化表达、可独立引用的答案单元、明确来源与权威信号，提高内容被
+    AI 中介检索、采用并转述的概率。注意：这是新实践领域，经验为主，非实证结论。
+  core_claim: （从业者经验主张）清晰结构、可独立引用的答案块、明确出处与权威信号能提高内容被 AI 答案引擎引用的概率；该主张目前主要来自从业者观察与少量初步研究，而非系统实证。
+  mechanism: （按从业者解释）AI 中介在检索与综合时偏好可解析、可概括、有可核查来源的内容：清晰的标题层级与问答结构降低解析成本；自包含的答案块降低转述改写成本；一致的外部权威信号（被其他可信来源提及、署名与出处完整）提高入选概率。这些解释与答案引擎的工程逻辑直觉一致，但各引擎的实际实现不公开，无法验证相对权重。底层关联：权威影响（authority_influence）与信源可信度（source_credibility_model）说明为何在缺乏直接验证手段时，权威信号被用作替代线索。
+  causal_chain: 结构化 + 可引用 + 权威信号 → 中介解析与转述成本↓、入选概率↑ → 被答案引用 → 间接在场（联动 zero_click_information）
+  variables:
+    inputs:
+    - 内容的结构化程度
+    - 答案块的自包含性
+    - 外部权威信号密度
+    moderators:
+    - 具体引擎的检索与综合策略（不公开且持续变化）
+    - 议题竞争密度
+    - 内容时效性
+    mediators:
+    - 被检索率
+    - 被引用率
+    outputs:
+    - 答案中的在场率
+    - 品牌词搜索与直访的变化
+  evidence:
+    supporting:
+    - 少量初步研究与大量案例报告称结构化与引用优化能提升被引用概率（初步研究+从业者报告，样本与可复制性有限）
+    - 传统搜索优化中结构化与权威信号有效的历史经验被类比移植（从业者经验）
+    - GEO-bench 受控评估（Aggarwal et al. 2024 KDD，S223）：引用来源、引语、统计等策略最高提升生成式引擎可见度 40%，策略效力因领域而异（2026-09-11
+      建）
+    - Pew 2025（S217）：AI 摘要 88% 引用 3+ 来源、仅 1% 被点击——'被引用在场'前提的行为层实证（2026-09-11 建）
+    conflicting:
+    - 各引擎实现差异大且频繁变化，单次实验结论难以稳定复制；市场上存在大量伪规律与工具营销话术（行业观察）
+    replication:
+    - GEO-bench 为首个受控评估（基准环境），跨引擎、预注册的系统性复制仍缺
+    - 2026-09-11 升级 D→C（upgrade_reason：首批受控实验证据 S223+S217 落库，'有研究依据、情境有限'满足 C 级门槛）；跨引擎稳定性未确立，不得表述为普适规律
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 结论依赖具体引擎的当前实现，引擎策略一变做法即可能失效
+  - 对信息型内容帮助较大；对强人格、强社群型内容的可见性帮助有限
+  failure_conditions:
+  - 堆砌伪结构化（为机器写作而牺牲人类可读性）会同时损害真实用户体验与长期信任
+  - 把第三方工具的『AI 可见性评分』当可靠度量——多数工具的黑箱指标未经效度验证
+  common_misinterpretations:
+  - 『GEO 就是新 SEO，照搬关键词堆砌』——转述机制不同于排序机制，关键词密度逻辑不成立
+  - 『存在已验证的 GEO 秘诀』——引擎实现不公开，任何声称掌握内部权重的说法都不可核实
+  ethical_risks:
+  - 为被引用而系统性美化或简化事实，使中介转述的偏差被放大并规模化
+  - 工具与培训市场借信息不对称销售不可验证的『保证被引用』服务
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - 内容团队为 FAQ、定义页与对比页增加自包含答案块（行业实践）
+    - 品牌经营百科类条目与权威第三方收录以积累引用信号（行业实践）
+  communication_implications: 以『可被诚实转述』为优化目标：写清楚、给来源、让答案块独立成立；面向人类读者的写作质量优先于面向机器的技巧。
+  community_implications: 把社群沉淀的高频问答整理为公开的结构化知识库，既服务成员，也提高被答案引擎准确引用的概率。
+  content_applications:
+    body: 每个核心问题用『一句话直接答案+展开依据+来源』的三段式写法
+    evidence: 为关键事实附上可核查的出处与署名，积累被引用所需的可信信号
+    title: 以用户的真实问句为标题，答案块紧跟标题之下
+  platform_implications: 答案引擎的引用展示与流量回馈政策是本实践的外生变量：政策一次调整即可重写行业做法，不应把任何当前技巧当作长期稳定资产（原则性判断）。
+  related_nodes:
+  - zero_click_information
+  - ai_information_intermediaries
+  - authority_influence
+  - source_credibility_model
+  - mental_availability
+  source_ids:
+  - S48
+  - S94
+  - S217
+  - S223
+  provenance:
+    primary_sources:
+    - S48
+    - S94
+    - S217
+    - S223
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-002
+    - CASE-PLT-010
+    - CASE-PLT-023
+    platform_sources:
+    - tiktok:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: content_provenance
+  canonical_name_en: Content Provenance
+  canonical_name_zh: 内容溯源
+  aliases:
+  - 内容凭证
+  - provenance credentials
+  - 媒体溯源
+  domain: ai_information_environment
+  definition: 内容溯源指为媒体内容附加机器可验证的来源与编辑历史凭证（拍摄或生成方式、编辑操作链、署名）的技术与规范方向。代表性组织是内容真实性联盟 C2PA（Coalition for Content
+    Provenance and Authenticity），其凭证标准已被多家相机、创意软件与平台厂商采纳或试用。它回答『这份内容从哪来、被怎么改过』，不直接判定『真或假』。
+  core_claim: 当表面线索不可靠时，为内容附加端到端的可验证凭证可以重建信任线索：凭证不证明内容为真，但把『从何而来、是否被改』从猜测变为可核查事实。
+  mechanism: 底层挂钩溯源验证（provenance_verification）：人类对证据的评估依赖来源链条可追溯；传统媒介时代链条由机构惯例（署名、档案）承载，合成媒体环境下链条断裂。凭证技术把链条写进内容本身并加以密码学保护，使信任校准（trust_calibration）重新获得稳定外部线索。其局限同样关键：凭证只能证明『链条完整』，不能证明内容本身无误导（拍得真不等于剪得诚实）；且凭证依赖全链路采纳——任一环节剥离凭证，线索即失效；对不查看凭证的受众，效用进一步打折。
+  causal_chain: 内容创建/编辑时附加凭证 → 传播链路保留凭证 → 受众或平台可验证来源与操作历史 → 信任校准获得外部线索 → 合成内容治理获得技术抓手
+  variables:
+    inputs:
+    - 凭证的覆盖率（多少内容带凭证）
+    - 全链路保留率
+    - 用户查看与理解凭证的能力
+    moderators:
+    - 平台的凭证展示设计
+    - 高风险场景（新闻/司法/金融）的规范要求
+    - 剥离凭证的攻击成本
+    mediators:
+    - 来源链条可追溯性
+    outputs:
+    - 可验证来源的内容比例
+    - 凭证缺失内容的信任折价
+    - 深度伪造治理的执法抓手
+  evidence:
+    supporting:
+    - C2PA 联盟真实存在并有主流厂商参与标准制定与试点（可确证的组织与标准事实）
+    - 来源与出处信息影响可信度判断有传播学证据方向支持（source credibility 文献方向）
+    conflicting:
+    - 凭证的端到端保留率、普通用户查看率与实际防伪效果尚缺乏公开的系统评估（研究缺口）
+    replication:
+    - 截至 2026-09：技术标准在推进，生态效果（是否实际改善公众信任行为）缺乏大规模独立研究；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 在凭证全链路保留且受众知晓查看途径的场景中有效；任一环节断裂即退化为普通元数据
+  - 对『证明来源与改动』有效，对『证明内容陈述为真』无效——两层问题不应混淆
+  failure_conditions:
+  - 凭证被系统性剥离或工具不支持时，带凭证内容反而成为少数派，保护效果逆转
+  - 把凭证展示当成治理终点：不改变用户查看习惯时，凭证形同虚设
+  common_misinterpretations:
+  - 『有凭证就是真实内容』——凭证只证明来源与编辑历史未被篡改，不担保内容本身诚实
+  - 『没有凭证就是 AI 伪造』——大量旧设备与既有工作流不产凭证，缺凭证与伪造无关
+  ethical_risks:
+  - 凭证体系若由少数厂商垄断标准与验证入口，可能形成新的平台权力与准入壁垒
+  - 对无凭证内容的大规模降权可能误伤弱势内容方（预算有限者、旧设备用户）
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - C2PA 标准在相机、创意软件与平台侧的试点与采纳（原则性描述）
+    - 新闻机构为现场素材附加来源凭证的实践探索
+  communication_implications: 对高可信需求内容，从创建源头即引入凭证习惯，并向受众解释『凭证证明什么、不证明什么』，避免夸大宣传反噬。
+  community_implications: 社群可把『查凭证、问来源』固化为核验惯例之一，但应同时保留内容层面的交叉验证，防止对单一技术线索的过度依赖。
+  content_applications:
+    evidence: 关键素材注明拍摄或制作方式与出处，能附凭证则附凭证，并解释凭证含义
+    visual: 视觉内容发布时保留原始文件与创作过程记录，作为可出示的辅助证据
+    comments: 对真假质疑先给出凭证与来源信息，再进入内容层面的讨论
+  platform_implications: 平台是凭证展示与强制化的关键节点：是否展示凭证、是否对无凭证内容降级，将直接改变内容生产工作流与信任分配（原则性判断）。
+  related_nodes:
+  - provenance_verification
+  - synthetic_media_trust
+  - authenticity_perception
+  - trust_signals_content
+  - trust_calibration
+  source_ids:
+  - S94
+  - S92
+  - S181
+  provenance:
+    primary_sources:
+    - S94
+    - S92
+    - S181
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-050
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: authenticity_premium
+  canonical_name_en: Authenticity Premium
+  canonical_name_zh: 真实性溢价
+  aliases:
+  - 真实溢价
+  - verified human premium
+  - 真实性稀缺价值
+  domain: ai_information_environment
+  definition: 真实性溢价指：当 AI 可低成本生成高仿真内容时，『可验证的人类真实』（亲历经验、现场在场、人工痕迹、真人关系）相对稀缺度上升，受众愿意为其支付更高注意力、信任与货币价格的现象。
+  core_claim: AI 内容泛滥抬升了可验证真实的稀缺性，稀缺性按稀缺机制转化为溢价：越难伪造、越易验证的真实性，溢价越高。
+  mechanism: 底层是真实性感知（authenticity_perception）与稀缺机制的结合：真实性判断依赖不完美性、过程痕迹与个人化细节等启发式线索；生成模型能模仿风格表层，却难以自带『这段经历确实发生过』的背景证明。按稀缺原则（Cialdini
+    框架），感知稀缺放大价值判断——AI 使『风格上像真的』不再稀缺，使『可验证为真的』变得稀缺，价值向后者集中（稀缺心态 scarcity_mindset 的估值逻辑）。边界很重要：溢价属于『可验证或可信的真实』，而非一切自称真实的内容；在合成媒体信任紧缩的环境下（synthetic_media_trust），不可验证的真实性宣称反而可能贬值。
+  causal_chain: AI 生成内容供给↑ → 风格层真实性不再稀缺 → 可验证真实相对稀缺↑ → 稀缺机制抬升估值 → 真实性溢价（注意力/信任/货币）
+  variables:
+    inputs:
+    - AI 内容在品类中的渗透度
+    - 真实性的可验证程度
+    - 个体对 AI 内容的接触密度
+    moderators:
+    - 品类对亲历性的依赖度（体验类高于资讯类）
+    - 受众的 AI 暴露与素养
+    - 验证凭证的可得性（联动 content_provenance）
+    mediators:
+    - 稀缺感知
+    - 真实性感知线索
+    outputs:
+    - 注意力与信任向可验证真实集中
+    - 『人味』成为卖点
+    - 虚假真实宣称的贬值与风险
+  evidence:
+    supporting:
+    - 对『AI 味』内容的反感与对真人内容偏好上升：行业观察与个案报告（未系统抽样，无已建 EP 的系统性消费者调查支持）
+    - 稀缺提升估值的底层机制有长期实验传统支持（Cialdini 框架内的稀缺原则；S32 仅支持稀缺估值方向，不含消费者调查内容）
+    conflicting:
+    - 『真实性』判定高度主观且可被表演：受众并不总能识别伪真实，部分场景中对 AI 内容的偏好并未下降（情境证据）
+    replication:
+    - 截至 2026-09：作为市场现象被广泛讨论，定价层面的严格实证仍薄；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 溢价集中在高亲历性、高信任需求品类（体验、人物、手作、现场）；标准化信息类内容溢价弱
+  - 前提是真实性可被感知或验证；无法验证时，宣称真实不产生溢价
+  failure_conditions:
+  - 『伪真实』表演被识破时，惩罚超过普通造假——真实性承诺的违约代价更高
+  - 过度贴『真人/手工』标签导致标签通胀，溢价被稀释
+  common_misinterpretations:
+  - 『只要说是真人写的就有溢价』——不可验证的真实宣称在信任紧缩环境下反而触发怀疑
+  - 把真实性溢价与怀旧审美混为一谈——前者是信任经济现象，后者是风格偏好
+  ethical_risks:
+  - 把『真实性』做成表演性人设（伪素人、伪手工、伪现场），以真实性之名行欺骗之实
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - 创作者强调『未使用 AI』『一镜到底』『现场收音』作为内容卖点（行业观察）
+    - 线下体验、现场活动与手作产品在营销叙事中强调不可复制性
+  communication_implications: 把真实性从『氛围宣称』升级为『可验证供给』：展示过程、保留痕迹、允许核查；溢价的可靠来源是可验证性而非形容词。
+  community_implications: 社群是真实性的天然验证场：长期互动史使成员之间『真』的判定成本低；把老成员的真实经验做成内容，是溢价的最稳来源。
+  content_applications:
+    narrative: 讲述失败、修正与过程性细节而非只呈现完美结果，以过程痕迹支撑真实感
+    evidence: 为真实性宣称提供可核查的旁证（时间线、地点、第三方在场）
+    emotion: 用具体个人语境的情绪（何时何地因何）替代通用情绪模板
+  platform_implications: 平台对真人身份与 AI 生成的标识政策直接决定溢价分配：真实身份可低成本验证时溢价流向可验证者；不可验证时溢价流向最会表演者（原则性判断）。
+  related_nodes:
+  - authenticity_perception
+  - scarcity_mindset
+  - synthetic_media_trust
+  - trust_calibration
+  - self_presentation_impression_management
+  - content_provenance
+  source_ids:
+  - S32
+  - S100
+  - S181
+  provenance:
+    primary_sources:
+    - S32
+    - S100
+    - S181
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: human_ai_co_creation
+  canonical_name_en: Human-AI Co-Creation
+  canonical_name_zh: 人机共创
+  aliases:
+  - AI 辅助创作
+  - co-creation with AI
+  - 人机协作内容生产
+  domain: ai_information_environment
+  definition: 人机共创指人类与生成式 AI 在内容生产中的分工协作：人类负责意图、判断、经验素材与最终把关，AI 承担草稿、变体、扩写与格式化等执行工作。本节点关注分工方式如何影响内容质量与风格同质化，而非工作流本身。
+  core_claim: 共创的质量取决于人类保留判断与独特素材的程度：以人类经验为锚的分工提升效率并保留差异；以 AI 默认输出为锚的分工把产出拉向模型均值，加剧同质化并诱发算法博弈式的内容趋同。
+  mechanism: 生成模型输出本质上是训练分布的高概率表达：未经人类强约束的 AI 草稿天然向『平均答案』收敛（同质化压力）。人类介入点决定结果——若人类贡献独特经验、反常观点与把关标准，产出偏离分布均值、保有差异；若人类只做提示词搬运与采纳，产出趋同，并在创作者激励（creator_incentive_structures）与算法筛选（algorithmic_gaming）下互相模仿，形成『模型均值↔平台热门』的双向收敛回路。这与《Filterworld》描述的算法同质化同构，AI
+    把同质化从分发端前移到生产端，并与 ai_content_saturation 互为放大。
+  causal_chain: AI 默认输出偏向分布均值 → 人类介入深度决定偏离度 → 浅介入+算法筛选 → 创作者互相模仿与趋同 → 同质化加剧
+  variables:
+    inputs:
+    - 人类提供的独特素材量
+    - 人类的把关标准
+    - 提示与约束的深度
+    moderators:
+    - 创作者激励结构（奖励差异还是奖励套路）
+    - 平台对同质内容的筛选偏好
+    - 品类的经验依赖度
+    mediators:
+    - 产出对模型分布均值的偏离度
+    - 创作者之间的相互模仿
+    outputs:
+    - 内容质量分布
+    - 风格同质化程度
+    - 生产效率与差异性的权衡
+  evidence:
+    supporting:
+    - 写作与创意任务的初步实验显示 AI 辅助能提升个体产出的质量下限，但组内产出差异缩小（初步研究，方向一致）
+    - 《Filterworld》对算法环境导致文化同质化的论证，可谨慎类推至生产端（书籍论证）
+    conflicting:
+    - 部分研究发现，得当的人类约束与个人素材注入可同时提效与保差（初步研究，与『必然同质化』相悖）
+    replication:
+    - 截至 2026-09：实验多为短周期、单任务、小样本设计，缺乏长期追踪与跨领域复制；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 在经验依赖型与观点型内容中，人类介入深度对结果影响最大；格式化、信息整合型内容中影响小
+  - 同质化后果取决于平台筛选是否奖励差异：差异化激励可部分抵消均值收敛
+  failure_conditions:
+  - 把 AI 当『质量保证』而放弃把关：事实错误与平均化风格同时进场
+  - 以量取胜的共创流水线在饱和环境中边际收益递减，并加速账号信任折旧
+  common_misinterpretations:
+  - 『AI 辅助等于提质增效双赢』——效率提升较确定，质量与差异性取决于人类介入深度，非自动成立
+  - 把同质化归咎于工具本身——同质化是『默认输出+筛选激励』的结构产物，同样的工具可用于强化差异
+  ethical_risks:
+  - 不披露 AI 参与而冒充纯人工产出，侵蚀真实性溢价的信任基础并可能违反平台披露要求
+  - 用 AI 批量伪造『个人经验叙事』，污染以亲历性为基础的内容生态
+  examples:
+    original_cases: []
+    research_cases:
+    - 创意写作任务中 AI 辅助组产出趋同的初步实验（初步研究，不给具体效应量）
+    modern_cases:
+    - 团队将 AI 用于初稿与变体、人类专注选题与事实把关的流程（行业观察）
+    - 『AI 味』成为受众吐槽高频词，反向催生真人过程展示类内容
+  communication_implications: 把人类独特资产（真实经验、立场、案例库）前置为共创输入，把 AI 限定在执行层；以『能否说出只有我能写的那句话』作为差异检验。
+  community_implications: 社群共创（成员经验+AI 整理）能产出高差异性内容：成员的真实素材正是模型分布之外的部分，社群因此成为共创时代的稀缺素材源。
+  content_applications:
+    body: 先用人类经验与观点搭骨架，AI 只做扩写与润色，最后以人类把关收尾
+    narrative: 保留个人叙事中的非标准化细节与不完美表达，避免被 AI 统一腔调
+    comments: 公开说明共创分工与把关流程，以透明化维持真实信任
+  platform_implications: 平台激励决定共创走向：若排序继续奖励已验证的热门模式，共创将向均值收敛；差异化与原创信号加权会改变创作者的分工选择（原则性判断）。
+  related_nodes:
+  - ai_content_saturation
+  - algorithmic_gaming
+  - creator_incentive_structures
+  - processing_fluency
+  - self_efficacy
+  - distinctive_brand_assets
+  source_ids:
+  - S100
+  - S56
+  - S216
+  provenance:
+    primary_sources:
+    - S100
+    - S56
+    - S216
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: misinformation_velocity
+  canonical_name_en: Misinformation Velocity
+  canonical_name_zh: 错误信息传播速度
+  aliases:
+  - 虚假信息传播速度
+  - falsehood spread
+  - viral falsehood dynamics
+  domain: ai_information_environment
+  definition: 错误信息传播速度指虚假或低质量信息相对真实信息在社交平台上的传播速度、深度与广度差异。该方向最著名的实证锚点是 Vosoughi、Roy 与 Aral 于 2018 年发表的大样本
+    Twitter 研究：在控制机器人因素后，虚假新闻比真实新闻传播得更快、更深、更广，且差异主要来自人类的分享行为而非机器人。本节点对该研究作描述性引用，不引用具体数字。
+  core_claim: 在社交平台环境中，新颖且情绪唤起强的虚假信息系统性获得传播优势；该优势主要由人类分享偏好而非机器人生成驱动，平台机制则将其进一步放大。
+  mechanism: 三条底层机制汇流：其一，新颖性偏好（novelty_preference）——虚假信息常比真实信息更新奇，新奇信息获得更多注意与分享；其二，情绪唤起（emotional_arousal）——虚假叙事常携带更强的高唤起情绪（惊奇、愤怒），而高唤起促进分享（情绪的差异化分享画像
+    discrete_emotion_sharing_profiles 与之兼容）；其三，算法放大（algorithmic_amplification）——平台排序对早期互动信号的响应使高互动的错误信息获得更大分发。AI
+    时代的新条件：生成工具降低伪造成本、提高虚假内容的产量与定制化，使具备传播优势的内容供给增加；对速度优势本身，AI 是放大器而非起源。
+  causal_chain: 新奇+高唤起的虚假内容 → 人类分享偏好 → 早期互动信号 → 算法放大 → 相对真实信息更快更深更广的传播
+  variables:
+    inputs:
+    - 信息的新颖性与情绪唤起水平
+    - 虚假内容供给量
+    - 平台排序机制
+    moderators:
+    - 议题的政治化程度
+    - 协同虚假行为的占比
+    - 平台治理强度
+    - 用户分享前的辨识成本
+    mediators:
+    - 人类分享行为
+    - 早期互动信号
+    - 算法分发加权
+    outputs:
+    - 传播速度/深度/广度的相对差异
+    - 真实信息的可见性劣势
+  evidence:
+    supporting:
+    - Vosoughi, Roy & Aral 2018（Science 期刊）对 Twitter 历史大样本的分析：虚假新闻传播更快、更深、更广；机器人对真假新闻的加速程度相当，差异主要归于人类分享（描述性引用，不给具体数字）
+    - 高唤起情绪促进分享的独立证据线（Berger 及其合作者的研究方向）与该发现兼容
+    conflicting:
+    - 后续研究对『虚假信息普遍占优』提出情境修正：不同平台、议题与时期的差异幅度不一；部分平台治理与产品调整后速度差距有所收窄（研究讨论）
+    replication:
+    - 核心发现被多个平台与国家的数据部分复制，但效应大小随平台、时期与『虚假』的操作化定义而波动；全量转发链分析被视为该领域的重要方法学基准
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 主要基于社交网络的转发结构环境；在强编辑把关（传统媒体）或强治理平台上差异幅度不同
+  - 『更快更深更广』是相对真实新闻的群体层面结论，不意味着任何一条虚假信息都必然胜出
+  failure_conditions:
+  - 把结论外推为『人们只信假的』——研究解释的是传播差异，不是相信程度本身
+  - 把一切传播差异归因于机器人——原研究明确指出人类分享是主因（描述性引用）
+  common_misinterpretations:
+  - 『假新闻赢是因为水军』——原研究的核心反直觉点恰是人类偏好：机器人无法解释真假之间的差异
+  - 把速度优势等同于影响力优势——传播广度与态度改变之间仍有距离
+  ethical_risks:
+  - 速度优势的机制可被反向利用：刻意制造新奇与高唤起以加速传播（包括用 AI 批量生产此类内容）
+  examples:
+    original_cases: []
+    research_cases:
+    - Vosoughi, Roy & Aral 2018 的 Twitter 转发链大样本分析（描述性引用）
+    - 高唤起情绪内容更易被分享的独立实验与观测证据线
+    modern_cases:
+    - 突发事件中未经证实信息早于权威通报扩散的常见时序
+    - AI 生成的伪造现场图像在事实核查完成前已被大量转发（原则性描述）
+  communication_implications: 权威信息要参与速度竞争：预置事实基线、缩短从核实到发布的时延、用同等情绪与叙事质量传递真相；慢半拍的真实信息在结构上处于劣势。
+  community_implications: 社群建立『转发前等一等』与快速勘误的规范，能显著改变本群内的速度竞争；管理员对高唤起未证实信息的延迟转发是低成本干预点。
+  content_applications:
+    narrative: 辟谣内容避免复述谣言的框架与画面（防止重复强化），以新叙事承载正确信息
+    emotion: 真实信息可采用高唤起但不失实的叙事结构参与竞争，而非仅依赖干瘪通报
+    sharing: 给核心成员提供可立即转发的已核实版本，压缩正确信息的转发延迟
+  platform_implications: 平台排序对早期互动的敏感度直接调节速度差距：慢速审核、快速标签与降权机制都在改变该机制的作用条件（原则性判断）。
+  related_nodes:
+  - emotional_arousal
+  - novelty_preference
+  - algorithmic_amplification
+  - discrete_emotion_sharing_profiles
+  - stepps_sharing_framework
+  - fluency_truth_effect
+  source_ids:
+  - S92
+  - S99
+  - S60
+  - S106
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Fisher 2022《The Chaos Machine》（S99，假新闻速度/愤怒放大调查）+ Aral 2020（S92，2018 Science
+      假新闻研究）+ Nahon & Hemsley 2013（S60）
+    effect_size: 假新闻传播速度快于真新闻（Vosoughi 2018 数据）
+    replication_status: 假新闻速度优势在 Twitter 数据多源复现
+    context_dependency: 新奇性/情绪唤起/机器人放大调制
+    downgrade_upgrade_reason: 2026-09 实取 S99 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S92
+    supporting_evidence:
+    - S99
+    - S60
+    last_verified: 2026-09
+    case_sources:
+    - CASE-CRS-015
+    platform_sources:
+    - weibo:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: 2026-09
+- id: bot_amplified_social_proof
+  canonical_name_en: Bot-Amplified Social Proof
+  canonical_name_zh: 机器人放大社会认同
+  aliases:
+  - 刷量
+  - bot-farmed engagement
+  - 虚假互动
+  - astroturfing（伪草根）
+  domain: ai_information_environment
+  definition: 机器人放大社会认同指以自动化或半自动化账号批量制造点赞、评论、粉丝、转发等互动信号，伪造『他人都在做、都在认同』的表象，从而操纵受众社会认同判断的行为。AI 使批量账号的文本质量与人格维持能力显著提升。
+  core_claim: 社会认同启发式默认『可见的他人行为是真实信息』；虚假互动在表层伪造该输入，短期操纵有效，但系统性使用会损害平台的信任基础设施，使社会认同信号整体贬值。
+  mechanism: 底层是社会认同（social_proof，Cialdini 框架）：不确定情境中人们以他人行为作为正确性捷径，该捷径的生效前提是信号真实——而这恰是被攻击的对象。批量互动伪造规范性输入，扭曲规范感知准确性（norm_perception_accuracy，个体对『别人怎么想』的感知失真）；AI
+    生成评论使『看评论判断内容』的二级校准同时失效。个体层面：信息充足或发现刷量时操纵失效并触发信任惩罚，但检测成本持续上升。长期后果是信任紧缩：互动数与评论数的信号价值整体下降，受众与平台转向更强验证的信号。
+  causal_chain: 批量账号制造互动 → 社会认同的输入被伪造 → 受众按被操纵的规范感知行动 → 识别与曝光 → 社会认同信号整体贬值 → 平台信任基础设施受损
+  variables:
+    inputs:
+    - 虚假互动规模与拟真度
+    - 受众的不确定程度
+    - 信号的可见位置（排行/评论/粉丝数）
+    moderators:
+    - 受众的检测能力与警觉
+    - 平台反制（清理、限权、验证）
+    - 决策卷入度（高卷入更谨慎）
+    mediators:
+    - 社会认同判断
+    - 规范感知准确性
+    outputs:
+    - 短期行为操纵
+    - 被识破时的信任惩罚
+    - 信号体系的整体贬值
+  evidence:
+    supporting:
+    - 平台与研究者多次披露协同虚假行为（coordinated inauthentic behavior）的存在（平台披露与学术报告方向）
+    - 社会认同对判断与行为的影响有稳固基础（Cialdini 框架；social proof 文献）
+    conflicting:
+    - 虚假互动对真实用户行为的净影响难以隔离测量：相关证据多，因果估计少且不一致（方法学讨论）
+    replication:
+    - 截至 2026-09：AI 生成账号时代操纵有效性的公开严格对照研究缺乏，多数结论由前 AI 时代的伪草根研究外推；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 对低卷入、依赖表面信号的决策（浏览、首屏选择）操纵窗口最大；高卷入决策中用户更多依赖私人信源
+  - 平台信号越集中于单一可操纵指标（点赞/粉丝数），该机制的杠杆越大
+  failure_conditions:
+  - 刷量被识别（评论区空洞、账号簇被曝光）时不仅无效，还产生反向社会证明
+  - 平台强验证环境（实名、高门槛互动）中伪造成本上升，机制被压缩
+  common_misinterpretations:
+  - 『刷点数据没有受害者』——它污染所有依赖该信号的决策者，属于负外部性转嫁
+  - 把机器人操纵当作错误信息传播的主因——传播速度差异的主要驱动是人类（见 misinformation_velocity）
+  ethical_risks:
+  - 伪造公众舆论（伪草根）直接破坏规范感知与公共讨论的真实性
+  - 对竞争者反向刷量与举报轰炸构成商业打击与诬陷
+  examples:
+    original_cases: []
+    research_cases:
+    - 前 AI 时代对 astroturfing（伪草根营销）的案例与实验研究（方向性引用）
+    modern_cases:
+    - 电商与内容平台持续治理刷单刷评与机器粉（原则性描述）
+    - AI 生成评论使『评论区可信度』成为新的受众疑虑点（行业观察）
+  communication_implications: 不购买虚假互动：短期杠杆对应长期信号贬值；将资源投向真实可验证的社会证明（可查证的用户故事与第三方评价）以对冲环境贬值。
+  community_implications: 社群的真实互动密度是防伪资产：小而真的活跃信号在整体信号贬值环境中价值上升；运营者应主动展示真实性证据（成员活跃史、真实案例）。
+  content_applications:
+    evidence: 用可核实的第三方评价与具体用户故事替代裸指标（粉丝数/点赞数）作社会证明
+    comments: 运营真实问答与使用细节讨论，使评论区具备伪造者难以复制的信息密度
+    sharing: 避免『已有 N 人在用』式话术，改用具体群体的真实场景证言
+  platform_implications: 反操纵是平台信任基础设施的核心竞争点：识别与清理能力决定信号可信度；平台越依赖互动信号变现，治理与商业利益的冲突越尖锐（原则性判断）。
+  related_nodes:
+  - social_proof
+  - norm_perception_accuracy
+  - trust_calibration
+  - reputation_systems
+  - informational_influence
+  - misinformation_velocity
+  source_ids:
+  - S92
+  - S32
+  - S94
+  - S106
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Vosoughi, Roy & Aral 2018 Science 假新闻传播研究（S106 已实取摘要+SM）
+    effect_size: 假新闻传播速度/广度/深度系统性优于真新闻（摘要级）
+    replication_status: 方向被多项平台谣言研究支持
+    context_dependency: Twitter 平台数据相关；新颖性与情绪反应为解释变量
+    downgrade_upgrade_reason: 2026-09 补充一手研究证据（S106），升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S106
+    supporting_evidence:
+    - S92
+    - S32
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-001
+    - CASE-FAL-016
+    - CASE-FAL-017
+    - CASE-FAL-018
+    - CASE-FAL-029
+    - CASE-FAL-049
+    - CASE-FAL-059
+    - CASE-FAL-060
+    - CASE-FAL-069
+    - CASE-FAL-080
+    - CASE-FAL-088
+    - CASE-FAL-092
+    - CASE-FAL-098
+    - CASE-FAL-100
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'
+- id: hyperpersonalization_privacy
+  canonical_name_en: Hyperpersonalization and Privacy
+  canonical_name_zh: 超个性化与隐私
+  aliases:
+  - 超个性化
+  - data-driven personalization tension
+  - 个性化与隐私张力
+  domain: ai_information_environment
+  definition: 超个性化与隐私指个性化能力逼近个体级（行为推断、情境感知、生成式定制）时，与隐私保护、知情同意及脆弱群体保护之间形成的结构性张力：个性化的有效性来自对个人的深入推断，而这种深入本身构成风险。
+  core_claim: 个性化的增益与隐私风险同源于画像深度：画像越精细，内容越相关，但推断越敏感（含用户不自知的敏感状态）、同意越难真实达成、对脆弱群体的暴露面越大。
+  mechanism: 个性化说服（personalized_persuasion）的有效性依赖画像相关性；当画像从声明数据（用户主动填写）扩展到推断数据（从行为猜测情绪状态、财务压力、健康疑虑），三个后果出现：其一，用户对『被知道』的感知滞后且不完整，知情同意失去信息基础；其二，推断出的敏感状态即使不准也会被用于定向（如情绪低谷期的冲动消费投放），脆弱状态被商业利用；其三，个体的自主感与控制感受损，触发心理逆反（psychological_reactance）并使信任校准（trust_calibration）下调。《The
+    Platform Society》的分析指出，平台化个性化把公共价值（隐私、公平、自主）的权衡私有化给了商业平台。
+  causal_chain: 画像深度↑（声明→观测→推断） → 个性化增益↑ 同时 敏感推断↑+同意失效↑ → 脆弱群体暴露↑ → 信任与自主感受损 → 用户反制与监管 → 增益受限
+  variables:
+    inputs:
+    - 画像数据类型（声明/观测/推断）
+    - 推断目标的敏感度
+    - 用户控制权（查看/修正/退出）
+    moderators:
+    - 监管与平台政策
+    - 用户隐私素养与情境敏感度
+    - 品类敏感度（健康/财务/政治最高）
+    mediators:
+    - 知情同意的有效性
+    - 被监视感
+    - 心理逆反
+    outputs:
+    - 个性化效果曲线
+    - 信任与关系寿命
+    - 脆弱群体的风险敞口
+  evidence:
+    supporting:
+    - 隐私研究中『个性化—隐私悖论』被反复观察：用户声称重视隐私但行为上接受个性化（综述方向）
+    - 《The Platform Society》对平台个性化与公共价值张力的系统分析（书籍论证）
+    conflicting:
+    - 被监视感对接受度的影响因情境而异：明码交换（免费内容换个性化）与隐性追踪的容忍度差异大（研究讨论）
+    replication:
+    - 截至 2026-09：生成式 AI 级别个体定制（超个性化）的实证研究极少，多数结论由传统推荐与广告研究外推；研究快速发展中
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 在用户理解并主动选择个性化的服务关系中张力可控；在隐性追踪与第三方数据场景中张力最大
+  - 品类敏感度是分界线：通用兴趣个性化与基于脆弱状态（健康、财务、情绪）的个性化风险不可同日而语
+  failure_conditions:
+  - 以『用户想要个性化』为一切推断辩护——想要相关性与愿意被推断敏感状态是两回事
+  - 合规形式主义：同意弹窗不构成真实同意，用户照样因『被发现被画像』而反感
+  common_misinterpretations:
+  - 『匿名化就安全』——碎片化推断可重建敏感画像，匿名不等于不可识别
+  - 把隐私仅当作合规问题——它同时是说服有效性的变量：被监视感直接削弱说服与信任
+  ethical_risks:
+  - 针对脆弱状态（成瘾、债务、情绪危机、未成年）定向营销，构成对弱势者的剥削
+  - 以个性化之名建立用户无法知情、无法反驳的推断体系，损害自主与尊严
+  examples:
+    original_cases: []
+    research_cases:
+    - 个性化—隐私悖论的问卷与行为研究传统（综述方向）
+    modern_cases:
+    - 监管对敏感类目定向广告的限制趋势（原则性描述）
+    - 『刚聊过什么就推什么』引发的不适感成为常见舆情话题（行业观察）
+  communication_implications: 把个性化透明化为一项服务：告知用什么数据、能改什么、怎么退出；避开基于脆弱状态的定向，把相关性建立在用户主动声明的需求上。
+  community_implications: 社群天然提供『用户主动表达的需求』（入群理由、发言、自选标签），是不依赖隐蔽画像也能个性化的健康数据源；社群的隐私惯例本身就是信任资产。
+  content_applications:
+    opening: 以用户可见自选的兴趣或场景标签组织内容变体，替代隐性行为推断
+    cta: 在转化路径中给用户选择与控制（选择接收频率/主题），把控制感设计进说服
+    comments: 对『你们在监控我吗』类疑问给出直接、具体的回答与设置入口
+  platform_implications: 平台处于张力中心：个性化是其商业模式核心，而隐私与脆弱群体保护日益成为监管与舆论的刚性约束；平台对敏感推断的自我限制将重塑行业做法（原则性判断）。
+  related_nodes:
+  - personalized_persuasion
+  - trust_calibration
+  - psychological_reactance
+  - nudge_mechanism
+  - self_presentation_impression_management
+  - filter_bubble_echo_chambers
+  source_ids:
+  - S95
+  - S92
+  - S93
+  - S215
+  provenance:
+    primary_sources:
+    - S95
+    - S92
+    - S93
+    - S215
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-020
+  last_reviewed: 2026-09
+  knowledge_half_life: short
+  valid_as_of: '2026-09-09'

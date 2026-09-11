@@ -1,0 +1,21 @@
+# Evidence Package — S228（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S228
+title: 小红书社区规范
+authors: 小红书（行吟信息科技）
+year: 2022
+journal: 官方条款页（terms ZXXY20221213003）
+doi: ''
+url: https://agree.xiaohongshu.com/h5/terms/ZXXY20221213003/-1
+access_level: full_text
+research_status: annotated
+content_obtained: 本项目 2026-09-08 官方实读（platform_sources S1 in platforms/xiaohongshu，claim_supported 在案）
+research_question: 小红书社区治理的规则结构？
+core_claims:
+- 导流治理（禁止个人联系方式/网址/二维码等）、违规处理措施（限制展示/禁言/封禁）、虚假宣传与扰乱市场秩序治理
+method: 官方条款
+limitations: 条款随版本更新
+boundary_conditions: 以最新规范为准
+relevant_nodes:
+- moderation_governance
+notes: moderation_governance 官方一手证据（治理措施直接影响内容可见性——'治理塑造内容供给形态'的规则层依据）。
+last_verified: 2026-09

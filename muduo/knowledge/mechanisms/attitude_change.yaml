@@ -1,186 +1,428 @@
 # attitude_change — 态度改变（Attitude Change）：失调、强度与"说了不做"的鸿沟
 domain: attitude_change
 nodes:
-  - id: cognitive_dissonance
-    canonical_name_en: Cognitive Dissonance Theory
-    canonical_name_zh: 认知失调理论
-    aliases: ["失调理论", "dissonance theory", "Festinger 失调"]
-    domain: attitude_change
-    definition: "Festinger 1957 年提出的理论：当个体同时持有相互冲突的认知（信念、态度、行为认知）时，产生不适的心理张力（dissonance），并被动机去减少它——通过改变认知、增加协调认知或降低冲突认知的重要性。经典证据是 Festinger 与 Carlsmith 1959 的 1 美元/20 美元实验。"
-    core_claim: "行为与态度冲突时，人往往不改行为而是改态度——尤其在低外部理由、高自由选择、高投入的情境下。"
-    mechanism: "失调强度取决于冲突认知的重要性与不可调和性，以及选择自由度与外部理由的充分性。减少失调的路径：（1）改变态度使其与行为一致（无外部理由时最典型——报酬 1 美元组说无聊任务有趣后真的觉得有趣，因为『为了 1 美元撒谎』无法成为理由）；（2）增加协调认知（找借口、比较）；（3）贬低选择的价值（酸葡萄）。对外部理由的敏感性（不足够合理化原则，insufficient justification）是该理论最反直觉且复制最稳的预测。该机制族有跨著作对应：Haidt 描述判断后『再事后建构合理化理由』（S26），Cialdini 将『承诺与一致（commitment & consistency）』列为独立影响原则（S32）。"
-    causal_chain: "行为与态度冲突 + 低外部理由/高自由选择 → 失调唤起 → 态度改变/合理化 → 失调消解"
-    variables:
-      inputs: [态度-行为冲突, 选择自由度, 外部理由充分性（报酬/惩罚）, 投入成本]
-      moderators: [个人责任归因, 后果的严重性与不可撤回性, 自尊水平, 承诺的公开性]
-      mediators: [失调唤起（生理不适）, 合理化需求]
-      outputs: [态度向行为对齐, 偏好重估（酸葡萄/甜柠檬）, 寻找支持性信息, 未来行为调整（少数路径）]
-    evidence:
-      supporting: ["Festinger 与 Carlsmith 1959：低报酬组对无聊任务的态度显著更正面（不足够合理化）", "自由选择范式的复制（选择后对所选/未选选项的重估）", "努力合理化（为加入付出越多越珍视）的跨情境证据（S21 综述）"]
-      conflicting: ["高外部报酬下的失调效应消失甚至反转（过度理由效应）", "自我一致性 vs 自我肯定（self-affirmation）路线对机制的争论：失调可能在保护整体自我价值而非特定态度（文献常识，未建包：Steele 1988 自我肯定）", "跨文化复制中失调的表现形式有差异——关系性失调（文献常识，未建包：Heine 等）"]
-      replication: ["不足够合理化与自由选择范式是复制最稳的社会心理学效应之一", "效应边界（报酬、选择、责任）的调节结构获得充分支持"]
-      meta_analysis: ["失调研究的整合综述支持核心范式稳健；机制之争（自我一致 vs 自我肯定）未完全裁决"]
-    evidence_grade: "A-"
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions: ["行为是自由选择的且被归因于自我", "外部理由不足（报酬/惩罚不够构成借口）", "冲突认知重要且后果明确"]
-    failure_conditions: ["有充分外部理由（高报酬、被强迫）——态度不变", "自我肯定机会可得（自我价值被其他维度修复）", "行为可轻易撤销或责任可外推"]
-    common_misinterpretations: ["把失调简化为『不舒服就改想法』——关键的调节是外部理由与选择自由，离开这两个条件预测会失效", "误以为失调总导致态度改变——酸葡萄式贬低与信息回避同样是常见出口"]
-    ethical_risks: ["利用低报酬/低回报诱导人们用态度改变自我合理化（廉价合作的驯化）", "制造高投入陷阱使人难以退出（沉没成本绑定）"]
-    examples:
-      original_cases: ["Festinger 1957《认知失调理论》（S21 综述）", "Festinger 与 Carlsmith 1959 的 1 美元/20 美元实验", "Festinger, Riecken 与 Schachter 对末日教派的田野观察（预言落空后信仰反而强化）"]
-      research_cases: ["1 美元/20 美元实验", "自由选择范式（选择后选项重估）", "努力合理化实验（入会仪式与群体珍视）"]
-      modern_cases: ["买了付费社群后更相信其价值（投入合理化）", "坚持亏损策略者寻找看多理由", "长期等待者对『等待本身』的合理化（排队效应）"]
-    communication_implications: "让受众自己付出小投入（评论、选择、写下观点）后再给结论——投入触发的失调会推动态度向投入方向对齐；反向警示：给足外部奖励（现金补贴）反而会消灭内在认同。"
-    community_implications: "社群的入会仪式与贡献要求是努力合理化的应用（付出越多元越珍视社群）；但需警惕走向高投入陷阱设计；处理成员不满时，给『改变观点的台阶』（新信息、新框架）比强迫认错更能完成态度更新。"
-    content_applications:
-      cta: "先让读者完成小投入（选一个选项、写下一个判断），再呈现内容结论——利用失调完成态度对齐"
-      body: "制造建设性认知冲突：先呈现读者既有做法与其目标的冲突（你想要X，但你正在做Y），再给出口"
-      title: "标题制造失调张力：『为什么你越努力理财越亏？』——冲突认知的唤起是阅读动机"
-      comments: "对读者已付出的行动给意义框架（『你打卡的第 21 天本身就是复利』），完成合理化闭环"
-    platform_implications: "平台的连续签到、付费会员、创作者身份都是投入-失调结构：用户投入越多越难离开（留存机制），但也构成退出的心理牢笼；平台的退款政策宽松度与取消流程摩擦直接影响失调式留存的伦理边界。"
-    related_nodes: [commitment_consistency, commitment_escalation, self_persuasion, identity_protective_cognition, attitude_behavior_gap, sunk_cost_fallacy, endowment_effect]
-    source_ids: [S21, S32, S26]
-    provenance:
-      primary_sources: ['S21', 'S32', 'S26']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: attitude_strength_accessibility
-    canonical_name_en: Attitude Strength and Accessibility
-    canonical_name_zh: 态度强度与可达性
-    aliases: ["态度可达性", "attitude accessibility", "Fazio 方向"]
-    domain: attitude_change
-    definition: "态度的强度维度群：可达性（attitude accessibility，态度从记忆中被激活的速度）、确定性、重要性、认知-情感一致性等。Fazio 的传统表明：高可达态度更能预测行为、更能过滤新信息、更抗改变——不是所有态度都平等。"
-    core_claim: "只有强态度（高可达、确定、重要）能预测行为与抵抗说服；弱态度在多数场景下是即兴建构的。"
-    mechanism: "态度作为记忆中的评价性联想（对象→评价），其激活速度（可达性）由激活频率与关联强度决定。高可达态度在对象出现时自动激活，直接引导注意与行为（fango 模式）；低可达态度在需要表态时临时拼凑（受当下情境线索支配），因此与行为脱节。强度诸维（确定性、重要性、知识量）相互关联但可分离：确定性尤其决定抗说服力（确定的态度闭合了更新通道）。"
-    causal_chain: "态度对象的反复激活 → 评价联想强化 → 高可达性 → 对象出现即自动激活 → 指引注意与行为、过滤新信息"
-    variables:
-      inputs: [态度表达频率, 直接经验（亲身尝试）, 态度对象的重要性, 相关知识量]
-      moderators: [态度的异质性（认知-情感一致）, 个人相关性, 情境压力]
-      mediators: [可达性（激活速度）, 态度确定性, 态度重要性]
-      outputs: [态度-行为一致性提升, 对矛盾信息的过滤与反驳, 抗说服性, 自发评价表达]
-    evidence:
-      supporting: ["Fazio 等的反应时测量研究：高可达态度显著更好预测行为选择", "直接经验形成的态度比间接听说形成的态度更可达且更预测行为", "态度确定性对抗说服的保护效应（确定性元认知传统）"]
-      conflicting: ["可达性的行为预测力在强情境（规范压力大的场合）中减弱——行为被情境主导", "态度强度的多维结构使单一预测模型复杂化"]
-      replication: ["可达性-行为关联在多领域重复", "各强度维度的独立贡献在不同研究中权重不一"]
-      meta_analysis: ["态度强度研究的整合综述支持强态度对行为与抗改变的预测优势"]
-    evidence_grade: "A-"
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions: ["态度对象对个体相关且被反复接触（可达性可积累）", "弱情境（行为不被规范强行规定）时可达性主导", "直接经验优于间接信息"]
-    failure_conditions: ["强情境压力（公开表态、群体一致要求）压过个体态度", "态度从未被激活（低可达）——行为由当下线索决定", "新信息打破确定性（高确定性也意味着高脆弱性——一旦动摇可能整体反转）"]
-    common_misinterpretations: ["把问卷调查的态度当行为预测器——低可达态度的问卷数据几乎不预测行为（呼应 attitude_behavior_gap）", "以为说服只看信息质量：对强态度受众，重复与温和强化比新论据更有效"]
-    ethical_risks: ["利用重复曝光与仪式化激活把弱观点固化为强态度（极化生产）", "针对高确定性受众的反向内容设计（确认偏差收割）"]
-    examples:
-      original_cases: ["Fazio 的态度可达性研究传统（S35 综述所述）", "Petty 与 Cacioppo 对中心路径产物（强态度）的论述（S34）"]
-      research_cases: ["反应时可达性测量与行为预测实验", "直接经验 vs 间接信息的态度强度对比研究"]
-      modern_cases: ["长期定投者的强态度（对市场噪音免疫）vs 新手的摇摆", "品牌习惯消费者对负面新闻的过滤", "社群老成员对新人质疑的稳定立场"]
-    communication_implications: "对强态度受众（老用户、深度粉丝）：重复核心信息、强化仪式感比抛新论据有效；对弱态度受众（新用户）：任何单次说服都是临时建构，需要高频、低成本的再激活机制（提醒、触发、场景入口）。"
-    community_implications: "社群文化的本质是集体强态度的养成：通过重复仪式（weekly 打卡）、共同语言与直接经验（一起做成的事）把价值主张变为高可达态度；老成员的稳定行为是这一资产的可见证明。"
-    content_applications:
-      body: "对老受众内容以强化为主（重复核心框架、升级案例），对新受众先建立直接经验（小任务）而非灌输观点"
-      cta: "新受众的 CTA 是经验型（试用、测试），让行为本身生成强态度，再谈深度认同"
-      comments: "让高可达成员的稳定表态成为社区参考系（置顶资深者的一致性发言）"
-      title: "标题复用品牌式重复元素（固定栏目名、固定句式），利用重复激活建立可达性"
-    platform_implications: "平台的算法重复曝光是可达性的工业级制造机：反复看到某观点即形成强态度（无论信息质量）——这既是品牌建设的通道也是极化的机制；平台的多样化约束（减少重复）与创作者的可达性策略之间存在持续张力。"
-    related_nodes: [attitude_behavior_gap, elaboration_likelihood_model, central_route_processing, cognitive_dissonance, mere_exposure, habit_loop_cue_routine_reward, context_cue_stability]
-    source_ids: [S34, S35, S21]
-    provenance:
-      primary_sources: ['S34', 'S35', 'S21']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: commitment_escalation
-    canonical_name_en: Escalation of Commitment
-    canonical_name_zh: 承诺升级
-    aliases: ["承诺升级悖论", "escalation of commitment", "沉没成本效应的组织版"]
-    domain: attitude_change
-    definition: "Staw 1976 年揭示的决策现象：当项目出现负反馈时，决策者不撤资反而追加投入——为证明先前决策正确而继续投入资源。它与沉没成本谬误同源，但强调『承诺』与『合理化』的社会-心理成分（向自己与他人证明没看错）。"
-    core_claim: "负反馈不减少反而增加对失败方向的投入——人们用未来的资源为自己的过去决策辩护。"
-    mechanism: "三层驱动：（1）认知层——撤资等于承认决策错误，触发认知失调与自我合理化需求；（2）社会层——公开承诺后撤退损失面子与信誉（印象管理）；（3）结构层——决策者的问责与激励结构奖励『坚持』而非『纠错』。负反馈反而提升承诺的临界条件：决策者对项目负有个人责任、撤资选项模糊、存在『翻盘可能』的叙事空间。自我设限的框架（『再给一次机会』）持续喂养承诺。"
-    causal_chain: "初始投入 → 负反馈 → 自我辩护需求（失调+面子） → 追加投入 → 沉没加深 → 更难撤退（循环升级）"
-    variables:
-      inputs: [初始投入规模, 负反馈信号, 个人责任归属, 撤退选项的清晰度]
-      moderators: [决策者身份（决策者vs旁观管理者）, 公开承诺程度, 组织问责结构, 替代方案的明确性]
-      mediators: [自我合理化需求, 失调唤起, 对翻盘的期望]
-      outputs: [追加投入, 对负面信息的系统性低估, 项目长期恶化, 最终崩盘或被迫止损]
-    evidence:
-      supporting: ["Staw 1976 的实验：负责任决策者在负反馈后分配更多资源给失败项目（Staw 1976，原始文献未建包）", "沉没成本与承诺升级的系列实验（Staw 1976 起的实验文献，未建包；S12 仅提供沉没成本方向支持）", "组织案例研究（大型项目超支的持续加注模式）"]
-      conflicting: ["『止血』机制存在：清晰的替代方案与外部问责能显著抑制升级", "并非所有负反馈都引发升级——可逆投入与学习型文化中纠错更常见"]
-      replication: ["基本范式（责任×负反馈→追加投入）在多研究中重复", "真实组织中的效应幅度受治理结构强烈调节"]
-      meta_analysis: ["承诺升级研究的整合综述支持责任归因与负反馈交互的核心结构"]
-    evidence_grade: "A-"
-    boundary_conditions: ["决策者对初始决策负有个人责任", "负反馈模糊或可被解读为暂时性", "存在维持希望的叙事空间"]
-    failure_conditions: ["决策更替（新决策者无历史包袱时止损迅速）", "撤退选项明确且被制度保护（止损不惩罚）", "外部问责透明（定期强制复盘）"]
-    common_misinterpretations: ["把承诺升级简单等同于沉没成本谬误——升级多了社会与身份成分（向他人证明自己），个人决策的沉没成本效应更弱", "误以为坚持都是升级：高确定性环境中的坚持可能是正确策略，区分要看反馈质量与信息更新"]
-    ethical_risks: ["利用承诺升级锁定用户（先高投入再降服务质量的会员结构）", "组织层面以『坚持=忠诚』文化压制止损与 whistleblowing"]
-    examples:
-      original_cases: ["Staw 1976 的承诺升级实验（Staw 1976，原始文献未建包）", "Thaler 对沉没成本与追加投入的行为经济学讨论（S12）"]
-      research_cases: ["责任与负反馈交互的资源分配实验", "组织项目超支的案例研究"]
-      modern_cases: ["亏损持仓的持续补仓（摊平成本）", "失败产品线的持续投入（『再迭代一版』）", "长期社群投资（时间、内容、关系）后明知方向错误仍不转型的运营者"]
-    communication_implications: "内容可以成为升级的解药：提供『止损不丢人』的框架与外部视角（如果朋友处在这个位置你会怎么劝他）；对已投入受众，用『未来收益』而非『过去成本』作为行动理由。"
-    community_implications: "社群运营的转型（换主题、换规则）常被承诺升级阻断（老成员投入、运营者面子）；解法是制度化的定期复盘与『决策者换位』机制（由无历史包袱的成员参与新方向决策）。"
-    content_applications:
-      body: "给止损提供心理台阶：『放弃错误方向不是失败，是把资源还给未来』——对抗升级的合理化叙事"
-      title: "标题用未来框架：『接下来 6 个月怎么做』替代『过去一年亏掉什么』"
-      evidence: "呈现『撤资成功』案例（及时止损者的后续表现），为纠错行为提供社会证明"
-      comments: "对犹豫是否止损的成员提供结构化决策清单（新钱问题：如果今天空仓，你会买入它吗？）"
-    platform_implications: "平台的 streak 与会员年费制度制造承诺升级的结构基础（中断即清零）；算法的个性化反馈（越用越懂你）进一步提高退出成本——平台留存设计与用户纠错自由之间的平衡是产品伦理的核心议题。"
-    related_nodes: [cognitive_dissonance, sunk_cost_fallacy, commitment_consistency, loss_aversion, self_presentation_impression_management, goal_gradient_effect]
-    conflicting_nodes: [friction_reduction]
-    source_ids: [S12, S01, S21, S200]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Thaler 2015（S12，沉没成本与升级）+ Kahneman 2011（S01，损失厌恶）+ Aronson 2018（S21，投入合理化）"
-      effect_size: "已投入促使继续投入与承诺升级（自我合理化传统）"
-      replication_status: "承诺升级在博弈与组织行为研究中稳健"
-      context_dependency: "投入可见性/外部问责/自我辩护动机调制"
-      downgrade_upgrade_reason: "2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S200, S12]
-      supporting_evidence: [S01, S21]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: attitude_behavior_gap
-    canonical_name_en: Attitude-Behavior Gap
-    canonical_name_zh: 态度-行为差距
-    aliases: ["态度行为不一致", "LaPierre 悖论", "Wicker 鸿沟"]
-    domain: attitude_change
-    definition: "态度与行为之间常出现的系统性脱节：LaPierre 1934 年的经典研究随一对中国夫妇周游美国，绝大多数店家热情接待，但事后书面询问时绝大多数店家表示不会接待中国人——口头态度与实际行为严重背离。Wicker 1969 年的综述进一步指出态度对行为的预测力总体很低，推动了 Ajzen 理性行动/计划行为理论等修正。"
-    core_claim: "口头态度本身几乎不预测行为：预测力来自具体性匹配（对具体行为的具体态度）、行为控制感与社会规范的结构化考量（计划行为理论）。"
-    mechanism: "脱节的来源：（1）测量错位——一般态度（对群体的笼统态度）vs 具体行为（接待这一对衣着得体的具体客人），抽象层级不匹配则不预测（Fishbein 与 Ajzen 的对应原则，经典文献未建包）；（2）多重决定——行为同时受主观规范（别人会怎么看）、知觉行为控制（我做得到吗）与情境约束影响；（3）社会赞许性——问卷上的表态是印象管理而非真实态度；（4）态度强度低（见 attitude_strength_accessibility）——弱态度不激活、不指导行为。"
-    causal_chain: "一般化态度（问卷表态） + 具体情境中的规范/控制/成本约束 → 行为由多重因素决定 → 态度与行为脱节"
-    variables:
-      inputs: [一般态度, 主观规范, 知觉行为控制, 情境约束与成本]
-      moderators: [态度-行为的具体性匹配度, 态度强度与直接经验, 社会赞许性压力, 行为的可观察性]
-      mediators: [行为意向（仅当具体性匹配时中介）, 情境中的即时权衡]
-      outputs: [表态与行为的分离, 问卷数据的预测失灵, （匹配条件下）态度-行为一致]
-    evidence:
-      supporting: ["LaPierre 1934 的旅行-问卷研究：实际接待行为与书面态度的巨大反差（经典文献，已建包 EP S198）", "Wicker 1969 的综述：态度-行为相关总体偏低（经典文献，已建包 EP S198）", "计划行为理论（Ajzen）的修正：具体性匹配与行为控制显著提升预测力（经典文献，已建包 EP S198）", "S148 恐惧诉求 meta：强恐惧诉求+高效能信息产生最大的行为改变，强恐惧诉求+低效能信息产生最高水平的防御性反应——唤起不等于行为，效能信息决定走向"]
-      conflicting: ["当态度与行为在具体性上匹配、态度强且直接经验形成时，预测力显著回升（整体鸿沟被高估为普遍规律）", "强态度+弱情境下态度预测行为相当好"]
-      replication: ["LaPierre 悖论作为现象被广泛复制与扩展", "计划行为理论对意向-行为的预测提升获得大量支持（意向-行为本身仍有鸿沟，即『意向-行为差距』）"]
-      meta_analysis: ["态度-行为关系的元整合（Fishbein 与 Ajzen 传统）确认：对应原则下预测力高，错配下预测力低"]
-    evidence_grade: "A"
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions: ["测量一般态度并预测具体行为时鸿沟最大", "行为有高社会赞许性压力时表态与行为分离更大", "弱态度、无直接经验时几乎不预测"]
-    failure_conditions: ["态度与行为具体性匹配（对『这个月去健身房』的态度预测去健身房）", "强态度+直接经验+弱情境规范压力", "行为成本低且即时（无控制感阻碍）"]
-    common_misinterpretations: ["把 LaPierre 悖论解读为『人们都是伪君子』——它更多是测量错位与情境力量的产物（S19 的人-情境视角）", "误以为问卷调查能预测购买行为：表态数据的预测力必须按对应原则校正"]
-    ethical_risks: ["利用表态与行为的差距制造虚假民意（问卷操纵、点赞当支持率）", "以口头承诺的表态数据误导商业与政策判断"]
-    examples:
-      original_cases: ["LaPierre 1934 的美国旅行研究（经典文献，已建包 EP S198）", "Wicker 1969 的态度-行为综述（经典文献，已建包 EP S198）"]
-      research_cases: ["LaPierre 的接待行为与问卷对比", "计划行为理论的意向-行为预测研究", "对应原则的测量匹配实验"]
-      modern_cases: ["问卷『愿意为隐私付费』vs 实际免费交出数据", "环保态度调查与实际分类回收率", "点赞收藏『收藏=学会』的虚假完成感（表态替代行为的数字版）", "『支持国产』表态与实际购买选择"]
-    communication_implications: "不要用表态数据（点赞、问卷、口头支持）估计行为转化：设计行为测量（试用、留存、复购）才是真实指标；内容设计要把『表态』转化为低成本真实行为（下一句话就问：你现在打开 App 看一眼？）以缩小差距。"
-    community_implications: "社群调研中的『大家都说好』与实际参与率脱节是常态：用行为数据（到场率、完课率、续费率）校准认知；同时利用承诺一致性把口头支持升级为公开小承诺，缩小表态-行为差距。"
-    content_applications:
-      cta: "把 CTA 设计为最小真实行为而非表态：『现在就打开 App 完成第一步』优于『觉得有用点个赞』"
-      evidence: "用行为数据（留存、复购）替代表态数据（好评数）作为证据呈现"
-      body: "正文预判态度-行为断点：读者认同后立即给出消除控制感障碍的具体路径（时间、工具、第一步）"
-      title: "标题避免纯表态式共鸣（『说的就是我』），引导到行为预期（『今晚就能做的三件事』）"
-    platform_implications: "平台的点赞/收藏/转发是表态层行为，与深层行为（购买、学习、改变）之间存在结构性鸿沟；算法以表态层互动为优化目标，系统性高估『支持度』——这影响推荐、广告定价与创作者对需求的判断。"
-    related_nodes: [attitude_strength_accessibility, cognitive_dissonance, normative_influence, implementation_intentions, commitment_consistency, perceived_purchase_risk, self_presentation_impression_management]
-    source_ids: [S21, S35, S19, S148, S198, S199]
-    provenance:
-      primary_sources: ['S198', 'S199']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: cognitive_dissonance
+  canonical_name_en: Cognitive Dissonance Theory
+  canonical_name_zh: 认知失调理论
+  aliases:
+  - 失调理论
+  - dissonance theory
+  - Festinger 失调
+  domain: attitude_change
+  definition: Festinger 1957 年提出的理论：当个体同时持有相互冲突的认知（信念、态度、行为认知）时，产生不适的心理张力（dissonance），并被动机去减少它——通过改变认知、增加协调认知或降低冲突认知的重要性。经典证据是
+    Festinger 与 Carlsmith 1959 的 1 美元/20 美元实验。
+  core_claim: 行为与态度冲突时，人往往不改行为而是改态度——尤其在低外部理由、高自由选择、高投入的情境下。
+  mechanism: 失调强度取决于冲突认知的重要性与不可调和性，以及选择自由度与外部理由的充分性。减少失调的路径：（1）改变态度使其与行为一致（无外部理由时最典型——报酬 1 美元组说无聊任务有趣后真的觉得有趣，因为『为了
+    1 美元撒谎』无法成为理由）；（2）增加协调认知（找借口、比较）；（3）贬低选择的价值（酸葡萄）。对外部理由的敏感性（不足够合理化原则，insufficient justification）是该理论最反直觉且复制最稳的预测。该机制族有跨著作对应：Haidt
+    描述判断后『再事后建构合理化理由』（S26），Cialdini 将『承诺与一致（commitment & consistency）』列为独立影响原则（S32）。
+  causal_chain: 行为与态度冲突 + 低外部理由/高自由选择 → 失调唤起 → 态度改变/合理化 → 失调消解
+  variables:
+    inputs:
+    - 态度-行为冲突
+    - 选择自由度
+    - 外部理由充分性（报酬/惩罚）
+    - 投入成本
+    moderators:
+    - 个人责任归因
+    - 后果的严重性与不可撤回性
+    - 自尊水平
+    - 承诺的公开性
+    mediators:
+    - 失调唤起（生理不适）
+    - 合理化需求
+    outputs:
+    - 态度向行为对齐
+    - 偏好重估（酸葡萄/甜柠檬）
+    - 寻找支持性信息
+    - 未来行为调整（少数路径）
+  evidence:
+    supporting:
+    - Festinger 与 Carlsmith 1959：低报酬组对无聊任务的态度显著更正面（不足够合理化）
+    - 自由选择范式的复制（选择后对所选/未选选项的重估）
+    - 努力合理化（为加入付出越多越珍视）的跨情境证据（S21 综述）
+    conflicting:
+    - 高外部报酬下的失调效应消失甚至反转（过度理由效应）
+    - 自我一致性 vs 自我肯定（self-affirmation）路线对机制的争论：失调可能在保护整体自我价值而非特定态度（文献常识，未建包：Steele 1988 自我肯定）
+    - 跨文化复制中失调的表现形式有差异——关系性失调（文献常识，未建包：Heine 等）
+    replication:
+    - 不足够合理化与自由选择范式是复制最稳的社会心理学效应之一
+    - 效应边界（报酬、选择、责任）的调节结构获得充分支持
+    meta_analysis:
+    - 失调研究的整合综述支持核心范式稳健；机制之争（自我一致 vs 自我肯定）未完全裁决
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 行为是自由选择的且被归因于自我
+  - 外部理由不足（报酬/惩罚不够构成借口）
+  - 冲突认知重要且后果明确
+  failure_conditions:
+  - 有充分外部理由（高报酬、被强迫）——态度不变
+  - 自我肯定机会可得（自我价值被其他维度修复）
+  - 行为可轻易撤销或责任可外推
+  common_misinterpretations:
+  - 把失调简化为『不舒服就改想法』——关键的调节是外部理由与选择自由，离开这两个条件预测会失效
+  - 误以为失调总导致态度改变——酸葡萄式贬低与信息回避同样是常见出口
+  ethical_risks:
+  - 利用低报酬/低回报诱导人们用态度改变自我合理化（廉价合作的驯化）
+  - 制造高投入陷阱使人难以退出（沉没成本绑定）
+  examples:
+    original_cases:
+    - Festinger 1957《认知失调理论》（S21 综述）
+    - Festinger 与 Carlsmith 1959 的 1 美元/20 美元实验
+    - Festinger, Riecken 与 Schachter 对末日教派的田野观察（预言落空后信仰反而强化）
+    research_cases:
+    - 1 美元/20 美元实验
+    - 自由选择范式（选择后选项重估）
+    - 努力合理化实验（入会仪式与群体珍视）
+    modern_cases:
+    - 买了付费社群后更相信其价值（投入合理化）
+    - 坚持亏损策略者寻找看多理由
+    - 长期等待者对『等待本身』的合理化（排队效应）
+  communication_implications: 让受众自己付出小投入（评论、选择、写下观点）后再给结论——投入触发的失调会推动态度向投入方向对齐；反向警示：给足外部奖励（现金补贴）反而会消灭内在认同。
+  community_implications: 社群的入会仪式与贡献要求是努力合理化的应用（付出越多元越珍视社群）；但需警惕走向高投入陷阱设计；处理成员不满时，给『改变观点的台阶』（新信息、新框架）比强迫认错更能完成态度更新。
+  content_applications:
+    cta: 先让读者完成小投入（选一个选项、写下一个判断），再呈现内容结论——利用失调完成态度对齐
+    body: 制造建设性认知冲突：先呈现读者既有做法与其目标的冲突（你想要X，但你正在做Y），再给出口
+    title: 标题制造失调张力：『为什么你越努力理财越亏？』——冲突认知的唤起是阅读动机
+    comments: 对读者已付出的行动给意义框架（『你打卡的第 21 天本身就是复利』），完成合理化闭环
+  platform_implications: 平台的连续签到、付费会员、创作者身份都是投入-失调结构：用户投入越多越难离开（留存机制），但也构成退出的心理牢笼；平台的退款政策宽松度与取消流程摩擦直接影响失调式留存的伦理边界。
+  related_nodes:
+  - commitment_consistency
+  - commitment_escalation
+  - self_persuasion
+  - identity_protective_cognition
+  - attitude_behavior_gap
+  - sunk_cost_fallacy
+  - endowment_effect
+  source_ids:
+  - S21
+  - S32
+  - S26
+  provenance:
+    primary_sources:
+    - S21
+    - S32
+    - S26
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: attitude_strength_accessibility
+  canonical_name_en: Attitude Strength and Accessibility
+  canonical_name_zh: 态度强度与可达性
+  aliases:
+  - 态度可达性
+  - attitude accessibility
+  - Fazio 方向
+  domain: attitude_change
+  definition: 态度的强度维度群：可达性（attitude accessibility，态度从记忆中被激活的速度）、确定性、重要性、认知-情感一致性等。Fazio 的传统表明：高可达态度更能预测行为、更能过滤新信息、更抗改变——不是所有态度都平等。
+  core_claim: 只有强态度（高可达、确定、重要）能预测行为与抵抗说服；弱态度在多数场景下是即兴建构的。
+  mechanism: 态度作为记忆中的评价性联想（对象→评价），其激活速度（可达性）由激活频率与关联强度决定。高可达态度在对象出现时自动激活，直接引导注意与行为（fango 模式）；低可达态度在需要表态时临时拼凑（受当下情境线索支配），因此与行为脱节。强度诸维（确定性、重要性、知识量）相互关联但可分离：确定性尤其决定抗说服力（确定的态度闭合了更新通道）。
+  causal_chain: 态度对象的反复激活 → 评价联想强化 → 高可达性 → 对象出现即自动激活 → 指引注意与行为、过滤新信息
+  variables:
+    inputs:
+    - 态度表达频率
+    - 直接经验（亲身尝试）
+    - 态度对象的重要性
+    - 相关知识量
+    moderators:
+    - 态度的异质性（认知-情感一致）
+    - 个人相关性
+    - 情境压力
+    mediators:
+    - 可达性（激活速度）
+    - 态度确定性
+    - 态度重要性
+    outputs:
+    - 态度-行为一致性提升
+    - 对矛盾信息的过滤与反驳
+    - 抗说服性
+    - 自发评价表达
+  evidence:
+    supporting:
+    - Fazio 等的反应时测量研究：高可达态度显著更好预测行为选择
+    - 直接经验形成的态度比间接听说形成的态度更可达且更预测行为
+    - 态度确定性对抗说服的保护效应（确定性元认知传统）
+    conflicting:
+    - 可达性的行为预测力在强情境（规范压力大的场合）中减弱——行为被情境主导
+    - 态度强度的多维结构使单一预测模型复杂化
+    replication:
+    - 可达性-行为关联在多领域重复
+    - 各强度维度的独立贡献在不同研究中权重不一
+    meta_analysis:
+    - 态度强度研究的整合综述支持强态度对行为与抗改变的预测优势
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 态度对象对个体相关且被反复接触（可达性可积累）
+  - 弱情境（行为不被规范强行规定）时可达性主导
+  - 直接经验优于间接信息
+  failure_conditions:
+  - 强情境压力（公开表态、群体一致要求）压过个体态度
+  - 态度从未被激活（低可达）——行为由当下线索决定
+  - 新信息打破确定性（高确定性也意味着高脆弱性——一旦动摇可能整体反转）
+  common_misinterpretations:
+  - 把问卷调查的态度当行为预测器——低可达态度的问卷数据几乎不预测行为（呼应 attitude_behavior_gap）
+  - 以为说服只看信息质量：对强态度受众，重复与温和强化比新论据更有效
+  ethical_risks:
+  - 利用重复曝光与仪式化激活把弱观点固化为强态度（极化生产）
+  - 针对高确定性受众的反向内容设计（确认偏差收割）
+  examples:
+    original_cases:
+    - Fazio 的态度可达性研究传统（S35 综述所述）
+    - Petty 与 Cacioppo 对中心路径产物（强态度）的论述（S34）
+    research_cases:
+    - 反应时可达性测量与行为预测实验
+    - 直接经验 vs 间接信息的态度强度对比研究
+    modern_cases:
+    - 长期定投者的强态度（对市场噪音免疫）vs 新手的摇摆
+    - 品牌习惯消费者对负面新闻的过滤
+    - 社群老成员对新人质疑的稳定立场
+  communication_implications: 对强态度受众（老用户、深度粉丝）：重复核心信息、强化仪式感比抛新论据有效；对弱态度受众（新用户）：任何单次说服都是临时建构，需要高频、低成本的再激活机制（提醒、触发、场景入口）。
+  community_implications: 社群文化的本质是集体强态度的养成：通过重复仪式（weekly 打卡）、共同语言与直接经验（一起做成的事）把价值主张变为高可达态度；老成员的稳定行为是这一资产的可见证明。
+  content_applications:
+    body: 对老受众内容以强化为主（重复核心框架、升级案例），对新受众先建立直接经验（小任务）而非灌输观点
+    cta: 新受众的 CTA 是经验型（试用、测试），让行为本身生成强态度，再谈深度认同
+    comments: 让高可达成员的稳定表态成为社区参考系（置顶资深者的一致性发言）
+    title: 标题复用品牌式重复元素（固定栏目名、固定句式），利用重复激活建立可达性
+  platform_implications: 平台的算法重复曝光是可达性的工业级制造机：反复看到某观点即形成强态度（无论信息质量）——这既是品牌建设的通道也是极化的机制；平台的多样化约束（减少重复）与创作者的可达性策略之间存在持续张力。
+  related_nodes:
+  - attitude_behavior_gap
+  - elaboration_likelihood_model
+  - central_route_processing
+  - cognitive_dissonance
+  - mere_exposure
+  - habit_loop_cue_routine_reward
+  - context_cue_stability
+  source_ids:
+  - S34
+  - S35
+  - S21
+  provenance:
+    primary_sources:
+    - S34
+    - S35
+    - S21
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: commitment_escalation
+  canonical_name_en: Escalation of Commitment
+  canonical_name_zh: 承诺升级
+  aliases:
+  - 承诺升级悖论
+  - escalation of commitment
+  - 沉没成本效应的组织版
+  domain: attitude_change
+  definition: Staw 1976 年揭示的决策现象：当项目出现负反馈时，决策者不撤资反而追加投入——为证明先前决策正确而继续投入资源。它与沉没成本谬误同源，但强调『承诺』与『合理化』的社会-心理成分（向自己与他人证明没看错）。
+  core_claim: 负反馈不减少反而增加对失败方向的投入——人们用未来的资源为自己的过去决策辩护。
+  mechanism: 三层驱动：（1）认知层——撤资等于承认决策错误，触发认知失调与自我合理化需求；（2）社会层——公开承诺后撤退损失面子与信誉（印象管理）；（3）结构层——决策者的问责与激励结构奖励『坚持』而非『纠错』。负反馈反而提升承诺的临界条件：决策者对项目负有个人责任、撤资选项模糊、存在『翻盘可能』的叙事空间。自我设限的框架（『再给一次机会』）持续喂养承诺。
+  causal_chain: 初始投入 → 负反馈 → 自我辩护需求（失调+面子） → 追加投入 → 沉没加深 → 更难撤退（循环升级）
+  variables:
+    inputs:
+    - 初始投入规模
+    - 负反馈信号
+    - 个人责任归属
+    - 撤退选项的清晰度
+    moderators:
+    - 决策者身份（决策者vs旁观管理者）
+    - 公开承诺程度
+    - 组织问责结构
+    - 替代方案的明确性
+    mediators:
+    - 自我合理化需求
+    - 失调唤起
+    - 对翻盘的期望
+    outputs:
+    - 追加投入
+    - 对负面信息的系统性低估
+    - 项目长期恶化
+    - 最终崩盘或被迫止损
+  evidence:
+    supporting:
+    - Staw 1976 的实验：负责任决策者在负反馈后分配更多资源给失败项目（Staw 1976，原始文献未建包）
+    - 沉没成本与承诺升级的系列实验（Staw 1976 起的实验文献，未建包；S12 仅提供沉没成本方向支持）
+    - 组织案例研究（大型项目超支的持续加注模式）
+    conflicting:
+    - 『止血』机制存在：清晰的替代方案与外部问责能显著抑制升级
+    - 并非所有负反馈都引发升级——可逆投入与学习型文化中纠错更常见
+    replication:
+    - 基本范式（责任×负反馈→追加投入）在多研究中重复
+    - 真实组织中的效应幅度受治理结构强烈调节
+    meta_analysis:
+    - 承诺升级研究的整合综述支持责任归因与负反馈交互的核心结构
+  evidence_grade: A-
+  boundary_conditions:
+  - 决策者对初始决策负有个人责任
+  - 负反馈模糊或可被解读为暂时性
+  - 存在维持希望的叙事空间
+  failure_conditions:
+  - 决策更替（新决策者无历史包袱时止损迅速）
+  - 撤退选项明确且被制度保护（止损不惩罚）
+  - 外部问责透明（定期强制复盘）
+  common_misinterpretations:
+  - 把承诺升级简单等同于沉没成本谬误——升级多了社会与身份成分（向他人证明自己），个人决策的沉没成本效应更弱
+  - 误以为坚持都是升级：高确定性环境中的坚持可能是正确策略，区分要看反馈质量与信息更新
+  ethical_risks:
+  - 利用承诺升级锁定用户（先高投入再降服务质量的会员结构）
+  - 组织层面以『坚持=忠诚』文化压制止损与 whistleblowing
+  examples:
+    original_cases:
+    - Staw 1976 的承诺升级实验（Staw 1976，原始文献未建包）
+    - Thaler 对沉没成本与追加投入的行为经济学讨论（S12）
+    research_cases:
+    - 责任与负反馈交互的资源分配实验
+    - 组织项目超支的案例研究
+    modern_cases:
+    - 亏损持仓的持续补仓（摊平成本）
+    - 失败产品线的持续投入（『再迭代一版』）
+    - 长期社群投资（时间、内容、关系）后明知方向错误仍不转型的运营者
+  communication_implications: 内容可以成为升级的解药：提供『止损不丢人』的框架与外部视角（如果朋友处在这个位置你会怎么劝他）；对已投入受众，用『未来收益』而非『过去成本』作为行动理由。
+  community_implications: 社群运营的转型（换主题、换规则）常被承诺升级阻断（老成员投入、运营者面子）；解法是制度化的定期复盘与『决策者换位』机制（由无历史包袱的成员参与新方向决策）。
+  content_applications:
+    body: 给止损提供心理台阶：『放弃错误方向不是失败，是把资源还给未来』——对抗升级的合理化叙事
+    title: 标题用未来框架：『接下来 6 个月怎么做』替代『过去一年亏掉什么』
+    evidence: 呈现『撤资成功』案例（及时止损者的后续表现），为纠错行为提供社会证明
+    comments: 对犹豫是否止损的成员提供结构化决策清单（新钱问题：如果今天空仓，你会买入它吗？）
+  platform_implications: 平台的 streak 与会员年费制度制造承诺升级的结构基础（中断即清零）；算法的个性化反馈（越用越懂你）进一步提高退出成本——平台留存设计与用户纠错自由之间的平衡是产品伦理的核心议题。
+  related_nodes:
+  - cognitive_dissonance
+  - sunk_cost_fallacy
+  - commitment_consistency
+  - loss_aversion
+  - self_presentation_impression_management
+  - goal_gradient_effect
+  conflicting_nodes:
+  - friction_reduction
+  source_ids:
+  - S12
+  - S01
+  - S21
+  - S200
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，沉没成本与升级）+ Kahneman 2011（S01，损失厌恶）+ Aronson 2018（S21，投入合理化）
+    effect_size: 已投入促使继续投入与承诺升级（自我合理化传统）
+    replication_status: 承诺升级在博弈与组织行为研究中稳健
+    context_dependency: 投入可见性/外部问责/自我辩护动机调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S200
+    - S12
+    supporting_evidence:
+    - S01
+    - S21
+    last_verified: 2026-09
+    conflicting_evidence:
+    - S11
+    - S16
+    - S175
+    - S39
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: attitude_behavior_gap
+  canonical_name_en: Attitude-Behavior Gap
+  canonical_name_zh: 态度-行为差距
+  aliases:
+  - 态度行为不一致
+  - LaPierre 悖论
+  - Wicker 鸿沟
+  domain: attitude_change
+  definition: 态度与行为之间常出现的系统性脱节：LaPierre 1934 年的经典研究随一对中国夫妇周游美国，绝大多数店家热情接待，但事后书面询问时绝大多数店家表示不会接待中国人——口头态度与实际行为严重背离。Wicker
+    1969 年的综述进一步指出态度对行为的预测力总体很低，推动了 Ajzen 理性行动/计划行为理论等修正。
+  core_claim: 口头态度本身几乎不预测行为：预测力来自具体性匹配（对具体行为的具体态度）、行为控制感与社会规范的结构化考量（计划行为理论）。
+  mechanism: 脱节的来源：（1）测量错位——一般态度（对群体的笼统态度）vs 具体行为（接待这一对衣着得体的具体客人），抽象层级不匹配则不预测（Fishbein 与 Ajzen 的对应原则，经典文献未建包）；（2）多重决定——行为同时受主观规范（别人会怎么看）、知觉行为控制（我做得到吗）与情境约束影响；（3）社会赞许性——问卷上的表态是印象管理而非真实态度；（4）态度强度低（见
+    attitude_strength_accessibility）——弱态度不激活、不指导行为。
+  causal_chain: 一般化态度（问卷表态） + 具体情境中的规范/控制/成本约束 → 行为由多重因素决定 → 态度与行为脱节
+  variables:
+    inputs:
+    - 一般态度
+    - 主观规范
+    - 知觉行为控制
+    - 情境约束与成本
+    moderators:
+    - 态度-行为的具体性匹配度
+    - 态度强度与直接经验
+    - 社会赞许性压力
+    - 行为的可观察性
+    mediators:
+    - 行为意向（仅当具体性匹配时中介）
+    - 情境中的即时权衡
+    outputs:
+    - 表态与行为的分离
+    - 问卷数据的预测失灵
+    - （匹配条件下）态度-行为一致
+  evidence:
+    supporting:
+    - LaPierre 1934 的旅行-问卷研究：实际接待行为与书面态度的巨大反差（经典文献，已建包 EP S198）
+    - Wicker 1969 的综述：态度-行为相关总体偏低（经典文献，已建包 EP S198）
+    - 计划行为理论（Ajzen）的修正：具体性匹配与行为控制显著提升预测力（经典文献，已建包 EP S198）
+    - S148 恐惧诉求 meta：强恐惧诉求+高效能信息产生最大的行为改变，强恐惧诉求+低效能信息产生最高水平的防御性反应——唤起不等于行为，效能信息决定走向
+    conflicting:
+    - 当态度与行为在具体性上匹配、态度强且直接经验形成时，预测力显著回升（整体鸿沟被高估为普遍规律）
+    - 强态度+弱情境下态度预测行为相当好
+    replication:
+    - LaPierre 悖论作为现象被广泛复制与扩展
+    - 计划行为理论对意向-行为的预测提升获得大量支持（意向-行为本身仍有鸿沟，即『意向-行为差距』）
+    meta_analysis:
+    - 态度-行为关系的元整合（Fishbein 与 Ajzen 传统）确认：对应原则下预测力高，错配下预测力低
+  evidence_grade: A
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 测量一般态度并预测具体行为时鸿沟最大
+  - 行为有高社会赞许性压力时表态与行为分离更大
+  - 弱态度、无直接经验时几乎不预测
+  failure_conditions:
+  - 态度与行为具体性匹配（对『这个月去健身房』的态度预测去健身房）
+  - 强态度+直接经验+弱情境规范压力
+  - 行为成本低且即时（无控制感阻碍）
+  common_misinterpretations:
+  - 把 LaPierre 悖论解读为『人们都是伪君子』——它更多是测量错位与情境力量的产物（S19 的人-情境视角）
+  - 误以为问卷调查能预测购买行为：表态数据的预测力必须按对应原则校正
+  ethical_risks:
+  - 利用表态与行为的差距制造虚假民意（问卷操纵、点赞当支持率）
+  - 以口头承诺的表态数据误导商业与政策判断
+  examples:
+    original_cases:
+    - LaPierre 1934 的美国旅行研究（经典文献，已建包 EP S198）
+    - Wicker 1969 的态度-行为综述（经典文献，已建包 EP S198）
+    research_cases:
+    - LaPierre 的接待行为与问卷对比
+    - 计划行为理论的意向-行为预测研究
+    - 对应原则的测量匹配实验
+    modern_cases:
+    - 问卷『愿意为隐私付费』vs 实际免费交出数据
+    - 环保态度调查与实际分类回收率
+    - 点赞收藏『收藏=学会』的虚假完成感（表态替代行为的数字版）
+    - 『支持国产』表态与实际购买选择
+  communication_implications: 不要用表态数据（点赞、问卷、口头支持）估计行为转化：设计行为测量（试用、留存、复购）才是真实指标；内容设计要把『表态』转化为低成本真实行为（下一句话就问：你现在打开
+    App 看一眼？）以缩小差距。
+  community_implications: 社群调研中的『大家都说好』与实际参与率脱节是常态：用行为数据（到场率、完课率、续费率）校准认知；同时利用承诺一致性把口头支持升级为公开小承诺，缩小表态-行为差距。
+  content_applications:
+    cta: 把 CTA 设计为最小真实行为而非表态：『现在就打开 App 完成第一步』优于『觉得有用点个赞』
+    evidence: 用行为数据（留存、复购）替代表态数据（好评数）作为证据呈现
+    body: 正文预判态度-行为断点：读者认同后立即给出消除控制感障碍的具体路径（时间、工具、第一步）
+    title: 标题避免纯表态式共鸣（『说的就是我』），引导到行为预期（『今晚就能做的三件事』）
+  platform_implications: 平台的点赞/收藏/转发是表态层行为，与深层行为（购买、学习、改变）之间存在结构性鸿沟；算法以表态层互动为优化目标，系统性高估『支持度』——这影响推荐、广告定价与创作者对需求的判断。
+  related_nodes:
+  - attitude_strength_accessibility
+  - cognitive_dissonance
+  - normative_influence
+  - implementation_intentions
+  - commitment_consistency
+  - perceived_purchase_risk
+  - self_presentation_impression_management
+  source_ids:
+  - S21
+  - S35
+  - S19
+  - S148
+  - S198
+  - S199
+  provenance:
+    primary_sources:
+    - S198
+    - S199
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long

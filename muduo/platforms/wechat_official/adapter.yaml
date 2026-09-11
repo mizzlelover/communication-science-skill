@@ -39,6 +39,7 @@ recommendation_model: >-
 social_graph_characteristics: >-
   单向关注+强触达通道：粉丝是可重复触达的私域资产（推送直达会话列表）；
   陌生人推荐占比极低，增长几乎全部依赖转发裂变与搜一搜。
+  [official_rule-产品形态（订阅推送机制见 S1/S2）＋industry_consensus-增长观察]
 
 content_lifecycle: >-
   长青+收藏长尾：打开集中在推送后 24 小时内（会话挤压效应），之后进入长尾；
@@ -54,17 +55,19 @@ primary_entry_points:
 attention_environment: >-
   列表式非沉浸环境：用户在"处理未读"心态下扫读列表，每条只有标题+摘要+
   小图的一瞥时间；点开后才是长文深读场景，容忍度高于任何信息流平台。
+  [industry_consensus-行为观察]
 
 user_behavior: >-
   用户对熟悉的账号有栏目化预期（habit_loop_cue_routine_reward）；
   转发行为发生在读完之后，是 identity_signaling 的社交表达；
   收藏与"在看"是两种不同的承诺强度。
+  [industry_consensus-行为观察]
 
 interaction_signals:
   - "在看：社交背书信号，会把文章推给好友的看一看 [official_rule-产品形态，以最新版本为准]"
-  - "点赞：态度认可，成本低于在看"
+  - "点赞：态度认可，成本低于在看 [industry_consensus-行为观察]"
   - "留言（精选后公开）：评论区是二次内容位，精选权在运营者手里 [official_rule-产品形态]"
-  - "赞赏：最强认可，金钱投票"
+  - "赞赏：最强认可，金钱投票 [industry_consensus-行为观察]"
   - "转发：不可见于后台完整数据，却是增长的第一驱动 [industry_consensus]"
   - "收藏/常读：长尾与忠诚信号，'常读用户'打开率显著更高 [industry_consensus]"
 
@@ -72,6 +75,7 @@ sharing_mechanism: >-
   转发到朋友圈/群是主要增长引擎；转发卡片由标题+摘要+封面图构成，
   卡片质量决定二次点击——标题承担"让转发者显得有品位"的社交货币职责
   （self_presentation_impression_management）。站外无公开流量入口，生态封闭。
+  [industry_consensus-策略观察；生态封闭为产品形态公开可见]
 
 search_mechanism: >-
   搜一搜收录公众号文章：标题关键词+账号权重+内容质量影响排名
@@ -80,11 +84,12 @@ search_mechanism: >-
 community_mechanism: >-
   留言区=编辑部与读者的公开对话剧场；账号人格化（作者人设）维系 parasocial_relationship；
   深度社群沉淀需外链到微信群/企业微信（公众号本身不是社群容器）。
+  [industry_consensus-社区观察；留言机制为产品形态（见 interaction_signals）]
 
 algorithmic_features:
   - "看一看社交推荐流 [industry_consensus-权重不公开]"
   - "搜一搜排序（账号权重/质量分）[industry_consensus]"
-  - "广告主互选与返佣商品（创作者侧商业化，official_rule-产品存在）"
+  - "广告主互选与返佣商品（创作者侧商业化）[official_rule-产品存在]"
 
 content_constraints:
   - "[official_rule] 订阅号每日可群发 1 次，服务号每月 4 次（以平台最新公告为准）"
@@ -97,15 +102,18 @@ title_role: >-
   机制上同时承担 curiosity_gap（悬念缺口）、身份点名（self_categorization：
   "写给谁看"）与搜索关键词三重职责；标题党能赢一次打开，但透支账号信任
   （trust_calibration）。
+  [industry_consensus-策略观察；订阅推送机制见 S1/S2]
 
 cover_role: >-
   转发卡片与看一看流的第一视觉：单图文大封面、多图文小封面；
   封面与标题的一致性降低理解成本（processing_fluency），冲突则制造流失。
+  [industry_consensus-策略观察]
 
 opening_role: >-
   订阅读者已带预期，开场可短；转发来的新读者需要 3 秒内确认"值得读"——
   首段决定读完率与"在看"转化；长文中段靠小标题与分段维持
   （attention_capacity_limits）。
+  [industry_consensus-策略观察]
 
 tag_role: >-
   无标签流量入口；关键词必须内嵌于标题与正文服务搜一搜，
@@ -114,6 +122,7 @@ tag_role: >-
 comment_role: >-
   精选留言=可策划的二次内容：置顶神评制造 social_proof，
   作者回复塑造人设温度；留言质量常被读者当作"读者画像"参考。
+  [industry_consensus-社区观察；留言精选为产品形态（见 interaction_signals）]
 
 follow_role: >-
   关注=订阅承诺，进入私域触达通道；涨粉是长期资产而非单篇爆量——

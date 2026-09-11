@@ -55,6 +55,7 @@ primary_entry_points:
 attention_environment: >-
   目的性阅读环境：用户带着问题来，愿意读 3000 字长文——
   与信息流平台的 3 秒决策完全相反；竞争发生在"答案排序位置"与"首句留人"。
+  [industry_consensus-行为观察]
 
 user_behavior: >-
   先看高赞再看最新，习惯在多答案间比较；
@@ -63,10 +64,10 @@ user_behavior: >-
 
 interaction_signals:
   - "赞同（赞成票）：核心认可信号，影响排序 [official_rule-排序机制存在，权重不公开]"
-  - "喜欢/收藏：态度与工具价值分层"
-  - "评论：争论与补充，争论带来热度也带来立场风险"
+  - "喜欢/收藏：态度与工具价值分层 [industry_consensus-行为观察]"
+  - "评论：争论与补充，争论带来热度也带来立场风险 [industry_consensus-行为观察]"
   - "分享：站外引用（截图传播到微信生态是常见形态 [industry_consensus]）"
-  - "关注：追答主后续输出"
+  - "关注：追答主后续输出 [industry_consensus-行为观察]"
   - "专业认可徽章：垂类可信度加权 [official_rule-产品存在]"
 
 sharing_mechanism: >-
@@ -102,7 +103,7 @@ title_role: >-
 
 cover_role: >-
   弱角色：文字为主平台，回答默认无封面；文章/视频需封面但点击权重低于
-  视觉平台——封面只需合格，无需惊艳。
+  视觉平台——封面只需合格，无需惊艳。[industry_consensus-产品形态+行为观察]
 
 opening_role: >-
   极重：首句决定"有没有料"的判断——"先说结论"是社区广泛认可的开场规范
@@ -138,8 +139,8 @@ known_platform_patterns:
   - pattern: "专业身份前置（认证/从业经历开头）"
     mechanism_links: [credentialing_symbols, authority_influence, source_credibility_model]
     fact_type: industry_consensus
-    note: "'利益相关：从业者'式声明同时提供权威性与透明度；伪造成分会触发社区反噬。"
-    evidence_level: L2
+    note: "冒充他人身份属违规、伪造职业认证受处置为官方规则 [S1：知乎原则]；'从业者声明同时提供权威性与透明度'的行为判断为共识层，伪造成分另触发社区反噬。"
+    evidence_level: L3
     source_ref: S1
     last_verified: "2026-09"
   - pattern: "亲身经历叙事（第一人称故事化回答）"

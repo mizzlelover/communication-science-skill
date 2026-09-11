@@ -1,0 +1,25 @@
+# Evidence Package — S222（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S222
+title: 'The Rise and Decline of an Open Collaboration System: How Wikipedia''s Reaction to Popularity
+  Is Causing Its Decline'
+authors: Aaron Halfaker; R. Stuart Geiger; Jonathan T. Morgan; John Riedl
+year: 2013
+journal: American Behavioral Scientist 57(5):664-688
+doi: 10.1177/0002764212469365
+url: https://journals.sagepub.com/doi/10.1177/0002764212469365
+access_level: abstract_only
+research_status: annotated
+content_obtained: SAGE 摘要逐字实读（2026-09-11）
+research_question: 为什么维基百科活跃贡献者持续下降？
+core_claims:
+- 活跃贡献者下降的直接原因是新人留存率锐减
+- 社区为管理质量与一致性所做的改变（主要质量控制机制的严格化+用于拒绝贡献的算法工具）反而削弱了增长——这些机制是新人在早期互动中被打断的关键
+- 社区的规范表达正式机制已僵化，尤其不利于新编辑提出的改变
+method: 纵向系统数据分析（维基百科编辑留存与治理工具）
+limitations: 单一开放协作系统（维基百科）；治理工具为 2013 年前形态
+boundary_conditions: 适用边界：有编辑审核门槛的 UGC 社区；完全无门槛系统外推需谨慎
+relevant_nodes:
+- newcomer_onboarding
+- participation_ladder
+notes: newcomer_onboarding（新人早期互动被回应/认可决定留存）与 participation_ladder（阶梯流动受阻→ Contributor 供给下降）的一手系统证据。
+last_verified: 2026-09

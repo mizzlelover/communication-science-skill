@@ -1,0 +1,24 @@
+# Evidence Package — S234（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S234
+title: 'The Influence of Generative AI on Content Platforms: Supply, Demand, and Welfare Impacts in Two-Sided
+  Markets'
+authors: Yukun Zhang
+year: 2024
+journal: arXiv:2410.13101（preprint，未经同行评审——诚实标注）
+doi: 10.48550/arXiv.2410.13101
+url: https://arxiv.org/abs/2410.13101
+access_level: abstract_only
+research_status: annotated
+content_obtained: arXiv v1 摘要逐字实读（2026-09-11）
+research_question: 生成式 AI 如何改变内容平台的供给、流量分布与福利？
+core_claims:
+- AI 低成本导致内容供给剧增，可能造成过供；内容多样性提升的同时造成信息过载、降低用户满意度
+- AI 提高头部创作者的流量集中（'赢家通吃'效应），同时扩大利基内容机会（'长尾'效应）
+- 整体影响取决于 AI 生成内容质量与信息过载水平；平台费与推荐策略可调节
+method: 双边市场理论模型 + 仿真实验
+limitations: preprint 未经同行评审；理论/仿真而非平台实测数据
+boundary_conditions: 模型假设下的结论；真实平台参数未标定
+relevant_nodes:
+- ai_content_saturation
+notes: ai_content_saturation 的一手理论证据（preprint）：'供给膨胀→信息过载→注意力稀释+头部集中与长尾并存'与节点核心主张同构。证据等级贡献为'有研究依据'，非实测。
+last_verified: 2026-09

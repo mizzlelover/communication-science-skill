@@ -1,0 +1,23 @@
+# Evidence Package — S237（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S237
+title: Learning by Chatting? Investigating the Impact of Generative AI on Information Seeking and Learning
+authors: Shravika Mittal; Su Lin Blodgett; Q. Vera Liao
+year: 2026
+journal: arXiv:2606.11669v2
+doi: 10.48550/arXiv.2606.11669
+url: https://arxiv.org/html/2606.11669v2
+access_level: full_text
+research_status: annotated
+content_obtained: arXiv HTML 全文逐字实读（2026-09-11）
+research_question: 把信息寻求卸载给 chat-based 生成式 AI 对学习与信息获取的影响？
+core_claims:
+- 8 天组间现场实验（ChatGPT vs Google 搜索）：ChatGPT 组在信息寻求过程中自主感减弱——大量信息选择被卸载给 AI，并因此产生更高的元认知负荷
+- chat 式 GenAI 存在两类信息接入失真：输出偏向'解决方案型产物'而非原理性知识；用户对更广知识空间的探索行为系统性收缩
+- 平均而言 ChatGPT 组的学习结果差于 Google 组，尤其高阶批判性学习
+method: 组间现场实验（8 天日记协议）
+limitations: 非正式学习情境；单一代币工具（ChatGPT）时期
+boundary_conditions: 学习/信息寻求场景；说服与传播场景外推为机制类比
+relevant_nodes:
+- ai_information_intermediaries
+notes: ai_information_intermediaries 一手实证：AI 中介不仅决定'看到什么'，其输出偏向与交互范式系统性改变用户的信息接入——节点'守门功能从排序扩展为生成与转述'的行为层证据。
+last_verified: 2026-09

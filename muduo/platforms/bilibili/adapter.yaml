@@ -12,6 +12,9 @@ platform_sources:
   - {source: "《社区公约》违规行为细则 https://member.bilibili.com/studio/convention/content?index=2-6", source_owner: "哔哩哔哩", source_type: official, claim_supported: "网络暴力/引战/缺乏尊重/饭圈争议的违规认定与处置（删除下线、限制传播、封禁等）", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
   - {source: "哔哩哔哩客服官方号《【UP主创作直通车】视频创作激励篇》 https://www.bilibili.com/opus/1198858284376784900", source_owner: "哔哩哔哩", source_type: official, claim_supported: "创作激励申请条件（权益等级≥3、信用分≥80）、激励收益构成（稿件基础激励+广告分成）、结算规则", published_date: "2026-05-05", accessed_date: "2026-09-08", freshness: current, confidence: high}
   - {source: "《视频创作激励年度计划》官方活动页 https://www.bilibili.com/blackboard/activity-N13czQtWTg.html", source_owner: "哔哩哔哩", source_type: official, claim_supported: "视频基础激励标准（近半年月均平台收入<5000元、90天内原创自制稿件、上限2000元/月）、投币量等任务档位", published_date: "2024版（未知具体日）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {sid: "S5", source: "B站帮助中心《硬币相关》（https://www.bilibili.com/blackboard/help.html#/?qid=376）", source_owner: "哔哩哔哩", source_type: official, claim_supported: "投币规则：自制稿件最多投 2 硬币、转载稿件最多投 1 硬币；观众投币的 10% 作为 UP 主硬币收入奖励；硬币获取与异常处理", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S6", source: "B站帮助中心《弹幕相关》分类（https://www.bilibili.com/blackboard/help.html#/?qid=358&pid=357）", source_owner: "哔哩哔哩", source_type: official, claim_supported: "弹幕子体系官方分类：弹幕介绍/弹幕礼仪/弹幕发送与撤回/弹幕举报与屏蔽/UP主头像弹幕/UP主关联视频弹幕", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S7", source: "B站帮助中心《弹幕介绍》（https://www.bilibili.com/blackboard/help.html#/?qid=380）", source_owner: "哔哩哔哩", source_type: official, claim_supported: "弹幕类型官方说明：普通弹幕（彩色/顶部/底部/滚动，位于普通弹幕池）与高级弹幕；弹幕发送需对应会员权限；Lv1 单条弹幕上限 20 字、Lv2 及以上 100 字", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
 
 content_units:
   - "中长视频（横屏为主，分钟到小时级）"
@@ -38,6 +41,7 @@ recommendation_model: >-
 social_graph_characteristics: >-
   中度关系：UP 主与粉丝强连接（一键三连、充电、大会员），观众之间弱连接但
   通过弹幕/玩梗形成群体身份（social_identity_theory）——"小破站"的集体认同。
+  [industry_consensus-关系观察；三连/投币（S5）/充电/大会员产品形态为公开可见]
 
 content_lifecycle: >-
   长青性最好的视频平台之一：中长视频的搜索与推荐长尾可达数月到数年
@@ -54,6 +58,7 @@ primary_entry_points:
 attention_environment: >-
   列表选择式为主：封面+标题+UP主+播放量多要素同屏比较，
   CTR 竞争前移；用户目的性强，点开后观看时长容忍度高（中长视频心智）。
+  [official_rule-产品形态（列表流界面公开可见）＋industry_consensus-行为观察]
 
 user_behavior: >-
   用户年轻、社区规范敏感、对"恰饭"（商业内容）有明确的容忍规则——
@@ -61,12 +66,12 @@ user_behavior: >-
   弹幕参与是独特行为：边看边表达（共同在场）。
 
 interaction_signals:
-  - "投币：稀缺虚拟货币，强认可信号（硬币有限 [official_rule-产品规则]）"
-  - "收藏：工具价值信号（教程/清单）"
-  - "点赞/转发：态度与扩散"
-  - "弹幕密度：共同在场的实时互动信号"
-  - "评论：讨论深度"
-  - "关注/充电：关系沉淀与金钱支持"
+  - "投币：稀缺虚拟货币，强认可信号（自制稿件最多投 2 硬币、转载 1 硬币，投币 10% 归 UP 主）[official_rule-产品规则 S5]"
+  - "收藏：工具价值信号（教程/清单）[industry_consensus-行为观察]"
+  - "点赞/转发：态度与扩散 [industry_consensus-行为观察]"
+  - "弹幕密度：共同在场的实时互动信号 [industry_consensus-行为观察；弹幕类型、发送权限与字数规则官方明文 S6/S7]"
+  - "评论：讨论深度 [industry_consensus-行为观察；评论/弹幕治理有官方规则 S2/S6]"
+  - "关注/充电：关系沉淀与金钱支持 [industry_consensus-关系观察；充电计划为官方产品功能（帮助中心分类在案，URL 待定位）]"
   - "播放完成度：算法核心信号方向 [industry_consensus]"
 
 sharing_mechanism: >-
@@ -102,6 +107,7 @@ title_role: >-
 cover_role: >-
   三要素之首：信息流中封面决定 CTR；UP 主常将封面风格统一化为人设资产
   （distinctive_brand_assets）——老粉一眼认出是"你"（mere_exposure）。
+  [industry_consensus-策略观察；封面为列表流产品形态要素]
 
 opening_role: >-
   前 30 秒决定跳出：中长视频容忍更长开场，但"省流"文化要求尽快进入正题——
@@ -114,11 +120,13 @@ tag_role: >-
 comment_role: >-
   评论区是第二内容现场：补充、纠错、玩梗、"课代表总结"；
   UP 主置顶评论掌控讨论方向；评论区质量是社区氛围的核心指标。
+  [industry_consensus-社区观察；评论/弹幕治理有官方规则（S2 违规细则、S6 弹幕相关）]
 
 follow_role: >-
   关注=追更承诺，粉丝价值高：动态触达、充电/大会员变现、粉丝群沉淀；
   "百万粉 UP 主"的话语权显著高于同等播放量的无粉丝账号——
   粉丝是可复用资产（与抖音的对比性差异）。
+  [industry_consensus-关系观察；关注/粉丝牌/充电产品形态公开可见（充电帮助中心分类在案，URL 待定位）]
 
 risk_factors:
   - "[industry_consensus] 恰饭信任税：商业内容占比过高或隐瞒商业性质引发粉丝反噬（psychological_reactance）"
@@ -130,8 +138,8 @@ known_platform_patterns:
   - pattern: "结尾/开头求三连（把互动变成仪式）"
     mechanism_links: [reciprocity_norm, commitment_consistency, foot_in_the_door]
     fact_type: industry_consensus
-    note: "三连是产品规则 [official_rule-产品存在]；'看完再走'的请求把观看获益转化为互惠行动。"
-    evidence_level: L2
+    note: "三连（点赞/投币/收藏）为产品功能 [official_rule-产品存在]；'看完再走'的请求把观看获益转化为互惠行动——请求行为本身的有效性为创作者共识，非实验结论。"
+    evidence_level: L3
     source_ref: S4
     last_verified: "2026-09"
   - pattern: "省流前置（先结论后过程，P1 给完整版）"
@@ -165,8 +173,8 @@ known_platform_patterns:
   - pattern: "坦诚恰饭声明维护信任"
     mechanism_links: [trust_signals_content, authenticity_perception, psychological_reactance]
     fact_type: industry_consensus
-    note: "公开说明商业性质降低被操纵感；'恰饭但说实话'在 B 站是可经营的信任策略。"
-    evidence_level: L1
+    note: "平台公约要求商业内容主动添加创作声明 [official_rule-社区公约 S1]；'公开说明商业性质降低被操纵感、恰饭但说实话是可经营的信任策略'为共识层判断。"
+    evidence_level: L3
     source_ref: S1
     last_verified: "2026-09"
 

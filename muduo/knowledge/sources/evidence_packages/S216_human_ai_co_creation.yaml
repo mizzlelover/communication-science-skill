@@ -1,0 +1,23 @@
+# Evidence Package — S216（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S216
+title: Generative AI enhances individual creativity but reduces the collective diversity of novel content
+authors: Anil R. Doshi; Oliver P. Hauser
+year: 2024
+journal: Science Advances 10(28):eadn5290
+doi: 10.1126/sciadv.adn5290
+url: https://europepmc.org/article/MED/38996021
+access_level: abstract_only
+research_status: annotated
+content_obtained: EuropePMC 摘要逐字实读（2026-09-11）；PMID 38996021
+research_question: 生成式 AI 想法对创意写作的因果影响（个体与集体两层）？
+core_claims:
+- 在线实验（部分写作者从 LLM 获取故事想法）：获得生成式 AI 想法使故事被评为更有创意、写得更好、更愉悦，低创意写作者受益最大
+- 但 AI 参与的故事彼此更相似——'个体创造力提升以牺牲集体新颖性为风险'，作者明示'类似社会困境：个体变好，集体产出的新颖内容范围变窄'
+method: 在线因果实验（写作者随机分配 AI 想法条件 + 独立评估者盲评）
+limitations: 短篇小说情境；'同质化'以评估者评分的相似度度量
+boundary_conditions: 效应依赖 AI 想法锚定的使用方式；跨媒介/长文本外推未测
+relevant_nodes:
+- human_ai_co_creation
+notes: human_ai_co_creation 核心主张（AI 默认输出拉向均值、加剧同质化）的一手实验证据；与 Meincke et al. 2025 Nat Hum Behav 'ChatGPT
+  decreases idea diversity in brainstorming' 相互印证（后者经 PubMed 检索确认存在）。
+last_verified: 2026-09

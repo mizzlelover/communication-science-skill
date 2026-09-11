@@ -1,0 +1,22 @@
+# Evidence Package — S224（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S224
+title: 'How TikTok recommends videos #ForYou（官方新闻室说明）'
+authors: TikTok Newsroom
+year: 2020
+journal: TikTok Newsroom（2020-06-18 发布）
+doi: ''
+url: https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you
+access_level: full_text
+research_status: annotated
+content_obtained: 本项目 2026-09-08 官方实读（platform_sources S1 in platforms/tiktok，claim_supported 在案）
+research_question: TikTok For You 推荐考虑哪些因素？
+core_claims:
+- 官方公开推荐因素类别：用户互动（点赞/分享/关注/评论/创作）、视频信息（captions/sounds/hashtags）、设备与账号设置（权重较低）
+- 完播较长视频为强信号；粉丝数非直接排名因素
+method: 官方政策说明页
+limitations: 只公开因素类别，无权重百分比；随时间更新
+boundary_conditions: 以抓取时点版本为准
+relevant_nodes:
+- ranking_signal_weighting
+notes: ranking_signal_weighting 跨平台信号差异的官方一手证据之一（与 S225 YouTube 官方博客并读：不同平台公开的信号类别集合不同）。
+last_verified: 2026-09

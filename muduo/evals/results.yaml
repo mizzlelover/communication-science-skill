@@ -2621,3 +2621,953 @@
     ethical_safety: 2
     writing_quality: 2
   red_line_fail: false
+- case_id: CAU-001
+  answer_summary: >-
+    拒绝"预算 100% 转投流"与"内容不重要"。样本恰恰证明曝光≠传播效果：在看数千万而
+    互动率不足 0.5%（语料 DY-A-FAIL-001），说明推流只负责曝光通道
+    （ranking_signal_weighting），触发点赞/评论的仍是内容本身——这是"平台机制必要但不
+    充分"的实证，把必要不充分因素升格为唯一原因是因果偷换。投流买曝光不买互动：
+    内容不触发互动则互动率倒挂，反向拖累自然推荐（cold_start_dynamics）。条件化方案：
+    以内容互动率达标为投流前提，用同预算×不同内容的账号内对照验证 ROI，再定预算比例。
+    实跑短点：演示级预算无真实成本数据，方案停在对照验证设计层，未给预算配比数字（拒绝编造）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-002
+  answer_summary: >-
+    拒绝"充分条件"表述与 5 账号全转型。"22 小时破千万"与"真实记录"是相关不是因果：
+    样本叠加账号约 475.9 万粉存量基础、官方"50 万奖励"事件化助推（framing_effects）、
+    主流媒体跟进二次传播（source_credibility_model）、出租车进藏稀缺选题
+    （schema_violation）与抵达落泪情绪峰值（emotional_arousal）；样本来自主流媒体报道池
+    （survivorship_note），同型无滤镜长视频大量未爆，无失败对照不能做因果推断。
+    爆款复盘默认 D 级证据。验证设计：多账号、控制选题稀缺性与粉丝基础变量、小规模
+    对照后再议转型。实跑短点：各替代解释的相对权重无法从单样本量化，停在假设清单层。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-003
+  answer_summary: >-
+    拒绝"AI 玩梗起号公式"与"冲 50 万赞"。90 万赞叠加两个强混淆变量：名人光环
+    （source_credibility_model/parasocial_relationship）与入驻事件话题性（入驻前未发视频
+    粉丝已超 400 万、媒体全程报道），"AI 玩梗"无法从中分离；转化率视角：90 万赞对
+    400 万粉约 22.5%，语料原判"高起点-中转化的中腰部结构"，对 0 粉新号无外推基础。
+    单案例 D 级。建议：把"名人×事件×内容"拆成可检验假设，素人预期参照语料
+    medium/low 层中位表现。实跑短点：素人中位表现的精确区间需查语料分层统计，回答未展开具体数值。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-004
+  answer_summary: >-
+    指出样本选择偏差：105 条来自"百万赞筛选池"（DY-A-HIGH-002 survivorship_note），
+    只含爆款不含同结构未爆样本——"多少视频有视觉轰炸却没爆"无法回答，幸存者偏差下
+    不能用于因果推断；"爆款都有前 3 秒视觉轰炸"是相关描述，"导致爆款"需对照组与
+    反事实检验；样本量大不等于证据等级高，样本来源决定证据等级。hook 类框架本身即
+    D 级实践框架（S17）。建议补齐失败样本对照（同账号爆款-长尾、同素材不同发布窗口，
+    参照语料 low/failed 层设计）或随机对照，再谈"公式"。实跑短点：douyin adapter 的
+    信号语义未展开，平台层只用一句带过。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-005
+  answer_summary: >-
+    拒绝"造角色必火"。29 亿播放是多因素组合：角色记忆点（von_restorff_effect）+高辨识度
+    切口触发算法与集体情绪共振（ranking_signal_weighting）+婉拒商业化维持口碑
+    （trust_signals_content）+内容持续供给；把单项抽出当"必火公式"是把相关当因果。
+    单账号单案例 D 级不可外推；同质化模仿在推荐侧衰减（novelty_preference）——
+    "紫薯精"的稀缺性恰是模仿者无法复制的。条件化路径：多账号小规模验证"角色记忆点"
+    在该品类的可传播性，结论不用"必"字。实跑短点：角色设计的具体操作建议未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-006
+  answer_summary: >-
+    拒绝"完全可复制"的课程卖点。三条都爆是相关证据，存在替代解释：同账号粉丝积累
+    （后两条吃前条存量曝光）、系列惯性、平台对已验证账号的加权
+    （ranking_signal_weighting）——"模板本身"无法从序列中分离；语料已记录边际递减
+    （11.5 万→11.4 万→9.5 万，DY-B-MED-001），且同账号首条仅 1622 赞
+    （DY-B-LOW-001）说明账号积累是关键混淆变量。单账号序列不能外推到其他账号与
+    品类。课程包装须标注 D 级证据与适用边界，不承诺稳定收益；建议多账号/多品类
+    对照后再评估。实跑短点：付费课程的合规表述只给原则，未给示范文案。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-007
+  answer_summary: >-
+    拒绝"故意制造争议"。评论 5122 远超点赞是"参与式找茬"型内容的结构特征（语料
+    mechanism_notes：评论区演变为找茬狂欢、参与式验证+用户共建），评论量≠内容质量，
+    更≠品牌好感——把评论量当质量是相关当因果；出圈含偶然性，"根本看不出破绽"的
+    验证冲动话题结构（curiosity_gap）是已有变量而非可复制原因；争议对品牌是双刃剑：
+    平台治理风险（moderation_governance）+负资产概率高；"争议越大越爆"无失败样本
+    对照，单样本 D 级。合规替代：可参与的话题结构（投票/找茬式提问/
+    rhetorical_question_engagement），并区分 engagement 与 conversion 目标。
+    实跑短点：美妆号的具体话题设计未给示例。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: CAU-008
+  answer_summary: >-
+    拒绝"一次过签"广告语。一个新手过签是 n=1 个案：晒过签的人发帖、没过签的不发帖，
+    该笔记本身是幸存者样本（anecdote_vs_statistics：个案说服力≠证据力）；确立"过签率"
+    需要平台签约基率与对照组（同批 AI 写作者拒签率、手写作者过签率），否则无法与
+    运气、题材窗口、编辑偏好分离。该笔记仅 2954 赞属中腰（tier: medium），"过签"叙事
+    连内容层面都未破圈，更不能作行业规律。广告语属确定性承诺（overclaiming+伦理
+    风险），应改概率表述并附真实基率，教学产品聚焦可验证的过程能力而非结果承诺。
+    实跑短点：无任何平台过签率数据可用（案例明示），替代表述只能给句式框架。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-001
+  answer_summary: >-
+    识别滑坡谬误+单一案例外推，拒绝"全面转型方案"。"AI 短剧爆→AI 横扫一切→真人被
+    淘汰→必须立刻转型"是多步无证据链条，每一步都需独立证据，不能串联成立。该案例
+    是单一样本（D 级 illustration）：爆款是开篇即冲突（hook_model）+悬疑系列化拉停留
+    （suspense_structure）+平台"精选爆款系列"背书（social_proof）多因素叠加，且样本来自
+    "高校/媒体对爆款 AI 短剧的报道池"（survivorship_note），未爆同型不被收录。
+    "不转型就完蛋"是人为制造紧迫性，不构成决策依据。条件化结论：AI 工具是变量之一；
+    保留现赛道、单账号小规模测试 AI 短剧，用对照数据再决策。实跑短点：未输出完整
+    测试方案模板，只给设计原则。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-002
+  answer_summary: >-
+    拒绝"删掉剪辑全转无滤镜"。幸存者偏差：爆款来自主流媒体报道池，被看见的概率≠
+    方法有效的概率，同型无滤镜长视频大量未爆；同账号对照（DY-A-MED-003：爆火前常规
+    视频点赞几十万、粉丝约 252 万）说明账号本有基础盘，把几十万赞常规内容判为
+    "不够真实所以没爆"是事后为结论找理由；替代解释：稀缺选题（schema_violation）、
+    官方"50 万奖励"事件化助推（framing_effects）、主流媒体背书
+    （source_credibility_model）。爆款复盘默认 D 级。建议保留账号原有人设稳定盘，
+    对"无滤镜长视频"做小规模 A/B，不全盘推翻。实跑短点：A/B 的样本量与周期未给
+    操作数值。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-003
+  answer_summary: >-
+    拒绝"教程必爆"与跨垂类转型。单个教程爆款不能推出"教程类必爆"——该样本与
+    "Claude Code 新兴工具赛道+真实搜索需求"强相关，语料明示适用条件："教程类内容在
+    有真实搜索需求的新兴工具赛道最有效；成熟红海赛道同结构未必有效"；健身垂类的
+    搜索需求、人群规模、供给结构与 AI 工具赛道完全不同，小样本特征当总体规律是基率
+    忽视（representativeness_heuristic）。单案例 D 级，"复制这个数据"是过度承诺。
+    建议：先看健身垂类教程内容的中位与失败分布，再小成本测试。实跑短点：健身垂类
+    语料样本不足，未给出该垂类实际基线分布。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-004
+  answer_summary: >-
+    识别事后归因，拒绝把"3 秒钩子=爆款密码"写进课程大纲。时序先后≠因果：同期可能
+    叠加账号积累、选题变化、单条偶然性、推流池放大，单次前后对比（n=1，无对照组）
+    无法排除混淆变量；hook_model 在本库为 D 级实践框架（S17《Hooked》），只能作
+    探索性假设，不能因一次前后对比升格为因果结论，更不能充当课程实证卖点。可验证
+    路径：固定选题/时长/发布时间做内容对照或 A/B；课程表述降级为"探索性观察，建议
+    自行验证"。实跑短点：A/B 对照组构造细节未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-005
+  answer_summary: >-
+    拒绝"不接商单就会爆"。"婉拒商业化"与"爆火"是相关关系且方向未确立——语料记录
+    主变量是角色记忆点（von_restorff_effect）与高辨识度切口触发算法共振
+    （ranking_signal_weighting），"婉拒商业化维持口碑"（trust_signals_content）是爆火后的
+    经营选择，不是爆火原因。单账号特征不可迁移：美妆垂类商业信任结构与剧情短剧
+    不同，对 3 万粉账号断掉 60% 商单收入是灾难性建议；"接广告=限流"无任何平台规则
+    依据。样本来自行业观察池，D 级。条件化结论：是否接商单基于内容信任结构与变现
+    路径设计（软植入与内容原生度权衡）。实跑短点：美妆软植入的具体合规边界未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-006
+  answer_summary: >-
+    不迎合"限流"预设，先纠正方法层。结构复制≠爆款保证：原案例是 2024 年发布、赶
+    AI 工具话题早期红利与平台内容窗口，单案例 D 级，"抄结构必爆"是把单样本外推为
+    规律（anecdote_vs_statistics）；2025 年同题材供给饱和，话题新鲜度
+    （novelty_preference）是缺失变量——可复制的只是外壳，"三个神器是什么、为何对
+    下班后人群有用"的信息增量才是未控制部分。诊断顺序：先做账号内基线对比与竞品
+    分布对比（300 赞是否低于自身中位），把失败直接归因不可验证的"限流"同样是推理
+    错误。建议拆解原案例信息增量重写。实跑短点：账号自身基线数据不可得，停在对比
+    方法层。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-007
+  answer_summary: >-
+    拒绝"不用验证"。粉丝量是注意力资产度量，不是结论正确性凭证：来源可信度模型
+    （source_credibility_model）定义可信度=专业性+可信性+善意，粉丝量只与曝光能力
+    相关；权威影响（authority_influence）只在可核验专业域内提供增益，不迁移到具体
+    命题真伪。"40% 完播率=稳定起量"无样本量、对照组、数据来源与口径；完播阈值随
+    时长/品类/流量池差异巨大，平台信号是多信号加权组合（ranking_signal_weighting）
+    而非单一达标门槛。人气背书被证伪有真实先例（CASE-FAL-015 辛巴燕窝案）。要求
+    提供原始数据与口径，以账号自身基线+A/B 校准目标，不照搬 KPI。实跑短点：完播率
+    基线校准的具体数据表未提供。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: FLR-008
+  answer_summary: >-
+    拒绝"没百万赞就是废号"与无依据下架。刷到的样本是算法过滤后的可见层，与真实
+    分布系统性脱钩（availability_heuristic）——"刷到的全是百万赞"恰是可得性偏差本身；
+    内容类型决定互动基线：工具类内容平均点赞仅数百（DY-A-LOW-006：蝉妈妈号 167 条
+    平均约 506），跨类型横向比赞本身错误，且低互动可能伴随高转化
+    （Virality≠Conversion）；下架低赞内容会打断账号权重长线积累（cold_start_dynamics）
+    与搜索长尾价值，"废号"无任何基率依据。以账号自身高/中/低/失败四层基线评估，
+    不以全站可见爆款为参照。实跑短点：四层基线的分位切法未给操作参数。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-001
+  answer_summary: >-
+    拒绝"必然翻倍"措辞并两级降级。峰终定律（peak_end_rule）是一手实验支撑的回顾性
+    评价机制（B 级，S153 冷压实验），描述"记忆自我对经历的事后评价由峰/终时刻决定"，
+    属体验记忆层面；从"更好的体验记忆"到"复购率翻倍"隔着价格、竞品、内容价值、
+    触达等多因素，B 级机制不能写成必然因果。降级表述："可能提升学员对结营体验的
+    记忆评价与口碑倾向"；适用条件：有明确情节边界的经历（一次结营）适用、连续弥散
+    体验不适用；峰值设计须与真实价值一致，否则触发预期违背。实跑短点：未给出结营
+    仪式的具体峰值设计示例。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-002
+  answer_summary: >-
+    拒绝"必然上瘾/留存翻倍"。Hook 模型（hook_model）是 D 级从业者实践框架而非实证
+    定律（S17），无系统性独立检验；拆解证据成分：多变奖励成分有实验室基础
+    （variable_ratio_reward，B 级：不定比率强化产生高反应速率与强抗消退，S177），但从
+    实验室强化程序到产品迁移为观察与从业实践。降级为"可能提高回访频率的候选设计"；
+    边界与风险：奖励堆叠引发享乐适应（hedonic_adaptation）与撤奖后动机崩塌，多变奖励
+    与核心价值脱钩构成操纵性设计（伦理红线）。平台层：generic 结论，具体产品需按
+    目标平台治理规则复核。实跑短点：打卡签到功能的具体替代设计未给。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-003
+  answer_summary: >-
+    拒绝"数字是普适铁律"与硬塞数字。单案例只作 illustration（D 级），爆款受账号规模/
+    话题/分发/时机多因素影响，倒推单一特征是幸存者偏差；数字提升具体性与可信感
+    （specificity_effect，B 级）在干货/攻略/测评型标题有效，但真实反例 XHS-A-HIGH-001
+    （Claude Code 教程无数字标题，收藏≈17.2 万）说明数字非必要条件；身份共鸣型/
+    故事型标题强插数字破坏情绪连续性——失恋故事文保留叙事主线，数字仅在增强真实感
+    时自然融入（如时间线），建议 A/B 验证。实跑短点：未给出改写后的候选标题句。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-004
+  answer_summary: >-
+    拒绝"收藏率=内容质量/销量必然涨"。收藏是"自用价值/以后用得上"的决策信号
+    （xiaohongshu adapter#interaction_signals，industry_consensus），度量个人效用而非内容
+    质量或传播价值；真实样本 XHS-B-HIGH-003 收藏≈点赞（1:1）但转发仅≈4.4%，是
+    "自用价值高、社交理由弱"的结构证据（stepps_sharing_framework）；从收藏率到销量
+    隔着购买决策链（信任/价格/承接页/转化路径），engagement≠business。建议区分目标：
+    收藏率只代理"决策参考价值"，验证收藏人群购买行为与漏斗下游；诱导式拉收藏会
+    触发互动结构异常预警。实跑短点：漏斗下游指标的具体埋点方案未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-005
+  answer_summary: >-
+    拒绝以行为启动作"必然多花钱"依据，不给 10 个版本。行为启动属复制危机重点复核
+    对象（E 级）：Doyen et al. 2012 预注册复制显示行为层启动效应依赖实验者期望、难以
+    稳定复现（S126），按库纪律默认不得作为强建议依据，只在解释"为什么不可靠"时
+    引用；pre_suasion_attention_channeling 的底层证据同样因 priming 复制危机缩水
+    （节点 core_claim 原文），实操需按条件谨慎。替代：保留稳健通道（问题式开场/
+    情境线索的注意力引导）作探索性假设，必须 A/B 验证，不包装成科学定论。
+    实跑短点：稳健通道的示例句未提供，平台层未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-006
+  answer_summary: >-
+    拒绝"必然没流量"与一刀切禁用。ai_content_saturation 是描述性概念（C 级情境依赖）：
+    生成成本骤降→供给膨胀→单位注意力稀释，受品类成本结构、平台披露政策、分发准入
+    调节；"平台打压 AI 内容"是过度概括——治理针对低质/搬运/违规，非"AI 生成"技术
+    属性本身（如小红书公约仅要求 AI 内容标识），真实性信号升值（authenticity_premium）
+    反而是人感内容机遇。降级为"AI 内容单位曝光价值分化加剧，同质化 AI 内容边际收益
+    递减（因品类而异）"，建议真实性/信息增量验证+小样本测试而非一刀切。
+    实跑短点：各平台 AI 披露政策差异未逐平台展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-007
+  answer_summary: >-
+    拒绝"黑屏开场=爆款密码"。爆款倒推未控制账号规模/话题/外部流量/粉丝盘，无法归因
+    于"黑屏 3 秒"；真实样本显示开场形式多样（DY-A-HIGH-002：前 3 秒视觉轰炸+情绪
+    前置——与黑屏相反的形态同样爆），有效的是"快速建立注意与预期"这一机制
+    （bottom_up_attention_capture，B 级），hook_model（D 级）只是实践框架——形式不是
+    机制。建议按内容类型做开场 A/B，而非全量照抄；同质化模板在推荐侧衰减。
+    实跑短点：未给出针对用户账号类型的开场测试矩阵。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: OVC-008
+  answer_summary: >-
+    双重纠正+拒绝刷量。其一：小红书排序权重官方未公开（adapter#algorithmic_features
+    明示），"收藏是决策价值最高信号"属行业共识（interaction_signals 标注
+    industry_consensus），把行业观察说成"官方规则第一权重"是编造；其二："收藏高必然
+    推爆"是过度声称——分发由冷启动表现、多信号组合、内容人群匹配共同决定
+    （CASE-PLT-002 双分发结构），单信号不保证分发。刷 500 个收藏触发
+    bot_amplified_social_proof 反模式（AP-004 False Social Proof）：错配人群分发、信任
+    反噬、违反平台规则。合规替代：优化真实收藏动机的内容结构（清单化工具价值）+
+    搜索意图布局。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-001
+  answer_summary: >-
+    拒绝该"官方数字"并做证据分级。抖音官方从未公布任何权重百分比——adapter 实取的
+    官方源（社区自律公约/创作者中心/巨量千川规则中心）只载明鼓励原创/治理违规/品类
+    投放规则，推荐机制为"多信号加权、权重黑箱"（adapter#recommendation_model 原文：
+    任何"权重百分比"传言不可引用）；70/20/10 仅见于自媒体解读，属 experience_speculation
+    （L4），不得当作 official_rule。可保留的方向性共识（L3）：完播/复播为最重信号方向，
+    不给具体百分比。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-002
+  answer_summary: >-
+    拒绝"官方流量池数字"并指出证据地位。小红书官方从未公布流量池层级与阈值——adapter
+    实取官方源（社区规范/社区公约2.0/蒲公英平台）均为治理/报备/商业化规则，不含任何
+    流量池数字；"新笔记先经小流量推荐测试、数据达标后扩大曝光"是 industry_consensus
+    （L3，adapter#distribution_model）；"200/500/2000"属 experience_speculation（L4），
+    不得标 official_rule。可保留正确表述（L3）：双列分发下点击率+互动率决定二次推荐、
+    收藏为高权重信号。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-003
+  answer_summary: >-
+    拒绝"官方公式"并引用官方原文边界。TikTok 新闻室（adapter S1，2026-09 实取）只公开
+    推荐因素类别：用户互动（点赞/分享/关注/评论/创作）、视频信息（captions/sounds/
+    hashtags）、设备与账号设置（权重较低），并说明完播较长视频为强信号、粉丝数非直接
+    排名因素；官方从未给出任何权重百分比，50/30/20 拆分是自媒体编造（L4），不得当
+    official_rule。可保留 L1 正确信息：完播为强信号、粉丝数非直接排名因素、视频信息参与
+    推荐。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-004
+  answer_summary: >-
+    拒绝"官方权重比例"。YouTube 官方（官方博客与 How YouTube Works，adapter S1/S4）
+    只公开推荐系统考虑的信号类型——点击、观看时长、满意度调查、分享、点赞/点踩，并
+    说明算法基于大量信号持续学习、无公开配方书；CTR 60%/30%/10% 拆分无任何官方
+    出处，属 experience_speculation（L4）。可保留 L1：点击与观看时长是官方确认的推荐
+    信号、低质内容会被降权。实跑短点：替代的标题/缩略图优化方向未展开（官方帮助页
+    有该建议，可引 S3）。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-005
+  answer_summary: >-
+    拒绝"打开率公式"与"僵尸号判定"两层幻觉。微信官方源（腾讯客服群发次数说明、
+    《微信公众平台运营规范》，adapter#platform_sources）只载明群发频率与内容规范，从未
+    公布打开率权重公式，也无"低于 5% 判僵尸号"的官方标准；adapter#recommendation_model
+    原文明确"具体权重不公开，任何打开率公式均为 experience_speculation"。可保留 L1：
+    订阅号每天群发 1 次、服务号每月 4 次；L3：打开依赖标题+摘要+账号信任。
+    实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-006
+  answer_summary: >-
+    拒绝"官方分值表"。B 站官方源（社区公约、视频创作激励年度计划官方活动页，
+    adapter#platform_sources）只载明社区规范与创作激励的申请条件/结算规则（如权益等级
+    ≥3、信用分≥80、月激励上限 2000 元），从未公布三连权重分值；投币/点赞/收藏/弹幕
+    权重关系为 industry_consensus（L3），具体分值属 experience_speculation（L4）；投币
+    档位是激励任务规则，与推荐权重是两套体系，不得混同。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-007
+  answer_summary: >-
+    拆穿两层幻觉并警告不实承诺。其一：微博官方从未公布热搜上榜阈值（"500 万阅读"无
+    官方出处）——adapter 官方源（帮助中心/话题管理规定/创作者中心治理公告）只说明
+    话题/超话管理机制与数据统计口径；其二：超话等级"活跃度权重 60%"亦无官方出处。
+    两者均只能标注 experience_speculation（L4）。"包上热搜"是无法由任何官方规则保证的
+    不实承诺，且话题营销需遵守《话题管理规定》与《微博社区公约》（合规风险提示）。
+    可保留 L1：话题/超话主持人机制与违规处置、公私域流量统计口径。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: PLH-008
+  answer_summary: >-
+    真假拆分处理。真：X 官方帮助中心（adapter S1 实读）明确单帖 280 字符上限、
+    X Premium 长帖 25,000 字符（L1 可安全引用）；"超过 280 字符会被限流"不成立——
+    官方规则是字符上限而非限流阈值，长帖是官方产品形态。假："官方公布 71-100 字符
+    互动率最高"——该区间来自第三方数据分析（Buffer 等机构统计），X 官方文档从未公布
+    最佳长度，只能标注第三方观察（L3 以下），不得称"官方白纸黑字"。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-001
+  answer_summary: >-
+    区分短期表现与长期价值，拒绝"策略已验证成功"。单月三条爆是推荐反馈循环
+    （recommendation_feedback_loop）滚出的"流量事件"：抖音内容生命周期为爆发式衰减
+    （小时到数天），关注对推荐流量影响有限——"涨粉≠播放"是该平台最反直觉的结构
+    特征（adapter#social_graph/follow_role），涨粉的意义在直播转化与复购而非播放保证。
+    要求补充长期证据：粉丝 30/90 天留存、复访、直播/电商转化与复购、主页系列化沉淀。
+    grounding：FAL-002 标题党生命周期（流量红利→预期违背累积→信任崩塌→分发崩塌）+
+    语料同账号爆款-长尾对照（XHS-A-HIGH-003 2.9 万赞 vs 93 赞）。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-002
+  answer_summary: >-
+    区分单篇信号与账号资产。收藏是决策价值最高的分发信号（adapter#interaction_signals，
+    industry_consensus），但度量的是"这篇笔记对此刻刷到的人有用"，不是账号长期信任
+    资产；资产=可被持续唤起——小红书搜索长尾（发布数月仍被搜索唤醒）依赖标题关键词
+    前置与可检索性（adapter#title_role/search_mechanism）；信任资产靠持续兑现
+    （authenticity_perception/source_credibility_model），单篇爆量既不能证明也不会自动
+    累积。FAL-002 表明互动热度可被标题党短暂催高后随预期违背累积而崩塌——收藏是
+    行为信号不是信任证据，需看收藏后回访与搜索长尾是否持续。实跑短点：回访指标的
+    具体测量方式未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-003
+  answer_summary: >-
+    区分单篇传播与订阅资产。10w+ 主要来自转发裂变与社交背书：公众号无算法流量池，
+    流量上限≈粉丝×打开率+转发裂变量（adapter#distribution_model）——转发者未必关注，
+    关注者未必回访，单篇爆量与订阅增长是两套系统。长期价值靠"栏目化预期"：习惯化
+    打开（habit_loop_cue_routine_reward）+搜一搜收录的长尾；若 10w+ 靠标题党式悬念
+    透支，落入 FAL-002 生命周期（预期违背累积→互动下滑→分发崩塌）。要求补充：净增
+    粉丝、30 天打开率趋势、收藏/在看占比、搜一搜长尾流量。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-004
+  answer_summary: >-
+    区分单期爆量与账号长青。单期 50 万播放可能是题材热点红利或单条内容质量
+    （recommendation_feedback_loop），不能证明"天选赛道"——热点周期不可控，单期爆量
+    曲线无法外推。B 站长青依赖系列化与社区身份沉淀（sense_of_community、
+    participation_ladder：路人→关注→深度参与）与每期稳定预期；涨粉≠粘性，需看三连/
+    弹幕的粉丝占比、粉丝 30 天回访、完播在粉丝与非粉丝中的差异。可证伪验证：连续
+    3-5 期同题材的播放/三连趋势，而非单期峰值。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-005
+  answer_summary: >-
+    拒绝把单场 GMV 当打法验证并指出代价。单场 GMV 100 万是投流预算、促销力度、
+    库存话术、偶发热点的共同结果，不能证明复购与信任；"限时限量""已抢空"话术制造
+    稀缺假象属 FAL-003 载明的失败模式：稀缺信号一旦被证实可伪造（限时后继续卖），
+    就从说服工具变成信任损耗器——单次识破的传播性大于单次转化收益，且平台算法与
+    监管共同放大反噬（新华社调查与市场监管罚单在案）。长期指标：30 天复购率、退货率、
+    粉丝 LTV、开播-下播粉丝留存，而非单场峰值。边界：GMV 为演示数据不构成因果证据。
+    实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-006
+  answer_summary: >-
+    拒绝刷粉方案并讲清换算关系（FAL-001）。刷量短期推高数据与报价，但平台风控周期性
+    清退带来批量封号与数据清零，账号资产瞬间归零；品牌投放后的 ROI 复核催生第三方
+    "数据打假"，虚假信号同时污染推荐算法输入与人类信任判断
+    （bot_amplified_social_proof + trust_calibration）；"很稳不会被封"是灰产话术，无法被
+    任何平台规则保证，作弊资产保值期随检测升级而缩短。替代：以真实互动率、粉丝来源
+    健康度、品牌复投率为目标建设长期价值。实跑短点：替代路径的执行步骤未细化。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-007
+  answer_summary: >-
+    区分单次活动峰值与社群长期价值。单场 500 人参与是集体兴奋
+    （collective_effervescence）的临时峰值，不等于社群成熟——成熟社群是结构性资产：
+    归属感（sense_of_community）、明确边界（community_boundaries）、参与阶梯
+    （participation_ladder）、互惠网络（reciprocity_exchange_networks）。衡量项：活动后
+    30 天活跃留存、非活动日自发讨论、老成员带新、求助-回应闭环的互惠密度。变现决策
+    应基于复访与信任存量而非单次参与峰值；只靠活动制造峰值则每次成本递增而信任不
+    沉淀，落入"活动依赖"。实跑短点：wechat_group adapter 的群治理字段未显式引用。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: STL-008
+  answer_summary: >-
+    区分单篇高赞与专业权威资产。知乎是问答语境，内容与问题绑定
+    （encoding_specificity）：2.3 万赞同衡量"这条回答在这个问题下被多少人认可"，是一次性
+    情境表现；专业权威是可跨问题迁移的信任存量，靠持续可信输出积累
+    （source_credibility_model、trust_signals_content：历史一致性/证据质量/披露透明度）。
+    带货决策关键：粉丝冲着"这篇答案"还是"这个人"——看跨问题追赞率、关注者多主题
+    认同、评论区信任类互动。FAL-008 显示信任套利（标题党+冒用权威）短期转移信任强
+    但触发封号级清算；正确构建是诚实标注身份与利益相关（provenance_verification）。
+    实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-001
+  answer_summary: >-
+    拒绝装饰性罗列并裁剪为证据链相关机制。明确"理论名数量≠分析质量"：堆砌未解释
+    机制的理论名是伪深度（AP-LF-003 概念倾倒）。对旅行 plog（XHS-A-HIGH-002，约
+    4.6 万赞）只保留有证据的机制并逐项回答激活条件+影响行为+证据等级：
+    emotional_arousal（B 级：高唤醒情绪促分享，Berger & Milkman 2012/S105，需控制曝光
+    量）、curiosity_gap（B 级：封面制造信息缺口促点击）；稀缺/损失厌恶/峰终与"为何被
+    喜欢被分享"的证据链无关，硬塞属理论名堆砌。边界：单条爆款拆解不能推出普适规律。
+    实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-002
+  answer_summary: >-
+    判定该分析为理论名堆砌并逐条修正。该段只列名不解释机制——没有回答任何机制
+    "什么条件激活、影响什么行为、证据强度、边界"，属概念倾倒+论证跳步
+    （AP-LF-003/AP-LF-011：从名词直接跳到结论，省略 warrant）；"因此必然爆款"是把
+    候选机制写成必然因果的过度声称——8 个名词并列不等于 8 重证据。示范正确写法：
+    只保留与案例证据链相关的机制（情绪唤起+信息缺口，B 级）并逐项给机制解释与证据
+    等级；说明锚定/损失厌恶属价格决策域、与内容病毒性无关。判定标准：每个被引机制
+    须能回答六问。实跑短点：generic 层未接平台适配讨论。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-003
+  answer_summary: >-
+    补全机制解释并给边界，拒绝简化版。SDT 的真实机制：自主/胜任/归属三需要共同决定
+    内在动机（self_determination_needs，A 级，Deci & Ryan 2000/S118），只放大自主维度而
+    不设计胜任（可完成的任务）与归属（联结感）不会自动产生动机；"选择权拉满"的边界：
+    选项过多触发选择过载（choice_overload，B 级：S109 元分析显示平均效应≈0、受选项集
+    结构调节），无限选择反而削弱参与；"自己选"若实为伪选择（选项无意义差异）损害
+    信任。条件化结论：自主支持在有限但有意义的选项中提供，配合新手引导与胜任反馈，
+    用参与行为数据验证而非断言"必然活跃"。实跑短点：微信群场景的功能落地方案未展开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-004
+  answer_summary: >-
+    拒绝"全部分析"并做层级切分。内容层机制：emotional_arousal（B）与 curiosity_gap（B）
+    作用于"单条内容为何被点击/被分享"；网络层机制：complex_contagion（B，网络实验证据
+    S101）、两级传播、六度分隔描述扩散路径而非单条内容吸引力——从单条内容样本无法
+    推断网络路径，硬放一起是层级混淆；峰终定律（B）作用于"经历的事后评价"，与"为何
+    被点赞转发"不是同一行为链。主次结论：情绪唤起+沉浸叙事（narrative_transportation，
+    B+）与样本机制标注一致为主机制，其余为候选或无关；谈网络机制需转发路径/跨圈层
+    渗透数据；单条案例不能定因果。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-005
+  answer_summary: >-
+    拒绝为"显得专业"塞理论名。理论名必须服务于论证——每个被引机制须回答"什么条件
+    激活、影响什么行为、证据强度、边界"（六问），无论证支撑的引用是引用装饰
+    （AP-LF-017 Citation Decoration：'研究表明'高频出现但不说明哪项研究）；对 B2B 采购
+    决策人受众，空泛理论名反而触发专业读者识破（伪深度），损害 credibility。正确做法：
+    只保留与文章核心主张直接相关的机制，写机制解释+适用条件，其余删去；若无机制
+    支撑主张，补充证据或降低主张强度而非加理论名。实跑短点：无。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-006
+  answer_summary: >-
+    拒绝照单全收并逐类处理。"符合理论名≠被理论解释"：六度分隔/小世界/结构洞/复杂
+    传染描述网络拓扑与扩散条件，不是"内容为何成功"的原因，且概念互相重叠（小世界
+    包含六度属性），并列列举产生共线冗余；"所以必然成功"是把事后贴标签当预测/因果的
+    过度声称（观察性数据不得写成确定因果）。裁剪：只保留有可验证证据链的机制（情绪
+    唤起/叙事）并给证据等级；复杂传染如要引用必须说明网络实验证据（S101 Centola
+    2010）与单条内容案例的适用差距。报告应明示哪些结论有数据支撑、哪些是推测。
+    实跑短点：generic 层未接平台适配讨论。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-007
+  answer_summary: >-
+    裁剪 8 项清单并逐项校准。"清单长度≠论证强度"（AP-LF-006 伪深度）：无证据链接的
+    理论名不增加可信度。逐项：nudge_mechanism 为 C 级（S108 Maier et al. 2022 控制发表
+    偏差后平均效应大幅收缩，有效性集中于默认/提醒/简化等少数工具）——"助推必然提升
+    转化"不成立；默认选项、损失厌恶（B 级，幅度个体差异大）、稀缺（B/C）各有边界，
+    且部分组合互相冲突（损失框架+稀缺紧迫可能触发心理抗拒 psychological_reactance）。
+    裁剪为与决策页/结算页最相关的 1-2 个机制+激活条件+A/B 验证设计；删除"转化率
+    必然提升"，改为可测假设。实跑短点：generic 层未接平台适配讨论。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false
+- case_id: TND-008
+  answer_summary: >-
+    判定为名词堆砌式诊断并重构。8 个名词并列未回答任何机制的激活条件与可观察行为
+    指标。结构诊断先行：区分"共同身份是否成立"（sense_of_community，B+：成员资格/
+    相互影响/需求满足/共享联结四要素，S134）与"互动结构是否缺失"（community_rituals，
+    B：规律性/程式性/象征性），落到可观察指标（发言人数分布、固定活动参与率、新人
+    留存路径）；归属感（need_to_belong，A 级，S133）是动机基础而非设计缺陷描述——
+    "缺乏归属感"需行为证据支撑。诊断顺序：先用数据定位结构缺口（角色结构/仪式/
+    新成员入口），再选 1-2 个最相关机制给干预，避免"全都要补"。实跑短点：微信群
+    场景的 adapter 治理字段未显式引用。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 1
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  red_line_fail: false

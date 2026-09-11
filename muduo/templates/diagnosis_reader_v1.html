@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  木铎诊断交付物 · 批注式对照阅读器模板 v1.0 (2026-09-10)
+  参考实现：木铎诊断案例/01.focus.reader.html（已验收）
+  规范文档：templates/DELIVERABLE_SPEC.md（交付前必读 §3 自包含门禁）
+
+  创作指南（把本模板填充为交付物的 7 步）：
+  1. 原文逐字保真地填入 <article id="origSrc">（一字不改，含原有标点）。
+  2. 规划批注映射：问题(红 .hl.prob)/待改进(黄 .hl.minor)/资产(绿 .hl.asset)，
+     在原文对应文字外包 <span class="hl prob" data-a="A01">…</span>，
+     id 从 A01 连续编号，一段文字可含多个标注但避免重叠嵌套。
+  3. 填充 JS 顶部 ANNO 数组（唯一内容源，卡与角标都由它渲染），卡片骨架：
+     {id, type:'prob'|'minor'|'asset', prio:'P0'|'P1'|'P2'|'P3'|'asset',
+      layer:'点击|完读|收藏|转发|评论|关注|理解|记忆|信任|质感',
+      title, quote(原文引文), phen(现象) 或 why(为什么是资产),
+      mech(机制：中文名 原名 + 等级徽章 <i class="g gB">B</i>),
+      bound(适用边界，必填), fix(修复动作：<del>删</del><ins>增</ins>, 待确认语气),
+      decide:1(仅需要用户拍板的项)}
+     铁律 2 最小边界单元：主机制给完整边界，次要机制至少最小单元；复核清单
+     中的机制（peak_end/cognitive_fatigue 等）必须带修正状态。
+  4. 填充 CHECKS 施工清单（修复动作的汇总，勾选状态自动存 localStorage，
+     需拍板的项加 need:1）。
+  5. 填充「诊断报告」视图：结论屏(总判/行为链得分/三关键问题/推荐路径/待拍板)
+     → 决策区(标题候选矩阵/结构提案/选项对比) → 附录折叠区(符号说明/评分/
+     机制全表/反模式走查/边界风险)。
+  6. 术语清查（铁律 13）：交付前 grep 全文——adapter 字段名/M7/AP-LF/编号/
+     HIGH/MEDIUM 等内部词汇必须为零；机制保留英文原名属合法（阅读说明已解释），
+     被诊断原文自带的技术词属合法（需回原文定位）。
+  7. 自检：浏览器打开确认三视图切换、批注双向定位、筛选、清单勾选、
+     打印预览(自动展开)全部可用；控制台无报错。
+  ═══════════════════════════════════════════════════════════════════
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【文章标题】传播诊断 · 批注式对照阅读器</title>
+<style>
+  :root{
+    --ink:#1d1c19; --ink-2:#3d3a34; --muted:#6f6a5f; --paper:#f6f2e9;
+    --card:#ffffff; --line:#e6e1d5; --brand:#9a6b2f; --brand-soft:#f3ead9;
+    --p0:#b3372b; --p0-bg:#fbece9; --p1:#c07a1c; --p1-bg:#fdf3e3;
+    --ok:#2e7d4f; --ok-bg:#e9f5ee;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;}
+  button{font-family:inherit;}
+
+  /* ===== 工具栏 ===== */
+  #toolbar{position:sticky;top:0;z-index:50;background:#211f1b;color:#f5efe2;
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 14px;
+    border-bottom:3px solid var(--brand);}
+  .tb-title{font-size:13.5px;font-weight:700;letter-spacing:.5px;margin-right:4px;white-space:nowrap;}
+  .tb-title small{color:#c9a86a;font-weight:400;}
+  .tb-views{display:flex;gap:4px;background:#37322a;border-radius:8px;padding:3px;}
+  .tb-views button{border:none;background:transparent;color:#cfc6b2;font-size:12.5px;
+    padding:4px 12px;border-radius:6px;cursor:pointer;}
+  .tb-views button.on{background:var(--brand);color:#fff;font-weight:600;}
+  .tb-sep{width:1px;height:20px;background:#4a443a;}
+  .flabel{font-size:11.5px;color:#9c9482;}
+  .chip{border:1px solid #5a5346;background:transparent;color:#cfc6b2;font-size:11.5px;
+    padding:2px 10px;border-radius:20px;cursor:pointer;}
+  .chip.on{background:#c9a86a;border-color:#c9a86a;color:#211f1b;font-weight:700;}
+  #clearF{border:none;background:transparent;color:#8f8674;font-size:11.5px;cursor:pointer;text-decoration:underline;}
+  .tb-right{margin-left:auto;display:flex;gap:8px;align-items:center;}
+  #goDecision{border:1px solid #c9a86a;background:transparent;color:#e8c98a;font-size:12px;
+    padding:4px 12px;border-radius:6px;cursor:pointer;}
+  #goDecision:hover{background:#3a3327;}
+  #doPrint{border:none;background:#c9a86a;color:#211f1b;font-size:12px;font-weight:600;
+    padding:4px 12px;border-radius:6px;cursor:pointer;}
+  .kbd-hint{font-size:10.5px;color:#8f8674;}
+
+  /* ===== 视图切换 ===== */
+  .view{display:none;}
+  .view.on{display:block;}
+  body[data-view="compare"] #view-compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);
+    height:calc(100vh - 49px);}
+  body[data-view="compare"] #view-compare > *{overflow-y:auto;}
+
+  /* ===== 原文排版 ===== */
+  #origPane{padding:26px 30px 120px;}
+  .orig{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:36px 44px 44px;box-shadow:0 1px 4px rgba(60,50,30,.06);}
+  .orig .o-tag{font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;
+    display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+  .orig .o-tag b{color:var(--brand);}
+  .orig h1{font-size:23px;line-height:1.5;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+  .orig h2{font-size:17px;margin:34px 0 12px;color:var(--ink);font-weight:700;
+    padding-left:10px;border-left:3px solid var(--brand);line-height:1.4;}
+  .orig h3{font-size:14.5px;margin:22px 0 8px;color:var(--brand);font-weight:700;}
+  .orig p{margin:11px 0;font-size:15px;line-height:1.95;color:var(--ink-2);}
+  .orig.solo{margin:26px auto 140px;}
+
+  /* ===== 批注高亮 ===== */
+  .hl{border-bottom:2px solid transparent;padding:1px 0;cursor:pointer;border-radius:2px;
+    transition:background .15s;}
+  .hl.prob{background:#fbe3df;border-bottom-color:var(--p0);}
+  .hl.minor{background:#fdf0d7;border-bottom-color:var(--p1);}
+  .hl.asset{background:#ddf0e4;border-bottom-color:var(--ok);}
+  .hl:hover{filter:brightness(.96);}
+  .ab{display:inline-block;min-width:17px;height:17px;line-height:17px;text-align:center;
+    border-radius:9px;color:#fff;font-size:10.5px;font-weight:700;margin-left:3px;
+    vertical-align:super;cursor:pointer;letter-spacing:0;}
+  .ab.prob{background:var(--p0);} .ab.minor{background:var(--p1);} .ab.asset{background:var(--ok);}
+  .ab:hover{transform:scale(1.15);}
+  .fhide{opacity:.16;pointer-events:none;}
+  @keyframes flashbg{0%{background:#ffedb3;}100%{background:transparent;}}
+  .flash{animation:flashbg 1.6s ease;}
+
+  /* ===== 诊断卡 ===== */
+  #cardPane{background:#efe9db;border-left:1px solid var(--line);padding:16px 16px 130px;}
+  .pane-head{display:flex;align-items:baseline;gap:10px;margin:0 4px 12px;position:sticky;top:-16px;
+    background:#efe9db;padding:10px 4px 8px;z-index:5;border-bottom:1px solid #ddd4c0;}
+  .pane-head b{font-size:14.5px;}
+  .pane-head .cnt{font-size:12px;color:var(--muted);}
+  .pane-head .hint{font-size:11px;color:var(--muted);margin-left:auto;}
+  .diag-card{background:var(--card);border:1px solid var(--line);border-left-width:4px;
+    border-radius:10px;padding:13px 15px;margin-bottom:12px;font-size:13.4px;}
+  .diag-card.prob{border-left-color:var(--p0);}
+  .diag-card.minor{border-left-color:var(--p1);}
+  .diag-card.asset{border-left-color:var(--ok);}
+  .dc-head{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:6px;}
+  .dc-n{font-size:11px;color:#fff;background:#8f8674;border-radius:4px;padding:0 6px;font-weight:700;}
+  .dc-tag{font-size:10.5px;font-weight:700;color:#fff;border-radius:9px;padding:1px 8px;}
+  .dc-tag.prob{background:var(--p0);} .dc-tag.minor{background:var(--p1);} .dc-tag.asset{background:var(--ok);}
+  .dc-layer{font-size:10.5px;color:var(--ink-2);background:#f1ecdf;border-radius:4px;padding:1px 7px;}
+  .dc-decide{font-size:10.5px;color:#7a2f12;background:#ffd9a8;border:1px solid #e8b45a;
+    border-radius:4px;padding:0 6px;font-weight:700;}
+  .dc-back{margin-left:auto;font-size:11px;color:var(--brand);text-decoration:none;cursor:pointer;}
+  .dc-back:hover{text-decoration:underline;}
+  .diag-card h4{margin:2px 0 8px;font-size:14px;line-height:1.5;}
+  .diag-card blockquote{margin:8px 0;padding:8px 12px;border-left:3px solid var(--line);
+    background:#faf7f0;color:var(--muted);font-size:12.8px;border-radius:0 6px 6px 0;line-height:1.7;}
+  .dc-sec{margin:7px 0;line-height:1.7;}
+  .dc-sec b{color:var(--brand);font-size:12px;margin-right:6px;}
+  .dc-sec.bound{color:var(--muted);font-size:12.6px;}
+  .mini{font-size:10.5px;color:var(--muted);}
+  .diag-card del{color:#a3392e;background:#fdeceb;text-decoration:line-through;padding:0 3px;border-radius:3px;}
+  .diag-card ins{color:#1e6b40;background:#e3f3ea;text-decoration:none;padding:0 4px;border-radius:3px;}
+  .g{display:inline-block;min-width:20px;text-align:center;border-radius:4px;color:#fff;
+    font-size:10.5px;font-weight:700;padding:0 5px;margin:0 1px;font-style:normal;}
+  .gA{background:#2e7d4f;} .gB{background:#2f6490;} .gC{background:#9a6b2f;}
+
+  /* ===== 原文批注视图内嵌卡 ===== */
+  #view-orig{padding:10px 20px;}
+  .inline-card{display:none;background:var(--card);border:1px solid var(--line);border-left-width:4px;
+    border-radius:10px;padding:14px 16px;margin:10px 0 16px;font-size:13.4px;max-width:720px;}
+  .inline-card.open{display:block;}
+  .inline-card.prob{border-left-color:var(--p0);} .inline-card.minor{border-left-color:var(--p1);}
+  .inline-card.asset{border-left-color:var(--ok);}
+
+  /* ===== 报告视图 ===== */
+  #view-report{padding-bottom:140px;}
+  .rp-cover{background:linear-gradient(160deg,#211f1b 0%,#332e24 100%);color:#f5efe2;
+    padding:40px 0 34px;border-bottom:4px solid var(--brand);}
+  .rp-wrap{max-width:960px;margin:0 auto;padding:0 28px;}
+  .rp-kicker{font-size:12px;letter-spacing:3px;color:#c9a86a;margin-bottom:10px;}
+  .rp-cover h1{font-size:24px;line-height:1.5;margin:0 0 12px;}
+  .rp-meta{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px;color:#cfc6b2;}
+  .rp-meta b{color:#f5efe2;}
+  .rp-sec{max-width:960px;margin:0 auto;padding:30px 28px 0;}
+  .rp-h2{font-size:19px;margin:0 0 14px;padding-left:12px;border-left:4px solid var(--brand);}
+  .lead{font-size:15.5px;background:var(--brand-soft);border:1px solid #e4d3b2;border-radius:10px;
+    padding:16px 20px;margin:0;}
+  .lead b{color:var(--brand);}
+  .chain{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0 6px;}
+  @media(max-width:820px){.chain{grid-template-columns:repeat(3,1fr);}}
+  .chain .ch{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 12px;}
+  .chain .ch .t{font-size:11.5px;color:var(--muted);}
+  .chain .ch .v{font-size:21px;font-weight:700;color:var(--brand);}
+  .chain .ch .v small{font-size:11px;color:var(--muted);font-weight:400;}
+  .chain .ch .bar{height:5px;background:#ece7da;border-radius:4px;overflow:hidden;margin-top:5px;}
+  .chain .ch .bar i{display:block;height:100%;background:linear-gradient(90deg,#c9a86a,#9a6b2f);}
+  .src-note{font-size:11.5px;color:var(--muted);}
+  .kq{display:flex;gap:9px;align-items:flex-start;background:var(--p0-bg);border:1px solid #e6c3bd;
+    border-radius:9px;padding:11px 14px;margin:9px 0;font-size:13.6px;}
+  .kq .tag{flex-shrink:0;font-size:11px;font-weight:700;color:#fff;background:var(--p0);
+    border-radius:9px;padding:1px 9px;margin-top:2px;}
+  .kq.p1{background:var(--p1-bg);border-color:#ecd6b2;} .kq.p1 .tag{background:var(--p1);}
+  .rp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px;}
+  @media(max-width:820px){.rp-grid{grid-template-columns:1fr;}}
+  .rp-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 18px;font-size:13.5px;}
+  .rp-card.rec{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset;}
+  .rp-card h4{margin:0 0 7px;font-size:14px;}
+  .rp-card.decide{border-left:4px solid #e8b45a;background:#fffaf0;}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.2px;background:var(--card);
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  th,td{padding:8px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+  th{background:#f3efe5;font-weight:600;font-size:12.5px;color:var(--ink-2);}
+  tr:last-child td{border-bottom:none;}
+  td.c,th.c{text-align:center;}
+  .pass{color:var(--ok);font-weight:700;} .fail{color:var(--p0);font-weight:700;} .half{color:var(--p1);font-weight:700;}
+  .fold{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:12px 0;overflow:hidden;}
+  .fold-h{display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:pointer;font-weight:600;
+    font-size:14px;user-select:none;}
+  .fold-h:hover{background:#faf7f0;}
+  .fold-h .arr{transition:transform .2s;color:var(--brand);font-size:12px;}
+  .fold.open .fold-h .arr{transform:rotate(90deg);}
+  .fold-body{display:none;padding:2px 18px 16px;font-size:13.4px;}
+  .fold.open .fold-body{display:block;}
+  .legend td:first-child{white-space:nowrap;}
+  .score-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;}
+  @media(max-width:900px){.score-grid{grid-template-columns:repeat(4,1fr);}}
+  .score-grid .sc{background:#fbf9f4;border:1px solid var(--line);border-radius:8px;padding:8px 10px;}
+  .score-grid .sc .t{font-size:11px;color:var(--muted);}
+  .score-grid .sc .v{font-size:16px;font-weight:700;color:var(--brand);}
+  .risk{background:#f7f4ee;border:1px dashed #c9bfa9;border-radius:10px;padding:13px 17px;font-size:12.8px;}
+  .risk li{margin:5px 0;}
+  .conf{font-size:11px;padding:1px 7px;border-radius:4px;}
+  .conf.H{background:var(--ok-bg);color:var(--ok);} .conf.M{background:var(--p1-bg);color:var(--p1);}
+  .conf.L{background:#f0eeea;color:var(--muted);}
+
+  /* ===== 抽屉：施工清单 ===== */
+  #drawerBar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:flex;justify-content:center;
+    pointer-events:none;}
+  #drawerToggle{pointer-events:auto;background:#211f1b;color:#f5efe2;border:none;border-radius:12px 12px 0 0;
+    padding:9px 26px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 -2px 10px rgba(0,0,0,.18);}
+  #drawerToggle .ck{color:#e8c98a;}
+  #drawer{position:fixed;bottom:0;left:0;right:0;z-index:59;background:var(--card);
+    border-top:2px solid var(--brand);box-shadow:0 -6px 24px rgba(40,30,10,.14);
+    transform:translateY(100%);transition:transform .25s ease;max-height:62vh;display:flex;flex-direction:column;}
+  #drawer.open{transform:translateY(0);}
+  .dw-head{display:flex;align-items:center;padding:13px 22px 8px;}
+  .dw-head b{font-size:15px;}
+  .dw-head .hint{font-size:11.5px;color:var(--muted);margin-left:12px;}
+  .dw-close{margin-left:auto;border:none;background:#f1ecdf;border-radius:6px;padding:3px 12px;
+    cursor:pointer;font-size:12.5px;color:var(--ink-2);}
+  .dw-list{overflow-y:auto;padding:4px 22px 20px;}
+  .ck-item{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border-bottom:1px dashed var(--line);
+    border-radius:7px;font-size:13.5px;cursor:pointer;}
+  .ck-item:hover{background:#faf7f0;}
+  .ck-item input{margin-top:4px;accent-color:var(--ok);cursor:pointer;flex-shrink:0;}
+  .ck-item .p{flex-shrink:0;font-size:10.5px;font-weight:700;color:#fff;border-radius:8px;padding:1px 8px;margin-top:2px;}
+  .p.P0{background:var(--p0);} .p.P1{background:var(--p1);} .p.P2{background:#8a8578;} .p.P3{background:#aaa69b;}
+  .ck-item .need{flex-shrink:0;font-size:10px;color:#7a2f12;background:#ffd9a8;border-radius:4px;padding:1px 6px;margin-top:3px;font-weight:700;}
+  .ck-item.done .txt{text-decoration:line-through;color:var(--muted);}
+  .dw-progress{height:4px;background:#ece7da;border-radius:3px;margin:6px 22px 0;overflow:hidden;}
+  .dw-progress i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s;}
+
+  /* ===== 打印 ===== */
+  @media print{
+    #toolbar,#drawerBar,#drawer,#cardPane,.pane-head{display:none!important;}
+    body{background:#fff;font-size:11.5px;}
+    body[data-view] #view-compare{display:none!important;}
+    #view-orig{display:block!important;padding:0;}
+    #view-report{display:block!important;}
+    .view{display:block!important;}
+    .inline-card{display:block!important;page-break-inside:avoid;}
+    .fold{break-inside:avoid;} .fold-body{display:block!important;}
+    .rp-cover{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .diag-card,.rp-card,.kq,table,.risk,.inline-card{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    h2,.rp-h2{break-after:avoid;} table{break-inside:avoid;}
+    #drawerBar{display:none!important;}
+    body{margin-top:0;}
+  }
+
+  /* ===== 小屏 ===== */
+  @media(max-width:900px){
+    body[data-view="compare"] #view-compare{grid-template-columns:1fr;height:auto;}
+    body[data-view="compare"] #view-compare > *{overflow:visible;}
+    #origPane{padding:16px 14px;}
+    .orig{padding:24px 20px;}
+    #cardPane{border-left:none;border-top:1px solid var(--line);}
+    .kbd-hint{display:none;}
+  }
+</style>
+</head>
+<body data-view="compare">
+
+<!-- ================= 工具栏（标题替换【文章标题】） ================= -->
+<div id="toolbar">
+  <div class="tb-title">传播诊断阅读器 <small>·【文章短名】</small></div>
+  <div class="tb-views">
+    <button data-v="compare" class="on">左右对照</button>
+    <button data-v="orig">原文批注</button>
+    <button data-v="report">诊断报告</button>
+  </div>
+  <div class="tb-sep"></div>
+  <span class="flabel">筛选</span>
+  <button class="chip" data-f="P0">P0</button>
+  <button class="chip" data-f="P1">P1</button>
+  <button class="chip" data-f="P2">P2</button>
+  <button class="chip" data-f="P3">P3·轻度</button>
+  <button class="chip" data-f="asset">资产</button>
+  <button id="clearF">清空</button>
+  <div class="tb-right">
+    <span class="kbd-hint">J / K 跳转批注</span>
+    <button id="goDecision">待拍板 N 项</button>
+    <button id="doPrint">打印 / 存 PDF</button>
+  </div>
+</div>
+
+<!-- ================= 视图一：左右对照 ================= -->
+<main id="view-compare" class="view on">
+  <section id="origPane">
+    <article class="orig" id="origSrc">
+      <div class="o-tag"><span><b>原文</b> · 逐字保真，未作任何改动</span><span>彩色底纹＝批注锚点，点角标看诊断</span></div>
+      <!-- ① 在此填入被诊断原文：逐字保真。
+           批注锚点写法（三种，按需选用）：
+           问题  <span class="hl prob"  data-a="A01">…</span>
+           待改进<span class="hl minor" data-a="A02">…</span>
+           资产  <span class="hl asset" data-a="A03">…</span>
+           以下为示例段落，填充时删除： -->
+      <h1><span class="hl prob" data-a="A01">【文章标题】</span></h1>
+      <p>【正文段落……】</p>
+      <p><span class="hl asset" data-a="A02">【示例：资产句原文】</span></p>
+    </article>
+  </section>
+  <aside id="cardPane">
+    <div class="pane-head"><b>诊断卡</b><span class="cnt" id="cardCount"></span><span class="hint">点卡片「回原文」双向定位</span></div>
+    <div id="cards"></div>
+  </aside>
+</main>
+
+<!-- ================= 视图二：原文批注（JS 克隆渲染，无需填写） ================= -->
+<main id="view-orig" class="view"><div id="origCloneHolder"></div></main>
+
+<!-- ================= 视图三：诊断报告 ================= -->
+<main id="view-report" class="view">
+  <div class="rp-cover"><div class="rp-wrap">
+    <div class="rp-kicker">传播诊断报告 · 批注式对照阅读器配套版</div>
+    <h1>【文章标题】</h1>
+    <div class="rp-meta">
+      <span><b>诊断类型</b> 【M1/M2/M7…】</span>
+      <span><b>平台</b> 【平台与形态】</span>
+      <span><b>篇幅</b> 【字数/结构】</span>
+      <span><b>批注</b> N 处（问题 x · 待改进 y · 资产 z）</span>
+      <span><b>日期</b> 【YYYY-MM-DD】</span>
+    </div>
+  </div></div>
+
+  <div class="rp-sec">
+    <h2 class="rp-h2">一句话总判</h2>
+    <p class="lead">【一句话总判：信任/入口/转发强弱判断 + 最短板】</p>
+
+    <h2 class="rp-h2" style="margin-top:30px;">行为链得分（由 N 维评分映射）</h2>
+    <div class="chain">
+      <!-- 按本次诊断的行为链环节填 4-6 个： -->
+      <div class="ch"><div class="t">【环节】</div><div class="v">x<small>/10</small></div><div class="bar"><i style="width:x%"></i></div></div>
+    </div>
+    <p class="src-note">分数为结构层面风险评估（说明数据可得性）；如有后台数据在此注明来源。</p>
+
+    <h2 class="rp-h2" style="margin-top:30px;">关键问题（≤3 个）</h2>
+    <!-- 每个问题一张 kq 卡，批注序号引用角标编号 -->
+    <div class="kq"><span class="tag">P0</span><span>【问题一句话 + 机制 + 对应批注编号】</span></div>
+
+    <div class="rp-grid">
+      <div class="rp-card rec"><h4>推荐路径 · 【选项 X】</h4>【推荐组合 + 施工清单指引】</div>
+      <div class="rp-card decide"><h4>待你拍板 · N 项</h4>【① … ② …】<br><span class="src-note">详见下方「决策区」；拍板前不动原稿。</span></div>
+    </div>
+  </div>
+
+  <div class="rp-sec" id="decision">
+    <h2 class="rp-h2">决策区</h2>
+    <!-- ① 候选对比矩阵（标题案：检验项 × 候选，✓/半/✗） -->
+    <!-- ② 结构提案表（如有） -->
+    <!-- ③ 下一步选项对比表（范围/作用层/前提风险） -->
+    【按需填表；无候选决策时可省略本区并同步清空工具栏「待拍板」按钮】
+  </div>
+
+  <div class="rp-sec">
+    <h2 class="rp-h2">附录（点开查看）</h2>
+
+    <div class="fold" id="fold-legend"><div class="fold-h"><span class="arr">▶</span>如何阅读本报告（符号与三色批注说明，全程无需查阅任何工具或源码）</div><div class="fold-body">
+      <!-- 固定内容，直接保留（按本次用到的等级微调 A-D/E 说明） -->
+      <table class="legend">
+        <tr><th style="width:150px">标记</th><th>含义</th></tr>
+        <tr><td><span class="g gA">A</span>～<span class="g gC">C</span> 等级</td><td><b>证据等级</b>：<b>A</b>＝多个独立高质量研究；<b>B</b>＝较扎实证据；<b>C</b>＝有研究支持但存分歧（作参考）。机制后的英文是研究概念原名（避免翻译歧义），括注给出适用条件。</td></tr>
+        <tr><td>P0 / P1 / P2 / P3</td><td><b>修复优先级</b>：P0＝最短板先改；P1＝影响明显；P2/P3＝锦上添花。</td></tr>
+        <tr><td>L1～L4</td><td><b>平台事实可信级别</b>：L1＝官方明文；L2＝可验证观察；L3＝行业共识；L4＝推测。只用 L2/L3 并标注时效。</td></tr>
+        <tr><td>"机制"</td><td>来自传播学、认知科学的<b>稳定人类规律</b>，是每条建议的"为什么"，含义均已就地写清。</td></tr>
+        <tr><td>红色高亮</td><td>问题批注——削弱传播效果的写法，卡片给出修复动作。</td></tr>
+        <tr><td>黄色高亮</td><td>待改进批注——轻度问题，可改可不改。</td></tr>
+        <tr><td>绿色高亮</td><td>资产批注——应保持并放大的优势（金句、好案例、可信信号）。</td></tr>
+        <tr><td>〈建议 · 待你确认〉</td><td>所有修改示意均为提案，<b>拍板前不动原稿</b>；绿色插入线＝建议新增，红色删除线＝建议删改。</td></tr>
+      </table>
+    </div></div>
+
+    <div class="fold"><div class="fold-h"><span class="arr">▶</span>评分全表</div><div class="fold-body">
+      <div class="score-grid">
+        <div class="sc"><div class="t">【维度】</div><div class="v">x</div></div>
+      </div>
+      <p class="src-note">评分为无锚点相对刻度：≤4＝明显短板，5–6＝有基础待优化，≥7＝可保持。各维依据见对应批注卡。</p>
+    </div></div>
+
+    <div class="fold"><div class="fold-h"><span class="arr">▶</span>机制全表（每条建议背后的规律 · 证据等级 · 边界）</div><div class="fold-body">
+      <!-- 本次诊断引用的全部机制，一行一条：中文名/原名/等级 + 本文作用 + 边界；复核清单机制带修正状态 -->
+      <table>
+        <tr><th style="width:30%">机制（中文名 / 原名 · 等级）</th><th>在本文中的作用与边界</th></tr>
+        <tr><td><b>【机制名】</b> <span class="g gB">B</span></td><td>【在本文作用】<span class="src-note">边界：…</span></td></tr>
+      </table>
+      <p class="src-note">论证结构分析（论点—论据—推导—限定）是分析框架而非实证效应，不作为"机制"计级。</p>
+    </div></div>
+
+    <div class="fold"><div class="fold-h"><span class="arr">▶</span>反模式走查（命中的）</div><div class="fold-body">
+      <!-- M7：19 条 AP 走查结果，命中项列修复对应批注；未命中汇总一句。M1/M2 可省略本折 -->
+      <table>
+        <tr><th style="width:24%">反模式</th><th class="c" style="width:12%">判定</th><th>对应批注与修复</th></tr>
+        <tr><td>【名称（不用编号）】</td><td class="c fail">轻/中</td><td>批注 ⑳ → 【动作】</td></tr>
+      </table>
+      <p class="src-note">未命中项汇总说明。</p>
+    </div></div>
+
+    <div class="fold"><div class="fold-h"><span class="arr">▶</span>边界、风险与合规提示</div><div class="fold-body">
+      <!-- 必填槽位：归因边界/平台时效/诊断置信/伦理底线/跨平台适用/先补数据再决定（按需取用） -->
+      <div class="risk"><ul>
+        <li><b>归因边界</b>：… <span class="conf M">中高置信</span></li>
+        <li><b>平台时效</b>：…以平台最新公告为准。</li>
+        <li><b>诊断置信</b>：… <span class="conf H">高</span> / <span class="conf M">中高</span> / <span class="conf L">中低</span></li>
+        <li><b>伦理底线</b>：不制造焦虑、不做标题党、不编造数据。</li>
+      </ul></div>
+    </div></div>
+  </div>
+</main>
+
+<!-- ================= 抽屉：施工清单 ================= -->
+<div id="drawerBar"><button id="drawerToggle">施工清单 <span class="ck" id="ckCount">0/N</span> ▲</button></div>
+<div id="drawer">
+  <div class="dw-head"><b>施工清单</b><span class="hint">勾选进度自动保存在本机浏览器 · 拍板项先确认再动手</span>
+    <button class="dw-close" id="dwClose">收起 ▼</button></div>
+  <div class="dw-progress"><i id="dwBar"></i></div>
+  <div class="dw-list" id="ckList"></div>
+</div>
+
+<script>
+/* ================= 批注数据（唯一内容源；以下两条为示例，填充后删除） ================= */
+const ANNO=[
+ {id:'A01',type:'prob',prio:'P0',layer:'点击',title:'【问题一句话】',
+  quote:'【原文引文】',
+  phen:'【现象描述；含为什么在信息流/平台上成立】',
+  mech:'【机制中文名】 English <i class="g gB">B</i>',
+  bound:'【适用边界，必填；复核清单机制带修正状态】',
+  fix:'<del>【建议删】</del><ins>【建议增】</ins>',decide:1},
+ {id:'A02',type:'asset',prio:'asset',layer:'转发',title:'【资产一句话】',
+  quote:'【原文引文】',
+  why:'【为什么是资产】',
+  fix:'<ins>【如何放大利用】</ins>'}
+];
+
+/* ================= 施工清单（示例，替换） ================= */
+const CHECKS=[
+ {id:'c1', p:'P0', need:1, t:'【需要拍板的动作】'},
+ {id:'c2', p:'P1', t:'【普通修复动作】'}
+];
+
+/* ================= 以下引擎代码无需改动 ================= */
+const TYPE_TAG={prob:'问题',minor:'待改进',asset:'资产'};
+function cardHTML(a,inline){
+  const cls=a.type;
+  const tag=TYPE_TAG[a.type]+(a.type==='prob'?' '+a.prio:'');
+  return `<div class="${inline?'inline-card':'diag-card'} ${cls}" data-a="${a.id}" data-k="${a.type==='asset'?'asset':a.prio}">
+    <div class="dc-head">
+      <span class="dc-n">${a.n}</span>
+      <span class="dc-tag ${cls}">${tag}</span>
+      <span class="dc-layer">影响：${a.layer}</span>
+      ${a.decide?'<span class="dc-decide">需拍板</span>':''}
+      ${inline?'<a class="dc-back" data-close="'+a.id+'">收起 ▲</a>':'<a class="dc-back" data-back="'+a.id+'">回原文 ↩</a>'}
+    </div>
+    <h4>${a.title}</h4>
+    <blockquote>${a.quote}</blockquote>
+    ${a.phen?`<p class="dc-sec"><b>现象</b>${a.phen}</p>`:''}
+    ${a.why?`<p class="dc-sec"><b>为什么是资产</b>${a.why}</p>`:''}
+    ${a.mech?`<p class="dc-sec"><b>机制</b>${a.mech}</p>`:''}
+    ${a.bound?`<p class="dc-sec bound"><b>边界</b>${a.bound}</p>`:''}
+    ${a.fix?`<p class="dc-sec"><b>修复动作</b> <span class="mini">〔建议 · 待你确认，拍板前不动原稿〕</span><br>${a.fix}</p>`:''}
+  </div>`;
+}
+ANNO.forEach((a,i)=>a.n=i+1);
+document.getElementById('cards').innerHTML=ANNO.map(a=>cardHTML(a,false)).join('');
+document.getElementById('cardCount').textContent=`共 ${ANNO.length} 处批注 · 问题 ${ANNO.filter(x=>x.type==='prob').length} · 待改进 ${ANNO.filter(x=>x.type==='minor').length} · 资产 ${ANNO.filter(x=>x.type==='asset').length}`;
+
+/* 角标注入（对照视图原文） */
+document.querySelectorAll('#origSrc .hl').forEach(sp=>{
+  const a=ANNO.find(x=>x.id===sp.dataset.a);
+  if(a){sp.dataset.k=a.type==='asset'?'asset':a.prio;
+    const sup=document.createElement('sup');sup.className='ab '+a.type;sup.dataset.a=a.id;sup.textContent=a.n;
+    sp.appendChild(sup);}
+});
+
+/* 原文批注视图：克隆原文＋内嵌卡 */
+(function(){
+  const clone=document.getElementById('origSrc').cloneNode(true);
+  clone.classList.add('solo');
+  clone.querySelectorAll('.hl').forEach(sp=>{
+    const a=ANNO.find(x=>x.id===sp.dataset.a);if(!a)return;
+    if(!sp.querySelector('.ab')){
+      const sup=document.createElement('sup');sup.className='ab '+a.type;sup.dataset.a=a.id;sup.textContent=a.n;
+      sp.appendChild(sup);
+    }
+    const block=sp.closest('p,h1,h2,h3')||sp.parentElement;
+    const wrap=document.createElement('div');wrap.innerHTML=cardHTML(a,true);
+    const card=wrap.firstChild;card.dataset.forBlock=block.tagName;
+    if(block.nextSibling&&block.nextSibling.classList&&block.nextSibling.classList.contains('inline-card')){
+      block.parentNode.insertBefore(card,block.nextSibling.nextSibling);
+    }else{block.parentNode.insertBefore(card,block.nextSibling);}
+  });
+  const tag=document.createElement('div');tag.className='o-tag';
+  tag.innerHTML='<span><b>原文批注视图</b> · 点角标展开／收起批注卡 · J/K 在批注间跳转</span><span>打印时自动展开全部</span>';
+  clone.prepend(tag);
+  document.getElementById('origCloneHolder').appendChild(clone);
+})();
+
+/* ================= 交互 ================= */
+const body=document.body;
+let curIdx=-1;
+
+function setView(v){
+  body.dataset.view=v;
+  document.querySelectorAll('.tb-views button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  document.querySelectorAll('.view').forEach(s=>s.classList.remove('on'));
+  document.getElementById('view-'+v).classList.add('on');
+  window.scrollTo(0,0);
+  if(v==='orig'){document.getElementById('view-orig').classList.add('on');}
+  save();
+}
+document.querySelectorAll('.tb-views button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.v)));
+
+function gotoCard(id){
+  if(body.dataset.view==='orig'){
+    const card=document.querySelector('#view-orig .inline-card[data-a="'+id+'"]');
+    if(card){
+      const opening=!card.classList.contains('open');
+      card.classList.toggle('open');
+      const target=opening?card:document.querySelector('#view-orig .hl[data-a="'+id+'"]');
+      if(target){target.scrollIntoView({behavior:'smooth',block:'center'});}
+      if(opening){card.classList.remove('flash');void card.offsetWidth;card.classList.add('flash');}
+    }
+  }else{
+    const card=document.querySelector('#cards .diag-card[data-a="'+id+'"]');
+    if(card){card.scrollIntoView({behavior:'smooth',block:'start'});
+      card.classList.remove('flash');void card.offsetWidth;card.classList.add('flash');}
+  }
+}
+function backToOrig(id){
+  setView('compare');
+  requestAnimationFrame(()=>{
+    const sp=document.querySelector('#origSrc .hl[data-a="'+id+'"]');
+    if(sp){sp.scrollIntoView({behavior:'smooth',block:'center'});
+      sp.classList.remove('flash');void sp.offsetWidth;sp.classList.add('flash');}
+  });
+}
+document.addEventListener('click',e=>{
+  const cl=e.target.closest('[data-close]');
+  if(cl){const id=cl.dataset.close;
+    const card=document.querySelector('#view-orig .inline-card[data-a="'+id+'"]');
+    if(card)card.classList.remove('open');
+    const sp=document.querySelector('#view-orig .hl[data-a="'+id+'"]');
+    if(sp){sp.scrollIntoView({behavior:'smooth',block:'center'});}
+    return;}
+  const ab=e.target.closest('.ab');
+  if(ab){gotoCard(ab.dataset.a);return;}
+  const hl=e.target.closest('.hl');
+  if(hl){gotoCard(hl.dataset.a);return;}
+  const back=e.target.closest('.dc-back');
+  if(back){backToOrig(back.dataset.back);return;}
+  const fh=e.target.closest('.fold-h');
+  if(fh){fh.parentElement.classList.toggle('open');return;}
+});
+
+/* 筛选 */
+const F=new Set();
+function applyFilter(){
+  document.querySelectorAll('.diag-card,.inline-card,.hl').forEach(el=>{
+    const k=el.dataset.k;
+    el.classList.toggle('fhide',F.size>0&&!F.has(k));
+  });
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',F.has(c.dataset.f)));
+}
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  F.has(c.dataset.f)?F.delete(c.dataset.f):F.add(c.dataset.f);applyFilter();}));
+document.getElementById('clearF').addEventListener('click',()=>{F.clear();applyFilter();});
+
+/* J/K 跳转 */
+function visibleAnnoSpans(){
+  const scope=body.dataset.view==='orig'?document.getElementById('view-orig'):document.getElementById('origPane');
+  return Array.from(scope.querySelectorAll('.hl')).filter(el=>el.offsetParent!==null&&el.dataset.a);
+}
+function jump(dir){
+  const spans=visibleAnnoSpans();if(!spans.length)return;
+  curIdx=(curIdx+dir+spans.length)%spans.length;
+  const sp=spans[curIdx];
+  sp.scrollIntoView({behavior:'smooth',block:'center'});
+  sp.classList.remove('flash');void sp.offsetWidth;sp.classList.add('flash');
+  if(body.dataset.view!=='orig'){gotoCard(sp.dataset.a);}
+}
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;
+  if(e.key==='j'||e.key==='J')jump(1);
+  if(e.key==='k'||e.key==='K')jump(-1);
+});
+
+/* 抽屉与清单 */
+const drawer=document.getElementById('drawer');
+function save(){try{localStorage.setItem(location.pathname+'-reader',JSON.stringify(state));}catch(e){}}
+let state={ck:{},view:'compare'};
+try{const s=JSON.parse(localStorage.getItem(location.pathname+'-reader'));if(s)state=s;}catch(e){}
+document.getElementById('ckList').innerHTML=CHECKS.map(c=>
+  `<label class="ck-item" data-id="${c.id}">
+    <input type="checkbox" ${state.ck[c.id]?'checked':''}>
+    <span class="p ${c.p}">${c.p}</span>
+    <span class="txt">${c.t}</span>
+    ${c.need?'<span class="need">先拍板</span>':''}
+  </label>`).join('');
+function refreshCk(){
+  const done=CHECKS.filter(c=>state.ck[c.id]).length;
+  document.getElementById('ckCount').textContent=done+'/'+CHECKS.length;
+  document.getElementById('dwBar').style.width=(done/CHECKS.length*100)+'%';
+  document.querySelectorAll('.ck-item').forEach(el=>el.classList.toggle('done',!!state.ck[el.dataset.id]));
+}
+document.getElementById('ckList').addEventListener('change',e=>{
+  const item=e.target.closest('.ck-item');if(!item)return;
+  state.ck[item.dataset.id]=e.target.checked;save();refreshCk();
+});
+refreshCk();
+document.getElementById('drawerToggle').addEventListener('click',()=>drawer.classList.toggle('open'));
+document.getElementById('dwClose').addEventListener('click',()=>drawer.classList.remove('open'));
+
+document.getElementById('goDecision').addEventListener('click',()=>{
+  setView('report');
+  requestAnimationFrame(()=>document.getElementById('decision').scrollIntoView({behavior:'smooth'}));
+});
+document.getElementById('doPrint').addEventListener('click',()=>window.print());
+
+if(state.view&&state.view!=='compare'){setView(state.view);}
+</script>
+</body>
+</html>

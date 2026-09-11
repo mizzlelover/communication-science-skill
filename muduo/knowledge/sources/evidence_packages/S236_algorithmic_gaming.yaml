@@ -1,0 +1,23 @@
+# Evidence Package — S236（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S236
+title: 'Corrective Policy and Goodhart''s Law: The Case of Carbon Emissions from Automobiles'
+authors: Mathias Reynaert; James M. Sallee
+year: 2016
+journal: NBER Working Paper 22911（WP 版本登记，诚实标注）
+doi: 10.3386/w22911
+url: https://www.nber.org/papers/w22911
+access_level: abstract_only
+research_status: annotated
+content_obtained: NBER PDF 摘要与引言逐字实读（2026-09-11）
+research_question: 当测量成为规制目标时，测量本身会发生什么？
+core_claims:
+- Goodhart 定律实证：欧盟碳排放规制上线后，道路实测油耗与官方实验室测试值的差距从规制前约 5% 升至 2014 年的 40% 以上
+- 政策归因的燃油经济性改进中约 75% 实为对测试的博弈（gaming）所致
+- 企业有强烈激励博弈测量；测量被策略行为侵蚀后，信号与真实价值分离
+method: 2700 万次加油站点面板数据 + 结构模型
+limitations: 非平台内容场景（汽车排放规制）；机制外推到平台信号博弈为类比论证
+boundary_conditions: 存在高利害测量与规制/考核压力的情境
+relevant_nodes:
+- algorithmic_gaming
+notes: algorithmic_gaming 一手实证（类比场景）：'任何可被测量的信号都会被博弈、信号与真实价值分离'的机制被大样本数据直接证明；平台内容场景的博弈机制以此为机制层类比，诚实标注为非平台场景。
+last_verified: 2026-09

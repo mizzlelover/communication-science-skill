@@ -37,6 +37,7 @@ recommendation_model: >-
 social_graph_characteristics: >-
   弱关系社区：关注关系不主导分发，陌生人内容占绝对主体；
   博主与粉丝是"信任咨询"关系而非"偶像-粉丝"关系（source_credibility_model）。
+  [industry_consensus-结构观察]
 
 content_lifecycle: >-
   爆发期数天+搜索长尾数月：笔记可被长期搜索反复唤醒——
@@ -51,6 +52,7 @@ primary_entry_points:
 attention_environment: >-
   双列选择式浏览：用户在"比较"状态，同屏竞争多条笔记——
   封面+标题是入选赛，点进详情后才是沉浸阅读；注意力在列表层已被分配。
+  [industry_consensus-行为观察]
 
 user_behavior: >-
   "遇事不决小红书"的搜索心智 [industry_consensus]；
@@ -58,10 +60,10 @@ user_behavior: >-
   （authenticity_perception）；收藏行为极高频（工具化使用）。
 
 interaction_signals:
-  - "收藏：决策价值最高信号——'我以后用得上'，与长尾需求强相关"
-  - "评论：讨论/求链接/求细节，是需求信号的采集器"
+  - "收藏：决策价值最高信号——'我以后用得上'，与长尾需求强相关 [industry_consensus-行为观察]"
+  - "评论：讨论/求链接/求细节，是需求信号的采集器 [industry_consensus-行为观察]"
   - "点赞：态度认可，权重低于收藏 [industry_consensus]"
-  - "转发：分享给具体的人（'你看看这个'），点对点背书"
+  - "转发：分享给具体的人（'你看看这个'），点对点背书 [industry_consensus-行为观察]"
   - "关注：关系沉淀，但对后续分发影响有限 [industry_consensus]"
 
 sharing_mechanism: >-
@@ -78,6 +80,7 @@ community_mechanism: >-
   评论区=集体决策现场："蹲链接""蹲教程""姐妹们别买"构成互助规范
   （normative_influence）；博主回复评论是转化关键动作；无强社群产品，
   社群沉淀靠粉丝群与群聊功能（较轻量）。
+  [industry_consensus-社区观察]
 
 algorithmic_features:
   - "双列点击与互动反馈排序 [industry_consensus]"
@@ -104,6 +107,7 @@ cover_role: >-
 opening_role: >-
   详情页首屏决定收藏与读完：首图+首行文字需兑现封面承诺；
   正文首行在部分信息流预览中可见，承担二次钩子。
+  [industry_consensus-策略观察]
 
 tag_role: >-
   话题标签是内容分类器与搜索聚合入口，不是流量卡 [industry_consensus]；
@@ -112,6 +116,7 @@ tag_role: >-
 comment_role: >-
   评论区是信任证据链：真实提问与博主认真回复构成转化的临门一脚；
   "评论区比正文有用"的社区文化让运营评论成为正式工作而非附加动作。
+  [industry_consensus-社区观察]
 
 follow_role: >-
   关注权重弱：粉丝量不保证流量，单笔记质量决定分发 [industry_consensus]；

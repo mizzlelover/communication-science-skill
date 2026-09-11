@@ -1,0 +1,21 @@
+# Evidence Package — S227（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S227
+title: 视频创作激励年度计划（官方活动页）
+authors: bilibili
+year: 2026
+journal: bilibili 官方活动页
+doi: ''
+url: https://www.bilibili.com/blackboard/activity-N13czQtWTg.html
+access_level: full_text
+research_status: annotated
+content_obtained: 本项目 2026-09-10 官方实读（platform_sources in platforms/bilibili，claim_supported 在案）
+research_question: B 站创作激励的官方门槛与结算规则是什么？
+core_claims:
+- 创作激励存在官方申请门槛与结算规则（如权益等级≥3、信用分≥80、月激励上限 2000 元）——激励结构的官方文档
+method: 官方活动页
+limitations: 档位与数值以官方最新版本为准
+boundary_conditions: 仅覆盖创作激励计划，不覆盖推荐权重
+relevant_nodes:
+- creator_incentive_structures
+notes: creator_incentive_structures 的官方一手证据（变现结构存在性与参数化；'激励结构筛选内容形态'的因果判断仍为机制层）。
+last_verified: 2026-09

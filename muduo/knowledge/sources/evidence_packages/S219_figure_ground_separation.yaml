@@ -1,0 +1,26 @@
+# Evidence Package — S219（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S219
+title: 'A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure-ground
+  organization'
+authors: Johan Wagemans; James H. Elder; Michael Kubovy; Stephen E. Palmer; Mary A. Peterson; Manish Singh;
+  Rüdiger von der Heydt
+year: 2012
+journal: Psychological Bulletin 138(6):1172-1217
+doi: 10.1037/a0029333
+url: https://pubmed.ncbi.nlm.nih.gov/22845751/
+access_level: abstract_only
+research_status: annotated
+content_obtained: PubMed 摘要逐字实读（2026-09-11）；PMID 22845751 标注 Free PMC article（全文在 PMC 公开可读）
+research_question: 格式塔心理学百年：知觉分组与图形-背景组织的现代证据？
+core_claims:
+- 系统综述经典与新的分组原则：近接/相似/共同命运/良好连续/闭合/对称/平行（经典）+ 同步/共同区域/元素与均匀连接（新）
+- 综述图形-背景组织的经典与新的基于图像的原则、经验与注意对它的影响、及其与形状/深度知觉的关系
+- 综述轮廓分组、边界归属（border ownership）与图形-背景知觉的神经机制
+method: 叙事性综述（review，Psychological Bulletin）
+limitations: 综述而非单一实验；结论强度取决于所收录原始研究
+boundary_conditions: 知觉组织研究边界：双向可翻转型图形显示归属可翻转但任一时刻单一前景
+relevant_nodes:
+- figure_ground_separation
+notes: figure_ground_separation 的一手综述来源：Rubin 传统（可逆图形）与图像线索、经验作用均被该综述正式覆盖——节点 definition 中'Rubin 1915/1921
+  经典研究未建包'的缺口由本文献综述正式接驳。
+last_verified: 2026-09

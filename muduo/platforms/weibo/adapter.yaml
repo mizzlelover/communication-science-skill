@@ -41,6 +41,7 @@ social_graph_characteristics: >-
   弱关系媒体网络：单向关注大 V 为主，名人-粉丝放射状结构；
   陌生人互动默认公开（回复区是公共广场）；
   大 V 的转发是流量杠杆（opinion_leadership + preferential_attachment）。
+  [industry_consensus-结构观察]
 
 content_lifecycle: >-
   全平台最短爆发周期：热点窗口常以小时计，24-48 小时后关注度断崖
@@ -57,6 +58,7 @@ primary_entry_points:
 attention_environment: >-
   快节奏扫读+热点围观：用户在多个事件间跳跃，情绪浓度高——
   微博是中文互联网的"公共情绪放大器"；品牌与个人都在同一舆论场裸泳。
+  [industry_consensus-行为观察]
 
 user_behavior: >-
   围观与站队：转发表达立场、评论参与争论、点赞态度表态；
@@ -64,11 +66,11 @@ user_behavior: >-
   [industry_consensus]；吃瓜与反转文化让"二次验证"成为习惯。
 
 interaction_signals:
-  - "转发：第一权重信号——扩散型动作，把内容带入新关系链"
+  - "转发：第一权重信号——扩散型动作，把内容带入新关系链 [industry_consensus-权重观察；转发产品形态见 sharing_mechanism]"
   - "评论：参与讨论，回复数是热度指标；ratio（回复远多于点赞）常暗示争议 [industry_consensus]"
-  - "点赞：最低成本态度"
+  - "点赞：最低成本态度 [industry_consensus-行为观察]"
   - "阅读量：曝光统计 [official_rule-产品存在]"
-  - "超话签到/发帖：社区黏性信号"
+  - "超话签到/发帖：社区黏性信号 [official_rule-产品存在（超话）＋industry_consensus-行为观察]"
 
 sharing_mechanism: >-
   转发即传播——一键转发（可附评论）是微博的物种特征 [official_rule-产品形态]；
@@ -100,10 +102,12 @@ title_role: >-
   首句即标题：信息流只展示前一两行，首句必须自带传播点——
   被截图转发的往往是首句金句（gist_vs_verbatim_memory）；
   话题词 #xx# 承担分类与热搜入口职责。
+  [industry_consensus-策略观察；话题词机制 official（见 tag_role/S2）]
 
 cover_role: >-
   九图首图与视频封面：在转发卡片与信息流中承担视觉锚点；
   首图决定九宫格的整体观感（visual_hierarchy）。
+  [industry_consensus-策略观察；九图上限官方（见 content_constraints）]
 
 opening_role: >-
   首句定生死：截断机制下折叠线以上是全部战场；
@@ -117,6 +121,7 @@ comment_role: >-
   评论区=舆论现场：热评排序、楼主回复、控评与反控评；
   争议性内容的评论区本身就是内容（围观价值）；
   品牌官微的评论区是公关第一现场。
+  [industry_consensus-行为观察]
 
 follow_role: >-
   单向关注媒体式追更：粉丝量=话语权资产；
@@ -132,15 +137,15 @@ known_platform_patterns:
   - pattern: "话题词蹭热搜入口（#热点词#+观点）"
     mechanism_links: [algorithmic_amplification, attention_economics, availability_heuristic]
     fact_type: industry_consensus
-    note: "热搜词自带聚合页流量与用户既有注意；边界：与热点无关的硬蹭被用户识别为蹭流量并反噬好感。"
-    evidence_level: L2
+    note: "话题/超话主持人机制为官方规则 [S2：话题管理规定]；'热搜词自带聚合页流量与用户既有注意'的入口判断为共识层。边界：与热点无关的硬蹭被用户识别为蹭流量并反噬好感。"
+    evidence_level: L3
     source_ref: S2
     last_verified: "2026-09"
   - pattern: "首句金句化（可截图传播结构）"
     mechanism_links: [processing_fluency, gist_vs_verbatim_memory, concreteness_in_language]
     fact_type: industry_consensus
-    note: "金句必须在截断线上完成完整语义；被截图是微博内容进入私域传播的主要形态。"
-    evidence_level: L2
+    note: "微博 140 字定义与截断线为官方规则 [S3：博文头条服务协议]；'金句须在截断线内完成完整语义、被截图是微博内容进入私域传播的主要形态'为共识层判断。"
+    evidence_level: L3
     source_ref: S3
     last_verified: "2026-09"
   - pattern: "转发抽奖激活裂变"

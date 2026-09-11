@@ -14,6 +14,7 @@ platform_sources:
   - {ref_id: S1, source: "腾讯客服《微信朋友圈怎么设置权限》https://kf.qq.com/touch/wxappfaq/180914q2IjYz180914MJBJZn.html", source_owner: "腾讯（微信团队客服）", source_type: official, claim_supported: "朋友圈权限机制：允许朋友查看的范围（全部/半年/一个月/三天）、不看TA/不让他看（分组可见性）、允许陌生人查看十条朋友圈", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
   - {ref_id: S2, source: "腾讯客服《转发/分享内容到朋友圈》http://kf.qq.com/faq/161223qmMr6f161223fueyya.html", source_owner: "腾讯（微信团队客服）", source_type: official, claim_supported: "朋友圈内容分享规则：分组内可见性、非双向好友不可见、避免相同内容被多次分享", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
   - {ref_id: S3, source: "腾讯客服《发送朋友圈失败怎么办》https://kf.qq.com/touch/faq/170524FB77Rb170524MrYreQ.html", source_owner: "腾讯（微信团队客服）", source_type: official, claim_supported: "朋友圈违规治理：发布内容中不应存在诱导分享行为；违规使用朋友圈（恶意传播营销/色情类信息）将导致朋友圈功能被限制", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {ref_id: S4, source: "《微信外部链接内容管理规范》https://weixin.qq.com/agreement/weixin_external_links_content_management_specification", source_owner: "腾讯（微信）", source_type: official, claim_supported: "朋友圈官方定位（'朋友圈是用户分享和关注朋友们生活点滴的空间'）；诱导分享类内容治理（集赞/助力/砍价/'不转不是中国人'式胁迫转发）；强制诱导关注类；诱导下载/跳转类；违规拼团类", published_date: "2025-10-23（更新日期）", accessed_date: "2026-09-10", freshness: current, confidence: high}
 
 content_units:
   - "图文（最多 9 图）"
@@ -31,6 +32,7 @@ distribution_model: >-
   无算法、无推荐：纯时间流+共同好友可见性，触达=好友数×刷朋友圈比例×停留时长。
   这是全平台唯一"分发由关系完全决定"的主流场景——不追热点、不投算法，
   唯一的杠杆是关系链本身与发布时机。
+  [official_rule-产品形态（共同好友可见性机制见 S1/S2）＋industry_consensus-触达公式观察]
 
 recommendation_model: >-
   无推荐系统 [official_rule-产品形态]：可见性由发布时间与好友关系唯一决定；
@@ -39,10 +41,12 @@ recommendation_model: >-
 social_graph_characteristics: >-
   双向强关系：互为好友才可见、才可互动；好友规模数百级且多为同事/家人/同学，
   规范压力大（norm_enforcement_reputation）——所有人都在看着"你这个人"。
+  [official_rule-产品形态（双向好友可见性见 S1/S2）＋industry_consensus-规范压力观察]
 
 content_lifecycle: >-
   极短：小时到 1-2 天。超过 24 小时的内容几乎不再被看到（时间流冲刷）；
   无搜索长尾、无推荐复活——发布时刻就是全部。
+  [industry_consensus-行为观察]
 
 primary_entry_points:
   - "发现页朋友圈入口（首屏一级入口）"
@@ -51,22 +55,25 @@ primary_entry_points:
 attention_environment: >-
   快速滑动扫视：每条动态停留 1-3 秒，无标题无封面竞争——
   首图与首行文字是仅有的注意力入口；用户处于低戒备高信任的"熟人滤镜"状态。
+  [industry_consensus-行为观察]
 
 user_behavior: >-
   点赞是最低成本的关系货币（reciprocity_norm 的日常维护）；
   评论仅共同好友可见，是半私密对话；分组与屏蔽是常态化的印象管理工具
   （self_presentation_impression_management）。
+  [industry_consensus-行为观察；分组/屏蔽功能官方机制见 S1]
 
 interaction_signals:
-  - "点赞：关系维护信号，语义最弱但频率最高"
+  - "点赞：关系维护信号，语义最弱但频率最高 [industry_consensus-行为观察]"
   - "评论：私密性对话，仅共同好友可见 [official_rule-产品形态]"
-  - "转发好友内容到自己的朋友圈：把别人的表达变成自己的自我表达，背书强度最高"
+  - "转发好友内容到自己的朋友圈：把别人的表达变成自己的自我表达，背书强度最高 [official_rule-转发产品功能见 S2＋industry_consensus-背书强度判断]"
   - "屏蔽/不看TA：负向信号不可见但真实存在 [verified_observation-产品提供分组与屏蔽功能]"
 
 sharing_mechanism: >-
   朋友圈本身就是分享的目的地：文章/视频/小程序卡片经由好友转发进入关系链。
   阻碍在于社交扣分——营销感过重会被"分组""屏蔽"甚至删除好友；
   商业内容的存活依赖"人设先于卖货"的信任储蓄（trust_calibration）。
+  [official_rule-外链卡片与诱导分享治理见 S3/S4＋industry_consensus-社交扣分观察]
 
 search_mechanism: >-
   无公开搜索价值：内容不可被陌生人检索 [official_rule-产品形态]；
@@ -75,6 +82,7 @@ search_mechanism: >-
 community_mechanism: >-
   朋友圈不是社群空间而是印象管理舞台：无身份分层、无话题聚合、无组织结构；
   社群功能需迁移到微信群。它的价值是持续曝光个人人设（mental_availability）。
+  [official_rule-产品形态（无关注/无话题聚合为界面公开可见）＋industry_consensus-定位判断]
 
 algorithmic_features:
   - "自然内容无算法 [official_rule-产品形态]"
@@ -88,10 +96,12 @@ content_constraints:
 title_role: >-
   无标题元素：首行文字即标题；超过折叠线的内容物理性不可见——
   首行必须在折叠线上完成钩子（serial_position_effect + 折叠机制叠加）。
+  [industry_consensus-行为观察（折叠阈值为产品显示行为，无官方数值）]
 
 cover_role: >-
   无封面：九宫格首图承担封面职责，居中第一格视觉权重最高
   （visual_hierarchy + gestalt_grouping 的九宫格完形）。
+  [industry_consensus-策略观察；图文 9 张上限官方（见 content_constraints）]
 
 opening_role: >-
   首行即开场即标题：折叠线以上是全部阅读率的战场；
@@ -105,10 +115,12 @@ comment_role: >-
   点赞=关系货币（礼尚往来的最低成本形态）；
   评论=共同好友可见的半公开剧场，评论互动常比内容本身更能维系关系；
   作者回复他人评论强化温度。
+  [official_rule-产品形态（评论仅共同好友可见，界面公开可见）＋industry_consensus-关系观察]
 
 follow_role: >-
   无关注机制：好友即关系资产。商业视角下"加好友"是比"涨粉"更重的承诺
   （双向同意），因此清洗率与信任门槛都更高。
+  [official_rule-产品形态（朋友圈无关注机制为界面公开可见）＋industry_consensus-商业观察]
 
 risk_factors:
   - "[industry_consensus] 广告感触发社交扣分：被分组/被屏蔽不可见但累积，最终表现为互动归零"

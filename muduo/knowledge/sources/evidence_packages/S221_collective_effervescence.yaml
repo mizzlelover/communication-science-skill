@@ -1,0 +1,25 @@
+# Evidence Package — S221（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S221
+title: Psychosocial effects of perceived emotional synchrony in collective gatherings
+authors: Dario Páez; Bernard Rimé; Nekane Basabe; Anna Wlodarczyk; Larraitz Zumeta
+year: 2015
+journal: Journal of Personality and Social Psychology 108(5):711-729
+doi: 10.1037/pspi0000014
+url: https://pubmed.ncbi.nlm.nih.gov/25822033/
+access_level: abstract_only
+research_status: annotated
+content_obtained: PubMed 摘要逐字实读（2026-09-11）；PMID 25822033
+research_question: Durkheim 集体欢腾理论整体上是否可被实证检验？
+core_claims:
+- 4 项研究（2 相关、1 半纵向、1 实验）：参加集体聚会（民俗游行/抗议示威）一致增强集体认同、身份融合、社会整合，并提升个人与集体自尊、效能感、积极情绪与积极社会信念
+- 情绪共融（emotional communion，即知觉情绪同步）中介上述效应——集体欢腾的核心过程得到检验
+- 知觉情绪同步越高→更强情绪反应、更强社会支持、更高社会信念认同；共享心流（flow）主要关联集体效能与自尊（赋能侧）
+method: 多研究混合设计（相关+半纵向+实验），西班牙/比利时样本
+limitations: 聚会为线下同步情境；线上弱同步外推未测
+boundary_conditions: 正向与负向情绪聚会均有效；效应以同步感知为中介
+relevant_nodes:
+- collective_effervescence
+- community_rituals
+notes: collective_effervescence（B 级）的一手实证：Durkheim 集体欢腾被 JPSP 四研究检验。同组 Pizarro et al. 2022 Front Psychol
+  元分析（PMID 36118463，OA）经检索确认存在，可在后续复核中建包。community_rituals 的'同步注意/情绪/行为→联结'过程同被覆盖。
+last_verified: 2026-09

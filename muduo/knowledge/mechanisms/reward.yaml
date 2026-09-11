@@ -1,294 +1,463 @@
 # reward — 奖励（Reward）：奖励结构与神经机制如何塑造重复行为
 domain: reward
 nodes:
-  - id: variable_ratio_reward
-    canonical_name_en: Variable-Ratio Reinforcement
-    canonical_name_zh: 可变比率强化
-    aliases: [不定比率强化, 变动奖励, variable reward]
-    domain: reward
-    definition: "可变比率强化是 Skinner 操作性条件反射研究中的强化程序之一：奖励按不固定的反应次数投放（平均比率恒定但每次不可预期）。在实验室中，可变比率程序产生最高的反应速率与最强的抗消退性（PREE；经典文献，未建包）。实验室内的强化程序证据极稳健，但向数字产品与营销情境的迁移多为观察与从业者实践，故本节点定级 B。"
-    core_claim: "不可预期但平均可得的奖励，比固定奖励产生更高的行为频率与更强的持续性。"
-    mechanism: "不可预期性使每次反应都携带潜在的奖励可能，反应与奖励的关联在部分强化下不易被觉察为『失效』，消退时行为保持更久（部分强化效应）；奖励预期的不确定性放大了奖励预测误差的方差（与 reward_prediction_dopamine 衔接），提高每一次尝试的动机权重（S17、S18）。"
-    causal_chain: "不可预期的奖励投放 → 每次反应的期望奖励权重上升 → 高频反应 → 部分强化下抗消退"
-    variables:
-      inputs: [奖励概率与方差, 反应成本, 奖励价值]
-      moderators: [奖励与任务的相关性, 用户对程序的理解, 惩罚与失败体验的占比]
-      mediators: [奖励期望, 预测误差波动, 习惯化程度]
-      outputs: [行为频率, 抗消退性, 停留时长]
-    evidence:
-      supporting:
-        - "Skinner 与 Ferster 的强化程序实验体系：可变比率程序的反应速率与抗消退优势（经典实验，动物为主）"
-        - "Hooked（S17）将其转译为产品设计的多变奖励原理（从业者综述）"
-      conflicting:
-        - "奖励无价值或与任务无关时，高频行为伴随负面体验与流失；实验室结论到人类线上行为的迁移缺乏严格对照（迁移争议）"
-      replication:
-        - "实验室等级极高；『用于人类产品即有效且无害』属外推，行业证据多为案例分析。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "奖励对用户有真实价值，且行为本身低成本可重复"
-      - "用户未察觉或未反感该程序时程序才隐蔽有效"
-    failure_conditions:
-      - "奖励池贫乏或概率过苛，变成可察觉的损失游戏"
-      - "监管介入或用户觉醒后，机制暴露反而摧毁信任"
-    common_misinterpretations:
-      - "『可变奖励=万灵药』：无价值奖励的赌博化设计引发倦怠、道德争议与监管（如开箱机制讨论）"
-      - "把可变比率与可变间隔混用；两者产生不同的行为模式"
-    ethical_risks:
-      - "赌博式设计对易感人群（含未成年人）造成强迫性消费；开箱类机制已被多国监管关注"
-    examples:
-      original_cases: ["Hooked（S17）中的多变奖励（社群/猎物/自我）产品案例"]
-      research_cases: ["Skinner 操作箱中不同强化程序的对比实验"]
-      modern_cases: ["信息流刷新、抽卡与盲盒、直播抽奖、社群随机红包"]
-    communication_implications: "活动设计可用可变惊喜（随机彩蛋、幸运名单）提升参与频率，但核心价值奖励应保持可预期，两者需要分层。"
-    community_implications: "社群互动中可用随机性元素（抽签点评、盲盒任务）提升趣味，但身份性奖励（晋升、认证）必须透明可预期。"
-    content_applications:
-      body: "系列内容在固定结构中埋惊喜（随机案例、彩蛋集锦），维持『下一期可能有惊喜』的预期"
-      cta: "『订阅下期，看看这次抽到谁的问题』——把随机性变成期待"
-    platform_implications: "信息流的每一次下拉刷新都是可变比率程序的工业化实现；平台的激励设计因此天然带有成瘾性争议与治理压力。"
-    related_nodes: [reward_prediction_dopamine, hook_model, hedonic_adaptation, engagement_optimization_bias, endowed_progress_effect]
-    source_ids: [S17, S18, S37, S177]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Eyal 2014（S17，可变奖励驱动渴望）+ Duhigg 2012（S18，奖励回路）+ Skinner 可变强化传统（经典文献，未建包）"
-      effect_size: "不可预测奖励维持行为频率（强化程序经典）"
-      replication_status: "可变比率强化程序为行为分析最稳健发现"
-      context_dependency: "奖励不确定性/时程/内容类型调制"
-      downgrade_upgrade_reason: "2026-09 实取 S17 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S17, S177]
-      supporting_evidence: [S18]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: reward_prediction_dopamine
-    canonical_name_en: Reward Prediction Error (Dopamine)
-    canonical_name_zh: 奖励预测误差与多巴胺
-    aliases: [奖励预测误差, RPE, 多巴胺奖赏系统]
-    domain: reward
-    definition: "奖励预测误差指实际奖励与预期奖励之差：意外获得（正误差）与预期落空（负误差）驱动学习与行为调整。 Schultz 等的猴子研究表明中脑多巴胺神经元编码该误差信号而非奖励本身。必须澄清流行误读：多巴胺不等于快乐分子——Berridge 与 Robinson 的研究区分『想要』（wanting，多巴胺主导）与『喜欢』（liking，享受体验），成瘾的核心是想要与喜欢的脱钩。"
-    core_claim: "多巴胺系统编码的是预测误差与动机显著性的『想要』信号，而非快乐本身；行为由误差驱动学习与升级的预期塑造。"
-    mechanism: "预测编码视角下，大脑持续生成对奖励的预期，多巴胺信号在误差出现时更新价值表征：正误差强化当前行为线索，负误差推动探索或放弃（S10）。预期本身也会上调基线（『下一定更好』），使固定奖励迅速失去误差信息，这解释了为何可变程序比固定程序更持久（与 variable_ratio_reward 衔接）。"
-    causal_chain: "奖励预期与实际结果的差值 → 多巴胺误差信号 → 价值更新与线索-行为强化 → 行为调整（重复或放弃）"
-    variables:
-      inputs: [奖励幅度, 预期水平, 线索可靠性]
-      moderators: [奖励延迟, 概率结构, 个体基线多巴胺状态]
-      mediators: [预测误差信号, 价值更新, 想要（wanting）状态]
-      outputs: [学习速率, 行为重复倾向, 成瘾性风险]
-    evidence:
-      supporting:
-        - "Schultz 等的单细胞记录研究：多巴胺神经元对意外奖励放电、对预期奖励不再放电、对预期落空抑制（神经生理实验；S145 仅摘要级支持，EP notes 明示待全文核验）"
-        - "Berridge 与 Robinson 的『想要/喜欢』分离研究：多巴胺耗损削弱想要而不必然削弱喜欢（经典文献，未建包）"
-      conflicting:
-        - "人类多巴胺功能的直接测量困难，部分结论依赖动物模型与间接指标；『多巴胺排毒』等流行说法无对应神经科学基础（流行误读）"
-      replication:
-        - "预测误差编码在跨实验室神经生理研究中高度可重复；注意其向内容策略的迁移是类比而非直证。评级按枚举记 A（机制层）"
-      meta_analysis: []
-    evidence_grade: A
-    boundary_conditions:
-      - "适用于奖励型学习情境；不适用于把愉悦感（liking）直接归因于多巴胺的表述"
-      - "从神经机制到具体内容策略的推断需经过行为层证据中介"
-    failure_conditions:
-      - "奖励完全可预期或与行为无关时，误差信号消失，机制失效"
-      - "把『刺激多巴胺』当成设计目标会推导出荒谬结论（任何新奇刺激都行）"
-    common_misinterpretations:
-      - "『多巴胺=快乐分子』：它更多编码想要与学习信号；成瘾者常表现为想要强烈而喜欢减弱"
-      - "『多巴胺排毒』：流行的数字排毒话术没有对应的神经机制操作定义"
-    ethical_risks:
-      - "刻意制造预测误差方差（无限滚动、抽卡）以诱发强迫性使用，利用的是学习系统本身"
-    examples:
-      original_cases: ["The Power of Habit（S18）对习惯化过程中多巴胺信号转移的科普叙述"]
-      research_cases: ["Schultz 等的猴子单细胞记录实验；Berridge 与 Robinson 的动物成瘾研究"]
-      modern_cases: ["开箱视频的惊喜结构、抽卡保底机制、社群随机掉落福利"]
-    communication_implications: "内容更新使用『可预期的节律+适度意外』结构：固定栏目降低认知成本，随机亮点维持误差信号。"
-    community_implications: "奖励公示要管理预期（说清概率与价值），因为预期的系统性抬高会把后续一切奖励变成负误差。"
-    content_applications:
-      title: "反差式标题制造预期违背：『本来以为……结果……』"
-      body: "在固定框架内设置不可预期的奖励点（彩蛋、反转、随机案例）"
-    platform_implications: "推荐系统本质是误差信号的管理器：给什么、何时给、多意外，都直接作用于该机制；过度优化短期误差会造成奖励贬值与疲劳。"
-    related_nodes: [variable_ratio_reward, prediction_error, curiosity_gap, novelty_preference, hook_model]
-    source_ids: [S10, S18, S145]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Clark 2016《Surfing Uncertainty》（S10，预测误差与奖励信号）+ Duhigg 2012（S18，渴求/多巴胺预期）"
-      effect_size: "多巴胺编码奖励预测误差（Schultz 经典发现）"
-      replication_status: "预测误差-多巴胺关系为神经科学最稳健发现之一"
-      context_dependency: "预期建立/意外程度/时间尺度调制信号强度"
-      downgrade_upgrade_reason: "2026-09 实取 S10 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S10]
-      supporting_evidence: [S18, S145]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: immediate_vs_delayed_rewards
-    canonical_name_en: Immediate vs Delayed Rewards
-    canonical_name_zh: 即时奖励与延迟奖励
-    aliases: [即时满足, 延迟满足, 棉花糖实验, discounting]
-    domain: reward
-    definition: "主观价值随奖励延迟而衰减（延迟贴现），且贴现曲线呈双曲形状：近期差异被放大，远期差异被压缩，由此产生即时奖励对延迟奖励的系统性偏好。经典佐证是 Mischel 的棉花糖实验，但必须携带后续重新解释：环境可靠性（Kidd 等的操纵实验）与控制社会经济变量后的效应缩水（Watts 等的复制研究）表明『等待能力』部分反映环境稳定性的理性适应，而非纯粹意志品质。"
-    core_claim: "奖励的主观价值随延迟非线性衰减，近期可用性权重被系统放大；环境可靠性是贴现行为的重要前因。"
-    mechanism: "远期奖励的价值表征模糊且易被竞争性即时选项覆盖；主观时间感知不均匀（近期时间被放大）；环境不可靠（承诺经常落空）时，选择即时奖励是对不确定性的理性适应而非自控缺陷。与 present_bias 的关系：本节点是奖励价值结构层面，present_bias 是其在跨期决策中的系统性偏差形式（S12、S13、S01）。"
-    causal_chain: "奖励延迟增加 → 主观价值加速衰减 → 即时选项相对价值放大 → 即时选择/等待失败"
-    variables:
-      inputs: [奖励数额与延迟, 环境可靠性, 即时替代选项的可得性]
-      moderators: [信任度, 财务稀缺状态, 奖励的可视化程度]
-      mediators: [主观价值衰减, 注意分配, 对未来自我的认同]
-      outputs: [跨期选择, 储蓄/学习等延迟收益行为的完成率]
-    evidence:
-      supporting:
-        - "Mischel 的延迟满足实验系列及其长期追踪（经典研究）"
-        - "双曲贴现的动物与人类实验证据（经典文献，未建包）"
-      conflicting:
-        - "Kidd 等的实验：等待前经历『承诺可靠/不可靠』操纵显著改变等待时间，提示环境因素"
-        - "Watts 等的更大样本复制：控制家庭背景后棉花糖效应大幅缩小"
-      replication:
-        - "贴现函数形状稳健；棉花糖作为『意志力-人生结果』因果叙事不成立。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "奖励确定性高且环境可靠时，延迟贴现更平缓"
-      - "跨期选择需真实可感；纯假想任务的贴现估计偏乐观"
-    failure_conditions:
-      - "把『等得住』当作美德训练目标而忽视环境干预，在不可靠环境中加剧不信任"
-      - "延迟奖励缺乏中间反馈与可视化时几乎不产生行为牵引"
-    common_misinterpretations:
-      - "『小时候能等棉花糖的孩子长大后更成功』的宿命论解读：效应受环境与家庭背景强烈调节"
-      - "把即时偏好等同于短视；在低信任环境中即时偏好是合理策略"
-    ethical_risks:
-      - "利用即时偏好设计高利贷式产品结构（先甜后苦），损害财务脆弱人群"
-    examples:
-      original_cases: ["Misbehaving（S12）与 Scarcity（S13）中的跨期选择讨论"]
-      research_cases: ["Mischel 棉花糖实验及其后续重新解释（Kidd 与 Watts 等研究）"]
-      modern_cases: ["积分即时抵扣 vs 年末返现；游戏每日签到与赛季奖励的组合"]
-    communication_implications: "把延迟价值拆成即时反馈阶梯（今日可见的进步），并在承诺兑现上保持绝对可靠——环境可靠性本身就是说服资产。"
-    community_implications: "社群激励体系应即时小额+延迟大额并行，且历史承诺兑现记录公开可见。"
-    content_applications:
-      body: "教程按『今天就能看到的变化』组织反馈点，远期愿景只作背景"
-      cta: "『完成这一步，立刻能看到 X』而非『坚持一年你会感谢自己』"
-    platform_implications: "平台成长体系普遍从延迟大奖转向即时小反馈（ streak、进度点），印证贴现结构；对教育类产品，需警惕即时化侵蚀深度学习。"
-    related_nodes: [present_bias, goal_gradient_effect, endowed_progress_effect, scarcity_mindset, implementation_intentions]
-    source_ids: [S12, S13, S01, S172]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Thaler 2015（S12，延迟贴现）+ Mullainathan & Shafir 2013（S13，即时压力下决策）+ Kahneman 2011（S01）"
-      effect_size: "即时奖励贴现率高于延迟奖励（双曲线贴现经典）"
-      replication_status: "延迟贴现跨物种/跨人群稳健"
-      context_dependency: "奖励规模/等待时长/承诺装置调制"
-      downgrade_upgrade_reason: "2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S12]
-      supporting_evidence: [S13, S01, S172]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: endowed_progress_effect
-    canonical_name_en: Endowed Progress Effect
-    canonical_name_zh: 人为进度效应
-    aliases: [赠送进度, endowed progress]
-    domain: reward
-    definition: "人为进度效应指在任务开始时预先赠予一定进度（如 10 格卡上已盖 2 章），会提高完成率与投入速度。Nunes 与 Drèze 2006 年的洗车忠诚卡现场实验是经典证据（经 S146 摘要转引的二手引用）：获赠进度的持卡人完成率显著更高。与 goal_gradient_effect 的关系：目标梯度描述距离-速率的自然函数，人为进度通过前移参照点操纵该函数的起点。"
-    core_claim: "预先赠予的感知进度提高目标完成率，即使该进度不改变剩余实际工作量。"
-    mechanism: "赠予的进度改变参照点并创造初始拥有感（与 endowment_effect 相通），启动目标梯度与完成度感知（S146 正面主张：效应取决于完成度感知，非沉没成本解释）；『已经完成一部分』把任务从零起点变为中途状态，完成张力提前点火；赠予本身还携带互惠信号（S71、S72）。"
-    causal_chain: "预置初始进度 → 参照点前移+初始拥有感 → 目标梯度提前启动 → 完成率与速率提升"
-    variables:
-      inputs: [赠予进度比例, 进度可视化, 目标总距离]
-      moderators: [赠予的理由正当性（凭什么送我）, 任务成本, 奖励吸引力]
-      mediators: [初始拥有感, 完成张力, 互惠感受]
-      outputs: [完成率, 投入速率, 复购与续用]
-    evidence:
-      supporting:
-        - "Nunes 与 Drèze 2006 洗车卡现场实验：预盖两章提高完成率并缩短完成时间（现场实验）"
-        - "忠诚计划与游戏新手引导领域的后续现场观察（多来源）"
-      conflicting:
-        - "赠予理由不正当（无解释的白给）或目标剩余距离过大时，效应减弱（边界研究）"
-      replication:
-        - "方向在忠诚度与任务完成场景中重复良好。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "剩余任务在可完成区间且奖励有价值"
-      - "赠予被合理解释（欢迎礼、老客户礼）而非随意发放"
-    failure_conditions:
-      - "进度作假被识破（永远差一格的套路）触发操纵感"
-      - "赠予进度与真实进度不一致，对账时信任崩塌"
-    common_misinterpretations:
-      - "以为送进度等于送好处；其杠杆在于改变参照点，若剩余工作量巨大则毫无动员力"
-    ethical_risks:
-      - "用虚假进度诱导持续消费（凑单满减的暗改门槛）"
-    examples:
-      original_cases: ["消费者行为与营销管理著作中忠诚计划设计的讨论（S71、S72）"]
-      research_cases: ["Nunes 与 Drèze 2006 忠诚卡实验"]
-      modern_cases: ["注册即完成资料 30%、新手任务礼包预置、会员成长值赠送"]
-    communication_implications: "新手引导首屏展示『你已完成 30%』并解释赠予理由（欢迎礼），把起点焦虑转化为进度感。"
-    community_implications: "新成员加入即显示已解锁的基础权限与积分，配合第一个可完成小任务，降低零起点流失。"
-    content_applications:
-      title: "『已完成 30%，只差三步』式引导标题"
-      cta: "欢迎礼话术：『这是给新朋友的起始进度』，给出赠予正当性"
-    platform_implications: "几乎所有产品的 onboarding 都内置人为进度；设计质量在于剩余距离是否真实可完成、理由是否诚实。"
-    related_nodes: [goal_gradient_effect, sunk_cost_fallacy, commitment_consistency, variable_ratio_reward, participation_ladder]
-    source_ids: [S71, S72, S146]
-    provenance:
-      primary_sources: [S146]
-      supporting_evidence: [S71, S72]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: hedonic_adaptation
-    canonical_name_en: Hedonic Adaptation
-    canonical_name_zh: 享乐适应
-    aliases: [享乐跑步机, hedonic treadmill, 快乐适应]
-    domain: reward
-    definition: "享乐适应指人们对持续出现的积极或消极刺激的情绪反应随重复暴露而衰减，回到接近基线的水平；Brickman 与 Campbell 称之为享乐跑步机。经典证据是 Brickman、Coates 与 Janoff-Bulman 1978 年对彩票中奖者与事故截瘫者的研究，但后续研究修正了『一切都会适应』的强版本：失业、慢性噪音等部分事件的适应不完全。"
-    core_claim: "重复的同类奖励带来的愉悦感系统性衰减；变动与不可预期性能部分延缓适应。"
-    mechanism: "重复刺激降低预测误差（与 reward_prediction_dopamine 衔接）：预期水平上调后，同类奖励不再产生正误差，愉悦感随之回落；注意转移与比较基准更新也在其中起作用。负性事件的适应常不完全，说明基线回归不是绝对定律（S12、S01）。"
-    causal_chain: "同类奖励重复 → 预期上调与误差衰减 → 愉悦感回落 → 需要更大或更新的刺激维持同等体验"
-    variables:
-      inputs: [刺激重复率, 刺激变异性, 比较基准]
-      moderators: [个体基线与人格, 刺激的意义感, 社会比较环境]
-      mediators: [预期上调, 预测误差衰减, 注意适应]
-      outputs: [满意度回落, 奖励贬值速度, 追加刺激需求]
-    evidence:
-      supporting:
-        - "Brickman、Coates 与 Janoff-Bulman 1978 对重大正负事件的适应研究（经典文献，未建包）"
-        - "消费与工作情境中重复奖励满意度衰减的大量观察（S12）"
-      conflicting:
-        - "后续研究显示部分负性事件（失业、慢性病）与部分正性事件适应不完全，强版本『一切回归基线』不成立（修正证据）"
-      replication:
-        - "衰减方向稳健，速度与下限因事件与个体差异大。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "对可重复、可预期的同类刺激效应最强"
-      - "与身份认同或意义感绑定的体验（成长、关系）适应较慢"
-    failure_conditions:
-      - "用不断加码的同类刺激对抗适应，只会加速贬值并抬升成本"
-      - "把适应不完全的事件（失业）当成『会过去的』而不干预"
-    common_misinterpretations:
-      - "『人对一切都会适应』的强版本：重大负性事件适应不完全，福利与救助设计不应据此推责"
-    ethical_risks:
-      - "利用适应机制设计升级诱导（越来越贵的奖励阶梯）制造持续消费压力"
-    examples:
-      original_cases: ["Misbehaving（S12）中的享乐适应与 hedonomics 讨论"]
-      research_cases: ["彩票中奖者与截瘫者适应研究"]
-      modern_cases: ["游戏奖励池轮换、社群徽章体系迭代、会员权益的年度升级"]
-    communication_implications: "奖励与内容体系需要定期轮换主题与形式，把资源投向变化而非同质加量；固定福利会被用户重新定价为理所应当。"
-    community_implications: "荣誉体系防通胀：等级与徽章应随社群成长迭代命名与标准，老资格的含金量靠稀缺与意义维持。"
-    content_applications:
-      body: "系列内容的结构保持一致但素材持续翻新，防止『看标题就猜到全部』"
-      emotion: "把仪式感与意义感注入奖励（周年纪念、共同成就），延缓适应"
-    platform_implications: "平台以算法调度新鲜度对抗适应（轮换推荐、限时活动）；这同时是留存策略与过度刺激的来源。"
-    related_nodes: [variable_ratio_reward, intrinsic_extrinsic_motivation, immediate_vs_delayed_rewards, mental_accounting, engagement_optimization_bias]
-    source_ids: [S12, S01, S173]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Thaler 2015（S12，适应与参照点迁移）+ Kahneman 2011（S01，享乐适应）"
-      effect_size: "重复刺激后的愉悦增量递减（适应现象）"
-      replication_status: "享乐适应跨领域稳健（收入/消费/社交）"
-      context_dependency: "变化节奏/新颖度/参照点调制"
-      downgrade_upgrade_reason: "2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S173]
-      supporting_evidence: [S12, S01]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: variable_ratio_reward
+  canonical_name_en: Variable-Ratio Reinforcement
+  canonical_name_zh: 可变比率强化
+  aliases:
+  - 不定比率强化
+  - 变动奖励
+  - variable reward
+  domain: reward
+  definition: 可变比率强化是 Skinner 操作性条件反射研究中的强化程序之一：奖励按不固定的反应次数投放（平均比率恒定但每次不可预期）。在实验室中，可变比率程序产生最高的反应速率与最强的抗消退性（PREE；经典文献，未建包）。实验室内的强化程序证据极稳健，但向数字产品与营销情境的迁移多为观察与从业者实践，故本节点定级
+    B。
+  core_claim: 不可预期但平均可得的奖励，比固定奖励产生更高的行为频率与更强的持续性。
+  mechanism: 不可预期性使每次反应都携带潜在的奖励可能，反应与奖励的关联在部分强化下不易被觉察为『失效』，消退时行为保持更久（部分强化效应）；奖励预期的不确定性放大了奖励预测误差的方差（与 reward_prediction_dopamine
+    衔接），提高每一次尝试的动机权重（S17、S18）。
+  causal_chain: 不可预期的奖励投放 → 每次反应的期望奖励权重上升 → 高频反应 → 部分强化下抗消退
+  variables:
+    inputs:
+    - 奖励概率与方差
+    - 反应成本
+    - 奖励价值
+    moderators:
+    - 奖励与任务的相关性
+    - 用户对程序的理解
+    - 惩罚与失败体验的占比
+    mediators:
+    - 奖励期望
+    - 预测误差波动
+    - 习惯化程度
+    outputs:
+    - 行为频率
+    - 抗消退性
+    - 停留时长
+  evidence:
+    supporting:
+    - Skinner 与 Ferster 的强化程序实验体系：可变比率程序的反应速率与抗消退优势（经典实验，动物为主）
+    - Hooked（S17）将其转译为产品设计的多变奖励原理（从业者综述）
+    conflicting:
+    - 奖励无价值或与任务无关时，高频行为伴随负面体验与流失；实验室结论到人类线上行为的迁移缺乏严格对照（迁移争议）
+    replication:
+    - 实验室等级极高；『用于人类产品即有效且无害』属外推，行业证据多为案例分析。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 奖励对用户有真实价值，且行为本身低成本可重复
+  - 用户未察觉或未反感该程序时程序才隐蔽有效
+  failure_conditions:
+  - 奖励池贫乏或概率过苛，变成可察觉的损失游戏
+  - 监管介入或用户觉醒后，机制暴露反而摧毁信任
+  common_misinterpretations:
+  - 『可变奖励=万灵药』：无价值奖励的赌博化设计引发倦怠、道德争议与监管（如开箱机制讨论）
+  - 把可变比率与可变间隔混用；两者产生不同的行为模式
+  ethical_risks:
+  - 赌博式设计对易感人群（含未成年人）造成强迫性消费；开箱类机制已被多国监管关注
+  examples:
+    original_cases:
+    - Hooked（S17）中的多变奖励（社群/猎物/自我）产品案例
+    research_cases:
+    - Skinner 操作箱中不同强化程序的对比实验
+    modern_cases:
+    - 信息流刷新、抽卡与盲盒、直播抽奖、社群随机红包
+  communication_implications: 活动设计可用可变惊喜（随机彩蛋、幸运名单）提升参与频率，但核心价值奖励应保持可预期，两者需要分层。
+  community_implications: 社群互动中可用随机性元素（抽签点评、盲盒任务）提升趣味，但身份性奖励（晋升、认证）必须透明可预期。
+  content_applications:
+    body: 系列内容在固定结构中埋惊喜（随机案例、彩蛋集锦），维持『下一期可能有惊喜』的预期
+    cta: 『订阅下期，看看这次抽到谁的问题』——把随机性变成期待
+  platform_implications: 信息流的每一次下拉刷新都是可变比率程序的工业化实现；平台的激励设计因此天然带有成瘾性争议与治理压力。
+  related_nodes:
+  - reward_prediction_dopamine
+  - hook_model
+  - hedonic_adaptation
+  - engagement_optimization_bias
+  - endowed_progress_effect
+  source_ids:
+  - S17
+  - S18
+  - S37
+  - S177
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Eyal 2014（S17，可变奖励驱动渴望）+ Duhigg 2012（S18，奖励回路）+ Skinner 可变强化传统（经典文献，未建包）
+    effect_size: 不可预测奖励维持行为频率（强化程序经典）
+    replication_status: 可变比率强化程序为行为分析最稳健发现
+    context_dependency: 奖励不确定性/时程/内容类型调制
+    downgrade_upgrade_reason: 2026-09 实取 S17 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S17
+    - S177
+    supporting_evidence:
+    - S18
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-006
+    - CASE-CMP-001
+    - CASE-FAL-009
+    - CASE-FAL-010
+    platform_sources:
+    - weibo:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: reward_prediction_dopamine
+  canonical_name_en: Reward Prediction Error (Dopamine)
+  canonical_name_zh: 奖励预测误差与多巴胺
+  aliases:
+  - 奖励预测误差
+  - RPE
+  - 多巴胺奖赏系统
+  domain: reward
+  definition: 奖励预测误差指实际奖励与预期奖励之差：意外获得（正误差）与预期落空（负误差）驱动学习与行为调整。 Schultz 等的猴子研究表明中脑多巴胺神经元编码该误差信号而非奖励本身。必须澄清流行误读：多巴胺不等于快乐分子——Berridge
+    与 Robinson 的研究区分『想要』（wanting，多巴胺主导）与『喜欢』（liking，享受体验），成瘾的核心是想要与喜欢的脱钩。
+  core_claim: 多巴胺系统编码的是预测误差与动机显著性的『想要』信号，而非快乐本身；行为由误差驱动学习与升级的预期塑造。
+  mechanism: 预测编码视角下，大脑持续生成对奖励的预期，多巴胺信号在误差出现时更新价值表征：正误差强化当前行为线索，负误差推动探索或放弃（S10）。预期本身也会上调基线（『下一定更好』），使固定奖励迅速失去误差信息，这解释了为何可变程序比固定程序更持久（与
+    variable_ratio_reward 衔接）。
+  causal_chain: 奖励预期与实际结果的差值 → 多巴胺误差信号 → 价值更新与线索-行为强化 → 行为调整（重复或放弃）
+  variables:
+    inputs:
+    - 奖励幅度
+    - 预期水平
+    - 线索可靠性
+    moderators:
+    - 奖励延迟
+    - 概率结构
+    - 个体基线多巴胺状态
+    mediators:
+    - 预测误差信号
+    - 价值更新
+    - 想要（wanting）状态
+    outputs:
+    - 学习速率
+    - 行为重复倾向
+    - 成瘾性风险
+  evidence:
+    supporting:
+    - Schultz 等的单细胞记录研究：多巴胺神经元对意外奖励放电、对预期奖励不再放电、对预期落空抑制（神经生理实验；S145 仅摘要级支持，EP notes 明示待全文核验）
+    - Berridge 与 Robinson 的『想要/喜欢』分离研究：多巴胺耗损削弱想要而不必然削弱喜欢（经典文献，未建包）
+    conflicting:
+    - 人类多巴胺功能的直接测量困难，部分结论依赖动物模型与间接指标；『多巴胺排毒』等流行说法无对应神经科学基础（流行误读）
+    replication:
+    - 预测误差编码在跨实验室神经生理研究中高度可重复；注意其向内容策略的迁移是类比而非直证。评级按枚举记 A（机制层）
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 适用于奖励型学习情境；不适用于把愉悦感（liking）直接归因于多巴胺的表述
+  - 从神经机制到具体内容策略的推断需经过行为层证据中介
+  failure_conditions:
+  - 奖励完全可预期或与行为无关时，误差信号消失，机制失效
+  - 把『刺激多巴胺』当成设计目标会推导出荒谬结论（任何新奇刺激都行）
+  common_misinterpretations:
+  - 『多巴胺=快乐分子』：它更多编码想要与学习信号；成瘾者常表现为想要强烈而喜欢减弱
+  - 『多巴胺排毒』：流行的数字排毒话术没有对应的神经机制操作定义
+  ethical_risks:
+  - 刻意制造预测误差方差（无限滚动、抽卡）以诱发强迫性使用，利用的是学习系统本身
+  examples:
+    original_cases:
+    - The Power of Habit（S18）对习惯化过程中多巴胺信号转移的科普叙述
+    research_cases:
+    - Schultz 等的猴子单细胞记录实验；Berridge 与 Robinson 的动物成瘾研究
+    modern_cases:
+    - 开箱视频的惊喜结构、抽卡保底机制、社群随机掉落福利
+  communication_implications: 内容更新使用『可预期的节律+适度意外』结构：固定栏目降低认知成本，随机亮点维持误差信号。
+  community_implications: 奖励公示要管理预期（说清概率与价值），因为预期的系统性抬高会把后续一切奖励变成负误差。
+  content_applications:
+    title: 反差式标题制造预期违背：『本来以为……结果……』
+    body: 在固定框架内设置不可预期的奖励点（彩蛋、反转、随机案例）
+  platform_implications: 推荐系统本质是误差信号的管理器：给什么、何时给、多意外，都直接作用于该机制；过度优化短期误差会造成奖励贬值与疲劳。
+  related_nodes:
+  - variable_ratio_reward
+  - prediction_error
+  - curiosity_gap
+  - novelty_preference
+  - hook_model
+  source_ids:
+  - S10
+  - S18
+  - S145
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Clark 2016《Surfing Uncertainty》（S10，预测误差与奖励信号）+ Duhigg 2012（S18，渴求/多巴胺预期）
+    effect_size: 多巴胺编码奖励预测误差（Schultz 经典发现）
+    replication_status: 预测误差-多巴胺关系为神经科学最稳健发现之一
+    context_dependency: 预期建立/意外程度/时间尺度调制信号强度
+    downgrade_upgrade_reason: 2026-09 实取 S10 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S10
+    supporting_evidence:
+    - S18
+    - S145
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: immediate_vs_delayed_rewards
+  canonical_name_en: Immediate vs Delayed Rewards
+  canonical_name_zh: 即时奖励与延迟奖励
+  aliases:
+  - 即时满足
+  - 延迟满足
+  - 棉花糖实验
+  - discounting
+  domain: reward
+  definition: 主观价值随奖励延迟而衰减（延迟贴现），且贴现曲线呈双曲形状：近期差异被放大，远期差异被压缩，由此产生即时奖励对延迟奖励的系统性偏好。经典佐证是 Mischel 的棉花糖实验，但必须携带后续重新解释：环境可靠性（Kidd
+    等的操纵实验）与控制社会经济变量后的效应缩水（Watts 等的复制研究）表明『等待能力』部分反映环境稳定性的理性适应，而非纯粹意志品质。
+  core_claim: 奖励的主观价值随延迟非线性衰减，近期可用性权重被系统放大；环境可靠性是贴现行为的重要前因。
+  mechanism: 远期奖励的价值表征模糊且易被竞争性即时选项覆盖；主观时间感知不均匀（近期时间被放大）；环境不可靠（承诺经常落空）时，选择即时奖励是对不确定性的理性适应而非自控缺陷。与 present_bias
+    的关系：本节点是奖励价值结构层面，present_bias 是其在跨期决策中的系统性偏差形式（S12、S13、S01）。
+  causal_chain: 奖励延迟增加 → 主观价值加速衰减 → 即时选项相对价值放大 → 即时选择/等待失败
+  variables:
+    inputs:
+    - 奖励数额与延迟
+    - 环境可靠性
+    - 即时替代选项的可得性
+    moderators:
+    - 信任度
+    - 财务稀缺状态
+    - 奖励的可视化程度
+    mediators:
+    - 主观价值衰减
+    - 注意分配
+    - 对未来自我的认同
+    outputs:
+    - 跨期选择
+    - 储蓄/学习等延迟收益行为的完成率
+  evidence:
+    supporting:
+    - Mischel 的延迟满足实验系列及其长期追踪（经典研究）
+    - 双曲贴现的动物与人类实验证据（经典文献，未建包）
+    conflicting:
+    - Kidd 等的实验：等待前经历『承诺可靠/不可靠』操纵显著改变等待时间，提示环境因素
+    - Watts 等的更大样本复制：控制家庭背景后棉花糖效应大幅缩小
+    replication:
+    - 贴现函数形状稳健；棉花糖作为『意志力-人生结果』因果叙事不成立。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 奖励确定性高且环境可靠时，延迟贴现更平缓
+  - 跨期选择需真实可感；纯假想任务的贴现估计偏乐观
+  failure_conditions:
+  - 把『等得住』当作美德训练目标而忽视环境干预，在不可靠环境中加剧不信任
+  - 延迟奖励缺乏中间反馈与可视化时几乎不产生行为牵引
+  common_misinterpretations:
+  - 『小时候能等棉花糖的孩子长大后更成功』的宿命论解读：效应受环境与家庭背景强烈调节
+  - 把即时偏好等同于短视；在低信任环境中即时偏好是合理策略
+  ethical_risks:
+  - 利用即时偏好设计高利贷式产品结构（先甜后苦），损害财务脆弱人群
+  examples:
+    original_cases:
+    - Misbehaving（S12）与 Scarcity（S13）中的跨期选择讨论
+    research_cases:
+    - Mischel 棉花糖实验及其后续重新解释（Kidd 与 Watts 等研究）
+    modern_cases:
+    - 积分即时抵扣 vs 年末返现；游戏每日签到与赛季奖励的组合
+  communication_implications: 把延迟价值拆成即时反馈阶梯（今日可见的进步），并在承诺兑现上保持绝对可靠——环境可靠性本身就是说服资产。
+  community_implications: 社群激励体系应即时小额+延迟大额并行，且历史承诺兑现记录公开可见。
+  content_applications:
+    body: 教程按『今天就能看到的变化』组织反馈点，远期愿景只作背景
+    cta: 『完成这一步，立刻能看到 X』而非『坚持一年你会感谢自己』
+  platform_implications: 平台成长体系普遍从延迟大奖转向即时小反馈（ streak、进度点），印证贴现结构；对教育类产品，需警惕即时化侵蚀深度学习。
+  related_nodes:
+  - present_bias
+  - goal_gradient_effect
+  - endowed_progress_effect
+  - scarcity_mindset
+  - implementation_intentions
+  source_ids:
+  - S12
+  - S13
+  - S01
+  - S172
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，延迟贴现）+ Mullainathan & Shafir 2013（S13，即时压力下决策）+ Kahneman 2011（S01）
+    effect_size: 即时奖励贴现率高于延迟奖励（双曲线贴现经典）
+    replication_status: 延迟贴现跨物种/跨人群稳健
+    context_dependency: 奖励规模/等待时长/承诺装置调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S12
+    supporting_evidence:
+    - S13
+    - S01
+    - S172
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: endowed_progress_effect
+  canonical_name_en: Endowed Progress Effect
+  canonical_name_zh: 人为进度效应
+  aliases:
+  - 赠送进度
+  - endowed progress
+  domain: reward
+  definition: 人为进度效应指在任务开始时预先赠予一定进度（如 10 格卡上已盖 2 章），会提高完成率与投入速度。Nunes 与 Drèze 2006 年的洗车忠诚卡现场实验是经典证据（经
+    S146 摘要转引的二手引用）：获赠进度的持卡人完成率显著更高。与 goal_gradient_effect 的关系：目标梯度描述距离-速率的自然函数，人为进度通过前移参照点操纵该函数的起点。
+  core_claim: 预先赠予的感知进度提高目标完成率，即使该进度不改变剩余实际工作量。
+  mechanism: 赠予的进度改变参照点并创造初始拥有感（与 endowment_effect 相通），启动目标梯度与完成度感知（S146 正面主张：效应取决于完成度感知，非沉没成本解释）；『已经完成一部分』把任务从零起点变为中途状态，完成张力提前点火；赠予本身还携带互惠信号（S71、S72）。
+  causal_chain: 预置初始进度 → 参照点前移+初始拥有感 → 目标梯度提前启动 → 完成率与速率提升
+  variables:
+    inputs:
+    - 赠予进度比例
+    - 进度可视化
+    - 目标总距离
+    moderators:
+    - 赠予的理由正当性（凭什么送我）
+    - 任务成本
+    - 奖励吸引力
+    mediators:
+    - 初始拥有感
+    - 完成张力
+    - 互惠感受
+    outputs:
+    - 完成率
+    - 投入速率
+    - 复购与续用
+  evidence:
+    supporting:
+    - Nunes 与 Drèze 2006 洗车卡现场实验：预盖两章提高完成率并缩短完成时间（现场实验）
+    - 忠诚计划与游戏新手引导领域的后续现场观察（多来源）
+    conflicting:
+    - 赠予理由不正当（无解释的白给）或目标剩余距离过大时，效应减弱（边界研究）
+    replication:
+    - 方向在忠诚度与任务完成场景中重复良好。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 剩余任务在可完成区间且奖励有价值
+  - 赠予被合理解释（欢迎礼、老客户礼）而非随意发放
+  failure_conditions:
+  - 进度作假被识破（永远差一格的套路）触发操纵感
+  - 赠予进度与真实进度不一致，对账时信任崩塌
+  common_misinterpretations:
+  - 以为送进度等于送好处；其杠杆在于改变参照点，若剩余工作量巨大则毫无动员力
+  ethical_risks:
+  - 用虚假进度诱导持续消费（凑单满减的暗改门槛）
+  examples:
+    original_cases:
+    - 消费者行为与营销管理著作中忠诚计划设计的讨论（S71、S72）
+    research_cases:
+    - Nunes 与 Drèze 2006 忠诚卡实验
+    modern_cases:
+    - 注册即完成资料 30%、新手任务礼包预置、会员成长值赠送
+  communication_implications: 新手引导首屏展示『你已完成 30%』并解释赠予理由（欢迎礼），把起点焦虑转化为进度感。
+  community_implications: 新成员加入即显示已解锁的基础权限与积分，配合第一个可完成小任务，降低零起点流失。
+  content_applications:
+    title: 『已完成 30%，只差三步』式引导标题
+    cta: 欢迎礼话术：『这是给新朋友的起始进度』，给出赠予正当性
+  platform_implications: 几乎所有产品的 onboarding 都内置人为进度；设计质量在于剩余距离是否真实可完成、理由是否诚实。
+  related_nodes:
+  - goal_gradient_effect
+  - sunk_cost_fallacy
+  - commitment_consistency
+  - variable_ratio_reward
+  - participation_ladder
+  source_ids:
+  - S71
+  - S72
+  - S146
+  provenance:
+    primary_sources:
+    - S146
+    supporting_evidence:
+    - S71
+    - S72
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-013
+    - CASE-CMP-001
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: hedonic_adaptation
+  canonical_name_en: Hedonic Adaptation
+  canonical_name_zh: 享乐适应
+  aliases:
+  - 享乐跑步机
+  - hedonic treadmill
+  - 快乐适应
+  domain: reward
+  definition: 享乐适应指人们对持续出现的积极或消极刺激的情绪反应随重复暴露而衰减，回到接近基线的水平；Brickman 与 Campbell 称之为享乐跑步机。经典证据是 Brickman、Coates
+    与 Janoff-Bulman 1978 年对彩票中奖者与事故截瘫者的研究，但后续研究修正了『一切都会适应』的强版本：失业、慢性噪音等部分事件的适应不完全。
+  core_claim: 重复的同类奖励带来的愉悦感系统性衰减；变动与不可预期性能部分延缓适应。
+  mechanism: 重复刺激降低预测误差（与 reward_prediction_dopamine 衔接）：预期水平上调后，同类奖励不再产生正误差，愉悦感随之回落；注意转移与比较基准更新也在其中起作用。负性事件的适应常不完全，说明基线回归不是绝对定律（S12、S01）。
+  causal_chain: 同类奖励重复 → 预期上调与误差衰减 → 愉悦感回落 → 需要更大或更新的刺激维持同等体验
+  variables:
+    inputs:
+    - 刺激重复率
+    - 刺激变异性
+    - 比较基准
+    moderators:
+    - 个体基线与人格
+    - 刺激的意义感
+    - 社会比较环境
+    mediators:
+    - 预期上调
+    - 预测误差衰减
+    - 注意适应
+    outputs:
+    - 满意度回落
+    - 奖励贬值速度
+    - 追加刺激需求
+  evidence:
+    supporting:
+    - Brickman、Coates 与 Janoff-Bulman 1978 对重大正负事件的适应研究（经典文献，未建包）
+    - 消费与工作情境中重复奖励满意度衰减的大量观察（S12）
+    conflicting:
+    - 后续研究显示部分负性事件（失业、慢性病）与部分正性事件适应不完全，强版本『一切回归基线』不成立（修正证据）
+    replication:
+    - 衰减方向稳健，速度与下限因事件与个体差异大。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 对可重复、可预期的同类刺激效应最强
+  - 与身份认同或意义感绑定的体验（成长、关系）适应较慢
+  failure_conditions:
+  - 用不断加码的同类刺激对抗适应，只会加速贬值并抬升成本
+  - 把适应不完全的事件（失业）当成『会过去的』而不干预
+  common_misinterpretations:
+  - 『人对一切都会适应』的强版本：重大负性事件适应不完全，福利与救助设计不应据此推责
+  ethical_risks:
+  - 利用适应机制设计升级诱导（越来越贵的奖励阶梯）制造持续消费压力
+  examples:
+    original_cases:
+    - Misbehaving（S12）中的享乐适应与 hedonomics 讨论
+    research_cases:
+    - 彩票中奖者与截瘫者适应研究
+    modern_cases:
+    - 游戏奖励池轮换、社群徽章体系迭代、会员权益的年度升级
+  communication_implications: 奖励与内容体系需要定期轮换主题与形式，把资源投向变化而非同质加量；固定福利会被用户重新定价为理所应当。
+  community_implications: 荣誉体系防通胀：等级与徽章应随社群成长迭代命名与标准，老资格的含金量靠稀缺与意义维持。
+  content_applications:
+    body: 系列内容的结构保持一致但素材持续翻新，防止『看标题就猜到全部』
+    emotion: 把仪式感与意义感注入奖励（周年纪念、共同成就），延缓适应
+  platform_implications: 平台以算法调度新鲜度对抗适应（轮换推荐、限时活动）；这同时是留存策略与过度刺激的来源。
+  related_nodes:
+  - variable_ratio_reward
+  - intrinsic_extrinsic_motivation
+  - immediate_vs_delayed_rewards
+  - mental_accounting
+  - engagement_optimization_bias
+  source_ids:
+  - S12
+  - S01
+  - S173
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，适应与参照点迁移）+ Kahneman 2011（S01，享乐适应）
+    effect_size: 重复刺激后的愉悦增量递减（适应现象）
+    replication_status: 享乐适应跨领域稳健（收入/消费/社交）
+    context_dependency: 变化节奏/新颖度/参照点调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S173
+    supporting_evidence:
+    - S12
+    - S01
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-034
+    - CASE-PLT-036
+  last_reviewed: 2026-09
+  knowledge_half_life: long

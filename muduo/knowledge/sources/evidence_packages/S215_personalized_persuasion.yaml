@@ -1,0 +1,26 @@
+# Evidence Package — S215（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S215
+title: Psychological targeting as an effective approach to digital mass persuasion
+authors: Sandra C. Matz; Michal Kosinski; Gideon Nave; David J. Stillwell
+year: 2017
+journal: PNAS 114(48):12714-12719
+doi: 10.1073/pnas.1710966114
+url: https://pubmed.ncbi.nlm.nih.gov/29133409/
+access_level: abstract_only
+research_status: annotated
+content_obtained: PubMed 摘要逐字实读（2026-09-11）；同刊评论 Eckles et al. 2018（内部效度质疑）与作者回应（PMID 29777091/29777090）经
+  PubMed 摘要页确认
+research_question: 按心理画像定制的大规模说服在真实世界是否有效？
+core_claims:
+- 3 个现场实验触达超过 350 万用户：与个体心理特质（外向性/开放性）匹配的说服信息相比错配或非个性化版本，点击最多高 40%、购买最多高 50%
+- 作者原文明示该方法的双面性：可帮助个体更好决策，也可能被用于'covertly exploit weaknesses'——操纵与隐私风险（potential pitfalls related to manipulation
+  and privacy）
+method: 真实广告平台的现场实验（field experiments on Facebook），心理特质经数字足迹评估
+limitations: Eckles et al. 2018 PNAS 评论指出 Facebook 优化算法可能混淆效应（内部效度威胁），作者 2018 回应否认——引用时须标注此方法争论
+boundary_conditions: 效应以平台投放系统与画像可得性为前提；跨情境外推受评论质疑
+relevant_nodes:
+- personalized_persuasion
+- hyperpersonalization_privacy
+notes: personalized_persuasion/hyperpersonalization_privacy 一手实证（效力侧+风险侧均被原文覆盖）。真实数字：350 万用户/40% 点击/50%
+  购买，未编造。
+last_verified: 2026-09

@@ -1,258 +1,603 @@
 # social_norms — 社会规范（Social Norms）：非正式规则如何塑造行为，以及如何被感知、传达与执行
 domain: social_norms
 nodes:
-  - id: norm_perception_accuracy
-    canonical_name_en: Norm Perception Accuracy / Misperception
-    canonical_name_zh: 规范误知觉
-    aliases: ["规范误知觉", "norm misperception", "错误共识/错误独特性偏差（规范知觉维度）"]
-    domain: social_norms
-    definition: "人们对『多数人怎么想/怎么做』的知觉经常系统性偏离真实分布：既可能高估他人对某行为的认可（错误共识效应，false consensus），也可能低估他人对某行为的认可（错误独特性效应，false uniqueness）——多数无知（pluralistic_ignorance）与沉默螺旋都是规范误知觉的产物。Bicchieri 的规范诊断框架正是为纠正这种知觉失真而设计。"
-    core_claim: "规范干预的第一步不是传播规范，而是测量规范知觉的偏差方向；找错偏差方向会使干预无效甚至有害。"
-    mechanism: "个体无法直接观察他人的私下态度，只能依赖公开行为与自身立场做推断，产生系统性偏差：高自我相关行为者倾向于高估其普遍性（错误共识），低自我相关但社会赞许行为者倾向于低估其普遍性（错误独特性）。媒体与算法进一步放大可见的极端样本，使『多数』知觉偏离真实分布。基于错误知觉设计的规范信息（如『大家都违规』）会固化错误常态。"
-    causal_chain: "公开行为可见性有限 + 自我参照推断 → 系统性知觉偏差 → 基于偏差的规范判断 → 行为跟着错误规范走"
-    variables:
-      inputs: [公开行为样本的可见性, 自我行为与立场, 媒介与算法的曝光结构]
-      moderators: [群体沟通密度, 匿名性, 话题敏感性]
-      mediators: [对他人态度的推断策略（自我参照/可得性启发）]
-      outputs: [规范误知觉（高估/低估）, 相应的从众行为偏移, 规范干预效果的方向性错误]
-    evidence:
-      supporting: ["错误共识效应与错误独特性效应的多项实验（社会心理教科书综述）", "Prentice 与 Miller 的饮酒规范研究：学生普遍高估同伴对饮酒的认可（经典文献，已建包 EP S213）", "Bicchieri 的规范诊断田野研究：多处测量到规范知觉与真实分布的系统性错位（S28）"]
-      conflicting: ["知觉偏差幅度随话题、群体、测量方法变化", "紧密小群体中因信息透明偏差较小"]
-      replication: ["错误共识与错误独特性在多文化样本中重复", "规范误知觉的干预修正效果在部分田野研究中得到验证"]
-      meta_analysis: ["无覆盖全域的权威 meta-analysis；以系列实验与田野诊断研究为主"]
-    evidence_grade: "B"
-    boundary_conditions: ["他人态度不可直接观察、须靠推断的场景", "公开行为样本受选择性表达污染的场景", "话题敏感、表态有成本时偏差更大"]
-    failure_conditions: ["态度已充分公开表达且信息透明", "小规模高透明群体", "存在权威性态度分布数据且被广泛知晓"]
-    common_misinterpretations: ["把错误共识与错误独特性混为一谈——两者方向相反，干预策略完全不同", "误以为公开表态多=真实支持多（忽略了多数无知与表达成本）"]
-    ethical_risks: ["以错误规范知觉为基础的干预可能固化有害常态", "利用规范误知觉制造虚假多数"]
-    examples:
-      original_cases: ["Ross 等的错误共识效应实验（社会心理教材综述传统）", "Bicchieri《Norms in the Wild》的规范诊断框架（S28）"]
-      research_cases: ["大学生饮酒规范知觉研究（Prentice 与 Miller，已建包 EP S213）", "社区回收规范知觉与实际回收率偏差的田野研究"]
-      modern_cases: ["社交媒体热榜使用户高估极端立场的普遍性", "职场中对加班文化支持度的误判", "投资社群对『多数人看多/看空』的知觉失真"]
-    communication_implications: "任何规范型内容发布前，应先确认受众对规范的知觉偏差方向：高估普遍性时做『其实没那么多人在做』的校准，低估时做『很多人和你一样』的揭示——方向搞反则回旋镖。"
-    community_implications: "社群运营应定期用匿名调查测量成员对规范（发言频率、消费水平、行为期待）的真实知觉与实际分布的差距，把差距作为内容选题与干预的输入，而非凭运营者直觉。"
-    content_applications:
-      body: "用匿名调查数据校准内容中的规范陈述：『你可能以为身边没人在定投，实际上我们后台数据显示…』（真实数据）"
-      evidence: "呈现真实分布而非个案：以分布图、中位数替代极端案例作为规范证据"
-      opening: "以知觉校准开场：『先纠正一个错觉——』直接激活受众对自身判断的反思维"
-      comments: "用匿名投票收集真实态度后公开结果，持续纠正评论区规范知觉"
-    platform_implications: "算法把互动量当作规范信号，公开行为样本的偏差被推荐系统进一步放大（极端内容更易见），从结构上加剧规范误知觉；匿名投票等低表达成本组件是平台层纠偏工具。"
-    related_nodes: [pluralistic_ignorance, descriptive_injunctive_norms, norm_messaging_effects, social_proof, filter_bubble_echo_chambers, availability_heuristic]
-    source_ids: [S28, S27, S21, S213]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Bicchieri 2017 Norms in the Wild 规范诊断框架（S28，substantial_excerpt，经学术书评全文+出版社简介+中文详评多源实取）+ 错误共识/错误独特性实验传统"
-      effect_size: "规范知觉与真实分布的系统性错位（实证/规范预期框架）"
-      replication_status: "错误共识与错误独特性多文化重复；规范误知觉干预修正效果在部分田野研究验证"
-      context_dependency: "他人态度不可直接观察、公开行为样本受选择性表达污染时偏差更大"
-      downgrade_upgrade_reason: "2026-09 补充规范诊断一手专著（S123，substantial_excerpt 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 同书重复登记合并 S123→S28（S28 content_obtained 更实质，为 S123 超集），引用重定向至 S28，S123 标 MERGED_INTO 移出注册表"
-    provenance:
-      primary_sources: [S28]
-      supporting_evidence: [S27, S213]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: norm_messaging_effects
-    canonical_name_en: Normative Messaging Effects (incl. Boomerang Effect)
-    canonical_name_zh: 规范信息传达（含回旋镖效应）
-    aliases: ["boomerang effect", "规范反馈干预"]
-    domain: social_norms
-    definition: "通过传达规范信息（他人实际在做什么、他人期待什么）改变行为的干预路径，代表应用是 Schultz 等 2007 年的居民能耗规范反馈实验；其核心警示是回旋镖效应（boomerang effect）：描述性规范信息会把低于均值者推向均值，产生与干预目标相反的行为。"
-    core_claim: "规范信息只对偏离目标行为者有效，且描述性信息单独使用时必然带来均值回归（回旋镖）；必须叠加指令性信号（认可/不认可）才能防止回旋镖。"
-    mechanism: "个体收到他人行为分布信息后，向均值回归——高消耗者降低、低消耗者提高（Schultz 等 2007 能耗实验中观察到的双向移动）；在描述性反馈上叠加指令性信号（笑脸/赞许标记），为低消耗者提供了保持现状的社会认可，回旋镖消失。Cialdini, Reno 与 Kallgren 的弄脏环境实验从另一角度证明：环境中的示范线索（多少人乱扔）直接改变个体乱扔概率——规范信息是被隐式读取的。"
-    causal_chain: "规范信息暴露 → 与自身行为比较 → 高偏离者向目标移动 + 低偏离者回旋镖 → 叠加指令性信号 → 回旋镖被抑制"
-    variables:
-      inputs: [描述性规范信息（分布/均值反馈）, 指令性规范信号（认可标记）]
-      moderators: [个体位置相对均值的方向, 参照群体的相关性, 信息真实性]
-      mediators: [社会比较, 认可/不认可的预期]
-      outputs: [目标行为改变（方向不定）, 回旋镖效应（无指令性修正时）, 行为稳定改变（双信号叠加时）]
-    evidence:
-      supporting: ["Schultz 等 2007 能耗规范反馈实验：描述性反馈改变能耗，叠加赞许标记后回旋镖消失", "Cialdini, Reno 与 Kallgren 1990 传单实验：示范线索显著改变行为", "Nolan 等 2008 的研究：规范性信息的影响力被普遍低估而实际有效（经典文献，未建包；S38 EP 无该内容）"]
-      conflicting: ["效应幅度中等且异质性高，跨领域推广需谨慎（nudge 类平均效应在控制发表偏差后缩水，见 EVIDENCE.md）", "部分情境中指令性信号引发逆反"]
-      replication: ["回旋镖效应在能源领域重复良好", "规范信息干预在其他行为域（回收、节水）方向一致、幅度不一"]
-      meta_analysis: ["规范信息干预的元整合支持平均有效性，但强调条件依赖（与 EVIDENCE.md 对 nudge 的 C 级评估一致）"]
-    evidence_grade: "B+"
-    boundary_conditions: ["受众能准确理解自身位置与分布的关系", "参照群体与受众相关（同城、同户型、同水平）", "信息真实且可持续（虚假规范很快穿帮）"]
-    failure_conditions: ["对低于均值者只发描述性信息（回旋镖）", "参照群体无关或信息被识破", "受众处于逆反敏感期（刚被说教过）"]
-    common_misinterpretations: ["把『突出问题严重性』当动员——『大多数人不储蓄』式信息会让不储蓄者心安理得", "把回旋镖效应与心理逆反混淆：回旋镖是均值回归机制，逆反是自由威胁反应，两者常同时出现但机制不同"]
-    ethical_risks: ["以虚高均值制造焦虑或以虚低均值正当化现状", "在健康、财务领域滥用规范施压造成伤害"]
-    examples:
-      original_cases: ["Schultz 等 2007 能耗规范信息实验（描述性反馈+赞许标记的组合）", "Cialdini, Reno 与 Kallgren 1990 弄脏环境实验", "Nolan 等 2008 规范性社会影响低估研究（经典文献，未建包；S38 EP 无该内容）"]
-      research_cases: ["能耗反馈田野实验", "酒店毛巾重复使用实验（Goldstein 等，S38 收录）"]
-      modern_cases: ["账单对比设计（与邻居均值比较）", "运动 App 好友平均步数对比", "社群打卡排行对落后者的回旋镖风险"]
-    communication_implications: "规范型内容要写清三件事：谁在做（相关参照群体）、做到什么程度（真实分布）、为什么值得做（指令性认可）；对目标受众中的『先进者』要给保持的理由而非改变的动员。"
-    community_implications: "社群排行与对比类功能（打卡榜、成长榜）是回旋镖高发区：需为头部提供荣誉性指令信号（防止松懈）、为尾部提供进步性参照（与自己历史比），避免全员向均值回归的平淡化。"
-    content_applications:
-      body: "规范信息三件套：『越来越多与你相似的伙伴在定投（描述性）+ 他们普遍获得社区认可（指令性）+ 你现在处于什么位置（对照）』"
-      cta: "CTA 给先进者留保持路径：『已经做到的伙伴，这里有一条进阶路线』，防止先进者回旋镖"
-      title: "标题避免『大多数人不做X』框架，用『X 人群正在做什么』框架"
-      evidence: "引用真实分布数据并附赞许信号（认证、徽章、社区荣誉）双轨呈现"
-    platform_implications: "平台比较类功能（排行榜、平均线、好友对比）是规范信息的制度化载体；nudge 类平均效应在真实平台环境中因持续可见性而放大，但同样面临回旋镖与逆反，需要分位数分层设计。"
-    related_nodes: [descriptive_injunctive_norms, norm_perception_accuracy, social_proof, psychological_reactance, nudge_mechanism, pluralistic_ignorance]
-    source_ids: [S38, S32, S28, S11, S102, S103, S104, S212]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Goldstein 2008 酒店现场实验（S102）+ Cialdini 1990 规范焦点 5 实验（S103）+ Schultz 2007 能耗现场实验（S104）"
-      effect_size: "方向稳健、效应中等"
-      replication_status: "描述性规范干预 meta 平均有效、异质性高；回旋镖效应多领域重复"
-      context_dependency: "回旋镖效应依赖指令性信号补足；参照群体身份匹配是关键"
-      downgrade_upgrade_reason: "2026-09 补充一手现场实验证据（S102/S103/S104），升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S102, S103, S104]
-      supporting_evidence: [S38, S32, S28, S11, S212]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: norm_enforcement_reputation
-    canonical_name_en: Norm Enforcement and Reputation
-    canonical_name_zh: 规范执行与声誉
-    aliases: ["第三方惩罚", "altruistic punishment", "声誉机制"]
-    domain: social_norms
-    definition: "社会规范依赖奖励与惩罚的执行而存在，其中『第三方惩罚』（未受害的旁观者付出成本惩罚违规者）与声誉机制（合作/违规记录影响未来互动）是维持大规模合作的两大支柱；Bicchieri 的博弈论框架把规范执行嵌入互惠与声誉的博弈结构（S27）。"
-    core_claim: "规范靠『被看见的执行』而非条文存在：没有可信的奖惩与声誉记录，规范迅速退化为建议。"
-    mechanism: "公共品实验传统显示：允许成员对搭便车者施加成本惩罚后，合作水平维持并上升——即使惩罚对惩罚者无物质收益（利他惩罚）；惩罚的威慑力来自声誉（未来合作机会的丧失）与群体可见性。执行必须满足可信性（会被真的执行）与相称性（过度惩罚反噬规范合法性）。在小群体中人情与直接互惠即可支撑执行；大规模匿名社群必须依赖制度化声誉系统。"
-    causal_chain: "违规行为可见 → 第三方惩罚/声誉记录 → 违规成本上升 → 规范遵从提高 → 执行者获得声誉收益 → 执行可持续"
-    variables:
-      inputs: [违规行为的可见性, 惩罚机制的存在与可信度, 声誉记录系统]
-      moderators: [群体规模与匿名性, 惩罚的相称性, 执行者声誉, 二阶搭便车（不愿执行）问题]
-      mediators: [违规的预期成本, 声誉关切, 群体认同]
-      outputs: [规范遵从率, 合作水平, 社群秩序稳定, （过度时）寒蝉效应]
-    evidence:
-      supporting: ["公共品博弈中的利他惩罚实验传统：允许惩罚后合作水平显著维持——惩罚由受益群体成员付出成本实施（Fehr 与 Gächter，S179）", "Bicchieri 对规范与互惠、声誉系统关联的理论与实验整合（S27）", "网络社群的封禁、信用分等治理实践与理论预测一致"]
-      conflicting: ["惩罚在小群体中有效，但大规模匿名环境下二阶搭便车问题使执行难以自发维持", "过度惩罚引发逆反与对执行者的反噬"]
-      replication: ["惩罚维持合作的实验结果高度稳健（行为经济学重复性最好的发现之一）", "真实社群中的外推有效性随平台治理结构而异"]
-      meta_analysis: ["行为经济学公共品实验的整合综述支持惩罚对合作的维持作用"]
-    evidence_grade: "A-"
-    boundary_conditions: ["违规行为可被观察或记录", "惩罚成本可承受且程序被认为公正", "社群存在未来互动预期（声誉有长期价值）"]
-    failure_conditions: ["完全匿名且无未来互动预期的场景（声誉失效）", "执行者不被信任或惩罚过度（合法性反噬）", "规范本身缺乏共识基础（执行变成派系斗争）"]
-    common_misinterpretations: ["以为公布规则=规范存在——规范的实体是可预期的奖惩，不是文档", "把惩罚当唯一手段，忽视声誉奖励对规范的正向维持往往更持久"]
-    ethical_risks: ["过度惩罚与公开羞辱（挂人）造成的寒蝉效应", "惩罚机制被派系劫持成为清除异见的工具"]
-    examples:
-      original_cases: ["公共品博弈中的利他惩罚实验传统（Fehr 与 Gächter，S179）", "Bicchieri《The Grammar of Society》对规范、互惠与惩罚的博弈论整合（S27）"]
-      research_cases: ["公共品实验中的利他惩罚研究", "惩罚相称性与合作维持的实验研究"]
-      modern_cases: ["电商平台的信用分与封号机制", "开源社区的 code of conduct 与贡献者声誉体系", "社群中的『信用分』、禁言、公示制度"]
-    communication_implications: "内容中展示『规范被执行的证据』（违规被处理的公示、正面行为的公开表彰）比反复重申规则更能维持规范；透明、相称的执行叙事本身是信任内容。"
-    community_implications: "社群规范治理三件套：可见的奖（荣誉体系）、可信的罚（分级、相称、可申诉）、公开的执行记录；核心风险是二阶搭便车——管理员倦怠导致执行断档，需把执行权分散给可信骨干。"
-    content_applications:
-      body: "在社群公约类内容中呈现真实执行案例（匿名化处理）：『上季度处理了 X 起引流违规』——执行可见性本身就是内容"
-      comments: "对规范执行做出即时、透明、可申诉的公开回应，把每次处置变成规范传播机会"
-      title: "标题用规范信号筛选：『本群禁广告，这里只聊真问题』——前置规范提升社群纯净度预期"
-      cta: "加入类 CTA 明示规范与奖惩：『进来先看规矩，守规矩的都能获得XX』"
-    platform_implications: "平台的信用分、封禁、举报系统是规范执行的制度化基础设施；算法治理（限流）作为新型惩罚出现，其不透明性引发寒蝉效应争议——平台治理透明度直接决定规范执行的合法性。"
-    related_nodes: [reciprocity_norm, reputation_systems, normative_influence, community_governance, status_systems, descriptive_injunctive_norms]
-    source_ids: [S27, S28, S94, S179]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Bicchieri 2017《Norms in the Wild》（S28，规范执行与变革）+ Bicchieri 2006（S27）+ Gillespie 2018（S94，平台规范执行）"
-      effect_size: "声誉与奖惩使规范可执行（规范博弈论传统）"
-      replication_status: "声誉机制促进合作在演化博弈与实验中稳健"
-      context_dependency: "可见性/惩罚强度/第三方监督调制"
-      downgrade_upgrade_reason: "2026-09 实取 S28 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S28]
-      supporting_evidence: [S27, S94, S179]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: reciprocity_norm
-    canonical_name_en: Reciprocity Norm
-    canonical_name_zh: 互惠规范
-    aliases: ["互惠原则", "norm of reciprocity", "Cialdini 互惠"]
-    domain: social_norms
-    definition: "Gouldner 将其界定为跨文化的普遍规范：受惠者有回报义务，拒绝回报会引发内疚与道德谴责。Cialdini 将其列为说服六原则之一：先给予（礼物、让步、免费价值）会创设回报债务感，即便最初的给予是未被请求的。"
-    core_claim: "未被请求的给予会产生回报义务感，其力量足以让人回报自己并不想要的东西——但过度明显的给予策略会触发防御。"
-    mechanism: "互惠规范之所以强大，是因为它是大规模合作的演化基础：不回报者在群体中丧失合作声誉。给予创设心理债务（内疚、不安），回报消除不适；给予的价值感与其『非交易性』成正比——一旦被识别为套路（免费只是为了卖），互惠感消失甚至反转为警惕。Cialdini 的让步-互惠变体（door-in-the-face）利用『从大要求退到小要求』制造互惠感：对方退让了，我也该退一步。"
-    causal_chain: "未被请求的给予 → 心理债务感 → 回报压力 → 回报行为（购买/答应小要求/转发）或（被识破时）警惕与反感"
-    variables:
-      inputs: [给予的价值与时机, 给予是否未被请求, 让步的可感知性]
-      moderators: [给予者动机的可归因性, 关系历史与文化背景, 受惠者对套路的敏感度]
-      mediators: [心理债务感, 回报义务感, 对给予动机的解读]
-      outputs: [购买/转化, 小要求顺从（door-in-the-face 效果）, 口碑与推荐, （被识破时）信任反噬]
-    evidence:
-      supporting: ["Gouldner 1960 对互惠规范普遍性的跨文化综述（经典文献，已建包 EP S203）", "Cialdini 等的经典互惠实验：未被请求的小礼物显著提升后续顺从（S32 综述）", "door-in-the-face 实验：让步策略显著提升对小要求的答应率（见 door_in_the_face）"]
-      conflicting: ["高度商业化的给予（满减、试用装轰炸）效应衰减明显", "对高警惕人群（有被推销经验者）互惠启动可反转为怀疑"]
-      replication: ["互惠对顺从的促进作用在多情境重复", "效应量随给予的拟社会性（personalized vs institutionalized）显著变化"]
-      meta_analysis: ["无权威 meta-analysis；以系列实验与综述（S32、S38）为主"]
-    evidence_grade: "A-"
-    boundary_conditions: ["给予被感知为真诚且非交易性", "受惠者保有回报的自由（未被强制）", "给予物对受惠者真实有价值"]
-    failure_conditions: ["给予被识破为钓鱼策略（先给后宰）", "受惠者感到被操控或回报通道被堵死", "反复高频索取回报（给予沦为筹码）"]
-    common_misinterpretations: ["把互惠等同于促销赠送——制度化的满减与试用不产生人际互惠感，只有拟人化的、个人化的给予才触发回报义务", "忽视互惠的反面：被识破的套路给予比不给更糟"]
-    ethical_risks: ["以免费为饵制造债务感后高压转化", "利用让步-互惠逼单"]
-    examples:
-      original_cases: ["Cialdini《Influence》互惠原则章节与 Krishnan 案例等（S32）", "Gouldner 1960 互惠规范综述（经典文献，已建包 EP S203）"]
-      research_cases: ["互惠对小要求顺从影响的经典实验（S32、S38 收录）", "让步-互惠实验（详见 door_in_the_face）"]
-      modern_cases: ["知识博主的免费干货策略（先给方法论再卖陪跑）", "私域运营的节日问候与资料包投喂", "Open source 社区的贡献-回报循环", "被滥用的反面：扫码送礼引发的警惕"]
-    communication_implications: "先给真实可用的价值（可单独成立的干货、工具、模板），且给予的叙事保持非交易性（不标价、不催促），互惠债务才会自然累积为转化意愿。"
-    community_implications: "社群互惠系统的设计：新成员的融入靠老成员的主动给予（答疑、分享），运营者应让给予行为可见、可积累声誉（感谢机制、贡献榜），形成互惠循环而非单向索取。"
-    content_applications:
-      body: "正文前 30% 必须是可独立成立的完整干货（真实价值前置），后续再自然引出深度服务"
-      cta: "CTA 保持低压迫：『这份清单拿去直接用，需要陪跑时再找我』——保留自由是互惠生效的前提"
-      opening: "开场即给小礼物：『先送你一个今天就能用的检查清单』（真实可完成，非钩子）"
-      comments: "楼主在评论区持续追加免费增量价值（补充资料、答疑），让互惠在公开场景持续累积"
-    platform_implications: "平台对诱导性给予（关注送XX）有规则限制；算法奖励实质价值内容而非套路互惠，给予-回报循环在平台环境中最可持续的形态是『公开贡献换声誉』而非私下互惠。"
-    related_nodes: [reciprocity_exchange_networks, door_in_the_face, commitment_consistency, norm_enforcement_reputation, foot_in_the_door, community_rituals]
-    source_ids: [S32, S38, S21, S136, S203]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Cialdini 1984（S32，互惠原则）+ Goldstein 2008（S38，互惠实验）+ Aronson 2018（S21）"
-      effect_size: "收到好处后回报倾向上升（互惠规范经典）"
-      replication_status: "互惠效应跨文化稳健（社会影响研究）"
-      context_dependency: "关系不对称/礼物意图/文化规范调制"
-      downgrade_upgrade_reason: "2026-09 实取 S38 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S203, S32]
-      supporting_evidence: [S38, S21, S136]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: commitment_consistency
-    canonical_name_en: Commitment and Consistency
-    canonical_name_zh: 承诺一致性
-    aliases: ["consistency principle", "承诺一致原则", "自我一致性"]
-    domain: social_norms
-    definition: "Cialdini 六原则之一：人一旦做出公开、主动、自愿的承诺，就产生维持言行一致的压力；小的初始承诺会为后续更大、与初始承诺方向一致的行为铺路（与 foot_in_the_door 衔接）。承诺的效力取决于其公开性、主动性与付出成本。"
-    core_claim: "公开、主动、付出过成本的承诺会让人后续行为自动向承诺靠拢，甚至在承诺已明显不利时仍继续（与 commitment_escalation 的危险面衔接）。"
-    mechanism: "言行一致是重要的社会品质，不一致会被视为不可信或精神混乱；因此承诺形成自我形象锚点，后续行为要么与之一致，要么付出认知失调的代价。公开承诺激活他人监督（规范性影响），主动选择（无外部强迫）激活自我归因（『我是自愿的，说明我真的认同』），付出成本（努力、金钱、时间）提升投入感（与 endowed_progress_effect、hook_model 的投入存储机制衔接）。三者叠加使小承诺滚雪球为大行为。"
-    causal_chain: "小的公开主动承诺 → 自我形象更新（我是做X的人） → 后续行为与自我形象对齐 → 更大承诺与投入 → 行为惯性"
-    variables:
-      inputs: [初始承诺的公开性/主动性/成本, 承诺的自我形象相关性]
-      moderators: [承诺自由感（无外部压力时更强）, 观众的持续性, 承诺的可撤销成本]
-      mediators: [自我形象更新, 认知失调减少动机, 他人监督预期]
-      outputs: [后续一致行为, 增量承诺接受度, 坏处：不合理坚持与承诺升级]
-    evidence:
-      supporting: ["Cialdini 等的经典承诺实验：公开书面承诺显著提升后续行为一致性（S32 综述）", "foot-in-the-door 系列实验（见 foot_in_the_door）", "赌徒与沉没成本情境中的承诺升级研究（见 commitment_escalation）"]
-      conflicting: ["承诺对无关后续行为的溢出有限", "被识破为套路的小承诺（诱导式同意）失效并引发警惕", "强外部激励下的承诺（有偿转发）削弱自愿归因"]
-      replication: ["承诺-行为一致性的基本效应在多情境重复", "效应量中等，且高度依赖承诺的公开性与自愿性这两个条件"]
-      meta_analysis: ["foot-in-the-door 技术的元整合支持小承诺为大请求铺路的平均效应，效应量中小且异质性明显"]
-    evidence_grade: "A-"
-    boundary_conditions: ["承诺公开、主动、无强迫且有一定付出", "承诺与自我形象相关（我是负责任的投资者）", "承诺被记录且可被回看"]
-    failure_conditions: ["承诺经外部强激励诱导（有偿表态）——过度理由效应削弱自愿归因", "承诺内容与自我形象无关", "观众消失或承诺可无成本撤销"]
-    common_misinterpretations: ["把承诺一致性当作逼单话术（不回复=默认同意）——被迫的承诺不产生一致性压力，只产生抵触", "忽视承诺升级的危险面：一致性压力会让人在错误方向上坚持（见 commitment_escalation）"]
-    ethical_risks: ["用诱导式小承诺层层套牢用户（同意链设计）", "利用公开承诺实施社交绑架"]
-    examples:
-      original_cases: ["Cialdini《Influence》承诺一致章节的经典案例（S32）", "朝鲜战争战俘营的逐步承诺案例（经典文献，未建包；争议性案例需谨慎使用）"]
-      research_cases: ["foot-in-the-door 系列实验", "公开书面承诺对行为改变的田野实验"]
-      modern_cases: ["社群公开立誓打卡（承诺+观众监督）", "定投计划的自动续费与公开进度", "学习类 App 的每日承诺与 streak 机制", "坏例子：沉默的滚动条款与暗模式（dark patterns）"]
-    communication_implications: "让受众先做一个极小、真实、可公开的承诺（点个在看、投个票、写下目标），并让其承诺可见可回看；承诺内容应正向定义自我（『想改变的人』）而非绑定于产品。"
-    community_implications: "社群的入群仪式（自我介绍、目标宣言、公开规则确认）是承诺一致性的制度化：低成本、高可见、与社区价值绑定；配合 participation_ladder 让承诺逐级加码，形成行为惯性。"
-    content_applications:
-      cta: "CTA 设计为微小公开承诺：『在评论区写下你本周要完成的第一个小目标』——写下即承诺，公开即监督"
-      opening: "开场引导自我定义式承诺：『点开这篇的你，应该是想认真解决这个问题的人』——用身份承诺预设行为"
-      body: "提供承诺追踪工具（表格、打卡模板），让承诺行为化、可回看"
-      comments: "对公开承诺的评论定期回访（一周后翻牌），利用观众监督效应固化行为"
-    platform_implications: "平台的 streak、徽章、公开收藏夹等产品机制把承诺一致性制度化；算法记录使承诺永久可见，撤销成本上升——这既提高留存也造成承诺绑架风险，暗模式（dark patterns）是被监管关注的边界。"
-    related_nodes: [foot_in_the_door, cognitive_dissonance, commitment_escalation, reciprocity_norm, endowed_progress_effect, hook_model, self_persuasion]
-    conflicting_nodes: [psychological_reactance]
-    source_ids: [S32, S38, S21, S136]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Cialdini 1984（S32，承诺一致原则）+ Goldstein 2008（S38，公开承诺实验）+ Aronson 2018（S21，自我合理化）"
-      effect_size: "公开承诺后行为一致性上升（经典承诺效应）"
-      replication_status: "承诺一致性在顺从研究中稳健（foot-in-the-door 传统）"
-      context_dependency: "承诺公开性/自由选择感/自我辩护调制"
-      downgrade_upgrade_reason: "2026-09 实取 S38 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S32]
-      supporting_evidence: [S38, S21, S136]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: norm_perception_accuracy
+  canonical_name_en: Norm Perception Accuracy / Misperception
+  canonical_name_zh: 规范误知觉
+  aliases:
+  - 规范误知觉
+  - norm misperception
+  - 错误共识/错误独特性偏差（规范知觉维度）
+  domain: social_norms
+  definition: 人们对『多数人怎么想/怎么做』的知觉经常系统性偏离真实分布：既可能高估他人对某行为的认可（错误共识效应，false consensus），也可能低估他人对某行为的认可（错误独特性效应，false
+    uniqueness）——多数无知（pluralistic_ignorance）与沉默螺旋都是规范误知觉的产物。Bicchieri 的规范诊断框架正是为纠正这种知觉失真而设计。
+  core_claim: 规范干预的第一步不是传播规范，而是测量规范知觉的偏差方向；找错偏差方向会使干预无效甚至有害。
+  mechanism: 个体无法直接观察他人的私下态度，只能依赖公开行为与自身立场做推断，产生系统性偏差：高自我相关行为者倾向于高估其普遍性（错误共识），低自我相关但社会赞许行为者倾向于低估其普遍性（错误独特性）。媒体与算法进一步放大可见的极端样本，使『多数』知觉偏离真实分布。基于错误知觉设计的规范信息（如『大家都违规』）会固化错误常态。
+  causal_chain: 公开行为可见性有限 + 自我参照推断 → 系统性知觉偏差 → 基于偏差的规范判断 → 行为跟着错误规范走
+  variables:
+    inputs:
+    - 公开行为样本的可见性
+    - 自我行为与立场
+    - 媒介与算法的曝光结构
+    moderators:
+    - 群体沟通密度
+    - 匿名性
+    - 话题敏感性
+    mediators:
+    - 对他人态度的推断策略（自我参照/可得性启发）
+    outputs:
+    - 规范误知觉（高估/低估）
+    - 相应的从众行为偏移
+    - 规范干预效果的方向性错误
+  evidence:
+    supporting:
+    - 错误共识效应与错误独特性效应的多项实验（社会心理教科书综述）
+    - Prentice 与 Miller 的饮酒规范研究：学生普遍高估同伴对饮酒的认可（经典文献，已建包 EP S213）
+    - Bicchieri 的规范诊断田野研究：多处测量到规范知觉与真实分布的系统性错位（S28）
+    conflicting:
+    - 知觉偏差幅度随话题、群体、测量方法变化
+    - 紧密小群体中因信息透明偏差较小
+    replication:
+    - 错误共识与错误独特性在多文化样本中重复
+    - 规范误知觉的干预修正效果在部分田野研究中得到验证
+    meta_analysis:
+    - 无覆盖全域的权威 meta-analysis；以系列实验与田野诊断研究为主
+  evidence_grade: B
+  boundary_conditions:
+  - 他人态度不可直接观察、须靠推断的场景
+  - 公开行为样本受选择性表达污染的场景
+  - 话题敏感、表态有成本时偏差更大
+  failure_conditions:
+  - 态度已充分公开表达且信息透明
+  - 小规模高透明群体
+  - 存在权威性态度分布数据且被广泛知晓
+  common_misinterpretations:
+  - 把错误共识与错误独特性混为一谈——两者方向相反，干预策略完全不同
+  - 误以为公开表态多=真实支持多（忽略了多数无知与表达成本）
+  ethical_risks:
+  - 以错误规范知觉为基础的干预可能固化有害常态
+  - 利用规范误知觉制造虚假多数
+  examples:
+    original_cases:
+    - Ross 等的错误共识效应实验（社会心理教材综述传统）
+    - Bicchieri《Norms in the Wild》的规范诊断框架（S28）
+    research_cases:
+    - 大学生饮酒规范知觉研究（Prentice 与 Miller，已建包 EP S213）
+    - 社区回收规范知觉与实际回收率偏差的田野研究
+    modern_cases:
+    - 社交媒体热榜使用户高估极端立场的普遍性
+    - 职场中对加班文化支持度的误判
+    - 投资社群对『多数人看多/看空』的知觉失真
+  communication_implications: 任何规范型内容发布前，应先确认受众对规范的知觉偏差方向：高估普遍性时做『其实没那么多人在做』的校准，低估时做『很多人和你一样』的揭示——方向搞反则回旋镖。
+  community_implications: 社群运营应定期用匿名调查测量成员对规范（发言频率、消费水平、行为期待）的真实知觉与实际分布的差距，把差距作为内容选题与干预的输入，而非凭运营者直觉。
+  content_applications:
+    body: 用匿名调查数据校准内容中的规范陈述：『你可能以为身边没人在定投，实际上我们后台数据显示…』（真实数据）
+    evidence: 呈现真实分布而非个案：以分布图、中位数替代极端案例作为规范证据
+    opening: 以知觉校准开场：『先纠正一个错觉——』直接激活受众对自身判断的反思维
+    comments: 用匿名投票收集真实态度后公开结果，持续纠正评论区规范知觉
+  platform_implications: 算法把互动量当作规范信号，公开行为样本的偏差被推荐系统进一步放大（极端内容更易见），从结构上加剧规范误知觉；匿名投票等低表达成本组件是平台层纠偏工具。
+  related_nodes:
+  - pluralistic_ignorance
+  - descriptive_injunctive_norms
+  - norm_messaging_effects
+  - social_proof
+  - filter_bubble_echo_chambers
+  - availability_heuristic
+  source_ids:
+  - S28
+  - S27
+  - S21
+  - S213
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Bicchieri 2017 Norms in the Wild 规范诊断框架（S28，substantial_excerpt，经学术书评全文+出版社简介+中文详评多源实取）+
+      错误共识/错误独特性实验传统
+    effect_size: 规范知觉与真实分布的系统性错位（实证/规范预期框架）
+    replication_status: 错误共识与错误独特性多文化重复；规范误知觉干预修正效果在部分田野研究验证
+    context_dependency: 他人态度不可直接观察、公开行为样本受选择性表达污染时偏差更大
+    downgrade_upgrade_reason: 2026-09 补充规范诊断一手专著（S123，substantial_excerpt 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09
+      同书重复登记合并 S123→S28（S28 content_obtained 更实质，为 S123 超集），引用重定向至 S28，S123 标 MERGED_INTO 移出注册表
+  provenance:
+    primary_sources:
+    - S28
+    supporting_evidence:
+    - S27
+    - S213
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-RES-001
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: norm_messaging_effects
+  canonical_name_en: Normative Messaging Effects (incl. Boomerang Effect)
+  canonical_name_zh: 规范信息传达（含回旋镖效应）
+  aliases:
+  - boomerang effect
+  - 规范反馈干预
+  domain: social_norms
+  definition: 通过传达规范信息（他人实际在做什么、他人期待什么）改变行为的干预路径，代表应用是 Schultz 等 2007 年的居民能耗规范反馈实验；其核心警示是回旋镖效应（boomerang
+    effect）：描述性规范信息会把低于均值者推向均值，产生与干预目标相反的行为。
+  core_claim: 规范信息只对偏离目标行为者有效，且描述性信息单独使用时必然带来均值回归（回旋镖）；必须叠加指令性信号（认可/不认可）才能防止回旋镖。
+  mechanism: 个体收到他人行为分布信息后，向均值回归——高消耗者降低、低消耗者提高（Schultz 等 2007 能耗实验中观察到的双向移动）；在描述性反馈上叠加指令性信号（笑脸/赞许标记），为低消耗者提供了保持现状的社会认可，回旋镖消失。Cialdini,
+    Reno 与 Kallgren 的弄脏环境实验从另一角度证明：环境中的示范线索（多少人乱扔）直接改变个体乱扔概率——规范信息是被隐式读取的。
+  causal_chain: 规范信息暴露 → 与自身行为比较 → 高偏离者向目标移动 + 低偏离者回旋镖 → 叠加指令性信号 → 回旋镖被抑制
+  variables:
+    inputs:
+    - 描述性规范信息（分布/均值反馈）
+    - 指令性规范信号（认可标记）
+    moderators:
+    - 个体位置相对均值的方向
+    - 参照群体的相关性
+    - 信息真实性
+    mediators:
+    - 社会比较
+    - 认可/不认可的预期
+    outputs:
+    - 目标行为改变（方向不定）
+    - 回旋镖效应（无指令性修正时）
+    - 行为稳定改变（双信号叠加时）
+  evidence:
+    supporting:
+    - Schultz 等 2007 能耗规范反馈实验：描述性反馈改变能耗，叠加赞许标记后回旋镖消失
+    - Cialdini, Reno 与 Kallgren 1990 传单实验：示范线索显著改变行为
+    - Nolan 等 2008 的研究：规范性信息的影响力被普遍低估而实际有效（经典文献，未建包；S38 EP 无该内容）
+    conflicting:
+    - 效应幅度中等且异质性高，跨领域推广需谨慎（nudge 类平均效应在控制发表偏差后缩水，见 EVIDENCE.md）
+    - 部分情境中指令性信号引发逆反
+    replication:
+    - 回旋镖效应在能源领域重复良好
+    - 规范信息干预在其他行为域（回收、节水）方向一致、幅度不一
+    meta_analysis:
+    - 规范信息干预的元整合支持平均有效性，但强调条件依赖（与 EVIDENCE.md 对 nudge 的 C 级评估一致）
+  evidence_grade: B+
+  boundary_conditions:
+  - 受众能准确理解自身位置与分布的关系
+  - 参照群体与受众相关（同城、同户型、同水平）
+  - 信息真实且可持续（虚假规范很快穿帮）
+  failure_conditions:
+  - 对低于均值者只发描述性信息（回旋镖）
+  - 参照群体无关或信息被识破
+  - 受众处于逆反敏感期（刚被说教过）
+  common_misinterpretations:
+  - 把『突出问题严重性』当动员——『大多数人不储蓄』式信息会让不储蓄者心安理得
+  - 把回旋镖效应与心理逆反混淆：回旋镖是均值回归机制，逆反是自由威胁反应，两者常同时出现但机制不同
+  ethical_risks:
+  - 以虚高均值制造焦虑或以虚低均值正当化现状
+  - 在健康、财务领域滥用规范施压造成伤害
+  examples:
+    original_cases:
+    - Schultz 等 2007 能耗规范信息实验（描述性反馈+赞许标记的组合）
+    - Cialdini, Reno 与 Kallgren 1990 弄脏环境实验
+    - Nolan 等 2008 规范性社会影响低估研究（经典文献，未建包；S38 EP 无该内容）
+    research_cases:
+    - 能耗反馈田野实验
+    - 酒店毛巾重复使用实验（Goldstein 等，S38 收录）
+    modern_cases:
+    - 账单对比设计（与邻居均值比较）
+    - 运动 App 好友平均步数对比
+    - 社群打卡排行对落后者的回旋镖风险
+  communication_implications: 规范型内容要写清三件事：谁在做（相关参照群体）、做到什么程度（真实分布）、为什么值得做（指令性认可）；对目标受众中的『先进者』要给保持的理由而非改变的动员。
+  community_implications: 社群排行与对比类功能（打卡榜、成长榜）是回旋镖高发区：需为头部提供荣誉性指令信号（防止松懈）、为尾部提供进步性参照（与自己历史比），避免全员向均值回归的平淡化。
+  content_applications:
+    body: 规范信息三件套：『越来越多与你相似的伙伴在定投（描述性）+ 他们普遍获得社区认可（指令性）+ 你现在处于什么位置（对照）』
+    cta: CTA 给先进者留保持路径：『已经做到的伙伴，这里有一条进阶路线』，防止先进者回旋镖
+    title: 标题避免『大多数人不做X』框架，用『X 人群正在做什么』框架
+    evidence: 引用真实分布数据并附赞许信号（认证、徽章、社区荣誉）双轨呈现
+  platform_implications: 平台比较类功能（排行榜、平均线、好友对比）是规范信息的制度化载体；nudge 类平均效应在真实平台环境中因持续可见性而放大，但同样面临回旋镖与逆反，需要分位数分层设计。
+  related_nodes:
+  - descriptive_injunctive_norms
+  - norm_perception_accuracy
+  - social_proof
+  - psychological_reactance
+  - nudge_mechanism
+  - pluralistic_ignorance
+  source_ids:
+  - S38
+  - S32
+  - S28
+  - S11
+  - S102
+  - S103
+  - S104
+  - S212
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Goldstein 2008 酒店现场实验（S102）+ Cialdini 1990 规范焦点 5 实验（S103）+ Schultz 2007 能耗现场实验（S104）
+    effect_size: 方向稳健、效应中等
+    replication_status: 描述性规范干预 meta 平均有效、异质性高；回旋镖效应多领域重复
+    context_dependency: 回旋镖效应依赖指令性信号补足；参照群体身份匹配是关键
+    downgrade_upgrade_reason: 2026-09 补充一手现场实验证据（S102/S103/S104），升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S102
+    - S103
+    - S104
+    supporting_evidence:
+    - S38
+    - S32
+    - S28
+    - S11
+    - S212
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-RES-001
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: norm_enforcement_reputation
+  canonical_name_en: Norm Enforcement and Reputation
+  canonical_name_zh: 规范执行与声誉
+  aliases:
+  - 第三方惩罚
+  - altruistic punishment
+  - 声誉机制
+  domain: social_norms
+  definition: 社会规范依赖奖励与惩罚的执行而存在，其中『第三方惩罚』（未受害的旁观者付出成本惩罚违规者）与声誉机制（合作/违规记录影响未来互动）是维持大规模合作的两大支柱；Bicchieri
+    的博弈论框架把规范执行嵌入互惠与声誉的博弈结构（S27）。
+  core_claim: 规范靠『被看见的执行』而非条文存在：没有可信的奖惩与声誉记录，规范迅速退化为建议。
+  mechanism: 公共品实验传统显示：允许成员对搭便车者施加成本惩罚后，合作水平维持并上升——即使惩罚对惩罚者无物质收益（利他惩罚）；惩罚的威慑力来自声誉（未来合作机会的丧失）与群体可见性。执行必须满足可信性（会被真的执行）与相称性（过度惩罚反噬规范合法性）。在小群体中人情与直接互惠即可支撑执行；大规模匿名社群必须依赖制度化声誉系统。
+  causal_chain: 违规行为可见 → 第三方惩罚/声誉记录 → 违规成本上升 → 规范遵从提高 → 执行者获得声誉收益 → 执行可持续
+  variables:
+    inputs:
+    - 违规行为的可见性
+    - 惩罚机制的存在与可信度
+    - 声誉记录系统
+    moderators:
+    - 群体规模与匿名性
+    - 惩罚的相称性
+    - 执行者声誉
+    - 二阶搭便车（不愿执行）问题
+    mediators:
+    - 违规的预期成本
+    - 声誉关切
+    - 群体认同
+    outputs:
+    - 规范遵从率
+    - 合作水平
+    - 社群秩序稳定
+    - （过度时）寒蝉效应
+  evidence:
+    supporting:
+    - 公共品博弈中的利他惩罚实验传统：允许惩罚后合作水平显著维持——惩罚由受益群体成员付出成本实施（Fehr 与 Gächter，S179）
+    - Bicchieri 对规范与互惠、声誉系统关联的理论与实验整合（S27）
+    - 网络社群的封禁、信用分等治理实践与理论预测一致
+    conflicting:
+    - 惩罚在小群体中有效，但大规模匿名环境下二阶搭便车问题使执行难以自发维持
+    - 过度惩罚引发逆反与对执行者的反噬
+    replication:
+    - 惩罚维持合作的实验结果高度稳健（行为经济学重复性最好的发现之一）
+    - 真实社群中的外推有效性随平台治理结构而异
+    meta_analysis:
+    - 行为经济学公共品实验的整合综述支持惩罚对合作的维持作用
+  evidence_grade: A-
+  boundary_conditions:
+  - 违规行为可被观察或记录
+  - 惩罚成本可承受且程序被认为公正
+  - 社群存在未来互动预期（声誉有长期价值）
+  failure_conditions:
+  - 完全匿名且无未来互动预期的场景（声誉失效）
+  - 执行者不被信任或惩罚过度（合法性反噬）
+  - 规范本身缺乏共识基础（执行变成派系斗争）
+  common_misinterpretations:
+  - 以为公布规则=规范存在——规范的实体是可预期的奖惩，不是文档
+  - 把惩罚当唯一手段，忽视声誉奖励对规范的正向维持往往更持久
+  ethical_risks:
+  - 过度惩罚与公开羞辱（挂人）造成的寒蝉效应
+  - 惩罚机制被派系劫持成为清除异见的工具
+  examples:
+    original_cases:
+    - 公共品博弈中的利他惩罚实验传统（Fehr 与 Gächter，S179）
+    - Bicchieri《The Grammar of Society》对规范、互惠与惩罚的博弈论整合（S27）
+    research_cases:
+    - 公共品实验中的利他惩罚研究
+    - 惩罚相称性与合作维持的实验研究
+    modern_cases:
+    - 电商平台的信用分与封号机制
+    - 开源社区的 code of conduct 与贡献者声誉体系
+    - 社群中的『信用分』、禁言、公示制度
+  communication_implications: 内容中展示『规范被执行的证据』（违规被处理的公示、正面行为的公开表彰）比反复重申规则更能维持规范；透明、相称的执行叙事本身是信任内容。
+  community_implications: 社群规范治理三件套：可见的奖（荣誉体系）、可信的罚（分级、相称、可申诉）、公开的执行记录；核心风险是二阶搭便车——管理员倦怠导致执行断档，需把执行权分散给可信骨干。
+  content_applications:
+    body: 在社群公约类内容中呈现真实执行案例（匿名化处理）：『上季度处理了 X 起引流违规』——执行可见性本身就是内容
+    comments: 对规范执行做出即时、透明、可申诉的公开回应，把每次处置变成规范传播机会
+    title: 标题用规范信号筛选：『本群禁广告，这里只聊真问题』——前置规范提升社群纯净度预期
+    cta: 加入类 CTA 明示规范与奖惩：『进来先看规矩，守规矩的都能获得XX』
+  platform_implications: 平台的信用分、封禁、举报系统是规范执行的制度化基础设施；算法治理（限流）作为新型惩罚出现，其不透明性引发寒蝉效应争议——平台治理透明度直接决定规范执行的合法性。
+  related_nodes:
+  - reciprocity_norm
+  - reputation_systems
+  - normative_influence
+  - community_governance
+  - status_systems
+  - descriptive_injunctive_norms
+  source_ids:
+  - S27
+  - S28
+  - S94
+  - S179
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Bicchieri 2017《Norms in the Wild》（S28，规范执行与变革）+ Bicchieri 2006（S27）+ Gillespie
+      2018（S94，平台规范执行）
+    effect_size: 声誉与奖惩使规范可执行（规范博弈论传统）
+    replication_status: 声誉机制促进合作在演化博弈与实验中稳健
+    context_dependency: 可见性/惩罚强度/第三方监督调制
+    downgrade_upgrade_reason: 2026-09 实取 S28 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S28
+    supporting_evidence:
+    - S27
+    - S94
+    - S179
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-008
+    - CASE-COM-007
+    - CASE-COM-010
+    - CASE-COM-018
+    - CASE-COM-043
+    - CASE-COM-045
+    - CASE-COM-047
+    - CASE-COM-078
+    - CASE-COM-080
+    - CASE-PLT-042
+    - CASE-PLT-049
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: reciprocity_norm
+  canonical_name_en: Reciprocity Norm
+  canonical_name_zh: 互惠规范
+  aliases:
+  - 互惠原则
+  - norm of reciprocity
+  - Cialdini 互惠
+  domain: social_norms
+  definition: Gouldner 将其界定为跨文化的普遍规范：受惠者有回报义务，拒绝回报会引发内疚与道德谴责。Cialdini 将其列为说服六原则之一：先给予（礼物、让步、免费价值）会创设回报债务感，即便最初的给予是未被请求的。
+  core_claim: 未被请求的给予会产生回报义务感，其力量足以让人回报自己并不想要的东西——但过度明显的给予策略会触发防御。
+  mechanism: 互惠规范之所以强大，是因为它是大规模合作的演化基础：不回报者在群体中丧失合作声誉。给予创设心理债务（内疚、不安），回报消除不适；给予的价值感与其『非交易性』成正比——一旦被识别为套路（免费只是为了卖），互惠感消失甚至反转为警惕。Cialdini
+    的让步-互惠变体（door-in-the-face）利用『从大要求退到小要求』制造互惠感：对方退让了，我也该退一步。
+  causal_chain: 未被请求的给予 → 心理债务感 → 回报压力 → 回报行为（购买/答应小要求/转发）或（被识破时）警惕与反感
+  variables:
+    inputs:
+    - 给予的价值与时机
+    - 给予是否未被请求
+    - 让步的可感知性
+    moderators:
+    - 给予者动机的可归因性
+    - 关系历史与文化背景
+    - 受惠者对套路的敏感度
+    mediators:
+    - 心理债务感
+    - 回报义务感
+    - 对给予动机的解读
+    outputs:
+    - 购买/转化
+    - 小要求顺从（door-in-the-face 效果）
+    - 口碑与推荐
+    - （被识破时）信任反噬
+  evidence:
+    supporting:
+    - Gouldner 1960 对互惠规范普遍性的跨文化综述（经典文献，已建包 EP S203）
+    - Cialdini 等的经典互惠实验：未被请求的小礼物显著提升后续顺从（S32 综述）
+    - door-in-the-face 实验：让步策略显著提升对小要求的答应率（见 door_in_the_face）
+    conflicting:
+    - 高度商业化的给予（满减、试用装轰炸）效应衰减明显
+    - 对高警惕人群（有被推销经验者）互惠启动可反转为怀疑
+    replication:
+    - 互惠对顺从的促进作用在多情境重复
+    - 效应量随给予的拟社会性（personalized vs institutionalized）显著变化
+    meta_analysis:
+    - 无权威 meta-analysis；以系列实验与综述（S32、S38）为主
+  evidence_grade: A-
+  boundary_conditions:
+  - 给予被感知为真诚且非交易性
+  - 受惠者保有回报的自由（未被强制）
+  - 给予物对受惠者真实有价值
+  failure_conditions:
+  - 给予被识破为钓鱼策略（先给后宰）
+  - 受惠者感到被操控或回报通道被堵死
+  - 反复高频索取回报（给予沦为筹码）
+  common_misinterpretations:
+  - 把互惠等同于促销赠送——制度化的满减与试用不产生人际互惠感，只有拟人化的、个人化的给予才触发回报义务
+  - 忽视互惠的反面：被识破的套路给予比不给更糟
+  ethical_risks:
+  - 以免费为饵制造债务感后高压转化
+  - 利用让步-互惠逼单
+  examples:
+    original_cases:
+    - Cialdini《Influence》互惠原则章节与 Krishnan 案例等（S32）
+    - Gouldner 1960 互惠规范综述（经典文献，已建包 EP S203）
+    research_cases:
+    - 互惠对小要求顺从影响的经典实验（S32、S38 收录）
+    - 让步-互惠实验（详见 door_in_the_face）
+    modern_cases:
+    - 知识博主的免费干货策略（先给方法论再卖陪跑）
+    - 私域运营的节日问候与资料包投喂
+    - Open source 社区的贡献-回报循环
+    - 被滥用的反面：扫码送礼引发的警惕
+  communication_implications: 先给真实可用的价值（可单独成立的干货、工具、模板），且给予的叙事保持非交易性（不标价、不催促），互惠债务才会自然累积为转化意愿。
+  community_implications: 社群互惠系统的设计：新成员的融入靠老成员的主动给予（答疑、分享），运营者应让给予行为可见、可积累声誉（感谢机制、贡献榜），形成互惠循环而非单向索取。
+  content_applications:
+    body: 正文前 30% 必须是可独立成立的完整干货（真实价值前置），后续再自然引出深度服务
+    cta: CTA 保持低压迫：『这份清单拿去直接用，需要陪跑时再找我』——保留自由是互惠生效的前提
+    opening: 开场即给小礼物：『先送你一个今天就能用的检查清单』（真实可完成，非钩子）
+    comments: 楼主在评论区持续追加免费增量价值（补充资料、答疑），让互惠在公开场景持续累积
+  platform_implications: 平台对诱导性给予（关注送XX）有规则限制；算法奖励实质价值内容而非套路互惠，给予-回报循环在平台环境中最可持续的形态是『公开贡献换声誉』而非私下互惠。
+  related_nodes:
+  - reciprocity_exchange_networks
+  - door_in_the_face
+  - commitment_consistency
+  - norm_enforcement_reputation
+  - foot_in_the_door
+  - community_rituals
+  source_ids:
+  - S32
+  - S38
+  - S21
+  - S136
+  - S203
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Cialdini 1984（S32，互惠原则）+ Goldstein 2008（S38，互惠实验）+ Aronson 2018（S21）
+    effect_size: 收到好处后回报倾向上升（互惠规范经典）
+    replication_status: 互惠效应跨文化稳健（社会影响研究）
+    context_dependency: 关系不对称/礼物意图/文化规范调制
+    downgrade_upgrade_reason: 2026-09 实取 S38 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S203
+    - S32
+    supporting_evidence:
+    - S38
+    - S21
+    - S136
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-003
+    - CASE-BRD-013
+    - CASE-CMP-001
+    - CASE-COM-023
+    - CASE-COM-024
+    - CASE-COM-026
+    - CASE-COM-079
+    - CASE-FAL-009
+    - CASE-FAL-041
+    - CASE-FAL-062
+    - CASE-GRW-001
+    - CASE-GRW-004
+    - CASE-GRW-006
+    - CASE-GRW-007
+    - CASE-GRW-014
+    - CASE-GRW-019
+    - CASE-PLT-036
+    - CASE-PLT-041
+    platform_sources:
+    - bilibili:S4
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: commitment_consistency
+  canonical_name_en: Commitment and Consistency
+  canonical_name_zh: 承诺一致性
+  aliases:
+  - consistency principle
+  - 承诺一致原则
+  - 自我一致性
+  domain: social_norms
+  definition: Cialdini 六原则之一：人一旦做出公开、主动、自愿的承诺，就产生维持言行一致的压力；小的初始承诺会为后续更大、与初始承诺方向一致的行为铺路（与 foot_in_the_door
+    衔接）。承诺的效力取决于其公开性、主动性与付出成本。
+  core_claim: 公开、主动、付出过成本的承诺会让人后续行为自动向承诺靠拢，甚至在承诺已明显不利时仍继续（与 commitment_escalation 的危险面衔接）。
+  mechanism: 言行一致是重要的社会品质，不一致会被视为不可信或精神混乱；因此承诺形成自我形象锚点，后续行为要么与之一致，要么付出认知失调的代价。公开承诺激活他人监督（规范性影响），主动选择（无外部强迫）激活自我归因（『我是自愿的，说明我真的认同』），付出成本（努力、金钱、时间）提升投入感（与
+    endowed_progress_effect、hook_model 的投入存储机制衔接）。三者叠加使小承诺滚雪球为大行为。
+  causal_chain: 小的公开主动承诺 → 自我形象更新（我是做X的人） → 后续行为与自我形象对齐 → 更大承诺与投入 → 行为惯性
+  variables:
+    inputs:
+    - 初始承诺的公开性/主动性/成本
+    - 承诺的自我形象相关性
+    moderators:
+    - 承诺自由感（无外部压力时更强）
+    - 观众的持续性
+    - 承诺的可撤销成本
+    mediators:
+    - 自我形象更新
+    - 认知失调减少动机
+    - 他人监督预期
+    outputs:
+    - 后续一致行为
+    - 增量承诺接受度
+    - 坏处：不合理坚持与承诺升级
+  evidence:
+    supporting:
+    - Cialdini 等的经典承诺实验：公开书面承诺显著提升后续行为一致性（S32 综述）
+    - foot-in-the-door 系列实验（见 foot_in_the_door）
+    - 赌徒与沉没成本情境中的承诺升级研究（见 commitment_escalation）
+    conflicting:
+    - 承诺对无关后续行为的溢出有限
+    - 被识破为套路的小承诺（诱导式同意）失效并引发警惕
+    - 强外部激励下的承诺（有偿转发）削弱自愿归因
+    replication:
+    - 承诺-行为一致性的基本效应在多情境重复
+    - 效应量中等，且高度依赖承诺的公开性与自愿性这两个条件
+    meta_analysis:
+    - foot-in-the-door 技术的元整合支持小承诺为大请求铺路的平均效应，效应量中小且异质性明显
+  evidence_grade: A-
+  boundary_conditions:
+  - 承诺公开、主动、无强迫且有一定付出
+  - 承诺与自我形象相关（我是负责任的投资者）
+  - 承诺被记录且可被回看
+  failure_conditions:
+  - 承诺经外部强激励诱导（有偿表态）——过度理由效应削弱自愿归因
+  - 承诺内容与自我形象无关
+  - 观众消失或承诺可无成本撤销
+  common_misinterpretations:
+  - 把承诺一致性当作逼单话术（不回复=默认同意）——被迫的承诺不产生一致性压力，只产生抵触
+  - 忽视承诺升级的危险面：一致性压力会让人在错误方向上坚持（见 commitment_escalation）
+  ethical_risks:
+  - 用诱导式小承诺层层套牢用户（同意链设计）
+  - 利用公开承诺实施社交绑架
+  examples:
+    original_cases:
+    - Cialdini《Influence》承诺一致章节的经典案例（S32）
+    - 朝鲜战争战俘营的逐步承诺案例（经典文献，未建包；争议性案例需谨慎使用）
+    research_cases:
+    - foot-in-the-door 系列实验
+    - 公开书面承诺对行为改变的田野实验
+    modern_cases:
+    - 社群公开立誓打卡（承诺+观众监督）
+    - 定投计划的自动续费与公开进度
+    - 学习类 App 的每日承诺与 streak 机制
+    - 坏例子：沉默的滚动条款与暗模式（dark patterns）
+  communication_implications: 让受众先做一个极小、真实、可公开的承诺（点个在看、投个票、写下目标），并让其承诺可见可回看；承诺内容应正向定义自我（『想改变的人』）而非绑定于产品。
+  community_implications: 社群的入群仪式（自我介绍、目标宣言、公开规则确认）是承诺一致性的制度化：低成本、高可见、与社区价值绑定；配合 participation_ladder
+    让承诺逐级加码，形成行为惯性。
+  content_applications:
+    cta: CTA 设计为微小公开承诺：『在评论区写下你本周要完成的第一个小目标』——写下即承诺，公开即监督
+    opening: 开场引导自我定义式承诺：『点开这篇的你，应该是想认真解决这个问题的人』——用身份承诺预设行为
+    body: 提供承诺追踪工具（表格、打卡模板），让承诺行为化、可回看
+    comments: 对公开承诺的评论定期回访（一周后翻牌），利用观众监督效应固化行为
+  platform_implications: 平台的 streak、徽章、公开收藏夹等产品机制把承诺一致性制度化；算法记录使承诺永久可见，撤销成本上升——这既提高留存也造成承诺绑架风险，暗模式（dark
+    patterns）是被监管关注的边界。
+  related_nodes:
+  - foot_in_the_door
+  - cognitive_dissonance
+  - commitment_escalation
+  - reciprocity_norm
+  - endowed_progress_effect
+  - hook_model
+  - self_persuasion
+  conflicting_nodes:
+  - psychological_reactance
+  source_ids:
+  - S32
+  - S38
+  - S21
+  - S136
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Cialdini 1984（S32，承诺一致原则）+ Goldstein 2008（S38，公开承诺实验）+ Aronson 2018（S21，自我合理化）
+    effect_size: 公开承诺后行为一致性上升（经典承诺效应）
+    replication_status: 承诺一致性在顺从研究中稳健（foot-in-the-door 传统）
+    context_dependency: 承诺公开性/自由选择感/自我辩护调制
+    downgrade_upgrade_reason: 2026-09 实取 S38 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S32
+    supporting_evidence:
+    - S38
+    - S21
+    - S136
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S112
+    - S21
+    - S32
+    - S35
+    case_sources:
+    - CASE-CMP-002
+    - CASE-COM-001
+    - CASE-COM-021
+    platform_sources:
+    - bilibili:S4
+  last_reviewed: 2026-09
+  knowledge_half_life: long

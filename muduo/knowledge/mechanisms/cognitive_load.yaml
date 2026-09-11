@@ -1,354 +1,553 @@
 # cognitive_load — 认知负荷（Cognitive Load）：理解的上限由负荷分配决定
 domain: cognitive_load
 nodes:
-  - id: working_memory_limits
-    canonical_name_en: Working Memory Limits
-    canonical_name_zh: 工作记忆容量限制
-    aliases: [短时记忆容量 —— 与 attention_capacity_limits 的区别：本节点是信息的保持与操纵约束，注意容量是资源总量约束]
-    domain: cognitive_load
-    definition: 工作记忆（Baddeley 多成分模型，含中央执行、语音回路、视空间画板与情景缓冲器）能同时保持与操纵的信息量有限。Miller 1956 对即时记忆的经典估计为 7±2 个组块，Cowan 2001 修正为约 4 个组块。组块化是唯一可靠的扩容方式。
-    core_claim: 在无复述与组块化时，可同时保持的独立信息单元约为 4 个，超出即遗忘或出错。
-    mechanism: 容量受制于注意资源与表征间干扰：单元越多，相互干扰越大，衰减与替换越快。组块化通过调用长时记忆中的既有模式把多元素压缩为单一位，使专家在熟悉领域能记住远超新手的信息量——容量是常量，组块大小是变量。
-    causal_chain: "信息单元超过容量 → 干扰与衰减 → 遗忘或错误 → 理解与决策质量下降"
-    variables: {inputs: [信息单元数量, 单元的独立性, 呈现速度], moderators: [领域专长, 组块化提示, 复述机会], mediators: [组块化, 保持性复述], outputs: [即时回忆量, 理解深度, 操作错误率]}
-    evidence:
-      supporting:
-        - "Miller 1956 的经典论文对神奇数字 7±2 的论证"
-        - "Cowan 2001 对约 4 个组块的现代估计"
-        - "Baddeley 与 Hitch 的工作记忆多成分模型研究传统（S04）"
-      conflicting:
-        - "容量绝对值因任务与测量方式在 4 到 7 之间浮动，但小容量上限的存在无争议"
-      replication:
-        - "容量约束被跨语言、跨材料广泛复制"
-      meta_analysis: []
-    evidence_grade: A
-    boundary_conditions:
-      - "组块化与专业经验大幅改变有效容量"
-      - "简单回忆与复杂推理对容量的需求不同"
-    failure_conditions:
-      - "一次呈现超过容量的并列信息点（五个以上卖点）"
-      - "要求用户跨页面记住前提信息"
-    common_misinterpretations:
-      - "把 7±2 当设计铁律——该数字来自特定即时回忆任务，不是万能常数"
-      - "以为信息量大等于信息价值大——超容量时增量信息是负价值"
-    ethical_risks:
-      - "用信息密度轰炸让消费者无暇比较条款（复杂费率结构）"
-    examples:
-      original_cases:
-        - "S04 对工作记忆模型与容量证据的系统阐述"
-      research_cases:
-        - "即时序列回忆范式：正确回忆项目数在小容量区间内封顶"
-      modern_cases:
-        - "表单的一屏一问设计；课程营销的三点式结构；手机号 3-4-4 分组"
-    communication_implications: 把任何信息的瞬时认知占用压缩到三四件事以内，超出部分必须分组、分层或转为外部载体（图表、收藏）。
-    community_implications: 社群入门信息（规则、路径、身份）必须压到极简，新人的工作记忆是转化漏斗的第一道瓶颈。
-    content_applications:
-      title: "标题只承载一个主张"
-      body: "每组不超过三个并列要点，多则分组编号"
-      opening: "先给一句话结论，降低保持负担"
-      cta: "只要求记住并执行一件事"
-    platform_implications: 短视频与卡片流把容量约束产品化为默认格式；平台外链跳转则常因跨场景记忆要求而流失用户。
-    related_nodes: [attention_capacity_limits, intrinsic_cognitive_load, extraneous_cognitive_load, information_overload, dual_process_theory, serial_position_effect]
-    source_ids: [S04, S02, S13, S115, S142]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Sweller 1988 奠基论文（S115 已实取摘要）+ CLT 后续综述（三类负荷/五原则）"
-      effect_size: "手段-目的搜索显著提高认知负荷并损害学习；样例/目标自由显著改善迁移"
-      replication_status: "CLT 框架经数十年教学研究复制扩展（Sweller 2019 综述）"
-      context_dependency: "适用于复杂任务学习；降低外在负荷是核心操作"
-      downgrade_upgrade_reason: "2026-09 补充一手奠基论文证据（S115），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S115]
-      supporting_evidence: [S04, S02]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: intrinsic_cognitive_load
-    canonical_name_en: Intrinsic Cognitive Load
-    canonical_name_zh: 内在认知负荷
-    aliases: [固有负荷 —— 与 extraneous_cognitive_load 的区别：内在负荷来自材料本身的必要复杂度，外在负荷来自呈现方式的缺陷]
-    domain: cognitive_load
-    definition: 由材料本身的元素交互性与学习者的先验知识共同决定的必要加工负荷，是 Sweller 认知负荷理论的组成部分。负荷不是材料的固有属性，而是材料与学习者的函数。
-    core_claim: 必须同时加工的交互元素越多、先验知识越少，必要负荷越高；图式可以把多元素压缩为单块从而降低负荷。
-    mechanism: 材料中必须同时保持在记忆中的独立元素数量决定占用水平；领域图式一旦形成，多元素被捆绑成单一组块处理，因此同样的材料对专家负荷更低。真正的高复杂度（如医学诊断的多因素交互）无法被消除，只能被顺序化与图式化。
-    causal_chain: "元素交互性高 + 先验知识少 → 必要负荷超载 → 理解失败 → 需图式建构降低负荷"
-    variables: {inputs: [元素交互性, 先验知识, 任务复杂度], moderators: [学习顺序, 分段策略, 已有图式质量], mediators: [组块化, 图式建构], outputs: [理解率, 学习速度, 迁移能力]}
-    evidence:
-      supporting:
-        - "Sweller 1988 认知负荷理论的开创性论文与后续系列研究"
-        - "专家与新手差异研究：同一材料的工作记忆占用随专长显著不同"
-      conflicting:
-        - "三分负荷的测量在方法学上有争议，内在负荷难以与图式化收益完全分离"
-      replication:
-        - "专家-新手负荷差异稳健；负荷的独立测量仍是活跃争议区"
-      meta_analysis: []
-    evidence_grade: A-
-    boundary_conditions:
-      - "对新手高负荷的材料对专家可能接近零负荷"
-      - "不可简化的真复杂度只能顺序化，不能删除"
-    failure_conditions:
-      - "用简化掩盖必要步骤，制造低配版理解（会做错不会做对）"
-      - "对专家过度分段，显得啰嗦并降低效率"
-    common_misinterpretations:
-      - "把内容拆得越碎越好——过度碎片化破坏图式建构，学习反而不发生"
-      - "以为负荷全靠呈现方式——材料与受众的匹配才是根源"
-    ethical_risks:
-      - "金融与医疗产品用简单三步话术掩盖条款的真实复杂度"
-    examples:
-      original_cases:
-        - "Sweller 系列研究中对元素交互性定义与 novice-expert 对比"
-      research_cases:
-        - "同一段统计教学材料，先修图式不同的学生表现出完全不同的负荷水平与成绩"
-      modern_cases:
-        - "课程的前置知识标注；新手引导的分步解锁设计"
-    communication_implications: 先评估受众已有图式再定深度：对同一主题，新手版与进阶版不是删减关系，而是重组关系。
-    community_implications: 社群分层（新人营、进阶群）本质是按内在负荷分舱，避免把新手直接扔进专家对话。
-    content_applications:
-      title: "在标题里声明门槛，筛选对的人群"
-      opening: "用一句话唤醒受众已有的相关经验作为图式挂点"
-      body: "按依赖顺序排布知识点，先单后组合"
-      cta: "给出与当前水平匹配的下一步（而非所有人都同一动作）"
-    platform_implications: 平台没有受众分层变量，同一内容必须自带多入口（如视频加长文版），把负荷分层交给内容自身。
-    related_nodes: [working_memory_limits, extraneous_cognitive_load, germane_load_learning, information_overload, concreteness_in_language]
-    source_ids: [S04, S69, S115]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Baddeley 2007《Working Memory, Thought, and Action》（S04，工作记忆成分与负荷）+ Pinker 2014（S69，写作负荷）"
-      effect_size: "要素交互性决定内在负荷（Sweller 1994/2010/2019 后续文献，一手 EP 待建；S115 仅支持「工作记忆有限」前提）"
-      replication_status: "内在负荷-学习效果关系在 CLT 传统中方向稳定"
-      context_dependency: "学习者前知识/材料要素交互度调制"
-      downgrade_upgrade_reason: "2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S04]
-      supporting_evidence: [S69]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: extraneous_cognitive_load
-    canonical_name_en: Extraneous Cognitive Load
-    canonical_name_zh: 外在认知负荷
-    aliases: [外在负荷, 无关负荷 —— 与 seductive_details_effect 的区别：外在负荷是呈现缺陷的总类，引诱性细节是其中被研究得最多的子类]
-    domain: cognitive_load
-    definition: 由信息呈现方式不当产生、对理解无贡献的额外负荷。分裂注意（需要对照两处信息源）、冗余（图文完全重复）、瞬态信息（视频不可回看）都是典型来源。它消耗工作记忆却不增进理解。
-    core_claim: 呈现缺陷会占用工作记忆而不产生任何理解收益；优化呈现是零成本的认知让利。
-    mechanism: 当受众必须把资源花在对齐信息源、搜索术语含义、回放漏掉的句子上时，剩余给理解的资源减少。Mayer 的多媒体学习研究原则（图文邻近、去冗余、分段、双通道）与 Sweller 的效应同源，都指向同一机制：把资源从对齐任务中释放给意义建构。
-    causal_chain: "呈现缺陷 → 对齐与检索开销 → 工作记忆被占用 → 理解资源不足"
-    variables: {inputs: [图文空间分离, 冗余文本, 术语密度, 不可回看性], moderators: [受众专长, 阅读设备, 时间压力], mediators: [对齐开销, 检索开销], outputs: [理解率, 完读率, 错误率]}
-    evidence:
-      supporting:
-        - "Sweller 系列的分裂注意与冗余效应实验（一手 EP 待建）"
-        - "Mayer 多媒体学习研究传统的一致性结果（S159 连贯性原则：无关呈现消耗工作记忆资源）"
-      conflicting:
-        - "对高先验学习者，冗余的害处减小甚至反转（专家不需要整合指引）"
-      replication:
-        - "分裂注意与冗余效应在多媒体学习领域被广泛复制"
-      meta_analysis: []
-    evidence_grade: A-
-    boundary_conditions:
-      - "对新手最有效；专家受众可承受更高密度"
-      - "需要长时间研究而非一次浏览的材料，部分效应减弱"
-    failure_conditions:
-      - "为了显得专业而堆术语，直接劝退受众"
-      - "一图配完全重复的文本，两边都读"
-    common_misinterpretations:
-      - "信息量大等于干货多——呈现混乱的干货等于没有干货"
-      - "把可读性当低级诉求——可读性是认知资源管理，不是文风偏好"
-    ethical_risks:
-      - "用复杂呈现制造专业感壁垒，阻碍横向比较（理财条款的长句嵌套）"
-    examples:
-      original_cases:
-        - "S69 从认知科学角度批评混淆呈现的写作问题"
-      research_cases:
-        - "图文邻近与分离条件下的对比实验：邻近组在迁移测验上更优"
-      modern_cases:
-        - "长图海报的文字墙；没有字幕的口播视频；PPT 满屏文字念稿"
-    communication_implications: 在社交媒体环境里，外在负荷是最大的隐形流失原因；每消除一处对齐开销，等于给核心信息加了一次曝光。
-    community_implications: 群规、置顶、活动说明的呈现质量直接决定执行率，社群运营的一半工作是把外在负荷降到接近零。
-    content_applications:
-      body: "图文紧邻、先图后文；术语首次出现即给一句白话解释"
-      title: "标题避免嵌套修饰，一眼可解"
-      opening: "用短句开场，第一屏不出现任何需要回看的引用"
-      visual: "一图一论点，删除装饰性信息"
-    platform_implications: 平台原生格式（自动字幕、图文卡片、章节进度条）本质是在替创作者偿还外在负荷债务。
-    related_nodes: [intrinsic_cognitive_load, germane_load_learning, working_memory_limits, seductive_details_effect, visual_hierarchy, processing_fluency]
-    source_ids: [S04, S69, S49, S115, S159]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Baddeley 2007（S04，工作记忆容量限制）+ Pinker 2014（S69，冗余与负荷）+ Harp & Mayer 1998（S159，连贯性原则：无关呈现消耗工作记忆）；Sweller 1988（S115）仅支持「工作记忆有限」前提，三类负荷与分裂注意/冗余效应实验系后续文献，一手 EP 待建"
-      effect_size: "与学习无关的呈现方式消耗工作记忆（格式效应）"
-      replication_status: "外在负荷-学习损伤关系在 CLT 实验传统中稳健"
-      context_dependency: "材料格式/通道冗余/学习者经验调制"
-      downgrade_upgrade_reason: "2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S04]
-      supporting_evidence: [S69, S49, S159]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: germane_load_learning
-    canonical_name_en: Germane Load (Deep Processing)
-    canonical_name_zh: 相关负荷（深度加工）
-    aliases: [相关认知负荷, 深加工投入 —— 与 intrinsic_cognitive_load 的区别：内在负荷是材料的必要占用，相关负荷是自愿投入于图式建构的努力]
-    domain: cognitive_load
-    definition: 投入于图式建构与自动化的认知努力——把工作记忆资源主动用于联系、举例、自我解释等深加工，而非仅仅应付材料。同样的客观负荷可以导向理解，也可以导向应付，差别就在资源是否用于建构。
-    core_claim: 深加工是资源分配决策：只要还有剩余容量与动机，把资源投入联系与生成活动就能放大学习效果。
-    mechanism: 深加工操作（自我解释、类比、生成问题、举例）把新信息与既有图式连接，增加提取线索的数量与多样性，从而提升后续提取成功率；Bjork 的必要难度框架说明适度费力的加工换来更持久的保持（与 testing_effect 连通）。
-    causal_chain: "剩余容量 + 加工动机 → 生成性操作 → 图式连接与线索丰富 → 长期保持与迁移"
-    variables: {inputs: [自我解释, 举例, 类比, 出题], moderators: [学习动机, 剩余容量, 反馈可得性], mediators: [图式建构, 提取线索多样性], outputs: [长期保持, 迁移能力, 应用频率]}
-    evidence:
-      supporting:
-        - "Sweller 理论对相关负荷的界定与教学实验"
-        - "Bjork 的必要难度研究传统（EP 外一手文献，未建 EP，与 S40 粘性框架无直接对应）"
-      conflicting:
-        - "相关负荷作为独立构念的测量争议：难以与内在负荷和成果完全区分，部分学者主张放弃三分法"
-      replication:
-        - "深加工优于浅加工的总方向稳健；作为独立负荷维度的地位有争议"
-      meta_analysis: []
-    evidence_grade: C
-    boundary_conditions:
-      - "依赖动机：深加工是自愿投入，无法强制"
-      - "前提是负荷未满——超载时没有剩余资源可分配"
-    failure_conditions:
-      - "低动机受众被要求深度输出时直接逃避（作业完成率骤降）"
-      - "把深度等同于冗长，用加法冒充加工"
-    common_misinterpretations:
-      - "烧脑的内容更高级——超出容量的负荷不产生学习，只产生放弃"
-      - "打卡等于学习——形式化的输出不等于图式建构"
-    ethical_risks:
-      - "把没学会归咎于学员不努力，掩盖课程设计缺陷（伪科学课程话术）"
-    examples:
-      original_cases:
-        - "S04 与 Sweller 传统中的图式习得论述；Bjork 的必要难度框架"
-      research_cases:
-        - "自我解释实验：被要求解释每步理由的组在迁移题上优于仅阅读组"
-      modern_cases:
-        - "知识付费的讲义加自测题设计；社群共读的输出型打卡（写百字复盘）"
-    communication_implications: 给受众留一个低门槛的生成动作（评论回答一个问题），一次成功的自我解释胜过三次重复阅读。
-    community_implications: 社群的输出机制（复盘、案例征集）是把 germane load 制度化，成员的沉淀式参与比刷屏式活跃更有长期价值。
-    content_applications:
-      body: "每个关键概念后附一个可代入的类比或提问"
-      opening: "邀请读者带着自己的案例来读（先想一个你自己的例子）"
-      cta: "用一个问题引导评论区的自我解释"
-    platform_implications: 平台的评论与弹幕提供了低门槛生成出口；但纯情绪化互动不等于深加工，平台无法区分两者，运营者要自己设计生成任务。
-    related_nodes: [testing_effect, spaced_repetition, intrinsic_cognitive_load, extraneous_cognitive_load, working_memory_limits, flow_state]
-    source_ids: [S04, S40, S115]
-    validation_status: MEMORY_BASED
-    grade_justification:
-      independent_studies: "Baddeley 2007（S04，工作记忆与图式加工，相邻概念）+ Heath & Heath 2007（S40，SUCCESs/粘性框架，相邻概念）；相关负荷/自我解释/必要难度的一手实验证据未建 EP，现引 EP 仅相邻概念，内容来自记忆蒸馏，待建 EP 后升级"
-      effect_size: "图式构建/自我解释提升学习迁移（生成学习传统）"
-      replication_status: "生成学习效应多研究支持（阐释/总结/自测）"
-      context_dependency: "生成任务难度/反馈/学习者动机调制"
-      downgrade_upgrade_reason: "2026-09 反向审计发现相关负荷/自我解释/必要难度的一手 EP 缺失，由 PARTIALLY_VALIDATED 回退为 MEMORY_BASED、grade 降为 C；本体内容保留，待建 EP 后升级"
-    provenance:
-      primary_sources: [S04]
-      supporting_evidence: [S40]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: information_overload
-    canonical_name_en: Information Overload
-    canonical_name_zh: 信息过载
-    aliases: [认知过载 —— 与 choice_overload 的区别：选项过载针对决策选项数量，信息过载针对信息总量与维度；机制同族]
-    domain: cognitive_load
-    definition: 可用信息量超过认知加工能力时出现的决策质量下降、延迟与回避。信息量与决策绩效的倒 U 关系是该领域共识（S158 综述记录的倒 U 溯源为 Schroder, Driver & Streufert 1967；Jacoby 等 1974 的消费者实验系经 S158 综述传统转引，一手 EP 未建）；S49 与 S13 分别从媒介环境与稀缺带宽角度扩展了该机制。
-    core_claim: 信息越多不等于决策越好：超过容量后决策质量下降、决策时间延长、放弃率上升。
-    mechanism: 比较维度随信息增加而超线性增长，工作记忆不足以维护全比较，satisficing 与启发式接管；稀缺视角下带宽被占满，深思与自控能力同步下降。结果呈现为三种行为：草率决定、推迟决定、彻底回避。
-    causal_chain: "信息量超限 → 比较维度爆炸 → 满意化与回避 → 决策质量下降或决策缺失"
-    variables: {inputs: [信息总量, 维度数量, 更新频率, "S158 五类过载原因：组织设计/信息性质（模糊性、新颖性、复杂性）/处理信息的人（态度、资质、经验）/任务与流程/信息技术的使用或误用"], moderators: [时间压力, 任务重要性, 受众专长, 过滤工具质量], mediators: [比较成本, 带宽占用], outputs: [决策延迟, 选择回避, 满意化决策, 后悔率, "S158 症状清单：决策质量降低/决策时间延长/满意度降低/慢性压力"]}
-    evidence:
-      supporting:
-        - "S158（Eppler & Mengis 2004）跨学科奠基综述：五类原因（组织设计/信息性质/人/任务流程/信息技术）、症状（决策质量降低/决策时间延长/满意度降低/慢性压力）与原因-症状-对策循环框架"
-        - "Jacoby、Speller 与 Kohn 1974 的信息负荷与品牌选择实验（经 S158 综述传统转引，一手 EP 未建；S158 记录的倒 U 溯源为 Schroder, Driver & Streufert 1967）"
-        - "S13 的带宽税证据；S49 对数字环境注意力碎片化的分析"
-      conflicting:
-        - "个体与任务差异大：简单任务几乎不受影响；良好的信息架构能吸收大量信息"
-      replication:
-        - "倒 U 主关系稳健；具体拐点因任务与人群而异"
-      meta_analysis: []
-    evidence_grade: B
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "有高质量聚合与过滤工具时，过载可转化为可用性"
-      - "专家在熟悉领域的信息处理容量远高于新手"
-    failure_conditions:
-      - "完全无信息同样导致焦虑与决策失败——问题不是少而是匹配"
-      - "以删减关键信息解决过载，制造新的误导"
-    common_misinterpretations:
-      - "给用户全部数据是尊重用户——超过容量的信息是不知情下的剥夺选择权"
-      - "把过载误解为内容太多——结构缺失比数量更致命"
-    ethical_risks:
-      - "用信息过载阻碍理性比较（保险条款、会员协议的文档海战术）"
-    examples:
-      original_cases:
-        - "S13 对稀缺如何压缩带宽的实验与田野研究；S49 对持续在线信息环境的批判"
-      research_cases:
-        - "消费者实验：信息维度增加到一定程度后，选择质量先平后降、时间上升、弃选增多"
-      modern_cases:
-        - "电商详情页信息墙；社群一天千条消息导致退群；订阅列表的无限积压"
-    communication_implications: 在过载环境里，策展（curation）本身就是内容价值：替受众完成比较与筛选，比提供更多信息更能赢得信任。
-    community_implications: 社群规模扩大后的首要矛盾就是信息过载：分频道、摘要置顶、每周精选是必需品而非可选项。
-    content_applications:
-      title: "标题承诺替读者做减法（一份清单胜过十篇分析）"
-      body: "结论前置加分层展开，允许只读第一层"
-      opening: "声明本文已过滤了什么（读完这 500 字等于看完 20 篇）"
-      cta: "提供可收藏的结构化摘要作为外置记忆"
-    platform_implications: 平台的推荐与摘要功能是对过载的工程缓解，但也把过滤权集中于算法（S93 与 S95 的批判视角）；运营者的对策是自建轻量策展层。
-    related_nodes: [choice_overload, working_memory_limits, attention_capacity_limits, satisficing, zero_click_information, filter_bubble_echo_chambers, scarcity_mindset]
-    source_ids: [S13, S49, S03, S158]
-    provenance:
-      primary_sources: ['S13', 'S49', 'S03', 'S158']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: seductive_details_effect
-    canonical_name_en: Seductive Details Effect
-    canonical_name_zh: 引人分心的细节效应
-    aliases: [诱饵细节效应 —— 与 extraneous_cognitive_load 的关系：它是外在负荷中由有趣但无关内容造成的研究子类]
-    domain: cognitive_load
-    definition: 有趣但与学习目标无关的细节（seductive details）反而损害对核心内容的理解与记忆。教育心理学的 Garner、Mayer 等系列实验系统记录了这一反直觉效应。
-    core_claim: 增加吸引力的无关细节会降低而非提升核心信息的学习效果。
-    mechanism: 无关的生动细节占用工作记忆（外在负荷）、打断核心因果结构的图式建构，并诱导注意从关键结构滑向娱乐片段；受众记住的恰恰是细节而非要点——与 gist_vs_verbatim_memory 连通，被记住的是无关的逐字痕迹。
-    causal_chain: "加入有趣无关细节 → 注意与容量被分流 → 因果连贯断裂 → 核心内容理解与记忆下降"
-    variables: {inputs: [细节的生动性, 细节与主题的相关性, 细节位置], moderators: [受众先验知识, 学习动机, 细节数量], mediators: [注意分流, 图式连贯性], outputs: [核心内容回忆, 迁移成绩, 完读率]}
-    evidence:
-      supporting:
-        - "Garner 等 1989 前后的教育心理学系列实验"
-        - "Mayer 多媒体学习研究中的连贯性原则（coherence principle）"
-      conflicting:
-        - "效应边界依赖细节的生动程度与呈现位置；部分研究未发现显著损害"
-      replication:
-        - "主流方向在多媒体学习文献中较稳定；效应大小随情境波动"
-      meta_analysis: []
-    evidence_grade: B
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "与核心因果结构相关的细节不属此类，反而是必要案例"
-      - "叙事框架中服务主题的细节无碍（故事不是诱饵细节）"
-    failure_conditions:
-      - "纯娱乐内容不需要此原则，娱乐本身就是目标"
-      - "高动机受众受影响减弱"
-    common_misinterpretations:
-      - "加个有趣的段子内容就更好传——段子若无信息功能，是在稀释记忆点"
-      - "把完读率当学习目标——留住人与讲明白是两回事"
-    ethical_risks:
-      - "用猎奇细节掩盖证据薄弱（标题党知识内容的结构性套路）"
-    examples:
-      original_cases:
-        - "S65 对故事张力与主题关系的讨论提供了反面参照：细节必须服务意义"
-      research_cases:
-        - "教学文本实验：加入生动无关段落的组在核心概念测验上更差"
-      modern_cases:
-        - "科普视频堆表情包与热梗导致主论点失焦；课程里故事过多、干货被稀释"
-    communication_implications: 有趣必须为要点服务：要么删掉诱饵细节，要么把细节改造为论证的组成部分（证据案例而非装饰）。
-    community_implications: 社群内容策划中，热梗与趣图应作为入口钩子后迅速收束回主题，否则社群记忆点会停留在梗上而不是方法上。
-    content_applications:
-      body: "每个故事或段子都要回答它服务于哪个论点，答不出就删"
-      opening: "钩子之后立刻给出主论点，避免钩子吞掉正文"
-      evidence: "用真实案例替代虚构趣闻，兼顾生动与相关"
-    platform_implications: 算法奖励的前期留存指标诱导创作者在前段堆砌诱饵细节，形成学习价值与完播率的系统性冲突。
-    related_nodes: [extraneous_cognitive_load, germane_load_learning, anecdote_vs_statistics, gist_vs_verbatim_memory, emotional_arousal]
-    source_ids: [S40, S69, S65, S159]
-    provenance:
-      primary_sources: ['S40', 'S69', 'S65', 'S159']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: working_memory_limits
+  canonical_name_en: Working Memory Limits
+  canonical_name_zh: 工作记忆容量限制
+  aliases:
+  - 短时记忆容量 —— 与 attention_capacity_limits 的区别：本节点是信息的保持与操纵约束，注意容量是资源总量约束
+  domain: cognitive_load
+  definition: 工作记忆（Baddeley 多成分模型，含中央执行、语音回路、视空间画板与情景缓冲器）能同时保持与操纵的信息量有限。Miller 1956 对即时记忆的经典估计为 7±2 个组块，Cowan
+    2001 修正为约 4 个组块。组块化是唯一可靠的扩容方式。
+  core_claim: 在无复述与组块化时，可同时保持的独立信息单元约为 4 个，超出即遗忘或出错。
+  mechanism: 容量受制于注意资源与表征间干扰：单元越多，相互干扰越大，衰减与替换越快。组块化通过调用长时记忆中的既有模式把多元素压缩为单一位，使专家在熟悉领域能记住远超新手的信息量——容量是常量，组块大小是变量。
+  causal_chain: 信息单元超过容量 → 干扰与衰减 → 遗忘或错误 → 理解与决策质量下降
+  variables:
+    inputs:
+    - 信息单元数量
+    - 单元的独立性
+    - 呈现速度
+    moderators:
+    - 领域专长
+    - 组块化提示
+    - 复述机会
+    mediators:
+    - 组块化
+    - 保持性复述
+    outputs:
+    - 即时回忆量
+    - 理解深度
+    - 操作错误率
+  evidence:
+    supporting:
+    - Miller 1956 的经典论文对神奇数字 7±2 的论证
+    - Cowan 2001 对约 4 个组块的现代估计
+    - Baddeley 与 Hitch 的工作记忆多成分模型研究传统（S04）
+    conflicting:
+    - 容量绝对值因任务与测量方式在 4 到 7 之间浮动，但小容量上限的存在无争议
+    replication:
+    - 容量约束被跨语言、跨材料广泛复制
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 组块化与专业经验大幅改变有效容量
+  - 简单回忆与复杂推理对容量的需求不同
+  failure_conditions:
+  - 一次呈现超过容量的并列信息点（五个以上卖点）
+  - 要求用户跨页面记住前提信息
+  common_misinterpretations:
+  - 把 7±2 当设计铁律——该数字来自特定即时回忆任务，不是万能常数
+  - 以为信息量大等于信息价值大——超容量时增量信息是负价值
+  ethical_risks:
+  - 用信息密度轰炸让消费者无暇比较条款（复杂费率结构）
+  examples:
+    original_cases:
+    - S04 对工作记忆模型与容量证据的系统阐述
+    research_cases:
+    - 即时序列回忆范式：正确回忆项目数在小容量区间内封顶
+    modern_cases:
+    - 表单的一屏一问设计；课程营销的三点式结构；手机号 3-4-4 分组
+  communication_implications: 把任何信息的瞬时认知占用压缩到三四件事以内，超出部分必须分组、分层或转为外部载体（图表、收藏）。
+  community_implications: 社群入门信息（规则、路径、身份）必须压到极简，新人的工作记忆是转化漏斗的第一道瓶颈。
+  content_applications:
+    title: 标题只承载一个主张
+    body: 每组不超过三个并列要点，多则分组编号
+    opening: 先给一句话结论，降低保持负担
+    cta: 只要求记住并执行一件事
+  platform_implications: 短视频与卡片流把容量约束产品化为默认格式；平台外链跳转则常因跨场景记忆要求而流失用户。
+  related_nodes:
+  - attention_capacity_limits
+  - intrinsic_cognitive_load
+  - extraneous_cognitive_load
+  - information_overload
+  - dual_process_theory
+  - serial_position_effect
+  source_ids:
+  - S04
+  - S02
+  - S13
+  - S115
+  - S142
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Sweller 1988 奠基论文（S115 已实取摘要）+ CLT 后续综述（三类负荷/五原则）
+    effect_size: 手段-目的搜索显著提高认知负荷并损害学习；样例/目标自由显著改善迁移
+    replication_status: CLT 框架经数十年教学研究复制扩展（Sweller 2019 综述）
+    context_dependency: 适用于复杂任务学习；降低外在负荷是核心操作
+    downgrade_upgrade_reason: 2026-09 补充一手奠基论文证据（S115），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S115
+    supporting_evidence:
+    - S04
+    - S02
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: intrinsic_cognitive_load
+  canonical_name_en: Intrinsic Cognitive Load
+  canonical_name_zh: 内在认知负荷
+  aliases:
+  - 固有负荷 —— 与 extraneous_cognitive_load 的区别：内在负荷来自材料本身的必要复杂度，外在负荷来自呈现方式的缺陷
+  domain: cognitive_load
+  definition: 由材料本身的元素交互性与学习者的先验知识共同决定的必要加工负荷，是 Sweller 认知负荷理论的组成部分。负荷不是材料的固有属性，而是材料与学习者的函数。
+  core_claim: 必须同时加工的交互元素越多、先验知识越少，必要负荷越高；图式可以把多元素压缩为单块从而降低负荷。
+  mechanism: 材料中必须同时保持在记忆中的独立元素数量决定占用水平；领域图式一旦形成，多元素被捆绑成单一组块处理，因此同样的材料对专家负荷更低。真正的高复杂度（如医学诊断的多因素交互）无法被消除，只能被顺序化与图式化。
+  causal_chain: 元素交互性高 + 先验知识少 → 必要负荷超载 → 理解失败 → 需图式建构降低负荷
+  variables:
+    inputs:
+    - 元素交互性
+    - 先验知识
+    - 任务复杂度
+    moderators:
+    - 学习顺序
+    - 分段策略
+    - 已有图式质量
+    mediators:
+    - 组块化
+    - 图式建构
+    outputs:
+    - 理解率
+    - 学习速度
+    - 迁移能力
+  evidence:
+    supporting:
+    - Sweller 1988 认知负荷理论的开创性论文与后续系列研究
+    - 专家与新手差异研究：同一材料的工作记忆占用随专长显著不同
+    conflicting:
+    - 三分负荷的测量在方法学上有争议，内在负荷难以与图式化收益完全分离
+    replication:
+    - 专家-新手负荷差异稳健；负荷的独立测量仍是活跃争议区
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 对新手高负荷的材料对专家可能接近零负荷
+  - 不可简化的真复杂度只能顺序化，不能删除
+  failure_conditions:
+  - 用简化掩盖必要步骤，制造低配版理解（会做错不会做对）
+  - 对专家过度分段，显得啰嗦并降低效率
+  common_misinterpretations:
+  - 把内容拆得越碎越好——过度碎片化破坏图式建构，学习反而不发生
+  - 以为负荷全靠呈现方式——材料与受众的匹配才是根源
+  ethical_risks:
+  - 金融与医疗产品用简单三步话术掩盖条款的真实复杂度
+  examples:
+    original_cases:
+    - Sweller 系列研究中对元素交互性定义与 novice-expert 对比
+    research_cases:
+    - 同一段统计教学材料，先修图式不同的学生表现出完全不同的负荷水平与成绩
+    modern_cases:
+    - 课程的前置知识标注；新手引导的分步解锁设计
+  communication_implications: 先评估受众已有图式再定深度：对同一主题，新手版与进阶版不是删减关系，而是重组关系。
+  community_implications: 社群分层（新人营、进阶群）本质是按内在负荷分舱，避免把新手直接扔进专家对话。
+  content_applications:
+    title: 在标题里声明门槛，筛选对的人群
+    opening: 用一句话唤醒受众已有的相关经验作为图式挂点
+    body: 按依赖顺序排布知识点，先单后组合
+    cta: 给出与当前水平匹配的下一步（而非所有人都同一动作）
+  platform_implications: 平台没有受众分层变量，同一内容必须自带多入口（如视频加长文版），把负荷分层交给内容自身。
+  related_nodes:
+  - working_memory_limits
+  - extraneous_cognitive_load
+  - germane_load_learning
+  - information_overload
+  - concreteness_in_language
+  source_ids:
+  - S04
+  - S69
+  - S115
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Baddeley 2007《Working Memory, Thought, and Action》（S04，工作记忆成分与负荷）+ Pinker 2014（S69，写作负荷）
+    effect_size: 要素交互性决定内在负荷（Sweller 1994/2010/2019 后续文献，一手 EP 待建；S115 仅支持「工作记忆有限」前提）
+    replication_status: 内在负荷-学习效果关系在 CLT 传统中方向稳定
+    context_dependency: 学习者前知识/材料要素交互度调制
+    downgrade_upgrade_reason: 2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S04
+    supporting_evidence:
+    - S69
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: extraneous_cognitive_load
+  canonical_name_en: Extraneous Cognitive Load
+  canonical_name_zh: 外在认知负荷
+  aliases:
+  - 外在负荷
+  - 无关负荷 —— 与 seductive_details_effect 的区别：外在负荷是呈现缺陷的总类，引诱性细节是其中被研究得最多的子类
+  domain: cognitive_load
+  definition: 由信息呈现方式不当产生、对理解无贡献的额外负荷。分裂注意（需要对照两处信息源）、冗余（图文完全重复）、瞬态信息（视频不可回看）都是典型来源。它消耗工作记忆却不增进理解。
+  core_claim: 呈现缺陷会占用工作记忆而不产生任何理解收益；优化呈现是零成本的认知让利。
+  mechanism: 当受众必须把资源花在对齐信息源、搜索术语含义、回放漏掉的句子上时，剩余给理解的资源减少。Mayer 的多媒体学习研究原则（图文邻近、去冗余、分段、双通道）与 Sweller 的效应同源，都指向同一机制：把资源从对齐任务中释放给意义建构。
+  causal_chain: 呈现缺陷 → 对齐与检索开销 → 工作记忆被占用 → 理解资源不足
+  variables:
+    inputs:
+    - 图文空间分离
+    - 冗余文本
+    - 术语密度
+    - 不可回看性
+    moderators:
+    - 受众专长
+    - 阅读设备
+    - 时间压力
+    mediators:
+    - 对齐开销
+    - 检索开销
+    outputs:
+    - 理解率
+    - 完读率
+    - 错误率
+  evidence:
+    supporting:
+    - Sweller 系列的分裂注意与冗余效应实验（一手 EP 待建）
+    - Mayer 多媒体学习研究传统的一致性结果（S159 连贯性原则：无关呈现消耗工作记忆资源）
+    conflicting:
+    - 对高先验学习者，冗余的害处减小甚至反转（专家不需要整合指引）
+    replication:
+    - 分裂注意与冗余效应在多媒体学习领域被广泛复制
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 对新手最有效；专家受众可承受更高密度
+  - 需要长时间研究而非一次浏览的材料，部分效应减弱
+  failure_conditions:
+  - 为了显得专业而堆术语，直接劝退受众
+  - 一图配完全重复的文本，两边都读
+  common_misinterpretations:
+  - 信息量大等于干货多——呈现混乱的干货等于没有干货
+  - 把可读性当低级诉求——可读性是认知资源管理，不是文风偏好
+  ethical_risks:
+  - 用复杂呈现制造专业感壁垒，阻碍横向比较（理财条款的长句嵌套）
+  examples:
+    original_cases:
+    - S69 从认知科学角度批评混淆呈现的写作问题
+    research_cases:
+    - 图文邻近与分离条件下的对比实验：邻近组在迁移测验上更优
+    modern_cases:
+    - 长图海报的文字墙；没有字幕的口播视频；PPT 满屏文字念稿
+  communication_implications: 在社交媒体环境里，外在负荷是最大的隐形流失原因；每消除一处对齐开销，等于给核心信息加了一次曝光。
+  community_implications: 群规、置顶、活动说明的呈现质量直接决定执行率，社群运营的一半工作是把外在负荷降到接近零。
+  content_applications:
+    body: 图文紧邻、先图后文；术语首次出现即给一句白话解释
+    title: 标题避免嵌套修饰，一眼可解
+    opening: 用短句开场，第一屏不出现任何需要回看的引用
+    visual: 一图一论点，删除装饰性信息
+  platform_implications: 平台原生格式（自动字幕、图文卡片、章节进度条）本质是在替创作者偿还外在负荷债务。
+  related_nodes:
+  - intrinsic_cognitive_load
+  - germane_load_learning
+  - working_memory_limits
+  - seductive_details_effect
+  - visual_hierarchy
+  - processing_fluency
+  source_ids:
+  - S04
+  - S69
+  - S49
+  - S115
+  - S159
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Baddeley 2007（S04，工作记忆容量限制）+ Pinker 2014（S69，冗余与负荷）+ Harp & Mayer 1998（S159，连贯性原则：无关呈现消耗工作记忆）；Sweller
+      1988（S115）仅支持「工作记忆有限」前提，三类负荷与分裂注意/冗余效应实验系后续文献，一手 EP 待建
+    effect_size: 与学习无关的呈现方式消耗工作记忆（格式效应）
+    replication_status: 外在负荷-学习损伤关系在 CLT 实验传统中稳健
+    context_dependency: 材料格式/通道冗余/学习者经验调制
+    downgrade_upgrade_reason: 2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S04
+    supporting_evidence:
+    - S69
+    - S49
+    - S159
+    last_verified: '2026-09-09'
+    platform_sources:
+    - douyin:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: germane_load_learning
+  canonical_name_en: Germane Load (Deep Processing)
+  canonical_name_zh: 相关负荷（深度加工）
+  aliases:
+  - 相关认知负荷
+  - 深加工投入 —— 与 intrinsic_cognitive_load 的区别：内在负荷是材料的必要占用，相关负荷是自愿投入于图式建构的努力
+  domain: cognitive_load
+  definition: 投入于图式建构与自动化的认知努力——把工作记忆资源主动用于联系、举例、自我解释等深加工，而非仅仅应付材料。同样的客观负荷可以导向理解，也可以导向应付，差别就在资源是否用于建构。
+  core_claim: 深加工是资源分配决策：只要还有剩余容量与动机，把资源投入联系与生成活动就能放大学习效果。
+  mechanism: 深加工操作（自我解释、类比、生成问题、举例）把新信息与既有图式连接，增加提取线索的数量与多样性，从而提升后续提取成功率；Bjork 的必要难度框架说明适度费力的加工换来更持久的保持（与
+    testing_effect 连通）。
+  causal_chain: 剩余容量 + 加工动机 → 生成性操作 → 图式连接与线索丰富 → 长期保持与迁移
+  variables:
+    inputs:
+    - 自我解释
+    - 举例
+    - 类比
+    - 出题
+    moderators:
+    - 学习动机
+    - 剩余容量
+    - 反馈可得性
+    mediators:
+    - 图式建构
+    - 提取线索多样性
+    outputs:
+    - 长期保持
+    - 迁移能力
+    - 应用频率
+  evidence:
+    supporting:
+    - Sweller 理论对相关负荷的界定与教学实验
+    - Bjork 的必要难度研究传统（EP 外一手文献，未建 EP，与 S40 粘性框架无直接对应）
+    conflicting:
+    - 相关负荷作为独立构念的测量争议：难以与内在负荷和成果完全区分，部分学者主张放弃三分法
+    replication:
+    - 深加工优于浅加工的总方向稳健；作为独立负荷维度的地位有争议
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 依赖动机：深加工是自愿投入，无法强制
+  - 前提是负荷未满——超载时没有剩余资源可分配
+  failure_conditions:
+  - 低动机受众被要求深度输出时直接逃避（作业完成率骤降）
+  - 把深度等同于冗长，用加法冒充加工
+  common_misinterpretations:
+  - 烧脑的内容更高级——超出容量的负荷不产生学习，只产生放弃
+  - 打卡等于学习——形式化的输出不等于图式建构
+  ethical_risks:
+  - 把没学会归咎于学员不努力，掩盖课程设计缺陷（伪科学课程话术）
+  examples:
+    original_cases:
+    - S04 与 Sweller 传统中的图式习得论述；Bjork 的必要难度框架
+    research_cases:
+    - 自我解释实验：被要求解释每步理由的组在迁移题上优于仅阅读组
+    modern_cases:
+    - 知识付费的讲义加自测题设计；社群共读的输出型打卡（写百字复盘）
+  communication_implications: 给受众留一个低门槛的生成动作（评论回答一个问题），一次成功的自我解释胜过三次重复阅读。
+  community_implications: 社群的输出机制（复盘、案例征集）是把 germane load 制度化，成员的沉淀式参与比刷屏式活跃更有长期价值。
+  content_applications:
+    body: 每个关键概念后附一个可代入的类比或提问
+    opening: 邀请读者带着自己的案例来读（先想一个你自己的例子）
+    cta: 用一个问题引导评论区的自我解释
+  platform_implications: 平台的评论与弹幕提供了低门槛生成出口；但纯情绪化互动不等于深加工，平台无法区分两者，运营者要自己设计生成任务。
+  related_nodes:
+  - testing_effect
+  - spaced_repetition
+  - intrinsic_cognitive_load
+  - extraneous_cognitive_load
+  - working_memory_limits
+  - flow_state
+  source_ids:
+  - S04
+  - S40
+  - S115
+  validation_status: MEMORY_BASED
+  grade_justification:
+    independent_studies: Baddeley 2007（S04，工作记忆与图式加工，相邻概念）+ Heath & Heath 2007（S40，SUCCESs/粘性框架，相邻概念）；相关负荷/自我解释/必要难度的一手实验证据未建
+      EP，现引 EP 仅相邻概念，内容来自记忆蒸馏，待建 EP 后升级
+    effect_size: 图式构建/自我解释提升学习迁移（生成学习传统）
+    replication_status: 生成学习效应多研究支持（阐释/总结/自测）
+    context_dependency: 生成任务难度/反馈/学习者动机调制
+    downgrade_upgrade_reason: 2026-09 反向审计发现相关负荷/自我解释/必要难度的一手 EP 缺失，由 PARTIALLY_VALIDATED 回退为 MEMORY_BASED、grade
+      降为 C；本体内容保留，待建 EP 后升级
+  provenance:
+    primary_sources:
+    - S04
+    supporting_evidence:
+    - S40
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: information_overload
+  canonical_name_en: Information Overload
+  canonical_name_zh: 信息过载
+  aliases:
+  - 认知过载 —— 与 choice_overload 的区别：选项过载针对决策选项数量，信息过载针对信息总量与维度；机制同族
+  domain: cognitive_load
+  definition: 可用信息量超过认知加工能力时出现的决策质量下降、延迟与回避。信息量与决策绩效的倒 U 关系是该领域共识（S158 综述记录的倒 U 溯源为 Schroder, Driver &
+    Streufert 1967；Jacoby 等 1974 的消费者实验系经 S158 综述传统转引，一手 EP 未建）；S49 与 S13 分别从媒介环境与稀缺带宽角度扩展了该机制。
+  core_claim: 信息越多不等于决策越好：超过容量后决策质量下降、决策时间延长、放弃率上升。
+  mechanism: 比较维度随信息增加而超线性增长，工作记忆不足以维护全比较，satisficing 与启发式接管；稀缺视角下带宽被占满，深思与自控能力同步下降。结果呈现为三种行为：草率决定、推迟决定、彻底回避。
+  causal_chain: 信息量超限 → 比较维度爆炸 → 满意化与回避 → 决策质量下降或决策缺失
+  variables:
+    inputs:
+    - 信息总量
+    - 维度数量
+    - 更新频率
+    - S158 五类过载原因：组织设计/信息性质（模糊性、新颖性、复杂性）/处理信息的人（态度、资质、经验）/任务与流程/信息技术的使用或误用
+    moderators:
+    - 时间压力
+    - 任务重要性
+    - 受众专长
+    - 过滤工具质量
+    mediators:
+    - 比较成本
+    - 带宽占用
+    outputs:
+    - 决策延迟
+    - 选择回避
+    - 满意化决策
+    - 后悔率
+    - S158 症状清单：决策质量降低/决策时间延长/满意度降低/慢性压力
+  evidence:
+    supporting:
+    - S158（Eppler & Mengis 2004）跨学科奠基综述：五类原因（组织设计/信息性质/人/任务流程/信息技术）、症状（决策质量降低/决策时间延长/满意度降低/慢性压力）与原因-症状-对策循环框架
+    - Jacoby、Speller 与 Kohn 1974 的信息负荷与品牌选择实验（经 S158 综述传统转引，一手 EP 未建；S158 记录的倒 U 溯源为 Schroder, Driver
+      & Streufert 1967）
+    - S13 的带宽税证据；S49 对数字环境注意力碎片化的分析
+    conflicting:
+    - 个体与任务差异大：简单任务几乎不受影响；良好的信息架构能吸收大量信息
+    replication:
+    - 倒 U 主关系稳健；具体拐点因任务与人群而异
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 有高质量聚合与过滤工具时，过载可转化为可用性
+  - 专家在熟悉领域的信息处理容量远高于新手
+  failure_conditions:
+  - 完全无信息同样导致焦虑与决策失败——问题不是少而是匹配
+  - 以删减关键信息解决过载，制造新的误导
+  common_misinterpretations:
+  - 给用户全部数据是尊重用户——超过容量的信息是不知情下的剥夺选择权
+  - 把过载误解为内容太多——结构缺失比数量更致命
+  ethical_risks:
+  - 用信息过载阻碍理性比较（保险条款、会员协议的文档海战术）
+  examples:
+    original_cases:
+    - S13 对稀缺如何压缩带宽的实验与田野研究；S49 对持续在线信息环境的批判
+    research_cases:
+    - 消费者实验：信息维度增加到一定程度后，选择质量先平后降、时间上升、弃选增多
+    modern_cases:
+    - 电商详情页信息墙；社群一天千条消息导致退群；订阅列表的无限积压
+  communication_implications: 在过载环境里，策展（curation）本身就是内容价值：替受众完成比较与筛选，比提供更多信息更能赢得信任。
+  community_implications: 社群规模扩大后的首要矛盾就是信息过载：分频道、摘要置顶、每周精选是必需品而非可选项。
+  content_applications:
+    title: 标题承诺替读者做减法（一份清单胜过十篇分析）
+    body: 结论前置加分层展开，允许只读第一层
+    opening: 声明本文已过滤了什么（读完这 500 字等于看完 20 篇）
+    cta: 提供可收藏的结构化摘要作为外置记忆
+  platform_implications: 平台的推荐与摘要功能是对过载的工程缓解，但也把过滤权集中于算法（S93 与 S95 的批判视角）；运营者的对策是自建轻量策展层。
+  related_nodes:
+  - choice_overload
+  - working_memory_limits
+  - attention_capacity_limits
+  - satisficing
+  - zero_click_information
+  - filter_bubble_echo_chambers
+  - scarcity_mindset
+  source_ids:
+  - S13
+  - S49
+  - S03
+  - S158
+  provenance:
+    primary_sources:
+    - S13
+    - S49
+    - S03
+    - S158
+    last_verified: '2026-09-09'
+    platform_sources:
+    - bilibili:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: seductive_details_effect
+  canonical_name_en: Seductive Details Effect
+  canonical_name_zh: 引人分心的细节效应
+  aliases:
+  - 诱饵细节效应 —— 与 extraneous_cognitive_load 的关系：它是外在负荷中由有趣但无关内容造成的研究子类
+  domain: cognitive_load
+  definition: 有趣但与学习目标无关的细节（seductive details）反而损害对核心内容的理解与记忆。教育心理学的 Garner、Mayer 等系列实验系统记录了这一反直觉效应。
+  core_claim: 增加吸引力的无关细节会降低而非提升核心信息的学习效果。
+  mechanism: 无关的生动细节占用工作记忆（外在负荷）、打断核心因果结构的图式建构，并诱导注意从关键结构滑向娱乐片段；受众记住的恰恰是细节而非要点——与 gist_vs_verbatim_memory
+    连通，被记住的是无关的逐字痕迹。
+  causal_chain: 加入有趣无关细节 → 注意与容量被分流 → 因果连贯断裂 → 核心内容理解与记忆下降
+  variables:
+    inputs:
+    - 细节的生动性
+    - 细节与主题的相关性
+    - 细节位置
+    moderators:
+    - 受众先验知识
+    - 学习动机
+    - 细节数量
+    mediators:
+    - 注意分流
+    - 图式连贯性
+    outputs:
+    - 核心内容回忆
+    - 迁移成绩
+    - 完读率
+  evidence:
+    supporting:
+    - Garner 等 1989 前后的教育心理学系列实验
+    - Mayer 多媒体学习研究中的连贯性原则（coherence principle）
+    conflicting:
+    - 效应边界依赖细节的生动程度与呈现位置；部分研究未发现显著损害
+    replication:
+    - 主流方向在多媒体学习文献中较稳定；效应大小随情境波动
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 与核心因果结构相关的细节不属此类，反而是必要案例
+  - 叙事框架中服务主题的细节无碍（故事不是诱饵细节）
+  failure_conditions:
+  - 纯娱乐内容不需要此原则，娱乐本身就是目标
+  - 高动机受众受影响减弱
+  common_misinterpretations:
+  - 加个有趣的段子内容就更好传——段子若无信息功能，是在稀释记忆点
+  - 把完读率当学习目标——留住人与讲明白是两回事
+  ethical_risks:
+  - 用猎奇细节掩盖证据薄弱（标题党知识内容的结构性套路）
+  examples:
+    original_cases:
+    - S65 对故事张力与主题关系的讨论提供了反面参照：细节必须服务意义
+    research_cases:
+    - 教学文本实验：加入生动无关段落的组在核心概念测验上更差
+    modern_cases:
+    - 科普视频堆表情包与热梗导致主论点失焦；课程里故事过多、干货被稀释
+  communication_implications: 有趣必须为要点服务：要么删掉诱饵细节，要么把细节改造为论证的组成部分（证据案例而非装饰）。
+  community_implications: 社群内容策划中，热梗与趣图应作为入口钩子后迅速收束回主题，否则社群记忆点会停留在梗上而不是方法上。
+  content_applications:
+    body: 每个故事或段子都要回答它服务于哪个论点，答不出就删
+    opening: 钩子之后立刻给出主论点，避免钩子吞掉正文
+    evidence: 用真实案例替代虚构趣闻，兼顾生动与相关
+  platform_implications: 算法奖励的前期留存指标诱导创作者在前段堆砌诱饵细节，形成学习价值与完播率的系统性冲突。
+  related_nodes:
+  - extraneous_cognitive_load
+  - germane_load_learning
+  - anecdote_vs_statistics
+  - gist_vs_verbatim_memory
+  - emotional_arousal
+  source_ids:
+  - S40
+  - S69
+  - S65
+  - S159
+  provenance:
+    primary_sources:
+    - S40
+    - S69
+    - S65
+    - S159
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long

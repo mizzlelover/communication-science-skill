@@ -5,7 +5,8 @@ fact_confidence_summary: >-
   TikTok Shop 等产品形态为公开可见规则；海外用户搜索行为上升、静音观看文化等
   为行业观察。2026-09 对官方来源实取：TikTok Newsroom 的 For You 推荐机制说明
   与官方社区准则页已实际抓取核实（platform_sources S1-S2）；known_platform_patterns
-  已按 L1-L4 标注证据级别。
+  已按 L1-L4 标注证据级别。所有标注以平台最新公告为准，
+  使用 update_platform_knowledge 流程复核。
 
 content_units:
   - "短视频（竖屏为主，时长上限多次放宽）"
@@ -53,12 +54,13 @@ attention_environment: >-
 user_behavior: >-
   梗文化与挑战赛参与度高（模仿是原生行为）；跨语言内容消费接受度高；
   对创作者个人身份（creator persona）的依附弱于订阅平台。
+  [industry_consensus-行为观察]
 
 interaction_signals:
   - "完播/重播：核心信号方向 [industry_consensus]"
   - "点赞/评论/分享/收藏：互动分层（分享权重高 [industry_consensus-方向]）"
-  - "关注转化：单视频转粉率"
-  - "视频保存：工具价值与二创素材信号"
+  - "关注转化：单视频转粉率 [official_rule-S1 用户互动含关注；转粉率度量口径为 industry_consensus]"
+  - "视频保存：工具价值与二创素材信号 [industry_consensus-方向]"
 
 sharing_mechanism: >-
   站内分享到 Instagram/WhatsApp 等外部社交链路相对顺畅
@@ -91,6 +93,7 @@ title_role: >-
 
 cover_role: >-
   弱化：单列全屏无封面网格；封面影响主页浏览与搜索缩略图。
+  [industry_consensus-产品形态+行为观察]
 
 opening_role: >-
   极重：与抖音一致的开场逻辑——首帧与首句在 1 秒内制造停留理由；

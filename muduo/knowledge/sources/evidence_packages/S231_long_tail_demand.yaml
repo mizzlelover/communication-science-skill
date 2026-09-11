@@ -1,0 +1,25 @@
+# Evidence Package — S231（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S231
+title: 'Goodbye Pareto Principle, Hello Long Tail: The Effect of Search Costs on the Concentration of
+  Product Sales'
+authors: Erik Brynjolfsson; Yu (Jeffrey) Hu; Duncan Simester
+year: 2011
+journal: Management Science 57(8):1373-1386
+doi: 10.1287/mnsc.1110.1371
+url: https://dspace.mit.edu/handle/1721.1/74642
+access_level: abstract_only
+research_status: annotated
+content_obtained: MIT DSpace 作者终稿完整摘要逐字实读（2026-09-11）
+research_question: 互联网渠道的销售分布是否更不集中（长尾）？机制是什么？
+core_claims:
+- 多渠道零售商数据：互联网渠道的销售分布显著不如传统渠道集中
+- 即使互联网与传统渠道的产品可得性与价格完全相同，结果依然成立——排除'可得性差异'解释
+- 消费者对互联网搜索与发现工具（如推荐引擎）的使用与利基产品份额提升相关
+- 结论：互联网长尾不只源于产品选择增加，也部分源于更低的搜索成本；技术与搜索成本的趋势预示销售分布的持续位移
+method: 多渠道零售商真实交易数据分析
+limitations: 单一零售商品类；'搜索成本'为推断变量
+boundary_conditions: 线上渠道情境；头部集中度变化的另一面见后续文献（Elberse & Oberholzer-Gee 等明星效应研究，未建包）
+relevant_nodes:
+- long_tail_demand
+notes: long_tail_demand 一手实证：节点主张的'数字渠道使尾部经济可服务'获得受控比较证据；节点同时主张的'头部集中未消失'修正侧由节点原文既有证据承担。
+last_verified: 2026-09

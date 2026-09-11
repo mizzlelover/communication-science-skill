@@ -41,6 +41,7 @@ content_lifecycle: >-
   爆发式衰减：小时到数天；爆款靠推荐滚雪球，但衰减同样快；
   搜索长尾存在但弱于小红书/知乎。内容是"流量事件"而非"资产"——
   长青性需靠系列化与主页沉淀弥补。
+  [industry_consensus-行为观察]
 
 primary_entry_points:
   - "全屏推荐流（默认首页，注意力唯一战场）"
@@ -52,6 +53,7 @@ primary_entry_points:
 attention_environment: >-
   全屏沉浸单列：无选择权，但保留 0.5-1 秒的滑动否决权——
   注意力是唯一货币，每一秒都在被重新决定去留（attention_economics 的极端形态）。
+  [industry_consensus-公开产品形态+行为观察]
 
 user_behavior: >-
   低戒备高流动：用户不给第二次机会；
@@ -63,7 +65,7 @@ interaction_signals:
   - "复播/循环播放：强正向信号 [industry_consensus]"
   - "点赞：态度，量大但权重低于完播 [industry_consensus]"
   - "评论：讨论深度，权重高于点赞 [industry_consensus]"
-  - "分享：扩散+站外导流价值"
+  - "分享：扩散+站外导流价值 [industry_consensus-方向]"
   - "关注转化：单视频带来的涨粉（转粉率）[industry_consensus]"
 
 sharing_mechanism: >-
@@ -79,7 +81,7 @@ search_mechanism: >-
 community_mechanism: >-
   评论区玩梗文化（热评是二次内容）、粉丝团/直播灯牌、挑战赛话题聚合；
   社群感弱于 B 站——粉丝关系更多依附于单条爆款而非账号人格
-  （parasocial_relationship 较浅）。
+  （parasocial_relationship 较浅）。[industry_consensus-社区观察]
 
 algorithmic_features:
   - "流量池逐级推荐 [industry_consensus-机制方向，层级细节不可考]"
@@ -95,11 +97,12 @@ content_constraints:
 title_role: >-
   弱化但非无用：全屏流中标题是左下角辅助信息；在搜索结果、
   主页浏览与"标题留人"（文案悬念）场景仍有作用——
-  标题从"点击开关"退化为"补充说明+搜索接口"。
+  标题从"点击开关"退化为"补充说明+搜索接口"。[industry_consensus-行为观察]
 
 cover_role: >-
   弱化：单列全屏无封面网格；封面主要影响主页观感与搜索结果缩略图，
   对推荐流点击几乎无影响——这是与 B 站/YouTube 的本质区别。
+  [industry_consensus-产品形态+行为观察]
 
 opening_role: >-
   极重：前 3 秒钩子的流行不是玄学，而是滑动否决权的直接后果——

@@ -35,7 +35,9 @@ NOW = datetime.date(2026, 9, 8)
 FRESHNESS_MONTHS = {"official_rule": 12, "verified_observation": 6,
                     "industry_consensus": 6, "experience_speculation": 3}
 
-PRIMARY_SOURCE_TYPES = {"paper", "meta_analysis", "systematic_review"}
+# 一手类型含 official_source（任务书 §6 来源类型；平台机制节点的最强一手即官方文档，
+# 2026-09-11 扩展——官方来源须为本项目实读并在 EP 中记录 content_obtained）
+PRIMARY_SOURCE_TYPES = {"paper", "meta_analysis", "systematic_review", "official_source"}
 
 
 def months_since(ym):

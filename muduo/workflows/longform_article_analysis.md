@@ -192,6 +192,12 @@ Rewrite Options 的一部分），只是不执行。
    （适用条件 / 平台规则时效 / 合规风险 / 反模式排除 / 收入疗效类宣称真实性提示任一）——
    新增槽位（平台/选项/品类走查）不得挤占本槽位（ethical_safety 弱点对策：
    盲测 v3 中 8/16 案无风险提示的根因即槽位互挤）。
+8. **交付自包含（铁律 13 Reader Language）**：结构化交付默认使用
+   `templates/diagnosis_reader_v1.html`（批注式对照阅读器，M7 十四部分映射为
+   结论屏/决策区/附录折叠区与 18±N 张批注卡），按 `templates/DELIVERABLE_SPEC.md`
+   执行——零内部词汇（adapter 字段名/模式代码/AP-LF 编号/英文置信标签禁止出现在
+   用户交付物中）、机制引用即内联（名＋等级＋边界＋本文作用）、阅读说明在场、
+   术语清查留痕。轻量文本降级路径同样受门禁约束，不豁免。
 
 文章类型判定改变优化侧重：thought_leadership 重 originality+argument；
 research 重 evidence+methodology；consulting 重 problem→framework→recommendation；

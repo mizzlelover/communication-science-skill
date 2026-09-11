@@ -7,6 +7,7 @@ fact_confidence_summary: >-
   推荐系统长文、YouTube Help 上传页与标签页、How YouTube Works 官方说明已
   实际抓取核实（platform_sources S1-S4）；known_platform_patterns 已按
   L1-L4 标注证据级别，原标 official_rule 但无官方文档支持的标注已降级并注明。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
 
 content_units:
   - "长视频（横屏为主，分钟到小时级）"
@@ -33,6 +34,7 @@ recommendation_model: >-
 social_graph_characteristics: >-
   订阅制单向关系：订阅+铃铛=通知许可（permission_opt_in_mechanics）；
   频道与粉丝的长期关系是平台核心资产结构（parasocial_relationship 最成熟的平台之一）。
+  [official_rule-产品形态（订阅/铃铛产品机制公开可见）＋industry_consensus-关系观察]
 
 content_lifecycle: >-
   全平台最强长青性：优质视频可持续获得搜索与推荐流量数年
@@ -54,12 +56,13 @@ attention_environment: >-
 user_behavior: >-
   教程场景的"边看边做"；倍速观看习惯成熟；
   评论区深度讨论多；订阅用户对频道的更新有仪式化期待。
+  [industry_consensus-行为观察]
 
 interaction_signals:
   - "观看时长/平均观看时长：官方公开的推荐信号方向 [official_rule-官方指南公开讨论]"
   - "满意度调查（官方问卷）：官方公开的质量信号 [official_rule-产品存在]"
-  - "赞/踩、分享、评论：互动分层"
-  - "订阅+铃铛：通知许可与关系承诺"
+  - "赞/踩、分享、评论：互动分层 [industry_consensus-行为观察]"
+  - "订阅+铃铛：通知许可与关系承诺 [industry_consensus-行为观察]"
   - "CTR：官方公开的推荐考量项 [official_rule-官方指南公开讨论]"
 
 sharing_mechanism: >-
@@ -112,6 +115,7 @@ tag_role: >-
 comment_role: >-
   深度讨论区：点赞排序沉淀高价值评论；置顶评论引导方向；
   创作者回复强化订阅关系（parasocial_relationship）。
+  [industry_consensus-社区观察]
 
 follow_role: >-
   订阅+铃铛=长期触达承诺：频道资产的核心；
@@ -129,17 +133,17 @@ known_platform_patterns:
   - pattern: "标题+缩略图互补分工（不重复信息）"
     mechanism_links: [visual_hierarchy, curiosity_gap, processing_fluency]
     fact_type: industry_consensus
-    evidence_level: L2
+    evidence_level: L3
     source_ref: S3
     last_verified: "2026-09"
-    note: "缩略图负责情绪捕获、标题负责信息承诺，双通道降低点击犹豫；官方指南公开建议两者准确且有吸引力 [official_rule-官方公开建议方向]。官方帮助文档确认标题/缩略图/描述是发现的关键元数据、标签作用极小 [S3]；'互补分工'策略本身为行业观察。"
+    note: "官方帮助文档确认标题/缩略图/描述是发现的关键元数据、标签作用极小 [S3]；'缩略图负责情绪捕获、标题负责信息承诺的互补分工'策略本身为行业共识。"
   - pattern: "前 15-30 秒 hook+结构预告"
     mechanism_links: [top_down_attention_guidance, zeigarnik_effect, goal_gradient_effect]
-    fact_type: official_rule
+    fact_type: industry_consensus
     evidence_level: L3
     source_ref: none
     last_verified: "2026-09"
-    note: "官方创作者指南公开建议开头快速确认价值并预告结构（以官方最新指南为准）；机制上是把'值得看完'的理由前置。原标 official_rule；本次实取的官方文档（推荐系统博客/帮助中心）未直接载明'开头钩子/结构预告'建议，无官方文档直接支持，降为 L3 行业共识。"
+    note: "本次实取的官方文档（推荐系统博客/帮助中心）未直接载明'开头钩子/结构预告'建议，无官方文档直接支持，降为 L3 行业共识；待官方创作者指南实读后再评估升级。机制上是把'值得看完'的理由前置。"
   - pattern: "章节分段（Chapters）与关键词命名"
     mechanism_links: [answer_engine_visibility, processing_fluency, encoding_specificity]
     fact_type: industry_consensus

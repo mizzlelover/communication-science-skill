@@ -1,478 +1,754 @@
 # decision_making — 判断与决策（Judgment & Decision Making）：捷径、偏差与选择架构
 domain: decision_making
 nodes:
-  - id: dual_process_theory
-    canonical_name_en: Dual-Process Theory (System 1 / System 2)
-    canonical_name_zh: 双系统理论（系统1/系统2）
-    aliases: [双加工理论, 直觉与分析系统, System 1/System 2]
-    domain: decision_making
-    definition: "双过程理论区分两类加工：快、自动、省资源的直觉加工（System 1）与慢、受控、费资源的分析加工（System 2，Kahneman，S01）。必须澄清：System 1/2 是有用的虚构（useful fiction）——描述加工模式的工具概念，不是两个脑区，也不对应单一神经结构；Kahneman 本人在 S01 中明示这一点。ego depletion（意志力资源有限）相关的大规模预注册复制失败（EVIDENCE.md 定为 E），涉及『系统2耗电』式论断时必须谨慎，不得作为策略依据。"
-    core_claim: "人类判断在多数日常情境中由自动、低成本的直觉加工主导，分析加工仅在需要与触发时介入。"
-    mechanism: "直觉加工平行、快速、依赖联想与启发式，在熟悉环境多数时候准确；分析加工串行、容量受限（注意与工作记忆容量约束，S02、S04），处理异常与冲突；认知资源稀缺与时间压力使直觉成为默认。Haidt 的道德直觉研究提供『直觉先行、推理跟进』的传播学佐证（S26）。作为科学模型，二元划分受到 Melnikoff 与 Bargh 等的批评，宜视为组织证据的启发式框架。"
-    causal_chain: "认知资源约束 + 熟悉情境 → 直觉加工主导 → 启发式捷径产出判断 → 分析加工仅在冲突/重要性触发时介入"
-    variables:
-      inputs: [时间压力, 认知负荷, 任务的熟悉度与重要性]
-      moderators: [专业训练, 情绪状态, 任务的错误代价]
-      mediators: [加工模式选择, 冲突检测]
-      outputs: [判断速度与准确率, 偏差发生率]
-    evidence:
-      supporting:
-        - "启发式与偏差研究计划的大量实验（Kahneman 与 Tversky 系列，S01）"
-        - "道德直觉先于推理的实验与综述（Haidt，S26）"
-      conflicting:
-        - "对二元划分的实证与理论批评（如 Melnikoff 与 Bargh 对『两种系统』经验证据的质疑）；ego depletion 大规模复制失败（E 级）"
-      replication:
-        - "『直觉默认主导』的方向稳健；『两系统』作为精确心智结构不成立。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "适用于描述加工模式差异；不得用于推断脑区或『电量』式资源机制"
-      - "熟悉且反馈及时的环境中直觉往往高度准确（Klein 方向的自然决策研究）"
-    failure_conditions:
-      - "把一切偏差都归因『系统1失灵』的叙事，掩盖具体机制差异"
-      - "在缺乏冲突检测的场景（无异常信号）里期待分析自动介入"
-    common_misinterpretations:
-      - "『左脑右脑』式的脑区化解读：System 1/2 是功能抽象而非解剖结构"
-      - "『耗意志力』的电池隐喻建立在复制失败的 ego depletion 之上，禁用"
-    ethical_risks:
-      - "以『人们只会直觉思考』为由刻意降低公共信息的认知门槛到操纵性水平（隐瞒关键条件）"
-    examples:
-      original_cases: ["Thinking, Fast and Slow（S01）全书的系统1/2框架与实验叙述"]
-      research_cases: ["Kahneman 与 Tversky 的启发式实验系列；Haidt 的道德直觉研究"]
-      modern_cases: ["信息流场景中的快速点赞判断；直播限时优惠对直觉加工的调用"]
-    communication_implications: "面向大众的内容默认被直觉加工：具体、生动、可感的信息优先于统计论证；需要深思的决策内容应主动降低负荷并提示暂停。"
-    community_implications: "社群决策设计（投票、承诺）要预设多数成员处于直觉模式：给默认建议、可视化后果、留出冷静期。"
-    content_applications:
-      opening: "用一个具体场景而非抽象定义开场，匹配直觉加工的调用方式"
-      body: "关键论点后附『冷静三秒』提示，给分析加工留介入窗口"
-    platform_implications: "信息流的无限快节奏系统性压制分析加工；平台设计实质是在选择受众的『加工模式食谱』。"
-    related_nodes: [affect_heuristic, anchoring_effect, availability_heuristic, representativeness_heuristic, satisficing, central_route_processing, peripheral_route_processing]
-    source_ids: [S01, S26, S119]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Petty & Cacioppo 1986 ELM 经典章节（S119，AESP 19:123，abstract_only）+ Kahneman & Tversky 启发式研究计划"
-      effect_size: "中央/外周双路径 + 详尽化可能性调节说服；双加工作为组织框架方向稳健"
-      replication_status: "ELM 作为元理论获大量后继实证与引用；二元划分作为精确心智结构受理论批评"
-      context_dependency: "路径选择依赖动机+能力（卷入度）；高卷入走中央、低卷入走外周"
-      downgrade_upgrade_reason: "2026-09 补充 ELM 一手章节论文（S119，abstract_only 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S119]
-      supporting_evidence: [S01, S26]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: satisficing
-    canonical_name_en: Satisficing
-    canonical_name_zh: 满意化（满意即可）
-    aliases: [满意化策略, bounded rationality, 有限理性]
-    domain: decision_making
-    definition: "满意化（Herbert Simon）指在有限理性约束下，决策者不追求最优解，而是搜索到『足够好』的选项即停止。它与 Schwartz 等对最大化者（maximizer）的研究相衔接：持续追求最优者更易后悔与不满。与 choice_overload 的关系：满意化是应对选项爆炸的个体策略，选择过载是环境层面的现象节点。"
-    core_claim: "受认知资源约束，人类在多数情境采用『足够好即停』策略，而非穷尽比较的全局优化。"
-    mechanism: "穷尽比较的成本（时间、注意、认知负荷）随选项增长超线性上升，而收益边际递减；满意化以可接受的抱负水平（aspiration level）替代全局排序，节省资源并保持决策可行。抱负水平随经验与环境调整，故『足够好』是动态标准（S167、S12）。"
-    causal_chain: "认知成本约束 → 设定可接受标准 → 搜索至达标即停 → 满意化选择"
-    variables:
-      inputs: [选项数量, 比较成本, 抱负水平]
-      moderators: [决策重要性, 时间压力, 个体的最大化倾向]
-      mediators: [搜索终止规则, 满足感校准]
-      outputs: [决策速度, 选择满意度, 后悔频率]
-    evidence:
-      supporting:
-        - "Simon 的有限理性理论与满意化奠基（S167：设定抱负水平，遇到超过抱负水平的选项即停止）"
-        - "Schwartz 等 2002 起的最大化者-满意化者个体差异研究（量表与实验；经典文献，未建包）"
-      conflicting:
-        - "高重要性、低比较成本场景中人们仍会近似穷尽搜索；满意度差异的研究部分依赖自我报告（边界与方法学）"
-      replication:
-        - "个体差异（最大化倾向-后悔/不满关联）方向多次重复。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "选项多、比较成本高、决策可逆的场景最典型"
-      - "抱负水平受先前经验与参照物影响而漂移"
-    failure_conditions:
-      - "不可逆的重大决策（购房、婚姻）中过早满意化带来长期损失"
-      - "标准被他人抬高（营销不断展示『更好』选项）后满意化失效"
-    common_misinterpretations:
-      - "把满意化当成懒惰；它是资源约束下的理性适应，多数时候表现良好"
-    ethical_risks:
-      - "利用『足够好即停』投放首因选项（搜索排序第一位偏置），剥夺比较机会"
-    examples:
-      original_cases: ["Misbehaving（S12）中对 Simon 有限理性的讨论"]
-      research_cases: ["Simon 的搜索-停止模型传统；Schwartz 的最大化者研究"]
-      modern_cases: ["用户在比价页面看前几个结果即下单；平台搜索首位点击集中现象"]
-    communication_implications: "给出明确的『适合谁/不适合谁』清单，帮助读者快速判断是否足够好，反而提高转化质量与信任。"
-    community_implications: "社群推荐工具（模板、清单）充当抱负水平的锚，把成员从无限比较中解放出来。"
-    content_applications:
-      title: "『三种预算方案，对号入座』——为不同抱负水平提供停止点"
-      body: "内容提供比较截止点（『到这一步就可以放心选』）"
-    platform_implications: "平台的排序与筛选器在替用户执行满意化；排序权即决策权，首屏偏置是它的影子。"
-    related_nodes: [choice_overload, default_option_effect, status_quo_bias, information_overload, nudge_mechanism]
-    source_ids: [S167, S12]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Simon 1955（S167，满意化与有限理性奠基：抱负水平搜索-停止）+ Thaler 2015（S12，行为经济学思想史）"
-      effect_size: "复杂决策中满意化替代最大化（Simon 传统，方向稳定）"
-      replication_status: "有限理性框架广泛接受；满意化行为在多决策场景观察"
-      context_dependency: "决策复杂度/时间压力/信息成本调制"
-      downgrade_upgrade_reason: "2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S167]
-      supporting_evidence: [S12]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: choice_overload
-    canonical_name_en: Choice Overload
-    canonical_name_zh: 选择过载
-    aliases: [选择悖论, paradox of choice, 过多选择效应]
-    domain: decision_making
-    definition: "选择过载指选项过多导致决策延迟、后悔或放弃的现象。证据状态必须按 EVIDENCE.md 条件化表述：经典实验（Iyengar 与 Lepper 2000 的果酱摊：24 种 vs 6 种——经典文献，已建包 EP S188）报告减少选项提高购买，但元分析显示平均效应约等于零，效应仅在明确调节变量下出现。定级 B（条件化成立）。"
-    core_claim: "选项数量本身不决定过载；当选项集复杂、偏好不确定且决策目标模糊时，减少选项才提升决策质量与行动率。"
-    mechanism: "选项增加同时提高信息加工负荷与比较、后悔预期；但受众的专业度、偏好清晰度与时间压力会改变负荷的可承受性。Scheibehenne、Greifeneder 与 Todd 2010 的元分析显示平均效应接近零（S109）；Chernev、Böckenholt 与 Goodman 2015 的元分析识别出调节变量（经典文献，已建包 EP S188）：选择集复杂度、偏好不确定性、决策目标与信息结构（与 working_memory_limits、information_overload 的容量约束相通）。"
-    causal_chain: "选项集复杂+偏好不确定+目标模糊 → 加工负荷与后悔预期上升 → 决策延迟或放弃"
-    variables:
-      inputs: [选项数量, 选项间可比性, 信息组织结构]
-      moderators: [决策者专业度, 偏好确定性, 时间压力, 决策目标类型]
-      mediators: [加工负荷, 后悔预期, 决策信心]
-      outputs: [决策延迟, 放弃率, 选择后满意度]
-    evidence:
-      supporting:
-        - "Iyengar 与 Lepper 2000 果酱摊现场实验（经典文献，已建包 EP S188）"
-        - "Chernev、Böckenholt 与 Goodman 2015 元分析：在识别出的调节条件下过载效应稳定存在（元分析；经典文献，已建包 EP S188）"
-      conflicting:
-        - "Scheibehenne 等 2010 元分析：跨研究平均效应约等于零，经典结论不能无条件外推（EVIDENCE.md 登记为 B 条件化）"
-      replication:
-        - "无条件版本复制不稳定；条件化版本（专家、可比选项、清晰目标下减弱）可重复。评级按枚举记 B"
-      meta_analysis:
-        - "Scheibehenne 等 2010（S109）与 Chernev 等 2015（未建包）两项元分析共同界定该效应的边界"
-    evidence_grade: A-
-    boundary_conditions:
-      - "对新手、偏好模糊者、可比性低的复杂选项集，过载效应明显"
-      - "对专家或偏好明确的决策者，选项丰富反而受欢迎"
-    failure_conditions:
-      - "把『减少选项』当万能策略：砍掉专家用户需要的长尾，损失核心客群"
-      - "选项看似少但每一项都重大且不可逆，过载照旧发生"
-    common_misinterpretations:
-      - "『选择越少越好卖』的绝对化：源自单项经典实验，被元分析否定其无条件性"
-    ethical_risks:
-      - "以『为你精选』之名行定向收割之实，隐藏关键选项"
-    examples:
-      original_cases: ["营销管理（S71）与消费者行为（S72）标准教科书（背景参考）"]
-      research_cases: ["Iyengar 与 Lepper 2000 果酱实验（经典文献，已建包 EP S188）；Scheibehenne 等 2010 元分析（S109）"]
-      modern_cases: ["电商分类页的『筛选器 vs 编辑精选』之争；订阅制套餐的分层设计"]
-    communication_implications: "内容按受众专业度分层：给新手三选一的清单，给老手可筛选的全集；宣称『精选』需附筛选标准。"
-    community_implications: "社群资源库需要双层结构：编辑精选入口（新手）+可检索全集（进阶），并显式标注差异。"
-    content_applications:
-      title: "『只给你三个选项』式标题对新受众有效，进阶内容则给选择器"
-      body: "为每项推荐标注适用条件与排除条件，降低比较负荷"
-    platform_implications: "推荐系统是选择过载的工业化解法，但『替你选择』的权力需要透明度；排序偏好与商业利益混淆时构成隐性操纵。"
-    related_nodes: [satisficing, information_overload, working_memory_limits, default_option_effect, recommendation_feedback_loop]
-    source_ids: [S71, S72, S109, S188]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Scheibehenne et al. 2010 JCR meta（S109 已实取摘要）：63 条件/50 实验/N=5036"
-      effect_size: "平均效应≈0，异质性高"
-      replication_status: "多项研究既有强选择过载也有反向结果，无普遍充分条件"
-      context_dependency: "选择过载为情境依赖；存在个体/任务调节变量"
-      downgrade_upgrade_reason: "2026-09 补充一手 meta 证据（S109），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；EVIDENCE.md choice_overload→条件化获一手支撑"
-    provenance:
-      primary_sources: [S188, S109]
-      supporting_evidence: [S71, S72]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: default_option_effect
-    canonical_name_en: Default Option Effect
-    canonical_name_zh: 默认选项效应
-    aliases: [默认效应, 默认选项偏置, status quo default]
-    domain: decision_making
-    definition: "默认选项效应指当某选项被预先设定为不行动时的结果，其被选中比例大幅上升。证据评级 A-（按枚举记 A）：Johnson 与 Goldstein 2003 的器官捐献跨国比较（同意制 vs 退出制的登记率巨大差距）、Madrian 与 Shea 2001 的 401(k) 自动加入研究、Thaler 与 Benartzi 的『明天多储蓄』计划均为经典证据（J&G/M&S 经 S11 书级转述，一手未建包）。与 status_quo_bias 的区别：默认效应是选择架构的外部设定，现状偏差是决策者的内在倾向，两者机制相关但层次不同。"
-    core_claim: "把期望行为设为默认（配合透明退出路径），可大幅提升该行为的发生率。"
-    mechanism: "默认承载多重信号：隐含推荐（设计者背书）、现状引力（改变需要理由与行动）与摩擦设置（退出需步骤）；叠加损失厌恶与拖延，主动改变默认的动力被系统性削弱（S11、S12）。"
-    causal_chain: "选项被设为默认 → 隐含推荐+现状引力+退出摩擦 → 不作为 → 默认结果实现"
-    variables:
-      inputs: [默认内容, 退出成本, 默认的可感知推荐性]
-      moderators: [决策者卷入度, 选项的身份相关性, 默认的正当性感知]
-      mediators: [隐含推荐解读, 改变行动成本, 后果理解程度]
-      outputs: [默认选项采纳率, 主动选择率]
-    evidence:
-      supporting:
-        - "Johnson 与 Goldstein 2003 器官捐献登记率的跨国比较（大样本观察；经 S11 书级转述，一手未建包）"
-        - "Madrian 与 Shea 2001 的 401(k) 自动加入现场研究；Thaler 与 Benartzi 的『明天多储蓄』计划评估（现场研究；经 S11 书级转述，一手未建包）"
-      conflicting:
-        - "身份强相关或高道德敏感选项上，默认的力量减弱甚至引发反弹（如被默认注册引发不满）"
-      replication:
-        - "多国、多政策领域复制，是行为政策工具箱中证据最强的工具之一。评级按枚举记 A（A- 水平）"
-      meta_analysis: []
-    evidence_grade: A
-    boundary_conditions:
-      - "默认需被理解为合法推荐而非捆绑陷阱"
-      - "受众对选项后果有基本理解（完全无知的默认设计失效且有责）"
-    failure_conditions:
-      - "默认被识破为操纵（暗黑模式），触发抗拒与信任崩塌"
-      - "受众专业化程度高、主动比较成本低时"
-    common_misinterpretations:
-      - "把默认效应等同于惯性；其能量大半来自隐含推荐与退出摩擦的组合"
-    ethical_risks:
-      - "预勾选、捆绑默认、退订迷宫等暗黑模式；默认设计的伦理底线是透明与易退出"
-    examples:
-      original_cases: ["Nudge（S11）中的默认选项、『明天多储蓄』等经典案例"]
-      research_cases: ["器官捐献跨国比较；401(k) 自动加入研究"]
-      modern_cases: ["App 权限默认开启、默认勾选会员续费（监管处罚对象）、社群新人默认礼仪设置"]
-    communication_implications: "注册流程、订阅套餐、内容接收频率都可以用合理的默认提升长期参与——前提是默认对用户有利且退出透明。"
-    community_implications: "新人进群默认引导（昵称格式、自我介绍模板、默认关注公告）显著提高规范执行率；默认规则要公示。"
-    content_applications:
-      cta: "把理想行为做成单选默认（『已为你勾选每周摘要』），并明确展示退出按钮"
-      body: "说明默认推荐的理由（『大多数像你的人选这个』），强化隐含推荐的正当性"
-    platform_implications: "默认设置是平台最强的行为杠杆之一，也因此是隐私与消费者保护监管的核心区域（GDPR 式默认最小化的方向）。"
-    related_nodes: [status_quo_bias, nudge_mechanism, loss_aversion, friction_reduction, permission_opt_in_mechanics]
-    source_ids: [S11, S12, S20, S108]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Thaler & Sunstein 2008《Nudge》（S11，book 级，substantial_excerpt：默认效应/选择架构/自由意志家长主义）+ Samuelson & Zeckhauser 1988 健康保险实验"
-      effect_size: "默认选项显著影响选择（自动加入退休/器官捐献）；效应稳健但规模化幅度有限（DellaVigna & Linos 1.4pp）"
-      replication_status: "默认效应多情境复制稳健；具体 nudge 类型差异大（S108 复核）"
-      context_dependency: "默认需可轻易退出（非强制）；价值-行动差距场景最强"
-      downgrade_upgrade_reason: "2026-09 实取 S11 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S11]
-      supporting_evidence: [S12, S20, S108]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: anchoring_effect
-    canonical_name_en: Anchoring Effect
-    canonical_name_zh: 锚定效应
-    aliases: [锚定与调整, anchoring-and-adjustment, 定锚]
-    domain: decision_making
-    definition: "锚定效应指数值估计与决策被初始参考值（锚）系统性拉动的现象，即使锚明显任意或无关。Tversky 与 Kahneman 1974 的转轮实验表明任意锚也能移动估计（S130，full_text 一手：起点 10 组中位估计 25，起点 65 组为 45）；Ariely, Loewenstein & Prelec 2003 的『连贯性任意』（coherent arbitrariness）研究显示初始锚可长期塑造支付意愿（经典文献，已建包 EP S189）。证据评级 A-（按枚举记 A）。"
-    core_claim: "数值判断会被先呈现（或先想到）的参考值系统拉偏，且调整通常不足。"
-    mechanism: "两条路径：锚定-调整不足（从锚出发调整但提前停止）与选择性可得性激活（锚使锚一致的信息更易被检索与采纳，S01）。Ariely, Loewenstein & Prelec 2003 系列实验补充任意锚可通过『愿意支付吗』的自问内化为个人价格标准（经典文献，已建包 EP S189）。"
-    causal_chain: "呈现/激活参考值 → 调整不足或锚一致信息被优先激活 → 估计与支付意愿向锚偏移 → 决策被锚塑造"
-    variables:
-      inputs: [锚值高低与呈现顺序, 锚与判断域的相关性]
-      moderators: [专业度, 锚的可信性, 认知负荷]
-      mediators: [调整量, 锚一致信息的可得性, 内化的价格标准]
-      outputs: [估值, 支付意愿, 价格感知与销量]
-    evidence:
-      supporting:
-        - "Tversky 与 Kahneman 1974 转轮实验：任意随机数移动对非洲国家占比的估计（S130，full_text 一手）"
-        - "Ariely、Loewenstein 与 Prelec 2003 的连贯性任意研究（经典文献，已建包 EP S189）"
-      conflicting:
-        - "专家在熟悉品类上锚定较弱；锚过于离谱且被识破时失效（边界研究）"
-      replication:
-        - "多范式（数字估计、支付意愿、量刑）复制稳健，幅度随范式波动。评级按枚举记 A（A- 水平）"
-      meta_analysis: []
-    evidence_grade: A
-    boundary_conditions:
-      - "判断对象存在数值或可比维度"
-      - "锚先于判断出现且未被明确标注为无关"
-    failure_conditions:
-      - "受众有丰富品类经验与稳定内部标准时"
-      - "锚被识别为营销套路（永久划线价）并引发反感"
-    common_misinterpretations:
-      - "把锚定效应等同于『标高价显得值』：锚同样适用于数量、时间、目标等一切数值判断"
-      - "以为随便一个大数字都有效；锚需要被认真对待才有牵引力"
-    ethical_risks:
-      - "虚假原价与虚构对比锚（先涨后降）属价格欺诈，多国监管处罚"
-    examples:
-      original_cases: ["Thinking, Fast and Slow（S01）的锚定章节"]
-      research_cases: ["转轮实验；Ariely 等的支付意愿实验"]
-      modern_cases: ["划线价与折扣对比、榜单『Top 1』『Top 5』、会员年付价作为月付的锚"]
-    communication_implications: "先呈现价值参照（解决的问题成本、竞品价格、时间花费）再呈现自家价格；锚的选择决定整个比较域。"
-    community_implications: "社群活动目标用锚定塑形（『上期平均完成 12 天，你呢』），但锚需真实可查。"
-    content_applications:
-      title: "对比式标题自带锚：『别人花 3 小时，这套模板只要 30 分钟』"
-      body: "列出锚值并解释其来源，让锚可信"
-    platform_implications: "平台的排序与推荐位本身就是注意力锚（先看到的定义标准）；价格展示与补贴策略深度依赖锚定。"
-    related_nodes: [dual_process_theory, mental_accounting, framing_effects, pre_suasion_attention_channeling]
-    source_ids: [S130, S01, S189]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Tversky & Kahneman 1974（S130，full_text 一手：转盘实验等锚定范式）+ Kahneman 2011（S01，锚定章节叙述）"
-      effect_size: "无关锚值影响数值估计（经典锚定效应）"
-      replication_status: "锚定效应稳健但受锚的显性/可比性调制；复制研究确认方向"
-      context_dependency: "锚的极端度/受众知识/计算能力调制"
-      downgrade_upgrade_reason: "2026-09-09 补充一手论文 S130（full_text），provenance primary 升级；Ariely 2003 归属更正为未建包"
-    provenance:
-      primary_sources: [S130, S01, S189]
-      supporting_evidence: []
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: availability_heuristic
-    canonical_name_en: Availability Heuristic
-    canonical_name_zh: 可得性启发式
-    aliases: [可得性偏差, availability bias]
-    domain: decision_making
-    definition: "可得性启发式（Kahneman 与 Tversky，1973/1974）指以事例进入脑海的容易程度估计其频率或概率。媒体环境使其系统性失真：被报道的事件比被低估的日常风险显得更常见。证据评级 A-（按枚举记 A）。与 representativeness_heuristic 的区别：可得性用『想起来的难易』估频率，代表性用『像不像原型』估类别归属。"
-    core_claim: "主观概率被事例的可得性（生动性、近因、曝光量）驱动，而非基率驱动。"
-    mechanism: "检索流畅性作为频率线索（与 processing_fluency 家族相通）；媒体与算法放大极端事件的曝光，使可得性与真实分布脱钩；情绪生动的事件（空难、犯罪）检索更容易，日常风险（车祸、慢性病）被低估。Kuran 与 Sunstein 描述的『可得性级联』（availability cascade）说明该机制可自我强化成公共恐慌（经典文献，未建包）。"
-    causal_chain: "事件被反复/生动呈现 → 检索更容易 → 主观概率上偏 → 风险感知与行为偏移（如规避、转发预警）"
-    variables:
-      inputs: [事件曝光量, 生动性, 时间临近性]
-      moderators: [个人经历, 媒体环境, 情绪唤起强度]
-      mediators: [检索流畅性, 情绪标记]
-      outputs: [频率/概率估计, 风险感知, 传播与规避行为]
-    evidence:
-      supporting:
-        - "Kahneman 与 Tversky 1973 起的可得性实验系列（经典实验）"
-        - "风险感知研究中媒体报道与主观风险的关联证据（媒介效果研究，S46）"
-      conflicting:
-        - "人们对自身经验丰富领域的估计更准；可得性线索被察觉（如意识到是媒体渲染）时部分校正（边界研究）"
-      replication:
-        - "主效应稳健；幅度因领域与个体经验差异大。评级按枚举记 A（A- 水平）"
-      meta_analysis: []
-    evidence_grade: A
-    boundary_conditions:
-      - "估计对象难以从客观渠道即时核验时最强"
-      - "个体无直接经验可对照"
-    failure_conditions:
-      - "受众具备领域统计素养或刚看过反例校正信息"
-      - "事件过于久远导致检索困难，即使客观上高频"
-    common_misinterpretations:
-      - "把可得性偏差等同于『媒体说谎』；它更多是曝光量与真实分布的系统性脱钩"
-    ethical_risks:
-      - "制造或放大耸动案例（孤例放大为趋势）以操纵风险感知与政策情绪"
-    examples:
-      original_cases: ["Tversky & Kahneman 1974（S130）的知名度名单实验：更出名的名单被误判为出现更多"]
-      research_cases: ["Kahneman 与 Tversky 的字母频率等经典实验（S130）；Kuran 与 Sunstein 的可得性级联分析（经典文献，未建包）"]
-      modern_cases: ["社会事件刷屏后的安全焦虑与防御性消费；AI 灾难叙事对技术风险感知的塑造"]
-    communication_implications: "用具体案例开路（提高可得性）再给基率数据（校正）；反之，驳斥谣言时警惕重复谣言本身反而提高其可得性。"
-    community_implications: "社群辟谣与风险沟通要先管理曝光（置顶校正、集中讨论），避免碎片化重复。"
-    content_applications:
-      title: "用一个鲜活案例承载论点，紧跟一段基率校正"
-      body: "引用近因、具体、可画面化的事例提高论证可得性"
-    platform_implications: "算法按互动放大耸动内容，人为提高其可得性，是风险感知失真与虚假信息速度优势的结构性来源。"
-    related_nodes: [representativeness_heuristic, affect_heuristic, misinformation_velocity, gatekeeping_dynamics, dual_process_theory]
-    source_ids: [S01, S46, S41, S130]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Kahneman 2011《Thinking, Fast and Slow》（S01，book 级，substantial_excerpt：可得性启发+风险感知）+ Lippmann 1922《Public Opinion》（S41，拟态环境：媒体曝光塑造认知）"
-      effect_size: "提取容易度→概率/频率判断偏移；媒体曝光放大耸动内容可得性"
-      replication_status: "启发式方向稳健；被格式与文化调节（频率格式效应）"
-      context_dependency: "事件检索困难时偏差更强；媒体曝光结构是关键情境变量"
-      downgrade_upgrade_reason: "2026-09 实取 S01/S41 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S130, S01]
-      supporting_evidence: [S41, S46]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: representativeness_heuristic
-    canonical_name_en: Representativeness Heuristic
-    canonical_name_zh: 代表性启发式
-    aliases: [代表性偏差, 原型匹配, base rate neglect]
-    domain: decision_making
-    definition: "代表性启发式（Kahneman 与 Tversky，1972 起）指以对象与某类别原型（或与因果脚本）的相似程度判断其类别归属或来源概率，常伴随基率忽视与合取谬误（如『琳达问题』：细节丰富的合取描述被评为比单一成分更可能——Tversky & Kahneman 1983，经典文献未建包）。与小数定律相关：把小样本特征当总体规律。"
-    core_claim: "相似性判断常替代概率判断：越像原型的描述被评为越可能，即使基率相反。"
-    mechanism: "原型与脚本是压缩的类别知识，匹配比计算省资源（S01）；生动的细节提高叙述的『代表性』从而提高被信度（与 anecdote_vs_statistics 的传播层面相通）；Gigerenzer 等对『何为正确规范』的批评提示：部分所谓错误在于任务设计混淆了频率与概率格式，边界需谨慎（S130 limitations）。"
-    causal_chain: "描述与原型/脚本的相似性 → 相似度替代概率判断 → 基率被忽视 → 类别归属与预测出错"
-    variables:
-      inputs: [描述的典型性, 细节丰富度, 基率信息的可得性]
-      moderators: [统计素养, 频率格式 vs 概率格式, 群体刻板印象强度]
-      mediators: [原型匹配, 因果脚本激活]
-      outputs: [类别判断, 概率估计, 人员/内容筛选偏差]
-    evidence:
-      supporting:
-        - "Kahneman 与 Tversky 1972 起的琳达、Tom W. 等经典实验（合取谬误与基率忽视；经典文献，未建包）"
-        - "小数定律的相关实验证据（经典研究）"
-      conflicting:
-        - "Gigerenzer 等的规范之争：以频率格式呈现任务时部分『谬误』消失，说明任务表述影响结论（S130 limitations 载其生态理性批评；理论争议）"
-      replication:
-        - "经典范式方向稳定，但对『人类不理性』的强解读有学术争论。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "判断对象有清晰社会原型或因果脚本时最强"
-      - "以单一概率格式呈现抽象事件时更易出错"
-    failure_conditions:
-      - "任务改用自然频率格式或受众有统计训练时"
-      - "原型与判断维度真正相关时，匹配反而有效"
-    common_misinterpretations:
-      - "把代表性启发式当成『刻板印象永远错』；它是高效但可错的捷径，问题在于与基率冲突时未被校正"
-    ethical_risks:
-      - "利用典型化人设诱导身份匹配消费（『你这种人也该……』）；筛选算法中放大原型偏差造成歧视"
-    examples:
-      original_cases: ["Thinking, Fast and Slow（S01）中的琳达问题与小数定律章节"]
-      research_cases: ["Kahneman 与 Tversky 的类别预测实验系列"]
-      modern_cases: ["用人设标签判断内容可信度；招聘与推荐算法中的原型匹配偏差"]
-    communication_implications: "塑造符合受众原型的可信形象（专家、过来人）有效，但需以真实资历支撑；反原型内容要主动管理基率认知。"
-    community_implications: "社群评价体系易被代表性绑架（‘大 V 说的都对’），需以事实核查流程对冲原型光环。"
-    content_applications:
-      title: "让主角『像目标读者』：相似性提高可信度，但要防止过度典型化"
-      body: "关键论证同时给典型案例与基率，避免细节堆叠制造合取幻觉"
-    platform_implications: "推荐系统按原型（历史相似用户）匹配内容，结构性复制代表性捷径；偏差在人群层面被规模化。"
-    related_nodes: [availability_heuristic, anecdote_vs_statistics, social_identity_theory, in_group_favoritism, dual_process_theory]
-    source_ids: [S130, S01]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Tversky & Kahneman 1974（S130，full_text 一手：代表性启发式+limitations 载 Gigerenzer 生态理性批评）+ Kahneman 2011（S01，代表性/基率忽视叙述）；琳达/合取谬误未建包"
-      effect_size: "相似性替代概率判断；细节丰富度提高被信度"
-      replication_status: "经典范式方向稳定；对『人类不理性』强解读有学术争论"
-      context_dependency: "有清晰原型/脚本时最强；频率格式与统计训练减弱效应"
-      downgrade_upgrade_reason: "2026-09 补充 S130 一手论文（full_text），Gigerenzer 批评归属由 S19 更正为 S130 limitations，provenance primary 升级"
-    provenance:
-      primary_sources: [S130, S01]
-      supporting_evidence: []
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: status_quo_bias
-    canonical_name_en: Status Quo Bias
-    canonical_name_zh: 现状偏差
-    aliases: [现状偏置, 维持现状倾向, omission bias]
-    domain: decision_making
-    definition: "现状偏差指在多选项决策中系统性地偏向维持当前状态的倾向，即使改变的成本很低且期望收益为正。Samuelson 与 Zeckhauser 1988 的实验（健康保险计划选择）是经典证据（经典文献，已建包 EP S207）。与 default_option_effect 的区别：默认效应是外部架构设定，现状偏差是决策者的内在倾向；默认之所以强大，部分正因为利用了现状偏差。"
-    core_claim: "在收益不确定时，人们系统性地高估改变的成本与风险、低估维持现状的机会成本。"
-    mechanism: "多重机制叠加：改变带来潜在后悔（作为损失的权重更大，与 loss_aversion 相通）、现有状态的禀赋（与 endowment_effect 相通）、改变的计算成本与执行摩擦、以及不作为比作为在道德上更『安全』的作为偏差（S11、S12）。"
-    causal_chain: "改变选项存在不确定性 → 潜在损失/后悔权重放大 + 禀赋与摩擦 → 维持现状"
-    variables:
-      inputs: [改变的转换成本, 收益不确定性, 现状的持有时间]
-      moderators: [后悔倾向, 决策自主性, 现状的历史成因（主动选择 vs 被动继承）]
-      mediators: [后悔预期, 禀赋感, 计算成本]
-      outputs: [维持率, 换用/迁移率, 延迟决策频率]
-    evidence:
-      supporting:
-        - "Samuelson 与 Zeckhauser 1988 的健康保险选择实验（经典文献，已建包 EP S207）"
-        - "Kahneman、Knetsch 与 Thaler 1990 的禀赋/现状实验（S131）"
-        - "组织与消费领域的转换惰性观察（多来源现场研究）"
-      conflicting:
-        - "当现状明显劣质或身份激励指向改变时，偏差减弱；年轻/低沉没群体惰性更低（边界研究）"
-      replication:
-        - "方向稳健，幅度随情境变化。评级按枚举记 B"
-      meta_analysis: []
-    evidence_grade: A-
-    boundary_conditions:
-      - "收益不确定且改变可逆性低时最强"
-      - "现状由自己主动选择而来时更强（自致禀赋）"
-    failure_conditions:
-      - "现状被公开证明失败、或有强身份信号支持改变时"
-      - "改变被设计成零摩擦且结果可逆"
-    common_misinterpretations:
-      - "把现状偏差当作用户忠诚；低价竞品只需一次成功的情境切换（搬家、换机）即可破除惰性"
-    ethical_risks:
-      - "利用现状偏差锁定用户（复杂迁移、数据不可携带），损害选择自由"
-    examples:
-      original_cases: ["Nudge（S11）中的现状讨论与政策应用"]
-      research_cases: ["Samuelson 与 Zeckhauser 1988 的保险计划选择实验"]
-      modern_cases: ["银行与运营商的高留存率、软件迁移惰性、社群沉默成员的维持"]
-    communication_implications: "动员改变的文案要显式命名现状的机会成本（『你每年多花 X』），并把改变拆成可逆的小步骤。"
-    community_implications: "社群改版（换平台、改规则）要预期现状阻力：迁移窗口+数据可携+仪式化告别三件套。"
-    content_applications:
-      body: "用对比表格把『维持现状的隐性成本』可视化"
-      cta: "『先试用 7 天，随时可退』——降低改变的可逆性顾虑"
-    platform_implications: "平台的迁移成本设计（数据、关系链）制度化了现状偏差，构成竞争壁垒，也是互操作性监管的靶点。"
-    related_nodes: [default_option_effect, loss_aversion, endowment_effect, choice_overload]
-    source_ids: [S11, S131, S207]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Thaler & Sunstein 2008（S11，默认选项与现状）+ Kahneman, Knetsch & Thaler 1990（S131，endowment/现状实验）；Samuelson & Zeckhauser 1988 未建包；2026-09-09 一手 EP 已建（S207）"
-      effect_size: "维持现状选项被系统性偏好（默认效应跨领域）"
-      replication_status: "默认选项效应在退休储蓄/器官捐献等政策场景稳健"
-      context_dependency: "切换成本/默认显性度/决策频率调制"
-      downgrade_upgrade_reason: "2026-09-09 补充 S131（endowment/现状实验）支撑，S12 例证归属移除"
-    provenance:
-      primary_sources: [S207, S11]
-      supporting_evidence: [S131]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: dual_process_theory
+  canonical_name_en: Dual-Process Theory (System 1 / System 2)
+  canonical_name_zh: 双系统理论（系统1/系统2）
+  aliases:
+  - 双加工理论
+  - 直觉与分析系统
+  - System 1/System 2
+  domain: decision_making
+  definition: 双过程理论区分两类加工：快、自动、省资源的直觉加工（System 1）与慢、受控、费资源的分析加工（System 2，Kahneman，S01）。必须澄清：System 1/2
+    是有用的虚构（useful fiction）——描述加工模式的工具概念，不是两个脑区，也不对应单一神经结构；Kahneman 本人在 S01 中明示这一点。ego depletion（意志力资源有限）相关的大规模预注册复制失败（EVIDENCE.md
+    定为 E），涉及『系统2耗电』式论断时必须谨慎，不得作为策略依据。
+  core_claim: 人类判断在多数日常情境中由自动、低成本的直觉加工主导，分析加工仅在需要与触发时介入。
+  mechanism: 直觉加工平行、快速、依赖联想与启发式，在熟悉环境多数时候准确；分析加工串行、容量受限（注意与工作记忆容量约束，S02、S04），处理异常与冲突；认知资源稀缺与时间压力使直觉成为默认。Haidt
+    的道德直觉研究提供『直觉先行、推理跟进』的传播学佐证（S26）。作为科学模型，二元划分受到 Melnikoff 与 Bargh 等的批评，宜视为组织证据的启发式框架。
+  causal_chain: 认知资源约束 + 熟悉情境 → 直觉加工主导 → 启发式捷径产出判断 → 分析加工仅在冲突/重要性触发时介入
+  variables:
+    inputs:
+    - 时间压力
+    - 认知负荷
+    - 任务的熟悉度与重要性
+    moderators:
+    - 专业训练
+    - 情绪状态
+    - 任务的错误代价
+    mediators:
+    - 加工模式选择
+    - 冲突检测
+    outputs:
+    - 判断速度与准确率
+    - 偏差发生率
+  evidence:
+    supporting:
+    - 启发式与偏差研究计划的大量实验（Kahneman 与 Tversky 系列，S01）
+    - 道德直觉先于推理的实验与综述（Haidt，S26）
+    conflicting:
+    - 对二元划分的实证与理论批评（如 Melnikoff 与 Bargh 对『两种系统』经验证据的质疑）；ego depletion 大规模复制失败（E 级）
+    replication:
+    - 『直觉默认主导』的方向稳健；『两系统』作为精确心智结构不成立。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 适用于描述加工模式差异；不得用于推断脑区或『电量』式资源机制
+  - 熟悉且反馈及时的环境中直觉往往高度准确（Klein 方向的自然决策研究）
+  failure_conditions:
+  - 把一切偏差都归因『系统1失灵』的叙事，掩盖具体机制差异
+  - 在缺乏冲突检测的场景（无异常信号）里期待分析自动介入
+  common_misinterpretations:
+  - 『左脑右脑』式的脑区化解读：System 1/2 是功能抽象而非解剖结构
+  - 『耗意志力』的电池隐喻建立在复制失败的 ego depletion 之上，禁用
+  ethical_risks:
+  - 以『人们只会直觉思考』为由刻意降低公共信息的认知门槛到操纵性水平（隐瞒关键条件）
+  examples:
+    original_cases:
+    - Thinking, Fast and Slow（S01）全书的系统1/2框架与实验叙述
+    research_cases:
+    - Kahneman 与 Tversky 的启发式实验系列；Haidt 的道德直觉研究
+    modern_cases:
+    - 信息流场景中的快速点赞判断；直播限时优惠对直觉加工的调用
+  communication_implications: 面向大众的内容默认被直觉加工：具体、生动、可感的信息优先于统计论证；需要深思的决策内容应主动降低负荷并提示暂停。
+  community_implications: 社群决策设计（投票、承诺）要预设多数成员处于直觉模式：给默认建议、可视化后果、留出冷静期。
+  content_applications:
+    opening: 用一个具体场景而非抽象定义开场，匹配直觉加工的调用方式
+    body: 关键论点后附『冷静三秒』提示，给分析加工留介入窗口
+  platform_implications: 信息流的无限快节奏系统性压制分析加工；平台设计实质是在选择受众的『加工模式食谱』。
+  related_nodes:
+  - affect_heuristic
+  - anchoring_effect
+  - availability_heuristic
+  - representativeness_heuristic
+  - satisficing
+  - central_route_processing
+  - peripheral_route_processing
+  source_ids:
+  - S01
+  - S26
+  - S119
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Petty & Cacioppo 1986 ELM 经典章节（S119，AESP 19:123，abstract_only）+ Kahneman & Tversky
+      启发式研究计划
+    effect_size: 中央/外周双路径 + 详尽化可能性调节说服；双加工作为组织框架方向稳健
+    replication_status: ELM 作为元理论获大量后继实证与引用；二元划分作为精确心智结构受理论批评
+    context_dependency: 路径选择依赖动机+能力（卷入度）；高卷入走中央、低卷入走外周
+    downgrade_upgrade_reason: 2026-09 补充 ELM 一手章节论文（S119，abstract_only 如实标注），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S119
+    supporting_evidence:
+    - S01
+    - S26
+    last_verified: 2026-09
+    platform_sources:
+    - douyin:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: satisficing
+  canonical_name_en: Satisficing
+  canonical_name_zh: 满意化（满意即可）
+  aliases:
+  - 满意化策略
+  - bounded rationality
+  - 有限理性
+  domain: decision_making
+  definition: 满意化（Herbert Simon）指在有限理性约束下，决策者不追求最优解，而是搜索到『足够好』的选项即停止。它与 Schwartz 等对最大化者（maximizer）的研究相衔接：持续追求最优者更易后悔与不满。与
+    choice_overload 的关系：满意化是应对选项爆炸的个体策略，选择过载是环境层面的现象节点。
+  core_claim: 受认知资源约束，人类在多数情境采用『足够好即停』策略，而非穷尽比较的全局优化。
+  mechanism: 穷尽比较的成本（时间、注意、认知负荷）随选项增长超线性上升，而收益边际递减；满意化以可接受的抱负水平（aspiration level）替代全局排序，节省资源并保持决策可行。抱负水平随经验与环境调整，故『足够好』是动态标准（S167、S12）。
+  causal_chain: 认知成本约束 → 设定可接受标准 → 搜索至达标即停 → 满意化选择
+  variables:
+    inputs:
+    - 选项数量
+    - 比较成本
+    - 抱负水平
+    moderators:
+    - 决策重要性
+    - 时间压力
+    - 个体的最大化倾向
+    mediators:
+    - 搜索终止规则
+    - 满足感校准
+    outputs:
+    - 决策速度
+    - 选择满意度
+    - 后悔频率
+  evidence:
+    supporting:
+    - Simon 的有限理性理论与满意化奠基（S167：设定抱负水平，遇到超过抱负水平的选项即停止）
+    - Schwartz 等 2002 起的最大化者-满意化者个体差异研究（量表与实验；经典文献，未建包）
+    conflicting:
+    - 高重要性、低比较成本场景中人们仍会近似穷尽搜索；满意度差异的研究部分依赖自我报告（边界与方法学）
+    replication:
+    - 个体差异（最大化倾向-后悔/不满关联）方向多次重复。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 选项多、比较成本高、决策可逆的场景最典型
+  - 抱负水平受先前经验与参照物影响而漂移
+  failure_conditions:
+  - 不可逆的重大决策（购房、婚姻）中过早满意化带来长期损失
+  - 标准被他人抬高（营销不断展示『更好』选项）后满意化失效
+  common_misinterpretations:
+  - 把满意化当成懒惰；它是资源约束下的理性适应，多数时候表现良好
+  ethical_risks:
+  - 利用『足够好即停』投放首因选项（搜索排序第一位偏置），剥夺比较机会
+  examples:
+    original_cases:
+    - Misbehaving（S12）中对 Simon 有限理性的讨论
+    research_cases:
+    - Simon 的搜索-停止模型传统；Schwartz 的最大化者研究
+    modern_cases:
+    - 用户在比价页面看前几个结果即下单；平台搜索首位点击集中现象
+  communication_implications: 给出明确的『适合谁/不适合谁』清单，帮助读者快速判断是否足够好，反而提高转化质量与信任。
+  community_implications: 社群推荐工具（模板、清单）充当抱负水平的锚，把成员从无限比较中解放出来。
+  content_applications:
+    title: 『三种预算方案，对号入座』——为不同抱负水平提供停止点
+    body: 内容提供比较截止点（『到这一步就可以放心选』）
+  platform_implications: 平台的排序与筛选器在替用户执行满意化；排序权即决策权，首屏偏置是它的影子。
+  related_nodes:
+  - choice_overload
+  - default_option_effect
+  - status_quo_bias
+  - information_overload
+  - nudge_mechanism
+  source_ids:
+  - S167
+  - S12
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Simon 1955（S167，满意化与有限理性奠基：抱负水平搜索-停止）+ Thaler 2015（S12，行为经济学思想史）
+    effect_size: 复杂决策中满意化替代最大化（Simon 传统，方向稳定）
+    replication_status: 有限理性框架广泛接受；满意化行为在多决策场景观察
+    context_dependency: 决策复杂度/时间压力/信息成本调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S167
+    supporting_evidence:
+    - S12
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: choice_overload
+  canonical_name_en: Choice Overload
+  canonical_name_zh: 选择过载
+  aliases:
+  - 选择悖论
+  - paradox of choice
+  - 过多选择效应
+  domain: decision_making
+  definition: 选择过载指选项过多导致决策延迟、后悔或放弃的现象。证据状态必须按 EVIDENCE.md 条件化表述：经典实验（Iyengar 与 Lepper 2000 的果酱摊：24 种
+    vs 6 种——经典文献，已建包 EP S188）报告减少选项提高购买，但元分析显示平均效应约等于零，效应仅在明确调节变量下出现。定级 B（条件化成立）。
+  core_claim: 选项数量本身不决定过载；当选项集复杂、偏好不确定且决策目标模糊时，减少选项才提升决策质量与行动率。
+  mechanism: 选项增加同时提高信息加工负荷与比较、后悔预期；但受众的专业度、偏好清晰度与时间压力会改变负荷的可承受性。Scheibehenne、Greifeneder 与 Todd 2010
+    的元分析显示平均效应接近零（S109）；Chernev、Böckenholt 与 Goodman 2015 的元分析识别出调节变量（经典文献，已建包 EP S188）：选择集复杂度、偏好不确定性、决策目标与信息结构（与
+    working_memory_limits、information_overload 的容量约束相通）。
+  causal_chain: 选项集复杂+偏好不确定+目标模糊 → 加工负荷与后悔预期上升 → 决策延迟或放弃
+  variables:
+    inputs:
+    - 选项数量
+    - 选项间可比性
+    - 信息组织结构
+    moderators:
+    - 决策者专业度
+    - 偏好确定性
+    - 时间压力
+    - 决策目标类型
+    mediators:
+    - 加工负荷
+    - 后悔预期
+    - 决策信心
+    outputs:
+    - 决策延迟
+    - 放弃率
+    - 选择后满意度
+  evidence:
+    supporting:
+    - Iyengar 与 Lepper 2000 果酱摊现场实验（经典文献，已建包 EP S188）
+    - Chernev、Böckenholt 与 Goodman 2015 元分析：在识别出的调节条件下过载效应稳定存在（元分析；经典文献，已建包 EP S188）
+    conflicting:
+    - Scheibehenne 等 2010 元分析：跨研究平均效应约等于零，经典结论不能无条件外推（EVIDENCE.md 登记为 B 条件化）
+    replication:
+    - 无条件版本复制不稳定；条件化版本（专家、可比选项、清晰目标下减弱）可重复。评级按枚举记 B
+    meta_analysis:
+    - Scheibehenne 等 2010（S109）与 Chernev 等 2015（未建包）两项元分析共同界定该效应的边界
+  evidence_grade: A-
+  boundary_conditions:
+  - 对新手、偏好模糊者、可比性低的复杂选项集，过载效应明显
+  - 对专家或偏好明确的决策者，选项丰富反而受欢迎
+  failure_conditions:
+  - 把『减少选项』当万能策略：砍掉专家用户需要的长尾，损失核心客群
+  - 选项看似少但每一项都重大且不可逆，过载照旧发生
+  common_misinterpretations:
+  - 『选择越少越好卖』的绝对化：源自单项经典实验，被元分析否定其无条件性
+  ethical_risks:
+  - 以『为你精选』之名行定向收割之实，隐藏关键选项
+  examples:
+    original_cases:
+    - 营销管理（S71）与消费者行为（S72）标准教科书（背景参考）
+    research_cases:
+    - Iyengar 与 Lepper 2000 果酱实验（经典文献，已建包 EP S188）；Scheibehenne 等 2010 元分析（S109）
+    modern_cases:
+    - 电商分类页的『筛选器 vs 编辑精选』之争；订阅制套餐的分层设计
+  communication_implications: 内容按受众专业度分层：给新手三选一的清单，给老手可筛选的全集；宣称『精选』需附筛选标准。
+  community_implications: 社群资源库需要双层结构：编辑精选入口（新手）+可检索全集（进阶），并显式标注差异。
+  content_applications:
+    title: 『只给你三个选项』式标题对新受众有效，进阶内容则给选择器
+    body: 为每项推荐标注适用条件与排除条件，降低比较负荷
+  platform_implications: 推荐系统是选择过载的工业化解法，但『替你选择』的权力需要透明度；排序偏好与商业利益混淆时构成隐性操纵。
+  related_nodes:
+  - satisficing
+  - information_overload
+  - working_memory_limits
+  - default_option_effect
+  - recommendation_feedback_loop
+  source_ids:
+  - S71
+  - S72
+  - S109
+  - S188
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Scheibehenne et al. 2010 JCR meta（S109 已实取摘要）：63 条件/50 实验/N=5036
+    effect_size: 平均效应≈0，异质性高
+    replication_status: 多项研究既有强选择过载也有反向结果，无普遍充分条件
+    context_dependency: 选择过载为情境依赖；存在个体/任务调节变量
+    downgrade_upgrade_reason: 2026-09 补充一手 meta 证据（S109），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；EVIDENCE.md
+      choice_overload→条件化获一手支撑
+  provenance:
+    primary_sources:
+    - S188
+    - S109
+    supporting_evidence:
+    - S71
+    - S72
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: default_option_effect
+  canonical_name_en: Default Option Effect
+  canonical_name_zh: 默认选项效应
+  aliases:
+  - 默认效应
+  - 默认选项偏置
+  - status quo default
+  domain: decision_making
+  definition: 默认选项效应指当某选项被预先设定为不行动时的结果，其被选中比例大幅上升。证据评级 A-（按枚举记 A）：Johnson 与 Goldstein 2003 的器官捐献跨国比较（同意制
+    vs 退出制的登记率巨大差距）、Madrian 与 Shea 2001 的 401(k) 自动加入研究、Thaler 与 Benartzi 的『明天多储蓄』计划均为经典证据（J&G/M&S 经 S11
+    书级转述，一手未建包）。与 status_quo_bias 的区别：默认效应是选择架构的外部设定，现状偏差是决策者的内在倾向，两者机制相关但层次不同。
+  core_claim: 把期望行为设为默认（配合透明退出路径），可大幅提升该行为的发生率。
+  mechanism: 默认承载多重信号：隐含推荐（设计者背书）、现状引力（改变需要理由与行动）与摩擦设置（退出需步骤）；叠加损失厌恶与拖延，主动改变默认的动力被系统性削弱（S11、S12）。
+  causal_chain: 选项被设为默认 → 隐含推荐+现状引力+退出摩擦 → 不作为 → 默认结果实现
+  variables:
+    inputs:
+    - 默认内容
+    - 退出成本
+    - 默认的可感知推荐性
+    moderators:
+    - 决策者卷入度
+    - 选项的身份相关性
+    - 默认的正当性感知
+    mediators:
+    - 隐含推荐解读
+    - 改变行动成本
+    - 后果理解程度
+    outputs:
+    - 默认选项采纳率
+    - 主动选择率
+  evidence:
+    supporting:
+    - Johnson 与 Goldstein 2003 器官捐献登记率的跨国比较（大样本观察；经 S11 书级转述，一手未建包）
+    - Madrian 与 Shea 2001 的 401(k) 自动加入现场研究；Thaler 与 Benartzi 的『明天多储蓄』计划评估（现场研究；经 S11 书级转述，一手未建包）
+    conflicting:
+    - 身份强相关或高道德敏感选项上，默认的力量减弱甚至引发反弹（如被默认注册引发不满）
+    replication:
+    - 多国、多政策领域复制，是行为政策工具箱中证据最强的工具之一。评级按枚举记 A（A- 水平）
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 默认需被理解为合法推荐而非捆绑陷阱
+  - 受众对选项后果有基本理解（完全无知的默认设计失效且有责）
+  failure_conditions:
+  - 默认被识破为操纵（暗黑模式），触发抗拒与信任崩塌
+  - 受众专业化程度高、主动比较成本低时
+  common_misinterpretations:
+  - 把默认效应等同于惯性；其能量大半来自隐含推荐与退出摩擦的组合
+  ethical_risks:
+  - 预勾选、捆绑默认、退订迷宫等暗黑模式；默认设计的伦理底线是透明与易退出
+  examples:
+    original_cases:
+    - Nudge（S11）中的默认选项、『明天多储蓄』等经典案例
+    research_cases:
+    - 器官捐献跨国比较；401(k) 自动加入研究
+    modern_cases:
+    - App 权限默认开启、默认勾选会员续费（监管处罚对象）、社群新人默认礼仪设置
+  communication_implications: 注册流程、订阅套餐、内容接收频率都可以用合理的默认提升长期参与——前提是默认对用户有利且退出透明。
+  community_implications: 新人进群默认引导（昵称格式、自我介绍模板、默认关注公告）显著提高规范执行率；默认规则要公示。
+  content_applications:
+    cta: 把理想行为做成单选默认（『已为你勾选每周摘要』），并明确展示退出按钮
+    body: 说明默认推荐的理由（『大多数像你的人选这个』），强化隐含推荐的正当性
+  platform_implications: 默认设置是平台最强的行为杠杆之一，也因此是隐私与消费者保护监管的核心区域（GDPR 式默认最小化的方向）。
+  related_nodes:
+  - status_quo_bias
+  - nudge_mechanism
+  - loss_aversion
+  - friction_reduction
+  - permission_opt_in_mechanics
+  source_ids:
+  - S11
+  - S12
+  - S20
+  - S108
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler & Sunstein 2008《Nudge》（S11，book 级，substantial_excerpt：默认效应/选择架构/自由意志家长主义）+
+      Samuelson & Zeckhauser 1988 健康保险实验
+    effect_size: 默认选项显著影响选择（自动加入退休/器官捐献）；效应稳健但规模化幅度有限（DellaVigna & Linos 1.4pp）
+    replication_status: 默认效应多情境复制稳健；具体 nudge 类型差异大（S108 复核）
+    context_dependency: 默认需可轻易退出（非强制）；价值-行动差距场景最强
+    downgrade_upgrade_reason: 2026-09 实取 S11 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S11
+    supporting_evidence:
+    - S12
+    - S20
+    - S108
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-021
+    - CASE-FAL-022
+    - CASE-FAL-037
+    - CASE-FAL-057
+    - CASE-FAL-066
+    - CASE-FAL-067
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: anchoring_effect
+  canonical_name_en: Anchoring Effect
+  canonical_name_zh: 锚定效应
+  aliases:
+  - 锚定与调整
+  - anchoring-and-adjustment
+  - 定锚
+  domain: decision_making
+  definition: 锚定效应指数值估计与决策被初始参考值（锚）系统性拉动的现象，即使锚明显任意或无关。Tversky 与 Kahneman 1974 的转轮实验表明任意锚也能移动估计（S130，full_text
+    一手：起点 10 组中位估计 25，起点 65 组为 45）；Ariely, Loewenstein & Prelec 2003 的『连贯性任意』（coherent arbitrariness）研究显示初始锚可长期塑造支付意愿（经典文献，已建包
+    EP S189）。证据评级 A-（按枚举记 A）。
+  core_claim: 数值判断会被先呈现（或先想到）的参考值系统拉偏，且调整通常不足。
+  mechanism: 两条路径：锚定-调整不足（从锚出发调整但提前停止）与选择性可得性激活（锚使锚一致的信息更易被检索与采纳，S01）。Ariely, Loewenstein & Prelec 2003
+    系列实验补充任意锚可通过『愿意支付吗』的自问内化为个人价格标准（经典文献，已建包 EP S189）。
+  causal_chain: 呈现/激活参考值 → 调整不足或锚一致信息被优先激活 → 估计与支付意愿向锚偏移 → 决策被锚塑造
+  variables:
+    inputs:
+    - 锚值高低与呈现顺序
+    - 锚与判断域的相关性
+    moderators:
+    - 专业度
+    - 锚的可信性
+    - 认知负荷
+    mediators:
+    - 调整量
+    - 锚一致信息的可得性
+    - 内化的价格标准
+    outputs:
+    - 估值
+    - 支付意愿
+    - 价格感知与销量
+  evidence:
+    supporting:
+    - Tversky 与 Kahneman 1974 转轮实验：任意随机数移动对非洲国家占比的估计（S130，full_text 一手）
+    - Ariely、Loewenstein 与 Prelec 2003 的连贯性任意研究（经典文献，已建包 EP S189）
+    conflicting:
+    - 专家在熟悉品类上锚定较弱；锚过于离谱且被识破时失效（边界研究）
+    replication:
+    - 多范式（数字估计、支付意愿、量刑）复制稳健，幅度随范式波动。评级按枚举记 A（A- 水平）
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 判断对象存在数值或可比维度
+  - 锚先于判断出现且未被明确标注为无关
+  failure_conditions:
+  - 受众有丰富品类经验与稳定内部标准时
+  - 锚被识别为营销套路（永久划线价）并引发反感
+  common_misinterpretations:
+  - 把锚定效应等同于『标高价显得值』：锚同样适用于数量、时间、目标等一切数值判断
+  - 以为随便一个大数字都有效；锚需要被认真对待才有牵引力
+  ethical_risks:
+  - 虚假原价与虚构对比锚（先涨后降）属价格欺诈，多国监管处罚
+  examples:
+    original_cases:
+    - Thinking, Fast and Slow（S01）的锚定章节
+    research_cases:
+    - 转轮实验；Ariely 等的支付意愿实验
+    modern_cases:
+    - 划线价与折扣对比、榜单『Top 1』『Top 5』、会员年付价作为月付的锚
+  communication_implications: 先呈现价值参照（解决的问题成本、竞品价格、时间花费）再呈现自家价格；锚的选择决定整个比较域。
+  community_implications: 社群活动目标用锚定塑形（『上期平均完成 12 天，你呢』），但锚需真实可查。
+  content_applications:
+    title: 对比式标题自带锚：『别人花 3 小时，这套模板只要 30 分钟』
+    body: 列出锚值并解释其来源，让锚可信
+  platform_implications: 平台的排序与推荐位本身就是注意力锚（先看到的定义标准）；价格展示与补贴策略深度依赖锚定。
+  related_nodes:
+  - dual_process_theory
+  - mental_accounting
+  - framing_effects
+  - pre_suasion_attention_channeling
+  source_ids:
+  - S130
+  - S01
+  - S189
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Tversky & Kahneman 1974（S130，full_text 一手：转盘实验等锚定范式）+ Kahneman 2011（S01，锚定章节叙述）
+    effect_size: 无关锚值影响数值估计（经典锚定效应）
+    replication_status: 锚定效应稳健但受锚的显性/可比性调制；复制研究确认方向
+    context_dependency: 锚的极端度/受众知识/计算能力调制
+    downgrade_upgrade_reason: 2026-09-09 补充一手论文 S130（full_text），provenance primary 升级；Ariely 2003 归属更正为未建包
+  provenance:
+    primary_sources:
+    - S130
+    - S01
+    - S189
+    supporting_evidence: []
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-005
+    - CASE-FAL-006
+    platform_sources:
+    - x:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: availability_heuristic
+  canonical_name_en: Availability Heuristic
+  canonical_name_zh: 可得性启发式
+  aliases:
+  - 可得性偏差
+  - availability bias
+  domain: decision_making
+  definition: 可得性启发式（Kahneman 与 Tversky，1973/1974）指以事例进入脑海的容易程度估计其频率或概率。媒体环境使其系统性失真：被报道的事件比被低估的日常风险显得更常见。证据评级
+    A-（按枚举记 A）。与 representativeness_heuristic 的区别：可得性用『想起来的难易』估频率，代表性用『像不像原型』估类别归属。
+  core_claim: 主观概率被事例的可得性（生动性、近因、曝光量）驱动，而非基率驱动。
+  mechanism: 检索流畅性作为频率线索（与 processing_fluency 家族相通）；媒体与算法放大极端事件的曝光，使可得性与真实分布脱钩；情绪生动的事件（空难、犯罪）检索更容易，日常风险（车祸、慢性病）被低估。Kuran
+    与 Sunstein 描述的『可得性级联』（availability cascade）说明该机制可自我强化成公共恐慌（经典文献，未建包）。
+  causal_chain: 事件被反复/生动呈现 → 检索更容易 → 主观概率上偏 → 风险感知与行为偏移（如规避、转发预警）
+  variables:
+    inputs:
+    - 事件曝光量
+    - 生动性
+    - 时间临近性
+    moderators:
+    - 个人经历
+    - 媒体环境
+    - 情绪唤起强度
+    mediators:
+    - 检索流畅性
+    - 情绪标记
+    outputs:
+    - 频率/概率估计
+    - 风险感知
+    - 传播与规避行为
+  evidence:
+    supporting:
+    - Kahneman 与 Tversky 1973 起的可得性实验系列（经典实验）
+    - 风险感知研究中媒体报道与主观风险的关联证据（媒介效果研究，S46）
+    conflicting:
+    - 人们对自身经验丰富领域的估计更准；可得性线索被察觉（如意识到是媒体渲染）时部分校正（边界研究）
+    replication:
+    - 主效应稳健；幅度因领域与个体经验差异大。评级按枚举记 A（A- 水平）
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 估计对象难以从客观渠道即时核验时最强
+  - 个体无直接经验可对照
+  failure_conditions:
+  - 受众具备领域统计素养或刚看过反例校正信息
+  - 事件过于久远导致检索困难，即使客观上高频
+  common_misinterpretations:
+  - 把可得性偏差等同于『媒体说谎』；它更多是曝光量与真实分布的系统性脱钩
+  ethical_risks:
+  - 制造或放大耸动案例（孤例放大为趋势）以操纵风险感知与政策情绪
+  examples:
+    original_cases:
+    - Tversky & Kahneman 1974（S130）的知名度名单实验：更出名的名单被误判为出现更多
+    research_cases:
+    - Kahneman 与 Tversky 的字母频率等经典实验（S130）；Kuran 与 Sunstein 的可得性级联分析（经典文献，未建包）
+    modern_cases:
+    - 社会事件刷屏后的安全焦虑与防御性消费；AI 灾难叙事对技术风险感知的塑造
+  communication_implications: 用具体案例开路（提高可得性）再给基率数据（校正）；反之，驳斥谣言时警惕重复谣言本身反而提高其可得性。
+  community_implications: 社群辟谣与风险沟通要先管理曝光（置顶校正、集中讨论），避免碎片化重复。
+  content_applications:
+    title: 用一个鲜活案例承载论点，紧跟一段基率校正
+    body: 引用近因、具体、可画面化的事例提高论证可得性
+  platform_implications: 算法按互动放大耸动内容，人为提高其可得性，是风险感知失真与虚假信息速度优势的结构性来源。
+  related_nodes:
+  - representativeness_heuristic
+  - affect_heuristic
+  - misinformation_velocity
+  - gatekeeping_dynamics
+  - dual_process_theory
+  source_ids:
+  - S01
+  - S46
+  - S41
+  - S130
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Kahneman 2011《Thinking, Fast and Slow》（S01，book 级，substantial_excerpt：可得性启发+风险感知）+
+      Lippmann 1922《Public Opinion》（S41，拟态环境：媒体曝光塑造认知）
+    effect_size: 提取容易度→概率/频率判断偏移；媒体曝光放大耸动内容可得性
+    replication_status: 启发式方向稳健；被格式与文化调节（频率格式效应）
+    context_dependency: 事件检索困难时偏差更强；媒体曝光结构是关键情境变量
+    downgrade_upgrade_reason: 2026-09 实取 S01/S41 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S130
+    - S01
+    supporting_evidence:
+    - S41
+    - S46
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-004
+    - CASE-CRS-013
+    - CASE-CRS-019
+    - CASE-FAL-013
+    - CASE-FAL-014
+    platform_sources:
+    - weibo:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: representativeness_heuristic
+  canonical_name_en: Representativeness Heuristic
+  canonical_name_zh: 代表性启发式
+  aliases:
+  - 代表性偏差
+  - 原型匹配
+  - base rate neglect
+  domain: decision_making
+  definition: 代表性启发式（Kahneman 与 Tversky，1972 起）指以对象与某类别原型（或与因果脚本）的相似程度判断其类别归属或来源概率，常伴随基率忽视与合取谬误（如『琳达问题』：细节丰富的合取描述被评为比单一成分更可能——Tversky
+    & Kahneman 1983，经典文献未建包）。与小数定律相关：把小样本特征当总体规律。
+  core_claim: 相似性判断常替代概率判断：越像原型的描述被评为越可能，即使基率相反。
+  mechanism: 原型与脚本是压缩的类别知识，匹配比计算省资源（S01）；生动的细节提高叙述的『代表性』从而提高被信度（与 anecdote_vs_statistics 的传播层面相通）；Gigerenzer
+    等对『何为正确规范』的批评提示：部分所谓错误在于任务设计混淆了频率与概率格式，边界需谨慎（S130 limitations）。
+  causal_chain: 描述与原型/脚本的相似性 → 相似度替代概率判断 → 基率被忽视 → 类别归属与预测出错
+  variables:
+    inputs:
+    - 描述的典型性
+    - 细节丰富度
+    - 基率信息的可得性
+    moderators:
+    - 统计素养
+    - 频率格式 vs 概率格式
+    - 群体刻板印象强度
+    mediators:
+    - 原型匹配
+    - 因果脚本激活
+    outputs:
+    - 类别判断
+    - 概率估计
+    - 人员/内容筛选偏差
+  evidence:
+    supporting:
+    - Kahneman 与 Tversky 1972 起的琳达、Tom W. 等经典实验（合取谬误与基率忽视；经典文献，未建包）
+    - 小数定律的相关实验证据（经典研究）
+    conflicting:
+    - Gigerenzer 等的规范之争：以频率格式呈现任务时部分『谬误』消失，说明任务表述影响结论（S130 limitations 载其生态理性批评；理论争议）
+    replication:
+    - 经典范式方向稳定，但对『人类不理性』的强解读有学术争论。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 判断对象有清晰社会原型或因果脚本时最强
+  - 以单一概率格式呈现抽象事件时更易出错
+  failure_conditions:
+  - 任务改用自然频率格式或受众有统计训练时
+  - 原型与判断维度真正相关时，匹配反而有效
+  common_misinterpretations:
+  - 把代表性启发式当成『刻板印象永远错』；它是高效但可错的捷径，问题在于与基率冲突时未被校正
+  ethical_risks:
+  - 利用典型化人设诱导身份匹配消费（『你这种人也该……』）；筛选算法中放大原型偏差造成歧视
+  examples:
+    original_cases:
+    - Thinking, Fast and Slow（S01）中的琳达问题与小数定律章节
+    research_cases:
+    - Kahneman 与 Tversky 的类别预测实验系列
+    modern_cases:
+    - 用人设标签判断内容可信度；招聘与推荐算法中的原型匹配偏差
+  communication_implications: 塑造符合受众原型的可信形象（专家、过来人）有效，但需以真实资历支撑；反原型内容要主动管理基率认知。
+  community_implications: 社群评价体系易被代表性绑架（‘大 V 说的都对’），需以事实核查流程对冲原型光环。
+  content_applications:
+    title: 让主角『像目标读者』：相似性提高可信度，但要防止过度典型化
+    body: 关键论证同时给典型案例与基率，避免细节堆叠制造合取幻觉
+  platform_implications: 推荐系统按原型（历史相似用户）匹配内容，结构性复制代表性捷径；偏差在人群层面被规模化。
+  related_nodes:
+  - availability_heuristic
+  - anecdote_vs_statistics
+  - social_identity_theory
+  - in_group_favoritism
+  - dual_process_theory
+  source_ids:
+  - S130
+  - S01
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Tversky & Kahneman 1974（S130，full_text 一手：代表性启发式+limitations 载 Gigerenzer 生态理性批评）+
+      Kahneman 2011（S01，代表性/基率忽视叙述）；琳达/合取谬误未建包
+    effect_size: 相似性替代概率判断；细节丰富度提高被信度
+    replication_status: 经典范式方向稳定；对『人类不理性』强解读有学术争论
+    context_dependency: 有清晰原型/脚本时最强；频率格式与统计训练减弱效应
+    downgrade_upgrade_reason: 2026-09 补充 S130 一手论文（full_text），Gigerenzer 批评归属由 S19 更正为 S130 limitations，provenance
+      primary 升级
+  provenance:
+    primary_sources:
+    - S130
+    - S01
+    supporting_evidence: []
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: status_quo_bias
+  canonical_name_en: Status Quo Bias
+  canonical_name_zh: 现状偏差
+  aliases:
+  - 现状偏置
+  - 维持现状倾向
+  - omission bias
+  domain: decision_making
+  definition: 现状偏差指在多选项决策中系统性地偏向维持当前状态的倾向，即使改变的成本很低且期望收益为正。Samuelson 与 Zeckhauser 1988 的实验（健康保险计划选择）是经典证据（经典文献，已建包
+    EP S207）。与 default_option_effect 的区别：默认效应是外部架构设定，现状偏差是决策者的内在倾向；默认之所以强大，部分正因为利用了现状偏差。
+  core_claim: 在收益不确定时，人们系统性地高估改变的成本与风险、低估维持现状的机会成本。
+  mechanism: 多重机制叠加：改变带来潜在后悔（作为损失的权重更大，与 loss_aversion 相通）、现有状态的禀赋（与 endowment_effect 相通）、改变的计算成本与执行摩擦、以及不作为比作为在道德上更『安全』的作为偏差（S11、S12）。
+  causal_chain: 改变选项存在不确定性 → 潜在损失/后悔权重放大 + 禀赋与摩擦 → 维持现状
+  variables:
+    inputs:
+    - 改变的转换成本
+    - 收益不确定性
+    - 现状的持有时间
+    moderators:
+    - 后悔倾向
+    - 决策自主性
+    - 现状的历史成因（主动选择 vs 被动继承）
+    mediators:
+    - 后悔预期
+    - 禀赋感
+    - 计算成本
+    outputs:
+    - 维持率
+    - 换用/迁移率
+    - 延迟决策频率
+  evidence:
+    supporting:
+    - Samuelson 与 Zeckhauser 1988 的健康保险选择实验（经典文献，已建包 EP S207）
+    - Kahneman、Knetsch 与 Thaler 1990 的禀赋/现状实验（S131）
+    - 组织与消费领域的转换惰性观察（多来源现场研究）
+    conflicting:
+    - 当现状明显劣质或身份激励指向改变时，偏差减弱；年轻/低沉没群体惰性更低（边界研究）
+    replication:
+    - 方向稳健，幅度随情境变化。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 收益不确定且改变可逆性低时最强
+  - 现状由自己主动选择而来时更强（自致禀赋）
+  failure_conditions:
+  - 现状被公开证明失败、或有强身份信号支持改变时
+  - 改变被设计成零摩擦且结果可逆
+  common_misinterpretations:
+  - 把现状偏差当作用户忠诚；低价竞品只需一次成功的情境切换（搬家、换机）即可破除惰性
+  ethical_risks:
+  - 利用现状偏差锁定用户（复杂迁移、数据不可携带），损害选择自由
+  examples:
+    original_cases:
+    - Nudge（S11）中的现状讨论与政策应用
+    research_cases:
+    - Samuelson 与 Zeckhauser 1988 的保险计划选择实验
+    modern_cases:
+    - 银行与运营商的高留存率、软件迁移惰性、社群沉默成员的维持
+  communication_implications: 动员改变的文案要显式命名现状的机会成本（『你每年多花 X』），并把改变拆成可逆的小步骤。
+  community_implications: 社群改版（换平台、改规则）要预期现状阻力：迁移窗口+数据可携+仪式化告别三件套。
+  content_applications:
+    body: 用对比表格把『维持现状的隐性成本』可视化
+    cta: 『先试用 7 天，随时可退』——降低改变的可逆性顾虑
+  platform_implications: 平台的迁移成本设计（数据、关系链）制度化了现状偏差，构成竞争壁垒，也是互操作性监管的靶点。
+  related_nodes:
+  - default_option_effect
+  - loss_aversion
+  - endowment_effect
+  - choice_overload
+  source_ids:
+  - S11
+  - S131
+  - S207
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler & Sunstein 2008（S11，默认选项与现状）+ Kahneman, Knetsch & Thaler 1990（S131，endowment/现状实验）；Samuelson
+      & Zeckhauser 1988 未建包；2026-09-09 一手 EP 已建（S207）
+    effect_size: 维持现状选项被系统性偏好（默认效应跨领域）
+    replication_status: 默认选项效应在退休储蓄/器官捐献等政策场景稳健
+    context_dependency: 切换成本/默认显性度/决策频率调制
+    downgrade_upgrade_reason: 2026-09-09 补充 S131（endowment/现状实验）支撑，S12 例证归属移除
+  provenance:
+    primary_sources:
+    - S207
+    - S11
+    supporting_evidence:
+    - S131
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-029
+  last_reviewed: 2026-09
+  knowledge_half_life: long

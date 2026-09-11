@@ -1,232 +1,371 @@
 # belonging — 归属（Belonging）：人类对联结的基本需要及其受挫与高潮
 domain: belonging
 nodes:
-  - id: need_to_belong
-    canonical_name_en: Need to Belong
-    canonical_name_zh: 归属基本需要
-    aliases: [归属需要, belongingness hypothesis（归属假说）]
-    domain: belonging
-    definition: "归属基本需要（need to belong）由 Baumeister 与 Leary 于 1995 年在《Psychological Bulletin》系统提出：人类有一种基本的、类本能的动机去形成并维持至少少量持久的、充满积极关怀的人际关系。满足该需要需要两个条件：频繁且非厌恶的互动（frequent, nonaversive interaction）与持久关怀的联结框架（persistent caring framework），缺一不可（S133 仅摘要级支持）。未满足时会产生可测量的心理与行为后果。"
-    core_claim: "归属是需要而非偏好：当关系被威胁或剥夺时，个体出现认知、情绪与行为上的系统性反应（痛苦、警惕、动机重构）；满足归属感不是奢侈体验，而是心理功能正常运转的前提条件之一。"
-    mechanism: "归属需要的进化逻辑是合作生存：孤立于群体在祖先环境中近乎致命，因此人类对被接纳/被排斥的信号极度敏感，并配备了一套快速监测关系状态的系统。该系统持续评估「我被在乎的人在乎吗」；信号转差时优先级机制启动——认知资源转向关系修复、情绪痛苦驱动行为调整、自我调节资源被占用。这解释了为什么孤立与排斥的影响如此广泛：它调用的不是「心情」而是基础动机系统。"
-    causal_chain: "关系信号监测 → 归属感满足/受威胁 → （满足）安全感与探索 / （受威胁）痛苦 + 警惕 + 认知资源转向关系修复 → 认知情绪行为全面变化"
-    variables:
-      inputs: [互动频率与质量, 关系的持久性与关怀信号]
-      moderators: [个体差异（拒绝敏感度）, 当前关系状态基线, 替代关系可得性]
-      mediators: [归属感水平, 关系威胁感知]
-      outputs: [情绪状态, 认知功能与自我调节, 亲社会/联结寻求行为]
-    evidence:
-      supporting:
-        - "Baumeister & Leary 1995 对归属需要跨大量文献的系统论证（经典理论综述论文）"
-        - "后续实验传统：社会排斥引发情绪痛苦、认知变化与归属修复行为（排斥研究文献，与 ostracism_effects 互证）"
-      conflicting:
-        - "个体在归属需要强度上存在稳定差异，并非所有人同等强烈（人格研究讨论）"
-      replication:
-        - "归属受威胁的负面后果方向被大量实验重复；「类本能」的强命题仍有哲学与实证争议"
-      meta_analysis: []
-    evidence_grade: A-
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "需要的是「少量持久关怀关系」而非人群数量：大众关注无法替代深度联结"
-      - "替代关系可得性调节后果：有其他支持网络时，单一关系破裂的冲击被缓冲"
-    failure_conditions:
-      - "把归属需要直接外推为营销话术（「我们是一家人」式空洞宣称）：关系框架缺失时，宣称无法制造真实联结"
-      - "忽视个体差异：对高独立倾向人群，密集归属设计引发压迫感"
-    common_misinterpretations:
-      - "「归属感=受欢迎」——需要的核心是少数稳定关怀关系，粉丝量与点赞数不构成归属满足；这也是为什么高关注度创作者可能极端孤独"
-      - "把 need_to_belong 与 self_determination_needs 中的 relatedness 混为一谈：SDT 的 relatedness 是三大基本心理需要之一（自我决定理论框架），Baumeister & Leary 的归属假说是独立但高度兼容的论证传统"
-    ethical_risks:
-      - "利用归属焦虑（「你不在就错过一切」）制造依赖与沉没成本"
-      - "以归属为筹码实施群体控制（不服从即失去我们）"
-    examples:
-      original_cases: [Baumeister & Leary 对孤独、丧失、依恋与孤独感文献的综合论证（1995 综述）]
-      research_cases: [社会排斥实验范式中被排斥者的情绪与行为反应（与 ostracism 研究共享证据）]
-      modern_cases: [独自生活与远程工作人群对「轻归属」产品（线上自习室、陪伴直播）的消费, 品牌会员社群以「归属」为价值主张的运营逻辑]
-    communication_implications: "内容若要触及归属需要，必须提供真实的联结路径（可加入的群、可见的成员互动、回应机制），而非只调用归属语言；空话会迅速被识破。"
-    community_implications: "社群的价值主张应直接回应归属需要：成员要的不是内容多好，而是「这里有人在乎我是否在场」——回应制度、成员纪念日、私聊问候比内容升级更有效。"
-    content_applications:
-      body: "正文使用「写给孤独地面对 X 问题的你」的定位，并提供具体的联结出口（社群入口、互助通道）"
-      narrative: "讲述「从一个人扛到一群人一起」的转变故事，把归属的获得过程叙事化"
-      comments: "保证对每条真诚留言的可见回应，评论区是归属信号的最低成本发生地"
-      sharing: "分享语设计为「拉上同路人」，把转发从流量行为变成联结行为"
-    platform_implications: "平台的关注/粉丝机制提供了大规模弱联结但难以满足深度归属；私域与社群功能（小群、私聊、陪伴场景）是归属需要的真实出口（原则性判断）。"
-    related_nodes: [ostracism_effects, belonging_uncertainty, sense_of_community, self_determination_needs, fear_of_missing_out]
-    source_ids: [S21, S14, S133]
-    provenance:
-      primary_sources: ['S21', 'S14', 'S133']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: belonging_uncertainty
-    canonical_name_en: Belonging Uncertainty
-    canonical_name_zh: 归属不确定性
-    domain: belonging
-    definition: "归属不确定性（belonging uncertainty）指个体对自己「是否被这个群体接纳、是否真正属于这里」的怀疑与不安状态，常见于新环境进入期（入学、入职、入群）与身份少数情境。它与绩效焦虑、退出意向高度相关；针对它的「社会归属干预」（social-belonging intervention）研究表明：向个体说明「归属感早期波动是普遍且暂时的」即可产生可观的行为改变。"
-    core_claim: "对归属的怀疑本身（而非归属缺失）即足以造成投入下降与退出：把「我不属于这里」的解读重构为「这是新人的普遍阶段」，能显著降低退出行为（Walton 与 Cohen 2007 干预证据为方向性引用，尚未建证据包）。"
-    mechanism: "在新环境中，正常的挫折（一次冷场、一个错误、一条无人回应的发言）容易被少数情境成员解读为「我不被接纳」的证据，形成恶性循环：越怀疑 → 越退缩 → 越少获得接纳信号 → 越确信不属于。归属不确定性在代表不足群体中被环境线索（刻板印象、微排斥）持续激活。干预的关键不是给予归属感，而是修正归因：说明不确定性是普遍、暂时且与个人价值无关的，从而切断恶性解释循环。"
-    causal_chain: "新环境挫折事件 → 归因于「我不属于」 → 焦虑与退缩 → 接纳信号减少 → 不确定性自我确认 → 投入下降/退出"
-    variables:
-      inputs: [新环境的早期挫折经历, 身份代表性线索]
-      moderators: [个体拒绝敏感度, 环境的多元包容信号, 同侪中相似他人的存在]
-      mediators: [对挫折的归因方式, 焦虑水平]
-      outputs: [投入度, 表现, 留存与退出意向]
-    evidence:
-      supporting:
-        - "Walton 与 Cohen 等人的社会归属干预研究：说明「归属波动是普遍的」显著改善处境不利新生的学业表现与身心健康（实验研究传统，方向性引用）"
-        - "少数情境中归属不确定性与退出意向相关的一致发现（教育心理学文献）"
-      conflicting:
-        - "干预效果依赖情境：在真实存在排斥的环境中，仅靠归因重构无法解决结构性问题（研究讨论）"
-      replication:
-        - "归属干预在多个教育情境复制成功；在职场与其他场景的推广效果证据尚在积累"
-      meta_analysis: []
-    evidence_grade: C
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "干预适用于「归属威胁是情境性且可纠正」的环境；系统性排斥环境中单次归因干预不足"
-      - "效果依赖干预时机：越早（新环境进入期）越好，定型后难以扭转"
-    failure_conditions:
-      - "用「归属不确定性」话术掩盖真实的排斥文化：归因重构不能替代环境修复"
-      - "把所有流失都归因于心理不确定性，忽视门槛、成本与服务等结构性原因"
-    common_misinterpretations:
-      - "「新人焦虑是矫情」——归属不确定性有可测量的行为后果，是设计问题不是个人弱点问题"
-      - "把 belonging_uncertainty 与 need_to_belong 混为一谈：need_to_belong 是基本动机（人人都需要联结），belonging_uncertainty 是对特定群体归属状态的怀疑（情境性认知状态）"
-    ethical_risks:
-      - "利用归属不确定性做留存设计（「再坚持一下你就是自己人了」的情感挽留话术），掩盖真实的服务缺陷"
-    examples:
-      original_cases: [Walton & Cohen 的大一新生归属干预研究传统（教育心理学）]
-      research_cases: [代表不足群体中环境线索激活归属不确定性的系列研究（方向一致）]
-      modern_cases: [新员工 30 天「引导伙伴制」（buddy system）对早期归属焦虑的缓冲, 线上课程社群的新人破冰设计（降低第一次发言的心理门槛）]
-    communication_implications: "面向新用户/新成员的内容应包含「早期困难是正常的」的规范信息（「前两周觉得不适应是所有人都会经历的」），这一句归因重构的留存价值可能超过奖励。"
-    community_implications: "把「降低首周不确定性」写进社群设计：入群第一周的分段指引、对新人前三次发言的保障式回应、以及「老成员当年也这样」的故事分享，直接切断恶性归因循环。"
-    content_applications:
-      body: "新人向正文显式写明「你现在的困惑很正常，几乎每个人都经历过」，并提供下一步的具体动作"
-      narrative: "讲述老成员的「最初很失败」故事（真实的挫折+如何被接住），为新成员提供替代叙事"
-      comments: "对新人首帖使用「我也曾这样」式的老成员回应模板，制造普遍性证据"
-    platform_implications: "平台的匿名提问与「新人专区」功能降低了归属不确定性的表达成本；无分区设计的社群中，不确定性只能以潜水形式隐性流失（原则性判断）。"
-    related_nodes: [need_to_belong, newcomer_onboarding, community_boundaries, social_identity_theory, self_efficacy]
-    source_ids: [S25, S83, S133]
-    provenance:
-      primary_sources: ['S25', 'S83', 'S133']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: ostracism_effects
-    canonical_name_en: Ostracism Effects
-    canonical_name_zh: 排斥效应
-    aliases: [社会排斥, 被忽视（being ignored）, social exclusion]
-    domain: belonging
-    definition: "排斥效应（ostracism effects）指被忽视或被排除于群体之外所引发的心理与行为后果。Kipling Williams 的研究传统（含 Cyberball 抛球实验范式）表明：即便排斥来自陌生群体、计算机甚至假想对象，被排斥者也会经历四种基本需要（归属、自尊、控制、有意义存在）的威胁与真实的痛苦反应。线上 ghosting（玩消失）、已读不回与 cancel（公开驱逐）是数字时代的典型排斥形态。"
-    core_claim: "排斥是一种代价高昂的惩罚机制：它快速威胁多种基本需要并产生真实痛苦，即使来源是陌生人或象征性情境；群体依靠这一机制执行规范，个体则可能遭受远超其行为过错的伤害。"
-    mechanism: "Williams 的时序模型（temporal need-threat model）：排斥先引发反射性的痛苦（几乎无认知加工参与，故虚拟排斥也有效），继而进入反思阶段——个体努力解释「为什么被排斥」并尝试恢复（顺从、攻击或退出）；长期或慢性排斥则导向疏离、无助与异化（时序模型与四需要细分未建证据包，方向性转述）。痛苦之所以如此强烈，源于归属基本需要的进化优先性：被群体抛弃曾是生存威胁。线上环境放大了排斥的可观测性（已读不回、在线却不回应）与持久性（记录可见的移除）。"
-    causal_chain: "被忽视/驱逐信号 → 反射性痛苦与四需要威胁 → 反思与恢复尝试（顺从/攻击/退缩） → 恢复或慢性疏离"
-    variables:
-      inputs: [排斥的形式（忽视/驱逐/公开羞辱）, 排斥来源的重要性, 排斥的可见性]
-      moderators: [替代关系可得性, 个体拒绝敏感度, 归因（可解释 vs 无缘无故）]
-      mediators: [四种基本需要威胁（归属、自尊、控制、意义）, 痛苦感]
-      outputs: [顺从与规范遵从提升, 攻击性, 退缩与退出, 自我调节资源损耗]
-    evidence:
-      supporting:
-        - "S31《Oxford Handbook of Social Influence》目录级收录排斥作为影响工具（Williams 方向）；S133 归属受威胁产生系统性心理与行为后果（摘要级）"
-        - "Williams 的 Cyberball 实验传统：虚拟抛球中被忽视即引发需要威胁（一手实验证据未建证据包，方向性转述）"
-        - "排斥研究的神经与生理证据显示排斥涉及痛苦相关脑区的激活方向（研究讨论，机制解释存在争议但效应稳定；未建证据包）"
-      conflicting:
-        - "「排斥即疼痛」的脑机制解释（与社会疼痛共享说）存在后续方法学争议（效应存在，机制解释被讨论）"
-      replication:
-        - "排斥引发需要威胁与行为反应的效应被高度稳定地复制，是使用虚拟范式的少数稳健领域之一"
-      meta_analysis: []
-    evidence_grade: A-
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "效应在排斥来源为「可能的归属来源」时最强；完全无关者的忽视影响较弱"
-      - "替代归属可得性是关键缓冲：有其他支持网络的个体恢复更快"
-    failure_conditions:
-      - "把所有线上沉默都解读为排斥（已读不回可能是忙而非惩罚）：排斥效应依赖「被有意排除」的感知"
-      - "以为轻度排斥总是有效管理工具：反复或无解释的排斥制造的是慢性敌意与疏离，而非顺从"
-    common_misinterpretations:
-      - "「网络上的排斥不算真的」——虚拟排斥实验的核心发现恰恰相反：场景再假，被排斥的感受是真的"
-      - "把 ghosting 视为无害的省事退出：对被 ghost 者而言，无解释的消失造成的需要威胁常比明确拒绝更重（因为无法归因与了结）"
-    ethical_risks:
-      - "社群运营用「冷处理/踢出示范」公开排斥个体，造成不成比例的心理伤害并威慑其他成员"
-      - "网络暴力式集体驱逐（cancel）缺乏程序，惩罚与过错严重失配"
-    examples:
-      original_cases: [Williams 的 Cyberball 虚拟抛球实验系列, Williams《Ostracism: The Power of Silence》对日常与长期排斥的分析]
-      research_cases: [排斥后攻击性与顺从行为增加的实验证据（多项研究，方向一致）]
-      modern_cases: [群聊中被踢出的「公开行刑」效应与退出者社群反感, 已读不回与 ghosting 在亲密与职场关系中的心理伤害, 被 cancel 个体的「驱逐后」身份重构困境]
-    communication_implications: "内容的排除性语言（「不懂的人别看」「不是 XX 就别来」）快速筛选但也快速伤害；品牌与创作者应避免把「身份净化」作为互动策略，需要退出时给明确解释（体面的告别替代 ghosting）。"
-    community_implications: "社群纪律应遵循排斥伦理：警告 → 解释 → 私下处置，避免公开示众；对退出成员保留尊严通道（「退群不失联」）；监测被处置成员与旁观者的情绪涟漪。"
-    content_applications:
-      body: "正文避免以「多数派羞辱少数派」的结构制造笑点（受害者是真实的读者）"
-      narrative: "讲述被排斥后重新联结的故事（先共情痛苦再给出路径），而非美化排斥的后果"
-      comments: "对边缘化发言者主动回应（哪怕不同意观点），评论区管理将「无人回应的边缘者」纳入关照"
-      sharing: "邀请式分享语（「希望这里也有你的位置」）替代门槛羞辱式话术"
-    platform_implications: "平台的拉黑、禁言、移除功能让排斥一键化且可见化（成员名单公开变化），其心理权重远超线下；平台与社群需为「程序化的体面退出」设计工具（原则性判断）。"
-    related_nodes: [need_to_belong, belonging_uncertainty, normative_influence, in_group_favoritism, community_governance]
-    source_ids: [S31, S21, S133]
-    provenance:
-      primary_sources: ['S31', 'S21', 'S133']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: collective_effervescence
-    canonical_name_en: Collective Effervescence
-    canonical_name_zh: 集体欢腾
-    aliases: [集体沸腾, 集体兴奋]
-    domain: belonging
-    definition: "集体欢腾（collective effervescence）由 Émile Durkheim 在《宗教生活的基本形式》（1912）中提出：当人群聚集、共同专注并同步行动时，会涌起一种超越个体的集体情绪能量，它反过来强化群体纽带、把共享符号神圣化。Durkheim 认为这是宗教与社会团结的核心发生机制；当代研究将其延伸至演唱会、体育赛事、集体哀悼与线上同步体验。"
-    core_claim: "同步的集体参与产生高强度的共享情绪与联结感，其强度远超个体情绪的简单相加；这种「情感能量」会沉淀为对群体与符号的忠诚，是社群高光时刻的心理本质。"
-    mechanism: "Durkheim 的原初逻辑：身体共在 + 共同专注 → 情绪相互点燃并螺旋放大 → 个体体验到「比自我更大的东西」 → 群体符号被该情绪标记而神圣化 → 团结感在仪式后延续。当代研究补充了同步性的作用：动作、节奏、声音的同步（齐唱、齐呼、齐跳）额外提升融合感与亲社会性；对集体仪式中心理与生理同步（如心率同步）的田野测量提供了生理层面的方向性证据（同步动作/心率同步研究未建证据包，方向性转述）。集体欢腾是有限资源：需要真实的共在与同步，异步点赞无法复制。"
-    causal_chain: "身体/虚拟共在 + 共同专注 + 行为同步 → 情绪相互放大 → 超个体情感能量 → 符号神圣化 + 群体忠诚沉淀"
-    variables:
-      inputs: [共在密度, 注意力共同指向, 行为同步程度, 仪式的情感剧本]
-      moderators: [群体规模与 Venue 设计, 个体先前对符号的认同, 稀缺性（年度性/一次性）]
-      mediators: [共享情绪强度, 自我边界消融感（identity fusion 方向）]
-      outputs: [情感能量峰值, 符号忠诚, 后续参与意愿与自我牺牲倾向]
-    evidence:
-      supporting:
-        - "Durkheim 对部落仪式的民族志综合与理论建构（经典著作《宗教生活的基本形式》）"
-        - "当代研究：同步动作提升群体凝聚与合作的实验证据（合唱、行进、共同节奏的研究传统，方向一致）"
-        - "集体仪式中心理与生理同步的田野测量（心率同步等研究，方向性证据）"
-      conflicting:
-        - "「欢腾能否脱离面对面共在发生」存在争议：线上同步（连麦、弹幕齐飞）产生的效应强度弱于身体共在（媒介研究讨论）"
-      replication:
-        - "「同步集体行为提升联结感」的效应方向被多项研究重复；「神圣化」链条更多停留在理论阐释层面"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "需要最低限度的共同专注与同步；人群物理聚集但注意力分散（各自看手机）不产生欢腾"
-      - "个体必须对群体符号有最低认同：被裹挟的旁观者体验到的是压迫而非欢腾"
-    failure_conditions:
-      - "用「全员@+刷屏指令」硬造线上同步：指令性同步产生的是表演不是情绪共振"
-      - "过度频繁的「高光仪式」使欢腾贬值（常态化的高潮等于没有高潮）"
-    common_misinterpretations:
-      - "「气氛好=集体欢腾」——欢腾特指同步共在中涌起的超个体情绪，比「氛围好」强一个量级，且伴随符号忠诚的沉淀"
-      - "把 collective_effervescence 与 emotional_contagion 混淆：emotional_contagion 是情绪在人际间的逐个传递机制，collective_effervescence 是集体仪式层面的涌现现象；后者是前者在高度同步结构下的峰值形态"
-    ethical_risks:
-      - "集体欢腾是煽动的原材料：高同步场景（集会、直播晚会、饭圈应援）中的情绪峰值可用于操纵决策（限时逼单、群体施压）"
-      - "极端组织利用仪式性欢腾制造 identity fusion 与自我牺牲意愿"
-    examples:
-      original_cases: [Durkheim 对澳洲部落图腾仪式中集体欢腾与符号神圣化的民族志分析（《宗教生活的基本形式》）]
-      research_cases: [合唱与行军等同步活动提升合作与凝聚的实验与田野研究（方向一致）, 集体哀悼仪式后群体认同提升的调查研究（方向一致）]
-      modern_cases: [演唱会万人大合唱与「明年还来」的忠诚沉淀, 世界杯观赛广场的同步呐喊, 线上跨年直播的弹幕齐刷时刻（弱化版）]
-    communication_implications: "为「共同时刻」而设计传播：把分散受众聚到同一时间（直播、同步活动、倒计时），提供可齐声参与的形式（同一口号、同一动作），并让该时刻标记在品牌符号上（欢腾沉淀为品牌资产）。"
-    community_implications: "把稀缺的集体欢腾留给年度级仪式（周年庆、线下聚会、共同战绩夜），并做足「共在+同步」设计：同步开始的仪式、集体口号、共同完成的挑战；避免把日常打卡误当欢腾。"
-    content_applications:
-      body: "活动预告正文渲染「同一时刻我们在不同城市做同一件事」的共同图景"
-      narrative: "活动后内容记录共同时刻的细节（谁喊了什么、全场如何反应），把欢腾转写为集体记忆"
-      sharing: "同步时刻设计可拍可晒的视觉符号（手势、灯光、口号），让欢腾可被携带传播"
-      comments: "活动夜开启「齐刷」主题评论（统一格式接龙），制造线上弱同步峰值"
-    platform_implications: "直播与连麦是平台侧最接近欢腾的形态（时间共在+内容同步）；点播与信息流是欢腾的解药——运营者需在「流量逻辑（异步）」与「团结逻辑（同步）」间做结构性选择（原则性判断）。"
-    related_nodes: [community_rituals, emotional_contagion, sense_of_community, collective_identity_narrative, third_place]
-    source_ids: [S87, S82]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Parker 2018《The Art of Gathering》（S87，聚会设计制造集体时刻）+ Bacon 2012（S82，社群仪式与欢腾）+ Durkheim 集体欢腾传统（原著未建证据包，方向性转述）"
-      effect_size: "同步集体体验增强联结与归属（定性/实践证据为主）"
-      replication_status: "集体欢腾概念源于 Durkheim；现代线上研究部分支持（同步形态）"
-      context_dependency: "需时间共在+内容同步；异步信息流形态弱化欢腾"
-      downgrade_upgrade_reason: "2026-09 实取 S87/S82 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S87]
-      supporting_evidence: [S82]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
+- id: need_to_belong
+  canonical_name_en: Need to Belong
+  canonical_name_zh: 归属基本需要
+  aliases:
+  - 归属需要
+  - belongingness hypothesis（归属假说）
+  domain: belonging
+  definition: 归属基本需要（need to belong）由 Baumeister 与 Leary 于 1995 年在《Psychological Bulletin》系统提出：人类有一种基本的、类本能的动机去形成并维持至少少量持久的、充满积极关怀的人际关系。满足该需要需要两个条件：频繁且非厌恶的互动（frequent,
+    nonaversive interaction）与持久关怀的联结框架（persistent caring framework），缺一不可（S133 仅摘要级支持）。未满足时会产生可测量的心理与行为后果。
+  core_claim: 归属是需要而非偏好：当关系被威胁或剥夺时，个体出现认知、情绪与行为上的系统性反应（痛苦、警惕、动机重构）；满足归属感不是奢侈体验，而是心理功能正常运转的前提条件之一。
+  mechanism: 归属需要的进化逻辑是合作生存：孤立于群体在祖先环境中近乎致命，因此人类对被接纳/被排斥的信号极度敏感，并配备了一套快速监测关系状态的系统。该系统持续评估「我被在乎的人在乎吗」；信号转差时优先级机制启动——认知资源转向关系修复、情绪痛苦驱动行为调整、自我调节资源被占用。这解释了为什么孤立与排斥的影响如此广泛：它调用的不是「心情」而是基础动机系统。
+  causal_chain: 关系信号监测 → 归属感满足/受威胁 → （满足）安全感与探索 / （受威胁）痛苦 + 警惕 + 认知资源转向关系修复 → 认知情绪行为全面变化
+  variables:
+    inputs:
+    - 互动频率与质量
+    - 关系的持久性与关怀信号
+    moderators:
+    - 个体差异（拒绝敏感度）
+    - 当前关系状态基线
+    - 替代关系可得性
+    mediators:
+    - 归属感水平
+    - 关系威胁感知
+    outputs:
+    - 情绪状态
+    - 认知功能与自我调节
+    - 亲社会/联结寻求行为
+  evidence:
+    supporting:
+    - Baumeister & Leary 1995 对归属需要跨大量文献的系统论证（经典理论综述论文）
+    - 后续实验传统：社会排斥引发情绪痛苦、认知变化与归属修复行为（排斥研究文献，与 ostracism_effects 互证）
+    conflicting:
+    - 个体在归属需要强度上存在稳定差异，并非所有人同等强烈（人格研究讨论）
+    replication:
+    - 归属受威胁的负面后果方向被大量实验重复；「类本能」的强命题仍有哲学与实证争议
+    meta_analysis: []
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 需要的是「少量持久关怀关系」而非人群数量：大众关注无法替代深度联结
+  - 替代关系可得性调节后果：有其他支持网络时，单一关系破裂的冲击被缓冲
+  failure_conditions:
+  - 把归属需要直接外推为营销话术（「我们是一家人」式空洞宣称）：关系框架缺失时，宣称无法制造真实联结
+  - 忽视个体差异：对高独立倾向人群，密集归属设计引发压迫感
+  common_misinterpretations:
+  - 「归属感=受欢迎」——需要的核心是少数稳定关怀关系，粉丝量与点赞数不构成归属满足；这也是为什么高关注度创作者可能极端孤独
+  - 把 need_to_belong 与 self_determination_needs 中的 relatedness 混为一谈：SDT 的 relatedness 是三大基本心理需要之一（自我决定理论框架），Baumeister
+    & Leary 的归属假说是独立但高度兼容的论证传统
+  ethical_risks:
+  - 利用归属焦虑（「你不在就错过一切」）制造依赖与沉没成本
+  - 以归属为筹码实施群体控制（不服从即失去我们）
+  examples:
+    original_cases:
+    - Baumeister & Leary 对孤独、丧失、依恋与孤独感文献的综合论证（1995 综述）
+    research_cases:
+    - 社会排斥实验范式中被排斥者的情绪与行为反应（与 ostracism 研究共享证据）
+    modern_cases:
+    - 独自生活与远程工作人群对「轻归属」产品（线上自习室、陪伴直播）的消费
+    - 品牌会员社群以「归属」为价值主张的运营逻辑
+  communication_implications: 内容若要触及归属需要，必须提供真实的联结路径（可加入的群、可见的成员互动、回应机制），而非只调用归属语言；空话会迅速被识破。
+  community_implications: 社群的价值主张应直接回应归属需要：成员要的不是内容多好，而是「这里有人在乎我是否在场」——回应制度、成员纪念日、私聊问候比内容升级更有效。
+  content_applications:
+    body: 正文使用「写给孤独地面对 X 问题的你」的定位，并提供具体的联结出口（社群入口、互助通道）
+    narrative: 讲述「从一个人扛到一群人一起」的转变故事，把归属的获得过程叙事化
+    comments: 保证对每条真诚留言的可见回应，评论区是归属信号的最低成本发生地
+    sharing: 分享语设计为「拉上同路人」，把转发从流量行为变成联结行为
+  platform_implications: 平台的关注/粉丝机制提供了大规模弱联结但难以满足深度归属；私域与社群功能（小群、私聊、陪伴场景）是归属需要的真实出口（原则性判断）。
+  related_nodes:
+  - ostracism_effects
+  - belonging_uncertainty
+  - sense_of_community
+  - self_determination_needs
+  - fear_of_missing_out
+  source_ids:
+  - S21
+  - S14
+  - S133
+  provenance:
+    primary_sources:
+    - S21
+    - S14
+    - S133
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-002
+    - CASE-PLT-028
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: belonging_uncertainty
+  canonical_name_en: Belonging Uncertainty
+  canonical_name_zh: 归属不确定性
+  domain: belonging
+  definition: 归属不确定性（belonging uncertainty）指个体对自己「是否被这个群体接纳、是否真正属于这里」的怀疑与不安状态，常见于新环境进入期（入学、入职、入群）与身份少数情境。它与绩效焦虑、退出意向高度相关；针对它的「社会归属干预」（social-belonging
+    intervention）研究表明：向个体说明「归属感早期波动是普遍且暂时的」即可产生可观的行为改变。
+  core_claim: 对归属的怀疑本身（而非归属缺失）即足以造成投入下降与退出：把「我不属于这里」的解读重构为「这是新人的普遍阶段」，能显著降低退出行为（Walton 与 Cohen 2007 干预证据为方向性引用，尚未建证据包）。
+  mechanism: 在新环境中，正常的挫折（一次冷场、一个错误、一条无人回应的发言）容易被少数情境成员解读为「我不被接纳」的证据，形成恶性循环：越怀疑 → 越退缩 → 越少获得接纳信号 → 越确信不属于。归属不确定性在代表不足群体中被环境线索（刻板印象、微排斥）持续激活。干预的关键不是给予归属感，而是修正归因：说明不确定性是普遍、暂时且与个人价值无关的，从而切断恶性解释循环。
+  causal_chain: 新环境挫折事件 → 归因于「我不属于」 → 焦虑与退缩 → 接纳信号减少 → 不确定性自我确认 → 投入下降/退出
+  variables:
+    inputs:
+    - 新环境的早期挫折经历
+    - 身份代表性线索
+    moderators:
+    - 个体拒绝敏感度
+    - 环境的多元包容信号
+    - 同侪中相似他人的存在
+    mediators:
+    - 对挫折的归因方式
+    - 焦虑水平
+    outputs:
+    - 投入度
+    - 表现
+    - 留存与退出意向
+  evidence:
+    supporting:
+    - Walton 与 Cohen 等人的社会归属干预研究：说明「归属波动是普遍的」显著改善处境不利新生的学业表现与身心健康（实验研究传统，方向性引用）
+    - 少数情境中归属不确定性与退出意向相关的一致发现（教育心理学文献）
+    conflicting:
+    - 干预效果依赖情境：在真实存在排斥的环境中，仅靠归因重构无法解决结构性问题（研究讨论）
+    replication:
+    - 归属干预在多个教育情境复制成功；在职场与其他场景的推广效果证据尚在积累
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 干预适用于「归属威胁是情境性且可纠正」的环境；系统性排斥环境中单次归因干预不足
+  - 效果依赖干预时机：越早（新环境进入期）越好，定型后难以扭转
+  failure_conditions:
+  - 用「归属不确定性」话术掩盖真实的排斥文化：归因重构不能替代环境修复
+  - 把所有流失都归因于心理不确定性，忽视门槛、成本与服务等结构性原因
+  common_misinterpretations:
+  - 「新人焦虑是矫情」——归属不确定性有可测量的行为后果，是设计问题不是个人弱点问题
+  - 把 belonging_uncertainty 与 need_to_belong 混为一谈：need_to_belong 是基本动机（人人都需要联结），belonging_uncertainty
+    是对特定群体归属状态的怀疑（情境性认知状态）
+  ethical_risks:
+  - 利用归属不确定性做留存设计（「再坚持一下你就是自己人了」的情感挽留话术），掩盖真实的服务缺陷
+  examples:
+    original_cases:
+    - Walton & Cohen 的大一新生归属干预研究传统（教育心理学）
+    research_cases:
+    - 代表不足群体中环境线索激活归属不确定性的系列研究（方向一致）
+    modern_cases:
+    - 新员工 30 天「引导伙伴制」（buddy system）对早期归属焦虑的缓冲
+    - 线上课程社群的新人破冰设计（降低第一次发言的心理门槛）
+  communication_implications: 面向新用户/新成员的内容应包含「早期困难是正常的」的规范信息（「前两周觉得不适应是所有人都会经历的」），这一句归因重构的留存价值可能超过奖励。
+  community_implications: 把「降低首周不确定性」写进社群设计：入群第一周的分段指引、对新人前三次发言的保障式回应、以及「老成员当年也这样」的故事分享，直接切断恶性归因循环。
+  content_applications:
+    body: 新人向正文显式写明「你现在的困惑很正常，几乎每个人都经历过」，并提供下一步的具体动作
+    narrative: 讲述老成员的「最初很失败」故事（真实的挫折+如何被接住），为新成员提供替代叙事
+    comments: 对新人首帖使用「我也曾这样」式的老成员回应模板，制造普遍性证据
+  platform_implications: 平台的匿名提问与「新人专区」功能降低了归属不确定性的表达成本；无分区设计的社群中，不确定性只能以潜水形式隐性流失（原则性判断）。
+  related_nodes:
+  - need_to_belong
+  - newcomer_onboarding
+  - community_boundaries
+  - social_identity_theory
+  - self_efficacy
+  source_ids:
+  - S25
+  - S83
+  - S133
+  provenance:
+    primary_sources:
+    - S25
+    - S83
+    - S133
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-002
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+  culture_moderators:
+  - 用「归属不确定性」话术掩盖真实的排斥文化：归因重构不能替代环境修复
+- id: ostracism_effects
+  canonical_name_en: Ostracism Effects
+  canonical_name_zh: 排斥效应
+  aliases:
+  - 社会排斥
+  - 被忽视（being ignored）
+  - social exclusion
+  domain: belonging
+  definition: 排斥效应（ostracism effects）指被忽视或被排除于群体之外所引发的心理与行为后果。Kipling Williams 的研究传统（含 Cyberball 抛球实验范式）表明：即便排斥来自陌生群体、计算机甚至假想对象，被排斥者也会经历四种基本需要（归属、自尊、控制、有意义存在）的威胁与真实的痛苦反应。线上
+    ghosting（玩消失）、已读不回与 cancel（公开驱逐）是数字时代的典型排斥形态。
+  core_claim: 排斥是一种代价高昂的惩罚机制：它快速威胁多种基本需要并产生真实痛苦，即使来源是陌生人或象征性情境；群体依靠这一机制执行规范，个体则可能遭受远超其行为过错的伤害。
+  mechanism: Williams 的时序模型（temporal need-threat model）：排斥先引发反射性的痛苦（几乎无认知加工参与，故虚拟排斥也有效），继而进入反思阶段——个体努力解释「为什么被排斥」并尝试恢复（顺从、攻击或退出）；长期或慢性排斥则导向疏离、无助与异化（时序模型与四需要细分未建证据包，方向性转述）。痛苦之所以如此强烈，源于归属基本需要的进化优先性：被群体抛弃曾是生存威胁。线上环境放大了排斥的可观测性（已读不回、在线却不回应）与持久性（记录可见的移除）。
+  causal_chain: 被忽视/驱逐信号 → 反射性痛苦与四需要威胁 → 反思与恢复尝试（顺从/攻击/退缩） → 恢复或慢性疏离
+  variables:
+    inputs:
+    - 排斥的形式（忽视/驱逐/公开羞辱）
+    - 排斥来源的重要性
+    - 排斥的可见性
+    moderators:
+    - 替代关系可得性
+    - 个体拒绝敏感度
+    - 归因（可解释 vs 无缘无故）
+    mediators:
+    - 四种基本需要威胁（归属、自尊、控制、意义）
+    - 痛苦感
+    outputs:
+    - 顺从与规范遵从提升
+    - 攻击性
+    - 退缩与退出
+    - 自我调节资源损耗
+  evidence:
+    supporting:
+    - S31《Oxford Handbook of Social Influence》目录级收录排斥作为影响工具（Williams 方向）；S133 归属受威胁产生系统性心理与行为后果（摘要级）
+    - Williams 的 Cyberball 实验传统：虚拟抛球中被忽视即引发需要威胁（一手实验证据未建证据包，方向性转述）
+    - 排斥研究的神经与生理证据显示排斥涉及痛苦相关脑区的激活方向（研究讨论，机制解释存在争议但效应稳定；未建证据包）
+    conflicting:
+    - 「排斥即疼痛」的脑机制解释（与社会疼痛共享说）存在后续方法学争议（效应存在，机制解释被讨论）
+    replication:
+    - 排斥引发需要威胁与行为反应的效应被高度稳定地复制，是使用虚拟范式的少数稳健领域之一
+    meta_analysis: []
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 效应在排斥来源为「可能的归属来源」时最强；完全无关者的忽视影响较弱
+  - 替代归属可得性是关键缓冲：有其他支持网络的个体恢复更快
+  failure_conditions:
+  - 把所有线上沉默都解读为排斥（已读不回可能是忙而非惩罚）：排斥效应依赖「被有意排除」的感知
+  - 以为轻度排斥总是有效管理工具：反复或无解释的排斥制造的是慢性敌意与疏离，而非顺从
+  common_misinterpretations:
+  - 「网络上的排斥不算真的」——虚拟排斥实验的核心发现恰恰相反：场景再假，被排斥的感受是真的
+  - 把 ghosting 视为无害的省事退出：对被 ghost 者而言，无解释的消失造成的需要威胁常比明确拒绝更重（因为无法归因与了结）
+  ethical_risks:
+  - 社群运营用「冷处理/踢出示范」公开排斥个体，造成不成比例的心理伤害并威慑其他成员
+  - 网络暴力式集体驱逐（cancel）缺乏程序，惩罚与过错严重失配
+  examples:
+    original_cases:
+    - Williams 的 Cyberball 虚拟抛球实验系列
+    - Williams《Ostracism: The Power of Silence》对日常与长期排斥的分析
+    research_cases:
+    - 排斥后攻击性与顺从行为增加的实验证据（多项研究，方向一致）
+    modern_cases:
+    - 群聊中被踢出的「公开行刑」效应与退出者社群反感
+    - 已读不回与 ghosting 在亲密与职场关系中的心理伤害
+    - 被 cancel 个体的「驱逐后」身份重构困境
+  communication_implications: 内容的排除性语言（「不懂的人别看」「不是 XX 就别来」）快速筛选但也快速伤害；品牌与创作者应避免把「身份净化」作为互动策略，需要退出时给明确解释（体面的告别替代
+    ghosting）。
+  community_implications: 社群纪律应遵循排斥伦理：警告 → 解释 → 私下处置，避免公开示众；对退出成员保留尊严通道（「退群不失联」）；监测被处置成员与旁观者的情绪涟漪。
+  content_applications:
+    body: 正文避免以「多数派羞辱少数派」的结构制造笑点（受害者是真实的读者）
+    narrative: 讲述被排斥后重新联结的故事（先共情痛苦再给出路径），而非美化排斥的后果
+    comments: 对边缘化发言者主动回应（哪怕不同意观点），评论区管理将「无人回应的边缘者」纳入关照
+    sharing: 邀请式分享语（「希望这里也有你的位置」）替代门槛羞辱式话术
+  platform_implications: 平台的拉黑、禁言、移除功能让排斥一键化且可见化（成员名单公开变化），其心理权重远超线下；平台与社群需为「程序化的体面退出」设计工具（原则性判断）。
+  related_nodes:
+  - need_to_belong
+  - belonging_uncertainty
+  - normative_influence
+  - in_group_favoritism
+  - community_governance
+  source_ids:
+  - S31
+  - S21
+  - S133
+  provenance:
+    primary_sources:
+    - S31
+    - S21
+    - S133
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-013
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: collective_effervescence
+  canonical_name_en: Collective Effervescence
+  canonical_name_zh: 集体欢腾
+  aliases:
+  - 集体沸腾
+  - 集体兴奋
+  domain: belonging
+  definition: 集体欢腾（collective effervescence）由 Émile Durkheim 在《宗教生活的基本形式》（1912）中提出：当人群聚集、共同专注并同步行动时，会涌起一种超越个体的集体情绪能量，它反过来强化群体纽带、把共享符号神圣化。Durkheim
+    认为这是宗教与社会团结的核心发生机制；当代研究将其延伸至演唱会、体育赛事、集体哀悼与线上同步体验。
+  core_claim: 同步的集体参与产生高强度的共享情绪与联结感，其强度远超个体情绪的简单相加；这种「情感能量」会沉淀为对群体与符号的忠诚，是社群高光时刻的心理本质。
+  mechanism: Durkheim 的原初逻辑：身体共在 + 共同专注 → 情绪相互点燃并螺旋放大 → 个体体验到「比自我更大的东西」 → 群体符号被该情绪标记而神圣化 → 团结感在仪式后延续。当代研究补充了同步性的作用：动作、节奏、声音的同步（齐唱、齐呼、齐跳）额外提升融合感与亲社会性；对集体仪式中心理与生理同步（如心率同步）的田野测量提供了生理层面的方向性证据（同步动作/心率同步研究未建证据包，方向性转述）。集体欢腾是有限资源：需要真实的共在与同步，异步点赞无法复制。
+  causal_chain: 身体/虚拟共在 + 共同专注 + 行为同步 → 情绪相互放大 → 超个体情感能量 → 符号神圣化 + 群体忠诚沉淀
+  variables:
+    inputs:
+    - 共在密度
+    - 注意力共同指向
+    - 行为同步程度
+    - 仪式的情感剧本
+    moderators:
+    - 群体规模与 Venue 设计
+    - 个体先前对符号的认同
+    - 稀缺性（年度性/一次性）
+    mediators:
+    - 共享情绪强度
+    - 自我边界消融感（identity fusion 方向）
+    outputs:
+    - 情感能量峰值
+    - 符号忠诚
+    - 后续参与意愿与自我牺牲倾向
+  evidence:
+    supporting:
+    - Durkheim 对部落仪式的民族志综合与理论建构（经典著作《宗教生活的基本形式》）
+    - 当代研究：同步动作提升群体凝聚与合作的实验证据（合唱、行进、共同节奏的研究传统，方向一致）
+    - 集体仪式中心理与生理同步的田野测量（心率同步等研究，方向性证据）
+    conflicting:
+    - 「欢腾能否脱离面对面共在发生」存在争议：线上同步（连麦、弹幕齐飞）产生的效应强度弱于身体共在（媒介研究讨论）
+    replication:
+    - 「同步集体行为提升联结感」的效应方向被多项研究重复；「神圣化」链条更多停留在理论阐释层面
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 需要最低限度的共同专注与同步；人群物理聚集但注意力分散（各自看手机）不产生欢腾
+  - 个体必须对群体符号有最低认同：被裹挟的旁观者体验到的是压迫而非欢腾
+  failure_conditions:
+  - 用「全员@+刷屏指令」硬造线上同步：指令性同步产生的是表演不是情绪共振
+  - 过度频繁的「高光仪式」使欢腾贬值（常态化的高潮等于没有高潮）
+  common_misinterpretations:
+  - 「气氛好=集体欢腾」——欢腾特指同步共在中涌起的超个体情绪，比「氛围好」强一个量级，且伴随符号忠诚的沉淀
+  - 把 collective_effervescence 与 emotional_contagion 混淆：emotional_contagion 是情绪在人际间的逐个传递机制，collective_effervescence
+    是集体仪式层面的涌现现象；后者是前者在高度同步结构下的峰值形态
+  ethical_risks:
+  - 集体欢腾是煽动的原材料：高同步场景（集会、直播晚会、饭圈应援）中的情绪峰值可用于操纵决策（限时逼单、群体施压）
+  - 极端组织利用仪式性欢腾制造 identity fusion 与自我牺牲意愿
+  examples:
+    original_cases:
+    - Durkheim 对澳洲部落图腾仪式中集体欢腾与符号神圣化的民族志分析（《宗教生活的基本形式》）
+    research_cases:
+    - 合唱与行军等同步活动提升合作与凝聚的实验与田野研究（方向一致）
+    - 集体哀悼仪式后群体认同提升的调查研究（方向一致）
+    modern_cases:
+    - 演唱会万人大合唱与「明年还来」的忠诚沉淀
+    - 世界杯观赛广场的同步呐喊
+    - 线上跨年直播的弹幕齐刷时刻（弱化版）
+  communication_implications: 为「共同时刻」而设计传播：把分散受众聚到同一时间（直播、同步活动、倒计时），提供可齐声参与的形式（同一口号、同一动作），并让该时刻标记在品牌符号上（欢腾沉淀为品牌资产）。
+  community_implications: 把稀缺的集体欢腾留给年度级仪式（周年庆、线下聚会、共同战绩夜），并做足「共在+同步」设计：同步开始的仪式、集体口号、共同完成的挑战；避免把日常打卡误当欢腾。
+  content_applications:
+    body: 活动预告正文渲染「同一时刻我们在不同城市做同一件事」的共同图景
+    narrative: 活动后内容记录共同时刻的细节（谁喊了什么、全场如何反应），把欢腾转写为集体记忆
+    sharing: 同步时刻设计可拍可晒的视觉符号（手势、灯光、口号），让欢腾可被携带传播
+    comments: 活动夜开启「齐刷」主题评论（统一格式接龙），制造线上弱同步峰值
+  platform_implications: 直播与连麦是平台侧最接近欢腾的形态（时间共在+内容同步）；点播与信息流是欢腾的解药——运营者需在「流量逻辑（异步）」与「团结逻辑（同步）」间做结构性选择（原则性判断）。
+  related_nodes:
+  - community_rituals
+  - emotional_contagion
+  - sense_of_community
+  - collective_identity_narrative
+  - third_place
+  source_ids:
+  - S87
+  - S82
+  - S221
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Parker 2018《The Art of Gathering》（S87，聚会设计制造集体时刻）+ Bacon 2012（S82，社群仪式与欢腾）+ Durkheim
+      集体欢腾传统（原著未建证据包，方向性转述）
+    effect_size: 同步集体体验增强联结与归属（定性/实践证据为主）
+    replication_status: 集体欢腾概念源于 Durkheim；现代线上研究部分支持（同步形态）
+    context_dependency: 需时间共在+内容同步；异步信息流形态弱化欢腾
+    downgrade_upgrade_reason: 2026-09 实取 S87/S82 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S87
+    - S221
+    supporting_evidence:
+    - S82
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-020
+    - CASE-BRD-026
+    platform_sources:
+    - bilibili:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long

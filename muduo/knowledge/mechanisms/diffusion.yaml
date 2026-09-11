@@ -1,616 +1,999 @@
 # diffusion — 扩散（Diffusion）：创新、信息与行为如何在人群中蔓延
 domain: diffusion
 nodes:
-  - id: diffusion_of_innovations
-    canonical_name_en: Diffusion of Innovations
-    canonical_name_zh: 创新扩散理论
-    aliases: [创新传播, DOI 理论]
-    domain: diffusion
-    definition: "创新扩散理论（Diffusion of Innovations）由 Everett Rogers 在 1962 年首版并提出至第五版，描述一个创新（观念、产品、实践）如何在社会系统中经由沟通渠道、随时间在成员间传播。理论由四要素构成：创新本身、沟通渠道、时间、社会系统；其典型产出形态是采用者累积分布的 S 形曲线。"
-    core_claim: "创新的采用速率主要由潜在采用者对创新属性的感知（relative advantage、compatibility、complexity、trialability、observability）与人际沟通网络共同决定，而非创新的客观质量单独决定。"
-    mechanism: "潜在采用者先通过大众媒介与人际渠道形成对创新的主观认知；多数人不会在第一时间采用，而是观察身边已采用者的可见结果来降低不确定性；早期采用在局部网络中产生示范效应，后续采用随之加速，待潜在池接近饱和后增速回落，形成 S 曲线。S 曲线的定量对应为 Bass 模型：p（外部媒介影响）＋q（内部口碑影响）双力驱动（S51 core_claims、S170）。因此扩散本质是「信息 → 社会验证 → 采用 → 再传播」的社会过程，不是单纯的信息曝光过程。"
-    causal_chain: "创新属性感知 + 人际影响 → 不确定性降低 → 采用决策 → 可见的采用结果 → 更多采用 → S 形扩散曲线"
-    variables:
-      inputs: [创新五属性感知, 沟通渠道结构（大众媒介 vs 人际）, 社会系统规范, 变革代理（change agent）投入]
-      moderators: [采用决策类型（可选择性/集体性/权威性）, 创新可试性与可观察性, 社会系统开放度]
-      mediators: [不确定性降低, 人际口碑, 意见领袖背书]
-      outputs: [采用率 S 曲线, 扩散速度与最终渗透率]
-    evidence:
-      supporting:
-        - "Rogers《Diffusion of Innovations》五版综合了数千项跨领域扩散研究，框架高度稳定（书籍综述）"
-        - "创新五属性与采用意向的正负关系在农业、医疗、教育技术等领域被反复观察到（综述转述）"
-        - "扩散研究经典的起点是 1940 年代的杂交玉米种子研究：采用者显著依赖邻里可见结果（Rogers 书中转述）"
-      conflicting:
-        - "部分研究发现，在平台型产品与政策扩散中，网络结构与时机对采用率的预测力强于属性感知（研究讨论）"
-      replication:
-        - "五属性框架被大量复制；但各属性的效应幅度因品类与研究设计差异波动明显（综述）"
-      meta_analysis:
-        - "存在针对创新属性—采用关系的定量综合，总体方向一致、幅度中等（综述转述）"
-    evidence_grade: A-
-    boundary_conditions:
-      - "采用行为需可观察、可谈论；若创新不可见或难以试用，S 曲线形态会显著变形"
-      - "社会系统中存在采用自由度；完全同质的强制采用（如合规要求）不遵循口碑扩散逻辑"
-    failure_conditions:
-      - "创新相对优势为负或引发反感和抵制时，人际渠道会加速负面口碑而非正面扩散"
-      - "社会信任崩塌或信息被系统性垄断时，人际验证链条失效，扩散停滞"
-    common_misinterpretations:
-      - "把 S 曲线当作产品生命周期的自然法则——它是对采用者累积分布的描述，不能替代营销投入与产品改进的因果作用"
-      - "把「创新」理解为技术新颖性——Rogers 所说的创新是「对采用者而言的任何新感知」，旧事物进入新群体也是扩散"
-    ethical_risks:
-      - "pro-innovation bias（亲创新偏差）：扩散视角默认「扩散越多越好」，可能系统性忽视创新对弱势群体的伤害以及拒绝采用的权利"
-    examples:
-      original_cases: [杂交玉米种子在艾奥瓦农户间的采用（Rogers 综合的经典案例）, 农业新耕作技术经由变革代理与邻里示范传播]
-      research_cases: [医疗社群中新药处方行为的扩散研究（Rogers 书中综述）, 对教育技术在学区中采用过程的多案例追踪]
-      modern_cases: [短视频平台新功能（如某特效模板）经创作者示范逐层渗透, 智能穿戴设备从极客圈层向大众市场的渗透曲线]
-    communication_implications: "传播设计应优先提升可观察性与可试性：让早期采用者「被看见」，让观望者「低成本试一试」。内容上把他人可见的使用结果（而非参数）作为核心信息，因为多数人是看着别人用才决定用的。"
-    community_implications: "社群是扩散的载体而非管道：先在小型高信任子群内做示范，再利用社群内的可见性（晒单、案例、里程碑）驱动观望者跟进；社群规范决定创新被接纳还是被嘲讽。"
-    content_applications:
-      body: "用「已使用者可见结果 + 低门槛试用步骤」的结构写产品/观念介绍，弱化参数罗列"
-      narrative: "以一位典型早期采用者的转变故事开头，把创新属性藏进情节而非说教"
-      sharing: "设计「晒出结果」的可见性钩子（成果截图、前后对比），让采用本身成为可传播内容"
-      comments: "置顶早期采用者的真实反馈，用评论区完成社会验证环节"
-    platform_implications: "平台的算法分发让「可见的采用结果」比传统时代更易规模化展示，但也使扩散速率更受排序信号而非真实渗透率影响；S 曲线可能被推荐机制压缩或拉平（原则性判断）。"
-    related_nodes: [adopter_categories, opinion_leadership, two_step_flow, critical_mass_threshold, network_threshold_models, word_of_mouth_drivers]
-    source_ids: [S51, S52, S170]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Rogers 2003《Diffusion of Innovations》第 5 版（S51，book 级，substantial_excerpt，跨 500+ 研究综合）"
-      effect_size: "五属性解释采用率方差 49-87%；五类别占比约定 2.5/13.5/34/34/16%"
-      replication_status: "五属性框架大量复制；各属性效应幅度因品类与研究设计波动"
-      context_dependency: "大众传播作用于知晓阶段、人际传播作用于说服/决策阶段；品类与制度条件调节"
-      downgrade_upgrade_reason: "2026-09 实取 S51 核心内容（五阶段/五属性/五类别/S 曲线/Bass），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S51]
-      supporting_evidence: [S52, S170]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: adopter_categories
-    canonical_name_en: Adopter Categories
-    canonical_name_zh: 采用者类别
-    aliases: [创新者/早期采用者/早期大众/晚期大众/落后者, 采用人群分层]
-    domain: diffusion
-    definition: "Rogers 按采用时间早晚将人群划分为 innovators（创新者）、early adopters（早期采用者）、early majority（早期大众）、late majority（晚期大众）与 laggards（落后者）五类，划分依据是个体「创新性」（相对早采用的比例）在人群中的统计分布。它是理想的类型学，不是严格的人格分类。"
-    core_claim: "不同采用时间的人群在观念领导力、风险容忍与信息渠道上存在系统性差异，因此扩散各阶段需要不同的沟通策略。"
-    mechanism: "个体创新性大致呈正态分布，Rogers 依据偏离均值的标准差划定类别边界（如创新者约早于均值两个标准差采用）。早期类别通过试验与筛选提供信息，早期大众需要同侪可见证据，晚期大众与落后者则依赖社会压力与必要性。类别差异主要由动机、资源与风险态度驱动，而非先天人格。Bass 模型将后四类别聚合为模仿者，类别划分由此可量化（S170）。"
-    causal_chain: "个体创新性分布 → 类别划分 → 各类别信息依赖与风险容忍差异 → 阶段化的扩散动力学"
-    variables:
-      inputs: [个体创新性（相对采用时间）, 类别占比惯例（基于分布的边界设定）]
-      moderators: [品类风险程度, 社会经济资源, 品类知识水平]
-      mediators: [风险感知, 同侪示范可得性]
-      outputs: [各类别的采用时机与沟通需求差异]
-    evidence:
-      supporting:
-        - "早采用者平均受教育程度、社会地位与渠道接触高于晚采用者（原书综述内容，S51 EP 未实取）"
-        - "杂交玉米等经典研究支持早/晚采用者在信息来源结构上的差异（书籍转述）"
-      conflicting:
-        - "类别边界是对连续分布的人为切割：同一个人在不同品类中可能分属不同类别，「创新者人格」缺乏稳定证据（方法学批评）"
-      replication:
-        - "早/晚采用者的资源与地位差异方向在多领域复制；但五类边界的具体切点高度依赖研究设定（综述）"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "类别是相对于特定品类与人群的相对位置，不是跨品类稳定的个体标签"
-      - "划分基于连续分布的统计惯例（如均值±标准差），边界并非自然断点"
-    failure_conditions:
-      - "把类别当作营销目标人群的固定画像，忽视同一个人的品类间差异"
-      - "在低风险、高频低价品类中，五阶段策略的区分价值明显缩小"
-    common_misinterpretations:
-      - "把 2.5%/13.5%/34%/34%/16% 的比例当成普适常数——它们是 Rogers 对分布的约定式划分，不是任何市场的实测规律"
-      - "把「早期采用者」浪漫化为潮流领袖——早期采用者不等于 opinion leader，两者条件不同"
-    ethical_risks:
-      - "用类别标签对人群做固定化分层，可能导致对「落后者」的污名化与排除性设计"
-    examples:
-      original_cases: [杂交玉米研究中早/晚采用农户的对比, Rogers 书中对各类别典型社会特征的画像]
-      research_cases: [跨品类重复测量发现个体创新性排名不稳定的研究讨论（综述）]
-      modern_cases: [新品发布时「内测—尝鲜—大众—长尾」的人群运营分层, 科技媒体与 KOL 圈层被当作早期采用者渠道投放]
-    communication_implications: "对早期类别强调新颖与身份表达，对早期大众强调同侪证据与可靠性，对晚期大众强调必要性与简便；不要用一套信息打全人群。"
-    community_implications: "社群运营应识别社群内的天然创新者与观望者，让前者的可见实验为后者降低不确定性，而不是直接向观望者推销。"
-    content_applications:
-      body: "针对早期大众的正文里放同侪案例与「他们已经用起来了」的证据，而非参数"
-      narrative: "故事主角设置为本社区的「第一个吃螃蟹者」，让观望者代入跟随者视角"
-      sharing: "给早期类别提供可炫耀的社交货币，给晚期类别提供可转发的实用清单"
-      comments: "在评论区回答「这东西靠谱吗」式的观望疑问，承接晚期大众的安全感需求"
-    platform_implications: "平台兴趣图谱让「品类内创新性」比泛人群创新性更可识别；投放在品类活跃人群中比按泛人口标签更符合类别逻辑（原则性判断）。"
-    related_nodes: [diffusion_of_innovations, chasm_crossing, opinion_leadership, network_threshold_models]
-    conflicting_nodes: []
-    source_ids: [S51, S170]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Rogers 2003《Diffusion of Innovations》第 5 版（S51，book 级，substantial_excerpt）"
-      effect_size: "五类别占比约定：2.5/13.5/34/34/16%；早采用者平均资源与渠道接触高于晚采用者（原书综述内容，S51 EP 未实取）"
-      replication_status: "早/晚采用者差异方向多领域复制；五类边界切点高度依赖研究设定"
-      context_dependency: "类别是相对特定品类与人群的相对位置，非跨品类稳定标签"
-      downgrade_upgrade_reason: "2026-09 实取 S51 五类别内容 + S170 Bass 聚合（2026-09-09 审计补录），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S51]
-      supporting_evidence: [S170]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: chasm_crossing
-    canonical_name_en: Crossing the Chasm
-    canonical_name_zh: 鸿沟跨越
-    domain: diffusion
-    definition: "Geoffrey Moore 在《Crossing the Chasm》（1991 首版）中提出的实践框架：在早期采用者（愿景者）与早期大众（实用主义者）之间存在一道「鸿沟」，前者的购买逻辑与后者根本不同，多数科技产品死在跨越这道缝隙的路上。这是从业者的市场分段模型，不是经过实证检验的科学规律。"
-    core_claim: "面向愿景者的营销方式（强调颠覆、未来收益）对实用主义主流客户基本无效，跨越鸿沟需要更换叙事、渠道与产品完整度。"
-    mechanism: "早期采用者自我参照、愿为突破付溢价、能容忍不完整；早期主流客户以同侪参照、要求完整解决方案（whole product）、要求业界参考案例。两套决策逻辑之间缺少自然的口碑接力——愿景者的推荐在实用主义者眼中不是有效证据。Moore 的处方是：选择单一滩头细分（beachhead），做到完整产品，用该细分内的同类客户证据建立主导地位，再逐段扩张。"
-    causal_chain: "愿景者市场饱和 → 口碑接力中断 → 增长停滞 → 滩头细分 + 完整产品 + 同类客户证据 → 主流市场采用"
-    variables:
-      inputs: [产品类别成熟度, 现有客户构成, 竞争格局]
-      moderators: [细分的痛点强度, 参考客户的可识别性, 渠道伙伴激励]
-      mediators: [完整产品度, 同侪参考案例]
-      outputs: [主流市场渗透率, 增长可持续性]
-    evidence:
-      supporting:
-        - "Moore 基于大量科技营销咨询经验归纳的案例模式（从业者经验）"
-        - "与 Rogers 书中「早期大众依赖同侪证据」的观察方向一致（理论呼应）"
-      conflicting: []
-      replication:
-        - "作为启发式框架在行业内被广泛使用与改写，但缺乏系统的对照检验；幸存者偏差未排除"
-      meta_analysis: []
-    evidence_grade: D
-    boundary_conditions:
-      - "主要适用于高不确定性、高单价、需要改变工作方式的科技品类；日用品与娱乐内容不适用"
-      - "成立前提是早期与主流客户决策逻辑确实断裂；平滑连续的市场中「鸿沟」只是普通的节奏问题"
-    failure_conditions:
-      - "滩头细分选错或太窄，导致完整产品投入无法回收"
-      - "把框架当宿命论：为故事需要硬找「鸿沟」，忽视产品自身的失败原因"
-    common_misinterpretations:
-      - "把「鸿沟」当作所有增长放缓的万能解释，回避渠道、定价与产品问题"
-      - "把 whole product 理解为功能堆叠——它指的是能完成客户目标的最小完整方案"
-    ethical_risks:
-      - "滩头策略可能引导资源集中于易攻但低价值的人群，造成服务不均与歧视性投放"
-    examples:
-      original_cases: [Moore 书中硅谷科技产品从极客市场进入企业主流市场的案例复盘]
-      research_cases: []
-      modern_cases: [开发者工具产品先攻单一语言社区再做企业化, 硬件新品先服务发烧友社区再进零售渠道的节奏设计]
-    communication_implications: "跨越阶段要换掉叙事：从「颠覆未来」换成「和您同行的人都在用、风险已解决」；传播证据从愿景背书切换为同类客户案例。"
-    community_implications: "把滩头社群当成完整产品的共创现场：其反馈与案例就是进入主流市场的证据库；不要在鸿沟期同时开太多社群战线。"
-    content_applications:
-      body: "主流市场向内容以「同侪场景 + 完整方案 + 风险消解」三段式展开"
-      narrative: "讲一个与目标主流客户同一处境的角色如何平稳落地，而非创始人愿景故事"
-      sharing: "制作可被同类客户转发的落地清单与检查表，承担参考案例功能"
-      comments: "预设实用主义者的风险提问（迁移成本、兼容性），在评论区给出标准化答案"
-    platform_implications: "平台评价体系（评分、案例库、认证）成为现代鸿沟的「参考证据」基础设施；缺乏可验证同侪证据的品类鸿沟更深（原则性判断）。"
-    related_nodes: [adopter_categories, diffusion_of_innovations, positioning_mechanism, category_entry_points]
-    source_ids: [S78]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Moore 2014《Crossing the Chasm》（S78，早期市场与主流市场鸿沟/D-Day/whole product）"
-      effect_size: "愿景者与实用主义者采购标准不同导致市场断裂（从业者案例框架）"
-      replication_status: "鸿沟现象为高科技营销共识（D 级实践框架，与 Rogers 扩散理论对接）"
-      context_dependency: "技术品类/评估标准/同侪证据基础设施调制"
-      downgrade_upgrade_reason: "2026-09 实取 S78 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S78]
-      supporting_evidence: []
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: critical_mass_threshold
-    canonical_name_en: Critical Mass Threshold
-    canonical_name_zh: 临界规模
-    aliases: [tipping point（临界点）, 临界质量]
-    domain: diffusion
-    definition: "临界规模（critical mass）指扩散或网络产品达到「自我维持增长」所需的最低规模：超过该点后，每个新加入者为既有用户带来的价值（或社会压力）足以持续拉动后续加入，无需等量外部投入。该概念由网络经济学与扩散理论共同发展。"
-    core_claim: "当加入的收益（网络价值、社会认同）随已采用规模上升而超过参与成本时，采用过程从「外部推动」转为「自我维持」，增长曲线出现拐点。"
-    mechanism: "网络产品的核心是正反馈：用户越多 → 网络价值越高 → 新用户加入越容易 → 用户更多。在规模低于阈值时，早期用户承担高成本低收益，扩散依赖补贴、KOL 与人为点火；越过阈值后，社会证明与网络价值接管增长动力。阈值高度取决于替代品、单边价值与用户间的连接需求强度。"
-    causal_chain: "已采用规模 ↑ → 感知网络价值/社会证明 ↑ → 加入收益超过成本 → 更多采用 → 自我维持增长"
-    variables:
-      inputs: [已采用规模, 单用户贡献价值, 加入成本]
-      moderators: [替代品吸引力, 网络连接需求的必要性, 价值是否跨群共享]
-      mediators: [社会证明, 互补品供给（内容/服务）]
-      outputs: [增长是否自持, 拐点出现时间]
-    evidence:
-      supporting:
-        - "网络经济学教材对正反馈与临界规模的 formal 分析（教材论述）"
-        - "Rogers 书中将 critical mass 作为扩散的关键概念讨论，多案例方向一致（原书内容，S51 EP 未实取）"
-      conflicting:
-        - "「临界点」事后归因风险大：拐点常被反过来套在成功产品上，预测力未获系统检验（方法学讨论）"
-      replication:
-        - "正反馈机制在模拟与平台数据中被广泛重现；具体阈值高度情境化，无可复制常数"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "价值随规模递增（正网络效应）才存在临界规模；单边价值产品无此逻辑"
-      - "阈值是流动的：竞品进入、政策与渠道变化都会移动拐点"
-      - "S124 实验的翻转条件是少数派坚定一致＋社会系统存在协调均衡；其机制是少数派靠坚持（commitment）而非资源/权威翻转惯例，与本节点的网络价值自持机制不同源，引用时不应混用"
-    failure_conditions:
-      - "早期用户留不住（留存差），规模只是漏斗泄漏，「越滚越大」不会发生"
-      - "网络效应被拆散（多宿主 multi-homing、群组割裂）时，全局临界规模被碎片化阈值替代"
-    common_misinterpretations:
-      - "把「到达临界规模」当成营销 KPI——它是结果性状态，不是可直接投入的杠杆；能管理的是留存与单用户价值"
-      - "把不同平台的成功案例阈值外推为通用数字，任何「XX% 就会引爆」的说法都无普适证据"
-    ethical_risks:
-      - "为冲临界规模进行补贴与增长黑客操作，可能诱发虚假繁荣与用户数据滥用"
-    examples:
-      original_cases: [教科书中的传真机与电话网络临界规模讨论（Easley & Kleinberg 教材）, Rogers 书中对 critical mass 概念的扩散学定位]
-      research_cases: [模拟研究显示阈值附近微小参数差异导致爆发或消亡两种结局（教材转述）, Centola et al. 2018 命名博弈实验：坚定少数派达约 25% 阈值后翻转既有命名惯例（S124）]
-      modern_cases: [同城即时社群拼团先在一个小区做密再复制, 新内容平台冷启动期的补贴与独家创作者签约]
-    communication_implications: "低于临界点时，传播任务是把「加入的价值」讲清楚并降低尝试成本；越过临界点后，传播重点转为放大社会证明（多少人在用、谁在用）。"
-    community_implications: "社群运营要用「密度」而非「总量」思考：先在单一兴趣/地域子群内达到活跃临界（陌生人少、话题密），再横向复制，而不是全网撒人。"
-    content_applications:
-      body: "正文向早期用户透明展示「加入后你能立刻获得的单边价值」，不空谈未来网络价值"
-      narrative: "用「第一批用户如何让这里变得不一样」的故事制造加入的正当性"
-      sharing: "邀请机制设计为「带朋友来对你我都有好处」，把网络价值写入分享话术"
-      comments: "运营者以高频回复拉高早期氛围密度，制造活跃临界的小环境"
-    platform_implications: "推荐算法在冷启动期实质上决定了临界规模能否达成：新内容/新社群的初始曝光分配是最关键的门槛变量（原则性判断）。"
-    related_nodes: [diffusion_of_innovations, network_threshold_models, preferential_attachment, viral_coefficient, cold_start_dynamics]
-    source_ids: [S51, S52, S53, S124]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Centola et al. 2018 Science 临界质量实验（S124，paper 级，substantial_excerpt）+ 演化博弈论临界质量理论"
-      effect_size: "中位阈值 25%（15-35%）：低于 25% 仅影响 6%，超过 25% 转化 72-100%"
-      replication_status: "临界质量动力学首次在人工协调系统中被直接实证；情境特征调节阈值"
-      context_dependency: "阈值随替代方案与价值结构等理论可辨识特征变化；非普适常数"
-      downgrade_upgrade_reason: "2026-09 补充一手实验论文（S124），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S124]
-      supporting_evidence: [S51, S52]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: two_step_flow
-    canonical_name_en: Two-Step Flow
-    canonical_name_zh: 两级传播
-    aliases: [两级流动, multistep flow（多级流动，修正版）]
-    domain: diffusion
-    definition: "两级传播（two-step flow）假设：大众媒介的信息并非直接均匀击中受众，而是先流向接触媒介较多、社交活跃的意见领袖，再经由人际渠道流向更广泛的人群。该假说源于 1940 年代选举研究（Lazarsfeld 等《The People's Choice》），由 Katz 与 Lazarsfeld 在《Personal Influence》中系统化。"
-    core_claim: "人际网络对媒介效果的调节强于媒介本身的直接命中：信息通常经过社交中介（转述、解释、背书）才转化为态度与行为。"
-    mechanism: "媒介信息接触到不同人的概率与处理深度不同；社交中心人物更早接触、更愿意转述并为他人的不确定性提供解释；周围人因信任关系接受其「翻译」，从而媒介影响经由人际网络被放大、扭曲或衰减。后来研究修正为多级流动：影响在网络中多跳流动，意见领袖自身也受媒介与他人影响。"
-    causal_chain: "媒介信息 → 意见领袖接触与解释 → 人际转述与背书 → 大众态度/行为改变"
-    variables:
-      inputs: [媒介信息暴露分布, 人际网络结构, 个体社交活跃度]
-      moderators: [议题的日常显著性, 社群凝聚力, 媒介环境的即时可达性]
-      mediators: [意见领袖的解释与背书, 信任关系]
-      outputs: [态度与投票/购买等行为改变的分布不均]
-    evidence:
-      supporting:
-        - "伊利县选举研究发现人际接触对投票意向改变的作用超过媒介直接说服（经典研究书籍）"
-        - "Katz & Lazarsfeld 在多项议题（时尚、营销、公共事务）上整理了两级流动的证据（书籍综述）"
-      conflicting:
-        - "后续研究发现「影响流」比两级更复杂：意见领袖并非稳定层级，网络化多级流动与直接命中并存（研究讨论）"
-      replication:
-        - "「人际中介降低不确定性」的机制在数字环境中被反复观察到（转发、评论、群聊转述）；但严格的两级结构在新媒体环境中不再普遍成立"
-      meta_analysis: []
-    evidence_grade: A-
-    boundary_conditions:
-      - "议题需要一定的解释成本或风险（投票、健康、高价购买）；对低风险即时决策，直接媒介命中更常见"
-      - "社会网络中存在活跃的转述者；完全原子化的受众不产生两级结构"
-    failure_conditions:
-      - "算法直推时代人人可被独立命中，两级流动只是多种影响路径之一，不能当作唯一模型"
-      - "把意见领袖当作稳定的守门层级——他们自身也随议题与时间变化"
-    common_misinterpretations:
-      - "把两级传播读成「大众媒介不重要」——原假说的重点是媒介效果被人际网络过滤与放大，而非媒介无效"
-      - "把两级传播与 opinion leadership 混为一谈：前者是信息流动路径假设，后者是个体发挥影响力的现象与条件"
-    ethical_risks:
-      - "利用人际信任链进行隐蔽渗透式营销（伪装素人种草），把信任变成操纵资源"
-    examples:
-      original_cases: [1940 年代伊利县选举研究：亲友讨论对投票改变的作用, 《Personal Influence》中时尚与公共事务议题的影响流分析]
-      research_cases: [后续重复式面板研究对「影响流多级化」的修正讨论（媒介效果文献）]
-      modern_cases: [微信群里的「转发+点评」式新闻消化, 直播间 KOL 把官方信息「翻译」给粉丝购买决策]
-    communication_implications: "为「被转述」而设计：信息要能被中间人轻松复述并附带其个人背书；给 KOL/管理员提供可转发的解释框架，而不只投放原始素材。"
-    community_implications: "把社群管理员与活跃成员视为第一级节点：先让他们理解并认同，再由他们向社群翻译；官方直接广播的效果通常弱于这层人际转译。"
-    content_applications:
-      body: "正文给出「一句话可复述的核心结论 + 可引用的证据点」，方便二级传播者转述不走样"
-      narrative: "把信息包装成「我从 XX 那里听来时是这样理解的」的转述友好形态"
-      sharing: "分享卡片附带转发者可自定义的一句点评位，鼓励带个人背书的转发"
-      comments: "培训核心成员在评论区做「善意翻译者」，纠正误读并附上出处"
-    platform_implications: "转发与引用机制把两级流动「基础设施化」；平台的熟人关系链与算法广场并存，使直接命中与人际中介两种路径同时运作（原则性判断）。"
-    related_nodes: [opinion_leadership, gatekeeping_dynamics, weak_ties_strength, diffusion_of_innovations]
-    source_ids: [S42, S43, S169]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Katz & Lazarsfeld 1955《Personal Influence》（S43，book 级，substantial_excerpt）+ 1944《People's Choice》"
-      effect_size: "伊利县研究：仅约 5% 选民因直接媒介暴露被说服；人际接触对投票改变作用超过媒介直接说服"
-      replication_status: "人际中介降低不确定性的机制在数字环境中反复观察到；严格两级结构在新媒体不再普遍成立"
-      context_dependency: "议题需解释成本或风险；存在活跃转述者的网络结构是前提"
-      downgrade_upgrade_reason: "2026-09 实取 S43 核心内容（两级路径/5%/有限效果范式），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S43]
-      supporting_evidence: [S42]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
-
-  - id: opinion_leadership
-    canonical_name_en: Opinion Leadership
-    canonical_name_zh: 意见领袖
-    aliases: [KOL, influencer（影响者）, 关键意见领袖]
-    domain: diffusion
-    definition: "意见领袖（opinion leader）指在特定议题上通过人际接触对他人态度与行为产生不成比例影响的个体。单态（monomorphic，单一领域）与多态（polymorphic，多领域）的区分源自 Merton 1949，经 Katz 与 Lazarsfeld《Personal Influence》系统化。需注意：Duncan Watts 等后来的网络研究对「少数特殊个体驱动流行」的说法提出了重要修正。"
-    core_claim: "影响力的产生依赖「谁在影响」与「网络与受众是否准备好」两者；特殊个体（大影响者）并不必然是流行的必要条件，普通人的大规模连锁反应同样可能制造流行。"
-    mechanism: "意见领袖通过三类条件获得影响力：议题相关的显性专长、社交网络的中心位置（能接触并转述信息）、以及可被模仿的身份特征。但 Watts 的网络模拟与经验研究指出：大级联的出现更多取决于网络结构与大多数人的易感状态，影响者的作用是「在恰当位置点燃易感人群」，而非凭个人魅力单方面制造流行——这构成对 influencer 神话的修正。"
-    causal_chain: "议题专长 + 网络位置 + 身份相似性 → 他人接受其解释/模仿其行为 → 局部影响力；网络易感性 × 初始位置 → 级联规模"
-    variables:
-      inputs: [个体专长可见度, 网络中心性, 受众易感性]
-      moderators: [议题与领袖领域的匹配度（单态/多态）, 平台可见性机制, 受众与领袖的身份距离]
-      mediators: [信任、认同与信息可复述性]
-      outputs: [局部态度改变, 级联（cascade）规模]
-    evidence:
-      supporting:
-        - "《Personal Influence》对决策情境中「人际影响的下一步」的系统证据（书籍综述）"
-        - "Watts《Everything Is Obvious》（S56）：「关键意见领袖」神话被修正——流行根基是海量普通人的弱关系传播，移除头部网红传播仅小幅放缓，移除中层普通传播者热度归零（书籍论证）"
-      conflicting:
-        - "大规模观测研究发现「影响者神话」不稳定：把同一条内容投给不同种子人群，结果分布高度不确定，难以预知哪位影响者引爆（Watts 相关研究的方向性结论）"
-      replication:
-        - "局部层面的意见领袖效应被广泛复制；「意见领袖决定流行」的强命题未获稳定支持"
-      meta_analysis: []
-    evidence_grade: B+
-    boundary_conditions:
-      - "影响者的作用受议题匹配约束：单态领袖只在本领域有效"
-      - "级联规模由网络结构与受众状态共同决定，影响者只是触发器之一"
-    failure_conditions:
-      - "受众对议题无感或网络不易感时，再大的影响者也无法引爆（「种子错了，浇水无用」）"
-      - "影响者背书与其既有形象冲突时，可信度崩塌甚至反噬"
-    common_misinterpretations:
-      - "「找到那个关键 influencer 就能引爆」——Watts 的修正明确指出这是不可靠的：无法事前识别哪个影响者会成功，且成功的必要条件在网络与受众"
-      - "把粉丝量等于影响力：触达规模 ≠ 意见领袖的「被信任转述」功能，两者常不一致"
-    ethical_risks:
-      - "影响者营销中的隐瞒商业关系与夸大背书，侵蚀人际信任的公共基础"
-    examples:
-      original_cases: [《Personal Influence》中的时尚领袖与药方选择研究案例, Katz & Lazarsfeld 对单态/多态领袖的区分]
-      research_cases: [Watts 团队关于级联规模与影响者作用的理论与观测研究（「有条件的流行」）]
-      modern_cases: [垂类中腰部博主的转化率常高于泛娱乐头部博主的现象, 品牌放弃单一头部投放转向「大量小影响者 + 受众易感性测试」的组合打法]
-    communication_implications: "选影响者先看「议题匹配 × 受众易感性 × 网络位置」，再看粉丝量；把投放当作对易感人群的多次点火实验，而非对某个「关键人物」的一次性押注。"
-    community_implications: "社群内的意见领袖通常是服务型活跃成员而非大 V：给他们议题专属的认可与信息先权，他们的转述就是社群的两级传播层。"
-    content_applications:
-      body: "为合作影响者准备「可个人化转述」的素材包：核心结论 + 可调整的个人故事插槽"
-      narrative: "让影响者讲「我为什么被说服」，而非复述品牌卖点，保留其解释权"
-      sharing: "设计影响者与其粉丝的互动梗，让背书以关系语言而非广告语言出现"
-      comments: "影响者本人（而非助理）回评关键质疑，是意见领袖功能的在线版本"
-    platform_implications: "平台算法改变了「网络位置」的形成方式：可见性由排序而非真实社交中心决定，平台实质上在重新分配意见领袖资格（原则性判断）。"
-    related_nodes: [two_step_flow, diffusion_of_innovations, structural_holes_bridging, algorithmic_amplification, word_of_mouth_drivers]
-    source_ids: [S43, S56, S169]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Katz & Lazarsfeld 1955《Personal Influence》（S43，book 级，substantial_excerpt）：单态/多态区分（源自 Merton 1949）；「意见领袖三条件（专长/网络位置/可模仿性）」为原书章节内容、S43 EP 未实取 + Watts 2011《Everything Is Obvious》（S56）：关键意见领袖神话修正"
-      effect_size: "局部意见领袖效应被广泛复制；'意见领袖决定流行'的强命题未获稳定支持（Watts 修正）"
-      replication_status: "局部层面稳健；级联规模由网络结构与受众易感性共同决定"
-      context_dependency: "单态领袖只在本领域有效；网络与受众状态是级联必要条件"
-      downgrade_upgrade_reason: "2026-09 实取 S43 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 审计移除 S55 错位引用（级联模拟条改引 S56）"
-    provenance:
-      primary_sources: [S43]
-      supporting_evidence: [S56]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: word_of_mouth_drivers
-    canonical_name_en: Word-of-Mouth Drivers
-    canonical_name_zh: 口碑驱动因素
-    aliases: [eWOM 驱动, 分享动机]
-    domain: diffusion
-    definition: "口碑驱动（word-of-mouth drivers）指促使消费者主动谈论、推荐品牌与产品的心理与情境因素。研究与实践归纳的主要驱动包括：社交货币（说了显得聪明/有品位）、情绪唤起、实用价值、身份表达、触发物（情境提醒）与公共可见性。线上口碑（eWOM）还叠加了互惠与社区归属动机。"
-    core_claim: "人们谈论产品主要不是为了帮助商家，而是为了经营自己的社交形象、帮助他人与表达情绪；能同时服务这三个动机的产品经验更容易被谈论。"
-    mechanism: "分享行为在个体层面由「自我呈现收益 + 利他收益 + 情绪调节」驱动：谈论有趣/有用的经验能提升分享者在听众眼中的形象，情绪唤起提高传播冲动，实用信息换取社交感谢；在内容层面，「可被谈论性」取决于经验是否独特、可见、易复述并被日常场景触发。"
-    causal_chain: "产品经验 → 满足分享者的社交货币/利他/情绪需求 → 主动谈论 → 听众形成印象与购买倾向"
-    variables:
-      inputs: [体验的独特性与可见性, 情绪唤起强度, 实用信息含量]
-      moderators: [分享场合的听众构成, 分享者的身份焦虑程度, 品类的社会可见性]
-      mediators: [自我呈现动机, 利他动机, 情绪唤起]
-      outputs: [口碑量、口碑内容与推荐意向]
-    evidence:
-      supporting:
-        - "Berger 对分享动机的系列研究：情绪唤起与社交货币提高分享（作者书籍配套研究）"
-        - "线上评论影响销售与口碑可被激励结构改变的商业研究证据（营销文献，方向一致）"
-      conflicting:
-        - "激励性口碑（返现、抽奖）能提高数量但常降低可信度与内容质量（营销研究的一致担忧）"
-      replication:
-        - "情绪唤起促分享的方向在多平台数据中复现；各驱动因素的相对权重随品类与平台变化明显"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "口碑内容受听众构成调节：同一经验在职场同事与家人面前的「可谈论性」不同"
-      - "品类社会可见性低（私密消费品）时，公开口碑天然稀薄，需借「间接炫耀」设计"
-    failure_conditions:
-      - "把驱动当作话术模板硬贴（如强凹「社交货币」），听众识别出造作后反噬可信度"
-      - "产品体验本身差：所有驱动因素都会放大负面口碑而非抵消它"
-    common_misinterpretations:
-      - "「给奖励就有口碑」——外部激励可能挤出自发动机，且被识破的付费口碑是负资产"
-      - "把口碑驱动与病毒系数混为一谈：前者解释「为什么谈」，后者度量「裂变了多少」"
-    ethical_risks:
-      - "伪造素人口碑（刷评、水军）构成欺骗，并在平台生态中放大虚假社会证明"
-    examples:
-      original_cases: [Berger 书中对社交货币与实用价值促分享的案例（如某些餐厅的隐藏菜单）]
-      research_cases: [高唤起情绪内容更易被邮件分享的研究（Berger & Milkman 2012，JMR：Journal of Marketing Research 49(2), 192-205，S105）]
-      modern_cases: [咖啡馆「出片环境」驱动的自传播, 小红书上「成分党」以利他科普积累社交货币]
-    communication_implications: "先问「用户把这段经验讲给朋友听时，他自己显得怎么样」；把内容设计成能提升分享者形象的素材，并给足情绪唤起与可复述的具体细节。"
-    community_implications: "给社群成员提供「值得转述的战果」：成果展示模板、专属术语与身份标签，让口碑成为成员在社群内外经营地位的方式。"
-    content_applications:
-      body: "正文埋入「可转述的具体事实」（数字、反常识细节），让二级传播有料可讲"
-      narrative: "故事以使用者的高光瞬间收尾，为分享者提供现成的社交货币"
-      sharing: "分享卡片突出「成果而非广告」，第一人称文案由分享者自定义"
-      comments: "设置「晒出你的用法」互动，把评论区变成口碑素材库"
-    platform_implications: "平台把口碑指标化（点赞、收藏、转发），使口碑行为同时受算法反馈强化；可见性奖励会改变口碑内容构成（更极端、更可展示）（原则性判断）。"
-    related_nodes: [stepps_sharing_framework, opinion_leadership, viral_coefficient, social_proof, identity_signaling]
-    source_ids: [S59, S105]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Berger 2013（S59，STEPPS 口碑驱动）+ Berger & Milkman 2012（S105，JMR：Journal of Marketing Research 49(2), 192-205）"
-      effect_size: "口碑由情绪/社交货币/实用价值等驱动（Berger 数据）"
-      replication_status: "口碑驱动因素在分享数据集方向稳定"
-      context_dependency: "内容类型/分享场景/可见性调制"
-      downgrade_upgrade_reason: "2026-09 实取 S59 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 审计移除 S38/S39 错位引用并补 S105（JMR）实证"
-    provenance:
-      primary_sources: [S59]
-      supporting_evidence: [S105]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: stepps_sharing_framework
-    canonical_name_en: STEPPS Sharing Framework
-    canonical_name_zh: STEPPS 分享框架
-    aliases: [Contagious 六原则, 为什么会流行框架]
-    domain: diffusion
-    definition: "STEPPS 是 Jonah Berger 在《Contagious》中总结的六个促分享原则：Social currency（社交货币）、Triggers（触发物）、Emotion（情绪）、Public（公开性）、Practical value（实用价值）、Stories（故事）。需要明确：它是 Berger 对其实证研究的组织框架，不是独立检验的因果模型；其中情绪与唤起的成分有配套的 JMR 研究（S105：Journal of Marketing Research 49(2), 192-205，Berger & Milkman 2012）支撑。"
-    core_claim: "内容被分享的概率随其满足社交货币、情境触发、高唤起情绪、公开可见、实用价值与故事承载六方面程度而提高。"
-    mechanism: "社交货币让分享者显得有见识；触发物把内容绑定到高频情境以增加想起；高唤起情绪（敬畏、愤怒、兴奋）提高传播冲动而低唤起情绪（满足、悲伤）抑制分享；公开性让使用被看见并提供模仿线索；实用价值触发利他转发；故事则把信息藏进可迁移的叙事载体。各原则通过降低分享成本或提高分享收益起作用。"
-    causal_chain: "内容满足 STEPPS 某原则 → 分享收益↑或分享成本↓ → 分享行为↑ → 更大触达"
-    variables:
-      inputs: [内容的六原则得分]
-      moderators: [品类与平台语境, 听众与分享者的关系]
-      mediators: [自我呈现动机、情绪唤起、情境可及性]
-      outputs: [分享率、级联规模]
-    evidence:
-      supporting:
-        - "Berger & Milkman 2012 的 JMR 研究（S105：Journal of Marketing Research 49(2), 192-205）显示高唤起情绪内容更多被分享（配套实证）"
-        - "《Contagious》汇总的多个实验与田野数据支持各原则与分享的相关（作者书籍）"
-      conflicting:
-        - "框架作为整体未被独立验证：六原则间存在重叠与共线，「按六项打分预测爆款」的做法缺乏证据"
-      replication:
-        - "情绪唤起促分享的复现较好；Social currency、Public 等原则更多停留在相关证据与案例分析层面"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "效应依赖平台分享机制与受众构成；同一内容在不同平台各原则权重不同"
-      - "框架解释「为何分享」，不解释「为何看见」：分发主要由平台排序决定"
-    failure_conditions:
-      - "低质量内容按 STEPPS 包装只能短期骗点击，长期损害信任（分享是信任背书）"
-      - "在强调严肃/专业的语境里，过度情绪化设计反而降低转发者形象收益"
-    common_misinterpretations:
-      - "把 STEPPS 当成「爆款公式」——Berger 本人定位为对促分享因素的组织化清单，不具备因果预测力"
-      - "六项全堆上一条内容——原则间会互相稀释，好的内容通常只在一两项上做到突出"
-    ethical_risks:
-      - "高唤起情绪（愤怒、恐惧）的设计性利用会助长极化与焦虑传播"
-    examples:
-      original_cases: [《Contagious》中社交货币案例（如某些会员制酒吧的稀缺性设计）, 触发物案例（把产品绑定到高频日常情境的广告策略）]
-      research_cases: [Berger & Milkman 2012 的 JMR 情绪唤起与邮件分享研究（S105）]
-      modern_cases: [短视频「有用收藏向」内容的高转发, 品牌「晒包装」设计让使用行为公开可见]
-    communication_implications: "选题时优先问两个问题：分享它让谁显得怎样（社交货币）、什么场景会让人想起它（触发物）；情绪与实用二选一做到极致，比六项平庸更有效。"
-    community_implications: "把社群日常仪式做成触发物（每周话题、固定梗），成员的分享就自然成为社群可见性的免费媒介。"
-    content_applications:
-      body: "正文控制在「一个触发场景 + 一个高唤起点 + 一个可复述结论」的结构内"
-      narrative: "故事里嵌入可转述的转折句（人们会原句引用的那种）"
-      sharing: "结尾提供「转发给谁会谢谢你」的提示，激活利他转发"
-      comments: "引导评论补充个人触发场景（你什么时候会想起这个？），积累触发语境"
-    platform_implications: "分享按钮与转发流是 STEPPS 的基础设施：平台默认奖励高唤起内容，创作者需警惕被平台偏好反向塑形（原则性判断）。"
-    related_nodes: [emotional_arousal, word_of_mouth_drivers, self_presentation_impression_management, curiosity_gap]
-    source_ids: [S59, S105]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Berger & Milkman 2012 NYT 大数据研究（S105 已实取摘要+作者版正文）+ Berger 2011 唤醒实验"
-      effect_size: "唤醒维度对分享的预测效应稳健；效价之外高唤醒情绪驱动病毒性"
-      replication_status: "NYT 数据结论被多项平台研究复现"
-      context_dependency: "以文本内容为主；内容类型/平台媒介影响适用性"
-      downgrade_upgrade_reason: "2026-09 补充一手研究证据（S105），升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S105]
-      supporting_evidence: [S59]
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: viral_coefficient
-    canonical_name_en: Viral Coefficient (K Factor)
-    canonical_name_zh: 病毒系数（K 因子）
-    domain: diffusion
-    definition: "病毒系数（viral coefficient，K 因子）是增长实践中的度量指标：K = 每个用户平均发出的邀请数 × 邀请转化率。K > 1 意味着每个新用户带来多于一个新用户，呈指数增长；K < 1 则需要外部渠道补充增长。这是从业者增长框架（growth hacking / 平台增长实践），不是经过科学检验的定律。"
-    core_claim: "当产品内建的邀请机制使每个用户平均带来超过一个转化用户时，增长可以自我维持；实践中 K 与留存共同决定真实增长，二者缺一不可。"
-    mechanism: "用户在使用流程中被暴露于邀请触点（分享按钮、协作需求、独家性激励），发出 i 次邀请，其中 c 比例转化为新用户；若 i×c > 1，每个用户群在下一周期复制出更大用户群。实践中 K 是随时间与人群波动的量：不同获客渠道、不同生命周期阶段的 K 差异很大，且必须与留存联立看，否则是漏水的指数增长。"
-    causal_chain: "邀请触点曝光 → 邀请发出（i） → 转化（c） → K = i × c → 次周期用户规模"
-    variables:
-      inputs: [人均邀请数, 邀请转化率]
-      moderators: [产品协作性（用得越多越需要拉人）, 激励强度, 目标人群重合度]
-      mediators: [分享动机, 转化摩擦]
-      outputs: [有机增长速度, 获客成本摊薄]
-    evidence:
-      supporting:
-        - "增长实践文献（如平台增长方法论）中大量案例使用 K 因子做增长诊断（从业者经验）"
-        - "网络传播教材对流行传播阈值形式的模型讨论与本指标逻辑同构（理论呼应）"
-      conflicting:
-        - "实践复盘显示高 K 伴随低留存的组合并不能带来可持续增长；K 因子单独作为北极星指标被广泛认为误导（从业者共识）"
-      replication:
-        - "作为运营指标被广泛使用，但其「K>1 必然爆发」的含义从未经过对照检验"
-      meta_analysis: []
-    evidence_grade: D
-    validation_status: PARTIALLY_VALIDATED
-    boundary_conditions:
-      - "只对具备「使用即传播」结构的产品（协作工具、社交邀请）有较大意义"
-      - "K 必须与留存、使用频率联立报告，单独的 K 值没有增长含义"
-    failure_conditions:
-      - "为拉高 K 设计的强制分享与诱导裂变，触发平台治理与用户反感，反而压低转化"
-      - "邀请来的人群与产品核心价值错配，留存崩塌使 K 失去意义"
-    common_misinterpretations:
-      - "「K>1 就会病毒式爆发」——实际还有周期长度、流失率与市场饱和的约束，K 是流量比不是增长保证"
-      - "把 K 与口碑强度混为一谈：口碑（word of mouth）是无摩擦的社会推荐，K 是设计出来的机械裂变，来源与可信度不同"
-    ethical_risks:
-      - "诱导式裂变（不分享不能用、夸大收益）涉嫌操纵与骚扰，并普遍违反平台规则"
-    examples:
-      original_cases: [增长团队用「邀请数×转化率」诊断邀请流程漏斗（行业实践）]
-      research_cases: []
-      modern_cases: [协作工具「邀请同事一起编辑」的内建裂变, 社群裂变海报的「阶梯奖励」设计及其被平台限流的现象]
-    communication_implications: "把「邀请」写进产品叙事而非弹窗：说明带人来对双方的具体好处，并在自然协作节点（而非结束页）放置邀请动作。"
-    community_implications: "社群的 K 等价物是「老带新」：给成员可炫耀的成员身份与可转发的入群理由，用社群内荣誉结算邀请激励。"
-    content_applications:
-      body: "正文明确「推荐给谁、为什么 TA 需要」，把模糊的转发请求变成精准的利他推荐"
-      narrative: "故事展示「一个人如何把工具带给整个团队」，示范邀请动作本身"
-      sharing: "分享物必须自带场景说明（这是什么、为什么值得看），降低受邀者理解成本"
-      comments: "在评论区沉淀「你是怎么知道这里的」用户故事，作为邀请话术素材"
-    platform_implications: "平台对裂变行为的治理（外链限制、诱导分享打击）直接改变 K 的可达上限；增长设计必须以平台规则为边界条件（原则性判断）。"
-    related_nodes: [critical_mass_threshold, word_of_mouth_drivers, cold_start_dynamics, network_threshold_models]
-    source_ids: [S52, S97]
-    provenance:
-      primary_sources: ['S52', 'S97']
-      last_verified: "2026-09-09"
-    last_reviewed: "2026-09"
-
-  - id: gatekeeping_dynamics
-    canonical_name_en: Gatekeeping Dynamics
-    canonical_name_zh: 守门机制
-    aliases: [把关人, networked gatekeeping（网络化守门）]
-    domain: diffusion
-    definition: "守门机制（gatekeeping）指信息在流向公众途中被各级「守门人」筛选、排序与放行的过程。传统上指编辑与媒体组织（White 的「Mr. Gates」研究是经典起点），Nahon 与 Hemsley 在《Going Viral》中将其扩展到网络时代：平台算法、平台员工、超级节点与普通用户的转发共同构成「网络化守门」。注意与本库 platform_power_gatekeeping（平台权力）区分：本节点聚焦信息流动的筛选过程本身。"
-    core_claim: "网络内容能否到达公众，由多层守门（编辑、算法、平台政策、超级节点转发、普通用户互动）串联决定；病毒性是人与算法共同守门的结果，不是纯算法或纯大众的产物。"
-    mechanism: "内容发布后依次经过：平台准入与合规规则 → 算法初始曝光 → 早期用户的互动信号 → 算法加权放大 → 超级节点（大账号、媒体、机构）是否转发 → 全网扩散。每一层都可以放大、忽略或拦截；病毒性出现需要所有相关守门层都「放行」，任一层的忽视都会终结传播。"
-    causal_chain: "内容发布 → 平台规则审查 → 算法初始分发 → 用户互动信号 → 超级节点转发 → 全网级联（各层均可拦截）"
-    variables:
-      inputs: [内容合规性, 初始互动信号, 超级节点注意]
-      moderators: [平台政策与敏感度, 算法排序目标, 话题的新闻周期]
-      mediators: [算法曝光分配, 超级节点转发决策]
-      outputs: [触达规模, 传播生命周期]
-    evidence:
-      supporting:
-        - "《Going Viral》对病毒性中人与算法共同守门的分析框架与案例（书籍论证）"
-        - "平台治理研究确认审核与排序构成事实上的信息筛选（Gillespie 方向）"
-      conflicting:
-        - "不同平台守门权重差异大：算法主导型平台与关系链主导型平台的「拦截点」位置不同，单一模型难以概括（比较研究讨论）"
-      replication:
-        - "「多层守门」框架与多个平台的传播案例方向一致；层级内部的具体权重缺乏公开可验证数据"
-      meta_analysis: []
-    evidence_grade: B
-    boundary_conditions:
-      - "守门结构依赖平台架构：去中心化平台（如联邦宇宙）守门层更分散"
-      - "算法目标（时长/互动/满意度）决定守门偏好的方向"
-    failure_conditions:
-      - "把守门失败一律归因于「算法打压」或「审查」，忽视内容自身的触达质量与时机"
-      - "用单层守门（只做合规、不做初始互动运营）解释与优化传播"
-    common_misinterpretations:
-      - "「内容好自然会被看见」——守门框架明确：没有通过算法与节点层的放行，质量本身不产生曝光"
-      - "把 gatekeeping 等同于审查：守门包括排序、推荐、转发、忽略等多种非审查性筛选"
-    ethical_risks:
-      - "守门权力的不透明使「谁决定了公众看见什么」难以问责；商业性守门可能伪装成中立排序"
-    examples:
-      original_cases: [《Going Viral》中对病毒事件中超级节点作用的案例分析, 传统「Mr. Gates」编辑把关研究（Nahon & Hemsley 书中回顾）]
-      research_cases: [对社交媒体平台热门内容形成过程的事件追踪研究（方向一致）]
-      modern_cases: [热点话题能否上热搜取决于平台热度算法与运营干预的双重守门, 品牌内容需先通过初始人群互动测试才能进入更大流量池]
-    communication_implications: "把传播规划写成「守门清单」：合规、初始互动、关键节点转发、平台热点机制，逐层设计放行策略；任何一层的缺失都会让内容止步。"
-    community_implications: "社群管理员是制度化的小守门人：他们决定哪些内容被置顶、转播与冷却；与其抱怨算法，不如先运营好社群内部的守门层。"
-    content_applications:
-      body: "正文避免触发算法与审核的边缘表述，同时为超级节点准备「可直接转发」的摘要版本"
-      narrative: "故事开头即给出可被节点快速判断的价值点，降低守门层的处理成本"
-      sharing: "设计「大号友好」的转发言语（署名、出处清晰），提高超级节点转发意愿"
-      comments: "培育能顶起优质评论的核心用户，作为互动信号层的放大器"
-    platform_implications: "平台即守门：排序信号、热度榜与外链政策构成内容命门；守门标准的变化（而非内容变化）常是流量波动的第一原因（原则性判断）。"
-    related_nodes: [platform_power_gatekeeping, algorithmic_amplification, two_step_flow, opinion_leadership, moderation_governance]
-    source_ids: [S60, S94, S50, S171]
-    validation_status: PARTIALLY_VALIDATED
-    grade_justification:
-      independent_studies: "Nahon & Hemsley 2013《Going Viral》（S60，book 级，substantial_excerpt：网络化守门 networked gatekeeping）+ Gillespie 2018（S94）+ McCombs（S50）"
-      effect_size: "多层守门（编辑/算法/平台/超级节点/普通用户）串联决定触达；任一拦截终结传播"
-      replication_status: "多层守门框架与多平台传播案例一致；层内权重缺乏公开可验证数据"
-      context_dependency: "守门结构依赖平台架构（算法 vs 关系链主导）；算法目标决定守门偏好"
-      downgrade_upgrade_reason: "2026-09 实取 S60 网络化守门核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED"
-    provenance:
-      primary_sources: [S60]
-      supporting_evidence: [S94, S50]
-      last_verified: "2026-09"
-    last_reviewed: "2026-09"
+- id: diffusion_of_innovations
+  canonical_name_en: Diffusion of Innovations
+  canonical_name_zh: 创新扩散理论
+  aliases:
+  - 创新传播
+  - DOI 理论
+  domain: diffusion
+  definition: 创新扩散理论（Diffusion of Innovations）由 Everett Rogers 在 1962 年首版并提出至第五版，描述一个创新（观念、产品、实践）如何在社会系统中经由沟通渠道、随时间在成员间传播。理论由四要素构成：创新本身、沟通渠道、时间、社会系统；其典型产出形态是采用者累积分布的
+    S 形曲线。
+  core_claim: 创新的采用速率主要由潜在采用者对创新属性的感知（relative advantage、compatibility、complexity、trialability、observability）与人际沟通网络共同决定，而非创新的客观质量单独决定。
+  mechanism: 潜在采用者先通过大众媒介与人际渠道形成对创新的主观认知；多数人不会在第一时间采用，而是观察身边已采用者的可见结果来降低不确定性；早期采用在局部网络中产生示范效应，后续采用随之加速，待潜在池接近饱和后增速回落，形成
+    S 曲线。S 曲线的定量对应为 Bass 模型：p（外部媒介影响）＋q（内部口碑影响）双力驱动（S51 core_claims、S170）。因此扩散本质是「信息 → 社会验证 → 采用 → 再传播」的社会过程，不是单纯的信息曝光过程。
+  causal_chain: 创新属性感知 + 人际影响 → 不确定性降低 → 采用决策 → 可见的采用结果 → 更多采用 → S 形扩散曲线
+  variables:
+    inputs:
+    - 创新五属性感知
+    - 沟通渠道结构（大众媒介 vs 人际）
+    - 社会系统规范
+    - 变革代理（change agent）投入
+    moderators:
+    - 采用决策类型（可选择性/集体性/权威性）
+    - 创新可试性与可观察性
+    - 社会系统开放度
+    mediators:
+    - 不确定性降低
+    - 人际口碑
+    - 意见领袖背书
+    outputs:
+    - 采用率 S 曲线
+    - 扩散速度与最终渗透率
+  evidence:
+    supporting:
+    - Rogers《Diffusion of Innovations》五版综合了数千项跨领域扩散研究，框架高度稳定（书籍综述）
+    - 创新五属性与采用意向的正负关系在农业、医疗、教育技术等领域被反复观察到（综述转述）
+    - 扩散研究经典的起点是 1940 年代的杂交玉米种子研究：采用者显著依赖邻里可见结果（Rogers 书中转述）
+    conflicting:
+    - 部分研究发现，在平台型产品与政策扩散中，网络结构与时机对采用率的预测力强于属性感知（研究讨论）
+    replication:
+    - 五属性框架被大量复制；但各属性的效应幅度因品类与研究设计差异波动明显（综述）
+    meta_analysis:
+    - 存在针对创新属性—采用关系的定量综合，总体方向一致、幅度中等（综述转述）
+  evidence_grade: A-
+  boundary_conditions:
+  - 采用行为需可观察、可谈论；若创新不可见或难以试用，S 曲线形态会显著变形
+  - 社会系统中存在采用自由度；完全同质的强制采用（如合规要求）不遵循口碑扩散逻辑
+  failure_conditions:
+  - 创新相对优势为负或引发反感和抵制时，人际渠道会加速负面口碑而非正面扩散
+  - 社会信任崩塌或信息被系统性垄断时，人际验证链条失效，扩散停滞
+  common_misinterpretations:
+  - 把 S 曲线当作产品生命周期的自然法则——它是对采用者累积分布的描述，不能替代营销投入与产品改进的因果作用
+  - 把「创新」理解为技术新颖性——Rogers 所说的创新是「对采用者而言的任何新感知」，旧事物进入新群体也是扩散
+  ethical_risks:
+  - pro-innovation bias（亲创新偏差）：扩散视角默认「扩散越多越好」，可能系统性忽视创新对弱势群体的伤害以及拒绝采用的权利
+  examples:
+    original_cases:
+    - 杂交玉米种子在艾奥瓦农户间的采用（Rogers 综合的经典案例）
+    - 农业新耕作技术经由变革代理与邻里示范传播
+    research_cases:
+    - 医疗社群中新药处方行为的扩散研究（Rogers 书中综述）
+    - 对教育技术在学区中采用过程的多案例追踪
+    modern_cases:
+    - 短视频平台新功能（如某特效模板）经创作者示范逐层渗透
+    - 智能穿戴设备从极客圈层向大众市场的渗透曲线
+  communication_implications: 传播设计应优先提升可观察性与可试性：让早期采用者「被看见」，让观望者「低成本试一试」。内容上把他人可见的使用结果（而非参数）作为核心信息，因为多数人是看着别人用才决定用的。
+  community_implications: 社群是扩散的载体而非管道：先在小型高信任子群内做示范，再利用社群内的可见性（晒单、案例、里程碑）驱动观望者跟进；社群规范决定创新被接纳还是被嘲讽。
+  content_applications:
+    body: 用「已使用者可见结果 + 低门槛试用步骤」的结构写产品/观念介绍，弱化参数罗列
+    narrative: 以一位典型早期采用者的转变故事开头，把创新属性藏进情节而非说教
+    sharing: 设计「晒出结果」的可见性钩子（成果截图、前后对比），让采用本身成为可传播内容
+    comments: 置顶早期采用者的真实反馈，用评论区完成社会验证环节
+  platform_implications: 平台的算法分发让「可见的采用结果」比传统时代更易规模化展示，但也使扩散速率更受排序信号而非真实渗透率影响；S 曲线可能被推荐机制压缩或拉平（原则性判断）。
+  related_nodes:
+  - adopter_categories
+  - opinion_leadership
+  - two_step_flow
+  - critical_mass_threshold
+  - network_threshold_models
+  - word_of_mouth_drivers
+  source_ids:
+  - S51
+  - S52
+  - S170
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Rogers 2003《Diffusion of Innovations》第 5 版（S51，book 级，substantial_excerpt，跨 500+
+      研究综合）
+    effect_size: 五属性解释采用率方差 49-87%；五类别占比约定 2.5/13.5/34/34/16%
+    replication_status: 五属性框架大量复制；各属性效应幅度因品类与研究设计波动
+    context_dependency: 大众传播作用于知晓阶段、人际传播作用于说服/决策阶段；品类与制度条件调节
+    downgrade_upgrade_reason: 2026-09 实取 S51 核心内容（五阶段/五属性/五类别/S 曲线/Bass），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S51
+    supporting_evidence:
+    - S52
+    - S170
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: adopter_categories
+  canonical_name_en: Adopter Categories
+  canonical_name_zh: 采用者类别
+  aliases:
+  - 创新者/早期采用者/早期大众/晚期大众/落后者
+  - 采用人群分层
+  domain: diffusion
+  definition: Rogers 按采用时间早晚将人群划分为 innovators（创新者）、early adopters（早期采用者）、early majority（早期大众）、late majority（晚期大众）与
+    laggards（落后者）五类，划分依据是个体「创新性」（相对早采用的比例）在人群中的统计分布。它是理想的类型学，不是严格的人格分类。
+  core_claim: 不同采用时间的人群在观念领导力、风险容忍与信息渠道上存在系统性差异，因此扩散各阶段需要不同的沟通策略。
+  mechanism: 个体创新性大致呈正态分布，Rogers 依据偏离均值的标准差划定类别边界（如创新者约早于均值两个标准差采用）。早期类别通过试验与筛选提供信息，早期大众需要同侪可见证据，晚期大众与落后者则依赖社会压力与必要性。类别差异主要由动机、资源与风险态度驱动，而非先天人格。Bass
+    模型将后四类别聚合为模仿者，类别划分由此可量化（S170）。
+  causal_chain: 个体创新性分布 → 类别划分 → 各类别信息依赖与风险容忍差异 → 阶段化的扩散动力学
+  variables:
+    inputs:
+    - 个体创新性（相对采用时间）
+    - 类别占比惯例（基于分布的边界设定）
+    moderators:
+    - 品类风险程度
+    - 社会经济资源
+    - 品类知识水平
+    mediators:
+    - 风险感知
+    - 同侪示范可得性
+    outputs:
+    - 各类别的采用时机与沟通需求差异
+  evidence:
+    supporting:
+    - 早采用者平均受教育程度、社会地位与渠道接触高于晚采用者（原书综述内容，S51 EP 未实取）
+    - 杂交玉米等经典研究支持早/晚采用者在信息来源结构上的差异（书籍转述）
+    conflicting:
+    - 类别边界是对连续分布的人为切割：同一个人在不同品类中可能分属不同类别，「创新者人格」缺乏稳定证据（方法学批评）
+    replication:
+    - 早/晚采用者的资源与地位差异方向在多领域复制；但五类边界的具体切点高度依赖研究设定（综述）
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 类别是相对于特定品类与人群的相对位置，不是跨品类稳定的个体标签
+  - 划分基于连续分布的统计惯例（如均值±标准差），边界并非自然断点
+  failure_conditions:
+  - 把类别当作营销目标人群的固定画像，忽视同一个人的品类间差异
+  - 在低风险、高频低价品类中，五阶段策略的区分价值明显缩小
+  common_misinterpretations:
+  - 把 2.5%/13.5%/34%/34%/16% 的比例当成普适常数——它们是 Rogers 对分布的约定式划分，不是任何市场的实测规律
+  - 把「早期采用者」浪漫化为潮流领袖——早期采用者不等于 opinion leader，两者条件不同
+  ethical_risks:
+  - 用类别标签对人群做固定化分层，可能导致对「落后者」的污名化与排除性设计
+  examples:
+    original_cases:
+    - 杂交玉米研究中早/晚采用农户的对比
+    - Rogers 书中对各类别典型社会特征的画像
+    research_cases:
+    - 跨品类重复测量发现个体创新性排名不稳定的研究讨论（综述）
+    modern_cases:
+    - 新品发布时「内测—尝鲜—大众—长尾」的人群运营分层
+    - 科技媒体与 KOL 圈层被当作早期采用者渠道投放
+  communication_implications: 对早期类别强调新颖与身份表达，对早期大众强调同侪证据与可靠性，对晚期大众强调必要性与简便；不要用一套信息打全人群。
+  community_implications: 社群运营应识别社群内的天然创新者与观望者，让前者的可见实验为后者降低不确定性，而不是直接向观望者推销。
+  content_applications:
+    body: 针对早期大众的正文里放同侪案例与「他们已经用起来了」的证据，而非参数
+    narrative: 故事主角设置为本社区的「第一个吃螃蟹者」，让观望者代入跟随者视角
+    sharing: 给早期类别提供可炫耀的社交货币，给晚期类别提供可转发的实用清单
+    comments: 在评论区回答「这东西靠谱吗」式的观望疑问，承接晚期大众的安全感需求
+  platform_implications: 平台兴趣图谱让「品类内创新性」比泛人群创新性更可识别；投放在品类活跃人群中比按泛人口标签更符合类别逻辑（原则性判断）。
+  related_nodes:
+  - diffusion_of_innovations
+  - chasm_crossing
+  - opinion_leadership
+  - network_threshold_models
+  conflicting_nodes: []
+  source_ids:
+  - S51
+  - S170
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Rogers 2003《Diffusion of Innovations》第 5 版（S51，book 级，substantial_excerpt）
+    effect_size: 五类别占比约定：2.5/13.5/34/34/16%；早采用者平均资源与渠道接触高于晚采用者（原书综述内容，S51 EP 未实取）
+    replication_status: 早/晚采用者差异方向多领域复制；五类边界切点高度依赖研究设定
+    context_dependency: 类别是相对特定品类与人群的相对位置，非跨品类稳定标签
+    downgrade_upgrade_reason: 2026-09 实取 S51 五类别内容 + S170 Bass 聚合（2026-09-09 审计补录），由 MEMORY_BASED 升级为
+      PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S51
+    supporting_evidence:
+    - S170
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-031
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: chasm_crossing
+  canonical_name_en: Crossing the Chasm
+  canonical_name_zh: 鸿沟跨越
+  domain: diffusion
+  definition: Geoffrey Moore 在《Crossing the Chasm》（1991 首版）中提出的实践框架：在早期采用者（愿景者）与早期大众（实用主义者）之间存在一道「鸿沟」，前者的购买逻辑与后者根本不同，多数科技产品死在跨越这道缝隙的路上。这是从业者的市场分段模型，不是经过实证检验的科学规律。
+  core_claim: 面向愿景者的营销方式（强调颠覆、未来收益）对实用主义主流客户基本无效，跨越鸿沟需要更换叙事、渠道与产品完整度。
+  mechanism: 早期采用者自我参照、愿为突破付溢价、能容忍不完整；早期主流客户以同侪参照、要求完整解决方案（whole product）、要求业界参考案例。两套决策逻辑之间缺少自然的口碑接力——愿景者的推荐在实用主义者眼中不是有效证据。Moore
+    的处方是：选择单一滩头细分（beachhead），做到完整产品，用该细分内的同类客户证据建立主导地位，再逐段扩张。
+  causal_chain: 愿景者市场饱和 → 口碑接力中断 → 增长停滞 → 滩头细分 + 完整产品 + 同类客户证据 → 主流市场采用
+  variables:
+    inputs:
+    - 产品类别成熟度
+    - 现有客户构成
+    - 竞争格局
+    moderators:
+    - 细分的痛点强度
+    - 参考客户的可识别性
+    - 渠道伙伴激励
+    mediators:
+    - 完整产品度
+    - 同侪参考案例
+    outputs:
+    - 主流市场渗透率
+    - 增长可持续性
+  evidence:
+    supporting:
+    - Moore 基于大量科技营销咨询经验归纳的案例模式（从业者经验）
+    - 与 Rogers 书中「早期大众依赖同侪证据」的观察方向一致（理论呼应）
+    conflicting: []
+    replication:
+    - 作为启发式框架在行业内被广泛使用与改写，但缺乏系统的对照检验；幸存者偏差未排除
+    meta_analysis: []
+  evidence_grade: D
+  boundary_conditions:
+  - 主要适用于高不确定性、高单价、需要改变工作方式的科技品类；日用品与娱乐内容不适用
+  - 成立前提是早期与主流客户决策逻辑确实断裂；平滑连续的市场中「鸿沟」只是普通的节奏问题
+  failure_conditions:
+  - 滩头细分选错或太窄，导致完整产品投入无法回收
+  - 把框架当宿命论：为故事需要硬找「鸿沟」，忽视产品自身的失败原因
+  common_misinterpretations:
+  - 把「鸿沟」当作所有增长放缓的万能解释，回避渠道、定价与产品问题
+  - 把 whole product 理解为功能堆叠——它指的是能完成客户目标的最小完整方案
+  ethical_risks:
+  - 滩头策略可能引导资源集中于易攻但低价值的人群，造成服务不均与歧视性投放
+  examples:
+    original_cases:
+    - Moore 书中硅谷科技产品从极客市场进入企业主流市场的案例复盘
+    research_cases: []
+    modern_cases:
+    - 开发者工具产品先攻单一语言社区再做企业化
+    - 硬件新品先服务发烧友社区再进零售渠道的节奏设计
+  communication_implications: 跨越阶段要换掉叙事：从「颠覆未来」换成「和您同行的人都在用、风险已解决」；传播证据从愿景背书切换为同类客户案例。
+  community_implications: 把滩头社群当成完整产品的共创现场：其反馈与案例就是进入主流市场的证据库；不要在鸿沟期同时开太多社群战线。
+  content_applications:
+    body: 主流市场向内容以「同侪场景 + 完整方案 + 风险消解」三段式展开
+    narrative: 讲一个与目标主流客户同一处境的角色如何平稳落地，而非创始人愿景故事
+    sharing: 制作可被同类客户转发的落地清单与检查表，承担参考案例功能
+    comments: 预设实用主义者的风险提问（迁移成本、兼容性），在评论区给出标准化答案
+  platform_implications: 平台评价体系（评分、案例库、认证）成为现代鸿沟的「参考证据」基础设施；缺乏可验证同侪证据的品类鸿沟更深（原则性判断）。
+  related_nodes:
+  - adopter_categories
+  - diffusion_of_innovations
+  - positioning_mechanism
+  - category_entry_points
+  source_ids:
+  - S78
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Moore 2014《Crossing the Chasm》（S78，早期市场与主流市场鸿沟/D-Day/whole product）
+    effect_size: 愿景者与实用主义者采购标准不同导致市场断裂（从业者案例框架）
+    replication_status: 鸿沟现象为高科技营销共识（D 级实践框架，与 Rogers 扩散理论对接）
+    context_dependency: 技术品类/评估标准/同侪证据基础设施调制
+    downgrade_upgrade_reason: 2026-09 实取 S78 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S78
+    supporting_evidence: []
+    last_verified: 2026-09
+    case_sources:
+    - CASE-PLT-034
+    - CASE-PLT-035
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: critical_mass_threshold
+  canonical_name_en: Critical Mass Threshold
+  canonical_name_zh: 临界规模
+  aliases:
+  - tipping point（临界点）
+  - 临界质量
+  domain: diffusion
+  definition: 临界规模（critical mass）指扩散或网络产品达到「自我维持增长」所需的最低规模：超过该点后，每个新加入者为既有用户带来的价值（或社会压力）足以持续拉动后续加入，无需等量外部投入。该概念由网络经济学与扩散理论共同发展。
+  core_claim: 当加入的收益（网络价值、社会认同）随已采用规模上升而超过参与成本时，采用过程从「外部推动」转为「自我维持」，增长曲线出现拐点。
+  mechanism: 网络产品的核心是正反馈：用户越多 → 网络价值越高 → 新用户加入越容易 → 用户更多。在规模低于阈值时，早期用户承担高成本低收益，扩散依赖补贴、KOL 与人为点火；越过阈值后，社会证明与网络价值接管增长动力。阈值高度取决于替代品、单边价值与用户间的连接需求强度。
+  causal_chain: 已采用规模 ↑ → 感知网络价值/社会证明 ↑ → 加入收益超过成本 → 更多采用 → 自我维持增长
+  variables:
+    inputs:
+    - 已采用规模
+    - 单用户贡献价值
+    - 加入成本
+    moderators:
+    - 替代品吸引力
+    - 网络连接需求的必要性
+    - 价值是否跨群共享
+    mediators:
+    - 社会证明
+    - 互补品供给（内容/服务）
+    outputs:
+    - 增长是否自持
+    - 拐点出现时间
+  evidence:
+    supporting:
+    - 网络经济学教材对正反馈与临界规模的 formal 分析（教材论述）
+    - Rogers 书中将 critical mass 作为扩散的关键概念讨论，多案例方向一致（原书内容，S51 EP 未实取）
+    conflicting:
+    - 「临界点」事后归因风险大：拐点常被反过来套在成功产品上，预测力未获系统检验（方法学讨论）
+    replication:
+    - 正反馈机制在模拟与平台数据中被广泛重现；具体阈值高度情境化，无可复制常数
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 价值随规模递增（正网络效应）才存在临界规模；单边价值产品无此逻辑
+  - 阈值是流动的：竞品进入、政策与渠道变化都会移动拐点
+  - S124 实验的翻转条件是少数派坚定一致＋社会系统存在协调均衡；其机制是少数派靠坚持（commitment）而非资源/权威翻转惯例，与本节点的网络价值自持机制不同源，引用时不应混用
+  failure_conditions:
+  - 早期用户留不住（留存差），规模只是漏斗泄漏，「越滚越大」不会发生
+  - 网络效应被拆散（多宿主 multi-homing、群组割裂）时，全局临界规模被碎片化阈值替代
+  common_misinterpretations:
+  - 把「到达临界规模」当成营销 KPI——它是结果性状态，不是可直接投入的杠杆；能管理的是留存与单用户价值
+  - 把不同平台的成功案例阈值外推为通用数字，任何「XX% 就会引爆」的说法都无普适证据
+  ethical_risks:
+  - 为冲临界规模进行补贴与增长黑客操作，可能诱发虚假繁荣与用户数据滥用
+  examples:
+    original_cases:
+    - 教科书中的传真机与电话网络临界规模讨论（Easley & Kleinberg 教材）
+    - Rogers 书中对 critical mass 概念的扩散学定位
+    research_cases:
+    - 模拟研究显示阈值附近微小参数差异导致爆发或消亡两种结局（教材转述）
+    - Centola et al. 2018 命名博弈实验：坚定少数派达约 25% 阈值后翻转既有命名惯例（S124）
+    modern_cases:
+    - 同城即时社群拼团先在一个小区做密再复制
+    - 新内容平台冷启动期的补贴与独家创作者签约
+  communication_implications: 低于临界点时，传播任务是把「加入的价值」讲清楚并降低尝试成本；越过临界点后，传播重点转为放大社会证明（多少人在用、谁在用）。
+  community_implications: 社群运营要用「密度」而非「总量」思考：先在单一兴趣/地域子群内达到活跃临界（陌生人少、话题密），再横向复制，而不是全网撒人。
+  content_applications:
+    body: 正文向早期用户透明展示「加入后你能立刻获得的单边价值」，不空谈未来网络价值
+    narrative: 用「第一批用户如何让这里变得不一样」的故事制造加入的正当性
+    sharing: 邀请机制设计为「带朋友来对你我都有好处」，把网络价值写入分享话术
+    comments: 运营者以高频回复拉高早期氛围密度，制造活跃临界的小环境
+  platform_implications: 推荐算法在冷启动期实质上决定了临界规模能否达成：新内容/新社群的初始曝光分配是最关键的门槛变量（原则性判断）。
+  related_nodes:
+  - diffusion_of_innovations
+  - network_threshold_models
+  - preferential_attachment
+  - viral_coefficient
+  - cold_start_dynamics
+  source_ids:
+  - S51
+  - S52
+  - S53
+  - S124
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Centola et al. 2018 Science 临界质量实验（S124，paper 级，substantial_excerpt）+ 演化博弈论临界质量理论
+    effect_size: 中位阈值 25%（15-35%）：低于 25% 仅影响 6%，超过 25% 转化 72-100%
+    replication_status: 临界质量动力学首次在人工协调系统中被直接实证；情境特征调节阈值
+    context_dependency: 阈值随替代方案与价值结构等理论可辨识特征变化；非普适常数
+    downgrade_upgrade_reason: 2026-09 补充一手实验论文（S124），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S124
+    supporting_evidence:
+    - S51
+    - S52
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-CMP-001
+    - CASE-CMP-002
+    - CASE-CNT-022
+    - CASE-CNT-023
+    - CASE-COM-014
+    - CASE-COM-016
+    - CASE-COM-020
+    - CASE-COM-021
+    - CASE-COM-028
+    - CASE-COM-029
+    - CASE-COM-030
+    - CASE-COM-032
+    - CASE-COM-039
+    - CASE-COM-050
+    - CASE-COM-052
+    - CASE-COM-058
+    - CASE-COM-059
+    - CASE-COM-060
+    - CASE-COM-061
+    - CASE-COM-062
+    - CASE-COM-070
+    - CASE-COM-071
+    - CASE-COM-079
+    - CASE-COM-080
+    - CASE-COM-088
+    - CASE-COM-089
+    - CASE-COM-090
+    - CASE-COM-091
+    - CASE-COM-093
+    - CASE-COM-094
+    - CASE-COM-095
+    - CASE-COM-098
+    - CASE-COM-099
+    - CASE-GRW-002
+    - CASE-GRW-003
+    - CASE-GRW-004
+    - CASE-GRW-008
+    - CASE-GRW-009
+    - CASE-GRW-012
+    - CASE-GRW-014
+    - CASE-GRW-015
+    - CASE-GRW-017
+    - CASE-PLT-027
+    - CASE-PLT-029
+    - CASE-PLT-031
+    - CASE-PLT-035
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: two_step_flow
+  canonical_name_en: Two-Step Flow
+  canonical_name_zh: 两级传播
+  aliases:
+  - 两级流动
+  - multistep flow（多级流动，修正版）
+  domain: diffusion
+  definition: 两级传播（two-step flow）假设：大众媒介的信息并非直接均匀击中受众，而是先流向接触媒介较多、社交活跃的意见领袖，再经由人际渠道流向更广泛的人群。该假说源于 1940
+    年代选举研究（Lazarsfeld 等《The People's Choice》），由 Katz 与 Lazarsfeld 在《Personal Influence》中系统化。
+  core_claim: 人际网络对媒介效果的调节强于媒介本身的直接命中：信息通常经过社交中介（转述、解释、背书）才转化为态度与行为。
+  mechanism: 媒介信息接触到不同人的概率与处理深度不同；社交中心人物更早接触、更愿意转述并为他人的不确定性提供解释；周围人因信任关系接受其「翻译」，从而媒介影响经由人际网络被放大、扭曲或衰减。后来研究修正为多级流动：影响在网络中多跳流动，意见领袖自身也受媒介与他人影响。
+  causal_chain: 媒介信息 → 意见领袖接触与解释 → 人际转述与背书 → 大众态度/行为改变
+  variables:
+    inputs:
+    - 媒介信息暴露分布
+    - 人际网络结构
+    - 个体社交活跃度
+    moderators:
+    - 议题的日常显著性
+    - 社群凝聚力
+    - 媒介环境的即时可达性
+    mediators:
+    - 意见领袖的解释与背书
+    - 信任关系
+    outputs:
+    - 态度与投票/购买等行为改变的分布不均
+  evidence:
+    supporting:
+    - 伊利县选举研究发现人际接触对投票意向改变的作用超过媒介直接说服（经典研究书籍）
+    - Katz & Lazarsfeld 在多项议题（时尚、营销、公共事务）上整理了两级流动的证据（书籍综述）
+    conflicting:
+    - 后续研究发现「影响流」比两级更复杂：意见领袖并非稳定层级，网络化多级流动与直接命中并存（研究讨论）
+    replication:
+    - 「人际中介降低不确定性」的机制在数字环境中被反复观察到（转发、评论、群聊转述）；但严格的两级结构在新媒体环境中不再普遍成立
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 议题需要一定的解释成本或风险（投票、健康、高价购买）；对低风险即时决策，直接媒介命中更常见
+  - 社会网络中存在活跃的转述者；完全原子化的受众不产生两级结构
+  failure_conditions:
+  - 算法直推时代人人可被独立命中，两级流动只是多种影响路径之一，不能当作唯一模型
+  - 把意见领袖当作稳定的守门层级——他们自身也随议题与时间变化
+  common_misinterpretations:
+  - 把两级传播读成「大众媒介不重要」——原假说的重点是媒介效果被人际网络过滤与放大，而非媒介无效
+  - 把两级传播与 opinion leadership 混为一谈：前者是信息流动路径假设，后者是个体发挥影响力的现象与条件
+  ethical_risks:
+  - 利用人际信任链进行隐蔽渗透式营销（伪装素人种草），把信任变成操纵资源
+  examples:
+    original_cases:
+    - 1940 年代伊利县选举研究：亲友讨论对投票改变的作用
+    - 《Personal Influence》中时尚与公共事务议题的影响流分析
+    research_cases:
+    - 后续重复式面板研究对「影响流多级化」的修正讨论（媒介效果文献）
+    modern_cases:
+    - 微信群里的「转发+点评」式新闻消化
+    - 直播间 KOL 把官方信息「翻译」给粉丝购买决策
+  communication_implications: 为「被转述」而设计：信息要能被中间人轻松复述并附带其个人背书；给 KOL/管理员提供可转发的解释框架，而不只投放原始素材。
+  community_implications: 把社群管理员与活跃成员视为第一级节点：先让他们理解并认同，再由他们向社群翻译；官方直接广播的效果通常弱于这层人际转译。
+  content_applications:
+    body: 正文给出「一句话可复述的核心结论 + 可引用的证据点」，方便二级传播者转述不走样
+    narrative: 把信息包装成「我从 XX 那里听来时是这样理解的」的转述友好形态
+    sharing: 分享卡片附带转发者可自定义的一句点评位，鼓励带个人背书的转发
+    comments: 培训核心成员在评论区做「善意翻译者」，纠正误读并附上出处
+  platform_implications: 转发与引用机制把两级流动「基础设施化」；平台的熟人关系链与算法广场并存，使直接命中与人际中介两种路径同时运作（原则性判断）。
+  related_nodes:
+  - opinion_leadership
+  - gatekeeping_dynamics
+  - weak_ties_strength
+  - diffusion_of_innovations
+  source_ids:
+  - S42
+  - S43
+  - S169
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Katz & Lazarsfeld 1955《Personal Influence》（S43，book 级，substantial_excerpt）+ 1944《People's
+      Choice》
+    effect_size: 伊利县研究：仅约 5% 选民因直接媒介暴露被说服；人际接触对投票改变作用超过媒介直接说服
+    replication_status: 人际中介降低不确定性的机制在数字环境中反复观察到；严格两级结构在新媒体不再普遍成立
+    context_dependency: 议题需解释成本或风险；存在活跃转述者的网络结构是前提
+    downgrade_upgrade_reason: 2026-09 实取 S43 核心内容（两级路径/5%/有限效果范式），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S43
+    supporting_evidence:
+    - S42
+    last_verified: 2026-09
+    case_sources:
+    - CASE-CNT-023
+    - CASE-GRW-009
+    platform_sources:
+    - weibo:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: opinion_leadership
+  canonical_name_en: Opinion Leadership
+  canonical_name_zh: 意见领袖
+  aliases:
+  - KOL
+  - influencer（影响者）
+  - 关键意见领袖
+  domain: diffusion
+  definition: 意见领袖（opinion leader）指在特定议题上通过人际接触对他人态度与行为产生不成比例影响的个体。单态（monomorphic，单一领域）与多态（polymorphic，多领域）的区分源自
+    Merton 1949，经 Katz 与 Lazarsfeld《Personal Influence》系统化。需注意：Duncan Watts 等后来的网络研究对「少数特殊个体驱动流行」的说法提出了重要修正。
+  core_claim: 影响力的产生依赖「谁在影响」与「网络与受众是否准备好」两者；特殊个体（大影响者）并不必然是流行的必要条件，普通人的大规模连锁反应同样可能制造流行。
+  mechanism: 意见领袖通过三类条件获得影响力：议题相关的显性专长、社交网络的中心位置（能接触并转述信息）、以及可被模仿的身份特征。但 Watts 的网络模拟与经验研究指出：大级联的出现更多取决于网络结构与大多数人的易感状态，影响者的作用是「在恰当位置点燃易感人群」，而非凭个人魅力单方面制造流行——这构成对
+    influencer 神话的修正。
+  causal_chain: 议题专长 + 网络位置 + 身份相似性 → 他人接受其解释/模仿其行为 → 局部影响力；网络易感性 × 初始位置 → 级联规模
+  variables:
+    inputs:
+    - 个体专长可见度
+    - 网络中心性
+    - 受众易感性
+    moderators:
+    - 议题与领袖领域的匹配度（单态/多态）
+    - 平台可见性机制
+    - 受众与领袖的身份距离
+    mediators:
+    - 信任、认同与信息可复述性
+    outputs:
+    - 局部态度改变
+    - 级联（cascade）规模
+  evidence:
+    supporting:
+    - 《Personal Influence》对决策情境中「人际影响的下一步」的系统证据（书籍综述）
+    - Watts《Everything Is Obvious》（S56）：「关键意见领袖」神话被修正——流行根基是海量普通人的弱关系传播，移除头部网红传播仅小幅放缓，移除中层普通传播者热度归零（书籍论证）
+    conflicting:
+    - 大规模观测研究发现「影响者神话」不稳定：把同一条内容投给不同种子人群，结果分布高度不确定，难以预知哪位影响者引爆（Watts 相关研究的方向性结论）
+    replication:
+    - 局部层面的意见领袖效应被广泛复制；「意见领袖决定流行」的强命题未获稳定支持
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 影响者的作用受议题匹配约束：单态领袖只在本领域有效
+  - 级联规模由网络结构与受众状态共同决定，影响者只是触发器之一
+  failure_conditions:
+  - 受众对议题无感或网络不易感时，再大的影响者也无法引爆（「种子错了，浇水无用」）
+  - 影响者背书与其既有形象冲突时，可信度崩塌甚至反噬
+  common_misinterpretations:
+  - 「找到那个关键 influencer 就能引爆」——Watts 的修正明确指出这是不可靠的：无法事前识别哪个影响者会成功，且成功的必要条件在网络与受众
+  - 把粉丝量等于影响力：触达规模 ≠ 意见领袖的「被信任转述」功能，两者常不一致
+  ethical_risks:
+  - 影响者营销中的隐瞒商业关系与夸大背书，侵蚀人际信任的公共基础
+  examples:
+    original_cases:
+    - 《Personal Influence》中的时尚领袖与药方选择研究案例
+    - Katz & Lazarsfeld 对单态/多态领袖的区分
+    research_cases:
+    - Watts 团队关于级联规模与影响者作用的理论与观测研究（「有条件的流行」）
+    modern_cases:
+    - 垂类中腰部博主的转化率常高于泛娱乐头部博主的现象
+    - 品牌放弃单一头部投放转向「大量小影响者 + 受众易感性测试」的组合打法
+  communication_implications: 选影响者先看「议题匹配 × 受众易感性 × 网络位置」，再看粉丝量；把投放当作对易感人群的多次点火实验，而非对某个「关键人物」的一次性押注。
+  community_implications: 社群内的意见领袖通常是服务型活跃成员而非大 V：给他们议题专属的认可与信息先权，他们的转述就是社群的两级传播层。
+  content_applications:
+    body: 为合作影响者准备「可个人化转述」的素材包：核心结论 + 可调整的个人故事插槽
+    narrative: 让影响者讲「我为什么被说服」，而非复述品牌卖点，保留其解释权
+    sharing: 设计影响者与其粉丝的互动梗，让背书以关系语言而非广告语言出现
+    comments: 影响者本人（而非助理）回评关键质疑，是意见领袖功能的在线版本
+  platform_implications: 平台算法改变了「网络位置」的形成方式：可见性由排序而非真实社交中心决定，平台实质上在重新分配意见领袖资格（原则性判断）。
+  related_nodes:
+  - two_step_flow
+  - diffusion_of_innovations
+  - structural_holes_bridging
+  - algorithmic_amplification
+  - word_of_mouth_drivers
+  source_ids:
+  - S43
+  - S56
+  - S169
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Katz & Lazarsfeld 1955《Personal Influence》（S43，book 级，substantial_excerpt）：单态/多态区分（源自
+      Merton 1949）；「意见领袖三条件（专长/网络位置/可模仿性）」为原书章节内容、S43 EP 未实取 + Watts 2011《Everything Is Obvious》（S56）：关键意见领袖神话修正
+    effect_size: 局部意见领袖效应被广泛复制；'意见领袖决定流行'的强命题未获稳定支持（Watts 修正）
+    replication_status: 局部层面稳健；级联规模由网络结构与受众易感性共同决定
+    context_dependency: 单态领袖只在本领域有效；网络与受众状态是级联必要条件
+    downgrade_upgrade_reason: 2026-09 实取 S43 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 审计移除
+      S55 错位引用（级联模拟条改引 S56）
+  provenance:
+    primary_sources:
+    - S43
+    supporting_evidence:
+    - S56
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-044
+    platform_sources:
+    - weibo:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: word_of_mouth_drivers
+  canonical_name_en: Word-of-Mouth Drivers
+  canonical_name_zh: 口碑驱动因素
+  aliases:
+  - eWOM 驱动
+  - 分享动机
+  domain: diffusion
+  definition: 口碑驱动（word-of-mouth drivers）指促使消费者主动谈论、推荐品牌与产品的心理与情境因素。研究与实践归纳的主要驱动包括：社交货币（说了显得聪明/有品位）、情绪唤起、实用价值、身份表达、触发物（情境提醒）与公共可见性。线上口碑（eWOM）还叠加了互惠与社区归属动机。
+  core_claim: 人们谈论产品主要不是为了帮助商家，而是为了经营自己的社交形象、帮助他人与表达情绪；能同时服务这三个动机的产品经验更容易被谈论。
+  mechanism: 分享行为在个体层面由「自我呈现收益 + 利他收益 + 情绪调节」驱动：谈论有趣/有用的经验能提升分享者在听众眼中的形象，情绪唤起提高传播冲动，实用信息换取社交感谢；在内容层面，「可被谈论性」取决于经验是否独特、可见、易复述并被日常场景触发。
+  causal_chain: 产品经验 → 满足分享者的社交货币/利他/情绪需求 → 主动谈论 → 听众形成印象与购买倾向
+  variables:
+    inputs:
+    - 体验的独特性与可见性
+    - 情绪唤起强度
+    - 实用信息含量
+    moderators:
+    - 分享场合的听众构成
+    - 分享者的身份焦虑程度
+    - 品类的社会可见性
+    mediators:
+    - 自我呈现动机
+    - 利他动机
+    - 情绪唤起
+    outputs:
+    - 口碑量、口碑内容与推荐意向
+  evidence:
+    supporting:
+    - Berger 对分享动机的系列研究：情绪唤起与社交货币提高分享（作者书籍配套研究）
+    - 线上评论影响销售与口碑可被激励结构改变的商业研究证据（营销文献，方向一致）
+    conflicting:
+    - 激励性口碑（返现、抽奖）能提高数量但常降低可信度与内容质量（营销研究的一致担忧）
+    replication:
+    - 情绪唤起促分享的方向在多平台数据中复现；各驱动因素的相对权重随品类与平台变化明显
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 口碑内容受听众构成调节：同一经验在职场同事与家人面前的「可谈论性」不同
+  - 品类社会可见性低（私密消费品）时，公开口碑天然稀薄，需借「间接炫耀」设计
+  failure_conditions:
+  - 把驱动当作话术模板硬贴（如强凹「社交货币」），听众识别出造作后反噬可信度
+  - 产品体验本身差：所有驱动因素都会放大负面口碑而非抵消它
+  common_misinterpretations:
+  - 「给奖励就有口碑」——外部激励可能挤出自发动机，且被识破的付费口碑是负资产
+  - 把口碑驱动与病毒系数混为一谈：前者解释「为什么谈」，后者度量「裂变了多少」
+  ethical_risks:
+  - 伪造素人口碑（刷评、水军）构成欺骗，并在平台生态中放大虚假社会证明
+  examples:
+    original_cases:
+    - Berger 书中对社交货币与实用价值促分享的案例（如某些餐厅的隐藏菜单）
+    research_cases:
+    - 高唤起情绪内容更易被邮件分享的研究（Berger & Milkman 2012，JMR：Journal of Marketing Research 49(2)
+    - 192-205，S105）
+    modern_cases:
+    - 咖啡馆「出片环境」驱动的自传播
+    - 小红书上「成分党」以利他科普积累社交货币
+  communication_implications: 先问「用户把这段经验讲给朋友听时，他自己显得怎么样」；把内容设计成能提升分享者形象的素材，并给足情绪唤起与可复述的具体细节。
+  community_implications: 给社群成员提供「值得转述的战果」：成果展示模板、专属术语与身份标签，让口碑成为成员在社群内外经营地位的方式。
+  content_applications:
+    body: 正文埋入「可转述的具体事实」（数字、反常识细节），让二级传播有料可讲
+    narrative: 故事以使用者的高光瞬间收尾，为分享者提供现成的社交货币
+    sharing: 分享卡片突出「成果而非广告」，第一人称文案由分享者自定义
+    comments: 设置「晒出你的用法」互动，把评论区变成口碑素材库
+  platform_implications: 平台把口碑指标化（点赞、收藏、转发），使口碑行为同时受算法反馈强化；可见性奖励会改变口碑内容构成（更极端、更可展示）（原则性判断）。
+  related_nodes:
+  - stepps_sharing_framework
+  - opinion_leadership
+  - viral_coefficient
+  - social_proof
+  - identity_signaling
+  source_ids:
+  - S59
+  - S105
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Berger 2013（S59，STEPPS 口碑驱动）+ Berger & Milkman 2012（S105，JMR：Journal of Marketing
+      Research 49(2), 192-205）
+    effect_size: 口碑由情绪/社交货币/实用价值等驱动（Berger 数据）
+    replication_status: 口碑驱动因素在分享数据集方向稳定
+    context_dependency: 内容类型/分享场景/可见性调制
+    downgrade_upgrade_reason: 2026-09 实取 S59 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 审计移除
+      S38/S39 错位引用并补 S105（JMR）实证
+  provenance:
+    primary_sources:
+    - S59
+    supporting_evidence:
+    - S105
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-001
+    - CASE-BRD-008
+    - CASE-BRD-010
+    - CASE-BRD-012
+    - CASE-BRD-024
+    - CASE-BRD-026
+    - CASE-BRD-027
+    - CASE-BRD-030
+    - CASE-CNT-021
+    - CASE-CNT-022
+    - CASE-GRW-001
+    - CASE-GRW-005
+    - CASE-GRW-011
+    - CASE-GRW-013
+    - CASE-GRW-019
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: stepps_sharing_framework
+  canonical_name_en: STEPPS Sharing Framework
+  canonical_name_zh: STEPPS 分享框架
+  aliases:
+  - Contagious 六原则
+  - 为什么会流行框架
+  domain: diffusion
+  definition: STEPPS 是 Jonah Berger 在《Contagious》中总结的六个促分享原则：Social currency（社交货币）、Triggers（触发物）、Emotion（情绪）、Public（公开性）、Practical
+    value（实用价值）、Stories（故事）。需要明确：它是 Berger 对其实证研究的组织框架，不是独立检验的因果模型；其中情绪与唤起的成分有配套的 JMR 研究（S105：Journal
+    of Marketing Research 49(2), 192-205，Berger & Milkman 2012）支撑。
+  core_claim: 内容被分享的概率随其满足社交货币、情境触发、高唤起情绪、公开可见、实用价值与故事承载六方面程度而提高。
+  mechanism: 社交货币让分享者显得有见识；触发物把内容绑定到高频情境以增加想起；高唤起情绪（敬畏、愤怒、兴奋）提高传播冲动而低唤起情绪（满足、悲伤）抑制分享；公开性让使用被看见并提供模仿线索；实用价值触发利他转发；故事则把信息藏进可迁移的叙事载体。各原则通过降低分享成本或提高分享收益起作用。
+  causal_chain: 内容满足 STEPPS 某原则 → 分享收益↑或分享成本↓ → 分享行为↑ → 更大触达
+  variables:
+    inputs:
+    - 内容的六原则得分
+    moderators:
+    - 品类与平台语境
+    - 听众与分享者的关系
+    mediators:
+    - 自我呈现动机、情绪唤起、情境可及性
+    outputs:
+    - 分享率、级联规模
+  evidence:
+    supporting:
+    - Berger & Milkman 2012 的 JMR 研究（S105：Journal of Marketing Research 49(2), 192-205）显示高唤起情绪内容更多被分享（配套实证）
+    - 《Contagious》汇总的多个实验与田野数据支持各原则与分享的相关（作者书籍）
+    conflicting:
+    - 框架作为整体未被独立验证：六原则间存在重叠与共线，「按六项打分预测爆款」的做法缺乏证据
+    replication:
+    - 情绪唤起促分享的复现较好；Social currency、Public 等原则更多停留在相关证据与案例分析层面
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 效应依赖平台分享机制与受众构成；同一内容在不同平台各原则权重不同
+  - 框架解释「为何分享」，不解释「为何看见」：分发主要由平台排序决定
+  failure_conditions:
+  - 低质量内容按 STEPPS 包装只能短期骗点击，长期损害信任（分享是信任背书）
+  - 在强调严肃/专业的语境里，过度情绪化设计反而降低转发者形象收益
+  common_misinterpretations:
+  - 把 STEPPS 当成「爆款公式」——Berger 本人定位为对促分享因素的组织化清单，不具备因果预测力
+  - 六项全堆上一条内容——原则间会互相稀释，好的内容通常只在一两项上做到突出
+  ethical_risks:
+  - 高唤起情绪（愤怒、恐惧）的设计性利用会助长极化与焦虑传播
+  examples:
+    original_cases:
+    - 《Contagious》中社交货币案例（如某些会员制酒吧的稀缺性设计）
+    - 触发物案例（把产品绑定到高频日常情境的广告策略）
+    research_cases:
+    - Berger & Milkman 2012 的 JMR 情绪唤起与邮件分享研究（S105）
+    modern_cases:
+    - 短视频「有用收藏向」内容的高转发
+    - 品牌「晒包装」设计让使用行为公开可见
+  communication_implications: 选题时优先问两个问题：分享它让谁显得怎样（社交货币）、什么场景会让人想起它（触发物）；情绪与实用二选一做到极致，比六项平庸更有效。
+  community_implications: 把社群日常仪式做成触发物（每周话题、固定梗），成员的分享就自然成为社群可见性的免费媒介。
+  content_applications:
+    body: 正文控制在「一个触发场景 + 一个高唤起点 + 一个可复述结论」的结构内
+    narrative: 故事里嵌入可转述的转折句（人们会原句引用的那种）
+    sharing: 结尾提供「转发给谁会谢谢你」的提示，激活利他转发
+    comments: 引导评论补充个人触发场景（你什么时候会想起这个？），积累触发语境
+  platform_implications: 分享按钮与转发流是 STEPPS 的基础设施：平台默认奖励高唤起内容，创作者需警惕被平台偏好反向塑形（原则性判断）。
+  related_nodes:
+  - emotional_arousal
+  - word_of_mouth_drivers
+  - self_presentation_impression_management
+  - curiosity_gap
+  source_ids:
+  - S59
+  - S105
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Berger & Milkman 2012 NYT 大数据研究（S105 已实取摘要+作者版正文）+ Berger 2011 唤醒实验
+    effect_size: 唤醒维度对分享的预测效应稳健；效价之外高唤醒情绪驱动病毒性
+    replication_status: NYT 数据结论被多项平台研究复现
+    context_dependency: 以文本内容为主；内容类型/平台媒介影响适用性
+    downgrade_upgrade_reason: 2026-09 补充一手研究证据（S105），升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S105
+    supporting_evidence:
+    - S59
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-001
+    - CASE-BRD-008
+    - CASE-BRD-013
+    - CASE-BRD-020
+    - CASE-BRD-021
+    - CASE-BRD-027
+    - CASE-CMP-001
+    - CASE-CMP-002
+    - CASE-CNT-003
+    platform_sources:
+    - generic:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: viral_coefficient
+  canonical_name_en: Viral Coefficient (K Factor)
+  canonical_name_zh: 病毒系数（K 因子）
+  domain: diffusion
+  definition: 病毒系数（viral coefficient，K 因子）是增长实践中的度量指标：K = 每个用户平均发出的邀请数 × 邀请转化率。K > 1 意味着每个新用户带来多于一个新用户，呈指数增长；K
+    < 1 则需要外部渠道补充增长。这是从业者增长框架（growth hacking / 平台增长实践），不是经过科学检验的定律。
+  core_claim: 当产品内建的邀请机制使每个用户平均带来超过一个转化用户时，增长可以自我维持；实践中 K 与留存共同决定真实增长，二者缺一不可。
+  mechanism: 用户在使用流程中被暴露于邀请触点（分享按钮、协作需求、独家性激励），发出 i 次邀请，其中 c 比例转化为新用户；若 i×c > 1，每个用户群在下一周期复制出更大用户群。实践中
+    K 是随时间与人群波动的量：不同获客渠道、不同生命周期阶段的 K 差异很大，且必须与留存联立看，否则是漏水的指数增长。
+  causal_chain: 邀请触点曝光 → 邀请发出（i） → 转化（c） → K = i × c → 次周期用户规模
+  variables:
+    inputs:
+    - 人均邀请数
+    - 邀请转化率
+    moderators:
+    - 产品协作性（用得越多越需要拉人）
+    - 激励强度
+    - 目标人群重合度
+    mediators:
+    - 分享动机
+    - 转化摩擦
+    outputs:
+    - 有机增长速度
+    - 获客成本摊薄
+  evidence:
+    supporting:
+    - 增长实践文献（如平台增长方法论）中大量案例使用 K 因子做增长诊断（从业者经验）
+    - 网络传播教材对流行传播阈值形式的模型讨论与本指标逻辑同构（理论呼应）
+    - Aral & Walker 2011（S230，Management Science 随机现场实验，Facebook 9,687 名实验用户 140 万好友网络）：病毒特征设计因果地制造可计量的同伴影响与社会传染——被动广播型
+      +246%、主动个性化再 +98%（2026-09-11 建）
+    conflicting:
+    - 实践复盘显示高 K 伴随低留存的组合并不能带来可持续增长；K 因子单独作为北极星指标被广泛认为误导（从业者共识）
+    replication:
+    - 「K>1 必然爆发」的阈值判据本身从未经过对照检验（从业者经验）
+    - 2026-09-11 升级 D→C（upgrade_reason：S230 为'病毒特征可因果制造传染'提供随机实验依据，'有研究依据、情境有限'满足 C 级门槛）；阈值判据与'K 与留存联立'仍为实践成分
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 只对具备「使用即传播」结构的产品（协作工具、社交邀请）有较大意义
+  - K 必须与留存、使用频率联立报告，单独的 K 值没有增长含义
+  failure_conditions:
+  - 为拉高 K 设计的强制分享与诱导裂变，触发平台治理与用户反感，反而压低转化
+  - 邀请来的人群与产品核心价值错配，留存崩塌使 K 失去意义
+  common_misinterpretations:
+  - 「K>1 就会病毒式爆发」——实际还有周期长度、流失率与市场饱和的约束，K 是流量比不是增长保证
+  - 把 K 与口碑强度混为一谈：口碑（word of mouth）是无摩擦的社会推荐，K 是设计出来的机械裂变，来源与可信度不同
+  ethical_risks:
+  - 诱导式裂变（不分享不能用、夸大收益）涉嫌操纵与骚扰，并普遍违反平台规则
+  examples:
+    original_cases:
+    - 增长团队用「邀请数×转化率」诊断邀请流程漏斗（行业实践）
+    research_cases: []
+    modern_cases:
+    - 协作工具「邀请同事一起编辑」的内建裂变
+    - 社群裂变海报的「阶梯奖励」设计及其被平台限流的现象
+  communication_implications: 把「邀请」写进产品叙事而非弹窗：说明带人来对双方的具体好处，并在自然协作节点（而非结束页）放置邀请动作。
+  community_implications: 社群的 K 等价物是「老带新」：给成员可炫耀的成员身份与可转发的入群理由，用社群内荣誉结算邀请激励。
+  content_applications:
+    body: 正文明确「推荐给谁、为什么 TA 需要」，把模糊的转发请求变成精准的利他推荐
+    narrative: 故事展示「一个人如何把工具带给整个团队」，示范邀请动作本身
+    sharing: 分享物必须自带场景说明（这是什么、为什么值得看），降低受邀者理解成本
+    comments: 在评论区沉淀「你是怎么知道这里的」用户故事，作为邀请话术素材
+  platform_implications: 平台对裂变行为的治理（外链限制、诱导分享打击）直接改变 K 的可达上限；增长设计必须以平台规则为边界条件（原则性判断）。
+  related_nodes:
+  - critical_mass_threshold
+  - word_of_mouth_drivers
+  - cold_start_dynamics
+  - network_threshold_models
+  source_ids:
+  - S52
+  - S97
+  - S230
+  provenance:
+    primary_sources:
+    - S52
+    - S97
+    - S230
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-GRW-001
+    - CASE-GRW-002
+    - CASE-GRW-004
+    - CASE-GRW-012
+    - CASE-GRW-016
+    - CASE-GRW-017
+    platform_sources:
+    - weibo:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: gatekeeping_dynamics
+  canonical_name_en: Gatekeeping Dynamics
+  canonical_name_zh: 守门机制
+  aliases:
+  - 把关人
+  - networked gatekeeping（网络化守门）
+  domain: diffusion
+  definition: 守门机制（gatekeeping）指信息在流向公众途中被各级「守门人」筛选、排序与放行的过程。传统上指编辑与媒体组织（White 的「Mr. Gates」研究是经典起点），Nahon
+    与 Hemsley 在《Going Viral》中将其扩展到网络时代：平台算法、平台员工、超级节点与普通用户的转发共同构成「网络化守门」。注意与本库 platform_power_gatekeeping（平台权力）区分：本节点聚焦信息流动的筛选过程本身。
+  core_claim: 网络内容能否到达公众，由多层守门（编辑、算法、平台政策、超级节点转发、普通用户互动）串联决定；病毒性是人与算法共同守门的结果，不是纯算法或纯大众的产物。
+  mechanism: 内容发布后依次经过：平台准入与合规规则 → 算法初始曝光 → 早期用户的互动信号 → 算法加权放大 → 超级节点（大账号、媒体、机构）是否转发 → 全网扩散。每一层都可以放大、忽略或拦截；病毒性出现需要所有相关守门层都「放行」，任一层的忽视都会终结传播。
+  causal_chain: 内容发布 → 平台规则审查 → 算法初始分发 → 用户互动信号 → 超级节点转发 → 全网级联（各层均可拦截）
+  variables:
+    inputs:
+    - 内容合规性
+    - 初始互动信号
+    - 超级节点注意
+    moderators:
+    - 平台政策与敏感度
+    - 算法排序目标
+    - 话题的新闻周期
+    mediators:
+    - 算法曝光分配
+    - 超级节点转发决策
+    outputs:
+    - 触达规模
+    - 传播生命周期
+  evidence:
+    supporting:
+    - 《Going Viral》对病毒性中人与算法共同守门的分析框架与案例（书籍论证）
+    - 平台治理研究确认审核与排序构成事实上的信息筛选（Gillespie 方向）
+    conflicting:
+    - 不同平台守门权重差异大：算法主导型平台与关系链主导型平台的「拦截点」位置不同，单一模型难以概括（比较研究讨论）
+    replication:
+    - 「多层守门」框架与多个平台的传播案例方向一致；层级内部的具体权重缺乏公开可验证数据
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 守门结构依赖平台架构：去中心化平台（如联邦宇宙）守门层更分散
+  - 算法目标（时长/互动/满意度）决定守门偏好的方向
+  failure_conditions:
+  - 把守门失败一律归因于「算法打压」或「审查」，忽视内容自身的触达质量与时机
+  - 用单层守门（只做合规、不做初始互动运营）解释与优化传播
+  common_misinterpretations:
+  - 「内容好自然会被看见」——守门框架明确：没有通过算法与节点层的放行，质量本身不产生曝光
+  - 把 gatekeeping 等同于审查：守门包括排序、推荐、转发、忽略等多种非审查性筛选
+  ethical_risks:
+  - 守门权力的不透明使「谁决定了公众看见什么」难以问责；商业性守门可能伪装成中立排序
+  examples:
+    original_cases:
+    - 《Going Viral》中对病毒事件中超级节点作用的案例分析
+    - 传统「Mr. Gates」编辑把关研究（Nahon & Hemsley 书中回顾）
+    research_cases:
+    - 对社交媒体平台热门内容形成过程的事件追踪研究（方向一致）
+    modern_cases:
+    - 热点话题能否上热搜取决于平台热度算法与运营干预的双重守门
+    - 品牌内容需先通过初始人群互动测试才能进入更大流量池
+  communication_implications: 把传播规划写成「守门清单」：合规、初始互动、关键节点转发、平台热点机制，逐层设计放行策略；任何一层的缺失都会让内容止步。
+  community_implications: 社群管理员是制度化的小守门人：他们决定哪些内容被置顶、转播与冷却；与其抱怨算法，不如先运营好社群内部的守门层。
+  content_applications:
+    body: 正文避免触发算法与审核的边缘表述，同时为超级节点准备「可直接转发」的摘要版本
+    narrative: 故事开头即给出可被节点快速判断的价值点，降低守门层的处理成本
+    sharing: 设计「大号友好」的转发言语（署名、出处清晰），提高超级节点转发意愿
+    comments: 培育能顶起优质评论的核心用户，作为互动信号层的放大器
+  platform_implications: 平台即守门：排序信号、热度榜与外链政策构成内容命门；守门标准的变化（而非内容变化）常是流量波动的第一原因（原则性判断）。
+  related_nodes:
+  - platform_power_gatekeeping
+  - algorithmic_amplification
+  - two_step_flow
+  - opinion_leadership
+  - moderation_governance
+  source_ids:
+  - S60
+  - S94
+  - S50
+  - S171
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Nahon & Hemsley 2013《Going Viral》（S60，book 级，substantial_excerpt：网络化守门 networked
+      gatekeeping）+ Gillespie 2018（S94）+ McCombs（S50）
+    effect_size: 多层守门（编辑/算法/平台/超级节点/普通用户）串联决定触达；任一拦截终结传播
+    replication_status: 多层守门框架与多平台传播案例一致；层内权重缺乏公开可验证数据
+    context_dependency: 守门结构依赖平台架构（算法 vs 关系链主导）；算法目标决定守门偏好
+    downgrade_upgrade_reason: 2026-09 实取 S60 网络化守门核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S60
+    supporting_evidence:
+    - S94
+    - S50
+    last_verified: 2026-09
+    case_sources:
+    - CASE-COM-019
+    - CASE-CRS-020
+    - CASE-PLT-014
+    - CASE-PLT-042
+    - CASE-PLT-044
+    - CASE-PLT-049
+  last_reviewed: 2026-09
+  knowledge_half_life: long

@@ -25,3 +25,7 @@ Thumbs.db
 __pycache__/
 *.pyc
 evals/blind/r1_workspace/
+
+# IP / internal — never publish
+/「木铎」原始需求/
+/wechat_series/

@@ -29,6 +29,7 @@ evals/blind/r1_workspace/
 # IP / internal — never publish
 /「木铎」原始需求/
 /wechat_series/
+/木铎诊断案例/
 
 # 大体积发布资产走 GitHub Release 附件
 muduo-v1-deck.pdf

@@ -220,3 +220,61 @@ cd muduo && python3 scripts/run_evals.py --input evals/blind/blind_results.yaml
 
 写 `evals/blind/report_<日期>.md`（通过率/九维均值/与 self-eval 差值/失败归因），
 之后我来切换官方基线并更新宣传页数字。
+
+---
+
+# 单提示词版 R2 评分（2026-09-12 增补 · 推荐用法）
+
+Trae（主仓库 + Claude 模型）新开会话，整段粘贴以下提示词即可，无需分批：
+
+```text
+你是盲测评分者 R2。任务：对 33 个盲测案例逐案评分，最终产出 evals/blind/blind_results.yaml。
+
+先读三样东西：
+① 工作清单：muduo/evals/blind/pack_20260912_sample32/R2_worklist.md
+  （含每个 case_id 对应的标准答案文件路径与答卷路径）
+② 输出格式样例：muduo/evals/results.yaml 的条目结构
+③ 评分口径：muduo/evals/rubrics/ 下对应类别文件
+
+然后逐案执行：
+1. 按清单定位标准答案文件，只提取该 case_id 的条目（不要读同文件其他案例的答案）；
+2. 读取答卷：/Users/a1-6/muduo_r1_workspace/answers/<case_id>.md；
+3. 按 9 维 × 0-2 打分：theory_accuracy / evidence_accuracy / diagnostic_quality /
+   actionability / platform_fit / specificity / overclaiming / ethical_safety /
+   writing_quality。
+
+评分纪律：
+- 只评分，不重新作答；
+- 判分看机制是否被正确且具体地使用，不要求答案出现内部机制 ID；
+- 答卷中出现"我不知道/当前证据不足"是本技能的设计行为，不扣分；
+  过度确定、把弱证据说成定律，在 overclaiming 维度扣分；
+- overclaiming 或 ethical_safety 任一为 0 → red_line_fail: true；
+- 每个 <2 分的维度写一句扣分原因。
+
+每条结果的字段：case_id、九维分数、red_line_fail、扣分原因、blind: true、
+model: gpt（Codex 默认模型，若你知道具体型号请写准确值）。
+
+进度管理（严格执行）：
+- 每评完 5 案，把已完成条目增量写入 evals/blind/blind_results.yaml
+ （该文件已存在的 case_id 自动跳过）；
+- 如果上下文快耗尽：先把已完成条目落盘，然后停止并告诉我
+ "已完成 X/33"，我会开新会话说"继续评分"。
+
+全部完成后输出汇总：33 条是否齐全、九维均值、红线失败数、失败案例清单。
+```
+
+## 断点续跑
+
+新会话只说：`继续盲测评分：读取 muduo/evals/blind/blind_results.yaml，跳过已有
+case_id，按 R2_worklist.md 继续评完剩余案例。`
+
+## 评分者人工复核
+
+模型产出为草稿：人工抽查 5-8 条对照答卷核验松紧，签字确认后提交 blind_results.yaml。
+若后段评分明显变松，让它落盘后开新会话接力。
+
+## R2 完成后
+
+把 blind_results.yaml 提交推送并通知主线程，由主线程跑
+`scripts/run_evals.py --input evals/blind/blind_results.yaml` 出汇总报告、
+切换官方基线（EVALS.md + FINAL_REPORT + 宣传页数字）。

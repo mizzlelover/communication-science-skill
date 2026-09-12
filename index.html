@@ -635,10 +635,10 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
   <div class="wrap">
     <div class="kicker reveal">叁 · 机制星图<span class="en">Mechanism Atlas · 星图</span></div>
     <h2 class="reveal">下面这张图，是它的<span class="verm">知识本体</span>。</h2>
-    <p class="lead reveal">不是装饰性动画——每个墨点都是知识库里的<b>真实机制节点</b>，连线是真实的 <code style="font-family:var(--mono);font-size:.85em;color:var(--c-cog)">related_nodes</code> 关系，等级标签来自逐节点的证据定级。如敦煌星图之于天象，此图之于传播。这是 216 节点全图的 <b>73 节点高权重子图</b>。悬停查看，拖拽把玩。</p>
+    <p class="lead reveal">不是装饰性动画——每个墨点都是知识库里的<b>真实机制节点</b>，连线是真实的 <code style="font-family:var(--mono);font-size:.85em;color:var(--c-cog)">related_nodes</code> 关系，等级标签来自逐节点的证据定级。如敦煌星图之于天象，此图之于传播。这是 216 节点全图的 <b>73 节点高权重子图</b>。悬停或点按节点查看备注，拖拽把玩。</p>
     <div class="atlas-shell reveal">
       <canvas id="atlasCv"></canvas>
-      <div class="atlas-hud"><b>REAL KNOWLEDGE GRAPH</b><br>73 NODES · 148 EDGES · 32 DOMAINS<br>HOVER / DRAG TO EXPLORE</div>
+      <div class="atlas-hud"><b>REAL KNOWLEDGE GRAPH</b><br>73 NODES · 148 EDGES · 32 DOMAINS<br>TAP / HOVER / DRAG TO EXPLORE</div>
       <div class="atlas-seal"><span class="seal" style="width:44px;height:44px;font-size:15px;border-radius:5px">星<br>图</span></div>
       <div id="tip"></div>
     </div>
@@ -992,7 +992,7 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
   const adj=nodes.map(()=>[]);
   ATLAS.edges.forEach(e=>{const a=idx[e.a],b=idx[e.b];if(a!=null&&b!=null){adj[a].push(b);adj[b].push(a);}});
   nodes.forEach(n=>{n.dz=n.dz.split('（')[0];});
-  let W,H,hover=-1,drag=-1,activeGrp=null,run=true;
+  let W,H,hover=-1,drag=-1,activeGrp=null,run=true,pin=-1,downP=null;
   function size(){
     W=cv.clientWidth||cv.parentElement.clientWidth;H=cv.clientHeight;
     const DPR=Math.min(devicePixelRatio||1,2);
@@ -1044,10 +1044,11 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
   }
   function draw(){
     cx.clearRect(0,0,W,H);
+    const hv=hover>=0?hover:pin;
     for(const e of ATLAS.edges){
       const a=nodes[idx[e.a]],b=nodes[idx[e.b]];if(!a||!b)continue;
       const dimmed=activeGrp&&(a.grp!==activeGrp||b.grp!==activeGrp);
-      const hl=hover>=0&&(idx[e.a]===hover||idx[e.b]===hover);
+      const hl=hv>=0&&(idx[e.a]===hv||idx[e.b]===hv);
       cx.strokeStyle=hl?'rgba(166,58,36,.62)':`rgba(70,58,38,${dimmed?.03:.16})`;
       cx.lineWidth=hl?1.5:1;
       cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();
@@ -1058,8 +1059,8 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
     }
     nodes.forEach((n,i)=>{
       const dim=activeGrp&&n.grp!==activeGrp;
-      const isH=i===hover,nb=hover>=0&&adj[hover].includes(i);
-      cx.globalAlpha=dim?.07:((hover<0||isH||nb)?1:.3);
+      const isH=i===hv,nb=hv>=0&&adj[hv].includes(i);
+      cx.globalAlpha=dim?.07:((hv<0||isH||nb)?1:.3);
       // 墨点 · 纸白芯 + 矿物色边
       cx.fillStyle='#f8f4e9';
       cx.strokeStyle=GRP[n.grp][1];
@@ -1088,32 +1089,47 @@ const barsEl=document.querySelector('.bars');if(barsEl)bio.observe(barsEl);
     }
     return best;
   }
+  function showTip(i,p){
+    const n=nodes[i];
+    tip.innerHTML=`<div class="tz">${n.zh}</div><div class="te">${n.en}</div>
+      <div class="tm">${n.dz} · 等级 <b>${n.g}</b> · 全图引用度 ${n.deg}<br>本子图相连 ${adj[i].length} 个机制</div>`;
+    tip.style.opacity=1;
+    let tx=p.x+18,ty=p.y-14;
+    if(tx+tip.offsetWidth>W-10)tx=p.x-tip.offsetWidth-18;
+    if(ty+tip.offsetHeight>H-6)ty=H-tip.offsetHeight-8;
+    tip.style.left=tx+'px';tip.style.top=ty+'px';
+  }
+  function hideTip(){tip.style.opacity=0;}
   cv.addEventListener('pointermove',ev=>{
     const p=locate(ev);
     if(drag>=0){
       nodes[drag].x=Math.max(24,Math.min(W-24,p.x));
       nodes[drag].y=Math.max(24,Math.min(H-24,p.y));
+      if(pin===drag)showTip(pin,{x:nodes[pin].x,y:nodes[pin].y});
       return;
     }
     hover=pick(p.x,p.y);
     cv.style.cursor=hover>=0?'pointer':'grab';
-    if(hover>=0){
-      const n=nodes[hover];
-      tip.innerHTML=`<div class="tz">${n.zh}</div><div class="te">${n.en}</div>
-        <div class="tm">${n.dz} · 等级 <b>${n.g}</b> · 全图引用度 ${n.deg}<br>本子图相连 ${adj[hover].length} 个机制</div>`;
-      tip.style.opacity=1;
-      let tx=p.x+18,ty=p.y-14;
-      if(tx+tip.offsetWidth>W-10)tx=p.x-tip.offsetWidth-18;
-      if(ty+tip.offsetHeight>H-6)ty=H-tip.offsetHeight-8;
-      tip.style.left=tx+'px';tip.style.top=ty+'px';
-    }else tip.style.opacity=0;
+    const s=hover>=0?hover:pin;
+    if(s>=0)showTip(s,s===hover?p:{x:nodes[s].x,y:nodes[s].y});else hideTip();
   },{passive:true});
   cv.addEventListener('pointerdown',ev=>{
-    const p=locate(ev);drag=pick(p.x,p.y);
+    const p=locate(ev);downP={x:p.x,y:p.y};drag=pick(p.x,p.y);
     if(drag>=0){cv.classList.add('grabbing');try{cv.setPointerCapture(ev.pointerId);}catch(_){}}
   });
-  addEventListener('pointerup',()=>{drag=-1;cv.classList.remove('grabbing');});
-  cv.addEventListener('pointerleave',()=>{hover=-1;tip.style.opacity=0;});
+  addEventListener('pointerup',ev=>{
+    if(downP){
+      const r=cv.getBoundingClientRect();
+      const dx=ev.clientX-r.left-downP.x,dy=ev.clientY-r.top-downP.y;
+      if(dx*dx+dy*dy<144){
+        const hit=pick(downP.x,downP.y);
+        pin=(hit>=0&&pin!==hit)?hit:-1;
+        if(pin>=0)showTip(pin,{x:nodes[pin].x,y:nodes[pin].y});else hideTip();
+      }
+    }
+    drag=-1;downP=null;cv.classList.remove('grabbing');
+  });
+  cv.addEventListener('pointerleave',()=>{hover=-1;if(pin<0)hideTip();});
 
   const fl=document.getElementById('filters');
   const counts={};nodes.forEach(n=>counts[n.grp]=(counts[n.grp]||0)+1);

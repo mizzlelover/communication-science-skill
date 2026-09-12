@@ -48,7 +48,7 @@ Research Integrity**。
 - **现状**：210/210 来源实读或佐证级（206 份活跃 Evidence Package，另含 4 份同书合并
   MERGED_INTO 墓碑）· 216/216 节点带 provenance（其中 10 个显式保持 MEMORY_BASED）·
   案例 354（全部带一手材料，七类达标）· 平台核验 13/13 · 评测案例 208 ·
-  **Research Gate A 83% / B 100% / C 100% / D 100%**
+  **Research Gate A 97% / B 100% / C 100% / D 100%**
 - **状态机**：来源 PLANNED→FOUND→ACQUIRED→READ→ANNOTATED→VALIDATED→DISTILLED；
   只有 VALIDATED+ 才能作为知识核心主要证据（Found ≠ Researched · Cited ≠ Read）
 - **平台证据四级**：L1 官方规则（须实读官方正文）/ L2 已验证观察 / L3 行业共识 / L4 假设；
@@ -99,5 +99,5 @@ CHANGELOG.md（版本记录）。
 
 v1.0（2026-09-09）：研究资产完备——210/210 来源实读或佐证级、216 机制节点
 （全部带 provenance，P0=0）、案例 354（七类达标，全部带一手材料）、平台核验 13/13、
-评测 208（含长文专项 65 例）、Research Gate A 83% / B·C·D 100%；
+评测 208（含长文专项 65 例）+ 外部盲测 33 案、Research Gate A 97% / B·C·D 100%；外部双盲测 33 案红线 0；
 自动化校验与诚信审计齐备（scripts/）。已知限制与证据边界见 EVIDENCE.md。

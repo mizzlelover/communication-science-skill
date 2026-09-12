@@ -60,7 +60,7 @@ boundary behind every recommendation.**
 *证据等级 A–E 与内置反玄学清单 · Evidence grades A–E and the built-in anti-myth list*
 
 ![评测数据 · Evaluation](assets/screens/07-evals.jpg)
-*208 评测案例与多轮环境隔离盲测 · 208 evaluation cases and multiple rounds of isolated blind tests*
+*208 评测案例 + 外部双盲测 33 案（红线 0）· 208 eval cases + external double-blind test (33 cases, zero red lines)*
 
 ![多环境安装 · Install](assets/screens/08-install.jpg)
 *Claude Code / Codex / OpenCode / Trae 五种接入方式 · Five installation paths for mainstream agents*
@@ -235,12 +235,15 @@ mkdir -p ~/.config/opencode/skills && cp -R muduo ~/.config/opencode/skills/
 | 评测 | 规模 | 结果 |
 |---|---|---|
 | self-eval | 160 案例（110 基础 + 50 长文） | 160/160 通过，红线 0；基础集均值 17.71/18，长文集 17.94/18 |
-| 环境隔离盲测 | 32 案分层抽样 ×3 轮 + E2 专项 48 案（作答不可见答案 · 独立评分 · 审计抽查） | 全部通过、红线 0 |
+| **外部双盲测**（2026-09-12 正式基线） | 33 案分层抽样：R1 = GPT（Codex 净室、仓库外隔离）作答 · R2 = 豆包 Seed evolving 评分 · R3 = 审计抽查 | **均分 17.88/18 · 红线 0 · 回归 10/10** |
+| self-eval（历史参考） | 全量 208 案（含 E2 对抗 48） | 208/208 通过 |
 | 长文实跑验证 | 5000 字演示文章，预埋 15 类缺陷 | 15/15 全部命中 |
 
 评分维度：9 维 × 0–2 分 + 双红线（overclaiming / ethical_safety 任一 0 分即整案失败）。
-已知局限：盲测存在训练性同源（彻底解法为外部独立模型执行）、全量 208 案的外部独立
-盲测未跑（协议已就绪：`evals/blind_protocol.md`）——详见 [EVALS.md](muduo/EVALS.md)。
+盲测与自评分数接近触发了协议 §4 校准审计（expected 短语指纹 1/33 为案例输入自带
+词汇，结论：无泄露证据）；REG-001 回归门失败→回灌修复→净室重跑 18/18 通过。
+已知局限：全量 208 案盲测、第三方人类评分者交叉校准为下一迭代——
+详见 [盲测报告](muduo/evals/blind/report_20260912.md) 与 [EVALS.md](muduo/EVALS.md)。
 
 ## 项目结构
 

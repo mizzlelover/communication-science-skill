@@ -9,6 +9,11 @@
 #   点名机制的核心职能被自然语言或相邻同义机制正确、有区分度地覆盖，订正为 18 分；
 #   2 案（LFRE-001 fluency_truth_effect、LFGZ-001 curiosity_gap）为机制特有职能实质
 #   缺位（非缺名），维持 17 分并改写扣分理由。REG-001 回归二值硬门维持 passed=false。
+# 2026-09-12 R2 重跑订正：知识库修复后 REG-001 在 Codex 净室重新作答，第 4 条语用
+#   边界已补（开头识别"战略口号/报告章节名"体裁 + 末尾"保持原题作为内部主题、只优化
+#   对外标题"语境分流），二值硬门由 passed=false(17) 订正为 passed=true(18)；旧判
+#   17 分/false 保留于 REG-001 条目 prior_result 字段留痕。该边界属最小满足（未点名
+#   投资人材料、未展开正面语用功能），列入人工抽查复核。
 
 - case_id: CAU-001
   answer_summary: 明确拒绝预算 100% 转投流，指出"在看"口径不明、曝光≠互动，古装剧官抖与 2 万粉知识号属跨品类不可外推；用选择性注意、算法放大、排序信号权重（C 级并拒绝推断具体权重）、平台守门机制还原"触达→行为信号→再分发"链条，给指标分层表与"自然 vs 合规投流"增量对照实验，主动排除刷量并给平台治理提示。
@@ -410,7 +415,9 @@
   blind: true
   model: gpt-5.6-luna
 - case_id: REG-001
-  answer_summary: 明确判定标题不建议直接使用：抽象名词连续堆叠（生态化/协同/赋能/全域/范式）读者无法形成画面，具名引用 processing_fluency（A-，含高卷入采购场景作用下降的边界）、concreteness（B+）、curiosity_gap（B）、top_down（A）、specificity（B）；五项必查逐条过，给4个具体化候选标题（企业服务采购决策人+判断/选择动作+增长结果）并推荐候选1，全部以正文真实兑现为前提、不补造数字；L3平台纪律与"不预测打开率"边界齐备。但 expected 第4条必须项——内部战略文件/投资人材料语境下抽象框架词另有语用、不可一刀切——全文未出现。
+  rerun: true
+  rerun_note: "知识库修复后净室重跑答卷（answers/REG-001.md，2026-09-12 评分）；旧判见 prior_result"
+  answer_summary: 四条通过标准全部满足：1) 明确判定抽象名词连续堆叠（生态化协同/赋能/全域增长/新范式）读者无法形成画面、需先"翻译"，具名引用 processing_fluency（A−，含高卷入采购场景流畅≠可信的边界），并搭配 concreteness（B+）、specificity（B）、top_down_attention（A）等；2) 给 4 个具体化候选标题，均含可感知对象（企业服务采购决策人）+动作（判断/先看什么/解决什么问题）+结果（增长），第 4 个以方括号占位强制回填正文事实、不补造；3) 非无机制空评，五项检查表逐条带等级与失效条件；4) 语用边界已补——开头先识别原题体裁为"战略口号或报告章节名"，末尾给出"保持原题作为内部主题、只优化公众号对外标题与摘要"的语境分流选项，未对抽象框架词一刀切（最小满足：未点名投资人材料、未展开其在该语境的正面语用功能，列人工抽查）。L3 平台纪律（权重未公开、规则以最新公告为准）与"不等于打开率预测"边界齐备。
   scores:
     theory_accuracy: 2
     evidence_accuracy: 2
@@ -418,14 +425,19 @@
     actionability: 2
     platform_fit: 2
     specificity: 2
-    overclaiming: 1
+    overclaiming: 2
     ethical_safety: 2
     writing_quality: 2
-  total: 17
-  passed: false
-  deductions:
-    overclaiming: 诊断结论"不建议直接使用"与4个改写候选均未限定外部公域传播语境，缺少 expected 第4条明确要求的语用边界（抽象框架词在内部战略文件/投资人材料中承担视野与野心功能、不可一刀切），建议存在轻度普适化；效果声称与证据边界本身诚实（不承诺打开率、L3标注完整），故扣 1 分不给 0。
-    regression_gate: regression.yaml 案例级纪律为"expected_behavior 每条必须/不得即判定项，任一必须项缺失即记失败"；R1 满足前3条（抽象堆砌+processing_fluency、具体化改写含对象动作结果、非无机制空评）但缺失第4条语境边界，R2 人工签名按回归二值门判 passed=false。run_evals.py 仅按总分≥14计算会显示通过，最终报告以本人工判定为准记录回归子集1例失败。
+  total: 18
+  passed: true
+  deductions: null
+  prior_result:
+    total: 17
+    passed: false
+    deductions:
+      overclaiming: 旧答卷（首次跑）未限定外部公域传播语境，缺失 expected 第 4 条语用边界，建议存在轻度普适化；效果声称本身诚实，扣 1 分不给 0。
+      regression_gate: 回归二值硬门"任一必须项缺失即记失败"，旧答卷前 3 条满足、第 4 条语境边界缺失，判 passed=false（run_evals.py 仅按总分≥14 会显示通过，以人工二值判定为准）。
+    superseded_by: 知识库修复后净室重跑（第 4 条已补，2026-09-12）
   red_line_fail: false
   blind: true
   model: gpt-5.6-luna

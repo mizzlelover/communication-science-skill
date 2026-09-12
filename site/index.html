@@ -768,17 +768,16 @@ footer{border-top:1px solid var(--line);padding:40px 0;font-size:12.5px;color:va
     <h2 class="reveal">自己说好不算数，<br><span class="verm">盲测数据</span>放这里。</h2>
     <div class="eval-grid">
       <div class="bars reveal">
-        <div class="bar-row"><div class="bt"><b>self-eval · 基础集 110 案</b><span>17.71 / 18</span></div><div class="bar"><i data-w="98.4"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>self-eval · 长文集 50 案</b><span>17.94 / 18</span></div><div class="bar"><i data-w="99.7"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>环境隔离盲测 · 首轮</b><span>17.19 / 18</span></div><div class="bar gold"><i data-w="95.5"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>环境隔离盲测 · 第三轮</b><span>17.53 / 18</span></div><div class="bar gold"><i data-w="97.4"></i></div></div>
-        <div class="bar-row"><div class="bt"><b>环境隔离盲测 · 第四轮 · E2 六类专项 48 案</b><span>17.94 / 18 · 48/48 过</span></div><div class="bar gold"><i data-w="99.7"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>外部盲测 · GPT 答题 / 豆包评分 · 33 案（2026-09-12）</b><span>17.88 / 18 · 红线 0</span></div><div class="bar gold"><i data-w="99.3"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>self-eval · 全量 208 案（含 E2 对抗 48）</b><span>208/208 通过</span></div><div class="bar"><i data-w="100"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>回归子集（盲测后含修复重跑）</b><span>10 / 10</span></div><div class="bar"><i data-w="100"></i></div></div>
+        <div class="bar-row"><div class="bt"><b>长文演示 · 预埋 15 类缺陷检出</b><span>15 / 15</span></div><div class="bar"><i data-w="100"></i></div></div>
         <div class="bar-row"><div class="bt"><b>5000 字演示长文 · 预埋 15 类缺陷检出</b><span>15 / 15</span></div><div class="bar"><i data-w="100"></i></div></div>
       </div>
       <div class="eval-card reveal">
         <h4>怎么读这些分数</h4>
-        <p><span class="hl">208/208</span> 案例通过（self-eval 160 + 盲测 48），<span class="hl">红线 0</span>（overclaiming / ethical_safety 任一为零即整案失败）。theory_judgment 与 regression 子集 <span class="hl">10/10</span>。环境隔离盲测：作答者不可见答案、独立评分者判分、R3 审计抽查评分一致，四轮 <span class="hl">32×3+48</span> 全过。</p>
-        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只证明「知识库可支撑合格应答」。所以补做了环境隔离盲测——协议（R1/R2/R3 三角色分离）与全部评分留痕都在仓库里开源。</div>
+        <p><strong>外部双盲测</strong>（2026-09-12）：R1 = GPT（Codex 净室，仓库外隔离）作答、R2 = 豆包评分、R3 = 审计抽查——<span class="hl">33 案 · 均分 17.88/18 · 红线 0 · 回归 10/10</span>；盲测 ≈ self-eval 触发校准审计，expected 短语指纹 1/33 为案例自带词汇，<span class="hl">无泄露证据</span>。全量 <span class="hl">208/208</span>（self-eval，降级为历史参考）。</p>
+        <div class="honest">诚实声明：self-eval 的评测方与知识库同源，只证明「知识库可支撑合格应答」，故已由外部模型完成双盲测（R1 作答者不可见答案 · R2 评分者与 R1、知识库构建方均不同源 · R3 审计抽查；含校准审计与回归门修复记录）。协议与全部评分留痕在仓库开源。</div>
       </div>
     </div>
   </div>

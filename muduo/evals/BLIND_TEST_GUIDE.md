@@ -143,7 +143,7 @@ python3 scripts/run_evals.py --input evals/blind/blind_results.yaml
 |---|---|---|---|
 | R1 作答 | **Codex** | GPT 系（默认即可） | 非 Claude 系，外部性 ✓；CLI 可全自动批量 |
 | R1 作答（交叉第二遍，可选） | **Trae** | Gemini / Doubao（**勿选 Claude**） | 第二个独立家族，交叉验证稳健性 |
-| R2 评分 | **Trae** | **Claude（推荐）**+ 人工复核 | 评分者了解知识库意图，且与 R1 不同源 |
+| R2 评分 | **Trae** | Gemini（推荐）/ Doubao / DeepSeek + 人工复核 | 评分者须与 R1（GPT）不同源；同时独立于知识库构建方（Claude 系），血统最中立。**不可选 GPT 系与 Claude 系** |
 | R3 审计 | 任意 | 人 | 抽 20% 复评 |
 
 **红线**：R1 若选 Trae，模型**绝不能选 Claude**——知识库由 Claude 系构建，同源即作废。
@@ -184,7 +184,7 @@ done
 ## 方式二 · Trae 跑 R1 交叉遍（手动，每案一次新会话）
 
 1. Trae 打开文件夹 `/Users/a1-6/muduo_r1_workspace`；
-2. 模型选择器**换成 Gemini 或 Doubao**（不要 Claude）；
+2. 模型选择器**换成 Gemini 或 Doubao**（R1 交叉遍勿选 GPT 系；R2 评分勿选 GPT 系与 Claude 系）；
 3. 新建会话，输入（Trae 支持 # 引用工作区文件）：
 
 ```text

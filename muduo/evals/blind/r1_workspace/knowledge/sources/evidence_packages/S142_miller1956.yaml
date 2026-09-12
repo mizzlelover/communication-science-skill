@@ -1,0 +1,26 @@
+# Evidence Package — S142 Miller 1956（The Magical Number Seven, Plus or Minus Two）
+# 标准格式。access_level 如实标注。
+source_id: S142
+title: "The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information"
+authors: "George A. Miller"
+year: 1956
+journal: "Psychological Review 63(2): 81-97"
+doi: "未知（1994 重印版 DOI 10.1037/0033-295x.101.2.343，见 PubMed PMID 8022966）"
+url: "https://psychclassics.yorku.ca/Miller/"
+access_level: full_text
+research_status: read
+content_obtained: "渠道1 psychclassics.yorku.ca（York University《Classics in the History of Psychology》）全文已实际抓取（约 51KB，含摘要全文/数据图/参考文献）；渠道2 PubMed 书目（PMID 13310704：Psychol Rev. 1956 Mar;63(2):81-97）；渠道3 NSTL 国家科技图书文献中心引文记录。"
+research_question: "人类加工信息的容量是否存在稳定上限？绝对判断广度、注意广度与即时记忆广度是否由同一底层过程决定？"
+core_claims:
+  - "即时记忆广度约为 7 个项目（全文：for a lot of different kinds of test materials this span is about seven items in length；总结段：seven digits in the span of immediate memory）"
+  - "绝对判断广度与即时记忆广度是不同类型的限制：绝对判断受信息量（bits）限制、即时记忆受项目数（chunks）限制，'三个七'并非同一底层过程（全文明确区分 bit vs chunk）"
+  - "记忆广度是固定数量的组块（全文：the memory span is a fixed number of chunks），通过构建更大组块可增加每块所含信息量"
+  - "再编码（recoding）：把输入分组并赋予新名称，用更少、更富信息的组块替换原有输入；Smith 演示实验用二进制→八进制再编码把二进制数字跨度从 9 个扩展到约 40 个（全文 Fig. 9）"
+  - "记忆化可视为组块的形成过程，直到块数少到可以全部回忆（全文：memorizing may be simply the formation of chunks）"
+method: "综述+实验回顾：绝对判断（信息论分析）、注意广度（点阵速示，subitize/estimate 分界约 7）、即时记忆（Hayes/Pollack 材料跨度实验）与再编码演示实验（Smith，1954；n=20，训练 5-10 分钟 + 自我实验）"
+results: "三类'七'（约 7 类绝对判断、约 6 项注意广度、约 7 项记忆广度）是不同机制；记忆跨度随材料信息量变化远小于'恒定信息量'假设的预期；再编码显著扩展有效跨度（40 个二进制数字）"
+limitations: "作者自陈'什么构成一个组块'定义不明确（如 5 个词也可视为 15 个音素）；再编码实验样本小、训练时间短（5-10 分钟），作者坦言翻译未自动化时收益打折"
+boundary_conditions: "7±2 指健康成人对可命名项目的即时记忆跨度；通过组块化与再编码可绕过该瓶颈；注意广度（约 6 项）与绝对判断广度（约 7 类）是相互独立的不同限制"
+relevant_nodes: [chunking, working_memory_limits]
+notes: "一句话定位：工作记忆容量 7±2 与组块/再编码的奠基论文，全文已从 psychclassics 抓取。注意：任务提示核实 comprehension.yaml/memory.yaml——chunking 在 comprehension.yaml 存在（✓）；working_memory_limits 不在 memory.yaml，实际位于 cognitive_load.yaml（已核实为真实 id）。未编造。"
+last_verified: "2026-09"

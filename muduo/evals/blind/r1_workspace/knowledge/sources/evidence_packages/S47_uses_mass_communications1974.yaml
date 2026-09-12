@@ -1,0 +1,25 @@
+# Evidence Package — S47 Blumler & Katz 1974（The Uses of Mass Communications）
+# 标准格式。access_level 如实标注。
+source_id: S47
+title: "The Uses of Mass Communications: Current Perspectives on Gratifications Research"
+authors: "Jay G. Blumler; Elihu Katz (Eds.)"
+year: 1974
+journal: Sage（手册/文集）
+doi: "无 DOI（手册）"
+url: "http://www.uky.edu/~drlane/capstone/mass/uses.htm"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "UGT 框架经多源交叉实取：理论词条（主动受众/五假设/五需要类别）+ HandWiki（Herzog 1940s 肥皂剧三满足/Lasswell 四功能/选择的分式/Katz-Blumler-Gurevitch 五假设）+ 教科书综述（'人们用媒体做什么'/主动选择）"
+research_question: "受众为何主动选择与使用媒体？媒体使用满足哪些需求？"
+core_claims:
+  - "核心问题转向：不是'媒体对人做了什么'，而是'人用媒体做什么'（Katz 1959）——受众是主动的、有目的的媒体使用者"
+  - "五假设（Katz, Blumler & Gurevitch 1974）：①受众主动 ②媒体选择与满足联结的主动权在受众 ③媒体与其他满足来源竞争 ④受众能自述使用动机 ⑤暂缓对媒体文化意义的价值判断"
+  - "需要类别：获取信息/教育、身份认同（人物情境代入）、娱乐消遣、社会互动/关系、逃避现实（McQuail-Blumler-Brown 四类：diversion/personal relationships/personal identity/surveillance）"
+  - "起源：Herzog 1940s 肥皂剧听众三类满足（情感/愿望/学习）；Lasswell 四功能（监测/协调/娱乐/文化传递）"
+method: "使用与满足研究文集（社会学/心理传统综合）"
+results: "（理论奠基）UGT 成为受众研究核心理论（'受众中心'范式）"
+limitations: "文集综合；'主动受众'假设被批评忽视媒体的无意识影响（乐观主义偏差）"
+boundary_conditions: "适用于受众选择与动机理解；媒体无意识影响需其他理论补充"
+relevant_nodes: [self_determination_needs, top_down_attention_guidance, parasocial_relationship]
+notes: "UGT 奠基文集（handbook 级）。五假设/四类别为公开标准内容，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,26 @@
+# Evidence Package — S11 Thaler & Sunstein 2008（Nudge）
+# 标准格式。access_level 如实标注。
+source_id: S11
+title: "Nudge: Improving Decisions About Health, Wealth, and Happiness"
+authors: "Richard H. Thaler; Cass R. Sunstein"
+year: 2008
+journal: Yale University Press（专著；Final Edition 2021 增补）
+doi: "无 DOI（专著）"
+url: "https://m.7443.org/wikipedia/zh-sg/%E5%8A%A9%E6%8E%A8%E7%90%86%E8%AE%BA"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：维基百科词条（定义/自由意志家长主义/选择建筑师/案例）+ 学术论文（nudge 定义原文引用/自主性批评）+ NBER（DellaVigna & Linos 126 RCT：学术 8.7pp vs 规模化 1.4pp）+ UBS 诺奖视角（Save More Tomorrow/退休自动加入）"
+research_question: "如何在保留选择自由的前提下，通过设计选择架构改善人们的决策？"
+core_claims:
+  - "nudge 定义：选择架构中以可预测方式改变行为而不禁止任何选项、不显著改变经济激励的任何方面；干预必须可被轻易闪避（非强制）"
+  - "自由意志家长主义（libertarian paternalism）：在保护个体自由（可轻易退出）的同时引导其向『按他们自己标准更好』的方向决策"
+  - "核心机制：默认选项（自动加入退休计划）、社会规范比较、显著性与架构（水果放眼睛高度）等利用有限理性/现状偏差的系统性设计"
+  - "经典应用：Save More Tomorrow（自动加入+随工资递增储蓄）、器官捐献默认、尿池苍蝇"
+  - "复制现实：Maier 2022 控制发表偏差后平均效应缩水；DellaVigna & Linos 2020（126 RCT/2300 万人）显示规模化 nudge 平均 1.4pp（显著但远小于学术文献 8.7pp）——具体 nudge 类型差异大"
+method: "行为经济学理论 + 政策设计综合（Thaler 2017 诺奖基础）"
+results: "（理论+政策框架）nudge/选择架构成为行为公共政策核心概念；全球 200+ 助推单位"
+limitations: "平均效应受发表偏差高估（Maier 2022，EVIDENCE.md C 级）；自主性批评（『把人留在黑暗中』）"
+boundary_conditions: "默认/架构类 nudge 在特定情境有效；平均效应不能外推到具体设计"
+relevant_nodes: [nudge_mechanism, default_option_effect, status_quo_bias, friction_reduction, norm_messaging_effects, present_bias]
+notes: "nudge/默认效应的奠基专著（book 级）；配套 S108（Maier 2022 复核）已登记。未编造：8.7pp/1.4pp 为公开数据。"
+last_verified: "2026-09"

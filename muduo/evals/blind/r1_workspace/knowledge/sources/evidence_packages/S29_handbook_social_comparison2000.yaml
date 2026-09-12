@@ -1,0 +1,26 @@
+# Evidence Package — S29 Suls & Wheeler (Eds.) 2000（Handbook of Social Comparison: Theory and Research）
+# 标准格式。access_level 如实标注。
+source_id: S29
+title: "Handbook of Social Comparison: Theory and Research"
+authors: "Jerry Suls; Ladd Wheeler (Eds.)"
+year: 2000
+journal: Kluwer Academic/Plenum Publishers（The Springer Series in Social/Clinical Psychology）
+doi: "10.1007/978-1-4615-4237-7"
+url: "https://link.springer.com/book/10.1007/978-1-4615-4237-7"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：Springer 官方书目页（22 章完整目录、编者、出版信息）+ Smith 2000 章节『Assimilative and Contrastive Emotional Reactions』被引记录（scirp，pp.173-200）+ tandfonline 论文（upward/downward 比较定义与 Wheeler & Suls 学术脉络）+ iucat/豆瓣书目（Kluwer/Plenum 出版信息）"
+research_question: "Festinger 1954 之后的四十多年里，社会比较研究在理论、测量与应用上走到了哪里？"
+core_claims:
+  - "领域史整合：Suls & Wheeler 导论章『A Selective History of Classic and Neo-Social Comparison Theory』（pp.3-19）梳理从 Festinger 经典理论到新社会比较理论的发展"
+  - "比较方向与情感后果：上行比较（与更优者）与下行比较（与更差者）可分别产生同化（assimilative）与对比（contrastive）情绪反应（Smith 章 pp.173-200，DOI 10.1007/978-1-4615-4237-7_10）"
+  - "上行比较并非总是威胁：Collins 章『Among the Better Ones』（pp.159-171）处理上行比较的同化/自我提升面"
+  - "社会比较存在稳定个体差异：Wheeler 章『Individual Differences in Social Comparison』（pp.141-158）；Wood 章『Examining Social Comparisons with the Test Selection Measure』（pp.201-222）提供测量工具"
+  - "比较的后果与机制：Mussweiler & Strack『Consequences of Social Comparison』（pp.253-270）；威胁情境下的比较、归属与情绪传染（Kulik & Mahler，pp.295-320）；群体中的社会比较与影响（Forsyth，pp.81-103）；能力推断依赖相关属性的稳定性（Smith & Arnkelsson，pp.45-66）"
+method: "编委会手册（22 章，504 页；Springer Series in Social/Clinical Psychology；2000-08-31 出版）"
+results: "（手册）Festinger 1954 后社会比较研究 40 年的权威整合：方向（上行/下行）、同化-对比、个体差异、测量工具、后果与应用"
+limitations: "全书正文未获取（完整目录+章节引用级）；2000 年出版，未覆盖其后数字媒体时代的比较研究；目录级信息可确认框架但无法逐条核实各章论证细节"
+boundary_conditions: "上行/下行比较的效应方向高度依赖相似性与可达性（similarity/attainability）等调节变量；个体社会比较倾向（comparison orientation）差异大，平均效应解释力有限"
+relevant_nodes: [upward_social_comparison, downward_social_comparison, relative_deprivation, fear_of_missing_out]
+notes: "为上行/下行比较、同化-对比效应、个体差异与测量四个板块提供 handbook 级整合证据（对比-同化效应在机制库中未设独立节点，已映射至上行/下行比较节点的机制栏）。编者 Suls/Wheeler 后续持续更新该领域（Wheeler & Suls 2020 仍被引用）。核心框架为公开目录与引用内容，未编造。"
+last_verified: "2026-09"

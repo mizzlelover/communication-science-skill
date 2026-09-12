@@ -1,0 +1,25 @@
+# Evidence Package — S113 Kahneman & Tversky 1979
+# 标准格式。access_level 如实标注。
+source_id: S113
+title: "Prospect Theory: An Analysis of Decision under Risk"
+authors: "Daniel Kahneman; Amos Tversky"
+year: 1979
+journal: Econometrica 47(2), 263-291
+doi: "10.2307/1914185"
+url: "https://econpapers.repec.org/RePEc:ecm:emetrp:v:47:y:1979:i:2:p:263-91"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "原文摘要（JSTOR 收录）+ 全文要点梳理（semanticscholar 论文概要 PDF，含实验数据/权重函数/价值函数/Allais 悖论/反射效应/分离效应）"
+research_question: "人在风险下决策时是否遵循期望效用理论？如果不，系统性偏差如何被建模？"
+core_claims:
+  - "偏好系统性违背期望效用理论的公理（Allais 悖论、反射效应、分离效应实证）"
+  - "提出前景理论两阶段：编辑（编码/合并/分离/取消）+ 评估（π 权重函数 + v 价值函数）"
+  - "价值函数基于相对参照点的收益/损失（而非绝对财富）；损失域比收益域更陡 → 损失厌恶"
+  - "概率权重函数 π(p)≠p：低估中高概率、高估小概率、亚确定性"
+method: "系列风险选择实验（N 各 66-95 的多个问题，含 (4,000,.80) vs (3,000) 等经典刺激）"
+results: "反射效应（收益域风险规避、损失域风险寻求）、分离效应（框架影响选择）、损失厌恶（损失/收益不对称）"
+limitations: "原实验样本为大学生；实验室假设性选择；具体效应量以原文为准"
+boundary_conditions: "适用于风险/不确定决策；参照点依赖（框架）是关键边界；后续累积前景理论（Tversky & Kahneman 1992）扩展"
+relevant_nodes: [loss_aversion, gain_loss_framing, framing_effects]
+notes: "JSTOR 全文订阅受限 → abstract_only；通过语义学者全文概要补足结构级内容。行为经济学奠基文献。"
+last_verified: "2026-09"

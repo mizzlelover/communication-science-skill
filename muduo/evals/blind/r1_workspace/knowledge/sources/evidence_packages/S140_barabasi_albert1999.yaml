@@ -1,0 +1,26 @@
+# Evidence Package — S140 Barabási & Albert 1999（Emergence of Scaling in Random Networks）
+# 标准格式。access_level 如实标注。
+source_id: S140
+title: "Emergence of Scaling in Random Networks"
+authors: "Albert-László Barabási; Réka Albert"
+year: 1999
+journal: "Science 286(5439): 509-512"
+doi: "10.1126/science.286.5439.509"
+url: "https://arxiv.org/abs/cond-mat/9910332"
+access_level: full_text
+research_status: read
+content_obtained: "渠道1：arXiv 全文 HTML（cond-mat/9910332，WebFetch 成功，实际抓取含摘要、正文、公式推导、图注与参考文献的完整自存档全文）；渠道2：arXiv 摘要页（WebFetch 成功，期刊引用 Science 286, 509 (1999)、DOI 关联）；渠道3：Semantic Scholar API（curl 成功，摘要 + openAccessPdf GREEN 确认 arXiv 版）；渠道4：重庆大学课程资源页（WebFetch 成功，PDF 附件渠道）。作者自存档全文已获，标 full_text。"
+research_question: "为什么许多大型复杂网络（WWW、基因网络、演员合作网、引用网）的度分布呈现无标度幂律，而现有随机图模型（ER、WS）无法解释？"
+core_claims:
+  - "许多大型网络的顶点连通度服从无标度幂律分布 P(k)∼k^(-γ)，实证指数 γ 介于 2.1~4（演员合作图 γ=2.3±0.1、WWW γ=2.1±0.1、电网 γ≈4、论文引用 γ=3）"
+  - "无标度特征源于两个通用机制：(i) 网络通过持续新增顶点而扩张（growth）；(ii) 新顶点优先连接到已高度连接的顶点（preferential attachment，Π(k_i)=k_i/Σ_j k_j）"
+  - "基于这两要素的模型复现平稳无标度分布：解析解 P(k)=2m²/k³，γ=3 与 m 无关（模拟 γ_model=2.9±0.1）；'富者愈富'：度增长 ∂k_i/∂t=k_i/2t，k_i(t)=m(t/t_i)^0.5"
+  - "对照模型证明两要素缺一不可：仅保留增长、去掉优先连接（模型 A）得到指数分布 P(k)∼exp(-βk)，无标度消失；仅保留优先连接、去掉增长（模型 B）分布非平稳"
+  - "ER 与 WS 模型的高度连接顶点概率随 k 指数衰减，高度连接顶点实际缺席；幂律尾意味着枢纽（hub）以可观概率存在并主导连接"
+method: "大规模实证数据分析（演员合作图 N=212,250、WWW N=325,729、电网 N=4,941、引用网）+ 增长型网络模型构建与数值模拟（模型 A/B 对照）+ 平均场解析推导（P(k)=2m²/k³）"
+results: "提出增长+优先连接机制，首次成功解释真实网络的尺度不变性；γ=3 解析结果与模拟一致；确立无标度网络与 BA 模型，'rich-gets-richer' 现象"
+limitations: "作者自述模型不能期望解释所有方面：假设线性优先连接 Π(k)∼k，非线性 α≠1 时无标度消失；不同网络指数散布在 2.1~4；未建模既有顶点间连边的新增/删除等系统特定特征"
+boundary_conditions: "适用于开放、持续增长的网络（WWW、合作网、引用网、代谢/信号网）；描述度分布形成机制（枢纽如何长出），不直接描述路径结构（区别于 WS 小世界模型）"
+relevant_nodes: [preferential_attachment, network_threshold_models]
+notes: "无标度网络（BA 模型）奠基论文。arXiv 作者自存档全文已实际抓取（含 γ=3 推导、P(k)=2m²/k³、Π(k_i)=k_i/Σk_j、模型 A/B 对照、实证指数），全部核心论点可溯源；标 full_text，未编造。"
+last_verified: "2026-09"

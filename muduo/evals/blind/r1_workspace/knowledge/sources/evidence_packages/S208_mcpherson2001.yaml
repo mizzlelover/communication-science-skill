@@ -1,0 +1,25 @@
+# Evidence Package — S208 McPherson, Smith-Lovin & Cook 2001（同质性综述）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S208
+title: "Birds of a Feather: Homophily in Social Networks"
+authors: "Miller McPherson; Lynn Smith-Lovin; James M. Cook"
+year: 2001
+journal: Annual Review of Sociology, 27, 415-444
+doi: "10.1146/annurev.soc.27.1.415"
+url: "https://doi.org/10.1146/annurev.soc.27.1.415"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（Duke 大学作者出版列表页官方摘要 + tandfonline/SCIRP 引用两处）：相似性孕育连接（similarity breeds connection）——同质性原则结构化所有类型的网络纽带：婚姻、友谊、工作、咨询、支持、信息传递、交换、共同成员等。摘要明载：结果是个体个人网络在诸多社会人口学、行为与个体内特征上高度同质；同质性限制人们的社会世界，对其接收的信息、形成的态度、经历的互动有强影响。维度排序：种族/民族的同质性造成的个人环境分裂最强，其后大致依次为年龄、宗教、教育、职业、性别；地理邻近、家庭、组织与社会系统中的同构位置是同质关系形成的语境；非相似个体间的纽带以更高速率消解——为生态位形成奠定基础。研究议程：(a)连接组织/协会/文化社群/社会运动的生态过程；(b)多重纽带对同质性模式的影响；(c)网络随时间变化的动态"
+research_question: "相似性在多大程度上、通过什么机制结构化社会网络？"
+core_claims:
+  - "同质性原则跨越所有关系类型普遍成立——个人网络在同质维度上高度 homogeneous"
+  - "维度强度排序：种族/民族 > 年龄 > 宗教 > 教育 > 职业 > 性别（按个人环境分裂强度）"
+  - "信息后果：同质性限制了人们接收的信息与形成的态度——回音室的微观基础"
+  - "动态：非相似纽带消解更快 → 生态位形成；同质性是网络演化的内生力量而非偶然结果"
+method: "系统综述（Annual Review：整合数十年的网络同质性实证研究）"
+results: "（权威综述）同质性成为网络社会学最稳固的经验规律之一"
+limitations: "综述性（非新数据）；相关性证据为主——同质性的因果机制（选择 vs 影响）需实验区分"
+boundary_conditions: "强维度（种族/年龄）难以靠内容策略穿透；弱维度（观点/兴趣）可经共同活动改变；算法推荐放大既有同质性（与回音室节点联动）"
+relevant_nodes: [homophily]
+notes: "homophily 节点的权威综述 EP。摘要为官方文本，未编造。"
+last_verified: "2026-09"

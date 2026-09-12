@@ -1,0 +1,26 @@
+# Evidence Package — S147 Bakshy, Messing & Adamic 2015（Exposure to Ideologically Diverse News and Opinion on Facebook）
+# 标准格式。access_level 如实标注。
+source_id: S147
+title: "Exposure to Ideologically Diverse News and Opinion on Facebook"
+authors: "Eytan Bakshy; Solomon Messing; Lada A. Adamic"
+year: 2015
+journal: "Science 348(6239): 1130-1132"
+doi: "10.1126/science.aaa1160"
+url: "https://www.science.org/doi/10.1126/science.aaa1160"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "Science 官网免费文章页（WebFetch 实取：摘要全文+编辑总结数值+补充材料清单）+ PubMed 记录（PMID 25953820，WebSearch 实取）双源确认；正文完整阅读需注册，故按 substantial_excerpt 标注"
+research_question: "在 Facebook 上，好友网络结构与算法排序的 News Feed 如何影响用户接触到跨意识形态（cross-cutting）新闻与观点？"
+core_claims:
+  - "用户经由社交分享新闻接触公共信息：分析 1010 万美国 Facebook 用户与社交分享新闻的交互（去标识化数据）"
+  - "好友网络存在意识形态同质性（ideological homophily）：好友分享的来自对立意识形态阵营信源的跨阵营新闻显著更少"
+  - "算法排序使新闻流中的跨阵营内容约减少 15%（与按时间线排序相比）"
+  - "用户对跨阵营内容的点击通过率约低 70%（点击行为层面的选择性接触更强）"
+  - "与算法排序相比，个体自身的选择（selective exposure）在限制跨阵营内容接触中起更强作用"
+method: "大规模观测研究：1010 万美国 Facebook 用户去标识化数据；测量好友网络意识形态同质性、News Feed 算法排序暴露 vs 按时间顺序基线、用户点击跨阵营内容的倾向"
+results: "好友同质性+算法排序（约 15%）+用户选择（点击约少 70%）三层收窄跨意识形态接触；个体选择贡献大于算法排序"
+limitations: "Facebook 内部数据、美国样本、2015 年平台算法环境；政治议题与日常议题暴露差异大；结论不可无边界外推至其他平台/时期"
+boundary_conditions: "适用于政治新闻在社交平台的分发场景；与 filter_bubble_echo_chambers 节点的结论一致——算法个性化收窄真实但有限，社会选择（用户主动关注同温层）贡献更大"
+relevant_nodes: [filter_bubble_echo_chambers, algorithmic_amplification, homophily]
+notes: "过滤气泡/回音室实证争议的关键一手数据点（paper 级，substantial_excerpt：摘要全文+编辑总结数值 15%/70% 实取）。1010 万用户、约 15% 算法削减、约 70% 点击削减为官网页面可见数据，未编造。"
+last_verified: "2026-09"

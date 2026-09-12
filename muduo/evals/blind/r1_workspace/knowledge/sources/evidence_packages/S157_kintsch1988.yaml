@@ -1,0 +1,24 @@
+# Evidence Package — S157 Kintsch 1988（Construction-Integration Model）
+# 标准格式。access_level 如实标注。
+source_id: S157
+title: "The Role of Knowledge in Discourse Comprehension: A Construction-Integration Model"
+authors: "Walter Kintsch"
+year: 1988
+journal: "Psychological Review 95(2): 163-182"
+doi: "10.1037/0033-295X.95.2.163"
+url: "https://pubmed.ncbi.nlm.nih.gov/3375398/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "正文未直接获取（PubMed 无摘要）。渠道1：PubMed PMID 3375398（期刊元数据：1988 Apr;95(2):163-82）；渠道2：knowt.com 课程笔记《Global Coherence & Kintsch's Construction–Integration Model》（C-I 两阶段详细机制：构建=线性加工表层文本+激活 LTM 概念形成初步命题网络；整合=扩散激活收敛为情境模型；含洗衣房段落实验数据）；渠道3：daowen.com 谭业升《翻译认知过程模式》3.6.6 构建整合模式（两阶段机制、随机阐述机制、桥接推论、宏命题、情境模式，含 Kintsch 1988:167-168 页码引用）；渠道4：ACL 2024.lt4hala-1.19（text base→命题网络→C-I 模型的可读性应用）。"
+research_question: "先备知识在语篇理解中起什么作用？理解过程如何把文本命题与长时记忆中的知识整合成连贯的心理表征（情境模型）？"
+core_claims:
+  - "理解分两个阶段：构建（construction）——读者线性加工表层文本，从长时记忆激活所有潜在概念（词义、命题），形成初步命题网络，其中可能包含无关或矛盾的节点（knowt.com 笔记）"
+  - "整合（integration）——网络内扩散激活（spreading activation），互相支持的观念增强、弱的衰退，解决歧义、丢弃不一致、执行推理，最终产出整合文本与世界知识的连贯情境模型（situation model）（knowt.com 笔记；daowen.com）"
+  - "知识并非预先完整储存，而是在新语境中被激活、阐述与重组：构建阶段经'随机阐述机制'从 LTM 知识网络生成附加微命题，必要时补充桥接推论与宏命题，再经整合阶段编辑（daowen.com 引 Kintsch 1988:167-168）"
+method: "理论论文：提出构建-整合两阶段计算模型（命题网络+扩散激活机制），以语篇理解现象（含先备知识的作用）为解释对象；后由 Kintsch 1998 专著《Comprehension: A Paradigm for Cognition》扩展"
+results: "C-I 模型成为文本理解的主流计算理论：构建产生含噪声的命题网络，整合通过扩散激活收敛为连贯情境模式；被翻译研究（daowen.com）、可读性研究（ACL 2024）等领域广泛采用；其'组织框架须在编码时可用'的解释由洗衣房段落实验（Bransford & Johnson 1972 方向）佐证（knowt.com）"
+limitations: "理论+计算建模论文而非实验论文；依赖命题表征假设（涉身认知视角的批评：文学性/意象性文本难以完全转成命题集，daowen.com）；模拟规模有限；解释力覆盖语篇理解但非全部语言加工"
+boundary_conditions: "适用于语篇/文本理解（含阅读教学、翻译、可读性评估）；读者须具备可被激活的相关知识网络；跨句子显式重叠少时读者须自行推理或维持多个局部模型，认知负荷上升（knowt.com）"
+relevant_nodes: [conceptual_coherence, schema_formation]
+notes: "构建-整合模型一手来源。PubMed 无摘要，经多个独立二次来源（课程笔记、翻译认知研究专著章节、ACL 论文）交叉确认两阶段机制，未编造。建议：将 S157 计入 comprehension.yaml conceptual_coherence / schema_formation 节点的 source_ids（当前为 S69/S10 与 S10/S04/S63）。"
+last_verified: "2026-09"

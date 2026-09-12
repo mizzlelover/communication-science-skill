@@ -1,0 +1,26 @@
+# Evidence Package — S139 Watts & Strogatz 1998（Collective Dynamics of 'Small-World' Networks）
+# 标准格式。access_level 如实标注。
+source_id: S139
+title: "Collective Dynamics of 'Small-World' Networks"
+authors: "Duncan J. Watts; Steven H. Strogatz"
+year: 1998
+journal: "Nature 393(6684): 440-442"
+doi: "10.1038/30918"
+url: "https://www.nature.com/articles/30918"
+access_level: substantial_excerpt
+research_status: read
+content_obtained: "渠道1：Nature 官网文章页（WebFetch 成功，完整摘要 + 参考文献 + 致谢）；渠道2：PubMed 9623998（经搜索结果取得完整摘要）；渠道3：重庆大学课程资源页（WebFetch 成功，经典论文 PDF 附件渠道，书目确认 Nature 393(6684): 440-442）；渠道4：Semantic Scholar API（curl 成功，title/authors/venue/year 元数据）。正文全文未直接抓取（Nature 付费墙），摘要级。"
+research_question: "介于完全规则与完全随机之间的真实网络（生物、技术、社会）能否用简单可调模型刻画？高聚类与短特征路径能否并存？"
+core_claims:
+  - "通过'规则网络重连引入递增无序'构造可调模型，覆盖规则格子（p=0）到随机图（p=1）之间的中间地带"
+  - "发现这类系统可同时具备规则格子的高聚类系数与随机图的短特征路径长度，命名为'small-world'网络（类比小世界现象，即六度分隔）"
+  - "秀丽隐杆线虫（C. elegans）神经网络、美国西部电网、电影演员合作图均被证明是小世界网络"
+  - "小世界耦合的动力系统表现出增强的信号传播速度、计算能力与可同步性（synchronizability）"
+  - "传染病在小世界网络中比在规则格子上更容易传播"
+method: "理论建模 + 数值模拟：一维规则环格按概率 p 重连边，考察聚类与特征路径长度随 p 的变化（两个可调参数刻画中间地带）；在三个真实网络（C. elegans 神经网络、西部电网、演员合作图）上验证；对耦合动力系统考察小世界耦合的动力学效应"
+results: "小世界网络在真实系统中普遍存在；很小的重连概率 p 即可大幅缩短特征路径长度而几乎不损失聚类；信号传播更快、同步性增强、传染病传播更易"
+limitations: "模型基于静态重连与规则环格结构；Nature Letter 篇幅所限，参数空间与有限尺度效应未充分展开（后续研究指出小世界涌现实为交叉现象而非相变，临界尺寸 n* ~ p^(-2/3)）"
+boundary_conditions: "适用于具有高局部聚类+短全局路径的结构化网络（神经网络、电网、社会图、合作网）；是路径结构的描述，不解释度分布形成机制（区别于 BA 模型）"
+relevant_nodes: [small_world_property, network_density]
+notes: "小世界网络（WS 模型）奠基论文，网络科学两大奠基作之一。核心论点（高聚类+短路径、p 重连、三实证网络、传播增强）均出自 Nature 官网摘要+PubMed 交叉，可溯源；正文全文未抓取（付费墙），如实标 substantial_excerpt，未编造。"
+last_verified: "2026-09"

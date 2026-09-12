@@ -1,0 +1,177 @@
+platform_name: 微信群（WeChat Group Chat）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：群聊为公开可见的产品形态——无算法全量触达、群人数上限、@权限等
+  属产品规则；活跃度规律（沉默大多数、刷屏衰减）为运营行业共识。
+  2026-09-08 已实取官方源并登记于 platform_sources（S1-S2）：腾讯客服《我能邀请多少朋友加入群聊》
+  （微信群最多 500 人、超过 40 人需对方同意、超过 100 人需实名验证）、腾讯知识产权保护平台
+  《微信个人帐号使用规范》内容规范（群聊等场景违规内容处理），正文均实际抓取核验。
+  known_platform_patterns 已逐条标注 evidence_level（L1=官方文档实际读到并支持；L2=已验证观察；
+  L3=行业共识；L4=推测）、source_ref 与 last_verified: "2026-09"。
+  原标注 official_rule 但无官方文档直接载明的条目已降为 L3 并在 note 注明。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {ref_id: S1, source: "腾讯客服《我能邀请多少朋友加入群聊》http://kf.qq.com/touch/faq/120813euEJVf131223aaq2eu.html", source_owner: "腾讯（微信团队客服）", source_type: official, claim_supported: "微信群人数与邀请规则：微信群最多为500人；超过40人邀请需对方同意；超过100人对方需通过实名验证（绑定银行卡）才能接受邀请", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {ref_id: S2, source: "腾讯知识产权保护平台《协议与规则》（含《微信个人帐号使用规范》内容规范）https://ipr.tencent.com/policy/content/1", source_owner: "腾讯", source_type: official, claim_supported: "微信帐号（含群聊消息）内容规范：发送/传播侵犯他人知识产权等违规内容，腾讯将根据违规程度删除违规内容、限制功能、封禁账号等", published_date: "未知（页面持续更新）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "纯文本消息（分段短句为主）"
+  - "图片/截图/表情包"
+  - "语音（60 秒单条上限）"
+  - "视频与文件"
+  - "链接/小程序/文章卡片"
+  - "接龙、群公告、红包、@消息"
+
+dominant_user_intent:
+  - "即时沟通与求助（问题驱动，期待分钟级回复）"
+  - "交易与服务（订单、售后、课程、预约）"
+  - "身份归属（同好/同学/业主/粉丝群的归属感）"
+
+distribution_model: >-
+  无分发机制：消息 100% 触达所有成员 [official_rule-产品形态]，
+  但"触达≠阅读"——阅读率随群规模、消息频率与成员关系强度急剧衰减。
+  竞争不是抢算法流量，而是抢消息瀑布里的注意力；唯一强制穿透工具是@。
+
+recommendation_model: >-
+  无推荐系统。可见性由三要素决定：发布时机（瀑布冲刷）、@点名（强制提醒）、
+  群内关系强度（熟人消息优先被点开）[industry_consensus]。
+
+social_graph_characteristics: >-
+  临时性共同成员关系：成员间多为弱关系+少量核心活跃者；群主/管理员是
+  中心化治理节点（community_governance）；500 人上限天然制造规模约束
+  [official_rule-产品规则，以最新公告为准]。
+
+content_lifecycle: >-
+  分钟级——全平台最短。消息在瀑布里 30 分钟后基本沉底；无长尾、无推荐、
+  无搜索公开展示（聊天记录搜索仅群内可用）。运营价值全在"实时互动密度"。
+  [industry_consensus-行为观察；聊天记录搜索仅群内可用为产品形态]
+
+primary_entry_points:
+  - "会话列表红点"
+  - "@提醒（唯一强制穿透）"
+  - "置顶聊天"
+  - "群公告（成员进入时可见）"
+
+attention_environment: >-
+  高频打断式环境：用户在处理多个会话的间隙扫群消息；
+  视觉锚点只有 @红点、图片缩略、链接卡片、红包——纯文本淹没最快。
+  [industry_consensus-行为观察]
+
+user_behavior: >-
+  沉默大多数是常态（participation_ladder：潜水者>>回应者>>发起者）；
+  接龙/投票类结构化互动显著降低参与摩擦 [industry_consensus]；
+  红包是注意力硬通货（immediate_vs_delayed_rewards）。
+
+interaction_signals:
+  - "回复率与@响应率：真实互动深度的核心指标 [industry_consensus-行为观察]"
+  - "接龙/投票参与数：结构化参与，门槛最低 [industry_consensus-行为观察]"
+  - "红包领取数：注意力收割指标，但语义是'利益'而非'认可' [industry_consensus-行为观察]"
+  - "退群/免打扰：不可见的负向信号，刷屏的第一代价 [industry_consensus]"
+
+sharing_mechanism: >-
+  分享即对话：链接卡片是外部内容进入私域的落地容器；
+  群是"转发链的最后一公里"——公众号/视频号内容在群里获得二次讨论与信任背书。
+  阻碍：外部平台口令类内容合规受限 [official_rule-平台对外链治理，以最新规则为准]。
+
+search_mechanism: >-
+  聊天记录搜索仅限本群成员且依赖关键词命中；
+  群内容无任何公开搜索价值——群是互动容器，不是内容资产库。
+  [official_rule-产品形态（聊天记录搜索仅群内可见）＋industry_consensus-价值判断]
+
+community_mechanism: >-
+  真正的社群容器：入群门槛（community_boundaries）、群规公告（descriptive_injunctive_norms）、
+  固定栏目（community_rituals）、活跃分层（status_systems）都在这里落地；
+  500 人上限倒逼"大群广播+小群深耕"的分层运营 [industry_consensus]。
+
+algorithmic_features:
+  - "无自然内容算法 [official_rule-产品形态]"
+  - "折叠与合并消息等产品机制（如多条消息合并提示）[verified_observation-产品形态随版本变化]"
+
+content_constraints:
+  - "[official_rule] 普通群成员上限 500 人（以平台最新公告为准）"
+  - "[official_rule] @所有人需群主/管理员权限（以平台最新公告为准）"
+  - "[official_rule] 单条语音 60 秒上限（以平台最新公告为准）"
+  - "[industry_consensus] 群公告与群待办有展示位约束，以实际产品为准"
+
+title_role: >-
+  无标题元素：@昵称是唯一点名工具——cocktail_party_effect 在人类听觉/视觉上的
+  直接应用，被点名者几乎必然注意；长消息首行承担标题职能。
+  [industry_consensus-策略观察]
+
+cover_role: >-
+  无封面：图片首帧、链接卡片缩略图是仅有的视觉锚点；
+  在刷屏环境里，一张信息清楚的图胜过十段文字 [industry_consensus]。
+
+opening_role: >-
+  长消息必须拆为分段短句：首行给结论，中段给论据——
+  移动端气泡里大段文字的阅读完成率极低（attention_capacity_limits + satisficing）。
+  [industry_consensus-策略观察]
+
+tag_role: >-
+  无标签机制；群昵称备注（如"城市-姓名-职业"）是成员身份标签，
+  由群规统一约束（norm_messaging_effects）。
+  [official_rule-产品形态（无标签机制为界面公开可见）＋industry_consensus-群规观察]
+
+comment_role: >-
+  每条消息都是评论：回复延迟以分钟计，期待即时回应是群与内容平台的本质区别；
+  管理员的响应速度设定整个群的互动规范（normative_influence）。
+  [industry_consensus-行为观察]
+
+follow_role: >-
+  无关注机制：入群即订阅、退群即取关，进出摩擦极低——
+  群的留存靠持续的价值供给而非锁定机制；"拉人头进群"违背 self_determination_needs
+  且加速退群 [industry_consensus]。
+  [official_rule-产品形态（无关注机制为界面公开可见）＋industry_consensus-运营观察]
+
+risk_factors:
+  - "[industry_consensus] 刷屏引发免打扰与退群：触达能力被透支后不可恢复"
+  - "[industry_consensus] 拉人头式增长破坏信任：低意愿成员稀释互动密度并带来合规风险"
+  - "[official_rule] 群内诱导分享/外链营销受平台规则治理（以最新规则为准）"
+  - "[industry_consensus] 活跃假象：少数人刷屏掩盖沉默大多数的流失，需用接龙/投票探测真实状态"
+
+known_platform_patterns:
+  - pattern: "@点名触发响应（点名比广播有效一个量级）"
+    mechanism_links: [cocktail_party_effect, selective_attention]
+    fact_type: industry_consensus
+    note: "@功能为产品规则（普通成员可@单个人，@所有人需群主/管理员）[权限规则：产品界面可观察，官方文档待实读]；'点名触发响应'为认知机制（cocktail_party_effect），共识层。"
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+  - pattern: "红包破冰与关键动作激活"
+    mechanism_links: [reciprocity_norm, immediate_vs_delayed_rewards]
+    fact_type: industry_consensus
+    note: "红包把'利益互惠'前置，领取后的回应义务显著提高消息穿透率。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+  - pattern: "接龙/接龙式报名制造承诺链"
+    mechanism_links: [commitment_consistency, social_proof]
+    fact_type: industry_consensus
+    note: "看到已报名名单降低决策不确定（informational_influence），接龙链越长加入摩擦越低。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识；接龙为产品可观察功能，无官方文档直接载明）"
+    last_verified: "2026-09"
+  - pattern: "群公告+置顶群规建立行为规范"
+    mechanism_links: [descriptive_injunctive_norms, community_governance]
+    fact_type: industry_consensus
+    note: "入群时刻是规范灌输的黄金窗口；无规范的大群必然滑向刷屏与广告。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识；群公告/置顶为产品可观察功能，无官方文档直接载明）"
+    last_verified: "2026-09"
+  - pattern: "分层小群运营（大群广播、小群深耕）"
+    mechanism_links: [network_density, social_reinforcement, sense_of_community]
+    fact_type: industry_consensus
+    note: "小群内成员互识率与回复率更高；密度而非规模决定社群质量。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+  - pattern: "固定栏目化运营（早报/答疑日/作业打卡）"
+    mechanism_links: [habit_loop_cue_routine_reward, community_rituals, implementation_intentions]
+    fact_type: industry_consensus
+    note: "固定时间+固定动作让成员形成参与预期，降低发起互动的成本。"
+    evidence_level: L3
+    source_ref: "N/A（行业共识，无官方文档直接支持）"
+    last_verified: "2026-09"
+
+confidence: medium

@@ -1,0 +1,25 @@
+# Evidence Package — S38 Goldstein, Martin & Cialdini 2008（Yes! 50 Scientifically Proven Ways to Be Persuasive）
+# 标准格式。access_level 如实标注。
+source_id: S38
+title: "Yes! 50 Scientifically Proven Ways to Be Persuasive"
+authors: "Noah J. Goldstein, Steve J. Martin & Robert B. Cialdini"
+year: 2008
+journal: Free Press（专著；中译《如何让人点头称是》）
+doi: "无 DOI（专著）"
+url: "https://www.getabstract.com/zh/%E6%91%98%E8%A6%81/yes/10882?st=RELATED&si=7955"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心内容经多源交叉实取：getAbstract 完整摘要（50 条技巧基于『影响力六原则』/reciprocation 等原则的应用）+ Amazon 官方书目与编辑评论（基于 60 余年说服研究/50 条小改变策略/NYT 畅销）+ 腾讯读书中文原文章节（酒店毛巾卡实验：加入『先前大多数客人都会重复使用毛巾』后重复使用率升高 26%/Katie Baca-Motes 入住承诺实验：具体承诺组重复使用毛巾 66% vs 宽泛承诺组 61%，徽章强化公开承诺效应）+ 新加坡国家图书馆书目条目（2008 首版/2010 平装 ISBN 9781416576143）"
+research_question: "基于说服心理学的实证研究，哪些具体、低成本、可立即应用的小技巧能显著提升他人答应你请求的概率？"
+core_claims:
+  - "50 条说服技巧建立在 60 余年说服心理学研究之上，多数可归入『影响力六原则』（互惠、承诺与一致、社会认同、权威、喜好、稀缺）；每条技巧都配有相应实证研究"
+  - "社会认同（social proof）：在酒店建议重复使用毛巾的环保卡上把措辞改为诚实的『先前大多数客人都会重复使用毛巾』，重复使用率升高 26%——强调相似群体的实际行为比道德呼吁更能推动顺从"
+  - "承诺与一致（commitment）：入住时请客人做具体环保承诺（『愿意在入住期间重复使用毛巾』），其毛巾重复使用率高于做宽泛承诺者（66% vs 61%），且更可能做出其他环保行为（关灯、关空调）；佩戴承诺徽章（公开承诺）进一步强化效应"
+  - "技巧的核心是『小改变大效果』：措辞、请求顺序、选项呈现、公开性等低成本调整即可显著改变答应率——说服是可测试的策略而非天赋或艺术"
+method: "作者本人及所引社会心理学研究的现场实验综合（含酒店毛巾、承诺、互惠等经典现场范式）"
+results: "（实证综合）把六原则转化为可逐条取用的现场研究清单，是说服应用的畅销手册"
+limitations: "每条技巧对应单一/少量研究，效应量与边界条件未逐条系统评估；部分技巧对场景与受众的依赖未被显式界定"
+boundary_conditions: "技巧基于人际/轻量请求场景；被识破为操纵套路时触发逆反与信任损失；文化差异下部分技巧（如社会认同措辞）需本地化校准"
+relevant_nodes: [social_proof, commitment_consistency, authority_influence]
+notes: "从业者实践框架（D 级，如实标注）。毛巾实验（social proof）与承诺实验（commitment）等具体内容为公开原文，未编造。"
+last_verified: "2026-09"

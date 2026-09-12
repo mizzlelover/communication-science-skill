@@ -1,0 +1,21 @@
+# Evidence Package — S229（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S229
+title: 抖音社区自律公约
+authors: 抖音（北京抖音信息服务有限公司）
+year: 2026
+journal: 官方公约页
+doi: ''
+url: https://aweme.snssdk.com/falcon/fe_douyin_security_react/self_discipline_convention/?hide_nav_bar=1
+access_level: full_text
+research_status: annotated
+content_obtained: 本项目 2026-09-08 官方实读（platform_sources S1 in platforms/douyin，claim_supported 在案）
+research_question: 抖音社区治理的规则结构？
+core_claims:
+- 鼓励原创优质内容与真人出镜、避免虚假人设；不当营销与虚假宣传、恶意导流治理；未成年人保护；作弊行为与垃圾信息治理；违规处罚（删除/屏蔽/禁言/封禁）
+method: 官方公约
+limitations: 以最新版本为准
+boundary_conditions: 公约性质（自律+治理混合）
+relevant_nodes:
+- moderation_governance
+notes: moderation_governance 官方一手证据（'鼓励什么/惩罚什么'直接塑造内容供给——节点主张的规则层依据）。
+last_verified: 2026-09

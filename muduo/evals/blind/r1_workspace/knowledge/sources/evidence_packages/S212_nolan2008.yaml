@@ -1,0 +1,25 @@
+# Evidence Package — S212 Nolan et al. 2008（规范性影响被低估）
+# 标准格式。2026-09-09 T5。access_level 如实标注。
+source_id: S212
+title: "Normative Social Influence Is Underdetected"
+authors: "Jessica M. Nolan; P. Wesley Schultz; Robert B. Cialdini; Noah J. Goldstein; Vladas Griskevicius"
+year: 2008
+journal: Personality and Social Psychology Bulletin, 34(7), 913-923
+doi: "10.1177/0146167208316691"
+url: "https://doi.org/10.1177/0146167208316691"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（PubMed PMID 18550863 + OLB 镜像 + PubMed 作者页三处交叉）：研究规范性社会影响的说服力与可检测性。研究 1（调查）：810 名加州居民关于节能——描述性规范信念对节能行为的预测力强于其他相关信念，尽管受访者自评把这类规范列为最不重要；研究 2（现场实验）：规范信息相较突出其他节能理由产生最大行为改变，尽管受访者自评该信息最不具激励性。结论：规范信息可以成为强大的说服杠杆，但其影响被低估（underdetected）"
+research_question: "规范性信息是否真实影响行为？人们能否察觉它对自己的影响？"
+core_claims:
+  - "描述性规范（他人实际在做什么）对行为有最强预测力（Study 1，N=810 调查）"
+  - "规范性信息在现场实验中产生最大行为改变（Study 2）——但它同时被受访者评为最不具激励性"
+  - "低估机制：人们无法识别规范信息对自己的作用——自评影响与他人实际行为改变脱钩（underdetected）"
+  - "对运营的推论：规范性信息是高效杠杆但不会引起受众反感的自觉——其『隐形性』恰是有效性的一部分（也构成伦理边界：需真实数据）"
+method: "调查（N=810）+ 现场实验（节能信息卡：描述性规范 vs 其他理由框架）"
+results: "（经典现场研究）规范性影响的双联发现——有效且不可自查；与 Schultz 等 2007 回旋镖研究（同团队）互补"
+limitations: "节能单一行为域；美国样本；自我报告的影响测量的元认知局限本身是研究主题"
+boundary_conditions: "描述性规范须真实（虚假规范被识破即失效且回旋镖）；受访者对规范信息的自评不可作为效果依据"
+relevant_nodes: [norm_messaging_effects]
+notes: "norm_messaging_effects 节点『Nolan 等 2008 经典文献，未建包；S38 EP 无该内容』的建包来源。摘要为官方文本，未编造。"
+last_verified: "2026-09"

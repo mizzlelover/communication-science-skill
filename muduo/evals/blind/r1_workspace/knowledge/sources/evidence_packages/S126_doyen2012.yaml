@@ -1,0 +1,25 @@
+# Evidence Package — S126 Doyen et al. 2012（行为启动复制失败）
+# 标准格式。access_level 如实标注。
+source_id: S126
+title: "Behavioral Priming: It's All in the Mind, but Whose Mind?"
+authors: "Stéphane Doyen; Olivier Klein; Cora-Lise Pichon; Axel Cleeremans"
+year: 2012
+journal: PLoS ONE 7(1), e29081
+doi: "10.1371/journal.pone.0029081"
+url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0029081"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PLoS One 开放获取全文（摘要+实验设计+结论）：实验 1 自动化计时+更大样本未复制步行速度启动；实验 2 操纵实验者预期后仅在实验者相信时会得到步行速度效应——期望效应与启动共同解释 + 事后访谈提示被试对启动词有察觉"
+research_question: "Bargh et al. 1996 的老年人刻板印象启动（步行变慢）能否被复制？效应是否无意识？"
+core_claims:
+  - "实验 1：使用自动化红外计时与更大样本，未能复制 Bargh et al. 1996 的步行速度启动效应"
+  - "实验 2：操纵实验者预期——仅当实验者相信启动会使人走慢时，才观测到步行速度效应（实验者期望效应）"
+  - "事后访谈提示被试对启动词存在察觉（与『无意识』主张矛盾）"
+  - "结论：无意识行为启动即便真实，其机制也不同于通常假设；原始效应可能部分是期望/测量产物"
+method: "两个复制实验（自动化计时/更大样本/实验者预期操纵）+ 事后访谈"
+results: "复制失败 + 期望效应证据；成为复制危机核心案例之一"
+limitations: "该文自身也引发争论（Bargh 反驳）；但大规模注册复制项目整体支持『行为启动效应远小于原始报告』"
+boundary_conditions: "针对行为层自动启动（社会刻板印象→身体行为）；概念启动（联想/词汇）不受同一质疑"
+relevant_nodes: [pre_suasion_attention_channeling]
+notes: "#8 复核清单 priming 条目的决定性复制证据（paper 级，开放获取全文实取）。未编造：实验 1 失败/实验 2 期望效应。"
+last_verified: "2026-09"

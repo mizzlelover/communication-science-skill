@@ -1,0 +1,25 @@
+# Evidence Package — S180 Ostrom 2000（Collective Action and the Evolution of Social Norms）
+# 标准格式。access_level 如实标注。
+source_id: S180
+title: "Collective Action and the Evolution of Social Norms"
+authors: "Elinor Ostrom"
+year: 2000
+journal: "Journal of Economic Perspectives 14(3): 137-158"
+doi: "10.1257/jep.14.3.137"
+url: "https://ideas.repec.org/a/aea/jecper/v14y2000i3p137-158.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：IDEAS/RePEc JEP 记录页官方摘要（含免费下载链接）；渠道2：AEA JEP 课堂推荐页与多篇后续论文引用核对（DOI、卷期页码一致）"
+research_question: "在集体行动（社会困境）中，除『理性利己者』外，条件合作者与自愿惩罚者如何存活并繁衍？哪些情境变量促进集体行动的产生？"
+core_claims:
+  - "非市场行为模型中应假设多类行动者：理性利己者、条件合作者与自愿惩罚者"
+  - "用间接演化方法（indirect evolutionary approach）解释多类行动者如何在社会困境中存活与繁荣"
+  - "增进对过去行为了解的情境变量（商品类型、群体类型、群体使用的规则）有助于解释集体行动的起源"
+  - "重新检验了早先从大量案例材料中提炼的公共资源自主治理设计原则"
+method: "理论建模（间接演化方法）+ 对公共资源治理案例与设计原则的综合再检验"
+results: "社会规范（条件合作 + 对搭便车者的制裁）能在演化中维持；情境变量决定集体行动能否自发产生"
+limitations: "设计原则为案例归纳而非严格因果检验；多类行动者的演化模型依赖具体假设"
+boundary_conditions: "适用于自组织资源治理与社群规范场景；群体规模、异质性与沟通机制调节效果；使用者自定规则常比外部强加规则更被遵守"
+relevant_nodes: [community_governance, reciprocity_exchange_networks, reciprocity_norm, norm_enforcement_reputation, fairness_preferences]
+notes: "Ostrom 公共资源自主治理与设计原则的权威总结，社群治理节点的一手学术锚点；内容来自官方摘要与多源交叉，未编造。"
+last_verified: "2026-09"

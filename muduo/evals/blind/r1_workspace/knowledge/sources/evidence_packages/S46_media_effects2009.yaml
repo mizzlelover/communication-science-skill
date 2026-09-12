@@ -1,0 +1,24 @@
+# Evidence Package — S46 Bryant & Oliver 2009（Media Effects）
+# 标准格式。access_level 如实标注。
+source_id: S46
+title: "Media Effects: Advances in Theory and Research (3rd ed.)"
+authors: "Jennings Bryant; Mary Beth Oliver (Eds.)"
+year: 2009
+journal: Routledge（手册；576 页；4th ed. 2020 增补社媒/游戏章节）
+doi: "10.4324/9780203877111"
+url: "https://www.taylorfrancis.com/books/edit/10.4324/9780203877111/media-effects-jennings-bryant-mary-beth-oliver"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "手册结构与核心理论经出版社目录与学术综述实取：培植理论（Gerbner 文化指标项目/重观看者/mean world/mainstreaming/resonance）+ 议程设置/框架/启动/社会认知/叙事效果/选择暴露/媒体与情绪/媒体与身份（4th ed 27 章）+ 媒体暴力与攻击/广告/健康传播"
+research_question: "媒介效果研究的理论全景是什么？各主要理论（培植/议程/框架/启动等）的证据状态如何？"
+core_claims:
+  - "媒介效果研究核心理论：培植理论（Gerbner：重观看者高估风险/mean world syndrome，效应小但稳定，Hirsch 方法学批评）/议程设置/框架/启动（priming）/社会认知理论/使用与满足"
+  - "培植理论关键发现：电视过度呈现暴力→重观看者更恐惧（平均效应小，控制变量后可能缩小）；mainstreaming（拉平差异）与 resonance（与现实共振放大）为两个细化"
+  - "4th ed（2020）新增：社交媒体/游戏/移动通讯/VR/跨文化效果/媒体与身份/正面媒体"
+method: "权威手册（各章由领域领军学者撰写，覆盖效果研究全谱）"
+results: "（权威综述）媒介效果研究的基准参考（3rd/4th ed）"
+limitations: "手册综述性质；各理论证据强度与争议（如培植的因果方向）需按章节评估"
+boundary_conditions: "适用于媒介效果的宏观理解；培植理论传统电视语境最强（流媒体时代需修正）"
+relevant_nodes: [parasocial_relationship, availability_heuristic, discrete_emotion_sharing_profiles]
+notes: "媒介效果域权威手册（handbook 级）。培植/议程/框架为公开标准内容，未编造。"
+last_verified: "2026-09"

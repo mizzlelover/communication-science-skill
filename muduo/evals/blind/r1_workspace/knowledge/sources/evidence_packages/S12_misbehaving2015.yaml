@@ -1,0 +1,26 @@
+# Evidence Package — S12 Richard H. Thaler 2015（Misbehaving）
+# 标准格式。access_level 如实标注。
+source_id: S12
+title: "Misbehaving: The Making of Behavioral Economics"
+authors: "Richard H. Thaler"
+year: 2015
+journal: W. W. Norton & Company（专著）
+doi: "无 DOI（专著）"
+url: "https://www.nobelprize.org/prizes/economic-sciences/2017/press-release/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：NobelPrize 官方 2017 获奖新闻稿（心理账户/禀赋效应/planner-doer 自控模型/nudge 术语创造）+ 圣路易斯联储专题（Misbehaving 中心理账户违背货币可替代性的表述）+ 豆瓣长书评（学术自传定位/心理账户/自我控制/前景理论）+ 中文财经长文（Thaler 生平与 Kahneman/Tversky 合作史/1976 读启发式与偏差论文/1977-78 斯坦福访学）"
+research_question: "行为经济学是如何形成的：真实的人（Humans）如何系统性偏离传统经济学的理性假设（Econs），这些异象如何被理论化并最终改变经济学？"
+core_claims:
+  - "心理账户：人们把金钱按来源与用途分入不同心理账户并分别评估，系统性地违背『货币可替代性』——赠与/退款比工资更易花掉，礼物钱与租金钱被差别对待（stlouisfed 引 Thaler；Nobel 官方定义：通过建立独立心理账户简化财务决策）"
+  - "禀赋效应：人们对自己已拥有的物品估值高于未拥有时（同一物品因拥有状态而更值钱），由 Thaler 提出并系统化（Nobel 官方）"
+  - "自我控制的 planner-doer 模型：长期规划（planner）与短期行动（doer）之间的内部张力解释了新年决心难守、储蓄与健康计划失败；nudge（助推）一词由 Thaler 创造，用于帮助人们更好自控（Nobel 官方）"
+  - "与 Kahneman/Tversky 的合作是本书思想主线：1976 年读到『启发式与偏差』论文产生学术转折，1977-78 斯坦福访学结识两人，把认知心理学（前景理论等）引入经济学（头条长文；豆瓣书评）"
+  - "学科纲领：把 Humans 加入经济理论是为了提高理论预测的准确性；传统经济学假设人通过优化选择（Econs 无偏），行为经济学以有限理性、社会偏好、缺乏自控三大人类特质修正之（Nobel 官方；豆瓣书评）"
+method: "学术自传/思想史叙事：以 Thaler 本人研究生涯为线索，综合心理账户、禀赋效应、自我控制、公平偏好等理论与其实验、现场证据"
+results: "（学科思想史定位）行为经济学从异类走向显学；Thaler 凭此获 2017 年诺贝尔经济学奖（『对行为经济学的贡献』）"
+limitations: "通俗自传体，部分案例为叙述性证据；理论细节以作者既有论文为准，非系统文献综述"
+boundary_conditions: "心理账户与禀赋效应等效应存在但强度受个体差异、领域经验与测量方式调节；nudge 平均效应后经 Maier 2022 复核缩水（见 nudge_mechanism 节点 C 级）"
+relevant_nodes: [mental_accounting, present_bias, nudge_mechanism, endowment_effect, sunk_cost_fallacy]
+notes: "行为经济学思想史奠基性专著（book 级，学术）；mental_accounting/present_bias/endowment_effect 等节点的源头文献。核心概念均出自上述公开来源，未编造章节号与数字。"
+last_verified: "2026-09"

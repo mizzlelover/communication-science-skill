@@ -1,0 +1,23 @@
+# Evidence Package — S111 Bornstein 1989
+# 标准格式。access_level 如实标注。
+source_id: S111
+title: "Exposure and Affect: Overview and Meta-Analysis of Research, 1968-1987"
+authors: "Robert F. Bornstein"
+year: 1989
+journal: Psychological Bulletin 106(2), 265-289
+doi: "10.1037/0033-2909.106.2.265"
+url: "https://psycnet.apa.org/doi/10.1037/0033-2909.106.2.265"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "原文摘要页被 APA 安全验证拦截；已取得一手佐证：Bornstein & D'Agostino 1992 JPSP 后续论文摘要（明确引用'Bornstein, 1989a'的 mere exposure meta-analysis，并报告其关键发现：无意识知觉刺激的曝光效应显著大于有意识知觉刺激）+ 1990/1992/2006/2020 多篇文献确认 1989 为覆盖 1968-1987 的 meta"
+research_question: "单纯曝光效应（mere exposure）是否稳健？哪些变量调节其大小？"
+core_claims:
+  - "（由一手佐证确证）mere exposure 效应稳健存在；刺激在无意识/阈下知觉时产生的曝光效应显著大于有意识知觉时"
+  - "（原文结构待获取）meta 覆盖 1968-1987 文献；刺激类型、呈现次数、呈现时长等为候选调节变量"
+method: "（原文待获取）meta-analysis；佐证论文 Bornstein & D'Agostino 1992 用 5ms vs 500ms 双实验直接检验 1989 meta 的 subliminal 推论"
+results: "（佐证级）5ms 阈下刺激产生显著大于 500ms 有意知觉的曝光效应（Bornstein & D'Agostino 1992）"
+limitations: "1989 原文正文未直接取得（APA 拦截）；效应量/样本数未核验，禁止编造具体数字"
+boundary_conditions: "曝光-偏好效应依赖刺激知觉水平；单调重复会衰减（Bornstein 1990 boredom 限制条件佐证）"
+relevant_nodes: [mere_exposure]
+notes: "诚实声明：原文摘要未直接获取 → 标 abstract_only（原文）+ annotated（有一手佐证链）；不做全文级结论。待换渠道补读原文。"
+last_verified: "2026-09"

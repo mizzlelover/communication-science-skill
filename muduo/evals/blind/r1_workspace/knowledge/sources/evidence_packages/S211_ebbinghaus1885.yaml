@@ -1,0 +1,25 @@
+# Evidence Package — S211 Ebbinghaus 1885（遗忘曲线与节省法）
+# 标准格式。2026-09-09 T5。access_level 如实标注。
+source_id: S211
+title: "Memory: A Contribution to Experimental Psychology（Über das Gedächtnis）"
+authors: "Hermann Ebbinghaus"
+year: 1885
+journal: Duncker & Humblot（专著；英译 1913, Teachers College, Columbia University）
+doi: "无 DOI（19 世纪专著）"
+url: "https://en.wikipedia.org/wiki/Hermann_Ebbinghaus"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心方法与发现经 4 个独立源交叉核实（未取得原著全文）：①遗忘曲线范式（CNS Spectr 2010 教育应用论文：Ebbinghaus 记忆无意义音节、在 20 分钟至 31 天各时点测试保持、首次证明记忆若无强化呈指数损失）；②方法细节（艾宾浩斯博物馆与 APS 史料：约 2300 个无意义音节、以节拍器自控节奏、自身既为被试又为实验者、用节省法 savings 量化保持）；③现代复核：Murre & Dros 2015（PLOS ONE）以相近方法复现曲线形状高度接近；Murre & Chessa 2023（Psychon Bull Rev 30:303-307）数学证明节省法是『纯』的记忆测量；④局限被早期同行指出（自身被试/词表视觉范围/节拍器精度——APS 史料载 Müller & Schumann 1894 记忆鼓为之改进）"
+research_question: "记忆保持如何随时间衰减？如何量化测量？"
+core_claims:
+  - "遗忘在学习后立即开始且先快后慢：无意义音节的保持随时间呈曲线衰减（20 分钟-31 天区间测量）"
+  - "节省法（savings）：以重学节省的时间比例量化记忆——Murre & Chessa 2023 论证其为『纯』记忆测量（不受回忆线索偏置）"
+  - "方法学创新：无意义音节控制既有联想污染 + 单被试系统实验——实验记忆研究的起点"
+  - "边界：材料为无意义音节（最易忘情形），有意义材料的衰减显著更慢（Ebbinghaus 自己的诗体对照：12 音节需 16.5 次重复 vs 有语义只需约 8-10 次）"
+method: "单被试（自身）系统实验：无意义音节列表 + 节拍器节奏 + 节省法多时点测量"
+results: "（经典奠基）遗忘曲线成为记忆研究第一定律；间隔效应由此启发的后续传统（S191）"
+limitations: "未取得原著全文；N=1（自身）无统计推断；无意义材料外推到有意义学习的参数不可迁移；曲线的精确函数形式不具普适性（材料依赖）"
+boundary_conditions: "无意义材料的定量参数不外推；方向性结论（先快后慢/复习必要性）经 140 年复现稳固（含 Murre & Dros 2015）"
+relevant_nodes: [spaced_repetition]
+notes: "spaced_repetition 节点 effect_size 行『一手元分析未建包』之外的奠基 EP（元分析 S191 已建）。多源交叉核实，未编造。"
+last_verified: "2026-09"

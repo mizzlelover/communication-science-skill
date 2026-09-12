@@ -1,0 +1,339 @@
+# authority — 权威（Authority）：头衔、制服与符号为何能接管我们的判断，以及它们的滥用
+domain: authority
+nodes:
+- id: authority_influence
+  canonical_name_en: Authority Influence (Obedience to Authority)
+  canonical_name_zh: 权威影响（服从权威）
+  aliases:
+  - obedience to authority
+  - 权威服从
+  domain: authority
+  definition: Milgram 1963 年起报告、1974 年汇总的服从权威研究：在由实验者（白大褂权威）监督的『记忆与电击』学习中，多数被试在权威指令下持续施加他们以为伤害他人的电击直至最高档。该方向确立了情境力量（situational
+    power）对服从的塑造作用，但其方法学与现代复制证据要求谨慎解读。
+  core_claim: 在合法权威的逐步指令与情境安排下，普通人可能做出与其道德判断冲突的行为——但服从率远非固定值，且高度受程序细节调节，原始数据的解读存在重大争议。
+  mechanism: 服从由多成分支撑：（1）合法性知觉与责任转移（责任归于权威，个人道德感被『代理状态』稀释）；（2）渐进承诺（每次只比上一次多一档，承诺升级机制）；（3）情境规范（实验场景赋予行为意义框架）；（4）离目标对象的物理与心理距离。Milgram
+    1963/1974 的系列变式显示：权威离场、可贴近受害者、同伴反抗等程序变化显著改变服从率——这本身是本方向最稳健的发现。
+  causal_chain: 合法权威指令 → 责任转移+渐进承诺 → 情境规范压制个人道德判断 → 服从行为 → （程序变化时）服从率大幅波动
+  variables:
+    inputs:
+    - 权威的合法性知觉
+    - 指令的渐进性
+    - 受害者距离与可见性
+    moderators:
+    - 权威在场与否
+    - 同伴行为（反抗示范）
+    - 制度背书（大学/公司标签）
+    - 个体权威主义倾向
+    mediators:
+    - 责任转移（代理状态）
+    - 渐进承诺与失调减少
+    - 情境意义框架
+    outputs:
+    - 服从行为
+    - 事后道德困扰
+    - 对权威系统的态度变化
+  evidence:
+    supporting:
+    - Milgram 1963/1974 系列实验的程序变式：服从率随权威在场、受害者距离、同伴反抗等变量系统性变化
+    - Hofling 等 1966 的护士研究： bogus 医生电话指令下多数护士准备超剂量给药（自然情境的平行证据）
+    - 日常场景中符号权威（制服、头衔）改变顺从率的自然实验（Cialdini 综述的引述传统，S32）
+    conflicting:
+    - 方法学批评（详见 replication 栏）：需求特征、生态效度与伦理问题使『65% 服从』的原始数字不可直接外推
+    - Burger 2009 的部分复制未重复完整程序（终止点更低、甄选更严），支持了部分发现而非全部外推
+    replication:
+    - Burger 2009 部分复制（American Psychologist 方向）：保持原始脚本至较低电击档位，发现类似比例的被试愿意继续——但程序在伦理审查下大幅缩减，不能宣称完整重复
+    - 学界对原始实验的再分析指出：需求特征（被试猜出实验目的并配合）、选择偏差与宣传式呈现问题；档案再分析显示部分原始数据记录存在不一致
+    - 结论应表述为『情境变量显著改变服从率』这一稳健内核，而非具体服从率数字
+    meta_analysis:
+    - 无统一 meta-analysis；以系统再分析与档案研究（对 Milgram 原始记录的重新检查）为主
+  evidence_grade: B+
+  boundary_conditions:
+  - 权威具有被受众接受的合法性来源（制度、专业、程序）
+  - 指令渐进且每次增幅小
+  - 责任被情境性地转移与稀释
+  failure_conditions:
+  - 权威合法性不被认可或离场
+  - 同伴公开反抗提供行为脚本
+  - 指令跳变过大（无渐进铺垫）
+  - 受害者即时可见且痛苦明确时服从显著下降
+  common_misinterpretations:
+  - 把『65% 的人是潜在纳粹』当结论——Milgram 本人的解释更复杂，且该数字受程序与呈现方式影响
+  - 忽视变式实验的主旨：服从率可从极高变到极低，关键是情境结构而非人性固定值
+  ethical_risks:
+  - 以权威话术（监管背书、专家推荐）为骗局背书
+  - 组织内部用渐进指令让员工执行违规行为（责任稀释）
+  examples:
+    original_cases:
+    - Milgram 1963/1974 服从实验系列与变式（S23）
+    - Hofling 等 1966 护士服从研究（自然情境平行证据）
+    research_cases:
+    - Milgram 的权威在场/受害者距离/同伴反抗变式实验
+    - Burger 2009 的伦理受限部分复制（American Psychologist 发表方向）
+    - 对 Milgram 原始档案的再分析研究（Perry 等学者的档案考证方向）
+    modern_cases:
+    - 职场中『领导让做的』式违规执行
+    - 金融骗局中的监管牌照与办公室装潢背书
+    - 医疗美容行业借『医生推荐』话术越界推销
+  communication_implications: 权威是合法可信度资产也是滥用高发区：展示权威须同时展示可验证来源（具体资历、可查记录、利益披露）；受众教育层面，训练『权威在场的责任自问』（如果是我独自决定，我会这么做吗）是抗操纵核心。
+  community_implications: 社群中管理员的指令同样受权威加成：应把决定权交给公开规则而非个人意志（规则>管理员），避免成员因服从惯性做出损害自身利益的跟风行为（如跟单、借贷参与社群活动）。
+  content_applications:
+    evidence: 引用权威时标注可验证锚点：具体机构、具体职责年限、公开记录链接，而非『专家表示』
+    body: 加入反操纵教育段落：『遇到权威推荐时，先问三个问题：他能验证吗？他图什么？换成我独立决定还会做吗？』
+    title: 标题避免伪权威（『专家建议』无主语），用具体化权威或去权威化表述
+    cta: CTA 拒绝权威压迫式话术（『不听专家的你会后悔』），改为证据自证的邀请
+  platform_implications: 平台认证体系（蓝V、专业标签）是权威的制度化分配，标注错误或被冒用即成信任漏洞；AI 合成『专家形象』使伪权威成本骤降，平台需将资质验证与内容可信度绑定。
+  related_nodes:
+  - source_credibility_model
+  - credentialing_symbols
+  - pseudo_authority
+  - psychological_reactance
+  - trust_calibration
+  - conformity_asch
+  - commitment_escalation
+  source_ids:
+  - S23
+  - S32
+  - S31
+  - S136
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Oxford Handbook of Social Influence（S31，handbook 级，substantial_excerpt：服从章 Burger/权威与影响）+
+      Cialdini《Influence》（S32）+ Milgram（S23）
+    effect_size: 合法权威在场显著提高顺从（Milgram 65% 最高电击）；权威符号独立于能力产生顺从
+    replication_status: 权威效应稳健（Milgram 部分复制条件差异）；符号脱钩证据多
+    context_dependency: 权威须被知觉为合法且在场；异见者/权威冲突降低服从
+    downgrade_upgrade_reason: 2026-09 实取 S31/S32 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S32
+    supporting_evidence:
+    - S31
+    - S23
+    last_verified: 2026-09
+    case_sources:
+    - CASE-CRS-013
+    - CASE-FAL-019
+    - CASE-FAL-020
+    - CASE-FAL-033
+    - CASE-FAL-034
+    - CASE-FAL-052
+    - CASE-FAL-053
+    - CASE-FAL-054
+    - CASE-FAL-063
+    - CASE-FAL-072
+    - CASE-PLT-041
+    platform_sources:
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: credentialing_symbols
+  canonical_name_en: Credentialing Symbols
+  canonical_name_zh: 资历符号
+  aliases:
+  - 权威符号
+  - symbols of authority
+  - 头衔与制服效应
+  domain: authority
+  definition: 承载权威知觉的外在符号：头衔、制服、证书、机构标签、办公环境等。Cialdini 的综述传统指出这些符号能在无实质能力信息的情况下改变他人的顺从行为——符号被当作能力的快捷证据（
+    heuristic cue，见 peripheral_route_processing）。
+  core_claim: 权威符号独立于真实能力产生顺从效应；符号与能力的脱钩既是营销杠杆也是欺诈入口。
+  mechanism: 符号通过两条路径起效：（1）启发式捷径——在无法评估实质能力时，符号作为能力代理（外周线索，ELM 外周路径）；（2）制度合法性的具象化——证书与头衔背后是昂贵的获取成本（时间、门槛），其稀缺性使其难以伪造（高成本信号逻辑），但这一逻辑在符号通胀时代（买证、蹭头衔）失效。Milgram
+    的白大褂与实验室、Hofling 护士研究中的『医生』电话身份，都展示符号对行为的直接接管。
+  causal_chain: 权威符号暴露 → 能力与合法性的快捷推断 → 质疑阈值下降 → 顺从/信任行为 → （符号通胀或被识破时）效应反转
+  variables:
+    inputs:
+    - 符号的可见性（头衔、制服、认证徽标）
+    - 符号获取的社会门槛
+    - 符号与议题的相关性
+    moderators:
+    - 受众领域知识与验证能力
+    - 符号的行业通胀度
+    - 制度背书的真实可查性
+    mediators:
+    - 能力启发式判断
+    - 合法性知觉
+    outputs:
+    - 顺从与信任提升
+    - 质疑意愿下降
+    - （识破时）信任反噬与行业污名
+  evidence:
+    supporting:
+    - Milgram 实验中实验室与白大褂的场景符号设置
+    - Hofling 等 1966：护士仅凭电话中的『医生』身份准备违规给药（符号+权威话术的组合效应）
+    - Cialdini 综述的符号效应案例（制服、豪车与地位符号对助人行为的影响方向，S32）
+    conflicting:
+    - 高知识受众或强身份对抗情境中符号效应减弱
+    - 符号通胀（人人挂头衔）导致边际效应衰减与普遍警觉
+    replication:
+    - 符号对顺从的促进在多场景观察中获得方向性支持
+    - 严格受控的现代复制较少，多数证据为自然实验与案例
+    meta_analysis:
+    - 无独立 meta-analysis；并入信源可信度与权威研究综述
+  evidence_grade: B
+  boundary_conditions:
+  - 符号与判断议题相关（专业对口）且获取门槛可感知
+  - 受众缺乏替代验证手段时符号权重最大
+  - 符号稀缺且未通胀
+  failure_conditions:
+  - 符号被批量伪造或廉价获取（行业污名化）
+  - 受众具备验证渠道且实际验证
+  - 符号与议题错配（跨界站台）
+  common_misinterpretations:
+  - 把挂满头衔当可信度建设——通胀符号触发反向推断（需要这么多头衔说明心虚）
+  - 忽视符号的议题相关性：跨领域头衔基本无效甚至负效
+  ethical_risks:
+  - 伪造或夸大资质符号
+  - 用与实质无关的符号（豪华办公室、制服）实施信任套利
+  examples:
+    original_cases:
+    - Cialdini《Influence》权威原则中的符号案例（S32）
+    - Milgram 实验的场景符号设计（S23）
+    research_cases:
+    - Hofling 等 1966 护士研究
+    - 符号对助人与顺从行为影响的自然实验（S32 综述引述）
+    modern_cases:
+    - 平台专业认证标签（需真实审核）
+    - 知识博主的『前大厂』履历标注
+    - 反例：租办公室、买头衔做局（金融诈骗的标准配置）
+  communication_implications: 符号建设走『少而真、可验证』路线：一枚可查证的认证+具体年限+公开记录，胜过十枚装饰头衔；同时预期受众符号警觉上升，配合溯源要素使用。
+  community_implications: 社群的身份体系（等级、认证）本质是资历符号系统：与真实贡献挂钩则积累信任，与付费或活跃度简单挂钩则通胀贬值；定期清理与复验维持符号含金量。
+  content_applications:
+    title: 标题的资历表述具体化：『做了8年审计、查过上百家公司的我』（真实可查）而非泛称『资深专家』
+    evidence: 证书与资历展示配可验证链接（机构官网、执业查询入口）
+    visual: 符号克制：一两个核心认证徽标优于满屏头衔拼贴
+    body: 明确符号边界：『这个建议来自我财务背景，跨到法律问题请另找专业人士』——限定符号相关性反而增信
+  platform_implications: 平台的资质认证是资历符号的制度供给方，审核严格度决定符号含金量；冒名认证与资质造假是信任套利高发区，平台需打通权威数据源做实时校验。
+  related_nodes:
+  - authority_influence
+  - source_credibility_model
+  - pseudo_authority
+  - distinctive_brand_assets
+  - peripheral_route_processing
+  - status_systems
+  source_ids:
+  - S32
+  - S23
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Cialdini 1984（S32，权威原则）+ Milgram 1974（S23，权威符号与服从实验）
+    effect_size: 权威符号（头衔/制服/机构）提升遵从（经典社会影响）
+    replication_status: 权威符号效应多实验复现（Milgram 变式/现场实验）
+    context_dependency: 符号相关性/受众批判意识/场景正式度调制
+    downgrade_upgrade_reason: 2026-09 实取 S23 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S32
+    supporting_evidence:
+    - S23
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-009
+    - CASE-BRD-016
+    - CASE-BRD-018
+    - CASE-BRD-029
+    - CASE-FAL-019
+    - CASE-FAL-020
+    platform_sources:
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: pseudo_authority
+  canonical_name_en: Pseudo-Authority
+  canonical_name_zh: 伪权威
+  aliases:
+  - 假权威
+  - credential inflation 滥用面
+  - 宣传中的权威伪装
+  domain: authority
+  definition: 行业滥用现象的批判性描述（非实证机制）：通过制造、挪用或夸大权威符号（假头衔、无关专家、貌似权威的机构名、专家形象合成）获取不应得的信任与服从。Pratkanis 与 Aronson《Age
+    of Propaganda》将其纳入宣传策略分类，是识别与防御视角的知识，而非经过系统检验的独立机制。
+  core_claim: 伪权威利用的是真权威机制（authority_influence）的信号层漏洞：受众把符号当能力时，伪造符号即能接管判断——这是从业者共识级的滥用模式描述，不是科学定律。
+  mechanism: 伪权威的运作完全寄生在真权威的心理机制上：责任转移、能力启发式、符号捷径。常见手法包括：无主语权威（『研究表明』『专家建议』无出处）、挪用相关性（心理学家谈投资）、机构光环（注册某某研究院）、符号堆砌（一排无法验证的头衔）、AI
+    合成专家形象。识别知识（从业者/批判视角，等级 D）的核心是教会受众反向核查：权威是谁、凭什么是权威、和本议题什么关系、图什么。
+  causal_chain: 伪造/挪用的权威符号 → 能力启发式被劫持 → 质疑阈值下降 → 信任与服从转移 → （识别教育普及后）手法失效并迁移新变体
+  variables:
+    inputs:
+    - 伪权威符号的制造成本
+    - 受众核查习惯
+    - 平台审核强度
+    moderators:
+    - 受众领域知识
+    - 行业信任水位
+    - 监管与平台治理力度
+    mediators:
+    - 能力启发式误触发
+    - 合法性知觉误导
+    outputs:
+    - 信任套利
+    - 错误决策（购买/投资/健康选择）
+    - 行业整体信任污染
+    - 手法与防御的军备竞赛
+  evidence:
+    supporting:
+    - 宣传分析传统的策略分类（Pratkanis 与 Aronson 的《Age of Propaganda》，S36）
+    - 消费者保护与金融监管领域对假权威话术的案例记录（行业共识层面）
+    - AI 合成专家内容泛滥的平台观察（从业者与媒体调查层面）
+    conflicting:
+    - 作为『现象描述』不构成可检验机制主张；其效应预测完全借用 authority_influence 的证据
+    - 不同受众对伪权威的识别能力差异极大，无法给出统一易感人群画像
+    replication:
+    - 不适用（从业者经验/批判知识）；其寄生机制（权威影响）有 B+ 级证据
+    meta_analysis:
+    - 不适用
+  evidence_grade: D
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 作为防御教育知识使用（教受众识别），不作为说服工具使用
+  - 描述的是操纵手法模式，非因果规律
+  - 适用于信任套利高发领域（金融、健康、教育）
+  failure_conditions:
+  - 受众完成四步核查（谁说的/凭什么/相关性/图什么）后手法基本失效
+  - 平台与监管的强治理压制（封号、处罚）提高伪造成本
+  - 当受众识别教育普及后手法迁移新变体（永远存在的猫鼠博弈）
+  common_misinterpretations:
+  - 把伪权威当独立心理机制——它没有独立证据，机制全是 authority_influence 的
+  - 以为识破一次就免疫——手法持续演化（从假头衔到AI合成专家），需要持续更新识别知识
+  ethical_risks:
+  - 本节点描述的所有手法在营销中的使用都构成伦理违规：伪造权威符号、无出处专家引用、AI合成专家形象
+  - 本节点的用途边界：仅用于识别教育，不得作为操作手册
+  examples:
+    original_cases:
+    - Pratkanis 与 Aronson《Age of Propaganda》对权威伪装类宣传策略的分类（S36）
+    - Cialdini 对权威原则被滥用的警示（S32）
+    research_cases:
+    - 不适用（从业者/批判知识，无系统实验检验）；相关心理机制见 authority_influence 的 research_cases
+    modern_cases:
+    - 『研究表明』体营销文案（无出处）
+    - 金融课导师的头衔拼贴与租用办公室
+    - AI 合成的『白大褂医生』带货视频
+    - 山寨机构认证（某某协会高级研究员）
+  communication_implications: 合规内容以可验证权威为底线：每个权威声明带可查锚点；把『反伪权威自检』做成内容资产（教用户核查=建立『不套路』人设），是AI内容时代的差异化信任策略。
+  community_implications: 社群应建立伪权威黑名单与核查文化（要求引用带出处、对头衔宣称要求证明），既保护成员免于收割，也维护社群的长期信任资产；警惕社群自身被借权威背书（山寨合作、假授权）。
+  content_applications:
+    body: 教学式拆解伪权威识别四步法：谁在说/凭什么信/和议题相关吗/他图什么——把防御知识产品化
+    evidence: 示范正反对照：同一条建议，带可查来源 vs 『专家表示』无出处，训练受众的信号分辨
+    comments: 对无出处引用的评论公开追问来源并感谢追问者，把核查行为变成社区规范
+    title: 标题做识别教育定位：『教你看穿「专家建议」四个字的三种骗法』
+  platform_implications: AI 合成使伪权威的制造成本趋零，平台的资质验证、合成内容标注与快速举报通道成为对抗基础设施；监管对金融、医疗领域的专家代言限制趋严（合规红线持续收紧）。
+  related_nodes:
+  - authority_influence
+  - credentialing_symbols
+  - bot_amplified_social_proof
+  - synthetic_media_trust
+  - trust_calibration
+  - source_credibility_model
+  source_ids:
+  - S36
+  - S32
+  provenance:
+    primary_sources:
+    - S36
+    - S32
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-007
+    - CASE-FAL-008
+    - CASE-FAL-019
+    - CASE-FAL-020
+  last_reviewed: 2026-09
+  knowledge_half_life: long

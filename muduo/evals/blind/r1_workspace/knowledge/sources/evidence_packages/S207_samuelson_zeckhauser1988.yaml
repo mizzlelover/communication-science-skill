@@ -1,0 +1,25 @@
+# Evidence Package — S207 Samuelson & Zeckhauser 1988（现状偏差）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S207
+title: "Status quo bias in decision making"
+authors: "William Samuelson; Richard Zeckhauser"
+year: 1988
+journal: Journal of Risk and Uncertainty, 1(1), 7-59
+doi: "10.1007/BF00055564"
+url: "https://doi.org/10.1007/BF00055564"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（Springer 摘要页 + NBER 章节 PDF 引用 + McKinsey 2025 评述三源交叉）：系列决策实验（组合分配/退休计划/职业选择等假设情境）显示个体不成比例地维持现状（不做任何改变或维持先前决策）；真实决策数据：哈佛大学教职工健康计划与退休项目选择显示现状偏差在重要真实决策中同样显著。摘要明示：经济学/心理学/决策理论提供多种解释（转换成本、损失厌恶、后悔避免、认知误判）。后续复制：Krieger & Felder 2013（健康保险实验）确认默认框架效应存在但重复决策后消退"
+research_question: "决策中现状选项是否被系统性过度选择？"
+core_claims:
+  - "现状偏差：无论假设情境（组合/退休/职业）还是真实数据（教职工健康计划），现状选项的份额系统性超过理性基线"
+  - "机制多元：损失厌恶+后悔避免+认知误判+选择过载——现状偏差是多机制的产物而非单一偏差"
+  - "重要性外推：在重大真实决策（健康保险、养老金）中同样显著——不是实验室小题目现象"
+  - "边界：重复决策与经验使默认效应消退（Krieger & Felder 2013）；现状偏差可被设计利用（默认选项=nudge）"
+method: "系列实验室实验（假设情境）+ 现场数据（哈佛教职工健康计划选择面板）"
+results: "（经典）现状偏差与默认效应的研究起点；nudge 政策设计（退休自动加入）的理论源头之一"
+limitations: "假设情境与真实行为的桥接依赖现场数据部分；效应量的情境异质性大；长期面板显示经验削弱偏差"
+boundary_conditions: "选项越多/越复杂现状拉力越强；新用户默认效应最强，老用户衰减；改变现状需要把『不动』重新框架为有损失的选项"
+relevant_nodes: [status_quo_bias]
+notes: "status_quo_bias 节点的原始 EP。摘要为官方文本，未编造。"
+last_verified: "2026-09"

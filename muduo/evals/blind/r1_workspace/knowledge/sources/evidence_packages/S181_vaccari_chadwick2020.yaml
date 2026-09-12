@@ -1,0 +1,25 @@
+# Evidence Package — S181 Vaccari & Chadwick 2020（Deepfakes and Disinformation）
+# 标准格式。access_level 如实标注。
+source_id: S181
+title: "Deepfakes and Disinformation: Exploring the Impact of Synthetic Political Video on Deception, Uncertainty, and Trust in News"
+authors: "Cristian Vaccari; Andrew Chadwick"
+year: 2020
+journal: "Social Media + Society 6(1): 1-13"
+doi: "10.1177/2056305120903408"
+url: "https://figshare.com/articles/journal_contribution/Deepfakes_and_disinformation_Exploring_the_impact_of_synthetic_political_video_on_deception_uncertainty_and_trust_in_news/11548140"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：Figshare 收录的正式版 PDF（VoR，CC BY-NC 4.0，含摘要、引言与印度 WhatsApp 绑架视频、BuzzFeed 奥巴马视频案例）；渠道2：期刊页与多篇引用文献核对（DOI、卷期页码一致）"
+research_question: "深度伪造（deepfakes）等合成政治视频如何影响受众的受骗、不确定性与对社交媒体新闻的信任？"
+core_claims:
+  - "与受深度伪造欺骗相比，人们更可能感到不确定（uncertainty）"
+  - "这种不确定性反过来降低了对社交媒体新闻的信任"
+  - "深度伪造可能助长普遍的不确定性与犬儒主义（generalized indeterminacy and cynicism），进一步加剧民主社会在线公民文化面临的挑战"
+  - "整合视觉传播力量与不确定性破坏公共话语信任的理论机制"
+method: "对英国人口的大型代表性样本实施新颖实验处理（深度伪造视频材料），比较受众对合成视频的评价"
+results: "不确定感大于受骗感；不确定性中介了信任下降；深度伪造威胁的是新闻环境的信任根基而非仅个别欺骗"
+limitations: "单国样本（英国）；实验材料与真实传播环境的生态效度；深度伪造技术仍在快速演化"
+boundary_conditions: "政治性、高风险内容中效应最强；依赖视觉传播渠道；受众既有信任水平与媒介素养为调节变量"
+relevant_nodes: [synthetic_media_trust, trust_calibration, authenticity_perception, provenance_verification, misinformation_velocity]
+notes: "合成媒体信任问题的标志性实验论文；核心内容来自正式版 PDF 与多源交叉，未编造。"
+last_verified: "2026-09"

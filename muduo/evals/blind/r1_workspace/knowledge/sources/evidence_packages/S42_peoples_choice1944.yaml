@@ -1,0 +1,26 @@
+# Evidence Package — S42 Lazarsfeld, Berelson & Gaudet 1944（The People's Choice）
+# 标准格式。access_level 如实标注。
+source_id: S42
+title: "The People's Choice: How the Voter Makes Up His Mind in a Presidential Campaign"
+authors: "Paul F. Lazarsfeld; Bernard Berelson; Hazel Gaudet"
+year: 1944
+journal: Duell, Sloan & Pearce（专著；1940 伊利县选举研究）
+doi: "无 DOI（专著）"
+url: "https://datafield.dev/political-analytics/part-03/chapter-15/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "研究方法与核心发现经多源交叉实取：面板调查设计（3000 样本/4 组各 600/中心组 7 波）+ 最小效果假说（选择性接触/结晶化/强化）+ 意见领袖与两级传播起源（两级传播理论的核心支撑研究）+ 学术综述（面对面接触'磁力'效应/分子压力）"
+research_question: "总统竞选期间，大众媒介的宣传如何影响选民的投票意向？"
+core_claims:
+  - "面板设计（1940 伊利县）：同一样本多月重复访问，开创传播研究固定样本方法——少数选民改变投票意向，最常见变化是'未决定→决定'（结晶化）而非转化"
+  - "最小效果假说（minimal effects）：媒介宣传主要强化既有党派/社会群体忠诚而非转化；选择性接触（支持者只接触支持己方的媒介）使竞选主要在对已皈依者说话"
+  - "投票最强预测变量是经济状况、既有党派认同与社会群体归属，而非竞选活动"
+  - "面对面人际接触对投票影响最大（'磁力'）；意见领袖概念与两级传播在此萌芽——人际中介调节媒介效果"
+  - "跨压力（cross-pressures）：互相冲突的社会压力导致决策迟滞与不投票"
+method: "3000 人样本 + 4 组各 600 固定样本（中心组 7 波重复访问 + 3 对照组）+ 内容分析"
+results: "（经典实证）最小效果范式与固定样本方法；两级传播/意见领袖概念起源"
+limitations: "1940 单县语境（稳定低多元社区）；'最小效果'部分为测量产物（后续修正）"
+boundary_conditions: "既有党派忠诚强、媒介环境单一时期效果最小；新媒体时代需修正"
+relevant_nodes: [two_step_flow, opinion_leadership]
+notes: "两级传播的起点研究（book 级）；配套 S43（Personal Influence 1955 系统化）。面板设计/5% 数字为公开标准内容，未编造。"
+last_verified: "2026-09"

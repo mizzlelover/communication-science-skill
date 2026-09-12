@@ -1,0 +1,831 @@
+# social_proof — 社会认同（Social Proof）：他人行为如何成为我们的信息
+domain: social_proof
+nodes:
+- id: social_proof
+  canonical_name_en: Social Proof
+  canonical_name_zh: 社会认同（从众证据原则）
+  aliases:
+  - informational social influence
+  - 社会认同原则
+  domain: social_proof
+  definition: Cialdini 六原则之一：在不确定情境中，人们把『许多人在做』本身当作正确性证据——他人的行为成为启发式信息流，尤其当情境模糊、他人与我们相似或人数众多时。它整合了信息性与规范性两种影响，是应用最广的从众证据原则。
+  core_claim: 不确定性与相似性越高，『很多人在做』对行为的拉动越强；但该效应受规范类型与身份匹配调节，并非万能开关。
+  mechanism: 面对不确定，个体以他人行为作为效度代理（他们大概知道我不知道的）——这是信息捷径；同时跟随多数可降低社交风险——这是规范压力。两者叠加使人数信息具备双重说服力。相似性提升参照群体与自我的关联（『这类人像我』），相似群体的行为证据比泛化人数更有效。当证据与受众身份不匹配或被识破伪造时，效应反转。
+  causal_chain: 情境不确定 → 他人的行为可见 → 作为正确性启发式 + 规范压力 → 跟随行为 → 进一步放大可见人数（滚雪球）
+  variables:
+    inputs:
+    - 他人行为可见性（人数、热度、销量）
+    - 相似他人识别
+    - 情境模糊度
+    moderators:
+    - 相似性（参照群体匹配）
+    - 规范类型（描述性vs指令性）
+    - 证据真实性
+    - 竞争性vs合作性自我建构
+    mediators:
+    - 共识推断（大家都这么做应该没错）
+    - 社会验证感
+    outputs:
+    - 跟随行为（购买/参与/转发）
+    - 信任转移
+    - 从众性口碑扩散
+  evidence:
+    supporting:
+    - Asch 从众线段实验证明群体一致意见的强大压力（详见 conformity_asch）
+    - Cialdini, Reno 与 Kallgren 1990 被丢弃传单实验：先行示范显著改变乱扔垃圾行为——规范线索可被设计
+    - Schultz 等 2007 能耗规范信息实验：描述性规范反馈改变居民用电行为（与指令性规范结合可避免回旋镖效应）
+    - Goldstein 等的酒店毛巾重复使用实验：『多数住客重复使用毛巾』的规范信息提升环保行为（S38 案例收录）
+    conflicting:
+    - 当受众身份与示范群体不匹配时，社会认同提示可反效果
+    - 对独特性需求高的个体，跟随多数反而降低购买意愿
+    replication:
+    - 基础效应稳健（EVIDENCE.md 定级 A-），但效果受规范类型与身份匹配调节
+    - 大田实验与实验室结果方向一致，效应量中等
+    meta_analysis:
+    - 规范信息干预的 meta 综合显示平均效应存在但幅度中等、异质性高
+  evidence_grade: A-
+  boundary_conditions:
+  - 受众处于不确定、缺乏直接判断依据的情境
+  - 示范他人与受众相似或属于 aspirational 群体
+  - 证据可被感知为真实（非伪造热度）
+  failure_conditions:
+  - 受众对该领域有强既有态度或专业知识时，人数证据效力衰减
+  - 示范群体被受众视为外群体或反感对象时反效果
+  - 虚假热度被识破（水军曝光）引发信任崩塌
+  common_misinterpretations:
+  - 把『刷销量、刷好评』当社会认同——被识破的伪证会反噬并污染整个信源
+  - 忽视相似性：展示与自己完全不同的人群（明星、极端头部）时说服力大幅衰减
+  ethical_risks:
+  - 伪造热度与虚假好评
+  - 利用刷单制造虚假共识误导消费决策
+  examples:
+    original_cases:
+    - Cialdini《Influence》对社会认同原则及罐头笑声、 bystander 案例的论述（S32）
+    - Goldstein 等的酒店毛巾实验（收录于 S38）
+    research_cases:
+    - Cialdini, Reno 与 Kallgren 1990 弄脏环境实验：先行示范显著改变乱扔垃圾行为
+    - Schultz 等 2007 能耗反馈实验：描述性规范+赞许提示的组合效果
+    - Asch 线段实验中的从众压力
+    modern_cases:
+    - 电商『已售 X 万件』、直播间在线人数与滚动成交提示
+    - 知识付费『XX 人正在学』
+    - App Store 榜单与豆瓣评分作为消费决策代理
+  communication_implications: 内容中要嵌入可见、可验证、与受众相似的『他人行为』：真实买家秀、真实参与进度、真实评价分布；比人数更有效的是『和你一样的人』的实证。
+  community_implications: 社群冷启动阶段尤其依赖社会认同：可见的高质量问答、真实成员反馈与活跃示范是最强招募与留存信号；创始期应人工维护真实互动密度，而非买量填人数。
+  content_applications:
+    title: 标题嵌入真实集体信号：『三个月里 400 位会员写下的避坑笔记』
+    evidence: 用真实用户行为数据（留存、复购、完课率）而非抽象形容词作为可信度锚点
+    cta: CTA 强调正在进行的集体行动：『今天已有 XX 位加入』（必须真实）
+    comments: 评论区置顶真实用户的使用细节与提问，让新访客看见活的使用现场
+  platform_implications: 平台的评分、销量、在线人数等指标是社会认同的基础设施；同时刷量灰产与算法展示的博弈持续存在——算法对互动信号加权越高，伪造动机越强（参见 bot_amplified_social_proof）
+  related_nodes:
+  - descriptive_injunctive_norms
+  - conformity_asch
+  - informational_influence
+  - normative_influence
+  - bot_amplified_social_proof
+  - trust_signals_content
+  - network_exposure_effects
+  conflicting_nodes:
+  - psychological_reactance
+  source_ids:
+  - S32
+  - S38
+  - S31
+  - S102
+  - S136
+  - S103
+  - S104
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Asch 经典实验 + Cialdini 1990 弄脏环境实验 + Goldstein 2008 酒店毛巾现场实验（S102，已实取摘要）
+    effect_size: 基础效应稳健，效应量中等
+    replication_status: 基础效应复制稳健（A-），规范类型与身份匹配调节
+    context_dependency: 效果受规范类型、参照群身份匹配调节
+    downgrade_upgrade_reason: 2026-09 补充一手现场实验证据（S102），升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S102
+    supporting_evidence:
+    - S32
+    - S38
+    - S31
+    - S136
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S112
+    - S21
+    - S32
+    - S35
+    case_sources:
+    - CASE-BRD-003
+    - CASE-BRD-004
+    - CASE-BRD-006
+    - CASE-BRD-010
+    - CASE-BRD-015
+    - CASE-BRD-024
+    - CASE-CMP-002
+    - CASE-CNT-006
+    - CASE-CNT-007
+    - CASE-CNT-009
+    - CASE-CNT-012
+    - CASE-CNT-014
+    - CASE-CNT-015
+    - CASE-CNT-017
+    - CASE-CNT-018
+    - CASE-CNT-019
+    - CASE-CNT-021
+    - CASE-CNT-023
+    - CASE-CNT-024
+    - CASE-CNT-025
+    - CASE-CNT-026
+    - CASE-CNT-027
+    - CASE-COM-050
+    - CASE-COM-052
+    - CASE-COM-063
+    - CASE-COM-064
+    - CASE-COM-065
+    - CASE-COM-066
+    - CASE-CRS-002
+    - CASE-CRS-006
+    - CASE-CRS-009
+    - CASE-FAL-001
+    - CASE-FAL-003
+    - CASE-FAL-015
+    - CASE-FAL-016
+    - CASE-FAL-017
+    - CASE-FAL-018
+    - CASE-FAL-029
+    - CASE-FAL-030
+    - CASE-FAL-039
+    - CASE-FAL-040
+    - CASE-FAL-041
+    - CASE-FAL-048
+    - CASE-FAL-049
+    - CASE-FAL-051
+    - CASE-FAL-059
+    - CASE-FAL-060
+    - CASE-FAL-061
+    - CASE-FAL-068
+    - CASE-FAL-069
+    - CASE-FAL-070
+    - CASE-FAL-071
+    - CASE-FAL-072
+    - CASE-FAL-079
+    - CASE-FAL-080
+    - CASE-FAL-082
+    - CASE-FAL-088
+    - CASE-FAL-089
+    - CASE-FAL-092
+    - CASE-FAL-098
+    - CASE-FAL-100
+    - CASE-GRW-002
+    - CASE-GRW-003
+    - CASE-GRW-005
+    - CASE-GRW-008
+    - CASE-GRW-010
+    - CASE-GRW-011
+    - CASE-GRW-020
+    - CASE-PLT-034
+    - CASE-PLT-038
+    - CASE-PLT-039
+    - CASE-PLT-041
+    - CASE-PLT-045
+    - CASE-RES-001
+    platform_sources:
+    - douyin:S1
+    - douyin:S2
+    - weibo:S3
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: descriptive_injunctive_norms
+  canonical_name_en: Descriptive vs Injunctive Norms
+  canonical_name_zh: 描述性规范与指令性规范
+  aliases:
+  - 规范焦点理论
+  - focus theory of normative conduct
+  - Cialdini 规范双轴
+  domain: social_proof
+  definition: Cialdini, Reno 与 Kallgren 的规范焦点理论将社会规范分为两轴：描述性规范（descriptive norms，多数人实际在做什么）与指令性规范（injunctive
+    norms，多数人赞成/反对什么）。Bicchieri 进一步把规范界定为『有条件的从众偏好』——个体只有在相信他人遵守且期待自己遵守时才遵循，为规范诊断提供了博弈论工具。
+  core_claim: 只展示『别人在做』（描述性）而忽略『别人怎么评价』（指令性）的传播常制造回旋镖效应；两轴必须同时诊断、匹配使用。
+  mechanism: 描述性规范提供效度信息（大家都这么做），指令性规范提供奖惩预期（做/不做会被如何对待）。单独使用描述性信息会让本就低于均值的人理直气壮（大家都浪费，我浪费点没事）——回旋镖效应；Schultz
+    等 2007 能耗实验表明，在描述性反馈上叠加指令性信号（笑脸/赞许标记）可消除回旋镖。Bicchieri 的诊断框架进一步要求测量『经验期待与规范期待』的分布，判断规范是否真的存在于人群中，而非仅是沟通者的想象。
+  causal_chain: 规范线索暴露 → 描述性（效度信息）与指令性（奖惩预期）分别加工 → 两者方向一致时行为改变最大；描述性单独作用时偏离均值者可能反向移动（回旋镖）
+  variables:
+    inputs:
+    - 描述性规范信息（实际行为分布）
+    - 指令性规范信息（赞成/不赞成信号）
+    - 规范的显著性
+    moderators:
+    - 参照群体界定（对谁而言的多数）
+    - 个体当前位置相对均值的方向
+    - 规范来源可信度
+    mediators:
+    - 规范期待（Bicchieri：他人遵守+期待我遵守的信念）
+    - 社会认同感
+    outputs:
+    - 顺从行为
+    - 回旋镖效应（低分布群体反向移动）
+    - 规范内化
+  evidence:
+    supporting:
+    - Cialdini, Reno 与 Kallgren 1990 弄脏环境系列实验：向被试展示一个被丢弃传单的环境（描述性规范线索），乱扔垃圾行为显著上升；加指令性信号后行为再次转向
+    - Schultz 等 2007 能耗反馈实验：描述性规范使高能耗家庭降低能耗，但也使低能耗家庭能耗上升（回旋镖）；叠加赞许提示后回旋镖消失
+    - Goldstein 等酒店毛巾实验：『同一房间曾住客多数重复使用』（本地化描述性规范）比泛化环保呼吁更有效
+    - Bicchieri 的规范诊断框架在多国田野干预中得到应用验证（S28）
+    conflicting:
+    - 规范的效应受参照群体界定影响极大，错误的『多数』定义会使干预失效
+    - 部分情境下指令性信息引发逆反（psychological reactance）
+    replication:
+    - 规范信息干预的元整合证实平均效应存在，但异质性高
+    - 回旋镖效应在能源、饮酒、健康行为等多个领域得到重复
+    meta_analysis:
+    - 规范信息干预的 meta 综合显示描述性规范平均有效，但方向修正依赖指令性信息的加入
+  evidence_grade: A
+  boundary_conditions:
+  - 受众在意『多数』所属的参照群体并认同之
+  - 描述性信息对低分布群体（低于均值者）单独使用时须警惕回旋镖
+  - 规范须真实存在（Bicchieri 诊断），虚假规范易被识破
+  failure_conditions:
+  - 受众处于均值以下且无指令性修正时，描述性规范使其合理化现状
+  - 参照群体被受众视为外群体时，规范线索失效甚至反效果
+  - 规范信息与受众身份认同冲突时触发防御
+  common_misinterpretations:
+  - 把『突出问题的普遍性』当动员策略——『大家都欠债』式描述性信息会降低还款/储蓄意愿
+  - 混淆『法律明文规定』与指令性规范——后者是社会期待而非条文
+  ethical_risks:
+  - 用描述性规范正当化有害行为（『男人都这样』）
+  - 伪造规范数据操纵群体行为
+  examples:
+    original_cases:
+    - Cialdini《Influence》规范焦点理论章节（S32）
+    - Bicchieri《Norms in the Wild》的规范诊断与变革框架（S28）
+    research_cases:
+    - Cialdini, Reno 与 Kallgren 1990 传单实验
+    - Schultz 等 2007 能耗反馈实验
+    modern_cases:
+    - 『90% 的人不会配置养老金』类内容会降低受众的行动意愿，应改为『越来越多同龄人已开始』+具体行为示范
+    - 社区团购的『本小区已有 XX 户参与』
+    - 健身 App 的群组平均值展示对落后者的回旋镖风险
+  communication_implications: 动员型内容必须同时给出描述性（很多人在做）与指令性（做了被认可/不做被不齿）双重线索；警示类内容避免用『普遍性』吓人，应用『正在增长的趋势』框架。
+  community_implications: 社群规范诊断应分两步：先测量成员真实行为分布与期待分布（Bicchieri 框架），再决定是传播描述性规范（行为已普遍）还是指令性规范（期待已共识但行为未跟上）。
+  content_applications:
+    body: 用『越来越多的同龄人已经…』（趋势性描述）替代『大多数人都不…』（问题普遍化），避免制造不作为的借口
+    evidence: 呈现具体行为证据（多少人做了什么）+社会评价证据（他们因此获得了什么认可）双轨
+    cta: CTA 后即时展示指令性反馈：『已完成的伙伴会收到XX认证』，让规范闭环
+    title: 标题避开『XX%的人不知道』——描述无知不改变行为，用『聪明人已经在做X』替代
+  platform_implications: 平台的可见指标（浏览数、点赞数）本质上只传递描述性规范；指令性规范需靠评论氛围、社区公约与互动方式传递——运营者应主动建设指令性信号层（置顶共识、价值声明）以补足平台默认缺失的维度。
+  related_nodes:
+  - social_proof
+  - norm_messaging_effects
+  - norm_perception_accuracy
+  - norm_enforcement_reputation
+  - normative_influence
+  - informational_influence
+  source_ids:
+  - S32
+  - S28
+  - S27
+  - S38
+  - S102
+  - S103
+  - S104
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Cialdini, Reno & Kallgren 1990 规范焦点理论 5 现场实验（S103 已实取结构+摘要）+ Schultz 2007 能耗回旋镖实验（S104
+      已实取摘要）+ Goldstein 2008 酒店实验（S102）
+    effect_size: 方向稳健，效应中等
+    replication_status: 回旋镖效应在能源/健康行为领域重复；描述性规范平均有效
+    context_dependency: 依赖参照群体认同与规范凸显性；低分布群体单独暴露描述性规范有回旋镖风险
+    downgrade_upgrade_reason: 2026-09 补充一手证据（S102/S103/S104），升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S102
+    - S103
+    - S104
+    supporting_evidence:
+    - S32
+    - S38
+    - S28
+    - S27
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-030
+    - CASE-RES-001
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: conformity_asch
+  canonical_name_en: Asch Conformity Experiments
+  canonical_name_zh: Asch 从众线段实验
+  aliases:
+  - Asch paradigm
+  - 线段判断从众实验
+  domain: social_proof
+  definition: Solomon Asch 于 1951/1955 年报告的实验范式：被试在清晰可辨的线段比较任务中，面对一致给出错误答案的多数派，约三分之一的判断跟随了多数，四分之三的被试至少从众一次；少数派（哪怕一人）说出正确答案即大幅降低从众率（Asch
+    后续变式实验，已建包 EP S186）。
+  core_claim: 即使事实清晰可见，一致的多数派意见仍能系统性扭曲公开判断；而少数异见者提供了关键的保护效应。
+  mechanism: 公开情境下，规范性压力（怕被排斥）与信息性怀疑（也许我真的错了）共同驱动从众；任务难度上升时信息性成分增强。同伴支持实验表明，仅需一名异见者就能破坏多数派的一致性从而大幅降低从众率——多数派的规模效应在超过三四人后趋于饱和，且『非一致性』比『多数规模』更关键（Asch
+    后续变式实验，已建包 EP S186）。写答（私密作答）条件下从众率显著下降，说明公开承诺是压力的核心载体（Asch 后续变式实验，已建包 EP S186）。
+  causal_chain: 一致的多数派错误判断 → 规范压力与自我怀疑 → 公开判断扭曲 → 少数异见出现 → 压力被打破，从众率骤降
+  variables:
+    inputs:
+    - 多数派规模与一致性
+    - 任务清晰度
+    - 判断的公开性
+    moderators:
+    - 多数派成员与被试的相似性
+    - 任务难度与模糊性
+    - 一致性是否被打破
+    mediators:
+    - 对排斥的恐惧
+    - 自我怀疑
+    - 与他人的比较需求
+    outputs:
+    - 公开从众（言语跟随）
+    - 私下保留原判断
+    - 后续行为扭曲
+  evidence:
+    supporting:
+    - Asch 1951/1955 的系列实验：清晰线段任务中一致多数派产生显著从众
+    - 同伴支持实验：一名同盟者给出正确答案即大幅降低从众率（Asch 后续变式实验，已建包 EP S186）
+    - 写答 vs 口头报告的对比：公开条件下从众率显著更高（Asch 后续变式实验，已建包 EP S186）
+    conflicting:
+    - 从众率随任务模糊度、文化、时代变化——部分文化与重复研究中整体从众率下降
+    - 约四分之一被试从不从众；个体差异显著
+    replication:
+    - 基本范式在多文化背景重复成功，但效应量有波动（部分现代复制中整体从众率低于原始报告）
+    - 同伴支持的保护效应在多项研究中稳健
+    meta_analysis:
+    - 从众研究的整合综述支持规范性影响的稳健存在，幅度中等偏小
+  evidence_grade: A
+  boundary_conditions:
+  - 多数派判断一致且公开可见
+  - 个体对群体有归属需求（面向陌生临时群体时减弱）
+  - 判断公开做出且被记录
+  failure_conditions:
+  - 任务完全无歧义且个体有强专业自信
+  - 多数派出现内部分歧
+  - 作答私密进行
+  common_misinterpretations:
+  - 把 Asch 解读为『多数人天生盲从』——实验恰恰证明约三分之二判断未跟随多数，且异见者保护效应显著
+  - 混淆『公开附和』与『私下信念改变』——Asch 中的多数从众是公开顺从而非私下接受
+  ethical_risks:
+  - 用一致化评论氛围压制异见（控评、水军铺量制造虚假共识）
+  - 利用公开承诺场景迫使非自愿表态
+  examples:
+    original_cases:
+    - Asch 1951/1955 线段实验系列（收录于 S21、S31 社会影响研究综述）
+    research_cases:
+    - 多数派规模与一致性操纵实验
+    - 同伴支持实验
+    - 公开 vs 私下作答的对比实验
+    modern_cases:
+    - 直播间弹幕一致刷单氛围对观望者的转化
+    - 社群控评形成的虚假共识氛围
+    - 品牌粉丝团控评反噬路人好感
+  communication_implications: 一致化的可见评论氛围（置顶、精选、弹幕）是现代版 Asch 情境；同时应主动保留真实异见（精选一条温和质疑）以增强可信度——全好评反而降低信任。
+  community_implications: 社群讨论中安排『有依据的异见者』是关键治理设计：防止群体思维；在公开投票与表态前先匿名征集意见，再公开汇总，可显著降低公开从众压力。
+  content_applications:
+    comments: 评论区保留并礼貌回复 1-2 条真实质疑，展示对异见的尊重并利用异见者保护效应增强说服氛围
+    body: 引用真实用户的分歧讨论与最终共识过程，而非只呈现一边倒好评
+    cta: 公开表态类 CTA（投票、打卡）应配合匿名反馈渠道，降低公开表态压力
+  platform_implications: 平台的精选评论、弹幕、实时互动组件制造高可见的一致氛围（Asch 情境的制度化）；同时平台算法偏好一致性互动，会系统性挤压异见内容的曝光，需运营侧主动平衡。
+  related_nodes:
+  - social_proof
+  - normative_influence
+  - informational_influence
+  - minority_influence
+  - psychological_reactance
+  - pluralistic_ignorance
+  - social_identity_theory
+  source_ids:
+  - S21
+  - S31
+  - S135
+  - S186
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Aronson 2018《The Social Animal》（S21，book 级，substantial_excerpt：Asch 约 75% 至少从众一次/信息性与规范性从众）+
+      Asch 1951/1955 原始实验
+    effect_size: 一致多数派产生显著公开从众；同伴支持大幅降低从众率
+    replication_status: 基本范式多文化重复；现代复制整体从众率有波动
+    context_dependency: 判断公开性与任务模糊度是关键调节；异见者提供保护
+    downgrade_upgrade_reason: 2026-09 实取 S21 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S186
+    supporting_evidence:
+    - S21
+    - S31
+    - S135
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: informational_influence
+  canonical_name_en: Informational Influence
+  canonical_name_zh: 信息性影响
+  aliases:
+  - 信息性社会影响
+  domain: social_proof
+  definition: 社会影响的两大路径之一（对应规范性影响）：人们因把他人的行为与判断当作现实证据而趋同——尤其当情境模糊、自身知识不足、他人被知觉为更有信息或类似处境时。原型是 Sherif 的自动运动效应（autokinetic
+    effect）实验中群体判断标准的形成与传递（Sherif 自动运动实验，已建包 EP S187）。
+  core_claim: 模糊情境中他人反应被当作现实线索，其效果依赖于信源被知觉为『知道真相的人』或『与我处境相似的人』。
+  mechanism: 当现实本身模糊（无客观锚点）时，他人的判断提供了认知捷径——不是怕被排斥而跟随，而是真心相信『他们的反应包含信息』。Sherif 的自动运动效应实验中，孤立状态下个体形成各自的判断标准，群体互动后判断标准相互趋同并形成可传递的群体规范（甚至延续到后续的假被试；Sherif
+    自动运动实验，已建包 EP S187）。信源的专业性或相似性决定该信息流的可信度权重。
+  causal_chain: 情境模糊 + 他人反应可见 → 他人反应被当作现实证据 → 认知标准更新 → 群体标准趋同与代际传递
+  variables:
+    inputs:
+    - 情境模糊度
+    - 他人反应的可见性
+    - 他人与自身的相似性/专业性
+    moderators:
+    - 受众对该领域的知识水平
+    - 信源可信度
+    - 信息的可验证性
+    mediators:
+    - 对他人判断的信息性信任
+    - 认知不确定的降低
+    outputs:
+    - 私有态度改变（非仅公开顺从）
+    - 群体判断标准形成
+    - 谣言与集体误判的扩散
+  evidence:
+    supporting:
+    - Sherif 自动运动效应实验：模糊光点运动判断中群体标准形成并传递（社会影响研究的基石实验之一；Sherif 自动运动实验，已建包 EP S187）
+    - 危机情境中的从众研究：模糊+威胁下他人反应成为现实线索
+    - 危机与谣言传播研究：模糊性是集体误判扩散的关键条件
+    conflicting:
+    - 清晰无歧义情境中信息性影响减弱（Asch 任务清晰时仍出现从众主要归因于规范压力）
+    - 信源被识别为无知或利益相关时信息权重趋零
+    replication:
+    - Sherif 范式及其传递效应在多研究中重复（Sherif 自动运动实验，已建包 EP S187）
+    - 信息性/规范性影响的分离在不同任务类型中得到验证
+    meta_analysis:
+    - 无独立 meta-analysis；通常并入社会影响综述（S31）
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 情境模糊或判断缺乏客观标准
+  - 他人被知觉为更知情或处境相似
+  - 受众自身知识不足或不确定
+  failure_conditions:
+  - 情境清晰可验证（直接检验可否定他人判断）
+  - 他人被识别为无知或利益操纵者
+  - 受众有强专业背景与独立判断资源
+  common_misinterpretations:
+  - 把所有从众归因于『怕被排斥』——信息性影响下人们是真心相信多数更可能对
+  - 忽视负面应用：谣言与恐慌性抢购正是信息性影响的产物（他人抢购被当作短缺证据）
+  ethical_risks:
+  - 利用模糊情境制造信息性误导（恐慌性谣言、伪稀缺暗示）
+  - 雇用『知情者』表演制造虚假现实线索
+  examples:
+    original_cases:
+    - Sherif 自动运动效应实验（社会影响研究传统基石，S21、S31 收录）
+    research_cases:
+    - Sherif 群体标准形成实验
+    - 模糊情境下从众与私下态度改变的分离研究
+    modern_cases:
+    - 突发公共事件中的『别人都在囤』效应
+    - 直播间『内部消息』话术
+    - 医疗美容等高模糊决策领域中『同症状用户』经验帖的高影响力
+  communication_implications: 在受众不确定的领域，展示『和我处境相似的人如何判断』比展示专家更具说服力（相似性>专业性在高模糊情境）；同时需警惕：不澄清模糊性等于放任信息性误判扩散。
+  community_implications: 社群在危机事件中是信息性影响的放大器或校准器：运营者应第一时间提供清晰事实与可验证信源，避免成员相互以对方的反应为现实线索形成集体误判。
+  content_applications:
+    body: 高模糊决策内容应呈现『相似处境者的真实决策过程』（同症状、同预算、同阶段用户的思考）而非仅权威结论
+    evidence: 引用『与你处境相同的人怎么验证』的可操作验证方法，降低模糊性而非利用模糊性
+    comments: 评论区置顶事实核查与可验证信源，主动为模糊情境提供锚点
+  platform_implications: 平台热榜与实时互动把『他人的反应』（转发、抢购、围观）高频可见化，信息性影响被算法提速；高模糊领域（健康、财经）需要平台级事实核查介入以防止集体误判规模化。
+  related_nodes:
+  - normative_influence
+  - social_proof
+  - conformity_asch
+  - minority_influence
+  - source_credibility_model
+  - misinformation_velocity
+  - gatekeeping_dynamics
+  source_ids:
+  - S21
+  - S31
+  - S187
+  provenance:
+    primary_sources:
+    - S187
+    supporting_evidence:
+    - S31
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-039
+    - CASE-PLT-040
+    platform_sources:
+    - x:S3
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: normative_influence
+  canonical_name_en: Normative Influence
+  canonical_name_zh: 规范性影响
+  aliases:
+  - 规范性社会影响
+  domain: social_proof
+  definition: 社会影响的两大路径之一（对应 informational_influence）：人们为获得认可、避免排斥而趋同于群体的显性期待——即使私下保留原判断。区分于信息性影响的核心：规范性影响改变公开行为而不必然改变真实信念。
+  core_claim: 群体接纳的奖赏与排斥的威胁足以扭曲公开行为，即使个体私下并不认同；其强度由群体吸引力与个体归属需求决定。
+  mechanism: 人类演化出对社会排斥的敏感性（排斥威胁激活类似生理疼痛的困扰）；被重要群体接纳是基本需求（need to belong）。当群体期待明确且成员在意归属时，公开表态趋同以维持关系资产。这与承诺一致性机制交互：公开表态一旦做出，后续会经认知失调而部分内化——顺从可能演变为真实态度改变。
+  causal_chain: 群体期待明确 + 个体在意归属 → 公开行为趋同（私下可能不变） → 公开承诺 → 经失调减少而部分内化
+  variables:
+    inputs:
+    - 群体显性期待
+    - 公开/私密情境
+    - 群体监督与反馈
+    moderators:
+    - 群体吸引力与重要性
+    - 个体归属需求
+    - 表态的公开性与记录性
+    mediators:
+    - 对排斥的恐惧
+    - 获得认可的期待
+    - 自我呈现需求
+    outputs:
+    - 公开顺从
+    - 表态性参与（点赞、转发）
+    - 部分态度内化（经公开承诺）
+  evidence:
+    supporting:
+    - Asch 实验中写答条件（私下作答）显著降低从众率——规范性压力的核心载体是公开性（Asch 后续变式实验，未建包）
+    - Schachter 对持异见者被排斥的群体动力学研究（社会影响研究传统；Schachter 异见者排斥研究，未建包）
+    - 排斥研究（ostracism）：被排斥感迅速降低归属与自尊（社会心理学教材综述）
+    conflicting:
+    - 低归属需求或群体无关情境中规范性压力趋零
+    - 公开表态若引发逆反（reactance）可反向驱动独立表态
+    replication:
+    - 规范性影响的公开/私密分离效应在多范式中重复
+    - 排斥效应的稳健性在神经与行为层面均有支持
+    meta_analysis:
+    - 无独立 meta-analysis；并入社会影响综述（S31）
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 群体对个体重要且期待显性
+  - 表态公开且被记录
+  - 个体有较强归属需求
+  failure_conditions:
+  - 匿名或私密作答场景
+  - 群体对个体无吸引力或可轻易退出
+  - 公开表态被群体惩罚的预期大于奖励
+  common_misinterpretations:
+  - 误以为公开表态=真实态度改变——规范性影响常只改变外显行为，私下信念可能不变
+  - 把规范性影响与信息性影响混为一谈，导致用错杠杆（该给证据时给了压力）
+  ethical_risks:
+  - 利用群体压力强制表态（站队文化）
+  - 以排斥威胁运营社群（不转发的不是真粉）
+  examples:
+    original_cases:
+    - Asch 实验中的公开压力条件（S21、S31 收录）
+    - Schachter 的异见者排斥研究传统
+    research_cases:
+    - 公开 vs 私下作答的从众率对比实验
+    - 网络排斥（cyberostracism）对归属感的影响研究
+    modern_cases:
+    - 直播间点名式互动（让被点名者公开表态后更难离开）
+    - 社群打卡与接龙机制
+    - 粉丝群体的表态性消费（不买不是真粉）
+  communication_implications: 设计公开表态的轻量入口（投票、打卡、贴纸）能利用规范性影响启动行为；但要清楚：靠表态获得的行为在失去群体监督时可能回退——需配合理性内容内化。
+  community_implications: 社群通过接纳/排斥机制塑造行为：新手公开自我介绍、打卡接龙、仪式化参与都是规范性影响的制度化应用；应让公开行为的方向与成员长期利益一致，而非仅收割表态。
+  content_applications:
+    cta: 用轻量公开表态启动参与：『在评论区打个 1，我看看有多少人想看下篇』
+    comments: 对表态行为给予即时接纳反馈（回复、置顶、点名感谢），强化规范性循环
+    body: 把关键行为设计为公开可记录形式（打卡图、里程碑徽章），借规范性影响固化习惯
+  platform_implications: 平台的公开互动（点赞、转发、评论）是规范性影响的默认载体；算法记录与展示公开表态（『好友都在看』），把规范性压力嵌入产品结构，同时也放大表态与真实态度的分离。
+  related_nodes:
+  - informational_influence
+  - conformity_asch
+  - social_proof
+  - need_to_belong
+  - ostracism_effects
+  - commitment_consistency
+  - self_presentation_impression_management
+  source_ids:
+  - S21
+  - S31
+  - S135
+  provenance:
+    primary_sources:
+    - S21
+    - S31
+    - S135
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-CMP-002
+    - CASE-COM-083
+    - CASE-COM-086
+    - CASE-FAL-039
+    - CASE-FAL-079
+    - CASE-FAL-080
+    - CASE-FAL-100
+    - CASE-GRW-018
+    - CASE-PLT-039
+    - CASE-RES-002
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: pluralistic_ignorance
+  canonical_name_en: Pluralistic Ignorance
+  canonical_name_zh: 多数无知
+  aliases:
+  - 人众无知
+  - pluralistic ignorance
+  domain: social_proof
+  definition: 群体成员多数私下不认同某规范，但错误地相信其他人都认同（因为没人公开反对），于是人人公开维持一个自己并不相信的立场。首例经典研究是 O'Gorman 1975 年对美国白人种族隔离态度的调查：多数白人私下反对隔离，但以为多数邻居支持，因而不公开反对（O'Gorman
+    1975，已建包 EP S213）。
+  core_claim: 公开沉默+私下怀疑的错配可以让一个大多数人都不再相信的规范长期自我维持。
+  mechanism: 每个人观察他人的公开行为（沉默/顺从）来推断他人态度，但自己的怀疑因社会规范压力而未公开表达。于是『他人的沉默』被误读为『他人的认同』。该错误共识使旧规范获得表面多数支持，个体因害怕成为唯一异见者而不敢打破沉默。一旦有人公开质疑（与
+    minority_influence 的关键少数效应衔接），多数无知迅速瓦解。
+  causal_chain: 私下怀疑 + 公开沉默 → 他人沉默被误读为认同 → 错误的多数知觉 → 个体不敢率先表态 → 旧规范表面延续
+  variables:
+    inputs:
+    - 公开沉默的可见性
+    - 私下怀疑的存在
+    - 公开表态的成本
+    moderators:
+    - 公开异见的社交成本
+    - 群体规模（大群体更难打破）
+    - 异见者出现的信号效应
+    mediators:
+    - 对他人态度的错误推断
+    - 对孤立的恐惧
+    outputs:
+    - 规范的虚假延续
+    - 公开行为的集体扭曲
+    - 皇帝新衣效应（一旦破口即雪崩）
+  evidence:
+    supporting:
+    - O'Gorman 1975 的种族态度调查：多数白人反对隔离却以为多数邻居支持（O'Gorman 1975，已建包 EP S213）
+    - 饮酒规范研究：大学生普遍高估同伴对饮酒量的认可（Prentice 与 Miller 的系列研究，已建包 EP S213）
+    - 课堂沉默研究：学生不提问因误以为只有自己不懂（多数无知的经典教学案例，已建包 EP S213）
+    conflicting:
+    - 效应依赖于公开表达的社交成本，在匿名平台上减弱
+    - 少数情境下公开表态反而触发群体反感（对打破沉默者的惩罚）
+    replication:
+    - 饮酒规范研究在多校园样本重复
+    - 课堂沉默与职场异议情境中的现象观察获得广泛支持
+    - 多数无知的量化测量存在方法学挑战（难以直接测量私下信念的错配）
+    meta_analysis:
+    - 无权威 meta-analysis；以系列调查与实验研究为主
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 公开表态有较高社交成本（避免尴尬/排斥）
+  - 群体成员相互可见但缺乏私下沟通渠道
+  - 存在某个表面一致的多数立场
+  failure_conditions:
+  - 匿名或私下沟通充分的场景（私下对齐后错配消失）
+  - 异见已被公开表达过（多数无知已被打破）
+  - 群体规模小且关系紧密（信息透明度高）
+  common_misinterpretations:
+  - 与 false consensus（虚假同感偏差）混淆——多数无知是私下怀疑但以为他人认同；虚假同感是高估他人与自己观点的一致性
+  - 误以为多数无知只发生在落后观念上——它同样维持着过度工作、过度消费等『进步』规范
+  ethical_risks:
+  - 利用沉默氛围让有害规范看起来被普遍接受
+  - 压制公开表达以维持虚假共识
+  examples:
+    original_cases:
+    - O'Gorman 1975 的多数无知经典调查（收录于社会影响与民意研究传统）
+    - Prentice 与 Miller 的饮酒规范研究（收录于社会影响综述 S31）
+    research_cases:
+    - 大学生饮酒量知觉的错配研究
+    - 课堂提问沉默的知觉研究
+    modern_cases:
+    - 公司内部没人反对加班但人人都不情愿的加班文化
+    - 社群中对运营策略的集体沉默配合
+    - 饭圈对偶像行程安排的沉默配合与突然脱粉雪崩
+  communication_implications: 内容可以主动打破多数无知（『其实大多数人和你一样觉得不对劲』），这是一种高共鸣、低对抗的立场切入；产品评论区的匿名投票（真实态度分布）是打破多数无知的工具。
+  community_implications: 社群运营要建立低成本私下反馈渠道（匿名问卷、私下吐槽区），打破多数无知；否则运营者会把沉默当认同，最终面临突然的大规模流失（皇帝新衣式崩塌）。
+  content_applications:
+    body: 用『你不是一个人这样想』框架开启敏感话题，为沉默多数提供公开表达的台阶
+    opening: 『很多人不好意思承认这一点』——直接点破多数无知，制造安全表态氛围
+    cta: 用匿名投票替代公开表态收集真实态度，再公开汇总结果
+    comments: 置顶『其实我也…』式坦白评论，示范打破沉默的安全路径
+  platform_implications: 平台的公开互动设计（公开点赞、评论）强化多数无知；匿名投票、匿名讨论区是平台层的破局工具；算法只放大公开行为，私下态度不可见，导致推荐内容系统性高估公开立场的真实支持度。
+  related_nodes:
+  - norm_perception_accuracy
+  - normative_influence
+  - minority_influence
+  - ostracism_effects
+  - conformity_asch
+  - psychological_reactance
+  source_ids:
+  - S31
+  - S21
+  - S213
+  grade_justification:
+    independent_studies: 无已建一手 EP：O'Gorman 1975 与 Prentice & Miller 饮酒规范研究均标注未建包；S21/S31 仅提供目录级/相邻章节级支撑，EP
+      登记文本不含 definition 首例研究与三条核心证据
+    effect_size: 无经 EP 核实的效应量
+    replication_status: 『饮酒规范研究多校园重复』等复现声明源自综述层，未经一手 EP 核实
+    context_dependency: 依赖公开表态的社交成本与群体可见性
+    downgrade_upgrade_reason: 2026-09-09 反向审计（A15）：核心证据在 S21/S31 EP 登记文本均无载，由 B+ 降为 C
+  provenance:
+    primary_sources:
+    - S31
+    - S21
+    - S213
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: minority_influence
+  canonical_name_en: Minority Influence
+  canonical_name_zh: 少数派影响
+  aliases:
+  - Moscovici 少数派影响
+  - 少数派影响理论
+  domain: social_proof
+  definition: Serge Moscovici 提出的社会影响方向：一致、自信的少数派虽难以在公开层面取胜，但能在私下与延时层面改变多数派的判断（转换作用，conversion），与多数派的即时公开从众形成互补。
+  core_claim: 多数派改变公开行为（顺从），少数派改变私下信念（转换）；少数派的有效性取决于其一致性、确定性与风格而非人数。
+  mechanism: 多数派信息导致注意力集中于『做什么才对』（横向冲突：我与多数的差异），引发公开顺从但认知加工浅。少数派信息引发对议题本身的纵向加工（『他为什么这么坚持』），被影响者更系统地审视论点，从而在延时测试与私密判断中出现真实改变（conversion）。少数派需保持行为一致性（时间上稳定）与主体间一致性（成员间一致），并避免显得僵化固执。
+  causal_chain: 一致的少数派坚持立场 → 多数派对冲突归因（他为何坚持） → 系统加工论点 → 私下/延时态度转换 → 长期规范迁移
+  variables:
+    inputs:
+    - 少数派一致性（时间与成员间）
+    - 立场的确定性表达
+    - 论据质量
+    moderators:
+    - 少数派规模（少数但非单一）
+    - 多数派的开放度
+    - 议题的利害与身份绑定度
+    mediators:
+    - 对冲突源的归因
+    - 系统加工深度
+    - 转换（延时态度改变）
+    outputs:
+    - 延时判断改变
+    - 私下接受
+    - 创新扩散的早期种子
+  evidence:
+    supporting:
+    - Moscovici 的蓝色-绿色幻灯实验：一致回答『绿色』的少数派使部分多数派在后续私密判断中出现色觉判断偏移（Moscovici 蓝绿幻灯实验，未建包）
+    - 延时与私密测试中的少数派效应在多项研究中重复
+    - 少数派一致性对效应的关键作用获得支持
+    conflicting:
+    - 效应量总体偏小，且对实验操作敏感
+    - 公开对抗性强的少数派可能反而强化多数派防御
+    - 真实政治与市场情境中少数派常被边缘化而非转换
+    replication:
+    - 延时转换效应在部分复制中稳健、部分存在波动
+    - 该方向整体证据状态中等，属稳健但幅度有限的效应
+    meta_analysis:
+    - 少数派影响研究的整合综述支持延时效应存在但幅度小且条件依赖
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 少数派保持一致且自信但不僵化
+  - 议题允许延时与私下层面的重新评估
+  - 少数派不是多数派身份认同的核心威胁（否则触发防御）
+  failure_conditions:
+  - 少数派内部不一致或摇摆
+  - 被知觉为固执或利益相关（收钱说话）
+  - 议题已高度阵营化，少数派立场被解读为敌对身份信号
+  common_misinterpretations:
+  - 误以为少数派靠音量取胜——一致性比强度更重要
+  - 混淆公开说服与私下转换：多数派影响看即时公开行为，少数派影响看延时私下态度
+  ethical_risks:
+  - 利用一致性表演（水军扮少数派）制造伪草根（astroturfing）
+  - 以『少数清醒者』话术包装营销立场
+  examples:
+    original_cases:
+    - Moscovici 的蓝色-绿色幻灯实验（社会影响研究传统，EP 未建包）
+    - Moscovici 关于少数派主动性的理论阐述
+    research_cases:
+    - 延时测试中少数派引发的色觉偏移
+    - 少数派一致性的操纵实验
+    modern_cases:
+    - 早期加密货币布道者对主流的长期渗透
+    - 素食、环保理念从边缘到主流的数十年转换
+    - 社群中的长期反共识意见领袖最终改变群体规范
+  communication_implications: 新观念的传播早期应追求深度转换而非即时流量：小而一致的核心受众比大而浅的曝光更能沉淀真实改变；对高认同受众允许延时验证的内容（可复检的事实）优于即时情绪高潮。
+  community_implications: 社群应保护一致的少数派意见（避免被即时多数压制）：他们的延时影响是社群规范演化的引擎；设少数派保护机制（冷静期、结构化辩论）可防止群体思维固化。
+  content_applications:
+    body: 反共识内容须展示长期一致性（过往观点记录、可验证的跟踪），而非单次强势输出
+    comments: 对少数派评论给予结构化回应而非压制，将其转化为延时转换的种子
+    evidence: 用可延时验证的开放式证据（预测记录、时间戳）替代即时断言，适配转换型加工
+  platform_implications: 算法偏好即时多数互动（点赞量），系统性削弱少数派内容的曝光——少数派影响在平台结构上处于劣势，需社群与关注关系链作为替代通道（对应 complex contagion
+    的强连带需求）。
+  related_nodes:
+  - conformity_asch
+  - normative_influence
+  - informational_influence
+  - pluralistic_ignorance
+  - complex_contagion
+  - opinion_leadership
+  - psychological_reactance
+  source_ids:
+  - S31
+  - S21
+  provenance:
+    primary_sources:
+    - S31
+    - S21
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long

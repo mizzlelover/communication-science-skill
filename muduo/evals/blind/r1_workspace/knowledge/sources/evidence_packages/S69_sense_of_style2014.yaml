@@ -1,0 +1,26 @@
+# Evidence Package — S69 Pinker 2014（The Sense of Style）
+# 标准格式。access_level 如实标注。
+source_id: S69
+title: "The Sense of Style: The Thinking Person's Guide to Writing in the 21st Century"
+authors: "Steven Pinker"
+year: 2014
+journal: Viking（专著）
+doi: "无 DOI（专著）"
+url: "https://tryathens.com/blog/steven-pinker-writing-advice"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：写作建议综述（诅咒知识 curse of knowledge/古典风格/僵尸名词/具体语言/冗余删除）+ 学术书评引用（诅咒知识为专家写作差的最佳解释）+ 中文书评（认知科学解释好句/坏句/反对故弄玄虚）"
+research_question: "为什么专家写不清楚？清晰写作的认知科学原理是什么？"
+core_claims:
+  - "诅咒知识（curse of knowledge）：最大的写作障碍——我们无法记起'不知道某事的感受'，专家因此用术语、跳过推理、假设读者有上下文（TED 分子生物学家 4 秒失去全场的例子）"
+  - "古典风格（classic style）：作者发现了世界中的某物，平等地指给读者看（'把读者当作同等聪明的对话者'）——对抗居高临下的'专家-学生'模式"
+  - "具体语言/消灭僵尸名词（zombie nouns）：把动作保持在动词中（'we decided' 而非 'we made a decision'）；具体经验细节触发读者心智图像（'没人能在脑海中形成范式的图像'）"
+  - "删除多余词（Omit needless words）：每个词都增加认知负荷；压缩字数奇迹般改善文风"
+  - "平衡概括与例子；自信表达（删除 hedge 词与空洞强化词）"
+method: "认知语言学（心智/语言研究）+ 文体分析（20 世纪最佳文章语料）"
+results: "（应用经典）诅咒知识/古典风格成为 21 世纪清晰写作的标准解释"
+limitations: "文体指南性质（规范建议）；'规则可破'的判断需文体场景"
+boundary_conditions: "适用于专家到普通读者的知识传达；写作规范需结合具体场景"
+relevant_nodes: [concreteness_in_language, processing_fluency, verb_concreteness_action_language, argumentation_structure, extraneous_cognitive_load, intrinsic_cognitive_load, pronoun_perspective_effects, seductive_details_effect, specificity_effect]
+notes: "清晰写作的认知科学来源（book 级）。诅咒知识/古典风格为公开标准内容，未编造。"
+last_verified: "2026-09"

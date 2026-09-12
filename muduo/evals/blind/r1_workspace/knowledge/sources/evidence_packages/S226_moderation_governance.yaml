@@ -1,0 +1,23 @@
+# Evidence Package — S226（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S226
+title: The X Rules（官方规则页）
+authors: X Corp.
+year: 2026
+journal: X Help Center
+doi: ''
+url: https://help.x.com/en/rules-and-policies/x-rules
+access_level: full_text
+research_status: annotated
+content_obtained: 本项目 2026-09-10 官方实读（platform_sources S10 in platforms/x，claim_supported 在案）
+research_question: X 的账号处置依据是什么？
+core_claims:
+- 官方规则页公开：safety/privacy/authenticity 等规则与账号处置依据
+- '''可见性降权''细则未逐条实读（诚实边界）——规则存在性与处置框架为官方确认'
+method: 官方规则页
+limitations: 细则深度未逐条实读
+boundary_conditions: 以最新规则为准
+relevant_nodes:
+- moderation_governance
+- platform_power_gatekeeping
+notes: moderation_governance（治理标准与处置）与 platform_power_gatekeeping（触达为平台授予/可撤回的规则框架）的官方一手证据。
+last_verified: 2026-09

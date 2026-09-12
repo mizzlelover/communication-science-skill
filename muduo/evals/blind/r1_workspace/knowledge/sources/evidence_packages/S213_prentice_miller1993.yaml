@@ -1,0 +1,25 @@
+# Evidence Package — S213 Prentice & Miller 1993（多元无知与饮酒规范）
+# 标准格式。2026-09-09 T5。access_level 如实标注。
+source_id: S213
+title: "Pluralistic ignorance and alcohol use on campus: some consequences of misperceiving the social norm"
+authors: "Deborah A. Prentice; Dale T. Miller"
+year: 1993
+journal: Journal of Personality and Social Psychology, 64(2), 243-256
+doi: "10.1037/0022-3514.64.2.243"
+url: "https://doi.org/10.1037/0022-3514.64.2.243"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心发现经 4 个独立源交叉核实（未取得全文）：①期刊页码与 DOI（JPSP 64(2):243-256, 10.1037/0022-3514.64.2.243）经 PMC 2024 Sci Rep（Isenberg & Brauer，N=5448）参考文献表与 PubMed PMID 8433272 一致；②研究场景（多源转述一致）：普林斯顿学生对校园饮酒的态度——多数学生私下对饮酒量感到不适，但普遍认为其他同学比自己对饮酒更感舒适（多元无知）；③后果：为符合自己以为的群体规范，学生公开顺应饮酒行为——误知觉维持并强化了饮酒常态；④当代延续：Isenberg & Brauer 2024（N=5448）——美国人系统性低估他人对多元与包容的支持，误估程度预测讨论频率与包容行为；『社会规范信息』（公布全国民调多数支持）可纠正误知觉；Miller 2023（Front Soc Psychol）百年多元无知综述"
+research_question: "多元无知如何在真实校园规范中形成、维持并产生行为后果？"
+core_claims:
+  - "多元无知实证：学生私下对饮酒不适但以为他人更感舒适——私态度与感知规范系统性错位"
+  - "行为后果：误以为的规范驱动公开顺应，行为又成为下一个人『他人都在喝』的证据——误知觉自我维持循环"
+  - "时间动态：随时间推移学生的不适感上升而行为惯性维持——规范误知觉的滞后代价"
+  - "矫正路径：公布真实分布数据（社会规范信息）可纠正误知觉（Isenberg & Brauer 2024 复线）"
+method: "系列研究（普林斯顿校园：问卷测量私态度与感知规范的错位 + 横断/追踪组合）"
+results: "（经典）多元无知从理论概念到实证机制的标志研究；为 norm_perception_accuracy 提供首类一手证据"
+limitations: "未取得全文；单一精英校园与单一行为域（饮酒）；感知规范的测量依赖自陈"
+boundary_conditions: "公开行为样本被选择性表达污染的场景最强；匿名数据校准可打破循环；小规模高透明群体中错位较小"
+relevant_nodes: [pluralistic_ignorance, norm_perception_accuracy]
+notes: "pluralistic_ignorance 与 norm_perception_accuracy 两节点『Prentice & Miller 未建包』的建包来源。核心发现多源一致，未编造。"
+last_verified: "2026-09"

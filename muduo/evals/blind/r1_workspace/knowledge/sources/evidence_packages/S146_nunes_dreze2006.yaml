@@ -1,0 +1,25 @@
+# Evidence Package — S146 Nunes & Drèze 2006（The Endowed Progress Effect: How Artificial Advancement Increases Effort）
+# 标准格式。access_level 如实标注。
+source_id: S146
+title: "The Endowed Progress Effect: How Artificial Advancement Increases Effort"
+authors: "Joseph C. Nunes; Xavier Drèze"
+year: 2006
+journal: "Journal of Consumer Research 32(4): 504-512"
+doi: "10.1086/500480"
+url: "https://ideas.repec.org/a/oup/jconrs/v32y2006i4p504-512.html"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "OUP 官方摘要全文（academic.oup.com 文章页，WebSearch 实取）+ RePEc 条目（ideas.repec.org，WebFetch 实取）双源确认；作者主页开放 PDF 未检索到，正文实验细节（洗车卡/咖啡卡现场实验表格）未获取"
+research_question: "向目标人为预先赠予进度（artificial advancement）是否以及如何提高个体达成目标的坚持与努力？"
+core_claims:
+  - "人为进度效应（endowed progress effect）存在：被给予人为目标进度的人对达成目标表现出更强的坚持"
+  - "将需 8 步完成的任务重新框架为需 10 步但已有 2 步完成，任务从『尚未开始』转为『已开始未完成』，提高完成可能性并缩短完成时间"
+  - "效应取决于对任务完成度的感知，而非避免浪费已赠予进度的动机（非沉没成本解释）"
+  - "调节变量包括：赠予进度时是否给出理由，以及记录进度所用货币/形式"
+method: "多实验消费者研究（实验+现场实验组合；摘要层未披露各实验样本与具体任务行业，忠诚卡类现场实验为后续二手引用共识）"
+results: "预先赠予进度提升完成率并缩短完成时间；完成感知而非沉没投入是核心中介；赠予理由与进度货币为调节变量"
+limitations: "本包仅获取摘要层信息；各实验样本量、效应量数值与具体任务（洗车卡/咖啡卡）细节需原文核验；JCR 正文订阅受限"
+boundary_conditions: "适用于目标在可完成区间、进度可视化清晰的忠诚计划/任务设计；赠予需有合理解释（欢迎礼/老客户礼），无理由白给或剩余距离过大时效应减弱（reward.yaml endowed_progress_effect 节点边界）"
+relevant_nodes: [endowed_progress_effect, goal_gradient_effect]
+notes: "人为进度效应命名论文（paper 级，abstract_only）。摘要层双源实取（OUP+RePEc），『8步→10步已完成2步』为摘要原文表述；任务说明中的咖啡卡/洗车卡行业细节为后续二手引用，未在本包标注为一手内容。"
+last_verified: "2026-09"

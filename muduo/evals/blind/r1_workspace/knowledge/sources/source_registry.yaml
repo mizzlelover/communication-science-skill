@@ -1,0 +1,3052 @@
+sources:
+- source_id: S01
+  title: Thinking, Fast and Slow
+  authors: Daniel Kahneman
+  year: 2011
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 双系统/启发式/前景理论/两个自我；2026-09 实取（38 章结构+核心框架）；配套原始论文见 S113
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 27 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S02
+  title: Attention and Effort
+  authors: Daniel Kahneman
+  year: 1973
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 注意力容量与努力分配模型；2026-09 实取（容量理论/唤醒/双任务干扰）；2026-09-09 同书重复登记 S117 已并入本包（MERGED_INTO，见 EP
+    墓碑）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 9 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S03
+  title: Attention Span
+  authors: Gloria Mark
+  year: 2023
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 数字环境注意力研究；2026-09 实取（注意时长 47 秒/切换成本 23 分钟/8秒注意力为媒体讹传）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 7 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S04
+  title: Working Memory, Thought, and Action
+  authors: Alan Baddeley
+  year: 2007
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 工作记忆多成分模型；2026-09 实取（四成分/情景缓冲器）；2026-09-09 同书重复登记 S116 已并入本包（MERGED_INTO，见 EP 墓碑）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 11 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S05
+  title: The Seven Sins of Memory
+  authors: Daniel L. Schacter
+  year: 2001
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 记忆七宗罪框架；2026-09 实取（七宗罪分类/omission+commission/建构性；与 1999 Am Psychol 论文同源）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 8 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S06
+  title: How Emotions Are Made
+  authors: Lisa Feldman Barrett
+  year: 2017
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: ' constructed emotion 理论；2026-09 实取（构建情绪/内感受/核心情感/否定情绪指纹）'
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S07
+  title: Descartes' Error
+  authors: Antonio Damasio
+  year: 1994
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 躯体标记假说；2026-09 实取（躯体标记/Gage-Elliot/赌博实验/皮肤电）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S08
+  title: The Emotional Brain
+  authors: Joseph E. LeDoux
+  year: 1996
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 威胁加工与情绪回路；2026-09 实取（双通路 high/low road/杏仁核/恐惧条件化）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S09
+  title: The Invisible Gorilla
+  authors: Christopher Chabris; Daniel Simons
+  year: 2010
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 注意错觉六大幻象；源自 Simons & Chabris 1999 持续性无意视盲实验；2026-09 实取（1999 大猩猩实验+2024 eLife 边界研究）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S10
+  title: Surfing Uncertainty
+  authors: Andy Clark
+  year: 2016
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 预测加工理论（predictive processing）综合；2026-09 实取（预测误差最小化/受控幻觉/精度加权/主动推断）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 7 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S11
+  title: Nudge
+  authors: Richard H. Thaler; Cass R. Sunstein
+  year: 2008
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; Final Edition 2021；2026-09 实取（定义/选择架构/默认效应）；复核 S108 与 DellaVigna & Linos 126 RCT
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 6 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S12
+  title: Misbehaving
+  authors: Richard H. Thaler
+  year: 2015
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 行为经济学思想史与关键实验；2026-09 实取（心理账户/禀赋效应/planner-doer/nudge 起源）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 13 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S13
+  title: Scarcity
+  authors: Sendhil Mullainathan; Eldar Shafir
+  year: 2013
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 稀缺改变认知带宽；2026-09 实取（带宽税/隧视野/松弛/13 IQ 点）；配套 S128
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S14
+  title: Self-Determination Theory
+  authors: Richard M. Ryan; Edward L. Deci
+  year: 2017
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; SDT 综合著作；2026-09 实取（三基本需要/六 mini-theories/动机连续体/自主vs受控）；配套 Deci & Ryan 2000（S118）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 7 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S15
+  title: Flow
+  authors: Mihaly Csikszentmihalyi
+  year: 1990
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 心流：挑战-技能平衡；2026-09 实取（9 成分/三前提/ESM）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S16
+  title: Tiny Habits
+  authors: B. J. Fogg
+  year: 2019
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: B=MAP 行为模型；2026-09 实取（B=MAP 三要素/能力六因素/锚点-微行为-庆祝配方）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S17
+  title: Hooked
+  authors: Nir Eyal
+  year: 2014
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Hook 模型：触发-行动-多变奖励-投入；2026-09 实取（四阶段/三类可变奖励/内外部触发）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S18
+  title: The Power of Habit
+  authors: Charles Duhigg
+  year: 2012
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 习惯回路科普；2026-09 实取（cue-routine-reward/渴求/keystone/21天为讹传）——科普，证据等级低于 S110 实证综述
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S19
+  title: The Person and the Situation
+  authors: Lee Ross; Richard E. Nisbett
+  year: 1991
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 人-情境之争，基本归因错误；2026-09 实取（FAE/问答游戏/文化差异）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S20
+  title: The Behavioral Foundations of Public Policy
+  authors: Eldar Shafir (Ed.)
+  year: 2013
+  type: handbook
+  language: en
+  authority_level: handbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 行为科学政策应用合集；2026-09 实取（跨学科综述/选择架构/默认/心理杠杆章节体系）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S21
+  title: The Social Animal
+  authors: Elliot Aronson
+  year: 2018
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 首版 1972；社会心理学综合，12th ed；2026-09 实取（失调/从众/归因/偏见/利他）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 24 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S22
+  title: The Nature of Prejudice
+  authors: Gordon W. Allport
+  year: 1954
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 偏见的本质；接触假说起源；2026-09 实取（四条件+后续实证）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S23
+  title: Obedience to Authority
+  authors: Stanley Milgram
+  year: 1974
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 服从权威实验；2026-09 实取（65% 结果/agentic state/变式/伦理与 Burger 2009 复核）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S24
+  title: The Presentation of Self in Everyday Life
+  authors: Erving Goffman
+  year: 1959
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 拟剧论：前台/后台与自我呈现；2026-09 实取（四策略/流露控制/批评面）；2026-09-09 同书重复登记 S122 已并入本包（MERGED_INTO，见 EP
+    墓碑）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 6 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S25
+  title: Social Identifications
+  authors: Michael A. Hogg; Dominic Abrams
+  year: 1988
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 社会认同论综合；2026-09 实取（自我分类/社会比较两过程+交叉分类）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S26
+  title: The Righteous Mind
+  authors: Jonathan Haidt
+  year: 2012
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 道德基础理论；直觉先于推理；2026-09 实取（六基础/骑象人/WEIRD 批判）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S27
+  title: The Grammar of Society
+  authors: Cristina Bicchieri
+  year: 2006
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 社会规范博弈论基础；2026-09 实取（实证/规范预期双框架）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 6 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S28
+  title: Norms in the Wild
+  authors: Cristina Bicchieri
+  year: 2017
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 规范诊断与变革的实操框架；2026-09 实取（经验/规范预期双条件/规范vs习俗/trendsetters）；2026-09-09 同书重复登记 S123 已并入本包（MERGED_INTO，见
+    EP 墓碑）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S29
+  title: Handbook of Social Comparison
+  authors: Jerry Suls; Ladd Wheeler (Eds.)
+  year: 2000
+  type: handbook
+  language: en
+  authority_level: handbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 社会比较理论与研究手册；2026-09 实取（22 章目录/上行下行/对比-同化）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S30
+  title: The Social Psychology of Groups
+  authors: John W. Thibaut; Harold H. Kelley
+  year: 1959
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 相互依赖理论；比较水平；2026-09 实取（结果矩阵/CL/CLalt/结果控制）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S31
+  title: The Oxford Handbook of Social Influence
+  authors: Stephen G. Harkins; Kipling D. Williams; Jerry M. Burger (Eds.)
+  year: 2017
+  type: handbook
+  language: en
+  authority_level: handbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 2026-09 实取（26 章目录：从众/顺从/服从/少数派影响/回音室）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 10 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S32
+  title: Influence
+  authors: Robert B. Cialdini
+  year: 1984
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 六原则（互惠/承诺一致/社会认同/喜好/权威/稀缺），New & Expanded 2021 增补联盟（Unity）；2026-09 实取（click-whirr+经典实验）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 15 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S33
+  title: Pre-Suasion
+  authors: Robert B. Cialdini
+  year: 2016
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 先导注意力对说服的铺垫；2026-09 实取（先导注意/privileged moments/联想优先）；priming 复制危机边界随附（S126）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S34
+  title: Communication and Persuasion
+  authors: Richard E. Petty; John T. Cacioppo
+  year: 1986
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; ELM 全书；2026-09 实取（双路径/详尽化可能性/媒体差异）；配套 S119 论文版
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 12 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S35
+  title: The Dynamics of Persuasion
+  authors: Richard M. Perloff
+  year: 2023
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 说服理论教科书（第 8 版 2023，首版 1993）；2026-09 实取（18 章结构/ELM/EPPM/失调）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 14 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S36
+  title: Age of Propaganda
+  authors: Anthony R. Pratkanis; Elliot Aronson
+  year: 2001
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 宣传策略分类（首版 1992）；2026-09 实取（四大策略/39 章技术清单/抵制策略）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S37
+  title: Persuasive Technology
+  authors: B. J. Fogg
+  year: 2003
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 说服技术学奠基；2026-09 实取（captology/FBM B=MAP/触发器分类）——D 级设计框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S38
+  title: Yes! 50 Scientifically Proven Ways to Be Persuasive
+  authors: Noah J. Goldstein; Steve J. Martin; Robert B. Cialdini
+  year: 2008
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 50 条说服小实验集；2026-09 实取（毛巾卡/承诺/公开性等原文实验）——D 级实践框架，证据逐条评估
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S39
+  title: The Catalyst
+  authors: Jonah Berger
+  year: 2020
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 降低行动门槛的 Catalyst 框架；2026-09 实取（REDUCE 五障碍/菜单式选择/证据部署）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S40
+  title: Made to Stick
+  authors: Chip Heath; Dan Heath
+  year: 2007
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; SUCCESs 框架；2026-09 实取（六原则/知识诅咒/粘性解剖）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 11 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S41
+  title: Public Opinion
+  authors: Walter Lippmann
+  year: 1922
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 公版；拟态环境（pseudo-environment）与刻板印象；2026-09 实取（三重不可见性/制造同意/Lippmann-Dewey 论战）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S42
+  title: The People's Choice
+  authors: Paul F. Lazarsfeld; Bernard Berelson; Hazel Gaudet
+  year: 1944
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 伊利县研究；2026-09 实取（面板设计/最小效果/选择性接触/意见领袖起源）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S43
+  title: Personal Influence
+  authors: Elihu Katz; Paul F. Lazarsfeld
+  year: 1955
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 两级传播与意见领袖的系统化；2026-09 经多源（SAGE 百科/教材综述/二手研究）实取两级传播核心内容
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S44
+  title: Understanding Media
+  authors: Marshall McLuhan
+  year: 1964
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 媒介即讯息；2026-09 实取（延伸/热冷媒介/地球村）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S45
+  title: Amusing Ourselves to Death
+  authors: Neil Postman
+  year: 1985
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 媒介认识论批判；2026-09 实取（媒介即隐喻/赫胥黎预言/娱乐化公共话语）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S46
+  title: Media Effects
+  authors: Jennings Bryant; Mary Beth Oliver (Eds.)
+  year: 2009
+  type: handbook
+  language: en
+  authority_level: handbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 媒介效果手册；2026-09 实取（培植/议程/框架/启动，4th ed 增补社媒）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S47
+  title: The Uses of Mass Communications
+  authors: Jay G. Blumler; Elihu Katz (Eds.)
+  year: 1974
+  type: handbook
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 使用与满足文集；2026-09 实取（五假设/四需要类别/主动受众）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S48
+  title: The Attention Merchants
+  authors: Tim Wu
+  year: 2016
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 注意力商业史；2026-09 实取（便士报起源/产品即用户/收割模式）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 9 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S49
+  title: The Shallows
+  authors: Nicholas Carr
+  year: 2010
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 互联网改变深度阅读；2026-09 实取（中断系统/F 形阅读/神经可塑性）；普利策入围
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 6 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S50
+  title: Setting the Agenda
+  authors: Maxwell McCombs
+  year: 2004
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 议程设置理论综合；2026-09 实取 Chapel Hill 研究（r=0.967/0.979）+ 第一/第二层（属性议程）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S51
+  title: Diffusion of Innovations
+  authors: Everett M. Rogers
+  year: 2003
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 首版 1962，第 5 版；2026-09 经多源实取：四要素/五阶段/五属性（49-87% 方差）/五类别/S 曲线/Bass 模型
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S52
+  title: Networks, Crowds, and Markets
+  authors: David Easley; Jon Kleinberg
+  year: 2010
+  type: book
+  language: en
+  authority_level: textbook
+  access_status: open
+  research_status: validated
+  access_level: open
+  notes: core_30; 康奈尔公开课程材料全本免费（pre-publication draft）；2026-09 确认级联/阈值模型（Granovetter LTM）章节结构
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 11 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S53
+  title: Social and Economic Networks
+  authors: Matthew O. Jackson
+  year: 2008
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 网络数学基础；2026-09 实取（中心度四度量/同质性/扩散传染）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 7 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S54
+  title: Linked
+  authors: Albert-László Barabási
+  year: 2002
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 无标度网络与枢纽节点；2026-09 实取（幂律/优先连接/BA 模型/鲁棒脆弱）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S55
+  title: Six Degrees
+  authors: Duncan J. Watts
+  year: 2003
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 小世界网络；2026-09 实取（WS 模型/2003 邮件实验 6 跳/Facebook 3.57）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S56
+  title: Everything Is Obvious
+  authors: Duncan J. Watts
+  year: 2011
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 常识之害；2026-09 实取（音乐实验室/影响者修正/运气主导）；对' influencer 神话'的修正
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S57
+  title: Connected
+  authors: Nicholas A. Christakis; James H. Fowler
+  year: 2009
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 三度影响假说；2026-09 实取（57%/25%/10% 衰减+同质性争论，如实保留方法学争议）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S58
+  title: How Behavior Spreads
+  authors: Damon Centola
+  year: 2018
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 复杂 contagion 专著；2026-09 实取（复杂/简单传染区分+弱连接反向+网络设计）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S59
+  title: Contagious
+  authors: Jonah Berger
+  year: 2013
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; STEPPS 框架；2026-09 实取（六原则+93% 线下口碑+唤醒数据）；配套 Berger & Milkman 2012 PNAS
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 6 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S60
+  title: Going Viral
+  authors: Karine Nahon; Jeff Hemsley
+  year: 2013
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 病毒性定义与 gatekeeping 机制；2026-09 实取（网络化守门/枢纽角色/情绪驱动）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S61
+  title: Metaphors We Live By
+  authors: George Lakoff; Mark Johnson
+  year: 1980
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 概念隐喻理论；2026-09 实取（ARGUMENT IS WAR 等经典例 + 具身认知/三分分类）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S62
+  title: Don't Think of an Elephant!
+  authors: George Lakoff
+  year: 2004
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 框架政治应用；2026-09 实取（tax relief/否定激活/价值观）；否定式提醒反效果
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S63
+  title: Actual Minds, Possible Worlds
+  authors: Jerome Bruner
+  year: 1986
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 范式 vs 叙事思维；2026-09 实取（双思维模式/意义建构/教育平衡）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S64
+  title: The Storytelling Animal
+  authors: Jonathan Gottschall
+  year: 2012
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 叙事普遍性；2026-09 实取（Homo fictus/Neverland/故事模拟世界/自我叙事）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S65
+  title: The Science of Storytelling
+  authors: Will Storr
+  year: 2019
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 叙事认知；2026-09 实取（大脑叙事处理器/受控幻觉/神圣缺陷/变化检测/信息缺口）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 5 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S66
+  title: On Rhetoric
+  authors: Aristotle
+  year: -350
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: ethos/pathos/logos 三诉求；2026-09 实取（Kennedy 英译三诉求/kairos/情绪定义）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S67
+  title: Thank You for Arguing
+  authors: Jay Heinrichs
+  year: 2007
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 修辞学现代应用；2026-09 实取（三诉求现代版/kairos/工具清单/术语表）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S68
+  title: Resonate
+  authors: Nancy Duarte
+  year: 2010
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 演讲叙事结构；2026-09 实取（当下与应然交替/Sparkline/观众即英雄/三幕+英雄之旅）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S69
+  title: The Sense of Style
+  authors: Steven Pinker
+  year: 2014
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 清晰写作；2026-09 实取（诅咒知识/古典风格/僵尸名词/具体语言/删多余词）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 8 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S70
+  title: Magic Words
+  authors: Jonah Berger
+  year: 2023
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 语言影响力；2026-09 实取（六类语言/身份语言/你vs我/could vs should/机器学习语料）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 11 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S71
+  title: Marketing Management
+  authors: Philip Kotler; Kevin Lane Keller; Alexander Chernev
+  year: 2022
+  type: book
+  language: en
+  authority_level: textbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 营销管理教科书（Evidence Package 对应 15th ed 2016）；2026-09 实取（STP/4P/CBBE/CLV/IMC/顾客让渡价值）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 8 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S72
+  title: 'Consumer Behavior: Buying, Having, and Being'
+  authors: Michael R. Solomon
+  year: 2019
+  type: book
+  language: en
+  authority_level: textbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 消费者行为教科书（Evidence Package 对应 12th ed 2017）；2026-09 实取（购买-拥有-存在/自我延伸/动机-知觉-态度/决策）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 17 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S73
+  title: Strategic Brand Management
+  authors: Kevin Lane Keller; Vanitha Swaminathan
+  year: 2020
+  type: book
+  language: en
+  authority_level: textbook
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 品牌管理教科书（5th ed；首版 1998）；2026-09 实取（CBBE 模型/品牌共鸣金字塔四层六块/品牌价值链）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S74
+  title: Building Strong Brands
+  authors: David A. Aaker
+  year: 1996
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 品牌资产框架；2026-09 实取（资产五要素/识别系统 4 视角 12 维/核心vs延伸身份/Brand Equity Ten）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S75
+  title: Positioning
+  authors: Al Ries; Jack Trout
+  year: 1981
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 定位理论（广告时代文章 1972 起）；2026-09 实取（心智阶梯/先入与关联定位/重新定位竞品）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S76
+  title: How Brands Grow
+  authors: Byron Sharp
+  year: 2010
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Ehrenberg-Bass 大样本规律；2026-09 实取（渗透主导增长/双危机定律/轻购买者 50-80%/心理物理可得性/CEP）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 8 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S77
+  title: Competing Against Luck
+  authors: Clayton M. Christensen; Taddy Hall; Karen Dillon; David S. Duncan
+  year: 2016
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JTBD 理论化；2026-09 实取（雇用隐喻/奶昔案例/情境任务/功能-情感-社会三维/四力平衡）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S78
+  title: Crossing the Chasm
+  authors: Geoffrey A. Moore
+  year: 2014
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 首版 1991；早期市场与主流市场之间的鸿沟；2026-09 实取（D-Day/beachhead/whole product）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S79
+  title: Permission Marketing
+  authors: Seth Godin
+  year: 1999
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 许可营销：注意力作为稀缺交换；2026-09 实取（五级许可阶梯/名单即资产）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S80
+  title: The Long Tail
+  authors: Chris Anderson
+  year: 2006
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 长尾需求分布；2026-09 实取（长尾曲线/三种力量 + Elberse 2008 实证修正链）——商业分析非实证定律
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S81
+  title: Community Building on the Web
+  authors: Amy Jo Kim
+  year: 2000
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 网络社群设计九大设计策略；2026-09 实取（五阶段生命周期/仪式/事件/游戏机制）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S82
+  title: The Art of Community
+  authors: Jono Bacon
+  year: 2012
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 开源社群运营实践（2nd ed）；2026-09 实取（归属感/on-ramps/治理/冲突）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 9 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S83
+  title: Get Together
+  authors: Bailey Richardson; Kevin Huynh; Kai Elmer Sotto
+  year: 2019
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: People & Company 社群方法论；2026-09 实取（火焰三阶段/承接新人/培养领导者）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S84
+  title: The Business of Belonging
+  authors: David Spinks
+  year: 2021
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: SPACES 社群参与模型（六要素）；2026-09 实取（SPACES/社会身份循环/创作者优先）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S85
+  title: Buzzing Communities
+  authors: Richard Millington
+  year: 2012
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 社群生命周期与干预策略；2026-09 实取（四阶段生命周期/分阶段干预）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S86
+  title: Tribes
+  authors: Seth Godin
+  year: 2008
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 部落领导力宣言；2026-09 实取（部落三要素/三步领导法）——概念书，D 级
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S87
+  title: The Art of Gathering
+  authors: Priya Parker
+  year: 2018
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 聚会设计：目的优先与规则设计；2026-09 实取（目的优先/慷慨排他/临时规则/良性争议/开场收尾）——D 级实践框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S88
+  title: The Great Good Place
+  authors: Ray Oldenburg
+  year: 1989
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 第三空间理论；2026-09 实取（定义/八特征/社会功能/衰落归因）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S89
+  title: Bowling Alone
+  authors: Robert D. Putnam
+  year: 2000
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 社会资本测量：bonding vs bridging；2026-09 实取（定义/bonding-bridging/下降成因）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S90
+  title: Spreadable Media
+  authors: Henry Jenkins; Sam Ford; Joshua Green
+  year: 2013
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; spreadability vs stickiness；2026-09 实取（开放获取摘要+引言全文+反病毒隐喻）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S91
+  title: Convergence Culture
+  authors: Henry Jenkins
+  year: 2006
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 参与式文化与融合文化；2026-09 实取（convergence 三定义/participatory culture/集体智慧/跨媒介叙事）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S92
+  title: The Hype Machine
+  authors: Sinan Aral
+  year: 2020
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 2026-09 实取（炒作机器三部曲 + 2018 Science 假新闻研究 + 网络结构效应）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 17 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S93
+  title: The Filter Bubble
+  authors: Eli Pariser
+  year: 2011
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 2026-09 实取（概念起源 + 后续实证混合证据：Bakshy 8%/Bail 2018 反直觉）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S94
+  title: Custodians of the Internet
+  authors: Tarleton Gillespie
+  year: 2018
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 2026-09 实取（LSE 书评全文+章节结构+作者研讨会：moderation 构成性功能）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 11 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S95
+  title: The Platform Society
+  authors: José van Dijck; Thomas Poell; Martijn de Waal
+  year: 2018
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 2026-09 实取（平台化/数据化/公共价值/四领域 + 作者访谈）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 11 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S96
+  title: Platform Revolution
+  authors: Geoffrey G. Parker; Marshall W. Van Alstyne; Sangeet Paul Choudary
+  year: 2016
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 平台经济学：网络效应/双边市场/冷启动；2026-09 实取（核心交互四元素/同侧跨侧网络效应/八冷启动策略/治理四工具）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S97
+  title: The Cold Start Problem
+  authors: Andrew Chen
+  year: 2021
+  type: book
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 网络效应产品冷启动与增长；2026-09 实取（五阶段/原子网络/困难侧/三效合一）——D 级从业者框架
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S98
+  title: Algorithms of Oppression
+  authors: Safiya Umoja Noble
+  year: 2018
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 搜索算法偏差的批判研究；2026-09 实取（技术中立批判/black girls 案例/technological redlining）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S99
+  title: The Chaos Machine
+  authors: Max Fisher
+  year: 2022
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 算法放大与极化的调查报道（NYT 系列记者）；2026-09 实取（engagement 优化/愤怒放大/极化激励系统/多国案例）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S100
+  title: Filterworld
+  authors: Kyle Chayka
+  year: 2024
+  type: book
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: core_30; 2026-09 实取（算法扁平化机制 + 创作者内化 + Spotify 泛化数据）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 6 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S101
+  title: The Spread of Behavior in an Online Social Network Experiment
+  authors: Damon Centola
+  year: 2010
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: open
+  research_status: validated
+  access_level: full_text
+  notes: Science 329:1194; complex contagion 实验；配套 CASE-RES-002 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S102
+  title: 'A Room with a Viewpoint: Using Social Norms to Motivate Environmental Conservation in Hotels'
+  authors: Goldstein; Cialdini; Griskevicius
+  year: 2008
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JCR 35:472; 酒店毛巾现场实验；配套 CASE-RES-001 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S103
+  title: 'A Focus Theory of Normative Conduct: Recycling the Concept of Norms to Reduce Littering in Public
+    Places'
+  authors: Cialdini; Reno; Kallgren
+  year: 1990
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JPSP 58:1015; 规范焦点理论 5 实验
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S104
+  title: The Constructive, Destructive, and Reconstructive Power of Social Norms
+  authors: Schultz; Nolan; Cialdini; Goldstein; Griskevicius
+  year: 2007
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Science 18:429; 能耗回旋镖；PubMed 摘要+作者 2018 Reprise 双源确认
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S105
+  title: What Makes Online Content Viral?
+  authors: Jonah Berger; Katherine L. Milkman
+  year: 2012
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JMR 49:192; NYT 情绪与病毒性；配套 S59
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S106
+  title: The Spread of True and False News Online
+  authors: Vosoughi; Roy; Aral
+  year: 2018
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Science 359:1146; 假新闻传播；配套 S92
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S107
+  title: Experimental Evidence of Massive-Scale Emotional Contagion Through Social Networks
+  authors: Kramer; Guillory; Hancock
+  year: 2014
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: PNAS 111:8788; Facebook 情绪传染；含伦理声明
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S108
+  title: No Evidence for Nudging After Adjusting for Publication Bias
+  authors: Maier; Bartoš; Stanley; Shanks; Harris; Wagenmakers
+  year: 2022
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: open
+  research_status: validated
+  access_level: full_text
+  notes: PNAS 119:e2200300119; nudge 复核 letter（PMC 全文实读）；EVIDENCE.md nudge→C 一手支撑
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S109
+  title: Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload
+  authors: Scheibehenne; Greifeneder; Todd
+  year: 2010
+  type: meta_analysis
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JCR 37:409; choice_overload meta（63 条件/N=5036）；EVIDENCE.md 条件化一手支撑
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S110
+  title: Psychology of Habit
+  authors: Wendy Wood; Dennis Rünger
+  year: 2016
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Annu Rev Psychol 67:289; 习惯综述（Annual Reviews PDF 引言+目录实取）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S111
+  title: 'Exposure and Affect: Overview and Meta-Analysis of Research, 1968-1987'
+  authors: Robert F. Bornstein
+  year: 1989
+  type: meta_analysis
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Bulletin 106:265; mere exposure meta；原文摘要被拦截，有一手佐证链（Bornstein & D'Agostino 1992）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S112
+  title: 'The Nature of Psychological Reactance Revisited: A Meta-Analytic Review'
+  authors: Stephen A. Rains
+  year: 2013
+  type: meta_analysis
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Human Communication Research 39:47; reactance meta（K=20/N=4942，OUP 摘要实取）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S113
+  title: 'Prospect Theory: An Analysis of Decision under Risk'
+  authors: Daniel Kahneman; Amos Tversky
+  year: 1979
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Econometrica 47:263; 前景理论奠基；loss aversion/framing 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S114
+  title: 'Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver''s Processing Experience?'
+  authors: Rolf Reber; Norbert Schwarz; Piotr Winkielman
+  year: 2004
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: PSPR 8:364; processing fluency 理论综述；枢纽节点一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S115
+  title: 'Cognitive Load During Problem Solving: Effects on Learning'
+  authors: John Sweller
+  year: 1988
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Cognitive Science 12:257; CLT 奠基；cognitive_load 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S118
+  title: 'The ''What'' and ''Why'' of Goal Pursuits: Human Needs and the Self-Determination of Behavior'
+  authors: Edward L. Deci; Richard M. Ryan
+  year: 2000
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Inquiry 11:227; SDT 核心论文；S14 图书论文级来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S119
+  title: The Elaboration Likelihood Model of Persuasion
+  authors: Richard E. Petty; John T. Cacioppo
+  year: 1986
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: AESP 19:123; ELM 双路径；S34 图书章节级来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S120
+  title: An Integrative Theory of Intergroup Conflict
+  authors: Henri Tajfel; John C. Turner
+  year: 1979
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: SIT 奠基书章；S25 图书一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S121
+  title: An Integrative Model of Organizational Trust
+  authors: Roger C. Mayer; James H. Davis; F. David Schoorman
+  year: 1995
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: AMR 20:709; 能力/善意/诚信三维度；trust 域经典
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S124
+  title: Experimental Evidence for Tipping Points in Social Convention
+  authors: Damon Centola; Joshua Becker; Devon Brackbill; Andrea Baronchelli
+  year: 2018
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Science 360:1116; 临界质量命名博弈实验（194 人）；中位阈值 25%（15-35%）；critical_mass 一手来源（free article 正文摘录）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S125
+  title: A Multilab Preregistered Replication of the Ego-Depletion Effect
+  authors: Martin S. Hagger; et al. (23 labs)
+  year: 2016
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: PPS 11:546; ego depletion RRR（23 实验室/2141 人，效应≈0）；#8 复核清单决定性复制证据
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S126
+  title: 'Behavioral Priming: It''s All in the Mind, but Whose Mind?'
+  authors: Stéphane Doyen; Olivier Klein; Cora-Lise Pichon; Axel Cleeremans
+  year: 2012
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: PLoS One 7:e29081; 行为启动复制失败（实验 1 失败/实验 2 期望效应）；OA 全文
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S127
+  title: Assessing the Robustness of Power Posing
+  authors: Eva Ranehill; et al.
+  year: 2015
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: annotated
+  access_level: abstract_only
+  notes: Psych Science 26:653; power posing 复制（N=200，激素/行为失败、自报感受保留）
+  hold_reason: 未被任何机制节点引用
+- source_id: S128
+  title: Poverty Impedes Cognitive Function
+  authors: Anandi Mani; Sendhil Mullainathan; Eldar Shafir; Jiaying Zhao
+  year: 2013
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Science 341:976; 带宽税标志论文（购物中心 101 人+甘蔗农）；scarcity_mindset 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S129
+  title: The Loss of Loss Aversion
+  authors: David Gal; Derek D. Rucker
+  year: 2018
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JCP 28:497; 损失厌恶批判；配 Camerer 2024 元分析（系数均值 1.955 [1.820, 2.102]）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S130
+  title: 'Judgment under Uncertainty: Heuristics and Biases'
+  authors: Amos Tversky; Daniel Kahneman
+  year: 1974
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: full_text
+  notes: Science 185:1124; 三大启发式（代表性/可得性/锚定）奠基；UCSD 课程全文；anchoring/representativeness/availability 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S131
+  title: Experimental Tests of the Endowment Effect and the Coase Theorem
+  authors: Daniel Kahneman; Jack L. Knetsch; Richard H. Thaler
+  year: 1990
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JPE 98:1325; 禀赋效应 mug 实验（卖价约为买价 2 倍）；endowment/status_quo/sunk_cost 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S132
+  title: Mental Accounting and Consumer Choice
+  authors: Richard H. Thaler
+  year: 1985
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Marketing Science 4:199; 心理账户/交易效用/享乐编辑；mental_accounting 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S133
+  title: 'The Need to Belong: Desire for Interpersonal Attachments as a Fundamental Human Motivation'
+  authors: Roy F. Baumeister; Mark R. Leary
+  year: 1995
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Bulletin 117:497; 归属需要两成分；need_to_belong/ostracism 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S134
+  title: 'Sense of Community: A Definition and Theory'
+  authors: David W. McMillan; David M. Chavis
+  year: 1986
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JCP 14:6; 社区感四要素；sense_of_community 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S135
+  title: 'Culture and Conformity: A Meta-Analysis of Studies Using Asch''s Line Judgment Task'
+  authors: Rod Bond; Peter B. Smith
+  year: 1996
+  type: meta_analysis
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Bulletin 119:111; Asch 从众 meta（133 研究/17 国/平均约 25%）；conformity 跨文化一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S136
+  title: 'Social Influence: Compliance and Conformity'
+  authors: Robert B. Cialdini; Noah J. Goldstein
+  year: 2004
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Annu Rev Psychol 55:591; 社会影响综述（三目标框架）；权威/互惠/承诺等节点综述来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S137
+  title: The Strength of Weak Ties
+  authors: Mark S. Granovetter
+  year: 1973
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: AJS 78:1360; 弱连带/桥/56% 求职数据；weak_ties/structural_holes 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S138
+  title: Threshold Models of Collective Behavior
+  authors: Mark S. Granovetter
+  year: 1978
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: AJS 83:1420; 阈值模型奠基（暴动级联例）；network_threshold_models 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S139
+  title: Collective Dynamics of 'Small-World' Networks
+  authors: Duncan J. Watts; Steven H. Strogatz
+  year: 1998
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Nature 393:440; 小世界（WS 模型）；small_world/network_density 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S140
+  title: Emergence of Scaling in Random Networks
+  authors: Albert-László Barabási; Réka Albert
+  year: 1999
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: full_text
+  notes: Science 286:509; 无标度网络/优先连接（arXiv 全文，γ=3）；preferential_attachment 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S141
+  title: 'Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events'
+  authors: Daniel J. Simons; Christopher F. Chabris
+  year: 1999
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Perception 28:1059; 大猩猩实验（约半数未察觉）；inattentional_blindness 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S142
+  title: The Magical Number Seven, Plus or Minus Two
+  authors: George A. Miller
+  year: 1956
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: full_text
+  notes: Psych Review 63:81; 7±2/组块（YorkU 全文）；chunking/working_memory_limits 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S143
+  title: Uniting the Tribes of Fluency to Form a Metacognitive Nation
+  authors: Adam L. Alter; Daniel M. Oppenheimer
+  year: 2009
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: PSPR 13:219（任务给定 JESP 45:755 经核不存在，已勘误）；流畅度统一框架；processing_fluency 节点一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S144
+  title: 'The Psychology of Curiosity: A Review and Reinterpretation'
+  authors: George Loewenstein
+  year: 1994
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Bulletin 116:75; 信息缺口理论；curiosity_gap 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S145
+  title: A Neural Substrate of Prediction and Reward
+  authors: Wolfram Schultz; Peter Dayan; P. Read Montague
+  year: 1997
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Science 275:1593; 多巴胺编码预测误差；reward_prediction_dopamine 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S146
+  title: 'The Endowed Progress Effect: How Artificial Advancement Increases Effort'
+  authors: Joseph C. Nunes; Xavier Drèze
+  year: 2006
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JCR 32:504; 人为进度效应（8 步→10 步已做 2 步）；endowed_progress 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S147
+  title: Exposure to Ideologically Diverse News and Opinion on Facebook
+  authors: Eytan Bakshy; Solomon Messing; Lada A. Adamic
+  year: 2015
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: open
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Science 348:1130; 1010 万用户/算法约减 15% 跨阵营/点击约减 70%；filter_bubble 一手实证
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S148
+  title: 'A Meta-Analysis of Fear Appeals: Implications for Effective Public Health Campaigns'
+  authors: Kim Witte; Mike Allen
+  year: 2000
+  type: meta_analysis
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: HEB 27:591; 恐惧诉求 meta（强威胁×高效能→行为改变；K/N 未披露）；fear_appeals_eppm 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S149
+  title: Encoding Specificity and Retrieval Processes in Episodic Memory
+  authors: Endel Tulving; Donald M. Thomson
+  year: 1973
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Review 80:352; 编码特异性/再认失败；encoding_specificity/retrieval_cue_design 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S150
+  title: The Serial Position Effect of Free Recall
+  authors: Bennet B. Murdock
+  year: 1962
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JEP 64:482; U 形曲线/近因 8 位置；serial_position_effect 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S151
+  title: 'Fuzzy-Trace Theory: An Interim Synthesis'
+  authors: Valerie F. Reyna; Charles J. Brainerd
+  year: 1995
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: L&ID 7:1; 逐字/要旨双痕迹；gist_vs_verbatim_memory 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S152
+  title: 'The Seven Sins of Memory: Insights from Psychology and Cognitive Neuroscience'
+  authors: Daniel L. Schacter
+  year: 1999
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Am Psychol 54:182; 七宗罪论文版；memory_sins 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S153
+  title: 'When More Pain Is Preferred to Less: Adding a Better End'
+  authors: Daniel Kahneman; Barbara L. Fredrickson; Charles A. Schreiber; Donald A. Redelmeier
+  year: 1993
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Science 4:401; 峰终定律冷压实验；peak_end_rule 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S154
+  title: On Finished and Unfinished Tasks
+  authors: Bluma Zeigarnik
+  year: 1927
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psychologische Forschung 9:1-85（页码勘误：原书 9:185 误植）；德文原文；zeigarnik_effect 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S155
+  title: 'The Subtlety of Distinctiveness: What von Restorff Really Did'
+  authors: R. Reed Hunt
+  year: 1995
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Bull & Review 2:105; 独特性-相似性联用；von_restorff_effect 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S156
+  title: Information Foraging
+  authors: Peter Pirolli; Stuart Card
+  year: 1999
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Review 106:643; 信息觅食/informavore；information_foraging/scent 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S157
+  title: 'The Role of Knowledge in Discourse Comprehension: A Construction-Integration Model'
+  authors: Walter Kintsch
+  year: 1988
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Review 95:163; 构建-整合模型；conceptual_coherence 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S158
+  title: 'The Concept of Information Overload: A Review of Literature'
+  authors: Martin J. Eppler; Jeanne Mengis
+  year: 2004
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: The Information Society 20:325; 信息过载五类原因；information_overload 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S159
+  title: 'How Seductive Details Do Their Damage: A Theory of Cognitive Interest in Science Learning'
+  authors: Sarah F. Harp; Richard E. Mayer
+  year: 1998
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 'JEP: Applied 90:414; 诱饵细节损害学习；seductive_details_effect 一手来源'
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S160
+  title: 'Contextual Prerequisites for Understanding: Some Investigations of Comprehension and Recall'
+  authors: John D. Bransford; Marcia K. Johnson
+  year: 1972
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JVLVB 11:717; 洗衣房段落（语境先于编码）；schema_formation 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S161
+  title: Perceptual Load as a Necessary Condition for Selective Attention
+  authors: Nilli Lavie
+  year: 1995
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JEP:HPP 21:451; 知觉负载理论；attention_capacity_limits 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S162
+  title: Involuntary Covert Orienting Is Contingent on Attentional Control Settings
+  authors: Charles L. Folk; Roger W. Remington; James C. Johnston
+  year: 1992
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JEP:HPP 18:1030; 条件性捕获；top_down_attention_guidance 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S163
+  title: Why Is It So Hard to Do My Work? The Challenge of Attention Residue When Switching between Work
+    Tasks
+  authors: Sophie Leroy
+  year: 2009
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: OBHDP 109:168; 注意残留/时间压力边界；attention_residue 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S164
+  title: Mood and Memory
+  authors: Gordon H. Bower
+  year: 1981
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Am Psychol 36:129; 心境一致性记忆；mood_congruence 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S165
+  title: Is Empathic Emotion a Source of Altruistic Motivation?
+  authors: C. Daniel Batson; Bruce D. Duncan; Paula Ackerman; Terese Buckley; Kimberly Birch
+  year: 1981
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JPSP 40:290; 共情-利他假说；empathy_induced_helping 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S166
+  title: The Affect Heuristic
+  authors: Paul Slovic; Melissa L. Finucane; Ellen Peters; Donald G. MacGregor
+  year: 2007
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: EJOR 177:1333; 情感启发式/affect pool；affect_heuristic 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S167
+  title: A Behavioral Model of Rational Choice
+  authors: Herbert A. Simon
+  year: 1955
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: QJE 69:99; 有限理性/满意化；satisficing 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S168
+  title: 'Understanding Brand Performance Measures: Using Dirichlet Benchmarks'
+  authors: Andrew Ehrenberg; Mark Uncles; Gerald Goodhardt
+  year: 2004
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JBR 57:1307; Dirichlet 基准/双危机/渗透主导；double_jeopardy/mental_availability/CEP 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S169
+  title: 'The Two-Step Flow of Communication: An Up-To-Date Report on an Hypothesis'
+  authors: Elihu Katz
+  year: 1957
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: POQ 21:61; 两级传播/意见领袖；two_step_flow/opinion_leadership 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S170
+  title: A New Product Growth for Model Consumer Durables
+  authors: Frank M. Bass
+  year: 1969
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Management Science 15:215; Bass 扩散模型；adopter_categories 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S171
+  title: 'The ''Gate Keeper'': A Case Study in the Selection of News'
+  authors: David Manning White
+  year: 1950
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Journalism Quarterly 27:383; Mr. Gates 守门人研究；gatekeeping_dynamics 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S172
+  title: Cognitive and Attentional Mechanisms in Delay of Gratification
+  authors: Walter Mischel; Ebbe B. Ebbesen; Antonette Raskoff Zeiss
+  year: 1972
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JPSP 21:204; 棉花糖前身/注意转移；immediate_vs_delayed 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S173
+  title: 'Beyond the Hedonic Treadmill: Revising the Adaptation Theory of Well-Being'
+  authors: Ed Diener; Richard E. Lucas; Christie Napa Scollon
+  year: 2006
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Am Psychol 61:305; 享乐适应 5 项修订；hedonic_adaptation 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S174
+  title: Optimal Experience in Work and Leisure
+  authors: Mihaly Csikszentmihalyi; Judith LeFevre
+  year: 1989
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JPSP 56:815; 心流 ESM（多数心流在工作）；flow_state 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S175
+  title: A Behavior Model for Persuasive Design
+  authors: B. J. Fogg
+  year: 2009
+  type: paper
+  language: en
+  authority_level: practitioner
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: ACM Persuasive 2009; B=MAP 论文版（D 级框架无实验）；behavior_model_bmap 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 3 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S176
+  title: 'Different Strokes from Different Folks: Community Ties and Social Support'
+  authors: Barry Wellman; Scot Wortley
+  year: 1990
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: AJS 96:558; 强连接提供情感支持；strong_ties_support 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S177
+  title: Can Slot-Machine Reward Schedules Induce Gambling Addiction in Rats?
+  authors: A. Laskowski; K. Dorchak; K. Ward; D. Christensen; D. Euston
+  year: 2019
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: J Gambl Stud 35:887; 不定比率维持行为（成瘾样测试阴性，边界如实）；variable_ratio_reward 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S178
+  title: A Theory of Fairness, Competition, and Cooperation
+  authors: Ernst Fehr; Klaus M. Schmidt
+  year: 1999
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: QJE 114:817; 不平等厌恶模型；fairness_preferences 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S179
+  title: Cooperation and Punishment in Public Goods Experiments
+  authors: Ernst Fehr; Simon Gächter
+  year: 2000
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: AER 90:980; 利他惩罚维持合作；reciprocity_exchange_networks 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S180
+  title: Collective Action and the Evolution of Social Norms
+  authors: Elinor Ostrom
+  year: 2000
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JEP 14:137; 集体行动/制度设计原则；community_governance 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S181
+  title: 'Deepfakes and Disinformation: Exploring the Impact of Synthetic Political Video on Deception,
+    Uncertainty, and Trust in News'
+  authors: Cristian Vaccari; Andrew Chadwick
+  year: 2020
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Social Media + Society 6:1; 不确定感中介信任下降；synthetic_media_trust 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 4 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S182
+  title: Untersuchungen zur Lehre von der Gestalt, II（格式塔组织原则）
+  authors: Max Wertheimer
+  year: 1923
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psychologische Forschung 4:301（德文；Ellis 1950 英译）；近接/相似/闭合/连续；gestalt_grouping 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S183
+  title: 'Color Psychology: Effects of Perceiving Color on Psychological Functioning in Humans'
+  authors: Andrew J. Elliot; Markus A. Maier
+  year: 2014
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Annu Rev Psychol 65:95; 颜色效应边界未明；color_emotion_associations 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S184
+  title: 'Changing Faces: A Detection Advantage in the Flicker Paradigm'
+  authors: Tali Ro; Charlotte Russell; Nilli Lavie
+  year: 2001
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Science 12:94; 人脸变化检测优势；facial_attention_priority 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S185
+  title: Designing Organizations for an Information-Rich World
+  authors: Herbert A. Simon
+  year: 1971
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: 书章（Computers, Communications, and the Public Interest, Johns Hopkins, pp.37-52）；'信息消耗注意力'注意力经济命题原始出处；attention_economics
+    一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S186
+  title: 'Studies of independence and conformity: I. A minority of one against a unanimous majority'
+  authors: Solomon E. Asch
+  year: 1956
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Monographs 70(9):1-70; 线段从众 37%/75% 至少一次/异议者效应/2023 N=210 复制 33%；conformity_asch 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S187
+  title: The Psychology of Social Norms
+  authors: Muzafer Sherif
+  year: 1936
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Harper & Brothers 专著；光点自动运动规范形成与内化；informational_influence 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S188
+  title: 'When choice is demotivating: Can one desire too much of a good thing?'
+  authors: Sheena S. Iyengar; Mark R. Lepper
+  year: 2000
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JPSP 79(6):995-1006; 果酱 24vs6（驻足 60%/3%，40%/30%）；choice_overload 一手来源（与 S109 元分析配对）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S189
+  title: '''Coherent Arbitrariness'': Stable Demand Curves Without Stable Preferences'
+  authors: Dan Ariely; George Loewenstein; Drazen Prelec
+  year: 2003
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: QJE 118(1):73-105; 六实验任意锚塑造估值且不随经验/市场力量消退；anchoring_effect 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S190
+  title: 'Test-enhanced learning: Taking memory tests improves long-term retention'
+  authors: Henry L. Roediger; Jeffrey D. Karpicke
+  year: 2006
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Science 17(3):249-255; 2 天/1 周延迟测试反超重读；testing_effect 一手来源（配套综述 Perspect Psychol Sci 1(3):181-210）
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S191
+  title: 'Distributed practice in verbal recall tasks: A review and quantitative synthesis'
+  authors: Nicholas J. Cepeda; Harold Pashler; Edward Vul; John T. Wixted; Doug Rohrer
+  year: 2006
+  type: meta_analysis
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Psych Bull 132(3):354-380; 间隔效应大规模元整合（184 文/317 实验/839 评估口径与 254 研究口径并存如实并记）；spaced_repetition
+    一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S192
+  title: The role of transportation in the persuasiveness of public narratives
+  authors: Melanie C. Green; Timothy C. Brock
+  year: 2000
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JPSP 79(5):701-721; 传输量表+四实验（N=97/69/274/258）传输→信念/挤占反驳/虚构标注不影响；narrative_transportation 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S193
+  title: Motivational, emotional, and behavioral correlates of fear of missing out
+  authors: Andrew K. Przybylski; Kou Murayama; Cody R. DeHaan; Valerie Gladwell
+  year: 2013
+  type: paper
+  language: en
+  authority_level: academic
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: CHB 29(4):1841-1848; FOMO 十项量表+SDT 定位；fear_of_missing_out 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S194
+  title: 'Inducing resistance to persuasion: Some contemporary approaches'
+  authors: William J. McGuire
+  year: 1964
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Adv Exp Soc Psych 1:191-229; 接种纲领（反驳性>支持性/威胁+反论证/文化真理）；inoculation_theory 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S195
+  title: 'The sleeper effect in persuasion: A meta-analytic review'
+  authors: G. Tarcan Kumkale; Dolores Albarracín
+  year: 2004
+  type: meta_analysis
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Psych Bull 130(1):143-172; 睡眠者效应条件性成立（强信息+强线索+线索后置）；sleeper_effect 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S196
+  title: 'Building a practically useful theory of goal setting and task motivation: A 35-year odyssey'
+  authors: Edwin A. Locke; Gary P. Latham
+  year: 2002
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Am Psychol 57(9):705-717; 具体困难目标→绩效+机制+调节变量（承诺/反馈/复杂性）；goal_setting_effectiveness 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S197
+  title: 'Self-Efficacy: The Exercise of Control'
+  authors: Albert Bandura
+  year: 1997
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: W.H. Freeman 专著；效能四来源（掌握/替代/说服/生理情绪）+领域特异性；self_efficacy 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S198
+  title: Attitudes vs. Actions
+  authors: Richard T. LaPiere
+  year: 1934
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Social Forces 13(2):230-237; 251 场所仅 1 拒/问卷 90% 拒——态度-行为背离经典；attitude_behavior_gap 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S199
+  title: 'Attitudes versus Actions: The Relationship of Verbal and Overt Behavioral Responses to Attitude
+    Objects'
+  authors: Allan W. Wicker
+  year: 1969
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JSI 25(4):41-78; 约 30 余研究综述：相关多数 <0.30；attitude_behavior_gap 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S200
+  title: 'Knee-deep in the big muddy: A study of escalating commitment to a chosen course of action'
+  authors: Barry M. Staw
+  year: 1976
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: OBHDP 16(1):27-44; 个人责任×负结果→承诺升级；commitment_escalation 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S201
+  title: Paradoxical effects of thought suppression
+  authors: Daniel M. Wegner; David J. Schneider; Samuel R. Carter; Teri L. White
+  year: 1987
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JPSP 53(1):5-13; 白熊压抑-反弹双实验+双进程机制；negation_ironic_rebound 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S202
+  title: Complex Contagions and the Weakness of Long Ties
+  authors: Damon Centola; Michael Macy
+  year: 2007
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: AJS 113(3):702-734; 复杂传染需多源强化/长边局限/与 S124 实验配对；complex_contagion 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S203
+  title: 'The Norm of Reciprocity: A Preliminary Statement'
+  authors: Alvin W. Gouldner
+  year: 1960
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: ASR 25(2):161-178; 互惠规范两成份+跨文化普遍性；reciprocity_norm 规范奠基来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S204
+  title: 'Remembering: A Study in Experimental and Social Psychology'
+  authors: Frederic C. Bartlett
+  year: 1932
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Cambridge UP 专著; 幽灵战争/系列再生/图式与重构记忆（含 Ost 2022 复核边界）；schema_formation 奠基来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S205
+  title: The framing of decisions and the psychology of choice
+  authors: Amos Tversky; Daniel Kahneman
+  year: 1981
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Science 211(4481):453-458; 亚洲疾病正/负框架 72%/78% 偏好反转；gain_loss_framing 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S206
+  title: 'All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects'
+  authors: Irwin P. Levin; Sandra L. Schneider; Gary J. Gaeth
+  year: 1998
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: OBHDP 76(2):149-188; 框架三分型（风险选择/属性/目标）；framing_effects 类型学来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S207
+  title: Status quo bias in decision making
+  authors: William Samuelson; Richard Zeckhauser
+  year: 1988
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: JRU 1(1):7-59; 系列实验+哈佛教职工健康计划现场数据——现状偏差；status_quo_bias 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S208
+  title: 'Birds of a Feather: Homophily in Social Networks'
+  authors: Miller McPherson; Lynn Smith-Lovin; James M. Cook
+  year: 2001
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: Annu Rev Sociol 27:415-444; 同质性权威综述（维度排序/纽带消解速率）；homophily 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S209
+  title: Structural Holes and Good Ideas
+  authors: Ronald S. Burt
+  year: 2004
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: AJS 110(2):349-399; 经纪视野优势/薪酬晋升好想法实证（合包 1992 专著）；structural_holes_bridging 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S210
+  title: Social Capital in the Creation of Human Capital
+  authors: James S. Coleman
+  year: 1988
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: AJS 94:S95-S120; 社会资本三形态+网络闭合论；network_density 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S211
+  title: 'Memory: A Contribution to Experimental Psychology（Über das Gedächtnis）'
+  authors: Hermann Ebbinghaus
+  year: 1885
+  type: book
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: Duncker & Humblot 专著（英译 1913）; 无意义音节/节省法/遗忘曲线（Murre & Dros 2015 复现）；spaced_repetition 奠基来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S212
+  title: Normative Social Influence Is Underdetected
+  authors: Jessica M. Nolan; P. Wesley Schultz; Robert B. Cialdini; Noah J. Goldstein; Vladas Griskevicius
+  year: 2008
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: substantial_excerpt
+  notes: PSPB 34(7):913-923; N=810 调查+现场实验——规范性影响有效且被低估；norm_messaging_effects 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S213
+  title: 'Pluralistic ignorance and alcohol use on campus: some consequences of misperceiving the social
+    norm'
+  authors: Deborah A. Prentice; Dale T. Miller
+  year: 1993
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: JPSP 64(2):243-256; 普林斯顿饮酒多元无知实证（误知觉自我维持循环）；pluralistic_ignorance/norm_perception_accuracy 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S214
+  title: 'Context-dependent memory in two natural environments: On land and underwater'
+  authors: Duncan R. Godden; Alan D. Baddeley
+  year: 1975
+  type: paper
+  language: en
+  authority_level: seminal
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: BJP 66(3):325-331; 潜水员匹配回忆 34.6% vs 23.6%（Murre 2021 部分复制边界）；encoding_specificity 一手来源
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S215
+  title: Psychological targeting as an effective approach to digital mass persuasion
+  authors: Sandra C. Matz; Michal Kosinski; Gideon Nave; David J. Stillwell
+  year: 2017
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: personalized_persuasion/hyperpersonalization_privacy 一手实证（效力侧+风险侧均被原文覆盖）。真实数字：350 万用户/40% 点击/50%
+    购买，未编造。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S216
+  title: Generative AI enhances individual creativity but reduces the collective diversity of novel content
+  authors: Anil R. Doshi; Oliver P. Hauser
+  year: 2024
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: human_ai_co_creation 核心主张（AI 默认输出拉向均值、加剧同质化）的一手实验证据；与 Meincke et al. 2025 Nat Hum Behav 'ChatGPT
+    decreases idea diversity in brainstorming' 相互印证（后者经 PubMed 检索确认存在）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S217
+  title: Google users are less likely to click on links when an AI summary appears in the results
+  authors: Athena Chapekis; Anna Lieb（Pew Research Center）
+  year: 2025
+  type: official_source
+  language: en
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: zero_click_information 直接实证（触达与访问脱钩）；answer_engine_visibility 的'被引用在场'前提（88% 摘要引用 3+ 来源）。真实数字全部来自官方原文。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S218
+  title: Bayesian surprise attracts human attention
+  authors: Laurent Itti; Pierre Baldi
+  year: 2009
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: schema_violation 核心主张（意外指向受众既有模型的失效点、获得认知特权）的一手实验证据：惊喜=对先验信念模型的偏离。真实数字 72%/84%。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S219
+  title: 'A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure-ground
+    organization'
+  authors: Johan Wagemans; James H. Elder; Michael Kubovy; Stephen E. Palmer; Mary A. Peterson; Manish
+    Singh; Rüdiger von der Heydt
+  year: 2012
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: figure_ground_separation 的一手综述来源：Rubin 传统（可逆图形）与图像线索、经验作用均被该综述正式覆盖——节点 definition 中'Rubin 1915/1921
+    经典研究未建包'的缺口由本文献综述正式接驳。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S220
+  title: Neural evidence that suspense narrows attentional focus
+  authors: M. A. Bezdek; R. J. Gerrig; W. G. Wenzel; J. Shin; K. Pirog Revill; E. H. Schumacher
+  year: 2015
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: suspense_structure 机制主张（悬念管理注意分配）的一手神经证据：'悬念收窄注意'字面级匹配。这是 D→C 升级的依据（有实验研究依据，情境有限）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S221
+  title: Psychosocial effects of perceived emotional synchrony in collective gatherings
+  authors: Dario Páez; Bernard Rimé; Nekane Basabe; Anna Wlodarczyk; Larraitz Zumeta
+  year: 2015
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: collective_effervescence（B 级）的一手实证：Durkheim 集体欢腾被 JPSP 四研究检验。同组 Pizarro et al. 2022 Front Psychol
+    元分析（PMID 36118463，OA）经检索确认存在，可在后续复核中建包。community_rituals 的'同步注意/情绪/行为→联结'过程同被覆盖。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S222
+  title: 'The Rise and Decline of an Open Collaboration System: How Wikipedia''s Reaction to Popularity
+    Is Causing Its Decline'
+  authors: Aaron Halfaker; R. Stuart Geiger; Jonathan T. Morgan; John Riedl
+  year: 2013
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: newcomer_onboarding（新人早期互动被回应/认可决定留存）与 participation_ladder（阶梯流动受阻→ Contributor 供给下降）的一手系统证据。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S223
+  title: 'GEO: Generative Engine Optimization'
+  authors: Pranjal Aggarwal; Vishvak Murahari; Tanmay Rajpurohit; Ashwin Kalyan; Karthik R. Narasimhan;
+    Ameet Deshpande
+  year: 2024
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: answer_engine_visibility D→C 升级依据：从业者主张（清晰结构/可引用答案块/明确出处提升被引概率）获得受控基准实验支持（引用来源/引语/统计等策略最有效）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S224
+  title: 'How TikTok recommends videos #ForYou（官方新闻室说明）'
+  authors: TikTok Newsroom
+  year: 2020
+  type: official_source
+  language: en
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: ranking_signal_weighting 跨平台信号差异的官方一手证据之一（与 S225 YouTube 官方博客并读：不同平台公开的信号类别集合不同）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S225
+  title: On YouTube's recommendation system（官方博客）
+  authors: YouTube（Google）
+  year: 2021
+  type: official_source
+  language: en
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: 跨平台信号差异官方一手证据之二（TikTok 完播导向 vs YouTube 时长/满意度导向——节点主张'不同平台因目标函数不同对信号权重排序不同'的直接文档证据）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S226
+  title: The X Rules（官方规则页）
+  authors: X Corp.
+  year: 2026
+  type: official_source
+  language: en
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: moderation_governance（治理标准与处置）与 platform_power_gatekeeping（触达为平台授予/可撤回的规则框架）的官方一手证据。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 2 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S227
+  title: 视频创作激励年度计划（官方活动页）
+  authors: bilibili
+  year: 2026
+  type: official_source
+  language: zh
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: creator_incentive_structures 的官方一手证据（变现结构存在性与参数化；'激励结构筛选内容形态'的因果判断仍为机制层）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S228
+  title: 小红书社区规范
+  authors: 小红书（行吟信息科技）
+  year: 2022
+  type: official_source
+  language: zh
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: moderation_governance 官方一手证据（治理措施直接影响内容可见性——'治理塑造内容供给形态'的规则层依据）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S229
+  title: 抖音社区自律公约
+  authors: 抖音（北京抖音信息服务有限公司）
+  year: 2026
+  type: official_source
+  language: zh
+  authority_level: official
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: moderation_governance 官方一手证据（'鼓励什么/惩罚什么'直接塑造内容供给——节点主张的规则层依据）。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S230
+  title: 'Creating Social Contagion Through Viral Product Design: A Randomized Trial of Peer Influence
+    in Networks'
+  authors: Sinan Aral; Dylan Walker
+  year: 2011
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: viral_coefficient 一手实证（'产品内建邀请机制可因果地制造同伴传染'）；K>1 阈值判据本身仍为从业者经验——节点 D→C 升级依据（有实验研究依据，情境有限）。真实数字
+    1.4M/9,687/246%/98%。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S231
+  title: 'Goodbye Pareto Principle, Hello Long Tail: The Effect of Search Costs on the Concentration of
+    Product Sales'
+  authors: Erik Brynjolfsson; Yu (Jeffrey) Hu; Duncan Simester
+  year: 2011
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: long_tail_demand 一手实证：节点主张的'数字渠道使尾部经济可服务'获得受控比较证据；节点同时主张的'头部集中未消失'修正侧由节点原文既有证据承担。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S232
+  title: Discord's Design Encourages 'Third Place' Social Media Experiences
+  authors: JaeWon Kim; Thea Klein-Balajee; Ryan M. Kelly; Alexis Hiniker
+  year: 2025
+  type: paper
+  language: en
+  authority_level: preprint_or_wp
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: third_place 的一手实证（虚拟情境）：Oldenburg 框架被结构化操作化——支撑'第三空间特征可被设计并维持'的设计层证据；物理第三空间与社会资本再生的经典主张仍以 S88/S89
+    书源为主。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S233
+  title: Experimental Study of Informal Rewards in Peer Production
+  authors: Michael Restivo; Arnout van de Rijt
+  year: 2012
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: status_systems 一手实证：地位/荣誉信号因果地提升贡献——'贡献可被累积可见并激励投入'的实验证据。真实数字 60%/6 倍。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S234
+  title: 'The Influence of Generative AI on Content Platforms: Supply, Demand, and Welfare Impacts in
+    Two-Sided Markets'
+  authors: Yukun Zhang
+  year: 2024
+  type: paper
+  language: en
+  authority_level: preprint_or_wp
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: ai_content_saturation 的一手理论证据（preprint）：'供给膨胀→信息过载→注意力稀释+头部集中与长尾并存'与节点核心主张同构。证据等级贡献为'有研究依据'，非实测。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S235
+  title: 'Why consumers hesitate to pay online: Evidence from online transactions'
+  authors: Zongwei Li; Jixiang Liu; Jianing Chen; Yanhui Zhang
+  year: 2026
+  type: paper
+  language: en
+  authority_level: peer_reviewed
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: perceived_purchase_risk 一手实证：风险维度（卖家/财务/产品）直接驱动购买犹豫——'决策从选最好退回选最不会错'的风险最小化结构获得交易级数据支持。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S236
+  title: 'Corrective Policy and Goodhart''s Law: The Case of Carbon Emissions from Automobiles'
+  authors: Mathias Reynaert; James M. Sallee
+  year: 2016
+  type: paper
+  language: en
+  authority_level: preprint_or_wp
+  access_status: partial
+  research_status: validated
+  access_level: abstract_only
+  notes: algorithmic_gaming 一手实证（类比场景）：'任何可被测量的信号都会被博弈、信号与真实价值分离'的机制被大样本数据直接证明；平台内容场景的博弈机制以此为机制层类比，诚实标注为非平台场景。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）
+- source_id: S237
+  title: Learning by Chatting? Investigating the Impact of Generative AI on Information Seeking and Learning
+  authors: Shravika Mittal; Su Lin Blodgett; Q. Vera Liao
+  year: 2026
+  type: paper
+  language: en
+  authority_level: preprint_or_wp
+  access_status: full
+  research_status: validated
+  access_level: full_text
+  notes: ai_information_intermediaries 一手实证：AI 中介不仅决定'看到什么'，其输出偏向与交互范式系统性改变用户的信息接入——节点'守门功能从排序扩展为生成与转述'的行为层证据。
+  validated_date: '2026-09-11'
+  validation_basis: 实读/实取并标注完成；被 1 个机制节点经跨来源合并引用（provenance 溯源链 + audit_integrity 门禁覆盖）

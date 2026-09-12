@@ -1,0 +1,11 @@
+# Evidence Package 墓碑 — S116 Baddeley 2007（Working Memory, Thought, and Action）
+# T1 同书重复登记合并（2026-09-09）：S116 与 S04 为同一本书（OUP，同 DOI 10.1093/acprof:oso/9780198528012.001.0001）。
+# 保留方：S04（core_30 正规登记，annotated，substantial_excerpt：OUP 目录 18 章+多源中文综述交叉实取）；
+# 本包原为论文/摘要级登记（abstract_only），content_obtained 为 S04 子集。
+# 原 EP 内容见 git 历史（本文件合并前版本）；引用一律使用 S04。
+source_id: S116
+merge_status: MERGED_INTO
+merged_into: S04
+merged_date: "2026-09-09"
+merge_reason: "同书重复登记（同 DOI）；S04 content_obtained 更实质，本包仅综述级转述。全部节点引用已重定向至 S04。"
+relevant_nodes: []

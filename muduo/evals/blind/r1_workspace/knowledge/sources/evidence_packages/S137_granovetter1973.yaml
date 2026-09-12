@@ -1,0 +1,27 @@
+# Evidence Package — S137 Granovetter 1973（The Strength of Weak Ties）
+# 标准格式。access_level 如实标注。
+source_id: S137
+title: "The Strength of Weak Ties"
+authors: "Mark S. Granovetter"
+year: 1973
+journal: "American Journal of Sociology 78(6): 1360-1380"
+doi: "10.1086/225469"
+url: "https://sociology.stanford.edu/people/mark-granovetter"
+access_level: substantial_excerpt
+research_status: read
+content_obtained: "渠道1：斯坦福作者主页（WebFetch 成功，书目确认 AJS 78(May):1360-1380）；渠道2：Semantic Scholar API（curl 成功，DOI/作者/期刊/年份元数据）；渠道3：Granovetter 2005《The Impact of Social Structure on Economic Outcomes》(JEP 19(1):33-50, AEA 官网开放 PDF，经搜索结果取得全文内容，含'弱连带强度'核心论点段落)；渠道4：primores.org 讲义式解读（WebFetch 成功：桥论证三步、56%/17% 求职数据、局部桥定义、原文引文）；渠道5：JSTOR 转载文本（book118 转载，原文摘要与首页）。1973 正文全文未直接抓取，以原文摘要+作者综述+二手解读交叉。"
+research_question: "网络分析如何把微观互动（二元连带强度）与宏观结构（信息扩散、流动机会、社区组织）连接起来？弱连带在大规模信息扩散中扮演什么角色？"
+core_claims:
+  - "连带强度定义为（可能是线性的）组合：投入时间量、情感强度、亲密性（相互倾诉）与互惠服务"
+  - "两人朋友圈的重叠程度与其连带强度直接正相关；强连带倾向聚类（三元闭合），因此连接不同紧密群体的桥（bridge）必然是弱连带"
+  - "弱连带比强连带携带更多新颖信息：亲密朋友信息高度冗余，而熟人连接更广阔的世界；'信息可以通过弱连带跨越更大的社会距离、触达更多人'"
+  - "求职实证锚点：56% 的求职者通过弱连带获得工作，仅 17% 通过强连带"
+  - "局部桥（local bridge of degree n）概念：即使不是严格桥，弱连带也往往是最短的跨群体路径，且度数越大扩散意义越强"
+  - "宏观含义：若各人好友互相认识形成紧密小集团，则连接小集团的主要是弱连带，弱连带决定大规模社会结构中的信息扩散范围"
+method: "理论论证 + 社会网络分析（三元闭包/桥的结构推演），以作者前期波士顿牛顿镇求职研究为实证锚点；将弱连带思想推广至信息扩散、机会流动与社区组织"
+results: "弱连带是连接紧密小群体之间的桥梁，决定信息在宏观尺度的扩散；强连带网络局部凝聚但信息封闭；为微观-宏观社会学连接提供网络分析路径"
+limitations: "作者自述为'探索性与纲领性'（exploratory and programmatic）的理论论文；连带强度四要素难以独立操作化；经验验证在后续数十年逐步展开且结果混合（部分情境强连带效应更强）"
+boundary_conditions: "适用于简单信息/机会的扩散（求职、信息流动）；对需要社会强化的复杂传染（行为采纳）并不必然成立（Centola/Macy 反例：复杂传染反而需要强连带/多重支持）"
+relevant_nodes: [weak_ties_strength, structural_holes_bridging, network_density, strong_ties_support]
+notes: "网络科学与社会网络分析奠基论文。核心内容均来自实际抓取：作者主页书目、作者 2005 综述全文、JSTOR 转载原文摘要、讲义解读中的桥论证与 56%/17% 数据；1973 正文全文未直接抓取（JSTOR 付费墙），如实标 substantial_excerpt，未编造。"
+last_verified: "2026-09"

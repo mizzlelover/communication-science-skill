@@ -1,0 +1,25 @@
+# Evidence Package — S60 Nahon & Hemsley 2013（Going Viral）
+# 标准格式。access_level 如实标注。
+source_id: S60
+title: "Going Viral: The Dynamics of Information Spread"
+authors: "Karine Nahon; Jeff Hemsley"
+year: 2013
+journal: Polity Press（专著）
+doi: "无 DOI（专著）"
+url: "https://pdfs.semanticscholar.org/56f6/2e276ae13e174ed821052b662cd3bfdeb869.pdf"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：学术综述（Nahon & Hemsley 2013 为最全面病毒性研究：技术基础设施/网络化守门 networked gatekeeping/枢纽角色/多维传播）+ 编辑综述（病毒性定义/情绪驱动/与生物学病毒区别）+ 应用研究引用"
+research_question: "什么构成'病毒式传播'？信息如何通过社会网络多维扩散？"
+core_claims:
+  - "病毒性（virality）=内容在短时间内传播到大量用户；数字网络技术基础设施使无限互联成为可能"
+  - "网络化守门（networked gatekeeping）：传播由多层守门（平台算法/平台员工/超级节点/普通用户转发）共同决定——传统守门模型扩展到网络时代"
+  - "枢纽角色（celebrity/influencer/media professionals）在传播中关键，但普通用户也可凭一条成功信息突破层级"
+  - "情绪（敬畏/焦虑/愤怒）驱动分享是病毒性与生物学病毒的关键区别（配套 Berger & Milkman 方向）"
+method: "传播学理论专著（案例 + 网络化守门框架）+ 信息科学综合"
+results: "（理论框架）网络化守门/病毒性定义成为病毒传播研究标准参考"
+limitations: "框架性质（案例为主）；具体传播路径缺乏公开可验证数据"
+boundary_conditions: "适用于社交平台网络化传播；不同平台守门权重差异大"
+relevant_nodes: [gatekeeping_dynamics, algorithmic_amplification, opinion_leadership]
+notes: "gatekeeping_dynamics 的一手来源（book 级）。网络化守门/枢纽角色为公开标准内容，未编造。"
+last_verified: "2026-09"

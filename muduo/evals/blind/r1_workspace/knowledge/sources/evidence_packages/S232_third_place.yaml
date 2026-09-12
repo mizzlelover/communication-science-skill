@@ -1,0 +1,23 @@
+# Evidence Package — S232（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S232
+title: Discord's Design Encourages 'Third Place' Social Media Experiences
+authors: JaeWon Kim; Thea Klein-Balajee; Ryan M. Kelly; Alexis Hiniker
+year: 2025
+journal: arXiv:2501.09951（ACM 投稿格式）
+doi: 10.48550/arXiv.2501.09951
+url: https://arxiv.org/abs/2501.09951
+access_level: full_text
+research_status: annotated
+content_obtained: arXiv HTML 全文逐字实读（2026-09-11）
+research_question: 平台设计如何塑造支持远程关系与社区建构的虚拟第三空间？
+core_claims:
+- 对 25 名 Discord 活跃用户的半结构化访谈：识别出 21 个与 Oldenburg 第三空间特征对齐的设计元素
+- 元素聚为四原则：提供可重复互动的主题化空间、支持用户自主与定制、促成可共同参与的活动、支持低压力随意互动
+method: 半结构化访谈（定性研究）
+limitations: 定性研究；单一平台；样本以青少年为主
+boundary_conditions: 虚拟第三空间情境；物理第三空间的外推需谨慎
+relevant_nodes:
+- third_place
+notes: third_place 的一手实证（虚拟情境）：Oldenburg 框架被结构化操作化——支撑'第三空间特征可被设计并维持'的设计层证据；物理第三空间与社会资本再生的经典主张仍以 S88/S89
+  书源为主。
+last_verified: 2026-09

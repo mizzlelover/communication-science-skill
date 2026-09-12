@@ -1,0 +1,28 @@
+# Evidence Package — S84 David Spinks 2021（The Business of Belonging）
+# 标准格式。access_level 如实标注。
+source_id: S84
+title: "The Business of Belonging: How to Make Community Your Competitive Advantage"
+authors: "David Spinks"
+year: 2021
+journal: Wiley（专著；2021-03-23；ISBN 9781119766148）
+doi: "无 DOI（专著）"
+url: "https://www.nityesh.com/book-review-business-of-belonging/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 nityesh.com 15 条详读书评（SPACES 六项业务成果逐项定义、3 Levels of Community Strategy、Pareto 80/20 聚焦顶层、内在/外在动机、7 Ps of Community Experience Design、同步/异步体验、日/周/月/季/年重复体验、个人邀请机制、社区即不可复制竞争优势、情感切换成本）+ 渠道2 teamhappily 播客摘要（SPACES 模型全称、audience vs community 之分、business×belonging 重叠区、ROI 框架、行业统计：仅 12% 社区团队有信心衡量社区业务价值、88% 社区有专职社区经理）+ 渠道3 aibrary.ai 播客摘要（SPACES 六要素详解、Social Identity Cycle 三阶段 Identification→Participation→Validation、Zappos/Salesforce Trailblazer/Duolingo/Ironclad 案例）+ 渠道4 Audible 官方摘要（SPACES 六项 key drivers、ROI 衡量、社区解剖/生命周期/成员旅程、共享空间设计）+ 渠道5 15minutes.ai 书摘（SPACES 框架、社区扩展团队产能逻辑）+ 渠道6 豆瓣 Community:ology 书单（Wiley 2021-3-23 元数据、CMX 创始人背景）"
+research_question: "企业如何把『社群』从锦上添花的关怀项目变成可衡量、可问责、能驱动营收与增长的竞争战略？"
+core_claims:
+  - "SPACES 模型：社区可驱动六项可衡量的业务成果——Support（客户服务与支持，成员互助降低支持成本）/ Product（创新、反馈与研发）/ Acquisition（增长、营销与销售，大使与代言人传播，如 Lululemon 大使项目）/ Contribution（协作与众包，成员创作内容或帮助引导新用户，如 Udemy 讲师社区）/ Engagement（客户体验、留存与忠诚）/ Success（客户成功与进阶）；小团队应聚焦其中一至两项以免失败（nityesh + teamhappily + audible + aibrary + 15minutes 多源一致）"
+  - "社区是不可复制的竞争优势：『It's always going to be very difficult to copy a community』——产品与定价可被复制，成员间的关系、信任与情感投资无法复制；社区还通过情感切换成本提升留存（离开产品=离开关系与已积累的社会资本）（nityesh + aibrary）"
+  - "Social Identity Cycle（社会身份循环）：成员经由 Identification（认同：看见与自己相似的人/价值观）→ Participation（参与：注册、加入、发帖）→ Validation（被认可：获得回应与地位）三阶段循环，从普通客户变成超级粉丝（aibrary 摘要）"
+  - "3 Levels of Community Strategy 与 audience vs community 之分：建 audience 是你创造价值供人消费，建 community 是帮助成员彼此创造价值；成功的社群策略位于『对业务的可见价值』与『对成员的归属价值』的重叠区；业务目标与社区健康必须一体两面（nityesh + teamhappily）"
+  - "参与策略：love your lurkers but prioritize your creators——Pareto 原则（约 80% 内容由 20% 成员创造），让顶部 20% 的承诺翻倍比让底部 80% 提高五倍增长更快；激励上以内在动机（autonomy/mastery/purpose）为基底，用外在奖励（地位、人脉、特殊访问与特权）强化（nityesh）"
+  - "体验与空间设计：7 Ps of Community Experience Design（People/Purpose/Place/Participation/Policy/Promotion/Performance）；同步体验提供深度、异步体验提供广度（'Asynchronous experiences provide breadth. Synchronous experiences provide depth.'）；按日/周/月/季/年设计重复性体验以培养回访习惯；大社区用论坛、小团体用聊天平台（'a forum with 10 people in it will feel empty, and a chat group with 1,000 in it will feel extremely overwhelming'）（nityesh）"
+  - "社区经理的实操：把每个问题在 24 小时内凑足至少三个优质回答（私信邀请专家作答的 matchmaker 机制）；用个人邀请促进参与（nityesh）；行业背景：约 88% 社区配备专职社区经理、仅 12% 团队对衡量社区业务价值有信心（teamhappily 统计）"
+method: "从业者框架（D 级）：CMX 联合创始人（2014 年创立、2019 年被 Bevy 收购）、十年间为 Google/Facebook/Airbnb 等数百组织提供社区战略咨询与培训，融合行业调查数据（CMX 社区行业报告）与 Zappos/Salesforce/Duolingo/Ironclad 等案例"
+results: "（从业者定位）商业社群战略的现代基准框架：SPACES 把社区价值翻译成业务语言，Social Identity Cycle 说明成员到超级粉丝的机制，成为社群经理向管理层论证 ROI 的标准工具"
+limitations: "框架为从业者经验综合（非实证检验）；行业统计来自 CMX 自身调查（样本偏社区从业者）；『社群驱动增长』案例存在幸存者偏差；SPACES 各要素的度量口径书中未给严格量表"
+boundary_conditions: "适用于有产品/服务依托的企业客户社群（B2B/B2C 品牌、SaaS、创作者经济）；对无商业目标的兴趣社群、公益社群，其 ROI 与业务对齐部分不适用"
+relevant_nodes: [sense_of_community, newcomer_onboarding, status_systems, participation_ladder]
+notes: "从业者框架（D 级），如实标注。SPACES 为六要素（Support-Product-Acquisition-Contribution-Engagement-Success），非五要素，经 5+ 独立来源交叉确认；Social Identity Cycle、3 Levels、7 Ps、Pareto 策略、情感切换成本均来自可抓取的书评/播客/官方摘要，未编造。"
+last_verified: "2026-09"

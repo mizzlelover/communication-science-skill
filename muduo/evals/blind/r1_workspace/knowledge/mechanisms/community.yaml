@@ -1,0 +1,1198 @@
+# community — 社群（Community）：从社区感到治理机制
+domain: community
+nodes:
+- id: sense_of_community
+  canonical_name_en: Sense of Community
+  canonical_name_zh: 社区感
+  aliases:
+  - SOC
+  - 心理社区感
+  domain: community
+  definition: 社区感（sense of community）由 McMillan 与 Chavis 于 1986 年提出，是「成员对群体的归属感、相互重要性与共同纽带」的体验。其经典四要素模型：membership（成员资格：边界、情感安全、归属与认同、个人投入、共同符号系统）、influence（相互影响：成员对群体的影响与群体对成员的影响）、integration
+    and fulfillment of needs（需求整合与满足：共享资源、价值与需求满足）、shared emotional connection（共享情感联结：共同历史、时间、经历、重要事件与荣誉）。
+  core_claim: 社区感由成员资格、相互影响、需求满足与共享情感联结四要素共同产生，缺一不可；只有四要素同时被设计进社群，成员才会从「用户」变成「我们」。
+  mechanism: 社区感不是人群聚集的自然产物：清晰的边界与共同符号（membership）让人敢于投入与暴露，相互影响（influence）证明个体的参与能改变群体、群体的规范也能约束个体，需求整合（integration）让成员感到留在这里有实际收获，而共同经历的情感事件（shared
+    emotional connection）把以上三者黏合成「我们」的叙事；McMillan & Chavis 将 influence 视为四要素中最重要者（S134）。四要素相互增强：投入产生联结，联结加深影响，影响留住成员。
+  causal_chain: 边界与符号（membership）+ 相互影响（influence）+ 需求满足（integration）+ 共同情感事件（shared connection）→ 归属体验
+    → 成员投入与留存
+  variables:
+    inputs:
+    - 边界与符号系统的清晰度
+    - 成员发言对群体的实际影响
+    - 群体资源与需求匹配
+    - 共同经历事件
+    moderators:
+    - 群体规模（影响可感知度）
+    - 成员相似性
+    - 沟通频率
+    mediators:
+    - 归属感
+    - 认同感
+    - 安全感
+    outputs:
+    - 成员留存
+    - 投入意愿
+    - 社区凝聚力与维护行为
+  evidence:
+    supporting:
+    - McMillan & Chavis 1986 的理论与研究综述：四要素模型及其测量传统（经典论文与后续量表）
+    - 基于 Sense of Community Index 的研究在邻里、学校、组织与在线社区多情境重复（量表研究传统，方向一致）
+    conflicting:
+    - 对四要素的因子结构存在多种测量分歧（不同研究提取出 1-4 因子不等）（测量文献讨论）
+    - 在线社区中「共享情感联结」的达成路径与线下社区不同，直接移植线下结论存在偏差（在线社区研究讨论）
+    replication:
+    - 社区感与参与、留存、幸福感的正相关在多情境重复；四要素结构本身有测量层面的争议
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 四要素模型适用于有持续互动可能的群体；纯流量型「社区」（无重复互动）不适用
+  - 群体规模影响要素结构：超大群体中 membership 退化为身份标签而非真实关系
+  failure_conditions:
+  - 只做归属感（membership）不做相互影响：成员感到温暖但无权力，最终沉寂
+  - 只谈需求满足不建立情感联结：成员像消费者，价格战一来即散
+  common_misinterpretations:
+  - 「建个群就有社区感」——社区感需要四要素的制度化设计，人数与社区感无必然关系
+  - 把社区感等同于满意度：满意度是消费者评价，社区感是成员认同，前者可被竞品替代，后者不能
+  ethical_risks:
+  - 利用归属感制造退出成本（情感绑架式运营）与群体压力（「真正的成员都会……」）
+  examples:
+    original_cases:
+    - McMillan & Chavis 对邻里社区、互助团体等场景的理论建构与案例（1986 论文）
+    research_cases:
+    - Sense of Community Index 在邻里、宗教、学校与在线社区的应用研究（量表传统）
+    modern_cases:
+    - 跑团社群的入团仪式、配速文化与年度赛事共同经历（四要素齐全）
+    - 品牌会员社区因只发优惠券而无相互影响而沦为优惠券群
+  communication_implications: 传播话语使用「我们」叙事并讲共同历史（「三年前我们开始……」）；对外内容呈现真实成员互动而非官方单向广播，让旁观者看见一个「活着的我们」。
+  community_implications: 以四要素做社群体检：边界是否清晰（入群门槛与身份符号）、成员是否真的影响社群（提案被采纳）、需求是否被整合（互助资源）、是否制造共同情感事件（仪式、战役、里程碑）。
+  content_applications:
+    body: 正文以「我们的共同问题」开头，引用具体成员的故事与贡献（强化 membership 与 integration）
+    narrative: 定期发布社群编年史内容（本月大事记、成员高光），累积 shared emotional connection
+    comments: 把优质成员发言纳入正式内容（精选、置顶），兑现 influence 要素
+    sharing: 设计社群专属符号（梗、黑话、徽章）让分享自带身份标识
+  platform_implications: 平台功能映射四要素：成员徽章（membership）、投票与共创（influence）、资源库（integration）、年度回顾（shared connection）；平台工具的完备度决定社区感的可实现上限（原则性判断）。
+  related_nodes:
+  - need_to_belong
+  - collective_identity_narrative
+  - community_boundaries
+  - community_rituals
+  - participation_ladder
+  source_ids:
+  - S81
+  - S82
+  - S84
+  - S134
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Kim 2000《Community Building on the Web》（S81，成员生命周期/九设计策略）+ Bacon 2012（S82，归属感/on-ramps）+
+      Spinks 2021（S84，归属业务/SPACES）
+    effect_size: 归属感与留存/参与正相关（行业数据方向一致）
+    replication_status: McMillan & Chavis 四要素框架广泛应用；运营经验框架（D 级成分）
+    context_dependency: 社区规模/治理/工具完备度调制
+    downgrade_upgrade_reason: 2026-09 实取 S81/S82/S84 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S81
+    supporting_evidence:
+    - S82
+    - S84
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-013
+    - CASE-COM-001
+    - CASE-COM-003
+    - CASE-COM-004
+    - CASE-COM-009
+    - CASE-COM-012
+    - CASE-COM-019
+    - CASE-COM-020
+    - CASE-COM-022
+    - CASE-COM-023
+    - CASE-COM-025
+    - CASE-COM-027
+    - CASE-COM-029
+    - CASE-COM-030
+    - CASE-COM-031
+    - CASE-COM-033
+    - CASE-COM-034
+    - CASE-COM-038
+    - CASE-COM-040
+    - CASE-COM-047
+    - CASE-COM-048
+    - CASE-COM-049
+    - CASE-COM-052
+    - CASE-COM-055
+    - CASE-COM-057
+    - CASE-COM-058
+    - CASE-COM-060
+    - CASE-COM-062
+    - CASE-COM-063
+    - CASE-COM-066
+    - CASE-COM-069
+    - CASE-COM-071
+    - CASE-COM-072
+    - CASE-COM-073
+    - CASE-COM-077
+    - CASE-COM-079
+    - CASE-COM-081
+    - CASE-COM-082
+    - CASE-COM-083
+    - CASE-COM-085
+    - CASE-COM-087
+    - CASE-COM-090
+    - CASE-COM-091
+    - CASE-COM-092
+    - CASE-COM-093
+    - CASE-COM-095
+    - CASE-COM-096
+    - CASE-COM-098
+    - CASE-COM-099
+    - CASE-COM-100
+    platform_sources:
+    - bilibili:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: third_place
+  canonical_name_en: Third Place
+  canonical_name_zh: 第三空间
+  domain: community
+  definition: 第三空间（third place）由 Ray Oldenburg 在《The Great Good Place》（1989）中提出：家是第一空间，工作是第二空间，而咖啡馆、酒吧、理发店、书店等非正式公共聚集场所是第三空间——低门槛进出、平等交流、常客文化、让人「放下身份」的社交缓冲带。它是社区感的日常发生器。
+  core_claim: 人们需要在家庭与工作之外拥有低义务、可预期的聚集场所；第三空间的质量决定社区社会资本的日常再生速度。
+  mechanism: 第三空间具备一组结构性特征：中立性（谁都可以来）、平等性（职业与地位暂时悬置）、低义务（不来了也没人追究）、可预期（固定时间会出现熟悉面孔）、以对话为主要活动、保持低调与接纳。这些条件让弱关系得以低维持成本地存在，让熟人升级为伙伴，让社区信息与情感支持在日常中自然流动。线上社群的「水群」、兴趣社区承担着数字第三空间的功能。
+  causal_chain: 低门槛聚集场所 → 反复的轻度接触 → 熟悉与信任积累 + 弱关系维护 → 社区社会资本日常再生
+  variables:
+    inputs:
+    - 场所的可达性与低成本
+    - 聚会的规律性
+    - 对话氛围
+    moderators:
+    - 常客群体的稳定性
+    - 场所的中立性（无强商业目标）
+    mediators:
+    - 轻度重复接触
+    - 身份悬置感
+    outputs:
+    - 社区归属感
+    - 弱关系密度
+    - 非正式信息流
+  evidence:
+    supporting:
+    - Oldenburg 对欧洲与美国第三空间的社会学分析（经典著作）
+    - Putnam 关于社区组织与非正式聚集对社会资本贡献的研究传统（方向一致）
+    conflicting:
+    - 线上空间能否成为真正的第三空间存在争议：缺乏物理共存与偶然相遇的结构（媒介研究讨论）
+    replication:
+    - 第三空间特征清单被城市规划与社区研究广泛引用；「第三空间密度与社区感正相关」的严格检验较少
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 第三空间需要可预期的重复接触；纯一次性活动场所（景区、会展）不构成第三空间
+  - 线上第三空间需具备「常来都能遇上人」的机制，异步广场类产品难以替代
+  failure_conditions:
+  - 商业目标过强（进群即推销、到店即成交压力）摧毁中立性，第三空间退化
+  - 场所被单一强身份占领（变成某公司会议室），平等性丧失
+  common_misinterpretations:
+  - 「装修好=第三空间」——第三空间是关系结构不是空间美学；无固定常客的网红店不是第三空间
+  - 把第三空间等同于私域流量池：第三空间的本质是低商业压力，强营销会杀死它
+  ethical_risks:
+  - 把本应中立的聚集空间变成数据收割与精准营销场所，侵蚀其社会功能
+  examples:
+    original_cases:
+    - Oldenburg 对咖啡馆、啤酒馆、理发店等美欧第三空间的经典描述（《The Great Good Place》）
+    research_cases:
+    - Putnam 对社区非正式组织衰落与社会资本下降的分析传统（《Bowling Alone》）
+    modern_cases:
+    - 「水群」型微信群（无主题、常客、低义务）成为线上第三空间
+    - 独立书店的讲座与常客文化
+    - 城市自习室与咖啡办公社群
+  communication_implications: 品牌内容策略可把自己定位为「话题的第三空间」：低销售压力、可预期更新节奏、容纳身份多样性的讨论场，让受众把「来这里看看」变成日常习惯。
+  community_implications: 社群运营应保护「低义务闲聊区」：不是所有互动都要有主题与转化目标；水群是社群的第三空间基础设施，过度治理会杀死日常接触。
+  content_applications:
+    body: 定期栏目固定时间发布（每周五晚八点），制造可预期的「到场」节律
+    comments: 评论区管理保持宽容度（允许跑题闲聊），把治理资源集中在恶意行为而非跑题
+    sharing: 鼓励无目的的日常分享（今日随拍、碎碎念），而非只允许精心制作的内容
+  platform_implications: 平台群聊的「随时进来都有人说话」特性是数字第三空间的技术前提；纯算法广场（无固定邻里）难以形成第三空间（原则性判断）。
+  related_nodes:
+  - sense_of_community
+  - weak_ties_strength
+  - community_rituals
+  - community_boundaries
+  - reciprocity_exchange_networks
+  source_ids:
+  - S88
+  - S89
+  - S232
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Oldenburg 1989《The Great Good Place》（S88，第三空间定义与八特征）+ Putnam 2000《Bowling Alone》（S89，社会资本与第三空间衰落）
+    effect_size: 第三空间与公民参与/社区归属正相关（社会学调查传统）
+    replication_status: 第三空间理论为城市社会学经典；线上第三空间为延伸应用（原则性判断）
+    context_dependency: 需固定邻里/日常性；纯算法广场（无固定邻里）难以形成
+    downgrade_upgrade_reason: 2026-09 实取 S88/S89 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S88
+    - S232
+    supporting_evidence:
+    - S89
+    last_verified: 2026-09
+    case_sources:
+    - CASE-COM-004
+    - CASE-COM-009
+    - CASE-COM-022
+    - CASE-COM-035
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: community_boundaries
+  canonical_name_en: Community Boundaries
+  canonical_name_zh: 社群边界
+  aliases:
+  - 成员边界
+  - 边界维护
+  domain: community
+  definition: 社群边界（community boundaries）指区分「成员/非成员」的制度与文化屏障：显性层包括入群门槛、审核、付费墙、邀请制；隐性层包括圈内黑话、规范、共同记忆。边界是双刃剑：对外制造稀缺与认同，对内制造安全与归属，但过强则封闭僵化，过弱则稀释失焦。
+  core_claim: 社群凝聚力依赖边界（模糊的「所有人社区」不是社区），但边界强度需要与社群目标匹配：归属感的强度与边界的清晰度正相关，与开放性负相关。
+  mechanism: 边界通过三条路径起作用：筛选（门槛确保进入者有基本承诺与匹配度）、认同（「我们是 X」需要「他们不是 X」作为对照，社会认同理论逻辑）、安全（边界内才敢真实表达与求助）。但过强的边界会使社群信息内卷化（同质性回音室）、排外与僵化；过弱的边界使成员资格无意义，搭便车者稀释资源，核心成员因「谁都进」而失去投入动力。
+  causal_chain: 边界设定 → 成员筛选 + 内群体认同形成 + 表达安全 → 归属感与投入；边界过强 → 封闭与排外，边界过弱 → 稀释与失焦
+  variables:
+    inputs:
+    - 入群门槛与审核制度
+    - 圈内符号与规范的可学习性
+    moderators:
+    - 社群目标（开放使命 vs 深度联结）
+    - 竞争社群的存在
+    - 威胁感知
+    mediators:
+    - 成员资格的感知价值
+    - 内群体认同强度
+    outputs:
+    - 归属感强度
+    - 社群开放性/封闭性
+    - 成员质量与投入分布
+  evidence:
+    supporting:
+    - 社会认同研究显示群体边界清晰度提升内群体认同（social identity 传统，方向一致）
+    - 社区研究与实践传统对门槛、仪式与边界维护的案例支持（社群实践文献）
+    conflicting:
+    - 强边界的回音室与排外后果在社会网络研究中被反复指出（homophily 与极化文献）
+    replication:
+    - 「适度边界提升凝聚力」是横跨社会心理学与社区研究的稳定方向；最优边界强度无普适值
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 边界强度应匹配社群使命：开放性使命（公益、城市社区）需低边界，深度联结使命（戒瘾、创业者私密组）需高边界
+  - 边界需被公平执行：选择性执法比无边界的破坏更大
+  failure_conditions:
+  - 为增长不断降低门槛导致社群稀释（老成员因归属感下降而退出，出现「劣币驱逐良币」）
+  - 为归属感把边界推向极端（纯洁性审查），社群陷入内耗与排外
+  common_misinterpretations:
+  - 「社群越大越好」与「社群越小越好」都是错的：正确问题是「这个社群的使命需要什么强度的边界」
+  - 把边界等同于付费墙：金钱只是筛选维度之一（且是最弱的认同维度），参与贡献式门槛（作品、介绍、邀请）制造的归属感更强
+  ethical_risks:
+  - 边界维护可演变为歧视性排斥（身份审查、纯洁性清洗）
+  examples:
+    original_cases:
+    - Oldenburg 对第三空间「常客」自然边界形成的描述
+    - 社区研究对 gated community（门禁社区）的社会后果讨论
+    research_cases:
+    - 社会认同实验中最小组群划分即产生内群体偏好的经典范式（Tajfel 传统）
+    modern_cases:
+    - 知识星球付费门槛与申请制微信群的对比（金钱 vs 贡献筛选）
+    - 游戏公会的入会试炼与出勤要求
+  communication_implications: 对外传播应讲清「谁适合来、谁不适合」：自我筛选式文案（描述成员画像与门槛）比泛吸引力文案带来更高质量转化；模糊边界的流量是社群稀释的源头。
+  community_implications: 定期审计边界：门槛是否仍筛选出与使命匹配的人、老成员的边界特权是否被尊重（新人涌入不应稀释老人的身份价值）、退出是否体面（边界是双向门，不是只进不出的陷阱）。
+  content_applications:
+    body: 正文直接使用「写给正在经历 X 的你」的定位句式，完成内容层面的边界筛选
+    narrative: 讲述社群成员的典型故事时保留真实的身份细节，强化「我们是这类人」的画像
+    comments: 对新成员的第一次发言给予有质量的回应（边界内的人情味），而不是冷场
+    sharing: 对内与对外传播使用双版本：圈内版可用黑话加深认同，圈外版需解释与降低门槛
+  platform_implications: 平台的群组权限体系（审核、邀请链接、分级成员）是边界的执行基础设施；平台若只提供「无门槛大群」模板，社群就只剩边界失效一条路（原则性判断）。
+  related_nodes:
+  - sense_of_community
+  - social_identity_theory
+  - community_rituals
+  - newcomer_onboarding
+  - in_group_favoritism
+  source_ids:
+  - S81
+  - S82
+  - S25
+  - S134
+  provenance:
+    primary_sources:
+    - S81
+    - S82
+    - S25
+    - S134
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-002
+    - CASE-COM-003
+    - CASE-COM-005
+    - CASE-COM-007
+    - CASE-COM-008
+    - CASE-COM-010
+    - CASE-COM-011
+    - CASE-COM-018
+    - CASE-COM-035
+    - CASE-COM-036
+    - CASE-COM-041
+    - CASE-COM-042
+    - CASE-COM-043
+    - CASE-COM-053
+    - CASE-COM-055
+    - CASE-COM-056
+    - CASE-COM-065
+    - CASE-COM-066
+    - CASE-COM-069
+    - CASE-COM-074
+    - CASE-COM-075
+    - CASE-COM-076
+    - CASE-COM-077
+    - CASE-COM-092
+    - CASE-COM-095
+    - CASE-PLT-028
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: newcomer_onboarding
+  canonical_name_en: Newcomer Onboarding
+  canonical_name_zh: 新人融入
+  aliases:
+  - 新手引导
+  - 社会化（socialization）
+  domain: community
+  definition: 新人融入（newcomer onboarding）指新成员从「合法边缘参与」到承担社群角色的过程。组织社会化研究（如 Van Maanen & Schein 的社会化战术框架）与社群实践共同指向：新人的早期体验决定其长期参与轨迹——最初几周是否获得第一个回应、第一个小任务、第一个可指认的同伴，比任何长期激励都更影响留存。
+  core_claim: 新人是否留下，主要取决于其早期互动是否跨越了「可见性门槛」：第一次发言被回应、第一次贡献被认可、第一次建立具体关系；有设计的新人期显著提高长期留存。
+  mechanism: 新成员进入社群时面临归属不确定性（「我适合这里吗」）与规范不确定性（「这里怎么做事情」），两者都随时间衰减但衰减速度依赖设计：明确的入群仪式（自我介绍模板、新人任务）降低规范不确定性，首个真实互动（被回应、被提及）缓解归属不确定性。没有设计时，沉默的新人经历「发帖—无人回应」后迅速流失，留下「潜水者」假象。早期小胜利（第一个被采纳的建议、第一次被感谢）启动投入升级的正循环。
+  causal_chain: 入群 → 归属/规范不确定性 → 首个互动与首个贡献被回应 → 不确定性消解 + 早期小胜利 → 身份建立与持续参与
+  variables:
+    inputs:
+    - 入群仪式设计
+    - 首次互动的响应速度与质量
+    - 新人可见任务
+    moderators:
+    - 社群规模（大群新人易被淹没）
+    - 老成员的欢迎文化
+    - 新人与社群的匹配度
+    mediators:
+    - 归属不确定性消解
+    - 规范学习
+    - 早期贡献认可
+    outputs:
+    - 新人留存率
+    - 从潜水到发言的转化
+    - 长期参与深度
+  evidence:
+    supporting:
+    - 组织社会化研究：早期经验结构化影响长期承诺与留存（社会化学术传统）
+    - 在线社区研究：新人的早期互动与被回应情况预测其后续参与（多平台研究，方向一致）
+    - 社群实践方法论对新路径的设计经验（从业者文献，如《Get Together》《The Art of Community》）
+    conflicting:
+    - 强制性新人仪式可能触发反感与流失（过高门槛的边界条件）
+    replication:
+    - 早期互动质量预测留存的发现跨平台重复；具体最优仪式形态因社群类型而异
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 需要社群存在基本的欢迎文化；敌意社群中任何引导设计都无效
+  - 适用于有持续互动的社群；一次性活动（打卡群、活动群）无融入问题只有转化问题
+  failure_conditions:
+  - 新人进群即领 200 条群规与三次考试：过强的仪式感把融入变成筛选过载
+  - 没有老成员承接的新人引导流程：官方机器人回应无法替代真人关系建立
+  common_misinterpretations:
+  - 「新人多了自然就活跃」——新人留存是漏斗问题：未被承接的新人 90% 流失，与拉新量无关
+  - 把 onboarding 等同于发资料包：信息接收不是融入，可见的被回应的互动才是
+  ethical_risks:
+  - 新人期的高压仪式（羞辱式入群考验、过度暴露个人信息）构成边界侵犯
+  examples:
+    original_cases:
+    - Van Maanen & Schein 的组织社会化战术框架（学术起源）
+    - 社群实践书籍中的新人旅程设计（《Get Together》《The Art of Community》）
+    research_cases:
+    - 在线社区对新用户早期发帖被回复情况的纵向研究（方向一致）
+    modern_cases:
+    - 知识社群的「新人三件事」模板（自我介绍 + 提一个问题 + 回应一个他人问题）
+    - 游戏公会的入会任务与师徒制
+  communication_implications: 面向新关注者的内容应包含「立即能做的第一个小行动」（评论打卡、领取资料并反馈），把内容触达转化为可见的首次参与。
+  community_implications: 为新人设计 48 小时旅程：入群欢迎（真人而非机器人）→ 自我介绍模板 → 首个小任务（回答一个其擅长的问题）→ 老成员的一对一回应；把「新人第一周留存」作为社群核心指标。
+  content_applications:
+    body: 为新读者提供「上手指南」型内容（本社群是什么、如何开始、第一个动作），并放正文入口
+    narrative: 讲述老成员的「第一次」故事（第一次发言多紧张、被怎样接住），给新人代入样本
+    comments: 建立「新人首评必回」的运营守则，评论区是融入发生的第一现场
+    sharing: 邀请者为被邀新人写一句介绍（关系背书），替代冷冰冰的入群通知
+  platform_implications: 平台的新成员提示（「新朋友进来了」）与欢迎功能影响承接成本；无提示的大群里新人被承接几乎完全依赖运营人力（原则性判断）。
+  related_nodes:
+  - belonging_uncertainty
+  - participation_ladder
+  - community_boundaries
+  - sense_of_community
+  - reciprocity_exchange_networks
+  source_ids:
+  - S83
+  - S82
+  - S84
+  - S222
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Richardson 等 2019《Get Together》（S83，承接新人/培养领导者）+ Bacon 2012（S82，on-ramps）+ Spinks
+      2021（S84，入职路径）
+    effect_size: 结构化承接降低新成员沉默/流失（行业实践方向一致）
+    replication_status: onboarding 流程为社群运营共识；缺乏严格对照（D 级实践框架）
+    context_dependency: 社群规模/资源/工具决定承接方式
+    downgrade_upgrade_reason: 2026-09 实取 S83/S82/S84 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S83
+    - S222
+    supporting_evidence:
+    - S82
+    - S84
+    last_verified: 2026-09
+    case_sources:
+    - CASE-COM-001
+    - CASE-COM-004
+    - CASE-COM-005
+    - CASE-COM-007
+    - CASE-COM-008
+    - CASE-COM-012
+    - CASE-COM-017
+    - CASE-COM-041
+    - CASE-COM-053
+    - CASE-COM-056
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+  culture_moderators:
+  - 需要社群存在基本的欢迎文化；敌意社群中任何引导设计都无效
+- id: participation_ladder
+  canonical_name_en: Participation Ladder / 90-9-1 Rule
+  canonical_name_zh: 参与阶梯
+  aliases:
+  - 1% 法则
+  - 90-9-1 规则
+  - participation inequality（参与不平等）
+  domain: community
+  definition: 参与阶梯（participation ladder）指社群与线上社区的参与高度不均匀分布：大多数观测到的社区呈现「90% 潜水、9% 偶尔互动、1% 持续创作」的金字塔结构（90-9-1
+    规则，Jakob Nielsen 提出的经验概括）。阶梯视角强调参与是分层的：潜水者 → 点赞者 → 评论者 → 贡献者 → 核心维护者，各层之间需要明确的上升通道。
+  core_claim: 社群的绝大多数成员不产生可见内容，少数核心成员生产绝大多数价值；健康社群的关键不是消灭潜水（不可能也不必要），而是维护阶梯的完整性与各层之间的流动性。
+  mechanism: 参与不平等的成因是行为成本与收益的结构性差异：潜水免费且安全（无被评价风险），创作昂贵且暴露（需要时间、才华与心理安全）；因此贡献集中于少数高投入、高身份收益的成员。阶梯各层的转换需要外部推力：从潜水到点赞（降低成本：一键即可）、从点赞到评论（给予回应激励）、从评论到创作（给予认可与编辑支持）、从创作到维护（给予权限与地位）。
+  causal_chain: 行为成本/收益分层 → 参与金字塔形成 → 阶梯各层的转换成本决定流动性 → 流动性决定社群代谢健康
+  variables:
+    inputs:
+    - 各层行为的成本结构
+    - 各层的可见回报
+    moderators:
+    - 社群规模（大社群顶部更尖）
+    - 创作工具门槛
+    - 心理安全氛围
+    mediators:
+    - 成本-收益感知
+    - 身份收益累积
+    outputs:
+    - 参与分布形态
+    - 核心层规模与代谢率
+    - 内容供给量
+  evidence:
+    supporting:
+    - 多平台观测显示线上社区贡献分布高度偏斜（Jakob Nielsen 的经验概括与后续平台观测，方向一致）
+    - Wikipedia 等大型协作社区的编辑分布研究重复确认头部集中（协作研究传统）
+    conflicting:
+    - 90-9-1 的具体比例因社区类型、平台与测量口径而显著波动，不是普适常数（测量讨论）
+    - 一些社区实践显示潜水者通过阅读获得价值（潜水的正向价值），不应被简单视为待转化对象（社区研究讨论）
+    replication:
+    - 「贡献高度集中」的方向跨平台稳定；具体数字不可外推
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 90-9-1 是经验法则：具体比例随平台互动成本（一键转发降低潜水层比例）与社群类型变化
+  - 适用于开放社区；强门槛小社群（付费、审核）分布更均匀
+  failure_conditions:
+  - 把「消灭潜水」当运营目标：强行@潜水者、强制发言会触发 reactance 与流失
+  - 只激励顶层（创作大赛）忽视中间层（评论者、点赞者）：阶梯断层，核心层失去基础观众与递补来源
+  common_misinterpretations:
+  - 「90-9-1 证明社群就该有 90% 死人」——它是描述性规律不是设计目标；各层比例可通过互动成本设计显著改变
+  - 把参与不平等视为公平问题：阶梯的关键是流动性（想上来的人有通道），不是平均主义
+  ethical_risks:
+  - 以数据化排名公开羞辱低参与成员（强制活跃考核），把社群变成绩效监狱
+  examples:
+    original_cases:
+    - Jakob Nielsen 对线上社区参与不平等的概括（经验法则的来源）
+    research_cases:
+    - Wikipedia 编辑贡献分布的研究（协作社区研究传统）
+    modern_cases:
+    - 微信群「潜水者占绝大多数、活跃者几十人、核心维护者三五人」的常见结构
+    - B 站 UP 主（1%）— 弹幕党（9%）— 白嫖观众（90%）
+  communication_implications: 内容应为各层设计参与入口：给潜水者可读的获得感（体系化正文）、给点赞者轻互动位（投票）、给评论者讨论题、给创作者二次创作素材（梗、模板）。
+  community_implications: 运营重心是阶梯的「转换设计」：降低每层上升的边际成本（评论模板、选题池、代发服务），并公开认可每次层级跃迁（本周最佳首评、新人创作者）——核心层总会耗竭，阶梯流动性是社群的代谢系统。
+  content_applications:
+    body: 正文结尾按阶梯分层给行动选项：看懂即可 / 投个票 / 留个经验 / 投稿展开
+    comments: 识别并置顶高质量首评（潜水者向评论层跃迁的样本），运营回应优先给首次发言者
+    sharing: 为不同层准备不同分享物：转发即参与的轻量卡片 vs 可二次创作的模板素材
+  platform_implications: 平台互动按钮的成本设计直接改写阶梯比例：一键三连、表情回复等轻互动把传统潜水者拉入最低可见层；平台实际在为社群设定参与成本曲线（原则性判断）。
+  related_nodes:
+  - status_systems
+  - newcomer_onboarding
+  - network_density
+  - variable_ratio_reward
+  - community_governance
+  source_ids:
+  - S82
+  - S84
+  - S85
+  - S222
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Millington 2012《Buzzing Communities》（S85，参与阶梯与分层激励）+ Bacon 2012（S82，on-ramps）+
+      Spinks 2021（S84，创作者优先）
+    effect_size: 分层参与路径提升活跃与留存（行业实践方向一致）
+    replication_status: 90-9-1 参与分布为社群运营共识（实践观察）
+    context_dependency: 社群规模/工具成本/内容形态调制
+    downgrade_upgrade_reason: 2026-09 实取 S85 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S85
+    - S222
+    supporting_evidence:
+    - S82
+    - S84
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-030
+    - CASE-COM-001
+    - CASE-COM-003
+    - CASE-COM-005
+    - CASE-COM-006
+    - CASE-COM-007
+    - CASE-COM-008
+    - CASE-COM-011
+    - CASE-COM-015
+    - CASE-COM-020
+    - CASE-COM-023
+    - CASE-COM-024
+    - CASE-COM-026
+    - CASE-COM-027
+    - CASE-PLT-031
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: community_rituals
+  canonical_name_en: Community Rituals
+  canonical_name_zh: 社群仪式
+  domain: community
+  definition: 社群仪式（community rituals）指社群内规律重复、具有象征意义与参与结构的集体活动：固定的开场与收尾程式、定期节日（周年庆、成员日）、共同话语仪式（固定问候语、内部梗）、通过仪式（新人欢迎、晋升表彰、告别仪式）。仪式是社群时间的骨架与情感的同步器。
+  core_claim: 规律性集体仪式通过同步注意力、情绪与行为，制造共享情感联结并周期性再生产社区感；无仪式的社群只能靠内容供给维持注意力，成本高且不可持续。
+  mechanism: 仪式的三要素是规律性（可预期的时间节律）、程式性（重复的形式降低协调成本）与象征性（共同符号激活集体身份）。集体同步的行为（同时上线、同时发言、同时完成某动作）产生类似集体欢腾的情感升温，并把「我在参与一件比我自己大的事」的体验制度化。对新成员，仪式是规范的社会化课堂；对老成员，仪式是身份的周期性确认。
+  causal_chain: 规律性 + 程式 + 象征符号 → 集体同步参与 → 共享情感联结 + 身份确认 → 社区感周期性再生
+  variables:
+    inputs:
+    - 仪式的规律性与程式设计
+    - 象征符号的辨识度
+    - 参与门槛
+    moderators:
+    - 成员时间结构匹配（仪式时间是否可达）
+    - 仪式的新鲜度维护
+    mediators:
+    - 集体同步体验
+    - 情感升温
+    - 身份确认
+    outputs:
+    - 社区感维护
+    - 成员粘性
+    - 集体记忆积累
+  evidence:
+    supporting:
+    - Durkheim 传统：集体仪式产生情感能量与团结（社会理论经典）
+    - Collins 互动仪式链理论：仪式的组成要素与情感能量积累（理论传统）
+    - 社群实践文献对定期活动的运营经验支持（从业者文献）
+    conflicting:
+    - 仪式的程式化也可能僵化：过度重复导致空洞仪式（走过场），情感能量衰减（仪式研究讨论）
+    replication:
+    - 「规律性集体活动与社群粘性正相关」是实践与理论的共识方向；最优频率与形式因社群类型差异大
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 仪式需要最低规模的同步参与：冷清的仪式（三人打卡）反而在展示社群的衰败
+  - 仪式节奏需与成员生活节律匹配（工作日晚 vs 周末、时区）
+  failure_conditions:
+  - 仪式过度泛滥（每天都有活动）导致参与疲劳与义务化反感
+  - 只有形式无情感投入的「僵尸仪式」（例行公事公告）消耗符号资本
+  common_misinterpretations:
+  - 「仪式=搞活动」——活动是一次性事件，仪式是规律与程式；偶尔热闹无积累，规律性才是粘性来源
+  - 把仪式感等同于高端感：仪式的力量来自重复与共同知识，不来自制作精良
+  ethical_risks:
+  - 仪式可被用于高强度集体动员（每日打卡+公开排名+羞辱落后者），滑向操纵与控制
+  examples:
+    original_cases:
+    - Durkheim 对宗教仪式与集体欢腾的分析（理论起源）
+    - Collins 互动仪式链对日常仪式的扩展
+    research_cases:
+    - 集体同步（合唱、游行、协作动作）与群体认同的实验研究传统（方向一致）
+    modern_cases:
+    - 「每周三晚八点线上例会+固定开场白」的知识社群
+    - 品牌社群的年度会员日与勋章授予仪式
+    - 游戏公会的出征仪式与团灭复盘
+  communication_implications: 把内容节奏仪式化（固定栏目、固定时间、固定格式），让受众形成「到点来看」的生物钟；仪式化栏目的留存优于随机爆款。
+  community_implications: 为社群设计年度仪式日历：每周轻仪式（话题日）、每月中仪式（线上聚会）、每年重仪式（年度庆典/颁奖）；公开仪式日历本身就是成员的期待资产。
+  content_applications:
+    body: 固定栏目使用统一标题结构与开头程式（例如「本周三件事」），降低识别成本
+    narrative: 年终内容做成社群编年史（大事件+成员高光），把一年仪式积累成集体记忆
+    comments: 每周固定「晒成果楼」，程式化的展示位让分享成为被期待的仪式
+    sharing: 把社群专属节日（会员日、周年庆）做成可对外分享的符号资产
+  platform_implications: 平台的定时提醒、签到系统与日历功能是仪式的技术基础设施；无提醒机制的平台上仪式完全依赖人力维持（原则性判断）。
+  related_nodes:
+  - collective_effervescence
+  - sense_of_community
+  - third_place
+  - status_systems
+  - community_governance
+  source_ids:
+  - S87
+  - S82
+  - S83
+  - S221
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Parker 2018《The Art of Gathering》（S87，仪式/临时规则）+ Bacon 2012（S82，庆祝持续贡献）+ Richardson
+      等 2019（S83，仪式与身份）
+    effect_size: 仪式增强认同与联结（定性与实践证据）
+    replication_status: 仪式-认同关联在组织/社群研究有支持；线上仪式为实践共识（D 级成分）
+    context_dependency: 仪式需与身份/价值观一致；过度仪式化引发疲劳
+    downgrade_upgrade_reason: 2026-09 实取 S87/S82/S83 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S87
+    - S221
+    supporting_evidence:
+    - S82
+    - S83
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-013
+    - CASE-BRD-030
+    - CASE-COM-001
+    - CASE-COM-004
+    - CASE-COM-005
+    - CASE-COM-006
+    - CASE-COM-008
+    - CASE-COM-009
+    - CASE-COM-011
+    - CASE-COM-012
+    - CASE-COM-014
+    - CASE-COM-016
+    - CASE-COM-019
+    - CASE-COM-020
+    - CASE-COM-021
+    - CASE-COM-022
+    - CASE-COM-025
+    - CASE-COM-027
+    - CASE-COM-028
+    - CASE-COM-032
+    - CASE-COM-033
+    - CASE-COM-034
+    - CASE-COM-038
+    - CASE-COM-039
+    - CASE-COM-040
+    - CASE-COM-046
+    - CASE-COM-048
+    - CASE-COM-049
+    - CASE-COM-051
+    - CASE-COM-056
+    - CASE-COM-058
+    - CASE-COM-060
+    - CASE-COM-063
+    - CASE-COM-064
+    - CASE-COM-068
+    - CASE-COM-071
+    - CASE-COM-072
+    - CASE-COM-073
+    - CASE-COM-074
+    - CASE-COM-078
+    - CASE-COM-082
+    - CASE-COM-096
+    - CASE-COM-097
+    - CASE-COM-100
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: status_systems
+  canonical_name_en: Status Systems
+  canonical_name_zh: 地位系统
+  domain: community
+  definition: 地位系统（status systems）指社群内成员声誉与影响力的分配结构及其符号载体：等级头衔、积分、徽章、排行榜、被提及率、以及非正式的「谁说话有人听」。它是社群内注意力的产权制度——决定谁的贡献被看见、谁的行为被模仿、稀缺的发言权如何分配。
+  core_claim: 社群的长期稳定依赖一套成员普遍认可的地位系统：贡献可被累积可见、地位与贡献大体对齐、上升通道可预期；地位系统失灵（贡献不公、纯资历、纯活跃刷量）是核心成员流失的重要内部原因之一（S82/S84
+    从业者经验方向支持，无量化排序证据）。
+  mechanism: 地位系统把社群稀缺资源（注意力、话语权重、决策参与）的分配规则化，成员通过贡献换取地位，地位带来回报（被回应、被信任、影响力），形成投入-认可循环。健康系统的关键是「地位与贡献对齐」：地位必须可挣得（基于行为而非出身）、可累积（不随遗忘清零）、可体现（他人能看见）且不太可交易（不能纯用钱买，否则贡献者失去意义）。Goffman
+    式的自我呈现与社群规范共同定义了「什么算地位」。
+  causal_chain: 贡献行为 → 地位信号累积（头衔/提及/认可） → 注意力与影响力回报 → 更多贡献 → 地位系统自我强化
+  variables:
+    inputs:
+    - 贡献行为类型与频率
+    - 地位符号的可见性
+    moderators:
+    - 社群对「什么算贡献」的共识
+    - 系统的透明度
+    - 规模（大社群更需要形式化系统）
+    mediators:
+    - 认可感知
+    - 身份安全感
+    - 影响力回报
+    outputs:
+    - 贡献持续性
+    - 核心层稳定性
+    - 社群文化走向
+  evidence:
+    supporting:
+    - 声誉系统与徽章机制对贡献行为的激励效应在在线社区研究中得到支持（多平台研究，方向一致）
+    - 组织行为学传统对地位层级与群体稳定性的分析（方向一致）
+    conflicting:
+    - 外在地位激励可能挤出内在动机（为徽章而贡献者质量下降），也可能引发「刷地位」行为（动机研究讨论）
+    replication:
+    - 「可见认可促进贡献」跨平台重复；激励扭曲的风险同样反复出现
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 小社群（<100 人）靠关系即可承载地位，形式化系统多余；规模越大越需要形式化
+  - 地位系统有效的前提是社群对「什么算贡献」有共识（知识社群认深度、粉丝社群认产出）
+  failure_conditions:
+  - 地位可纯用金钱购买（付费头衔碾压贡献者），贡献者退出
+  - 排行榜只奖励总量（刷量）不奖励质量：内容生态劣化为灌水
+  common_misinterpretations:
+  - 「上排行榜就能激励」——排名只激励中上层成员，对底层是劝退；地位系统的第一使命是让「认真做事的人被看见」，不是制造竞赛
+  - 把 status_systems 与 participation_ladder 混为一谈：阶梯描述参与分层结构，地位系统描述分层背后的认可与回报机制
+  ethical_risks:
+  - 地位分层固化为权力世袭（老成员特权阶层），新人上升通道关闭
+  - 公开排名机制助长病态竞争与攀比焦虑
+  examples:
+    original_cases:
+    - Goffman 对身份呈现与社会地位符号的分析传统（《The Presentation of Self》）
+    research_cases:
+    - 在线问答社区声誉分与贡献行为的纵向研究（方向一致）
+    - 徽章激励机制对首次贡献的促进研究（多平台）
+    modern_cases:
+    - Discord 服务器的等级与自定义身份组
+    - 开源社区的核心贡献者评审权（committers），论坛的元老勋章
+  communication_implications: 内容传播中的地位语言（「资深用户说」「十年经验的人是这么看的」）是可信度杠杆；为社群头部成员制作个人品牌内容（访谈、方法总结）同时放大社群与个体。
+  community_implications: 设计地位系统四问：贡献的定义对齐社群使命吗、挣得方式可预期吗、可见载体明确吗、有抗刷量设计吗；并保留「荣誉不可购买」的红线。
+  content_applications:
+    body: 正文引用具体成员与其贡献（带身份标签），让地位可见化成为内容的一部分
+    narrative: 讲述「从新人到被大家信任」的成员成长故事，示范地位的可挣得性
+    comments: 官方回应优先给真实贡献者（而非纯活跃者），用回应行为示范认可标准
+    sharing: 为高地位成员设计可对外分享的身份资产（嘉宾卡、署名专栏）
+  platform_implications: 平台的会员等级、认证标志与创作者分级是平台侧地位系统的强制层；社群自建地位系统必须与平台体系兼容（原则性判断）。
+  related_nodes:
+  - participation_ladder
+  - reputation_systems
+  - community_governance
+  - identity_signaling
+  - sense_of_community
+  source_ids:
+  - S82
+  - S24
+  - S84
+  - S233
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Bacon 2012（S82，地位与贡献认可）+ Goffman 1959（S24，前台身份）+ Spinks 2021（S84，社会身份循环）
+    effect_size: 地位认可驱动参与（游戏化/社群研究方向一致）
+    replication_status: 地位动机在组织与在线社区研究广泛支持；地位系统设计为实践共识
+    context_dependency: 地位系统需公平透明；过度阶层化引发退出
+    downgrade_upgrade_reason: 2026-09 实取 S82/S84 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S82
+    - S233
+    supporting_evidence:
+    - S24
+    - S84
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-001
+    - CASE-COM-002
+    - CASE-COM-004
+    - CASE-COM-005
+    - CASE-COM-006
+    - CASE-COM-007
+    - CASE-COM-008
+    - CASE-COM-010
+    - CASE-COM-012
+    - CASE-COM-013
+    - CASE-COM-017
+    - CASE-COM-018
+    - CASE-COM-019
+    - CASE-COM-023
+    - CASE-COM-024
+    - CASE-COM-026
+    - CASE-COM-027
+    - CASE-COM-033
+    - CASE-COM-035
+    - CASE-COM-037
+    - CASE-COM-038
+    - CASE-COM-039
+    - CASE-COM-040
+    - CASE-COM-041
+    - CASE-COM-042
+    - CASE-COM-043
+    - CASE-COM-044
+    - CASE-COM-045
+    - CASE-COM-046
+    - CASE-COM-048
+    - CASE-COM-051
+    - CASE-COM-053
+    - CASE-COM-057
+    - CASE-COM-059
+    - CASE-COM-060
+    - CASE-COM-061
+    - CASE-COM-062
+    - CASE-COM-065
+    - CASE-COM-067
+    - CASE-COM-068
+    - CASE-COM-069
+    - CASE-COM-070
+    - CASE-COM-072
+    - CASE-COM-078
+    - CASE-COM-080
+    - CASE-COM-081
+    - CASE-COM-082
+    - CASE-COM-084
+    - CASE-COM-085
+    - CASE-COM-086
+    - CASE-PLT-043
+    - CASE-PLT-048
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: community_governance
+  canonical_name_en: Community Governance
+  canonical_name_zh: 社群治理
+  domain: community
+  definition: 社群治理（community governance）指社群内规则制定、执行、冲突裁决与权力分配的制度安排：谁定规则（自上而下 vs 成员共议）、如何执行（管理员裁量 vs 明文条款）、违规如何处置（阶梯式
+    vs 一次性）、权力如何交接与问责。开源社区与公共资源治理研究为其提供了最系统的参照。
+  core_claim: 可持续社群需要与规模匹配的治理结构：小社群靠人情与共识，中等社群需要明文规则与执行一致性，大型社群必须有权力的分权、问责与修订机制；治理缺位的社群必然走向管理员倦怠或规则暴政。
+  mechanism: 治理解决社群的三类协调问题：行为协调（什么可做什么不可做）、冲突处理（成员间争端如何裁决）、权力约束（管理员自身滥权怎么办）。治理的公信力来自程序正义感：规则明确（成员知道边界）、执行一致（同错同罚）、可申诉（处置不是终审判决）、可修订（规则本身可以被成员推动改变）。Elinor
+    Ostrom 对公共资源治理的研究表明，由使用者参与制定的规则比外部强加的规则更被遵守——社群治理同理。
+  causal_chain: 规则制定参与 → 规则清晰 + 执行一致 + 可申诉 → 程序正义感 → 成员自愿遵守 + 管理公信力 → 社群秩序自维持
+  variables:
+    inputs:
+    - 规则的明确度
+    - 执行一致性
+    - 成员参与制定程度
+    moderators:
+    - 社群规模
+    - 冲突烈度与频率
+    - 平台治理环境（平台规则优先）
+    mediators:
+    - 程序正义感知
+    - 对管理层的信任
+    outputs:
+    - 违规率
+    - 成员安全感
+    - 治理成本（管理员倦怠度）
+    - 社群寿命
+  evidence:
+    supporting:
+    - Elinor Ostrom 对公共资源自主治理原则的研究传统（多主体参与制定、分级制裁、冲突裁决机制）
+    - 开源社区治理与在线社区管理的实践研究（维基百科治理结构的案例研究传统）
+    conflicting:
+    - 过强的成员共议可能造成决策瘫痪；强人治理在早期更高效但交接脆弱（治理研究讨论）
+    replication:
+    - 「规则明确 + 执行一致降低违规」的方向在平台研究与实践复盘中稳定；最优治理形态无普适解
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 治理结构需随规模迁移：照搬百人社群的「群主说了算」到万人社群必然崩坏
+  - 社群治理嵌套于平台治理之下：平台规则的不可协商约束社群自治空间
+  failure_conditions:
+  - 规则含糊但执行严厉（「看我心情式执法」）：程序不正义感是最大混乱源
+  - 治理完全外包给平台举报机制：社群失去自主规范能力，沦为无主之地
+  common_misinterpretations:
+  - 「治理=删帖封人」——处置只是治理的末端；规则透明、申诉与修订机制才是治理主体
+  - 把 community_governance 与 moderation_governance 混为一谈：前者是社群自治层面的规则与权力安排，后者是平台层面对内容的规模化审核治理
+  ethical_risks:
+  - 治理权力无问责：选择性执法与裙带关系（管理员小团体特权）
+  - 以治理名义实施过度监控（聊天记录审查、隐私侵犯）
+  examples:
+    original_cases:
+    - Ostrom 对自治组织治理设计原则的总结（《Governing the Commons》研究传统）
+    - 开源项目治理结构案例（社区实践文献）
+    research_cases:
+    - 维基百科等大型协作社区的治理机制案例研究（方向一致）
+    modern_cases:
+    - Discord 社区的公开版规+申诉通道+版主选举实践
+    - 微信大群从「群主独裁」向「轮值管理+群规公投」的演进
+  communication_implications: 对外传播社群治理透明度（公开版规、公开处置原则）本身就是品牌信任资产；治理黑箱的社群在冲突曝光时舆论代价极高。
+  community_implications: 治理三件套最低配置：一页可链接的明文版规（而非聊天记录里的口令）、固定的申诉入口（私聊管理员而非公开对线）、季度规则修订窗口（成员提案权）。
+  content_applications:
+    body: 把「社群守则」做成可分享的公开内容（置顶、链接），新人入群即读
+    narrative: 用真实治理案例（匿名化）讲「这里如何处理一次冲突」，展示程序正义
+    comments: 处置争议时公开说明依据（引用版规条目），把执行过程透明化
+    sharing: 设置管理员招募与轮值的公开通道，把治理参与设计成地位阶梯的一环
+  platform_implications: 平台把社群管理工具（禁言、审核机器人、成员分级）标准化，社群治理被部分「平台化」：自治与平台治理的边界划分是每个社群的真实约束（原则性判断）。
+  related_nodes:
+  - moderation_governance
+  - status_systems
+  - norm_enforcement_reputation
+  - community_boundaries
+  - reciprocity_exchange_networks
+  source_ids:
+  - S82
+  - S94
+  - S95
+  - S180
+  validation_status: PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S180
+    supporting_evidence:
+    - S82
+    - S94
+    - S95
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-003
+    - CASE-COM-004
+    - CASE-COM-006
+    - CASE-COM-007
+    - CASE-COM-009
+    - CASE-COM-010
+    - CASE-COM-013
+    - CASE-COM-014
+    - CASE-COM-015
+    - CASE-COM-016
+    - CASE-COM-017
+    - CASE-COM-018
+    - CASE-COM-030
+    - CASE-COM-031
+    - CASE-COM-034
+    - CASE-COM-044
+    - CASE-COM-046
+    - CASE-COM-047
+    - CASE-COM-053
+    - CASE-COM-054
+    - CASE-COM-078
+    - CASE-COM-098
+    - CASE-COM-099
+    - CASE-COM-100
+    - CASE-PLT-040
+    - CASE-PLT-043
+    - CASE-PLT-045
+    - CASE-PLT-049
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: reciprocity_exchange_networks
+  canonical_name_en: Reciprocity and Exchange Networks
+  canonical_name_zh: 互惠交换网络
+  aliases:
+  - 互惠网络
+  - social exchange（社会交换）
+  domain: community
+  definition: 互惠交换网络（reciprocity exchange networks）指社群内成员间资源（信息、帮助、情感支持、机会）的给予-回报流动结构。Gouldner 的互惠规范（norm
+    of reciprocity）与社会交换理论（Thibaut & Kelley 的相互依赖理论）共同指出：互惠是人际信任与群体团结的基本生成机制；「平衡的互惠」建立关系，「延迟与不对等的互惠」制造地位差与依赖。
+  core_claim: 社群团结感来自成员间可感知的互惠循环（我的给予终将以某种形式回来）；单向索取或纯利他无循环的社群，关系网络稀薄而脆弱。
+  mechanism: 互惠通过「给予 → 感激 → 回报 → 关系加深」的循环积累相互依赖与信任：每次给予都是对关系的投资，回报确认了对方的善意，循环往复形成稳定的交换期望。在线上社群中，互惠更多以「广义互惠」形态存在（我帮助陌生人，因为我曾被帮助过）：匿名与规模使逐个偿还不可行，社群通过共同的助人文化承载互惠预期。互惠网络还产生结构效应：频繁互惠的成员形成高密度子群，成为社群的信任核心。
+  causal_chain: 给予行为 → 感激与可见认可 → 回报（直接或广义） → 相互依赖与信任累积 → 团结感与网络密度提升
+  variables:
+    inputs:
+    - 成员的给予行为频率
+    - 回报的可感知性
+    moderators:
+    - 社群规模（大社群依赖广义互惠）
+    - 助人成本
+    - 认可见度（给予是否被看见）
+    mediators:
+    - 感激与义务感
+    - 信任累积
+    - 助人文化的规范内化
+    outputs:
+    - 关系网络密度
+    - 求助响应率
+    - 社群团结感与韧性
+  evidence:
+    supporting:
+    - Gouldner 对互惠规范作为普适道德原则的论证（经典论文；库外无 EP，经 S179/S30 间接承接，EP 待建）
+    - 社会交换理论对关系形成与稳定的实验与调查证据（Thibaut & Kelley 传统）
+    - Cialdini 对互惠原则在说服中的应用综合（Influence）
+    - Regan 可乐实验（经 S32 EP 转述：25 美分可乐使彩票购买翻倍且独立于喜好）：不请自来的给予触发感激与回报，为「给予→感激→回报」循环提供微观实验证据
+    conflicting:
+    - 过度记账式的互惠（当面算清）会削弱关系性质；纯市场逻辑与关系逻辑存在张力（交换研究讨论）
+    - 「回旋镖式」的主动帮助可能触发亏欠感反感（应用研究讨论）
+    replication:
+    - 互惠促进信任与合作的方向在实验经济学与社会心理学中被大规模重复
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 互惠循环需要给予行为被看见且被归因于给予者（可见性是循环的起点）
+  - 小社群可依靠直接互惠；大社群必须建设广义互惠文化（否则逐对互惠不成立）
+  failure_conditions:
+  - 只索取不回馈的成员比例过高时，助人者倦怠退出（公地悲剧）
+  - 用「必须回报」的压迫式互惠（道德绑架）把关系变成债务，触发 reactance
+  common_misinterpretations:
+  - 「先给红包再求转发」——这是交易不是互惠；互惠的关键是让受助者产生自发的感激与回报意愿，明码标价的给予杀死了这条通路
+  - 把 reciprocity_exchange_networks 与 reciprocity_norm 混为一谈：norm 是个体层面的心理规范（Cialdini 六原则之一），exchange network
+    是社群层面的资源流动结构
+  ethical_risks:
+  - 互惠被武器化为「人情债」操纵（先施小恩后索取不成比例的回报）
+  - 以互助为名的互惠网络演变为资源私占与排他小团体
+  examples:
+    original_cases:
+    - Gouldner「互惠规范是普遍道德原则」的论证与社会交换理论的经典框架（Thibaut & Kelley）
+    research_cases:
+    - 实验经济学中信任博弈与礼物交换对互惠稳定性的重复验证（方向一致）
+    modern_cases:
+    - 知识社群「我解答你的问题，你分享我的文章」的技能交换
+    - 开源社区「被帮助后回馈文档/PR」的文化
+    - 邻里群拼单与看护轮值表
+  communication_implications: 内容营销中的互惠设计（免费深度内容换取关注）必须让「礼物感」真实：不设回报预期、不给回收压力，互惠循环才启动；赠送即索取的「伪互惠」一眼即穿。
+  community_implications: 把「让给予可见」作为运营核心机制：公开感谢、求助响应榜、「被帮助过的人来帮新人」的传承设计；监测求助响应率作为社群健康度指标。
+  content_applications:
+    body: 正文本身就是给予行为：把最有价值的部分免费给出，并在结尾说明「这份整理来自社群成员的共创」（互惠溯源）
+    comments: 官方与资深成员示范「认真回评每个真诚提问」，把评论区变成助人规范的展示场
+    sharing: 分享物设计为「转给需要它的人」的利他场景，激活广义互惠叙事
+  platform_implications: 平台的打赏、感谢与积分功能把互惠部分货币化；货币化提升了给予动力但也可能挤出自发助人（内在动机挤出风险）（原则性判断）。
+  related_nodes:
+  - reciprocity_norm
+  - strong_ties_support
+  - social_reinforcement
+  - community_governance
+  - sense_of_community
+  source_ids:
+  - S32
+  - S27
+  - S30
+  - S179
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thibaut & Kelley 1959（S30，互倚理论：结果矩阵/CL/CLalt）+ Cialdini 1984（S32，互惠原则）+ Bicchieri
+      2006（S27，互惠规范）
+    effect_size: 给予-回报循环增强合作（互惠规范多领域证据）
+    replication_status: 直接/广义互惠在实验室与现场研究中方向稳定
+    context_dependency: 关系长度/可观察性/文化规范调制
+    downgrade_upgrade_reason: 2026-09 实取 S30 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S30
+    supporting_evidence:
+    - S32
+    - S27
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-001
+    - CASE-COM-005
+    - CASE-COM-008
+    - CASE-COM-009
+    - CASE-COM-012
+    - CASE-PLT-032
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+  culture_moderators:
+  - 小社群可依靠直接互惠；大社群必须建设广义互惠文化（否则逐对互惠不成立）
+- id: collective_identity_narrative
+  canonical_name_en: Collective Identity Narrative
+  canonical_name_zh: 集体身份叙事
+  aliases:
+  - 集体叙事
+  - we-story（我们故事）
+  domain: community
+  definition: 集体身份叙事（collective identity narrative）指社群关于「我们是谁、我们从哪里来、我们反对什么、我们正在创造什么」的共享故事结构：起源故事（创始与关键时刻）、成员原型（典型成员画像）、对手与共同敌人（外部张力）、价值主张（我们与众不同之处）。它是社群的身份自传，随时间被成员共同书写与修订。
+  core_claim: 社群的身份感由共享叙事而非共同特征直接产生：成员通过理解并复述「我们的故事」获得身份，叙事被讲述的频率与一致性预测社群认同强度。
+  mechanism: 个体通过叙事整合自我经验（叙事身份理论），集体同样如此：起源故事回答「我们为何存在」，危机与转折故事回答「我们共同经历了什么」，英雄与原型故事回答「理想的我们是什么样」。叙事把离散的事件组织成有意义的连续体，使新成员能通过「读到故事—代入角色—复述故事」完成身份内化。集体叙事与仪式相互构成：仪式重演叙事，叙事为仪式提供脚本；叙事还是社群的传播资产——成员对外讲述「我们的故事」就是社群的自然增长引擎。
+  causal_chain: 共同经历 → 被组织成叙事（起源/危机/英雄/价值） → 成员内化并复述 → 集体身份感 → 反向塑造行为规范与新事件的意义解读
+  variables:
+    inputs:
+    - 起源故事的清晰度
+    - 成员故事的采集与传播
+    - 对手与价值的表述
+    moderators:
+    - 叙事的开放性（新成员能否写入自己的章节）
+    - 讲述场合的频率
+    - 内部多样性的容纳度
+    mediators:
+    - 身份认同
+    - 意义共享
+    - 集体记忆
+    outputs:
+    - 认同强度
+    - 成员对外代言意愿
+    - 社群文化一致性
+  evidence:
+    supporting:
+    - 社会认同理论：群体身份通过比较与共享表征形成（Tajfel & Turner 传统）
+    - 叙事心理学：叙事作为身份的组织机制（个体与集体层面，McAdams 等人的研究传统）
+    - 参与式文化研究对粉丝社群共同叙事的观察（Jenkins《Convergence Culture》）
+    conflicting:
+    - 统一叙事可能压制内部分歧：过度一致的「官方故事」制造沉默的少数派（社群研究讨论）
+    replication:
+    - 「共享叙事与群体认同正相关」方向稳定；叙事内容的具体效应高度情境化
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 叙事需要真实共同经历的素材；凭空编造的「我们」故事（虚假起源、伪造历史）会被长期成员识破
+  - 叙事必须允许更新：僵化的起源叙事会拒绝新成员与新时代，社群老龄化
+  failure_conditions:
+  - 叙事只有官方版本且不容修订：成员失去「作者身份」，叙事沦为宣传
+  - 对手叙事失控：共同敌人从「观念」扩大到「具体人群」，社群滑向攻击性
+  common_misinterpretations:
+  - 「拉个群就有了集体身份」——身份来自叙事的被讲述与被复述，不是群名与群头像
+  - 把 collective_identity_narrative 与 identity_signaling 混淆：叙事是群体的故事结构（我们是谁），signaling 是个体的符号展示行为（我属于谁）；叙事为
+    signaling 提供符号弹药
+  ethical_risks:
+  - 集体叙事制造内群体神圣化与外群体妖魔化（「我们是觉醒者，他们是愚蠢大众」）
+  - 叙事被用于掩盖社群内部问题（用「我们的美好故事」压制批评）
+  examples:
+    original_cases:
+    - Jenkins 对粉丝社群共享叙事与集体创作的分析（《Convergence Culture》《Textual Poachers》传统）
+    research_cases:
+    - 叙事心理学对集体叙事与群体认同关系的研究（McAdams 传统）
+    - 社会运动研究对运动叙事与动员的分析（方向一致）
+    modern_cases:
+    - 运动品牌跑团的「我们是一起扛过雨战的人」叙事
+    - 开源项目的「从车库两个创始人到全球贡献者」起源故事
+    - 网络文学社群的圈内黑话与共同梗史
+  communication_implications: 把品牌/社群内容组织为「我们的故事」连载：起源篇（为什么开始）、同行者篇（成员故事）、里程碑篇（共同成就）、分歧与和解篇（真实的张力）；让用户从读者变成共同作者（UGC
+    征集）。
+  community_implications: 指定「叙事采集」为常规运营动作：记录每个关键时刻（第一次线下聚会、第一次危机、成员的重要转变），并邀请成员亲口讲述；叙事库是社群最独特的资产，竞品无法复制。
+  content_applications:
+    body: 正文以集体口吻（我们）而非品牌口吻（本产品）书写，引用真实成员原话与细节
+    narrative: 维护起源故事的讲述纪律（关键细节不漂移），同时每季更新「我们这一年」章节
+    comments: 征集成员故事并正式收录（「你的故事会成为社群历史的一部分」），赋予作者身份
+    sharing: 把起源故事与里程碑做成可对外讲述的叙事卡片，供成员对外代言使用
+  platform_implications: 平台的「年度回顾」「置顶精华」「共同标签」功能是集体叙事的载体；算法驱动的内容流偏好个体爆款，会侵蚀需要长期沉淀的叙事积累（原则性判断）。
+  related_nodes:
+  - social_identity_theory
+  - sense_of_community
+  - community_rituals
+  - narrative_transportation
+  - story_character_identification
+  source_ids:
+  - S91
+  - S86
+  - S64
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Jenkins 2006（S91，参与式文化与集体叙事）+ Godin 2008（S86，部落叙事）+ Gottschall 2012（S64，故事塑造集体身份）
+    effect_size: 共享叙事增强群体认同与延续（定性与文化研究证据）
+    replication_status: 叙事-认同关联在组织与社群研究有支持
+    context_dependency: 叙事真实性/成员参与程度调制
+    downgrade_upgrade_reason: 2026-09 实取 S91/S86 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S91
+    supporting_evidence:
+    - S86
+    - S64
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-017
+    - CASE-CNT-006
+    - CASE-CNT-022
+    - CASE-CNT-023
+    - CASE-CNT-024
+    - CASE-CNT-025
+    - CASE-COM-003
+    - CASE-COM-006
+    - CASE-COM-007
+    - CASE-COM-008
+    - CASE-COM-009
+    - CASE-COM-011
+    - CASE-COM-012
+    - CASE-COM-042
+    - CASE-COM-096
+    - CASE-COM-100
+  last_reviewed: 2026-09
+  knowledge_half_life: long

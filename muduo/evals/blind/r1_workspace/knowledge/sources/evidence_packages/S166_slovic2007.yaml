@@ -1,0 +1,25 @@
+# Evidence Package — S166 Slovic, Finucane, Peters & MacGregor 2007（The Affect Heuristic）
+# 标准格式。access_level 如实标注。
+source_id: S166
+title: "The Affect Heuristic"
+authors: "Paul Slovic; Melissa L. Finucane; Ellen Peters; Donald G. MacGregor"
+year: 2007
+journal: "European Journal of Operational Research 177(3): 1333-1352"
+doi: "10.1016/j.ejor.2005.04.006"
+url: "https://ideas.repec.org/a/eee/ejores/v177y2007i3p1333-1352.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "RePEc/dblp/scirp 元数据确认 + 中文文献阅读笔记（douban，转述摘要与全文结构：affect 定义/affect pool/风险-收益反比/赌博偏好反转/小损失增强吸引力）+ 同团队姊妹篇一手摘要（Slovic et al. 2005 Health Psychology：risk as feelings 与 affect heuristic）+ 多篇引用交叉（核能风险-收益反比案例、MDPI 投稿信转述 images/associations tagged with feelings）。ScienceDirect 原页被反爬拦截，未取得 EJOR 一手摘要（如实标注）。"
+research_question: "即时情绪（affect）在风险与收益判断及决策中扮演什么角色？"
+core_claims:
+  - "人们依赖对刺激的快速自动好/坏感觉（affect）作为判断与决策的心理捷径"
+  - "风险与收益判断呈反比移动：感觉积极的对象风险被判低、收益判高（如核能：感觉积极者判低风险高收益）"
+  - "机制：对物体的心理表征附带情绪标签形成 affect pool，决策时直接调用标签而非权衡利弊；对应体验系统（快速自动）vs 分析系统（缓慢理性）双过程框架"
+  - "整合实证证据：单纯暴露效应、阈下情感启动、赌博偏好反转（高概率小收益在吸引力上胜出、低概率大收益在定价上胜出）、小损失反而增强吸引力等"
+method: "理论综述+整合系列实验证据（Slovic 团队风险感知研究、Zajonc 暴露研究、赌博评估实验等）"
+results: "情感反应系统性替代概率/收益运算，导致风险-收益感知偏移与偏好反转；affect 是判断偏差与决策捷径的核心来源"
+limitations: "感受来源与判断对象无关时产生系统性偏差；专业知识与核对时间可显著抑制该捷径"
+boundary_conditions: "判断对象缺乏客观数据、需主观评估时效应明显；受众处于低卷入、快节奏信息流场景时更强"
+relevant_nodes: [affect_heuristic]
+notes: "affect_heuristic 命名与系统化论文；EJOR 一手摘要因反爬未取得，以同团队 2005 摘要+二手详述+多源交叉如实标注，未虚标。"
+last_verified: "2026-09"

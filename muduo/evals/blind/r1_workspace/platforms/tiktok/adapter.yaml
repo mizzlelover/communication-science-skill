@@ -1,0 +1,161 @@
+platform_name: TikTok（海外版抖音）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：与抖音同源的算法分发逻辑为行业共识；For You 页签、创作激励、
+  TikTok Shop 等产品形态为公开可见规则；海外用户搜索行为上升、静音观看文化等
+  为行业观察。2026-09 对官方来源实取：TikTok Newsroom 的 For You 推荐机制说明
+  与官方社区准则页已实际抓取核实（platform_sources S1-S2）；known_platform_patterns
+  已按 L1-L4 标注证据级别。所有标注以平台最新公告为准，
+  使用 update_platform_knowledge 流程复核。
+
+content_units:
+  - "短视频（竖屏为主，时长上限多次放宽）"
+  - "图文轮播"
+  - "直播（LIVE）"
+  - "TikTok Shop 电商内容"
+
+dominant_user_intent:
+  - "打发时间（For You 流的休闲刷）"
+  - "发现趋势（音乐/挑战/梗文化的参与）"
+  - "主动搜索（年轻用户将其当搜索引擎使用的趋势 [industry_consensus-多家机构观察]）"
+
+distribution_model: >-
+  算法分发绝对主导：For You 单列沉浸流不依赖关注关系
+  [official_rule-产品形态]；冷启动对无粉丝账号友好（新号爆款机会大
+  [industry_consensus]）；关注与搜索为辅。
+
+recommendation_model: >-
+  完播/复播、互动、分享加权 [industry_consensus-权重黑箱]；
+  与抖音同构的逐级放大逻辑；不同地区市场的内容池与审核体系独立
+  [industry_consensus]。
+
+social_graph_characteristics: >-
+  极弱关系：陌生人内容占绝对主体；关注主要服务于复看与直播提醒，
+  不构成分发保证；跨文化传播结构明显（内容可跨越语言圈层经字幕/BGM 扩散
+  [industry_consensus]）。
+
+content_lifecycle: >-
+  爆发式衰减+比国内抖音略强的搜索长尾：海外用户"search on TikTok"行为
+  上升趋势使教程/评测类内容的长尾价值高于国内 [industry_consensus-方向性观察]；
+  爆款周期仍以天计。
+
+primary_entry_points:
+  - "For You 流（默认首页）"
+  - "Following（关注流）"
+  - "搜索"
+  - "Explore/趋势页"
+  - "直播入口"
+
+attention_environment: >-
+  全屏沉浸单列+强静音场景：不少用户在无声音境（通勤/工作摸鱼）浏览，
+  字幕与视觉自足性比国内更重要 [industry_consensus-观察]；
+  滑动否决权与抖音一致。
+
+user_behavior: >-
+  梗文化与挑战赛参与度高（模仿是原生行为）；跨语言内容消费接受度高；
+  对创作者个人身份（creator persona）的依附弱于订阅平台。
+  [industry_consensus-行为观察]
+
+interaction_signals:
+  - "完播/重播：核心信号方向 [industry_consensus]"
+  - "点赞/评论/分享/收藏：互动分层（分享权重高 [industry_consensus-方向]）"
+  - "关注转化：单视频转粉率 [official_rule-S1 用户互动含关注；转粉率度量口径为 industry_consensus]"
+  - "视频保存：工具价值与二创素材信号 [industry_consensus-方向]"
+
+sharing_mechanism: >-
+  站内分享到 Instagram/WhatsApp 等外部社交链路相对顺畅
+  （海外无微信式封闭生态）；跨平台二创（remix/duet 功能 [official_rule-产品存在]）
+  是独特的传播机制——内容天然鼓励被模仿。
+
+search_mechanism: >-
+  搜索增长显著：年轻一代以 TikTok 为首选搜索入口的趋势被多家机构报告
+  [industry_consensus]；标题/描述/字幕/语音识别参与索引；
+  "TikTok SEO"作为实践方向真实存在但被营销号夸大。
+
+community_mechanism: >-
+  挑战赛/标签页聚合参与；duet/stitch 二创链 [official_rule-产品存在]；
+  直播粉丝团；社群感弱，趋势参与感强（collective_effervescence 的趋势形态）。
+
+algorithmic_features:
+  - "For You 推荐流 [official_rule-产品形态]"
+  - "创作激励计划（Creator Fund/ creatives programs，规则随地区变化）[official_rule-产品存在]"
+  - "TikTok Shop 带货与联盟 [official_rule-产品存在]"
+  - "Trend 发现页 [official_rule-产品存在]"
+
+content_constraints:
+  - "[industry_consensus] 视频时长上限多次放宽（10 分钟及以上），以平台最新公告为准"
+  - "[industry_consensus] 标题/描述字符上限约 2200 字符（历史上从 150 放宽而来），以平台最新公告为准"
+  - "[official_rule] 各地区内容合规与数据监管差异大（如美国/欧盟专项规则，以当地最新规则为准）"
+
+title_role: >-
+  描述文案承担话题标签+搜索关键词职责；沉浸流中可见性有限，
+  但对搜索与趋势页聚合有实际作用 [industry_consensus]。
+
+cover_role: >-
+  弱化：单列全屏无封面网格；封面影响主页浏览与搜索缩略图。
+  [industry_consensus-产品形态+行为观察]
+
+opening_role: >-
+  极重：与抖音一致的开场逻辑——首帧与首句在 1 秒内制造停留理由；
+  静音场景下首帧文字/字幕承担开场职责 [industry_consensus]。
+
+tag_role: >-
+  话题标签驱动挑战赛聚合与趋势参与 [official_rule-产品存在]；
+  对分发的实际权重未公开 [industry_consensus]。
+
+comment_role: >-
+  评论区玩梗文化（与抖音类似且更国际化）；热评是二次内容；
+  评论区常成为"事实核查现场"（社区对虚假信息的集体纠错 [industry_consensus-观察]）。
+
+follow_role: >-
+  关注=复看与直播提醒，不保证分发 [industry_consensus]；
+  创作者资产更多沉淀在"被记住的梗/风格"而非粉丝绝对数。
+
+risk_factors:
+  - "[industry_consensus] 地缘政治与禁令风险：市场准入不确定性为该平台独有（platform_power_gatekeeping 的极端形态）"
+  - "[official_rule] 数据隐私与青少年保护监管（多国专项治理，以当地最新规则为准）"
+  - "[industry_consensus] 趋势周期极快：内容模板衰减速度快于国内抖音"
+  - "[industry_consensus] 跨文化审核差异：同一内容在不同市场的可见性不一致"
+
+known_platform_patterns:
+  - pattern: "字幕与视觉自足设计（静音可看懂）"
+    mechanism_links: [dual_process_theory, extraneous_cognitive_load, gestalt_grouping]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "海外静音观看场景比例高 [industry_consensus-观察]；无声境下字幕+画面叙事承担全部信息传递。"
+  - pattern: "可模仿性设计（动作简单、音乐驱动、模板化）"
+    mechanism_links: [social_proof, social_reinforcement, complex_contagion]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "duet/stitch 为官方功能 [official_rule-产品存在]；简单可复制的模板降低参与门槛，模仿链本身是传播链。duet/stitch 官方帮助主题存在但本次未抓到正文，维持行业共识级别。"
+  - pattern: "趋势语言与梗的快速接入"
+    mechanism_links: [mere_exposure, in_group_favoritism, self_categorization]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "使用社区当下的梗=身份入场券（self_categorization）；边界：迟到的梗反而暴露'不在场'。"
+  - pattern: "搜索导向的内容布局（TikTok SEO）"
+    mechanism_links: [answer_engine_visibility, long_tail_demand, category_entry_points]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+    note: "把口语句式写成搜索意图句式（'how to…'）增加被搜索命中；效果依赖平台搜索心智的持续增长 [industry_consensus]。官方新闻室确认 captions/hashtags 等视频信息是推荐信号之一 [S1]，但'搜索导向布局'策略本身无官方文档，维持行业共识级别。"
+  - pattern: "前 3 秒钩子+字幕开场"
+    mechanism_links: [bottom_up_attention_capture, curiosity_gap, zeigarnik_effect]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "与抖音同构：滑动否决权下的开场竞争；静音场景里首帧文字是唯一钩子载体。"
+
+platform_sources:
+  - {source: "TikTok Newsroom - How TikTok recommends videos #ForYou（https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you）", source_owner: "TikTok", source_type: official, claim_supported: "For You 推荐因素：用户互动（点赞/分享/关注/评论/创作）、视频信息（captions/sounds/hashtags）、设备与账号设置（权重较低）；完播较长视频为强信号；粉丝数非直接排名因素；审核中/低质内容可能不被推荐", published_date: "2020-06-18", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "TikTok 官方社区准则页（https://www.tiktok.com/community-guidelines）", source_owner: "TikTok", source_type: official, claim_supported: "社区准则 2025-08-14 发布、2025-09-13 生效；含 For You Feed（FYF）资格标准（Ineligible/Restricted）与内容合规规则", published_date: "2025-08-14", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+confidence: medium

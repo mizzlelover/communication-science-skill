@@ -1,0 +1,53 @@
+# Argument Map Schema（论证图：Central Thesis → Claims → Evidence）
+type: object
+required: [central_thesis, claims]
+properties:
+  central_thesis:
+    type: string
+    description: "一句话中心命题；无法一句话总结 = P0 结构问题"
+  claims:
+    type: array
+    items:
+      type: object
+      required: [claim_id, statement, claim_type, section_refs]
+      properties:
+        claim_id:    {type: string, pattern: "^C[0-9]+$"}
+        statement:   {type: string, description: "主张的原文忠实概括，不改写立场"}
+        claim_type:
+          type: string
+          enum: [supporting, counter, implication, recommendation]
+          description: "supporting_claims / counter_claims / implications / recommendations"
+        section_refs: {type: array, items: {type: string}, description: "出现/论证的 section_id"}
+        evidence:
+          type: array
+          items:
+            type: object
+            required: [evidence_id, evidence_type, text_ref, strength]
+            properties:
+              evidence_id:   {type: string, pattern: "^E[0-9]+$"}
+              text_ref:      {type: string, description: "原文位置/摘引"}
+              evidence_type:
+                type: string
+                enum: [theory, meta_analysis, systematic_review, experimental, observational, survey, statistics, case_study, expert_opinion, anecdote, author_interpretation]
+                description: "十一类证据；重要 Claim 必须回答'靠什么支撑'"
+              strength:      {type: string, enum: [strong, moderate, weak]}
+              issues:        {type: array, items: {type: string}}
+        examples:       {type: array, items: {type: string}}
+        counterarguments:
+          type: array
+          items:
+            type: object
+            description: "反方层：高质量长文必须有'这并不意味着……'"
+            properties:
+              alternative_explanation: {type: string}
+              boundary_condition:      {type: string}
+              addressed_in_text:       {type: boolean, description: "原文是否已处理该反方"}
+        issues:
+          type: array
+          items:
+            type: string
+            enum: [unsupported_claim, logical_gap, duplicated_claim, misplaced_evidence, weak_evidence, overclaim, contradiction, conclusion_leap]
+            description: "八类论证缺陷 + 证据匹配缺陷（evidence_too_weak/too_far/redundancy 归入 weak_evidence/misplaced_evidence/duplicated_claim）"
+  diagnosis_summary:
+    type: string
+    description: "论证图总结：主线是否成立、最薄弱环节、P0 问题"

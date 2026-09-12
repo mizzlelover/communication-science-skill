@@ -1,0 +1,26 @@
+# Evidence Package — S98 Noble 2018（Algorithms of Oppression）
+# 标准格式。access_level 如实标注。
+source_id: S98
+title: "Algorithms of Oppression: How Search Engines Reinforce Racism"
+authors: "Safiya Umoja Noble"
+year: 2018
+journal: New York University Press（专著）
+doi: "无 DOI（专著）"
+url: "https://muse.jhu.edu/book/64995"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：NYU Press / Project MUSE 官方摘要（black girls 搜索案例、data discrimination、垄断地位与商业利益导致算法偏向白人）+ 学术书评三篇（Zobel 2019《Communication Design Quarterly》：击碎『技术中立』神话；Gardner 2021《Journal of American History》：technological redlining 概念与『歧视嵌入代码』引文；Harrison 2021《College Student Affairs Journal》：black girls 案例细节与搜索结果排名即『最佳信息』的提问）+ arXiv 论文（Hampton 2021 对 algorithmic oppression 概念的批判性延伸）"
+research_question: "搜索引擎算法为何强化种族与性别歧视？搜索公司在信息把关与知识生产上行使了怎样的权力？"
+core_claims:
+  - "挑战并击碎『技术中立』神话：搜索算法内嵌偏见，搜索引擎并非中性地筛选、聚合与呈现信息，而是主动复制并延续种族与性别等级（replicate and perpetuate racial and gender hierarchies）"
+  - "搜索『black girls』返回以性化内容（Big Booty、色情网站等）为主的结果，而『white girls』结果截然不同；即便用户浏览历史表明其兴趣（如黑人女性主义资料），结果依然高度性化"
+  - "数据歧视（data discrimination）是社会问题：私人商业利益推动特定网站排名 + 少数搜索引擎的垄断地位，共同导致算法偏向白人、歧视有色人种（尤其女性）"
+  - "提出『技术红线』（technological redlining）概念：『歧视被嵌入计算机代码之中，且日益嵌入人工智能技术之中』（discrimination is embedded in computer code and in AI technologies）"
+  - "搜索公司在信息发现（discoverability）上行使巨大把关权力——搜索引擎同时是邮件入口、中小学与大学学习的主要载体，理解并扭转这些歧视性实践至关重要"
+method: "批判研究/信息研究专著（基于对 Google 文本与媒体搜索、付费在线广告的研究，案例为 black girls 等搜索词与广告定向；定性批判分析）"
+results: "（批判研究）提出『算法压迫』与『技术红线』概念，成为算法偏见批判研究（algorithmic fairness 话语之外）的代表作"
+limitations: "定性批判研究（非系统性量化审计）；论证以 Google 单一平台案例为主（Hampton 2021 亦指出 algorithmic oppression 概念本身定义不足）；实证主张依赖个案观察"
+boundary_conditions: "适用于商业搜索与平台把关权力语境；用户主动搜索与多元信息源可缓解但无法消除算法偏见；非美国语境需调整具体机制"
+relevant_nodes: [platform_power_gatekeeping, credentialing_symbols]
+notes: "搜索算法偏差批判研究（book 级）。algorithmic_bias 未在机制库建节点故未引用，以 platform_power_gatekeeping（把关权力）与 credentialing_symbols（排名位置即可信度凭证）对接。核心论点经 MUSE 官方摘要与三篇学术书评交叉确认，未编造。"
+last_verified: "2026-09"

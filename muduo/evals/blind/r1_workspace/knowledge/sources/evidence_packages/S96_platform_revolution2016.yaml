@@ -1,0 +1,26 @@
+# Evidence Package — S96 Parker, Van Alstyne & Choudary 2016（Platform Revolution）
+# 标准格式。access_level 如实标注。
+source_id: S96
+title: "Platform Revolution: How Networked Markets Are Transforming the Economy—and How to Make Them Work for You"
+authors: "Geoffrey G. Parker; Marshall W. Van Alstyne; Sangeet Paul Choudary"
+year: 2016
+journal: W. W. Norton & Company（专著；中文版：机械工业出版社 2017《平台革命：改变世界的商业模式》）
+doi: "无 DOI（专著）"
+url: "https://www.penguinrandomhouse.ca/books/536764/platform-revolution-by-geoffrey-g-parker-marshall-w-van-alstyne-and-sangeet-paul-choudary/9780393354355"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 dygest.co 全书摘要（核心交互四元素/同侧与跨侧网络效应/Uber、Airbnb 案例）+ 渠道2 Penguin Random House 出版社目录与 Thinkers50 作者简介（双边市场、inverted firm）+ 渠道3 豆瓣《Platform Revolution》原文摘录（平台定义/开放参与式架构/核心互动/前拉策略/病毒式增长四要素/治理与盈利化）+ 中文版完整目录（10 视角：网络效应/体系结构/上线/盈利/开放标准/治理/衡量/战略/监管）+ 他山石智库文章（八种破解鸡与蛋策略）"
+research_question: "平台作为双边市场商业模式如何运作？平台如何设计核心交互、冷启动（鸡生蛋问题）、治理与盈利化？"
+core_claims:
+  - "平台是基于外部供应商与顾客之间价值创造互动的商业模式，为互动赋予开放的参与式架构并设定治理规则；平台的首要目标是匹配用户，通过商品、服务或社会货币的交换为所有参与者创造价值（豆瓣原文摘录）"
+  - "核心交互（core interaction）是平台设计的根本原因，包含四个元素：生产者（producers）、消费者（consumers）、价值单元（value unit，所交换的商品或服务）与过滤器（filter，帮用户找到相关价值的机制）；平台本质是'信息工厂'，不生产价值单元而是促成其交换（dygest 摘要）"
+  - "网络效应分同侧（same-side）与跨侧（cross-side）两种：同侧效应如电话网络每新增一个用户整体价值提升；跨侧效应如 Visa 因更多商户接受而更有价值、Uber 需求增长带动司机供给扩大（dygest 摘要）"
+  - "破解'先有鸡还是先有蛋'困境有八种策略：追踪兔子、背负式、播种、精英、单边、生产商传播、大爆炸、微型市场；病毒式增长取决于四个要素：发送者、价值单元、外部网络与接受者（中文版目录/豆瓣摘录/他山石智库多源一致）"
+  - "平台治理借鉴 Lessig 的四工具模型（法律、规范、体系结构、市场）；平台从四方面创造附加值（价值创造、市场、工具、内容管理），盈利化关键是决定向谁收费——向不同角色收费会产生不同的网络效应后果（豆瓣原文摘录）"
+method: "平台经济学/双边市场理论（作者为 MIT/Dartmouth/BU 学者与平台咨询专家）+ 大规模案例研究（Uber、Airbnb、Amazon、Apple 等）"
+results: "（教科书级定位）平台模式的系统性开山著作：核心交互、网络效应类型学、平台上线八策略与治理框架"
+limitations: "2016 年出版，案例以彼时头部平台为主；对平台负外部性与监管的讨论受时代局限"
+boundary_conditions: "适用于双边/多边市场型业务；单边线性（管道型）业务需先完成向平台的转型"
+relevant_nodes: [cold_start_dynamics, critical_mass_threshold, preferential_attachment]
+notes: "平台经济学教科书级来源（学术级）。核心交互四元素、八种冷启动策略、同侧/跨侧网络效应均为公开内容，经多源交叉实取，未编造。cross_side_network_effects 节点经核实不存在，relevant_nodes 仅列真实 id。"
+last_verified: "2026-09"

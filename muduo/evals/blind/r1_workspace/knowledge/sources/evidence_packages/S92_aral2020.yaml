@@ -1,0 +1,26 @@
+# Evidence Package — S92 Aral 2020（The Hype Machine）
+# 标准格式。access_level 如实标注。
+source_id: S92
+title: "The Hype Machine: How Social Media Disrupts Our Elections, Our Economy, and Our Health—and How We Must Adapt"
+authors: "Sinan Aral"
+year: 2020
+journal: Currency/Random House（专著；MIT 数据科学家）
+doi: "无 DOI（专著）"
+url: "https://news.mit.edu/2021/systems-false-news-social-media-1215"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：中文版目录与编辑推荐（炒作机器=社交网络+机器智能+智能手机）/新社交时代三部曲（高度社交化+个性化群体说服力+注意力经济制度化）+ MIT News 对 2018 Science 假新闻研究的总结 + AI 搜索新研究报道"
+research_question: "社交媒体如何通过社会网络、机器智能与智能手机的协同，操纵我们的选择与行为？假新闻为何传播更快？"
+core_claims:
+  - "炒作机器 = 社交网络 + 机器智能 + 智能手机 三者构成的全球信息交流网络，以每个人的心理为目标，操纵购物/投票/交友决策"
+  - "新社交时代三部曲：社交化的高度（social overhyping）+ 个性化的群体说服力（personalized persuasion at scale）+ 注意力经济的制度化"
+  - "2018 Science 研究（Vosoughi, Roy & Aral）：假新闻比真相传播得更快、更广、更深，且主要由人类而非机器人驱动"
+  - "网络越极化、超连接程度越高，低可信度信息越可能传播得更广（MIT 理论模型补充）"
+  - "社交媒体对社会、商业与健康有系统性影响；需要基于证据的适应策略（监管、平台设计、个体素养）"
+method: "MIT 数据科学家 20 年研究综合（Twitter 大规模数据、平台实验、行为研究）+ 案例"
+results: "（综合专著）对社交媒体传播机制（假新闻速度/网络结构效应/个性化说服）的系统实证总结"
+limitations: "专著综述性质；部分观点（如拆分科技巨头）为作者政策主张"
+boundary_conditions: "以 Twitter/Facebook 等主流平台数据为主；新兴平台机制需单独验证"
+relevant_nodes: [misinformation_velocity, algorithmic_amplification, engagement_optimization_bias, trust_calibration]
+notes: "algorithmic_amplification / misinformation_velocity 等的核心实证来源（book 级）。2018 Science 假新闻结论为公开研究结果，未编造。"
+last_verified: "2026-09"

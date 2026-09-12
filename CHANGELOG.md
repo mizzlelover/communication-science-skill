@@ -1,5 +1,15 @@
 # 项目变更日志
 
+## 2026-09-12（六）· 首轮外部盲测执行 + REG-001 回归门修复
+
+R1 = gpt-5.6-luna（Codex 净室，仓库外隔离）· R2 = Doubao Seed evolving（Trae）·
+R3 = 主线程审计。33 案分层抽样（SHA 34857e224fd0）：**红线 0 · 均分 17.88/18**。
+盲测 ≈ self-eval 触发协议 §4 校准审计：expected 短语指纹 1/33 为案例输入自带
+词汇，结论"无泄露证据"。回归门 REG-001 未过（缺语用边界）→ 已回灌修复
+（concreteness_in_language 补语域边界 + 溯源），单案重跑待执行。
+基线切换：EVALS.md §5b 外部盲测基线（self-eval 降级为历史参考）。
+报告：muduo/evals/blind/report_20260912.md。
+
 ## 2026-09-11（五）· 补丁合规审计与第二轮无条件修复
 
 对照「木铎」原始需求两份强制补丁逐项审计（独立重跑 validate_schema / audit_integrity），

@@ -1,0 +1,25 @@
+# Evidence Package — S199 Wicker 1969（态度-行为关系综述）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S199
+title: "Attitudes versus Actions: The Relationship of Verbal and Overt Behavioral Responses to Attitude Objects"
+authors: "Allan W. Wicker"
+year: 1969
+journal: Journal of Social Issues, 25(4), 41-78
+doi: "10.1111/j.1540-4560.1969.tb02574.x"
+url: "https://doi.org/10.1111/j.1540-4560.1969.tb02574.x"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心结论经 3 个独立源交叉核实（未取得全文）：①期刊页码（JSI 25(4):41-78）经 tandfonline 参考文献表与多份中文论文引用一致；②《心理科学进展》计划行为理论述评（2008, 16(2):315-320）：Wicker 综述指出态度不能预测行为，甚至认为社会心理学基本可以摒弃态度概念，引起重大反响；③综述对象为 1969 年前约 30 余项态度-行为研究：相关系数多数低于 0.30、极少超过 0.38（教科书通行转述）；④后续影响：直接催生 Fishbein/Ajzen 的理性行动与计划行为理论传统"
+research_question: " verbally measured 态度与外显行为的相关到底有多强？"
+core_claims:
+  - "对约 30 余项研究的综述：言语态度与外显行为的相关多数低于 0.30，很少超过 0.38——态度的预测力被系统性高估"
+  - "Wicker 的激进结论：态度概念对行为预测的贡献可疑，甚至建议社会心理学摒弃该概念（引发行为预测研究纲领重建）"
+  - "历史后果：直接推动特殊性匹配（Fishbein & Ajzen 1974 聚合效应：单行为 r=0.15 vs 多行为聚合 r=0.71）与计划行为理论的出现"
+  - "当代校正：整体相关均值约 0.36-0.47（依测量与领域），态度并非无用而是需要正确的测量单元"
+method: "文献系统综述（1969 年前态度-行为一致性研究）"
+results: "（经典综述）奠定『态度-行为鸿沟』领域；修正主义测量传统由此展开"
+limitations: "未取得全文；综述时代的研究测量质量参差；『摒弃态度概念』为当时立场，后经 TPB 修正"
+boundary_conditions: "适用于泛化态度对单次具体行为的预测；态度特殊性/直接经验/规范压力等调节变量在位时预测力恢复"
+relevant_nodes: [attitude_behavior_gap]
+notes: "attitude_behavior_gap 节点 Wicker 综述的建包来源。页码与结论多源一致，未编造。"
+last_verified: "2026-09"

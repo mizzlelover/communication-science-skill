@@ -1,0 +1,26 @@
+# Evidence Package — S51 Rogers 2003（Diffusion of Innovations）
+# 标准格式。access_level 如实标注。
+source_id: S51
+title: "Diffusion of Innovations (5th ed.)"
+authors: "Everett M. Rogers"
+year: 2003
+journal: Free Press（专著；首版 1962）
+doi: "无 DOI（专著）"
+url: "https://en.wikipedia.org/wiki/Diffusion_of_innovations"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "五版核心内容经多源交叉实取：四要素（创新/沟通渠道/时间/社会系统）+ 五阶段决策过程（知晓/说服/决策/实施/确认）+ 五属性（相对优势/兼容性/复杂性/可试性/可观察性，解释 49-87% 采用率方差）+ 五类别（2.5%/13.5%/34%/34%/16%）+ S 曲线 + Bass 模型（p 外部/q 内部影响）"
+research_question: "创新（观念/产品/实践）如何在社会系统中经由沟通渠道随时间传播？哪些因素决定采用速率？"
+core_claims:
+  - "采用速率主要由采用者对创新属性的感知（相对优势/兼容性/复杂性/可试性/可观察性）与人际沟通网络共同决定，而非客观质量单独决定"
+  - "采用者按时间呈正态分布的五类别：创新者 2.5%、早期采用者 13.5%、早期大众 34%、晚期大众 34%、落后者 16%"
+  - "累积采用呈 S 曲线：早期慢（创新者+早期采用者示范）、中期加速（多数跟进）、后期趋平（落后者）"
+  - "大众传播/外地信源在'知晓'阶段影响最大；人际传播/本地信源在'说服'与'决策'阶段更有效"
+  - "Bass 模型（1969）：外部影响 p（广告/媒介）+ 内部影响 q（口碑/同侪）双力驱动"
+method: "跨 500+ 扩散研究的综合（农业/医疗/教育/技术领域）+ 杂交玉米种子经典研究"
+results: "（理论综合）S 曲线、五类别、五属性成为扩散研究的标准框架"
+limitations: "书籍综述；pro-innovation bias（默认扩散越多越好）；类别边界是对连续分布的人为切割"
+boundary_conditions: "采用行为需可观察、可谈论；完全同质的强制采用不遵循口碑扩散逻辑"
+relevant_nodes: [diffusion_of_innovations, adopter_categories, critical_mass_threshold, two_step_flow]
+notes: "diffusion 域奠基专著（book 级一手来源）。2026-09 多源交叉确认（OHIO 开放教材/多篇综述/CSDN 中文解读），未编造原文引文。Bass 模型数字与类别占比为公开标准内容。"
+last_verified: "2026-09"

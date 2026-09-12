@@ -1,0 +1,24 @@
+# Evidence Package — S101 Centola 2010
+# 标准格式。access_level 如实标注。
+source_id: S101
+title: "The Spread of Behavior in an Online Social Network Experiment"
+authors: "Damon Centola"
+year: 2010
+journal: Science 329(5996), 1194-1197
+doi: "10.1126/science.1185231"
+url: "https://pubmed.ncbi.nlm.nih.gov/20813952/"
+access_level: full_text
+research_status: read
+content_obtained: "PubMed 摘要 + Science 全文 PDF（经 sciencenet 存档副本实际访问，含摘要/引言/方法/结果/讨论全部章节标题与关键段落）"
+research_question: "网络结构如何影响行为扩散：聚类（clustered）网络 vs 随机（random）网络，哪种更利于需要社会强化的行为传播？"
+core_claims:
+  - "当行为需要来自多个邻居的社会强化（social reinforcement）时，个体采纳概率显著更高"
+  - "行为在聚类-晶格网络中比在对应随机网络中传播得更远更快"
+  - "对简单传染（信息/疾病）更有利的随机网络长链接优势，对复杂行为传染不成立"
+method: "在人工构建的在线健康社区中研究健康行为（注册在线健康论坛）的扩散；通过网络结构随机分配（clustered-lattice vs random），比较两种拓扑下的传播深度与速度"
+results: "聚类网络中的行为传播显著优于随机网络；多重社会强化是采纳的关键驱动"
+limitations: "单一健康行为（论坛注册）；人工在线社区；样本规模与研究时长受限；网络结构是实验构造而非自然网络"
+boundary_conditions: "适用于需要社会确认/多源支持的行为（complex contagion）；不适用于无需强化的简单信息扩散"
+relevant_nodes: [complex_contagion, social_reinforcement, wide_bridges, network_exposure_effects]
+notes: "实际读取：摘要+方法+结果关键段落（PDF 全文经存档副本获取，作者主页另有公开版）。2026-09 检索可得；Page 4-7 各节均已浏览。"
+last_verified: "2026-09"

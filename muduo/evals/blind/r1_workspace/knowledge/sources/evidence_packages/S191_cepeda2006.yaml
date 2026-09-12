@@ -1,0 +1,25 @@
+# Evidence Package — S191 Cepeda et al. 2006（间隔效应元分析）
+# 标准格式。access_level 如实标注。
+source_id: S191
+title: "Distributed practice in verbal recall tasks: A review and quantitative synthesis"
+authors: "Nicholas J. Cepeda; Harold Pashler; Edward Vul; John T. Wixted; Doug Rohrer"
+year: 2006
+journal: Psychological Bulletin, 132(3), 354-380
+doi: "10.1037/0033-2909.132.3.354"
+url: "https://doi.org/10.1037/0033-2909.132.3.354"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "引用元数据经三处独立源核实（PubMed 收录论文参考文献表、Microlearning 综述参考文献、书目注解页）：Psych Bull 132(3):354-380, DOI 10.1037/0033-2909.132.3.354。规模口径多源交叉：英文书目源称『254 项研究、逾 14000 名被试』；中文科普转述称『汇总 184 篇文章、317 项实验、839 组效应量，分散练习长期保持显著优于集中（有转述称效应量中位数约 d=0.60）』——两口径并存（254 vs 184 为研究计数口径差异，未在原文层面裁定），本包如实并记。核心结论多源一致：言语回忆任务中分散练习稳定优于集中练习；2008 年后续（Cepeda et al., Psych Science 19(11):1095-1102，多源核实）以 1354 人测绘最优间隔随目标保持期拉长而拉长（经验法则：间隔≈保持期的 10%-20%）。医学技能迁移边界：支气管镜模拟 RCT（Med Educ Online 2016，PubMed 核实）未发现一日分散 vs 每周分散的差异——技能类任务外推需谨慎"
+research_question: "时间变量（间隔安排）对言语回忆保持的因果作用有多大？最优间隔如何随保持期变化？"
+core_claims:
+  - "大规模元整合确认间隔效应：言语回忆任务中分散（spaced）练习在长期保持上稳定优于集中（massed）练习，跨越材料与保持期"
+  - "先前综述忽略的时间变量被系统化：学习间间隔（ISI）与保持间隔（RI）的交互是效应核心"
+  - "最优间隔随目标保持期拉长而拉长（2008 后续：保持期 1 个月→间隔约数天；保持期 1 年→间隔数周；经验法则 10%-20%）——『复习越勤越好』的直觉被推翻"
+  - "外推边界：动作/临床技能模拟训练中分散优势的幅度与节奏不同于言语回忆（2016 支气管镜 RCT 未复现节奏差异）"
+method: "元分析（定量整合）：文献检索→实验级编码（ISI/RI/材料/测量）→效应量合成（184 篇文献口径下 317 实验/839 组评估）"
+results: "（元分析）间隔效应为学习科学最稳健发现之一；间隔安排是可操作的设计变量"
+limitations: "未取得原文全文（摘要与多源转述核实）；254 vs 184 研究计数口径未裁定；被试以大学生为主；d 值精确参数未在原文层面确认"
+boundary_conditions: "言语回忆任务最稳；间隔过短（提取太易）与过长（痕迹衰退）都削弱收益；技能训练外推需带任务类型边界"
+relevant_nodes: [spaced_repetition]
+notes: "spaced_repetition 节点『Cepeda 2006 一手 EP 未建』标注的建包来源（Ebbinghaus 1885 与 Zielske 1959 仍为未建包，节点已按本包重评）。多源转述交叉确认，未编造。"
+last_verified: "2026-09"

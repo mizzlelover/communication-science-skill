@@ -1,0 +1,512 @@
+# prediction_surprise — 预测与意外（Prediction & Surprise）：认知是预测机器，意外是更新的入口
+domain: prediction_surprise
+nodes:
+- id: prediction_error
+  canonical_name_en: Prediction Error
+  canonical_name_zh: 预测误差
+  aliases:
+  - 预测偏差信号
+  - prediction error signal —— 与 curiosity_gap 的区别：预测误差是学习与注意的信号量，好奇缺口是信息层面的动机状态
+  domain: prediction_surprise
+  definition: 预测与实际输入的偏差信号（prediction error）。预测加工理论（S10）把认知刻画为预测-比较-更新的循环；在奖赏领域，Schultz 的研究（S145，abstract_only）确立多巴胺神经元编码奖赏预测误差——误差信号驱动学习与追求（wanting），多巴胺≠愉悦本身（S145
+    边界条件）。
+  core_claim: 认知系统的基本运转方式是预测、比较与按误差更新；误差的大小与方向决定注意、学习与情绪反应。
+  mechanism: 大脑层级生成对输入的预测，只有预测失败的部分作为误差向上传播并更新模型（S10）；奖赏域中，正误差触发多巴胺信号驱动学习与追求（wanting），负误差引发警觉与重新评估。没有误差就没有更新——完全可预测的刺激被抑制，完全不可理解的误差被放弃。
+  causal_chain: 生成预测 → 与实际输入比较 → 误差信号 → 模型更新与注意定向
+  variables:
+    inputs:
+    - 预测强度
+    - 实际结果
+    - 误差可理解性
+    moderators:
+    - 先验质量
+    - 情境不确定性
+    - 个体开放性
+    mediators:
+    - 多巴胺信号
+    - 注意定向
+    outputs:
+    - 学习速率
+    - 惊讶反应
+    - 兴趣或警觉
+  evidence:
+    supporting:
+    - Schultz 关于多巴胺神经元编码奖赏预测误差的系列研究
+    - S10 对预测加工框架的综合论证
+    conflicting:
+    - 误差需要落在可理解范围内才引发学习；完全无法消化的误差触发回避或焦虑
+    replication:
+    - 奖赏预测误差的神经证据稳健；预测加工作为统一框架仍属理论综合而非单一实证结论
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 误差须可理解、可归因才转化为学习
+  - 预测强度越高，同等误差的信号越强（可预测性是惊讶的前提）
+  - 多巴胺≠愉悦本身（S145 边界条件；wanting/liking 区分）
+  failure_conditions:
+  - 预期过强或剧透消除误差——没有预期就没有意外
+  - 误差过大触发拒绝而非更新（超出图式同化能力）
+  common_misinterpretations:
+  - 意外等于好——只有正向或可消化的意外提升评价，负面意外带来传播但损毁信任
+  - 把预测误差当成单纯的营销噱头——它首先是学习机制，操纵不当带来的是拒绝
+  ethical_risks:
+  - 惊吓式营销与恶意反转透支信任
+  examples:
+    original_cases:
+    - S10 对预测加工的全面阐述
+    research_cases:
+    - 多巴胺神经元实验：奖励高于预期时放电增强，低于预期时抑制（仅摘要级支持：S145 为 abstract_only，EP notes 明示该放电模式细节待原文核验）
+    modern_cases:
+    - 推荐系统的探索与利用平衡；剧情反转设计；产品更新的惊喜管理
+  communication_implications: 先建立可预测的预期结构，再提供可控偏差——内容的三段论应是搭预期、给误差、帮消化。
+  community_implications: 社群节奏的可预测性（固定栏目）与偶发惊喜（突然福利）的配比，决定成员的长期兴趣曲线。
+  content_applications:
+    title: 标题先锚定预期，再承诺一个偏差
+    opening: 用受众熟悉的图式开场，让后面的意外有处可依
+    body: 每给出一个反直觉结论，紧接一个可理解的解释
+    cta: 把关注定义为持续获得可消化的意外
+  platform_implications: 推荐算法本质是预测误差的批发商——它持续寻找让你惊讶又不离开的内容边界；这也解释了刺激性内容对平静内容的系统性优势。
+  related_nodes:
+  - curiosity_gap
+  - schema_violation
+  - novelty_preference
+  - reward_prediction_dopamine
+  - variable_ratio_reward
+  - suspense_structure
+  source_ids:
+  - S10
+  - S145
+  provenance:
+    primary_sources:
+    - S10
+    - S145
+    supporting_evidence: []
+    last_verified: 2026-09
+    platform_sources:
+    - douyin:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: curiosity_gap
+  canonical_name_en: Curiosity Gap (Information Gap Theory)
+  canonical_name_zh: 好奇缺口（信息缺口理论）
+  aliases:
+  - 信息缺口
+  - information gap —— 与 zeigarnik_effect 的区别：好奇是信息缺口动机，蔡格尼克是任务中断动机；与 suspense_structure 的区别：好奇是机制，悬念是对机制的时序编排实践
+  domain: prediction_surprise
+  definition: 知道的与想知道的之间的缺口会引发类似剥夺感的好奇状态（Loewenstein 1994 的信息缺口理论；S144 仅摘要级支持，经教学资源二手交叉确认）。缺口适度时好奇最强——全然无知与全知都不产生好奇。Berlyne
+    传统（经 S144 综述转述）把好奇区分为知觉性与认识性。
+  core_claim: 信息缺口产生剥夺感并驱动寻求闭合的行为；缺口大小存在最优区间。
+  mechanism: 部分知识使缺口凸显——你必须先知道自己不知道什么的具体轮廓，才会痒；闭合缺口带来即时奖赏（与预测误差的正向信号连通）。标题党是本机制的最小化应用：给轮廓不给答案。
+  causal_chain: 部分知识暴露 → 缺口轮廓显现 → 剥夺感与好奇 → 寻求闭合（点击、阅读、追问）
+  variables:
+    inputs:
+    - 已知部分
+    - 缺口大小
+    - 缺口与自我相关性
+    moderators:
+    - 受众先验知识
+    - 主题卷入度
+    - 缺口闭合成本
+    mediators:
+    - 剥夺感
+    - 闭合预期奖赏
+    outputs:
+    - 点击率
+    - 完读率
+    - 追问行为
+  evidence:
+    supporting:
+    - Loewenstein 1994 对信息缺口理论的系统阐述
+    - Berlyne 关于好奇的早期实验传统（经典文献，未建包）
+    conflicting:
+    - 效应依赖受众恰好知道一点点；缺口过小显得无聊、过大显得无关
+    replication:
+    - 信息缺口引发寻求行为的核心主张稳健；具体到点击率的量级随场景浮动
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 需要受众已有部分相关知识作为缺口轮廓
+  - 标题承诺与内容兑现的落差会累积为信任折旧
+  failure_conditions:
+  - 滥用导致标题党疲劳——受众学会从标题反推答案，缺口失效
+  - 缺口永不闭合（无限滚动式延迟）训练出厌烦与逃离
+  common_misinterpretations:
+  - 起个悬念标题就有点击——受众必须恰好知道一点点，缺口才有轮廓
+  - 把好奇缺口等同于标题党——真正的缺口设计在正文结构中同样有效
+  ethical_risks:
+  - 永不闭合的缺口设计制造粘性焦虑（无限下拉的再等一下）
+  - 缺口诈骗：承诺答案却交付广告
+  examples:
+    original_cases:
+    - S65 用信息缺口解释叙事好奇；S40 的意外原则提供了相邻框架
+    research_cases:
+    - 好奇实验：预先暴露问题轮廓的被试对答案的记忆与寻求更强（Loewenstein 综述的证据群）
+    modern_cases:
+    - 为什么 99% 的人不知道……式标题；知识付费试听卡点；百科条目的缺一脚设计
+  communication_implications: 好奇是给读者的预付款：先展示缺口轮廓（问题、反常现象、半截故事），再承诺闭合路径，点击与完读同源于此。
+  community_implications: 社群提问文化（每周抛出一个未解问题）制造集体缺口，是持续讨论的燃料。
+  content_applications:
+    title: 标题给缺口轮廓：现象加问号，不剧透答案
+    opening: 把缺口具体化（你可能一直以为 X，但有一个例外）
+    body: 分层闭合：先小闭合给满足，再开新缺口维持阅读
+    cta: 闭合后的余味问题引导评论
+  platform_implications: 平台点击率指标奖励缺口标题，形成标题通胀；算法随后用完读率惩罚不兑现者，倒逼缺口必须真实闭合。
+  related_nodes:
+  - prediction_error
+  - suspense_structure
+  - zeigarnik_effect
+  - novelty_preference
+  - hook_model
+  source_ids:
+  - S65
+  - S144
+  provenance:
+    primary_sources:
+    - S65
+    - S144
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-019
+    - CASE-CRS-015
+    - CASE-FAL-002
+    - CASE-FAL-007
+    - CASE-FAL-008
+    - CASE-FAL-025
+    - CASE-FAL-026
+    - CASE-FAL-045
+    - CASE-FAL-046
+    - CASE-FAL-075
+    - CASE-FAL-076
+    - CASE-FAL-085
+    - CASE-FAL-086
+    - CASE-FAL-095
+    - CASE-PLT-001
+    platform_sources:
+    - douyin:S1
+    - generic:S1
+    - generic:S2
+    - generic:S3
+    - x:S6
+    - x:S8
+    - youtube:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: schema_violation
+  canonical_name_en: Schema Violation
+  canonical_name_zh: 图式违背
+  aliases:
+  - 预期违背
+  - expectation violation —— 与 von_restorff_effect 的区别：隔离效应是列表内的知觉异类优势，图式违背是知识层面的预期破坏；与 prediction_error
+    的关系：图式违背是预测误差在语义知识层的表现
+  domain: prediction_surprise
+  definition: 违背既有图式（知识与事件预期结构）的信息获得注意与编码优先。图式提供预测基线，违背标注了模型需要更新的位置；Bartlett 1932 的故事复述研究是该领域奠基。
+  core_claim: 意外之所以有认知特权，是因为它指向受众既有模型的失效点——但前提是该图式真实存在且违背可被同化。
+  mechanism: 共享图式提供稳定预期，违背触发定向反应与更深编码（连 prediction_error）；但违背必须能被同化——皮亚杰意义上的顺应：无法解释的违背被忽略、遗忘或在传播中被驯化回图式（Bartlett
+    的复述变形，与 S05『bias：当前信念对过去的回溯性扭曲』的记忆扭曲方向同向）。
+  causal_chain: 共享图式建立预期 → 信息违背图式 → 定向反应与深编码 → 可同化则更新模型，不可同化则被驯化或遗忘
+  variables:
+    inputs:
+    - 图式强度
+    - 违背幅度
+    - 违背的可解释性
+    moderators:
+    - 受众共享度
+    - 铺垫充分性
+    - 文化背景
+    mediators:
+    - 预测误差
+    - 定向反应
+    outputs:
+    - 注意与记忆优先
+    - 传播性
+    - 理解成功率
+  evidence:
+    supporting:
+    - Bartlett 1932 的战争之鬼系列复述实验（经典文献，未建包）
+    - 图式与违背对记忆影响的实验传统
+    conflicting:
+    - 怪异度对记忆优势的研究结果混合——过强或无法归类的违背不产生稳定优势
+    replication:
+    - 图式影响记忆与理解的总模式稳健；违背收益的边界条件研究持续
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 违背针对受众所共享的图式才有效，圈层梗对外人只是噪音
+  - 顺序很重要：先建立图式再违背，无铺垫的反转无收益
+  failure_conditions:
+  - 受众没有该图式时，违背只是混乱（知识断层场景）
+  - 违背与品牌无关时记住了梗忘了品牌（与隔离效应同款边界）
+  common_misinterpretations:
+  - 反转等于高级——没有铺垫的反转没有认知收益，只有困惑
+  - 把违背当成流量密码——可同化的违背才转化为理解与记忆
+  ethical_risks:
+  - 用违背预期的虚假内容博流量（假新闻的典型结构）
+  examples:
+    original_cases:
+    - S40 的意外原则（SUCCESs 的 U）建立在图式违背之上
+    research_cases:
+    - Bartlett 的复述实验：与英国受试者文化图式冲突的民间故事在传递中被系统驯化
+    modern_cases:
+    - 广告反转梗；品牌人设反差（硬核工程师卖萌）；反常识科普的走红逻辑
+  communication_implications: 意外必须长在受众已有的常识上：先复述他们相信什么，再展示例外，理解与记忆同时达成。
+  community_implications: 社群内部梗的更新就是图式违背的游戏化——但新梗必须锚定老梗，否则新成员与老成员分裂成两个语境。
+  content_applications:
+    title: 标题引用常识再打破（你以为……其实……）
+    opening: 先花一句复述受众的既有预期，为违背付铺垫成本
+    body: 违背之后立即给出解释，避免停留在困惑
+    cta: 邀请读者说出自己被打破的预期
+  platform_implications: 算法对高互动反转内容的奖励催生虚假违背（标题与内容两张皮）；事实核查体系是对虚假图式违背的制度对抗。
+  related_nodes:
+  - prediction_error
+  - von_restorff_effect
+  - dramatic_arc_structure
+  - novelty_preference
+  - curiosity_gap
+  source_ids:
+  - S40
+  - S10
+  - S05
+  - S218
+  provenance:
+    primary_sources:
+    - S40
+    - S10
+    - S05
+    - S218
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-001
+    - CASE-BRD-008
+    - CASE-BRD-012
+    - CASE-BRD-017
+    - CASE-BRD-019
+    - CASE-BRD-021
+    - CASE-BRD-022
+    - CASE-BRD-025
+    - CASE-BRD-026
+    - CASE-BRD-027
+    - CASE-BRD-028
+    - CASE-CNT-001
+    - CASE-CNT-002
+    - CASE-CNT-003
+    - CASE-CNT-005
+    - CASE-CNT-008
+    - CASE-CNT-010
+    - CASE-CNT-011
+    - CASE-CNT-013
+    - CASE-CNT-014
+    - CASE-CNT-015
+    - CASE-CNT-021
+    - CASE-CNT-024
+    - CASE-CNT-025
+    - CASE-CNT-026
+    - CASE-CNT-028
+    - CASE-CNT-029
+    - CASE-GRW-010
+    platform_sources:
+    - douyin:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: novelty_preference
+  canonical_name_en: Novelty Preference
+  canonical_name_zh: 新颖性偏好
+  aliases:
+  - 新异刺激偏好
+  - novelty seeking —— 与 schema_violation 的区别：新颖性偏好是对新异刺激的一般性探索倾向，图式违背针对特定预期的破坏
+  domain: prediction_surprise
+  definition: 对新颖刺激的优先注意与探索倾向：Fantz 的视觉偏好范式显示婴儿注视新异图片更久，习惯化-去习惯化范式成为发展研究的标准工具（经典文献，未建包）。成人的探索行为同样受信息增益预期驱动。
+  core_claim: 新颖性本身具有注意与动机价值——但价值来自预期信息增益，而非新异本身。
+  mechanism: 新刺激携带更高的潜在信息量，探索它可能降低不确定性（Berlyne 的好奇传统与 S10 的预测框架一致）；但新颖同时意味着潜在威胁，因此探索与警觉并存。平台环境中新颖性供给过剩导致阈值攀升与习惯化加速。
+  causal_chain: 新颖刺激出现 → 预期信息增益 → 探索与优先注意 → 习惯化后阈值攀升
+  variables:
+    inputs:
+    - 刺激新颖度
+    - 与已有知识的连接性
+    - 不确定性水平
+    moderators:
+    - 个体开放性
+    - 安全感
+    - 接触历史
+    mediators:
+    - 信息增益预期
+    - 习惯化过程
+    outputs:
+    - 注视时长
+    - 探索行为
+    - 分享意愿
+  evidence:
+    supporting:
+    - Fantz 的婴儿视觉偏好实验与习惯化-去习惯化范式（经典文献，未建包）
+    - Berlyne 对新颖性与探索行为的研究传统
+    conflicting:
+    - 纯新异而无意义的刺激迅速被习惯化；威胁性新颖引发回避而非探索
+    replication:
+    - 婴儿新颖性偏好是发展心理学最稳健的发现之一
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 新颖需与已有图式可连接才有探索价值
+  - 个体差异显著（开放性人格、安全感水平）
+  failure_conditions:
+  - 平台新颖性通胀：所有人都追新导致阈值同步攀升，新颖贬值（S100 的同质化悖论）
+  - 伪新颖（换皮内容）被快速识破
+  common_misinterpretations:
+  - 追新等于增长——脱离信息增益的新颖只是噪音
+  - 以为用户永远想要新东西——用户想要的是有意义的新
+  ethical_risks:
+  - 用伪新颖制造焦虑（最新研究颠覆……式标题的滥用）
+  examples:
+    original_cases:
+    - S10 对探索与不确定性降低的论述；S100 对算法新颖性通胀的批判
+    research_cases:
+    - 婴儿习惯化实验：对重复刺激注视时间递减，新异图片重现注视回升
+    modern_cases:
+    - 短视频题材内卷与创新奖励；算法探索性推荐；新品营销的新鲜感周期管理
+  communication_implications: 新颖要兑换成信息增益才可持续：每条内容至少提供一个受众真正不知道且能连上旧知的增量。
+  community_implications: 社群内容矩阵需要新颖度的梯度管理——稳定栏目提供安全感，实验栏目供应新奇，比例失衡会同时流失两类成员。
+  content_applications:
+    title: 在熟悉框架里装一个真正的新增量（老话题新证据）
+    body: 新概念出现时立刻挂靠已知概念
+    cta: 把关注定义为持续的信息增益而非新鲜感
+  platform_implications: 平台对新内容的探索性曝光（cold start 测试）与新颖度信号加权，使新颖成为可运营的算法变量；同质化模板则在新颖性通胀中加速贬值。
+  related_nodes:
+  - prediction_error
+  - schema_violation
+  - curiosity_gap
+  - hedonic_adaptation
+  - algorithmic_amplification
+  source_ids:
+  - S10
+  - S03
+  - S144
+  - S100
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Clark 2016《Surfing Uncertainty》（S10，预测误差/新奇信号）+ Mark 2023（S03，注意时长下降/习惯化加速）
+    effect_size: 新奇刺激捕获注意（预测加工理论解释）
+    replication_status: 新奇偏好跨物种/跨任务稳健
+    context_dependency: 新奇度/预测误差幅度/注意状态调制效应
+    downgrade_upgrade_reason: 2026-09 实取 S10 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S10
+    supporting_evidence:
+    - S03
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-001
+    - CASE-CMP-002
+    - CASE-CNT-002
+    - CASE-CNT-004
+    - CASE-CNT-010
+    - CASE-CNT-016
+    - CASE-CNT-017
+    - CASE-CNT-018
+    - CASE-CNT-019
+    - CASE-CNT-021
+    - CASE-CNT-024
+    - CASE-CNT-026
+    - CASE-GRW-013
+    - CASE-PLT-036
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: suspense_structure
+  canonical_name_en: Suspense Structure
+  canonical_name_zh: 悬念结构
+  aliases:
+  - 悬念编排
+  - 张力结构 —— 与 curiosity_gap 的区别：好奇缺口是动机机制，悬念结构是管理该机制时间曲线的叙事实践；与 zeigarnik_effect 的区别：蔡格尼克依托真实任务中断，悬念依托预期管理
+  domain: prediction_surprise
+  definition: 通过预期建立、延迟兑现与峰值释放的时序安排维持注意的叙事实践，覆盖演讲、剧本、直播脚本与内容连载。它属于从业者经验层知识：有效，但机制挂靠 prediction_error 与
+    curiosity_gap，而非独立实证结论。
+  core_claim: 悬念之所以有效，是因为它人为制造并管理预测误差与信息缺口的时间曲线——这是机制假说与实践共识，非实证定律。
+  mechanism: 经验层的操作原理：先建立可预测的图式（观众必须知道正常是什么样），注入不确定性（危险或问题），然后交错收放——部分闭合、部分加深，直至峰值释放。S68 的当下与应然交替（what
+    is ↔ what could be 的对比张力）、turning points 与 new bliss 收尾，都是对预期落差的编排。
+  causal_chain: 建立预期图式 → 注入不确定性 → 交错收放维持张力 → 峰值释放与闭合
+  variables:
+    inputs:
+    - 铺垫充分度
+    - 张力峰值数
+    - 释放节奏
+    moderators:
+    - 内容类型
+    - 受众卷入
+    - 平台时长约束
+    mediators:
+    - 预期落差曲线
+    - 信息缺口管理
+    outputs:
+    - 完读率
+    - 停留时长
+    - 追更行为
+  evidence:
+    supporting:
+    - S68 与 S65 的从业者方法论与写作框架
+    conflicting:
+    - 无系统实证检验；不同媒介与时长下的最优结构缺乏比较研究
+    replication:
+    - 登记为实践经验：标注 D 级，不得作为科学结论引用
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 依赖内容类型：叙事、演讲、直播脚本适用；工具型内容（查说明）无效
+  - 依赖受众卷入：无预期基础的观众不产生张力
+  failure_conditions:
+  - 钩子拖延过长被平台前几秒规则淘汰（从业者共识的前 3 秒法则）
+  - 多重悬念互相稀释，峰值不突出
+  common_misinterpretations:
+  - 开头必须抛钩子——工具类内容直接给答案的完读率更高
+  - 把悬念结构当传播定律——它是编排实践，效果依赖执行与场景
+  ethical_risks:
+  - 无限悬念收割完播率而内容空心（标题党的结构性版本）
+  - 用悬念延迟兑现关键信息（金融与医疗场景的伦理红线）
+  examples:
+    original_cases:
+    - S68 的演讲结构图与当下应然交替；S65 的张力-释放写作模型
+    research_cases:
+    - 无系统实证检验，本节点不列实验证据；相关机制证据见 prediction_error 与 curiosity_gap
+    modern_cases:
+    - 剧情号的三幕式短视频；直播讲品的憋单节奏；连载内容的章末断点设计
+  communication_implications: 悬念结构是可学习的时序工程：把预期、缺口与释放当作可编排的变量，而不是玄学灵感；但它建立在好奇与预测误差机制真实成立的前提下。
+  community_implications: 社群活动的流程设计同样适用悬念节奏——预告、升温、峰值、收束，让参与本身有叙事弧。
+  content_applications:
+    opening: 前几秒建立处境与利害，不急于给结论
+    narrative: 把核心张力拆成两到三次收放，峰值留在中后段
+    cta: 峰值之后立刻给行动出口，乘势转化
+  platform_implications: 平台的完播率与留存曲线把悬念结构变成可测量的指标游戏；过度优化导致叙事通胀，用户训练出快进与跳脱的对策。
+  related_nodes:
+  - curiosity_gap
+  - zeigarnik_effect
+  - prediction_error
+  - dramatic_arc_structure
+  - narrative_transportation
+  - peak_end_rule
+  source_ids:
+  - S65
+  - S68
+  - S220
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    upgrade_reason: 2026-09-11 一手实读建包后 D→C：Bezdek et al. 2015（Neuroscience fMRI：叙事悬念收窄注意空间焦点）为机制提供直接实验依据；实践框架部分（S65/S68）保留为从业经验
+    independent_studies: Storr 2019（S65，信息缺口/变化检测驱动叙事张力）+ Duarte 2010（S68，演讲张力结构：当下与应然交替）
+    effect_size: 不适用（从业者框架 D 级）；底层机制（预测误差/好奇缺口）有实证支持
+    replication_status: 登记为实践经验：标注 D 级，不得作为科学结论引用
+    context_dependency: 依赖内容类型与受众卷入；工具型内容无效；钩子拖延过长被平台规则淘汰
+    downgrade_upgrade_reason: 2026-09 实取 S65/S68 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S65
+    - S220
+    supporting_evidence:
+    - S68
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long

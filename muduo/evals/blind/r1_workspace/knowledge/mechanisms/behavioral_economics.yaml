@@ -1,0 +1,928 @@
+# behavioral_economics — 行为经济学（Behavioral Economics）：价值、损失与选择的经济心理学
+domain: behavioral_economics
+nodes:
+- id: loss_aversion
+  canonical_name_en: Loss Aversion
+  canonical_name_zh: 损失厌恶
+  aliases:
+  - 损失规避
+  - losses loom larger
+  domain: behavioral_economics
+  definition: 损失厌恶是 Kahneman 与 Tversky 1979 前景理论的核心要素：同等数量的损失带来的痛苦大于同等收益带来的快乐（『损失比收益显得更大』）。必须按 EVIDENCE.md
+    携带降级说明：该效应存在但幅度争议大、个体差异显著；有学者（如 Gal 与 Rucker 方向的批评）认为部分证据实为框架效应或其他机制的产物。定级自 A 降为 B。与 gain_loss_framing
+    的区别：损失厌恶是价值函数的性质假设，收益-损失框架是其在选择问题表述上的表现；与 framing_effects（A3）的区别在于后者是传播/说服层的讯息框架节点。
+  core_claim: 在参照点附近，损失的心理权重系统性地大于同等收益；但该权重大小因人、因域而异，不是稳定常数。
+  mechanism: 前景理论以参照点定义得失，价值函数在损失侧更陡；损失激活更强的威胁监测与生理反应；但常见叙述中的『损失权重约为收益两倍』来自早期估计的粗糙平均，后续研究显示权重随领域、经验与测量方法大幅波动，部分任务中『损失引发更多注意而非更大权重』（损失注意替代假说方向，待补一手来源）。
+  causal_chain: 结果相对参照点被编码为得/失 → 损失侧价值函数更陡 → 损失规避选择 → 维持现状/拒绝公平赌局等行为
+  variables:
+    inputs:
+    - 参照点位置
+    - 得失幅度
+    - 结果是否确定
+    moderators:
+    - 个体差异
+    - 领域经验
+    - 任务表述（频率/概率）
+    mediators:
+    - 价值函数斜率
+    - 威胁监测唤醒
+    outputs:
+    - 拒绝混合赌局
+    - 现状维持
+    - 议价中的让步不对称
+  evidence:
+    supporting:
+    - Kahneman 与 Tversky 1979 前景理论及其系列实验（经典理论）
+    - Thaler 系列中的禀赋与损失现象研究（S12）
+    conflicting:
+    - EVIDENCE.md 登记的降级理由：幅度争议与个体差异大；Gal 与 Rucker 等批评认为『损失权重更大』的普遍性被高估，部分现象可由其他机制解释
+    replication:
+    - 方向性证据（损失敏感）总体可重复，但作为量化参数不稳健。评级按枚举记 B（降级自 A）
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 在参照点附近的小额得失中最明显；远离参照点的大额结果权重趋平
+  - 测量方式（选择任务 vs 交易任务）会显著改变表现出的权重
+  failure_conditions:
+  - 高专业经验领域（职业交易员对小额波动）中损失敏感度下降
+  - 损失被重构为投资或习得成本时
+  common_misinterpretations:
+  - 『人对损失的敏感度恒为收益的 2 倍』：这是对早期估计的刻板化，实际波动范围大且个体差异显著
+  - 把一切『怕失去』都归因损失厌恶；现状偏差、承诺等机制常与之纠缠
+  ethical_risks:
+  - 恐吓式营销滥用损失框架（『再不买就永久失去』）制造焦虑交易
+  examples:
+    original_cases:
+    - Thinking, Fast and Slow（S01）前景理论章节；Misbehaving（S12）中的应用案例
+    research_cases:
+    - Kahneman 与 Tversky 1979 的假想选择实验系列
+    modern_cases:
+    - 限时优惠的失去话术、免费试用到期提醒、持仓亏损时的不卖倾向
+  communication_implications: 损失框架对『保住既有东西』类行为（续费、防流失）最有效；对新获得的推广应优先收益框架，且必须真实有据。
+  community_implications: 会员流失预警用『你将失去的权益清单』比新优惠更有效；但频繁使用会训练出免疫。
+  content_applications:
+    title: 损失框架标题对既有用户有效：『你的等级权益将于 X 日失效』
+    emotion: 损失唤醒控制在警示而非恐吓的程度，保留出路
+  platform_implications: 平台的流失召回与订阅到期流程大量使用损失框架；监管与平台规范逐步限制虚假紧迫性话术。
+  related_nodes:
+  - gain_loss_framing
+  - endowment_effect
+  - status_quo_bias
+  - sunk_cost_fallacy
+  - fear_appeals_eppm
+  conflicting_nodes:
+  - framing_effects
+  source_ids:
+  - S01
+  - S12
+  - S113
+  - S129
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Kahneman & Tversky 1979 前景理论（S113 已实取摘要+结构）+ Gal & Rucker 2018 批判（S129）+ Camerer
+      2024 元分析（607 项估算，系数均值 1.955 [1.820, 2.102]）
+    effect_size: 损失域价值函数比收益域更陡（损失厌恶）；系数≈2 为范式参数而非普适常数
+    replication_status: 损失厌恶存在但幅度有争议（EVIDENCE.md B）；元分析确认均值≈2；普适性受批判
+    context_dependency: 参照点依赖；小损失/抽象损失不对称较弱；框架操纵是效应边界
+    downgrade_upgrade_reason: 2026-09 补充一手奠基论文证据（S113）与批判/元分析证据（S129），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S113
+    supporting_evidence:
+    - S01
+    - S12
+    - S129
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S01
+    - S206
+    case_sources:
+    - CASE-CMP-001
+    - CASE-COM-067
+    - CASE-FAL-003
+    - CASE-FAL-004
+    - CASE-FAL-005
+    - CASE-FAL-006
+    - CASE-FAL-023
+    - CASE-FAL-024
+    - CASE-FAL-031
+    - CASE-FAL-032
+    - CASE-FAL-035
+    - CASE-FAL-036
+    - CASE-FAL-037
+    - CASE-FAL-043
+    - CASE-FAL-044
+    - CASE-FAL-050
+    - CASE-FAL-051
+    - CASE-FAL-055
+    - CASE-FAL-056
+    - CASE-FAL-064
+    - CASE-FAL-067
+    - CASE-FAL-073
+    - CASE-FAL-074
+    - CASE-FAL-081
+    - CASE-FAL-082
+    - CASE-FAL-083
+    - CASE-FAL-084
+    - CASE-FAL-090
+    - CASE-FAL-091
+    - CASE-FAL-093
+    - CASE-FAL-094
+    - CASE-FAL-097
+    - CASE-FAL-099
+    - CASE-GRW-016
+    - CASE-PLT-030
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: scarcity_mindset
+  canonical_name_en: Scarcity Mindset (Tunneling / Bandwidth Tax)
+  canonical_name_zh: 稀缺心态（隧视野与带宽税）
+  aliases:
+  - 稀缺心态
+  - 带宽税
+  - tunneling
+  - bandwidth tax
+  domain: behavioral_economics
+  definition: 稀缺心态（Mullainathan 与 Shafir，S13）指资源稀缺（钱、时间）捕获认知带宽：稀缺感使注意收窄于稀缺对象（隧视野），削弱其他任务的认知控制与决策质量，形成『稀缺→短视→更稀缺』的循环。证据评级
+    B/C（按枚举记 C）：Mani 等 2013 的甘蔗农研究提供了标志证据，但后续大规模复制中部分效应缩水，需携带边界说明。与 Cialdini 影响力中的『稀缺原则』（限量话术）区分：那是说服线索（A3
+    层），本节点是认知状态（A2 层），两者不可混用。
+  core_claim: 资源稀缺状态捕获注意与执行控制，系统性地降低非稀缺域的决策质量；效应存在但强度有复制争议。
+  mechanism: 稀缺使稀缺对象在注意竞争中获得优先级（与 inattentional_blindness 的盲区机制相通），其他事务被挤出；同时焦虑与反复计算占用工作记忆资源（带宽税），导致借贷、拼单等短期修补行为，长期加剧稀缺（S13）。Mani
+    等 2013 在收获前（穷）与收获后（相对宽裕）比较同一批农民的认知任务表现；Carvalho 等 2016 的田间研究在部分认知指标上未能复现同等强度；更大规模的复制中效应缩水。
+  causal_chain: 资源稀缺 → 注意隧视野+带宽占用 → 非稀缺域决策质量下降 → 短视修补行为 → 稀缺加深（循环）
+  variables:
+    inputs:
+    - 财务/时间稀缺程度
+    - 稀缺的即时压力
+    - 安全网缺失
+    moderators:
+    - 稀缺的持续性
+    - 决策辅助的可得性
+    - 个体经验
+    mediators:
+    - 注意优先级
+    - 执行控制资源
+    - 焦虑水平
+    outputs:
+    - 非稀缺域任务表现
+    - 借贷与消费决策
+    - 计划失误率
+  evidence:
+    supporting:
+    - Mani 等 2013 甘蔗农收获前后比较与配套实验室实验（期刊论文）
+    - S13 中时间稀缺（繁忙）情境的实验与观察证据
+    conflicting:
+    - Carvalho 等 2016 方向的田间研究未在所有认知指标复现；后续大规模复制中部分效应缩水（EVIDENCE.md 定为 B/C）
+    replication:
+    - 相关性证据稳健（贫困与认知负荷共存），因果强度有争议；应用建议必须标注情境依赖。评级按枚举记 C
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 稀缺需达到捕获注意的强度（轻微预算紧张不足以触发）
+  - 对财务脆弱人群的实证支持最强，外推到一般『忙』情境需谨慎
+  failure_conditions:
+  - 把一切拖延与低效归因『带宽税』的心理化滥用
+  - 在无稀缺感的受众上使用该解释设计产品
+  common_misinterpretations:
+  - 把稀缺心态当成性格缺陷（『穷人不会规划』）；它是对稀缺环境的认知适应副作用，干预应改环境而非指责个人
+  ethical_risks:
+  - 针对财务脆弱人群在稀缺时点投放高息产品（ payday 式营销），利用其隧视野牟利
+  examples:
+    original_cases:
+    - Scarcity（S13）中的机场托运、农民收获周期等案例
+    research_cases:
+    - Mani 等 2013 的农民认知任务研究；Carvalho 等 2016 的后续田间研究（含不一致结果）
+    modern_cases:
+    - 发薪日前后的消费与信贷行为差异；deadline 高峰期的课程完课率下降
+  communication_implications: 面向财务或时间稀缺人群的内容必须极简、单任务、可延迟（存下来稍后看），避免多选项与紧迫操纵。
+  community_implications: 社群对忙季成员提供异步参与通道与摘要，而不是同步打卡要求；帮助性提醒选在稀缺缓解后发送。
+  content_applications:
+    body: 给稀缺人群的内容做『一行结论+可保存』结构，降低当下带宽需求
+    cta: 『没时间？先收藏，明早两分钟看完』——尊重隧视野而非对抗它
+  platform_implications: 信贷类平台的推送时机选择是稀缺操纵的高风险区；负责任的节奏是稀缺缓解期（发薪后）再触达非紧急决策。
+  related_nodes:
+  - present_bias
+  - attention_capacity_limits
+  - working_memory_limits
+  - inattentional_blindness
+  - fear_of_missing_out
+  source_ids:
+  - S13
+  - S02
+  - S128
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Mani et al. 2013 Science 贫困与认知功能（S128，paper 级：购物中心 101 人+甘蔗农收获前后）+ Mullainathan
+      & Shafir《Scarcity》（S13）
+    effect_size: 财务稀缺→认知任务表现下降（带宽税）；收获前 vs 收获后同组内差异显著
+    replication_status: 相关证据稳健；因果强度有讨论（Carvalho 2016 部分未复现；2023 Shah 审计），节点保持 B/C
+    context_dependency: 财务稀缺需达捕获注意强度；对财务脆弱人群支持最强
+    downgrade_upgrade_reason: 2026-09 补充标志性一手论文（S128），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S128
+    supporting_evidence:
+    - S13
+    - S02
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-006
+    - CASE-BRD-012
+    - CASE-BRD-014
+    - CASE-BRD-015
+    - CASE-BRD-024
+    - CASE-CMP-001
+    - CASE-FAL-003
+    - CASE-FAL-004
+    - CASE-FAL-005
+    - CASE-FAL-023
+    - CASE-FAL-024
+    - CASE-FAL-031
+    - CASE-FAL-032
+    - CASE-FAL-036
+    - CASE-FAL-043
+    - CASE-FAL-044
+    - CASE-FAL-050
+    - CASE-FAL-051
+    - CASE-FAL-073
+    - CASE-FAL-074
+    - CASE-FAL-082
+    - CASE-FAL-083
+    - CASE-FAL-084
+    - CASE-FAL-090
+    - CASE-FAL-091
+    - CASE-FAL-093
+    - CASE-FAL-094
+    - CASE-FAL-099
+    - CASE-GRW-019
+    platform_sources:
+    - weibo:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: endowment_effect
+  canonical_name_en: Endowment Effect
+  canonical_name_zh: 禀赋效应
+  aliases:
+  - 禀赋效应
+  - WTA-WTP gap
+  - 拥有感定价
+  domain: behavioral_economics
+  definition: 禀赋效应指一旦拥有某物，对其的估值（愿意接受的卖价 WTA）即高于未拥有时的估值（愿意支付的买价 WTP）。Thaler 1980 提出，Kahneman、Knetsch 与
+    Thaler 1990 的马克杯实验是经典证据。证据评级 A-（按枚举记 A）。与 loss_aversion 的关系：禀赋效应常被解释为把放弃拥有物编码为损失。
+  core_claim: 拥有状态本身提高物品的主观估值，买卖价差（WTA-WTP gap）是稳健的实验现象。
+  mechanism: 拥有使放弃被编码为损失（损失侧权重更大）；拥有物与自我概念融合，抬高情感价值；参照点因拥有而移动。实验范式（随机赠与马克杯后测买卖意愿）控制了选择效应，支持估值而非筛选的解释（S01、S12）。
+  causal_chain: 获得拥有状态 → 参照点移动+自我关联 → 放弃被编码为损失 → 估值上升（WTA>WTP）
+  variables:
+    inputs:
+    - 拥有状态
+    - 持有时长
+    - 拥有物与自我的关联度
+    moderators:
+    - 物品可替代性
+    - 交易经验
+    - 物品的情感与身份意义
+    mediators:
+    - 损失编码
+    - 自我延伸
+    - 参照点移动
+    outputs:
+    - WTA-WTP 价差
+    - 退货率下降
+    - 收藏品溢价
+  evidence:
+    supporting:
+    - Kahneman、Knetsch 与 Thaler 1990 马克杯交易实验（经典实验）
+    - 消费与收藏领域的多次重复（S12 综述）
+    conflicting:
+    - 市场经验丰富者与可替代商品的禀赋效应较弱；部分研究提示注意力与交易惯例的角色（边界研究）
+    - S129（Gal & Rucker 2018）：经典马克杯范式或可由惯性/现状维持而非损失敏感解释（替代解释）
+    replication:
+    - 多国、多品类复制稳健。评级按枚举记 A（A- 水平）
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 对有实物/数字载体的可持有物最明显；纯服务体验较弱
+  - 拥有需被感知（领到、配置、定制）而非仅登记
+  - 价值明确/为转售持有则效应消失（代币券 V/V*=1.0）
+  failure_conditions:
+  - 高频交易者对标准化商品估值接近无偏
+  - 拥有体验差（加载失败、客服恶劣）时拥有感崩塌
+  common_misinterpretations:
+  - 把禀赋效应等同于『敝帚自珍』的性格描述；它是估值层面的系统偏移，有明确实验范式
+  ethical_risks:
+  - 制造虚假拥有感（预装、默认拥有）再以失去威胁促成续费
+  examples:
+    original_cases:
+    - Nudge（S11）与 Misbehaving（S12）中的马克杯与拥有感讨论
+    research_cases:
+    - 马克杯随机赠与实验系列
+    modern_cases:
+    - 免费试用期的数据积累、游戏皮肤与虚拟装扮、定制商品高退货心理成本
+  communication_implications: 让用户在付费前『拥有』一部分（试穿的虚拟形象、已导入的数据、可配置的空间），提高留存与升级意愿。
+  community_implications: 让成员产出可累积的痕迹（作品集、等级、纪念墙），拥有感即沉没的关系资产。
+  content_applications:
+    body: 教程让用户在第一课就产出署名作品，制造早期拥有感
+    cta: 『这份数据已经属于你，带走它只需一步』
+  platform_implications: 平台的迁移成本设计本质是禀赋效应的工程化（数据、创作、关系）；数据可携带性监管是对其的制度制衡。
+  related_nodes:
+  - loss_aversion
+  - status_quo_bias
+  - mental_accounting
+  - sunk_cost_fallacy
+  source_ids:
+  - S01
+  - S12
+  - S131
+  - S129
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015《Misbehaving》（S12，禀赋效应：拥有→估值上升）+ Kahneman 2011（S01，损失厌恶框架）
+    effect_size: 拥有同一物品后的估值提升（经典实验，方向稳定）
+    replication_status: 禀赋效应为行为经济学最稳健发现之一（Kahneman/Knetsch/Thaler 传统）
+    context_dependency: 所有权/参照点/交易情境调制；非市场背景效应减弱
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S12
+    - S131
+    supporting_evidence:
+    - S01
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-025
+    - CASE-BRD-030
+    - CASE-PLT-029
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: mental_accounting
+  canonical_name_en: Mental Accounting
+  canonical_name_zh: 心理账户
+  aliases:
+  - 心理账户
+  - mental budgeting
+  - 享乐编辑
+  domain: behavioral_economics
+  definition: 心理账户（Thaler，1985/1999）指人们把金钱按来源与用途分入不同心理账户，分别评估，违背货币的可替代性：奖金与工资『不同值』，『旅行基金』不能挪作房租。相关推论是享乐编辑（hedonic
+    editing）：人们偏好分离收益、合并损失的编排方式。与 gain_loss_framing 的区别：框架效应是选择问题的表述效应，心理账户是持续的认知分账结构。
+  core_claim: 等额金钱因心理账户归属不同而被差别对待，分账结构系统性地影响消费与储蓄行为。
+  mechanism: 分账简化自我控制与预算追踪（每笔钱有用途标签），代价是牺牲可替代性；账户的开启与关闭伴随情绪规则（享乐编辑：小额收益分开花更快乐，损失合并报更不痛）；来源标签（意外之财、血汗钱）改变其『该花在什么上』的预期（S12、S01）。
+  causal_chain: 收入/支出被贴账户标签 → 账户规则约束使用 → 违背可替代性的消费/储蓄行为 → 整体财务结果偏移
+  variables:
+    inputs:
+    - 收入来源标签
+    - 支出类别
+    - 支付与获得的时间分离度
+    moderators:
+    - 自我控制需求
+    - 家庭财务制度
+    - 金额大小
+    mediators:
+    - 账户归属
+    - 享乐编辑
+    - 预算松紧感知
+    outputs:
+    - 消费倾向
+    - 储蓄行为
+    - 支付疼痛
+  evidence:
+    supporting:
+    - Thaler 1985/1999 的理论化与系列实验（经典研究，S12 综合）
+    - 消费行为中来源效应与预算效应的多项观察（S12）
+    conflicting:
+    - 高财务素养与预算工具使用者更接近可替代性假设；账户边界可被教育松动（边界研究）
+    replication:
+    - 方向稳健，但强度受金融环境与个体差异调节。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 对自我控制的主动需求越高，分账越严格
+  - 金额越大或越应急，账户边界越易被打破（例外支取）
+  - 预先支付产生支付解耦（payment decoupling）：购买与消费感受分离，消费时支付疼痛减弱，易导致超支（S132）
+  failure_conditions:
+  - 在流动性危机中所有账户合流，标签失效
+  - 完全自动化的财务管理使账户标签失去感知
+  common_misinterpretations:
+  - 把心理账户当成纯营销话术；它首先是家庭财务的微观结构，营销只是借用其标签机制
+  ethical_risks:
+  - 用『专款专用』话术诱导非必要支出（『这是给孩子的教育金，别动它』式的操控性分账）
+  examples:
+    original_cases:
+    - Misbehaving（S12）中的酒窖、演出票等心理账户案例
+    research_cases:
+    - Thaler 的心理账户理论论文与实验
+    modern_cases:
+    - 红包/补贴/返现的差异化使用、专项储蓄罐产品、『一顿火锅钱』式定价话术
+  communication_implications: 把价格换算到受众的『小钱账户』（每天一杯咖啡钱）降低支付疼痛，但要防止误导总成本。
+  community_implications: 社群基金、积分与现金的分离本身就是心理账户设计：给不同货币不同用途与仪式，减少兑换套利。
+  content_applications:
+    title: 把价格锚进低敏感账户：『每天不到一杯奶茶钱』
+    body: 为产品设定用途标签（学习基金、自我投资），引导归户
+  platform_implications: 支付产品的钱包分层（零钱、理财、心愿单）是心理账户的产品化；补贴以独立账户形式发放留存更久。
+  related_nodes:
+  - gain_loss_framing
+  - sunk_cost_fallacy
+  - endowment_effect
+  - anchoring_effect
+  source_ids:
+  - S12
+  - S01
+  - S132
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，心理账户：来源标签不同→消费行为不同）+ Thaler 1985（S132，心理账户奠基：非替代性/享乐编辑）+ Kahneman
+      2011（S01）
+    effect_size: 账户隔离导致对等金额的边际消费倾向不同（经典思想实验与实验）
+    replication_status: 心理账户现象多情境重复（消费/投资/政策）
+    context_dependency: 账户标签显性度/自我控制目标调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S12
+    - S132
+    supporting_evidence:
+    - S01
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-002
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: gain_loss_framing
+  canonical_name_en: Gain-Loss Framing
+  canonical_name_zh: 收益-损失框架
+  aliases:
+  - 得失框架
+  - risky choice framing
+  - 亚洲疾病问题
+  domain: behavioral_economics
+  definition: 收益-损失框架指同一期望值的问题因被表述为『救活多少人』或『死去多少人』而翻转风险偏好：收益框架下风险规避、损失框架下风险寻求（Tversky 与 Kahneman 1981
+    的亚洲疾病问题是经典）。与相邻节点的分工：loss_aversion 是价值函数性质（为什么损失重），本节点是选择问题表述层（参照点如何被措辞移动）；A3 的 framing_effects 是传播/说服层的讯息框架（强调框架与等价框架），本节点属于行为决策层的等价框架（equivalence
+    framing）与目标框架。Levin、Schneider 与 Gaeth 1998 的三分类（风险选择/属性/目标框架）可用于精确归位。
+  core_claim: 以收益或损失措辞同一事实，会移动参照点并翻转受众的风险偏好。
+  mechanism: 措辞建立参照点：『救活』把现状设为全员死亡、结果被编码为得；『死去』把现状设为全员存活、结果被编码为失；价值函数损失侧更陡导致损失框架下人们愿意冒更大风险求翻盘（S01、S12）。健康传播研究（Rothman
+    与 Salovey 方向）显示预防行为宜用收益框架、检测行为宜用损失框架。
+  causal_chain: 收益/损失措辞 → 参照点设定 → 结果被编码为得/失 → 风险偏好翻转 → 选择差异
+  variables:
+    inputs:
+    - 措辞的参照点
+    - 结果的确定性结构
+    - 行为类型（预防/检测/治疗）
+    moderators:
+    - 议题卷入度
+    - 受众情绪状态
+    - 数值透明度
+    mediators:
+    - 参照点编码
+    - 风险感知
+    outputs:
+    - 选项选择
+    - 行为接受率
+    - 政策偏好
+  evidence:
+    supporting:
+    - Kahneman 与 Tversky 1979 前景理论的反射效应与分离效应：问题表述移动参照点即翻转风险偏好（S113，机制级证据）
+    - 命名经典研究（Tversky 与 Kahneman 1981 亚洲疾病问题、Levin 等 1998 三分类、Rothman-Salovey 健康框架）未建证据包，方向性转述
+    conflicting:
+    - 对专家与高卷入受众效应减弱；数值都给出时效应缩小（边界研究）
+    replication:
+    - 经典范式方向稳健，效应量随内容域变化。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 结果含风险成分（概率性结局）时最典型
+  - 受众未同时看到两种表述（一旦对照，效应消失且显得操纵）
+  failure_conditions:
+  - 决策者计算期望值并核对数值后
+  - 高风险议题中受众对措辞操纵保持警觉时
+  common_misinterpretations:
+  - 把收益-损失框架与 A3 的强调框架混为一谈：前者改参照点翻风险偏好，后者选侧面塑态度，机制不同
+  - 以为损失框架永远更有力；预防类行为上收益框架更优
+  ethical_risks:
+  - 只呈现单侧框架隐瞒等价信息（如隐藏风险数值）构成误导性呈现
+  examples:
+    original_cases:
+    - Thinking, Fast and Slow（S01）中的亚洲疾病问题讨论
+    research_cases:
+    - Tversky 与 Kahneman 1981 框架实验；健康讯息框架系列研究
+    modern_cases:
+    - 保险文案的『守护』（收益）vs『裸奔风险』（损失）对照；体检推广用检测率话术
+  communication_implications: 先判断行为类型再选框架：鼓励坚持性预防行为用收益框架，促进筛查与止损行为用损失框架，并保持数值透明。
+  community_implications: 社群危机沟通用收益框架（『已完成 80% 的保护措施』）维持稳定，止损动员才用损失框架。
+  content_applications:
+    title: 同一数据两版标题测试：『多赚 20%』vs『少亏 20%』，按行为目标选
+    body: 正文同时给出等价数值，用框架定基调而非隐藏信息
+  platform_implications: 广告平台的框架 A/B 测试能力使该机制被大规模优化；透明度规范要求关键数值不受框架隐藏。
+  related_nodes:
+  - loss_aversion
+  - framing_effects
+  - emphasis_vs_equivalence_framing
+  - mental_accounting
+  - fear_appeals_eppm
+  source_ids:
+  - S01
+  - S12
+  - S113
+  - S205
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，框架与心理账户应用）+ Kahneman & Tversky 1979（S01/S113，得失不对称）
+    effect_size: 等值信息因得失框架呈现产生不同选择（经典框架效应）
+    replication_status: 框架效应广泛复制；损失厌恶系数有元分析（Camerer 2024）
+    context_dependency: 受众卷入度/信息呈现顺序调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S205
+    - S113
+    supporting_evidence:
+    - S01
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: present_bias
+  canonical_name_en: Present Bias
+  canonical_name_zh: 现时偏差
+  aliases:
+  - 现时偏误
+  - 双曲贴现
+  - hyperbolic discounting
+  - β-δ 模型
+  domain: behavioral_economics
+  definition: 现时偏差指相对于『现在』的时间点，人们系统性地过度贴现近期与远期之间的权衡：今天与明天的差异被放大，而第 100 天与第 101 天几乎无差异（准双曲/β-δ 贴现结构，Laibson
+    等的形式化）。O'Donoghue 与 Rabin 进一步区分天真型（naïve，低估自己未来的现时偏差）与老练型（sophisticated，会用承诺装置）。与 immediate_vs_delayed_rewards
+    的关系：该节点是跨期决策的经济学形式化层，后者是奖励价值结构层。
+  core_claim: 时间贴现不恒定：临近当下的贴现率陡峭，导致计划与执行系统性脱节，且多数人低估自己的偏差（天真型）。
+  mechanism: 近期选项的感官可得性与竞争直接挤占远期价值表征；准双曲结构使『以后的我』承担计划成本而『现在的我』享受即时收益，产生自控的代际冲突；天真型因此不断重签计划而不执行，老练型采用承诺装置（锁定、罚款、公开承诺）对冲（S12、S11）。
+  causal_chain: 奖励临近 → 贴现率陡增 → 即时替代选项胜出 → 计划-执行脱节 →（老练者）使用承诺装置纠偏
+  variables:
+    inputs:
+    - 奖励时间结构
+    - 即时替代可得性
+    - 承诺装置可及性
+    moderators:
+    - 自我觉察（天真/老练）
+    - 奖励规模
+    - 环境稀缺状态
+    mediators:
+    - 贴现率的时间结构
+    - 对未来自我的认同
+    outputs:
+    - 计划完成率
+    - 储蓄与健康行为
+    - 拖延频率
+  evidence:
+    supporting:
+    - 双曲贴现的动物与人类实验证据（Ainslie 方向）与 Laibson 的准双曲形式化（S12 综合）
+    - Thaler 与 Benartzi『明天多储蓄』计划的现场成功（承诺装置应用）
+    conflicting:
+    - Andreoni 与 Sprenger 的凸时间预算实验在特定设计下现时偏差证据有限，提示任务形式影响其显现（方法学争议）
+    replication:
+    - 计划-执行脱节与承诺需求的现象广泛记录；β-δ 作为精确参数模型仍有争议。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 选择涉及真实的跨期权衡且即时替代存在时最强
+  - 对习惯化行为与情境剧变后的新计划尤其明显
+  failure_conditions:
+  - 把所有拖延归因现时偏差（动机不足、任务设计问题同样致拖延）
+  - 承诺装置被绕过成本低（随时可解除）时失效
+  common_misinterpretations:
+  - 把现时偏差当道德缺陷（懒）；它是贴现结构问题，设计与制度干预（默认、承诺）比说教有效
+  ethical_risks:
+  - 金融产品反向利用现时偏差（先享受后重付的隐性负债结构）
+  examples:
+    original_cases:
+    - Misbehaving（S12）中的储蓄与自控章节；Nudge（S11）中的『明天多储蓄』案例
+    research_cases:
+    - Ainslie 的贴现实验传统；『明天多储蓄』计划的评估研究
+    modern_cases:
+    - 会员年费打折 vs 月费、付费打卡承诺金、『先上课后付费』的教育分期
+  communication_implications: 把远期收益转译为当下可见的小反馈，并提供可自选的承诺装置（押金打卡、公开进度），尊重自主同时降低偏差成本。
+  community_implications: 社群挑战用群体承诺与固定时间锚对冲个体现时偏差；押金制需透明退还规则。
+  content_applications:
+    title: 把长期目标切成『今天可见』的里程碑标题
+    cta: 『现在锁定位子，开课前可全额退』——承诺装置+低后悔路径
+  platform_implications: 平台的 streak、冻结奖励等机制是现时偏差的制度化对冲；反向设计（先甜后苦的订阅结构）则成为消费者保护议题。
+  related_nodes:
+  - immediate_vs_delayed_rewards
+  - scarcity_mindset
+  - default_option_effect
+  - mental_accounting
+  - goal_setting_effectiveness
+  source_ids:
+  - S12
+  - S11
+  - S132
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，planner-doer 自控模型/现时偏好）+ Thaler & Sunstein 2008（S11，默认与承诺装置）
+    effect_size: 即时收益贴现率高于延迟收益（双曲线贴现经典）
+    replication_status: 现时偏差为行为经济学稳健发现（贴现实验传统）
+    context_dependency: 承诺装置/退出成本/诱惑显性调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S12
+    supporting_evidence:
+    - S11
+    last_verified: 2026-09
+    case_sources:
+    - CASE-FAL-004
+    - CASE-FAL-005
+    - CASE-FAL-006
+    - CASE-FAL-021
+    - CASE-FAL-022
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: fairness_preferences
+  canonical_name_en: Fairness Preferences
+  canonical_name_zh: 公平偏好
+  aliases:
+  - 公平感
+  - 不平等厌恶
+  - inequity aversion
+  - 最后通牒博弈
+  domain: behavioral_economics
+  definition: 公平偏好指人们愿意付出自身成本惩罚不公平：最后通牒博弈中提案者分出过低份额会被拒绝（双方皆空），Güth 等 1982 的经典实验确立了这一『非自利』行为；Fehr 与 Schmidt
+    1999 的不平等厌恶模型将其形式化。公平感是社会规范（S27）与互惠规范（A3）的决策基础，也是定价与分配行为的红线传感器。
+  core_claim: 人们为拒绝不公平分配愿意牺牲自身利益，公平阈值跨越即触发惩罚行为。
+  mechanism: 公平分配涉及多重规范（平等、按贡献、按需要）的情境权重；被不公平对待激活愤怒与惩罚动机（与互惠规范相通），即使惩罚无利可图；公平判断参照本地规范与历史，跨文化阈值差异显著（Henrich
+    等的跨社会研究）；第三方惩罚扩展该偏好至非当事者（S12、S27）。
+  causal_chain: 分配结果低于公平阈值 → 不公平感与愤怒 → 自损式惩罚/拒绝 → 规范执行信号扩散
+  variables:
+    inputs:
+    - 分配比例
+    - 分配规则透明度
+    - 双方关系与身份
+    moderators:
+    - 文化规范
+    - 惩罚成本
+    - 是否可匿名报复
+    mediators:
+    - 不公平感
+    - 愤怒与惩罚动机
+    - 规范期望
+    outputs:
+    - 拒绝率
+    - 惩罚行为
+    - 口碑报复（差评、抵制）
+  evidence:
+    supporting:
+    - Güth 等 1982 最后通牒实验（经典实验）
+    - Fehr 与 Schmidt 1999 不平等厌恶模型及大量后续实验；Henrich 等跨社会比较（实验与田野研究）
+    conflicting:
+    - 跨文化阈值差异大；高匿名、高关系距离下自利行为增强，公平偏好的普适强度有边界（研究观察）
+    replication:
+    - 拒绝低额分配在多数文化中重复；强度与规范情境高度相关。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 当事方在关系与声誉约束下（可被记住）公平执行最强
+  - 分配规则被预先接受并透明时，不均结果可被容忍（程序公平缓冲）
+  failure_conditions:
+  - 完全匿名的市场交易中，公平约束主要靠品牌与制度承载
+  - 把惩罚成本抬高到超出群体承受后，惩罚行为衰减
+  common_misinterpretations:
+  - 把公平偏好等同于平均主义；人们接受按贡献与规则产生的差距，敏感的是规则被暗改
+  ethical_risks:
+  - 大数据杀熟、差别定价被曝光后触发集体公平惩罚（抵制、舆情），远超短期收益
+  examples:
+    original_cases:
+    - Misbehaving（S12）中的最后通牒与独裁者博弈讨论；Grammar of Society（S27）的规范基础
+    research_cases:
+    - 最后通牒博弈实验传统；Henrich 等的跨文化公平实验
+    modern_cases:
+    - 老用户价格更高被曝光的舆情；平台抽成争议；社群资源分配规则的公平性讨论
+  communication_implications: 涨价、改规则需提前公告理由并保持程序透明——程序公平能容纳结果不均，暗改则触发惩罚。
+  community_implications: 社群规则变更走公示与征求意见流程；奖励分配公示标准，公平感是社群信任的承重墙。
+  content_applications:
+    body: 涉及定价与规则的内容主动披露分配逻辑（钱去哪了、谁受益）
+    comments: 对公平质疑做公开、具体、可核查的回应，而非删除评论
+  platform_implications: 平台的排序与抽成规则是大规模分配机制；公平性争议（算法歧视、抽成）已成为治理与监管的常设议题。
+  related_nodes:
+  - reciprocity_norm
+  - norm_enforcement_reputation
+  - reciprocity_exchange_networks
+  - loss_aversion
+  source_ids:
+  - S12
+  - S27
+  - S178
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，社会偏好/公平交易）+ Fehr & Schmidt 1999（S178，不平等厌恶模型）+ Bicchieri 2006（S27，规范与公平）
+    effect_size: 不公平分配被拒绝/惩罚（最后通牒实验传统）
+    replication_status: 公平偏好跨文化重复（独裁者/最后通牒博弈）
+    context_dependency: 匿名性/文化规范/第三方视角调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S12
+    - S178
+    supporting_evidence:
+    - S27
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-CRS-011
+    - CASE-CRS-012
+    - CASE-CRS-017
+    - CASE-PLT-030
+    - CASE-PLT-033
+    - CASE-PLT-037
+    - CASE-PLT-042
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: nudge_mechanism
+  canonical_name_en: Nudge (Choice Architecture)
+  canonical_name_zh: 助推（选择架构）
+  aliases:
+  - 助推
+  - 选择架构
+  - choice architecture
+  domain: behavioral_economics
+  definition: 助推（Thaler 与 Sunstein，S11）指不禁止选项、不显著改变经济激励，通过调整选择架构（默认、排序、提示、框架、反馈）改变行为的方式。证据评级 C（按 EVIDENCE.md）：Maier
+    等 2022 对助推文献的元分析与发表偏差校正显示，校正后平均效应大幅缩水；默认类与提醒类工具相对稳健，效应按具体助推类型高度分化。它是伞形机制：default_option_effect 与 friction_reduction
+    是其证据最强的实例。
+  core_claim: 重构选择架构可以改变行为，但平均效应远小于早期文献宣称；有效性集中于少数工具（默认、提醒、简化）与具体情境。
+  mechanism: 助推利用直觉加工的默认倾向与低成本通道（与 dual_process_theory 相通），在不改变选项集的前提下移动行为分布；Maier 等 2022 的再分析表明原始文献存在发表偏差，小样本强效应在校正后收缩，『助推万能』的叙事不成立；机构级大规模应用（各国行为洞察团队）提供了政策现场的混合证据（S11、S20）。
+  causal_chain: 调整选择架构（默认/排序/提示/框架/简化） → 直觉加工走低成本通道 → 行为分布移动（幅度因工具与情境而异）
+  variables:
+    inputs:
+    - 工具类型（默认/提醒/框架/简化/社会比较反馈）
+    - 行为类型
+    - 实施者可信度
+    moderators:
+    - 行为的既有习惯强度
+    - 受众异质性
+    - 透明度与正当性感知
+    mediators:
+    - 注意引导
+    - 摩擦变化
+    - 规范信号
+    outputs:
+    - 目标行为率
+    - 效应量（分化大）
+    - 公众信任
+  evidence:
+    supporting:
+    - Nudge（S11）的理论体系与政策应用；各国行为洞察团队的大规模现场试验积累（S20）
+    - 默认选项等具体工具的多项稳健研究（见 default_option_effect 节点）
+    conflicting:
+    - Maier 等 2022：元分析与发表偏差检验后，助推的平均效应大幅缩水，仅部分工具保持有效（EVIDENCE.md 定级 C 的依据）
+    replication:
+    - 作为伞形概念的平均效应不可靠；应按具体工具（默认、提醒、简化）分别评估。评级按枚举记 C
+    meta_analysis:
+    - Maier 等 2022 是助推文献的关键再评估；早期元分析结论需带发表偏差校正解读
+  evidence_grade: C
+  boundary_conditions:
+  - 对低卷入、低习惯强度的行为最有效
+  - 需配合透明的伦理框架（可察觉、可拒绝、可低成本退出）
+  failure_conditions:
+  - 对强动机冲突或结构性障碍问题（收入不足），助推只能边缘修补
+  - 助推被识破为操纵后触发反弹与信任损耗
+  common_misinterpretations:
+  - 『助推=行为经济学万能杠杆』：再分析已显著下修其平均效力
+  - 把一切设计改动都称助推；改变选项集或激励的干预不属于此定义
+  ethical_risks:
+  - 不透明的助推滑向操纵（暗黑模式）；合法性依赖『容易察觉、容易退出』的透明性标准
+  examples:
+    original_cases:
+    - Nudge（S11）中的 cafeteria 摆放、器官捐献默认、Save More Tomorrow 案例群
+    research_cases:
+    - 各国行为洞察团队的现场试验；Maier 等 2022 的再评估
+    modern_cases:
+    - App 的健康提醒、绿色能源默认套餐、订阅流程的合规化改造
+  communication_implications: 内容行动设计优先选用证据最稳的子工具（默认、简化、提醒），并对受众透明说明『为什么这样默认』。
+  community_implications: 社群把期望行为（发言规范、活动报名）做成默认与简化路径，同时保留明显退出选项，防止 nudging 滑向 coercing。
+  content_applications:
+    cta: 默认勾选理想选项并显式展示修改入口，附一句透明说明
+    body: 把行动说明压缩到三步以内，删除非必要表单字段
+  platform_implications: 平台是最大的选择架构师；助推平均效应的缩水提示平台治理应把透明性与用户控制权纳入设计审计。
+  related_nodes:
+  - default_option_effect
+  - friction_reduction
+  - social_proof
+  - descriptive_injunctive_norms
+  - choice_overload
+  source_ids:
+  - S11
+  - S20
+  - S12
+  - S108
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Maier et al. 2022 PNAS（S108 已实读 PMC 全文）：RoBMA 校正发表偏倚后无 nudge 有效性稳健证据
+    effect_size: 校正后无证据（Egger b=2.10 判定为严重偏倚；BF01>1 支持零假设）
+    replication_status: 存在同行回应（Szaszi 2022 支持；Mertens 2022 Reply 反对），证据仍具争议
+    context_dependency: 平均无证据 ≠ 具体 nudge 无效；应按具体干预类型/领域评估
+    downgrade_upgrade_reason: 2026-09 补充一手复核证据全文（S108，full_text），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；EVIDENCE.md
+      nudge→C 获一手全文级支撑
+  provenance:
+    primary_sources:
+    - S108
+    supporting_evidence:
+    - S11
+    - S12
+    last_verified: 2026-09
+    case_sources:
+    - CASE-FAL-021
+    - CASE-FAL-022
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: sunk_cost_fallacy
+  canonical_name_en: Sunk Cost Fallacy
+  canonical_name_zh: 沉没成本谬误
+  aliases:
+  - 沉没成本效应
+  - 沉没成本偏误
+  - escalation of commitment（相邻）
+  domain: behavioral_economics
+  definition: 沉没成本谬误指决策被已投入且不可回收的成本（钱、时间、精力）不当影响：已投入越多，越倾向继续投入，即使前瞻期望为负。Arkes 与 Blumer 1985 的剧场票与消费实验是经典证据；Staw
+    的承诺升级（escalation of commitment）研究揭示了组织层面的放大机制。与 commitment_escalation（A3）的分工：该节点是决策层的成本-继续机制，A3 节点偏组织与承诺行为的自我辩护面。
+  core_claim: 理性决策应只看前瞻成本收益，但实际决策中不可回收的过往投入系统性地推高继续投入的概率。
+  mechanism: 已投入成本改变参照点并使继续投入的损失看似『避免浪费』（损失编码是候选解释之一而非唯一解释）；终止意味着承认先前决策错误，触发自我正当化与形象保护（与 commitment_escalation
+    相通）；心理账户把已支出金额挂在『未完成项目』账户，关闭账户产生确认损失的痛感（S12、S01）。Sweis 等 2018 的研究发现小鼠与大鼠在觅食任务中也表现出沉没成本敏感性，提示其有深层决策架构根源。
+  causal_chain: 已投入不可回收成本 → 参照点改变+自我正当化 → 继续投入的主观价值上升 → 加倍投入/拒绝止损
+  variables:
+    inputs:
+    - 已投入金额/时间/身份
+    - 剩余完成距离
+    - 责任归属
+    moderators:
+    - 是否公开决策
+    - 沉没成本的可视化
+    - 替代选项的清晰度
+    mediators:
+    - 浪费厌恶
+    - 自我正当化需求
+    - 账户关闭痛感
+    outputs:
+    - 继续投入概率
+    - 止损延迟
+    - 资源错配
+  evidence:
+    supporting:
+    - Arkes 与 Blumer 1985 的剧场票、滑雪等实验（经典实验）
+    - Staw 1976 起的承诺升级研究传统（组织情境）
+    conflicting:
+    - 效应强度受情境与责任归因调节；部分研究者指出实验室外难以分离沉没成本与其他机制（方法学边界）
+    - Gal 与 Rucker（S129）：沉没成本等被归因损失厌恶的现象与损失-收益比较无关，系错误归因（替代解释）
+    replication:
+    - 方向在人类实验与动物觅食研究中均有记录（Sweis 等 2018 方向），幅度因情境而异。评级按枚举记 B
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 沉没成本需被决策者显性感知且与当前决策同账户
+  - 责任归属明确（自己拍板的项目）时最强
+  failure_conditions:
+  - 成本由他人承担或已匿名化时减弱
+  - 有制度化的止损规则（预设退出点）被严格执行时
+  common_misinterpretations:
+  - 把『贵的东西更舍不得扔』全归因沉没成本；禀赋效应与情感依附同样参与
+  ethical_risks:
+  - 产品设计故意累积用户沉没投入（不可导出的数据、连续打卡）以提高退出成本
+  examples:
+    original_cases:
+    - Misbehaving（S12）中的剧场票与项目续投案例
+    research_cases:
+    - Arkes 与 Blumer 1985 实验；Staw 的升级承诺实验
+    modern_cases:
+    - 烂尾项目的追加预算、办卡未用反而续卡、看烂片坚持看完
+  communication_implications: 帮用户决策时把沉没与前瞻分开呈现（『已花的不算，从现在看哪个划算』）；续费文案反向利用该机制需守伦理边界。
+  community_implications: 社群项目设预设止损点与外部评审，防止集体沉没成本绑架决策。
+  content_applications:
+    body: 内容提供『止损检查清单』：哪些成本已沉没、继续的唯一理由是什么
+    cta: 『已经投入 3 周？先做 5 分钟复盘再决定，别让过去替你投票』
+  platform_implications: 平台的成长体系与连续签到把沉没成本做成留存机制；跨平台数据可携带性是制度层面的对冲。
+  related_nodes:
+  - commitment_escalation
+  - loss_aversion
+  - mental_accounting
+  - endowed_progress_effect
+  - endowment_effect
+  source_ids:
+  - S12
+  - S01
+  - S131
+  - S129
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Thaler 2015（S12，沉没成本与续投陷阱）+ Kahneman 2011（S01，损失厌恶解释）
+    effect_size: 已投入使继续投入倾向上升（经典决策偏差）
+    replication_status: 沉没成本谬误广泛复制（投资/项目/消费场景）
+    context_dependency: 投入可逆性/问责制/决策显性调制
+    downgrade_upgrade_reason: 2026-09 实取 S12 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S12
+    supporting_evidence:
+    - S01
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-002
+    - CASE-COM-029
+    - CASE-COM-031
+    - CASE-COM-089
+    - CASE-COM-091
+    - CASE-PLT-026
+  last_reviewed: 2026-09
+  knowledge_half_life: long

@@ -1,0 +1,25 @@
+# Evidence Package — S134 McMillan & Chavis 1986（Sense of Community）
+# 标准格式。access_level 如实标注。
+source_id: S134
+title: "Sense of Community: A Definition and Theory"
+authors: "David W. McMillan; David M. Chavis"
+year: 1986
+journal: "Journal of Community Psychology 14(1): 6-23"
+doi: "10.1002/1520-6629(198601)14:1<6::AID-JCOP2290140103>3.0.CO;2-I"
+url: "https://onlinelibrary.wiley.com/doi/10.1002/1520-6629(198601)14:1<6::AID-JCOP2290140103>3.0.CO;2-I"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "一手 Wiley 全文被安全验证（付费墙）拦截；实际内容取自 4 个独立来源交叉验证：①newton.com.tw 百科条目（四要素及其子构面详述）②MBA智库百科（同文）③chinaxiv 学术综述（池丽萍/辛自强《我国社区认同研究十年回顾与前瞻》，确认四要素中文对应及后续测量工具演进）④MDPI 期刊审稿往来文件（直接引用定义原文+四成分）；Semantic Scholar API 确认 DOI/作者/年份"
+research_question: "如何为社区感（psychological sense of community）给出操作化定义，并建立可检验的理论模型？"
+core_claims:
+  - "社区感定义：成员拥有归属感、成员间及成员与群体的相互重要感、以及经由彼此承诺满足成员需要的共享信念（a common belief that can satisfy the needs of members through the feeling of belonging, important feelings for each other and groups, and commitment to stay together）"
+  - "社区感由四要素构成：成员资格（membership，含边界/情感安全/个人投入/归属感与认同/共同符号体系五个子构面）、影响力（influence，成员影响群体与群体影响成员的双向权力关系）、需要的整合与满足（integration and fulfillment of needs，成员互赖与需求满足）、共享的情感联结（shared emotional connection，共享故事与历史）"
+  - "边界（boundaries）通过象征（语言、着装、仪式）区分成员与非成员，是成员资格的核心子构面；影响力被 McMillan & Chavis 视为社区感中最重要因素"
+  - "该四要素模型开创了社区感研究领域，成为后续社区感测量工具（44 项社区感测验、12 项社区感指数 SCI）的理论基础"
+method: "理论建构论文（综合 Sarason 1974 社区心理学传统与早期邻里研究，提出定义与四要素模型）"
+results: "提出四要素理论模型（membership / influence / integration & fulfillment of needs / shared emotional connection），成为社区感研究的领域基准"
+limitations: "理论提出时实证测量滞后；后续对社区感指数（SCI）的因素结构分析未完全证实四因素理论，各维度内部一致性不足（Chipuer & Pretty 1999；Long & Perkins 2003 修订为三因素简明版）"
+boundary_conditions: "适用于存在共同边界与互动的群体（邻里、组织、线上社群）；四要素的相对作用随社群性质、成熟度与成员构成变化"
+relevant_nodes: [sense_of_community, community_boundaries]
+notes: "Gate A 一手经典：社区感四要素理论源头。一手正文受 Wiley 付费墙限制，四要素与定义经 4 个独立来源交叉一致，未编造页码级细节。"
+last_verified: "2026-09"

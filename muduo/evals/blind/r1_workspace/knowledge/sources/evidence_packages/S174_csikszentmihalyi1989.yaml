@@ -1,0 +1,26 @@
+# Evidence Package — S174 Csikszentmihalyi & LeFevre 1989（Optimal Experience in Work and Leisure）
+# 标准格式。access_level 如实标注。
+source_id: S174
+title: "Optimal Experience in Work and Leisure"
+authors: "Mihaly Csikszentmihalyi; Judith LeFevre"
+year: 1989
+journal: "Journal of Personality and Social Psychology 56(5): 815-822"
+doi: "10.1037/0022-3514.56.5.815"
+url: "https://pubmed.ncbi.nlm.nih.gov/2724069/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed 完整摘要（PMID 2724069，含 ESM 方法与全部主要结果）+ NGDC OpenLB 记录页与 wanfangdata 医学期刊页交叉确认书目（JPSP 1989 May;56(5):815-22）+ 后续休闲研究文献（T&F 多篇）对 DOI 10.1037/0022-3514.56.5.815 的引用交叉"
+research_question: "日常体验质量更多由『人在工作还是休闲』决定，还是更多由『人是否处于心流（高挑战+高技能）』决定？工作与休闲各自在何种条件下产生最优体验？"
+core_claims:
+  - "用经验取样法（ESM）连续一周随机抽样 78 名成人工人的自我报告；核心问题是：体验质量更受『工作/休闲』情境影响，还是更受『是否处于心流（高挑战+高技能）』影响（PubMed 摘要原文）"
+  - "除放松与动机外，所有体验质量变量受心流状态的影响大于受『工作 vs 休闲』情境的影响（PubMed 摘要原文）"
+  - "绝大多数心流体验报告发生在工作时而非休闲时——挑战-技能平衡在工作情境更常见（PubMed 摘要原文）"
+  - "然而无论体验质量如何，人们在休闲时动机更高；但在工作中处于心流（而非冷漠 apathy）的个体报告了更积极的体验（PubMed 摘要原文）"
+  - "结论指向改善日常生活质量的路径：不是逃离工作去休闲，而是把挑战-技能平衡带入工作情境（摘要：implications for improving the quality of everyday life）"
+method: "经验取样法（Experience Sampling Method）：78 名成人工人佩戴信号器一周，随机时刻填写自我报告（情境、挑战、技能、情绪、动机等）；按工作/休闲 × 心流/非心流交叉分析体验质量变量"
+results: "心流（挑战-技能平衡）对体验质量的预测力超过工作/休闲情境本身；心流最常出现在工作中；休闲虽动机更高，但工作中进入心流的个体获得更多积极体验"
+limitations: "样本为芝加哥地区成人工人（非随机全国样本）；心流基于主观挑战/技能自评；单周取样；结果为相关性而非因果操纵（ESM 方法学局限）"
+boundary_conditions: "适用于有明确目标结构与即时反馈的任务情境（工作、技能活动）；对『休闲=最优体验』的直觉构成实证反证——休闲常处于低挑战低技能（冷漠）区；需任务具备可感知的挑战-技能张力（与 flow_state 节点机制一致）"
+relevant_nodes: [flow_state]
+notes: "flow_state 节点（B 级）的 ESM 一手实证：挑战-技能平衡预测最优体验、且工作比休闲更常产生心流——这两条发现均直接可溯源至 PubMed 摘要原文。"
+last_verified: "2026-09"

@@ -1,0 +1,26 @@
+# Evidence Package — S13 Mullainathan & Shafir 2013（Scarcity）
+# 标准格式。access_level 如实标注。
+source_id: S13
+title: "Scarcity: Why Having Too Little Means So Much"
+authors: "Sendhil Mullainathan; Eldar Shafir"
+year: 2013
+journal: Henry Holt / Allen Lane（专著）
+doi: "无 DOI（专著）"
+url: "https://www.supersummary.com/scarcity/summary/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：SuperSummary 逐章总结（带宽税/隧视野/专注红利/松弛 slack）+ 深度书评（13 IQ 点/甘蔗农/购物中心实验）+ 中文书评（带宽被占满/自增强循环）+ 豆瓣目录（5 章结构）"
+research_question: "稀缺（缺钱/缺时间/缺热量/缺社交）如何改变认知与决策？"
+core_claims:
+  - "稀缺捕获心智：无论缺钱/时间/热量/社交，稀缺都产生同一种心理（稀缺心态）——专注红利（focus dividend）+ 带宽税（bandwidth tax）+ 隧视野（tunneling）"
+  - "带宽税：稀缺消耗认知容量与执行控制（问题解决/冲动控制/长期规划），使同一人在稀缺时表现显著变差（甘蔗农收获前后差约 13 IQ 点）"
+  - "隧视野：稀缺窄化注意至紧迫目标，抑制对周边重要事项的觉察（消防员忘系安全带/借高利贷/跳过高免赔额）；短期高效、长期短视"
+  - "松弛（slack）：资源缓冲允许灵活决策与容错；稀缺消除松弛，使失败代价更沉重，形成『稀缺→短视→更稀缺』的恶性循环"
+  - "稀缺者成为本领域价值评估专家（对钱的判断更接近理性经济人）——代价是隧视野"
+method: "行为经济学研究综合（Mani 2013 甘蔗农+购物中心 + 实验室实验）+ 政策分析"
+results: "（理论+实证综合）稀缺/带宽税框架成为贫困与决策研究标准视角"
+limitations: "部分复制中效应缩水（EVIDENCE.md B/C）；外推到一般『忙』情境需谨慎"
+boundary_conditions: "稀缺需达捕获注意强度；对财务脆弱人群支持最强"
+relevant_nodes: [scarcity_mindset, attention_capacity_limits, immediate_vs_delayed_rewards, information_overload, working_memory_limits]
+notes: "scarcity_mindset 的奠基专著（book 级）；配套 S128（Mani 2013 Science）已登记。未编造：13 IQ 点/57% 等为公开数据。"
+last_verified: "2026-09"

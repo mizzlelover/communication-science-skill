@@ -1,0 +1,24 @@
+# Evidence Package — S107 Kramer 2014
+# 标准格式。access_level 如实标注。
+source_id: S107
+title: "Experimental Evidence of Massive-Scale Emotional Contagion Through Social Networks"
+authors: "Adam D. I. Kramer; Jamie E. Guillory; Jeffrey T. Hancock"
+year: 2014
+journal: PNAS 111(24), 8788-8790
+doi: "10.1073/pnas.1320040111"
+url: "https://www.pnas.org/doi/full/10.1073/pnas.1320040111"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "摘要全文（PNAS/ResearchGate）+ 正文关键方法段落（公开渠道）+ PNAS Editorial Expression of Concern 全文（伦理争议官方声明）"
+research_question: "情绪传染是否能在脱离面对面互动的情况下，在大型社交网络中大规模发生？"
+core_claims:
+  - "情绪状态可经情绪传染转移，实验证实无需面对面互动与非语言线索"
+  - "减少 News Feed 中积极表达时，用户产出更少积极帖子且更多消极帖子；减少消极表达时相反"
+  - "Facebook 大规模实验（约 68 万用户，摘要口径以原文为准）"
+method: "Facebook News Feed 情绪内容操纵实验（减少积极/消极内容），测量用户后续发帖的情绪词汇比例"
+results: "减少积极内容→用户积极词下降/消极词上升；减少消极内容→相反（摘要级）"
+limitations: "伦理争议：知情同意与退出机制（PNAS Editorial Expression of Concern 已公开）；效应量需原文核实；Facebook 平台专有数据"
+boundary_conditions: "适用于社交平台信息流情绪传染；伦理边界：大规模无明确同意干预的底线"
+relevant_nodes: [emotional_contagion, engagement_optimization_bias]
+notes: "伦理声明必须与结论并行引用（#74 synthetic/ethical 要求）。PNAS OA 全文页可用；substantial_excerpt 级读取。"
+last_verified: "2026-09"

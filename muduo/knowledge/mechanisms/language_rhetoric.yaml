@@ -1,4 +1,3 @@
-# language_rhetoric — 语言与修辞（Language & Rhetoric）：从亚里士多德三诉求到词语层面的说服效应
 domain: language_rhetoric
 nodes:
 - id: ethos_pathos_logos
@@ -157,6 +156,7 @@ nodes:
   - 受众非领域专家（抽象术语未内化）
   - 目标是理解、记忆、行动转化或传播保真
   - 具体细节与核心信息一致（具体但跑题的细节是 seductive details）
+  - 语域边界（REG-001 回归门修复 2026-09-11）：抽象框架词（协同/赋能/范式/生态）在内部战略文件、投资人材料等语境承担愿景对齐与野心信号功能，有另一套语用——公域获客传播的『要具体』纪律不可一刀切外推；诊断前先确认文本的发布场域
   failure_conditions:
   - 向专家受众过度解释（具体化被感知为降智）
   - 需要抽象迁移的教学目标（过度绑定具体案例）
@@ -218,6 +218,7 @@ nodes:
     case_sources:
     - CASE-BRD-002
     - CASE-BRD-014
+    - REG-001
     platform_sources:
     - generic:S1
     - generic:S2

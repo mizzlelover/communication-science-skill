@@ -1,0 +1,59 @@
+# Source Schema（来源登记）
+# Source ≠ Knowledge Node：来源只是证据，不直接构成知识。
+#
+# 研究诚信状态机（Found ≠ Researched · Cited ≠ Read · Read ≠ Validated）：
+#   research_status（获取-研究状态）:
+#     planned / found / acquired / read / annotated / validated / distilled
+#     metadata_only（仅登记元数据，未获取内容）
+#     memory_based（内容主张来自模型记忆，非实际获取）
+#     unverified（状态不明，按最差情况对待）
+#   只有 validated 及以上来源才能成为 Knowledge Core 的主要证据。
+#   access_level（实际获取深度）:
+#     full_text / substantial_excerpt / chapter / paper / author_public_material /
+#     abstract_only / review_only / metadata_only
+#   无全文时必须诚实降级（FULL TEXT NOT AVAILABLE），不得用模型记忆假装已读。
+type: object
+required: [source_id, title, authors, year, type, language, authority_level, access_status,
+           research_status, access_level]
+properties:
+  source_id:      {type: string,  pattern: "^S[0-9]{3}$", description: "永久唯一 ID，不可复用"}
+  title:          {type: string}
+  authors:        {type: string,  description: "分号分隔"}
+  year:           {type: number,  description: "出版/发布年份；古籍可为负数"}
+  research_status:
+    type: string
+    enum: [planned, found, acquired, read, annotated, validated, distilled,
+           metadata_only, memory_based, unverified]
+    description: "获取-研究状态；2026-09 全量审计完成"
+  access_level:
+    type: string
+    enum: [full_text, substantial_excerpt, chapter, paper, author_public_material,
+           abstract_only, review_only, metadata_only]
+    description: "实际获取深度；与 access_status（可获得性）区分"
+  evidence_package:
+    type: object
+    description: "正式来源的 Evidence Package（）；metadata_only 阶段可缺省"
+    properties:
+      content_obtained:   {type: string}
+      research_question:  {type: string}
+      core_claims:        {type: array, items: {type: string}}
+      evidence:           {type: array, items: {type: string}}
+      limitations:        {type: array, items: {type: string}}
+      boundary_conditions: {type: array, items: {type: string}}
+      relevant_nodes:     {type: array, items: {type: string}}
+      quotes_or_notes:    {type: array, items: {type: string}}
+      commercial_bias_note: {type: string, description: "潜在商业利益（课程/咨询/平台PR/品牌自报）；影响证据权重"}
+  type:
+    type: string
+    enum: [book, paper, meta_analysis, systematic_review, handbook, official_source, interview, textbook]
+  isbn:           {type: string,  description: "仅在可确证时填写；禁止编造"}
+  doi:            {type: string,  description: "仅在可确证时填写；禁止编造"}
+  url:            {type: string,  description: "仅在可确证时填写；禁止编造"}
+  language:       {type: string}
+  authority_level:
+    type: string
+    enum: [seminal, academic, handbook, textbook, practitioner]
+  access_status:
+    type: string
+    enum: [open, partial, verification_required]
+  notes:          {type: string,  description: "定位说明；core_30 标记"}

@@ -1,0 +1,26 @@
+# Evidence Package — S07 Damasio 1994（Descartes' Error）
+# 标准格式。access_level 如实标注。
+source_id: S07
+title: "Descartes' Error: Emotion, Reason, and the Human Brain"
+authors: "Antonio Damasio"
+year: 1994
+journal: Putnam（专著，2005 年修订版）
+doi: "无 DOI（专著）"
+url: "https://www.supersummary.com/descartes-error/summary/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：SuperSummary 全书结构与逐章摘要（三部分结构：Gage 病例引入与『Phineas Gage 矩阵』、躯体标记假说的提出（第 8 章正式定义）、皮肤电测试与赌博实验对假说的检验；Elliot 等腹内侧前额叶损伤患者智力完好但决策受损）+ Vanderbilt 大学课程文章（Gage 事故细节、躯体标记理论、皮肤电反应实验）+ 豆瓣长书评（『笛卡尔的错误』= 心智与身体/情绪分离的前提错误；无情绪则理性瘫痪；情绪是决策的快速过滤系统）+ datafield 教科书书目（腹内侧前额叶损伤患者智力完好但现实决策严重受损的临床证据）"
+research_question: "如果一个人逻辑完好却缺乏情绪，还能做出正常决策吗？理性真的独立于身体与情绪吗？"
+core_claims:
+  - "笛卡尔的错误在于把心智/理性与身体/情绪分离——该前提在神经科学层面错误，且在现实决策中是灾难性的"
+  - "躯体标记假说（somatic marker hypothesis）：身体状态与情绪被标记附着于特定情境/选项，决策时作为快速过滤与偏置信号，帮助在复杂不确定情境中缩小选项空间"
+  - "临床证据：Phineas Gage 与 Elliot 等腹内侧前额叶损伤患者智力、语言、逻辑推理完好，但情绪能力下降且无法做出有利决策、无法规划人生——理性需要情绪反馈才能正常运行"
+  - "赌博实验（Bechara 设计）：损伤患者持续选择高风险牌组、对负面后果短视（'myopia for the future'），对照组则发展出对坏牌组的预期性皮肤电反应而回避"
+  - "皮肤电测试：前额叶损伤患者能描述情绪性图片并知道应有何种情绪反应，但身体（自主神经）无法产生相应反应——初级与次级情绪分离的证据"
+method: "神经心理学专著：临床案例研究（Gage 矩阵）+ 实验验证（皮肤电反应、赌博任务，含对照组）"
+results: "（理论专著）躯体标记假说为情绪-决策研究奠基，赌博任务范式成为神经经济学与决策神经科学的标准工具"
+limitations: "躯体标记假说的机制细节（标记如何形成与加权）可证伪性有限；依赖小样本临床案例；情绪信号也可能被偏见与创伤污染，书中对『错误情绪』讨论不足"
+boundary_conditions: "躯体标记主要作用于不确定、复杂、需快速判断的决策场景；具备领域专业知识与核对时间时，情绪捷径可能让位于分析加工"
+relevant_nodes: [affect_heuristic, emotional_arousal]
+notes: "somatic_marker 节点在 mechanisms 中不存在，以 affect_heuristic（其机制段已引用 Damasio 躯体标记假说、source_ids 已含 S07）与 emotional_arousal 为锚。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

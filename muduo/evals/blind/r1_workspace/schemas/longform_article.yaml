@@ -1,0 +1,132 @@
+# Long-form Article Schema（长文分析状态与编辑产物）
+# 该 schema 描述两样东西：
+#   a) 长文诊断/优化过程中产生的结构化表示（论点图、概念注册表、编辑计划）
+#   b) 跨会话编辑状态文件 longform_state.yaml
+type: object
+required: [article_id, article_type, word_count, central_thesis, sections]
+properties:
+  article_id:  {type: string, pattern: "^LF-[A-Z0-9-]+$"}
+  article_type:
+    type: string
+    enum: [thought_leadership, research_analysis, management_consulting, educational, story_essay, platform_longform, video_transcript]
+    description: "六类长文 + 视频文字稿；不同类型优化侧重不同，禁用同一模板"
+  word_count:  {type: integer, minimum: 3000}
+  audience:    {type: string}
+  platform:    {type: string}
+  central_thesis:
+    type: string
+    description: "一句话回答：这篇文章究竟想让读者相信什么。抽不出来=结构问题 P0"
+  sections:
+    type: array
+    items:
+      type: object
+      required: [section_id, order, role, word_count, value_tag]
+      properties:
+        section_id:  {type: string}
+        order:       {type: integer}
+        title:       {type: string}
+        role:
+          type: string
+          enum: [hook, context, problem, thesis, explanation, theory, evidence, example, counterargument, synthesis, transition, recommendation, conclusion]
+          description: "章节功能标记"
+        claim:       {type: string, description: "本节核心主张（一句话）"}
+        word_count:  {type: integer}
+        value_tag:
+          type: string
+          enum: [ESSENTIAL, SUPPORTING, EXAMPLE, TRANSITION, OPTIONAL, REDUNDANT, OFF_TOPIC]
+          description: "Delete Test 结果：删掉这节读者损失什么"
+        cognitive_load:
+          type: string
+          enum: [LOW, MEDIUM, HIGH, VERY_HIGH]
+          description: "负荷标记；禁止连续 HIGH/VERY_HIGH 长段"
+        information_density:
+          type: string
+          enum: [LOW, MEDIUM, HIGH]
+          description: "新信息量/阅读成本；两极都要标记问题"
+        hooks:
+          type: object
+          properties:
+            entry:       {type: boolean, description: "承担 Entry Hook"}
+            continuation: {type: boolean, description: "节尾有 Forward Momentum"}
+        evidence_types: {type: array, items: {type: string}}
+        issues:      {type: array, items: {type: string}}
+  argument_map:     {type: string, description: "按 schemas/argument_map.yaml 结构化"}
+  concept_registry: {type: string, description: "按 schemas/concept_registry.yaml 结构化"}
+  reader_journey:
+    type: object
+    description: "五阶段（Entry 0-10% / Model Building 10-40% / Fatigue Zone 40-70% / Integration 70-90% / Closure 90-100%）逐阶段检查结果"
+    properties:
+      stage_findings: {type: array, items: {type: string}}
+      fatigue_risks:  {type: array, items: {type: string}}
+  long_range_coherence:
+    type: array
+    items:
+      type: object
+      properties:
+        type:       {type: string, enum: [open_question_resolution, promise_delivery]}
+        setup:      {type: string, description: "提出处（section_id）"}
+        payoff:     {type: string, description: "兑现处（section_id）；空=未兑现问题"}
+  editing_plan:
+    type: array
+    description: "结构压缩计划；删除标准是 Value/Cost 而非字数"
+    items:
+      type: object
+      required: [target, action, why, priority]
+      properties:
+        target:   {type: string, description: "section_id 或段落引用"}
+        action:   {type: string, enum: [Keep, Merge, Move, Cut, Rewrite, Expand]}
+        why:      {type: string}
+        priority: {type: string, enum: [P0, P1, P2, P3], description: "P0 未解决禁大量投入 P3"}
+  proposed_outline: {type: string, description: "Re-outline：原结构 vs 新结构 + 每项调整 WHY"}
+  scores:
+    type: object
+    description: "十四维评分（1-10，每维附一句原因）"
+    properties:
+      thesis_clarity:      {type: number}
+      argument_coherence:  {type: number}
+      structural_efficiency: {type: number}
+      evidence_strength:   {type: number}
+      cognitive_load:      {type: number}
+      information_density: {type: number}
+      narrative_momentum:  {type: number}
+      concept_consistency: {type: number}
+      reader_orientation:  {type: number}
+      trust:               {type: number}
+      memory:              {type: number}
+      actionability:       {type: number}
+      language_quality:    {type: number}
+      platform_fit:        {type: number}
+      reasons:             {type: array, items: {type: string}}
+  memory_anchors:
+    type: array
+    items: {type: string}
+    description: "读完后应记住的 3-5 件事（框架/关键词/对比/模型/结论句）"
+  # ---- 跨会话状态（longform_state.yaml 核心字段）----
+  longform_state:
+    type: object
+    properties:
+      completed_sections:  {type: array, items: {type: string}}
+      editing_decisions:   {type: array, items: {type: string}}
+      open_questions:      {type: array, items: {type: string}}
+      pending_issues:      {type: array, items: {type: string}}
+      # ---- §3b 走查结果落盘（跨会话修复闭环）----
+      ap_lf_hits:
+        type: array
+        description: "§3b 走查命中的 AP-LF 清单：编号 + 位置 + 检测信号；多轮修复期间只增不减（除非确认误报）"
+        items:
+          type: object
+          properties:
+            ap_id:    {type: string, pattern: "^AP-LF-[0-9]{3}$"}
+            location: {type: string, description: "section_id/段落引用"}
+            signal:   {type: string, description: "命中的检测信号"}
+      ap_lf_fixes:
+        type: array
+        description: "修复动作对账：每条命中对应的 action（六操作）+ 执行状态（done/pending/skipped+理由）"
+        items:
+          type: object
+          required: [ap_id, action, status]
+          properties:
+            ap_id:  {type: string, pattern: "^AP-LF-[0-9]{3}$"}
+            action: {type: string, description: "Keep/Merge/Move/Cut/Rewrite/Expand + 具体做法"}
+            status: {type: string, enum: [done, pending, skipped]}
+            note:   {type: string, description: "执行位置或跳过理由"}

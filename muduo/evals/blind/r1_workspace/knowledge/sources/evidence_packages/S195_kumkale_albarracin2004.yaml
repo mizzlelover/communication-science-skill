@@ -1,0 +1,25 @@
+# Evidence Package — S195 Kumkale & Albarracín 2004（睡眠者效应元分析）
+# 标准格式。access_level 如实标注。
+source_id: S195
+title: "The sleeper effect in persuasion: A meta-analytic review"
+authors: "G. Tarcan Kumkale; Dolores Albarracín"
+year: 2004
+journal: Psychological Bulletin, 130(1), 143-172
+doi: "10.1037/0033-2909.130.1.143"
+url: "https://doi.org/10.1037/0033-2909.130.1.143"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（Illinois 大学机构库 experts 页 + PubMed PMID 14717653 + Semantic Scholar 三处交叉）：对睡眠者效应（sleeper effect）可用判断与记忆数据的元分析。效应定义：当传播伴随折扣线索（discounting cue，如低可信来源）时，人们即刻被说服的程度低于其后随时间的说服——态度改变随时间不降反升。元分析结论（官方摘要原文）：①当信息论点与折扣线索都具强初始冲击时，接受折扣线索者的说服随时间上升（睡眠者效应出现）；②当接受者对信息有更高思考能力或动机、且折扣线索在信息之后呈现时，说服上升更强——条件性强，非普遍现象。历史脉络（neurolaunch 学术综述+元分析参考文献核实）：效应源于 Hovland 等 1949《Experiments on Mass Communication》二战宣传片研究、Hovland & Weiss 1951 四周实验确立（低可信组与高可信组态度四周后趋同）；1953 实验证明重新提示来源可使态度回落——分离假说（线索与内容记忆衰减不同步）；Gillig & Greenwald 1974 七实验未复现引发怀疑；Pratkanis 等 1988 十六实验确立可靠出现条件（注意论点+线索后置+即刻评来源可信度）"
+research_question: "低可信来源的信息是否会在折扣被遗忘后随时间获得说服力？在什么条件下可靠出现？"
+core_claims:
+  - "睡眠者效应条件性存在：信息论点与折扣线索都需强初始冲击——弱信息或弱线索下不出现（元分析核心结论）"
+  - "增强条件：接受者思考能力/动机更高 + 折扣线索后置于信息——ELM 框架下的精细加工调制（Priester 等 1999 整合）"
+  - "机制为分离假说：来源线索比论点内容遗忘更快；1953 年重新提示来源使态度回落（线索重建即折扣重建）"
+  - "历史怀疑被条件化解决：Gillig & Greenwald 1974 复制失败 → Pratkanis 1988 确立出现条件——效应真实但边界严格"
+method: "元分析（判断与记忆数据整合；按信息冲击/线索冲击/线索时序/思考能力动机分层）"
+results: "（元分析）睡眠者效应条件性成立——对『低可信来源信息终将失效』的直觉构成重要边界"
+limitations: "原始研究多为实验室短时程（数周）；效应量与调节的精确参数在摘要层面未给出；广告/政治传播的现场外推幅度有限"
+boundary_conditions: "仅当信息本身有强论点+线索强且后置时出现；重新激活折扣线索即消失；高可信来源无此效应（说服随时间正常衰减）"
+relevant_nodes: [sleeper_effect]
+notes: "sleeper_effect 节点『Hovland 延迟测量与 Kumkale & Albarracín 元分析一手 EP 均未建』标注的建包来源（元分析主包）。摘要为官方文本，未编造。"
+last_verified: "2026-09"

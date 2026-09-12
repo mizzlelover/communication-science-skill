@@ -76,6 +76,25 @@ python3 scripts/run_evals.py --input results.yaml
 - regression 100%；
 - 每次知识库/平台规则更新后重跑 regression + 受影响类别的 ≥5 案例做回归对比。
 
+## 5b. 外部盲测基线（2026-09-12 首轮 · 正式引用口径）
+
+- **执行**：R1 = gpt-5.6-luna（Codex 净室 `/Users/a1-6/muduo_r1_workspace`，仓库外物理隔离，
+  泄露自检 0）· R2 = Doubao Seed evolving（Trae，与 R1、知识库构建方均不同源）·
+  R3 = 主线程审计（隔离指纹测试 + 扣分裁定复核）；
+- **结果**：33 案分层抽样（pack_20260912_sample32，SHA 34857e224fd0）——
+  均分 **17.88/18**（29×18 + 4×17）· **红线 0** · theory_judgment 子集 2/2 ·
+  逐案留痕 `evals/blind/blind_results.yaml`（含每案 answer_summary 与扣分原因）；
+- **校准审计**：盲测 ≈ self-eval（+0.17）触发协议 §4 隔离审计——expected 短语指纹
+  1/33（LNG-001，词汇来自案例输入本身，非泄露）；结论：无泄露证据，分差归因于
+  SKILL 铁律与评测纪律同构 + R2 扣分口径严格（逐案有具体依据）；
+- **回归门**：REG-001 未过（缺第 4 条语用边界）→ 已回灌修复
+  （concreteness_in_language 补语域边界，provenance.case_sources += REG-001），
+  **单案重跑待执行**（R1 净室重答 + R2 复评）；回归 10/10 前不标注"回归满分"；
+- **引用口径**：对外可引用"外部双盲测 33 案、红线 0、均分 17.88/18（附校准审计）"；
+  self-eval 数字（208/208、17.71）降级为历史参考。
+
+详见 `evals/blind/report_20260912.md`。
+
 ## 6. 扩展规则
 
 新案例按现有 case 结构增补到对应类别文件；case_id 顺序编号不复用；

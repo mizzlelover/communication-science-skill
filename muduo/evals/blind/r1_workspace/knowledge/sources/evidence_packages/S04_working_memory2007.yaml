@@ -1,0 +1,26 @@
+# Evidence Package — S04 Baddeley 2007（Working Memory, Thought, and Action）
+# 标准格式。access_level 如实标注。
+source_id: S04
+title: "Working Memory, Thought, and Action"
+authors: "Alan D. Baddeley"
+year: 2007
+journal: Oxford University Press（专著，Oxford Psychology Series）
+doi: "10.1093/acprof:oso/9780198528012.001.0001"
+url: "https://global.oup.com/academic/product/working-memory-thought-and-action-9780198528012"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：OUP 官方出版页（完整目录 18 章：phonological loop/visuospatial sketchpad/central executive/episodic buffer 四成分章节 + 近因效应/个体差异/脑成像/社会行为/情绪（恐惧与渴望、抑郁）/意识与行动控制等应用章节；2009 BPS 图书奖）+ 科普中国·科学百科工作记忆综述（四成分结构、2000 年新增情景缓冲器、语音环约 1-2 秒衰减、Cowan 嵌套加工模型竞争）+ 复旦大学简答题详解（四成分定义与功能分工）+ 百度百科工作记忆词条（情景缓冲器补充动机：约 5 个不相关词 vs 约 16 个有语义词的差异）"
+research_question: "工作记忆的认知架构是什么？它如何与思考、语言、情绪与行动交互？"
+core_claims:
+  - "工作记忆是容量有限的临时存储与加工系统，支撑连贯思考的能力（Baddeley 与 Hitch 1970 年代初提出，取代单一短时存储观；本书为集大成更新卷）"
+  - "多成分架构：中央执行（注意控制与策略协调，不负责存储）+ 语音环（语音存储约 1-2 秒衰减 + 发音复述）+ 视空间模板（视觉与空间信息）+ 情景缓冲器（2000 年新增，跨通道整合绑定、与长时记忆相连）"
+  - "情景缓冲器的引入动机：原有三成分模型无法解释约 5 个不相关词 vs 约 16 个有语义词的可记性差异，需要跨通道整合的次级存储"
+  - "模型存在替代理论：Cowan 嵌套加工模型主张工作记忆是长时记忆中被临时激活的子集，而非独立存储系统"
+  - "模型的应用延伸：近因效应解释、个体差异、脑成像、社会行为、情绪（恐惧与渴望、抑郁）以及意识与多级行动控制"
+method: "认知心理学综合专著：多成分模型的实验证据（双任务、语音相似效应、词长效应）+ 神经心理学案例 + 脑成像研究的整合"
+results: "（模型综述）多成分工作记忆模型为认知心理学主导框架，2009 年获英国心理学会图书奖；语音环约 1-2 秒衰减，容量≈4±1 组块"
+limitations: "专著全文未获取（订阅），四成分结构与章节内容经 OUP 目录+多源中文综述交叉确认；模型本身有替代理论（Cowan 嵌入过程模型）"
+boundary_conditions: "工作记忆容量以组块计（与 Miller 7±2 有差异，现代估计≈4±1）；容量限制是认知负荷与信息过载的上游机制"
+relevant_nodes: [working_memory_limits, chunking, schema_formation, attention_capacity_limits, encoding_specificity, extraneous_cognitive_load, germane_load_learning, intrinsic_cognitive_load, serial_position_effect, spaced_repetition, testing_effect]
+notes: "S04 为本书正规图书登记。2026-09-09 同书重复登记 S116（同 DOI，摘要级）已并入本包（MERGED_INTO，见 S116 墓碑）。四成分模型为公开内容，未编造。"
+last_verified: "2026-09"

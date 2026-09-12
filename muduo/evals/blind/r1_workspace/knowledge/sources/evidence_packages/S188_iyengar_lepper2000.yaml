@@ -1,0 +1,25 @@
+# Evidence Package — S188 Iyengar & Lepper 2000（果酱实验）
+# 标准格式。access_level 如实标注。
+source_id: S188
+title: "When choice is demotivating: Can one desire too much of a good thing?"
+authors: "Sheena S. Iyengar; Mark R. Lepper"
+year: 2000
+journal: Journal of Personality and Social Psychology, 79(6), 995-1006
+doi: "10.1037//0022-3514.79.6.995"
+url: "https://doi.org/10.1037/0022-3514.79.6.995"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心结果经 4 个独立源交叉核实（未取得全文）：①JPSP 79(6):995 起始页经两处书目引用核实（mem.nhiro 实验数据页、telldear 综述）；②实验 1（加州 Draeger's 精品超市果酱试吃台，24 种 vs 6 种，交替周末同位置同时段，试吃者获 $1 优惠券凭收据追踪购买）：24 种摊位 60% 顾客驻足但仅 3% 购买；6 种摊位 40% 驻足但 30% 购买——购买率约 10 倍差（英文源多源一致）；③实验 2（课外作文选题：30 题 vs 6 题限选）：限选组作文质量获独立评分者更高评价；④实验 3（巧克力选品与满意度）：小选组满足感更高；⑤边界证据：Scheibehenne 等 2010 元分析（S109，库内）显示平均效应≈0、调节变量在位时才出现"
+research_question: "更多选择是否总提升动机与购买？选择集规模在真实消费场景中如何影响行为？"
+core_claims:
+  - "现场实验（果酱）：大选择集（24）吸引更多驻足与兴趣（60% vs 40%），但实际购买率反差悬殊（3% vs 30%）——选择丰富性把兴趣转化为行动的能力有限"
+  - "选择过载的实验室延伸：限选组的作文质量更高（实验 2）、巧克力满意度更高（实验 3）——跨领域一致的方向性证据"
+  - "机制：认知超载+预期后悔+机会成本膨胀使决策延宕或放弃（Barry Schwartz 2004《The Paradox of Choice》将其通俗化为『选择的悖论』）"
+  - "强边界：2010 年元分析（库内 S109）显示平均效应≈0，效应仅在调节变量在位时出现（专业消费者/时间压力/品类复杂/偏好不明确）——果酱实验是调节条件下的真实效应，不是普适铁律"
+method: "三实验：现场田野实验（超市果酱试吃台）+ 现场作文实验 + 实验室巧克力选品，操纵选择集规模（24 vs 6 / 30 vs 6），追踪实际行为与满意度"
+results: "（经典+边界）选择集扩大提高吸引力但降低转化与满意度；效应条件化，非普适"
+limitations: "未取得全文，核心数字经多个二手源交叉确认（数字间高度一致）；单店单品类田野实验的外推需谨慎；后续文献对效应稳健性有重要修正（见 S109）"
+boundary_conditions: "低熟悉度/偏好不明/高复杂度品类更易过载；专业消费者与时间充裕时效应减弱；选择集从 0 到少是增益、从多到更多才是负担"
+relevant_nodes: [choice_overload]
+notes: "choice_overload 节点『果酱摊 24 vs 6 经典文献未建包』标注的建包来源；与 S109（Scheibehenne 元分析）共同构成一手+元分析证据链。核心数字为公开转述，未编造。"
+last_verified: "2026-09"

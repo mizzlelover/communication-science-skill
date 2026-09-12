@@ -1,0 +1,27 @@
+# Evidence Package — S176 Wellman & Wortley 1990（Different Strokes from Different Folks）
+# 标准格式。access_level 如实标注。
+source_id: S176
+title: "Different Strokes from Different Folks: Community Ties and Social Support"
+authors: "Barry Wellman; Scot Wortley"
+year: 1990
+journal: "American Journal of Sociology 96(3): 558-588"
+doi: "未知（JSTOR 收录，未核实 DOI）"
+url: "https://www.researchgate.net/publication/302308674"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "ResearchGate 文章页完整摘要（East York 第二次研究、六种解释、强连接提供情感支持/小服务/陪伴、父母-成年子女交换金融/情感/大服务/小服务、女性提供情感支持、朋友/邻居/兄弟姐妹约占支持性关系一半）+ Cambridge University Press《Personal Networks: Classic Readings and New Directions in Egocentric Analysis》（2021）收录该文为经典阅读第 10 章并附总结（East York 系列四研究定位、社区以个人网络而非邻里形态存在、不同网络成员提供专门化支持）+ 多篇中文学术论文引用交叉确认书目（AJS 1990, 96(3):558-588）"
+research_question: "不同类型的社区纽带（强/弱连接、亲属/朋友/邻居、不同特征的网络成员）分别提供何种类型的社会支持？为什么不同类型的纽带提供不同类型的支持资源？"
+core_claims:
+  - "与朋友和亲属的社区纽带是个人与家庭获得支持性资源的主要途径（ResearchGate 摘要原文）"
+  - "强连接（strong ties）提供情感支持、小服务与陪伴（emotional aid, small services, and companionship）（ResearchGate 摘要原文）"
+  - "父母与成年子女之间交换金融支持、情感支持、大服务与小服务——亲属关系中的强连接承载最密集的支持交换（ResearchGate 摘要原文）"
+  - "支持类型更多由关系特征（强度、接触频率、亲属/朋友类别）决定，而非网络成员自身特征；地理位置可及（physically accessible）的纽带提供服务；女性提供情感支持（ResearchGate 摘要原文）"
+  - "多数关系提供专门化（specialized）而非全能型支持：朋友、邻居与兄弟姐妹合计约占全部支持性关系的一半，各司其职（ResearchGate 摘要原文）"
+  - "（语境）East York 系列研究反驳『社区已衰亡』论：社区以个人网络形式而非邻里形式存续，网络成员按类型分工供给支持（Cambridge 书章总结）"
+method: "社会网络调查（第二次 East York 研究，多伦多）：收集受访者的个人网络成员清单与逐对关系特征（强度、接触、亲属关系、特征相似性），量化不同支持类型（情感/小服务/大服务/金融/陪伴等）在各类纽带间的分布，评估六种竞争性解释"
+results: "强连接→情感支持与小服务；父母-成年子女→金融/情感/大服务/小服务全方位交换；可及连接→服务；女性→情感支持；朋友/邻居/兄弟姐妹约占支持性关系的一半；支持与关系特征（而非成员特征）绑定"
+limitations: "单一城市（多伦多 East York）样本，文化普适性需谨慎；横断调查，无法追踪支持流动的因果过程；网络成员清单依赖受访者回忆（提名法局限）；研究时代（1990）早于互联网大规模普及"
+boundary_conditions: "支持供给由关系类型分工：强连接管情感与日常服务、亲属管大额与金融支持、弱连接不承载深支持——与 strong_ties_support 节点『强连接支持个体』核心主张直接对应；社区形态为个人网络而非地理邻里"
+relevant_nodes: [strong_ties_support]
+notes: "strong_ties_support 节点（B+ 级）的关键一手实证：强连接=情感支持/陪伴/小服务、亲属=全方位支持的分工证据全部可溯源至 ResearchGate 摘要原文；书目经 Cambridge 书章与多篇中文文献交叉确认，DOI 未核实则如实标注未知。"
+last_verified: "2026-09"

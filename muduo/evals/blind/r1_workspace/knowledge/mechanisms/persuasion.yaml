@@ -1,0 +1,1130 @@
+# persuasion — 说服（Persuasion）：改变态度与行为的双路径及经典技术
+domain: persuasion
+nodes:
+- id: elaboration_likelihood_model
+  canonical_name_en: Elaboration Likelihood Model (ELM)
+  canonical_name_zh: 精细加工可能性模型（ELM）
+  aliases:
+  - ELM
+  - 详尽可能性模型
+  domain: persuasion
+  definition: Petty 与 Cacioppo 提出的说服过程总模型：态度改变存在两条路线——中心路线（central route，仔细审视论据质量）与外周路线（peripheral route，依赖信源、情绪、数量等启发式线索）。走哪条路取决于动机与能力（elaboration
+    likelihood），两条路线产生的态度在强度与持久性上不同。
+  core_claim: 说服效果不能脱离受众的加工动机与能力谈；同样的线索在高卷入时是论证佐证、低卷入时就是态度本身。
+  mechanism: 加工动机由个人相关性（personal relevance）与需要认知（need for cognition）驱动，能力由知识、分心与信息可读性决定。高 elaboration
+    时论据质量主导态度形成，态度强、持久、抗反驳；低 elaboration 时外周线索（信源可信度、情绪、论点数量而非质量）直接决定态度，但态度弱、易变。关键洞见：多数变量（如信源可信度、情绪）是双刃剑——可在低卷入时当捷径，也可在高卷入时作为论点被审视甚至反向起效。
+  causal_chain: 说服情境 → 动机×能力决定 elaboration likelihood → 中心路线（论据质量主导）或外周路线（启发式线索主导） → 态度改变（强/持久 vs 弱/易变）
+  variables:
+    inputs:
+    - 论据质量
+    - 外周线索（信源/情绪/数量）
+    - 受众动机与能力
+    moderators:
+    - 个人相关性
+    - 需要认知（个体差异）
+    - 分心与时间压力
+    - 领域知识
+    mediators:
+    - 认知 elaboration 程度（论点生成与审视）
+    - 线索启发式判断
+    outputs:
+    - 中心路线：强而持久的态度改变；外周路线：弱而暂时的态度改变
+    - 行为意向
+  evidence:
+    supporting:
+    - Petty et al. 1983 的卷入度×论据质量实验（考试改革范式，S34）：个人相关性高时论据质量主导、低时外周线索主导
+    - 两条路线产生的态度在持久性与抗反驳上的差异获得多研究支持
+    - ELM 作为总模型整合了此前信源-信息-受众研究的分散发现（S34）
+    conflicting:
+    - 两路线是连续体而非二分，多数真实说服是混合加工
+    - 『强态度更持久』的边界条件多（态度强度本身多因决定）
+    replication:
+    - 动机×能力交互的基本范式在多情境重复，是说服研究的稳健内核
+    - 具体变量（如情绪）的双路径作用方向在不同复制间有波动
+    meta_analysis:
+    - 说服与态度改变领域的元整合支持卷入度对线索-论据权重比的调节作用
+  evidence_grade: A-
+  boundary_conditions:
+  - 受众动机与能力共同决定路线，缺一即滑向外周
+  - 外周路线的态度需要重复暴露维持
+  - 个人相关性是动机最强的情境杠杆
+  failure_conditions:
+  - 高动机受众面前用纯外周线索（堆信源、煽情）会被审视甚至反噬
+  - 低动机受众面前堆复杂论据等于零说服
+  - 强分心情境中即使高动机也无法完成中心加工
+  common_misinterpretations:
+  - 把 ELM 简化为『理性人vs 感性人』——路线是情境函数而非人格类型
+  - 忽视双刃变量：同一线索（如专家背书）在高卷入时是论据、低卷入时是捷径，误判卷入度会误用线索
+  ethical_risks:
+  - 刻意制造分心与低卷入状态（信息过载、快速切换）把受众锁在外周路线以回避论据审查
+  - 对低知识受众滥用启发式线索
+  examples:
+    original_cases:
+    - Petty 与 Cacioppo《Communication and Persuasion》（S34）对 ELM 的系统阐述
+    - Petty et al. 1983 考试改革实验：卷入度高低改变论据质量与外周线索的相对权重（S34）
+    research_cases:
+    - Petty et al. 1983 的卷入度×论据质量实验（S34）
+    - 两条路线态度的持久性与抗反驳对比研究
+    modern_cases:
+    - 信息流广告（低卷入、外周线索主导）vs 高价决策内容（测评长文、中心加工）
+    - 知识付费的详情页设计：先线索（销量、名师）后论据（课程大纲）分层适配两类加工
+  communication_implications: 内容设计先问受众卷入度：低卷入流量场景做足外周线索（可信信源、清晰情绪、具体性），高卷入决策场景把资源全押论据质量；同一素材分层编排可同时服务两类加工。
+  community_implications: 社群成员对新议题通常低卷入、对切身议题高卷入：公告与规则类内容（低卷入）用规范线索（多少人已同意），核心价值主张（高卷入）必须给出完整论证与证据，否则被核心成员审视时崩塌。
+  content_applications:
+    body: 正文分层：前 30% 用外周线索留住低卷入读者（具体数字、权威锚点、情绪锚），后 70% 给足论据满足高卷入审查
+    title: 标题做外周线索的容器：可信主体+具体收益+适度情绪，三条线索齐备即完成低卷入说服
+    evidence: 高卷入内容（教程、测评）证据配方法论说明（怎么得出），低卷入内容（清单、金句）证据配权威锚（谁说的）
+    cta: 低卷入场景 CTA 用社会认同与稀缺线索；高卷入场景 CTA 强调可验证与退路（试听、退款），匹配审查心态
+  platform_implications: 信息流环境天然制造低卷入（快速滑动、分心），平台把说服压向外周路线——这是外周线索内容（情绪、人设、爆款结构）在算法环境占优的结构性原因；长视频、文章等深加工形式是中心路线的阵地。
+  related_nodes:
+  - central_route_processing
+  - peripheral_route_processing
+  - source_credibility_model
+  - dual_process_theory
+  - attitude_strength_accessibility
+  - fear_appeals_eppm
+  source_ids:
+  - S34
+  - S35
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Petty & Cacioppo 1986《Communication and Persuasion》（S34，book 级：ELM 全书/双路径/详尽化可能性）+
+      S119 论文版 + Perloff 2023（S35，教科书综合）
+    effect_size: 高动机能力→中央路径（论据主导，态度持久）；低→外周路径（线索主导，态度易变）
+    replication_status: ELM 双路径大量复制（Petty et al. 1983 考试改革实验等）；作为元理论获广泛接受
+    context_dependency: 卷入度/认知需要/媒体类型（印刷>广播详尽化）决定路径
+    downgrade_upgrade_reason: 2026-09 实取 S34 全书核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S34
+    supporting_evidence:
+    - S35
+    - S119
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: central_route_processing
+  canonical_name_en: Central Route Processing
+  canonical_name_zh: 中心路径加工
+  aliases:
+  - 中心路线
+  - systematic processing（系统加工）
+  domain: persuasion
+  definition: ELM 中的高 elaboration 路线：受众主动审视论据、生成自我推论（self-generated thoughts），态度由论据认知反应的质量决定。与启发式-系统式模型（HSM）中的系统加工（systematic
+    processing）同义。
+  core_claim: 经由中心路径形成的态度取决于论据引发的认知反应质量（受众自己生成的支持/反对想法），而非论据的呈现技巧。
+  mechanism: 高动机与能力的受众对每个论据生成认知反应（这有道理/这站不住）；净效价决定态度方向，生成过程本身产生自我说服（见 self_persuasion）——自己推出的结论比被告知的结论更强。因此中心路径的说服设计核心不是修辞而是论据的『可推理性』：给足前提与证据，让受众自己走到结论。
+  causal_chain: 高动机×高能力 → 论据逐条审视与认知反应生成 → 净支持性反应占优 → 强态度形成（持久、抗反驳、预测行为）
+  variables:
+    inputs:
+    - 论据质量与相关性
+    - 证据可信度
+    - 论证结构（前提到结论的推理链）
+    moderators:
+    - 受众先验知识与立场
+    - 论据呈现的清晰度
+    - 认知反应的可控性（引导生成方向）
+    mediators:
+    - 认知反应（受众生成的想法）
+    - 论据审视深度
+    outputs:
+    - 强而持久的态度
+    - 行为预测力
+    - 抗攻击能力（被反驳后更强或稳定的方向）
+  evidence:
+    supporting:
+    - Petty 与 Cacioppo 系列实验：论据质量在高卷入条件下主导态度，认知反应测量预测态度方向
+    - 自我生成论点比被动接收同样论点产生更强态度改变（self-persuasion 研究传统）
+    - 中心路径态度的持久性与行为预测优势获得多研究支持
+    conflicting:
+    - 强先验立场下论据审视变成反驳生成（identity 防御接管），中心路径反而产出极化
+    - 长链论证在高认知负荷下中断
+    replication:
+    - 论据质量×卷入度交互在多研究重复
+    - 自我生成效应的方向性结果稳健
+    meta_analysis:
+    - 自我说服与主动生成研究的元整合支持主动加工的优势
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 受众有动机（相关、负责）且有能力（知识、无分心）
+  - 论据真实强且与受众先验知识兼容
+  - 议题未与受众身份绑定
+  failure_conditions:
+  - 受众无动机或被分心（滑向外周）
+  - 先验立场强（中心加工变成反驳生成）
+  - 论据弱（中心加工反噬——受众发现论证站不住）
+  common_misinterpretations:
+  - 把中心路径等同于信息量大——堆砌不是论证，认知反应质量才是核心
+  - 误以为只要受众『认真看』就会接受：认真看发现论证弱时比不看更糟
+  ethical_risks:
+  - 以伪论据利用受众的认真审查（制造看似严谨的推理陷阱）
+  - 利用认知反应引导（提问设计）诱导未经审视的结论
+  examples:
+    original_cases:
+    - Petty 与 Cacioppo 的论据质量操纵实验（强vs 弱论据在高卷入下的差异，S34）
+    research_cases:
+    - 认知反应作为态度中介的测量研究
+    - 自我生成论点与被动接收的对比实验
+    modern_cases:
+    - 深度测评长文（论据链完整）对高价产品转化的主导作用
+    - 投资决策内容靠数据与逻辑链说服而非口号
+    - 反例：伪严谨的『数据包装』被高卷入受众拆穿引发反噬
+  communication_implications: 高卷入内容的设计准则是『让结论由受众自己推出』：给前提、给证据、给推理工具，把结论留白或后置；每个论据都要经得起逐条审视，因为高卷入受众真的会逐条审。
+  community_implications: 社群的核心价值主张（为什么值得留下、付费、投入）必须过中心路径这一关——核心成员的高卷入审视是社群信任的压力测试；通过测试的论证会成为成员自发传播的素材。
+  content_applications:
+    body: 论证链显式化：前提（可查数据）→ 推理（明确逻辑）→ 留结论给读者（『你自己判断』）——提升认知反应质量
+    evidence: 每个关键论据附验证路径（链接、方法），供读者自行复核——满足中心加工的审查需求
+    cta: 高卷入 CTA 强调可验证与低承诺：『先看试听/试读，不满意随时退出』——匹配审查心态而非冲动
+    title: 标题克制不夸大：中心路径受众对标题党有防御，准确的预期管理反而提升完读与信任
+  platform_implications: 平台的信息流结构天然削弱中心路径（滑动、碎片、分心）；深度内容（长文、长视频、专栏）是中心路径的产品形态，平台通过阅读完成率、时长等指标识别深加工场景并分配流量。
+  related_nodes:
+  - elaboration_likelihood_model
+  - peripheral_route_processing
+  - self_persuasion
+  - cognitive_dissonance
+  - germane_load_learning
+  - attitude_strength_accessibility
+  source_ids:
+  - S34
+  - S35
+  provenance:
+    primary_sources:
+    - S34
+    - S35
+    last_verified: '2026-09-09'
+    platform_sources:
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: peripheral_route_processing
+  canonical_name_en: Peripheral Route Processing
+  canonical_name_zh: 外周路径加工
+  aliases:
+  - 外周路线
+  - heuristic processing（启发式加工，HSM）
+  domain: persuasion
+  definition: ELM 中的低 elaboration 路线：受众不做论据审视，依赖启发式线索（信源可信度、吸引度、情绪、论点数量、共识）直接形成态度。与启发式-系统式模型中的 heuristic
+    processing 对应。
+  core_claim: 低卷入时态度由启发式线索直接决定；产生的态度弱、不稳定、需重复维持，但形成快——是流量场景的主力说服通道。
+  mechanism: 当动机或能力不足时，大脑采用认知吝啬策略：用『谁说的』『多少人同意』『我感觉如何』等低计算量线索替代论据评估。线索的有效性依赖其在生态中的统计效度（专家通常更对、多数人同意的通常没错），但线索可被操纵。由外周路线形成的态度缺乏认知反应支撑，重复暴露与线索一致性是维持的主要手段，一旦线索消失态度迅速回吐。
+  causal_chain: 低动机或低能力 → 启发式线索检索（信源/共识/情绪） → 线索效价直接转为态度 → 弱而不稳定的态度（需重复与线索维持）
+  variables:
+    inputs:
+    - 信源线索（可信度、吸引度）
+    - 共识线索（人数、评分）
+    - 情绪线索（当下感受）
+    - 表面特征（论点数量、长度、流畅性）
+    moderators:
+    - 线索的显著性
+    - 线索间冲突（可信信源给弱论据）
+    - 重复暴露频率
+    mediators:
+    - 启发式判断（专家=对、多数=对、感觉好=对）
+    outputs:
+    - 快速形成的弱态度
+    - 短期行为（点击、试用）
+    - 需持续线索维持的购买决策
+  evidence:
+    supporting:
+    - 低动机能力条件下外周线索主导态度、改变短暂易变（S34：Petty et al. 1983 实验范式）
+    - Schumann 1983 信源吸引度线索实验（经典文献，未建包）
+    - 论点数量操纵实验：低卷入受众被论点数量（而非质量）说服（经典文献，未建包）
+    - 情绪即信息（mood as input）研究：低加工时当下情绪直接成为判断依据（经典文献，未建包）
+    conflicting:
+    - 线索效应易随时间衰减且不稳定
+    - 同一线索在卷入度变化时翻转作用（双刃变量），预测复杂
+    replication:
+    - 低卷入下线索主导的结果在多研究重复
+    - 具体线索（如吸引力、数量）的效应量在不同情境波动
+    meta_analysis:
+    - 说服线索的元整合支持低卷入条件下启发式的显著作用
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 受众低卷入（无关、无时间、无知识）
+  - 线索显著且相互一致
+  - 无需长期稳定的态度（短期转化场景）
+  failure_conditions:
+  - 受众高卷入（线索被当论据审视甚至反噬）
+  - 线索间冲突（高可信信源+弱论据触发系统加工）
+  - 需要态度长期稳定的行为（复购、忠诚）——外周路线不可持续
+  common_misinterpretations:
+  - 把外周路线等同于『劣质说服』——它是注意力稀缺环境下的适应性策略，且多数日常态度由它形成
+  - 误以为外周线索可以简单堆砌：线索冲突（廉价感+专家头衔）会触发警觉
+  ethical_risks:
+  - 制造分心与信息过载把受众锁在外周路线
+  - 滥用启发式（伪共识、伪专家、情绪操纵）收割低卷入受众
+  examples:
+    original_cases:
+    - Petty, Cacioppo 与 Schumann 1983 的名人与产品实验（经典文献，未建包）
+    - 论点数量操纵实验：数量而非质量在低卷入时起效
+    research_cases:
+    - 信源线索在低卷入下的主导作用实验
+    - 情绪作为判断线索的研究
+    modern_cases:
+    - 信息流广告依赖外周线索（明星、销量、颜值）
+    - 直播间的氛围线索（在线人数、成交弹幕）
+    - 标题党与封面党对滑动场景的适配
+  communication_implications: 流量场景（滑动、碎片时间）的内容要把外周线索做满：可信主体、明确数量信号、清晰的情绪锚点、视觉具体性；同时设计承接结构（详情页、深度内容）在卷入度上升时切换到论据，否则线索带来的弱态度无法转化为留存。
+  community_implications: 社群的日常触达（群公告、轻互动）走外周路线（氛围、共识、仪式感），核心决策（付费、深度参与）必须补中心路线内容；两条路线配套才完成从弱态度到行为忠诚的漏斗。
+  content_applications:
+    title: 标题承载三线索：可信主体+具体数字+单一情绪，30 字内完成低卷入说服
+    visual: 视觉即线索：真实场景图优于抽象插画，具体人脸优于符号图标（人脸注意优先）
+    opening: 开场 3 秒给足线索（谁在说、多少人受益、什么情绪基调），低卷入读者据此决定是否停留
+    sharing: 转发文案预置外周线索（金句+数字+情绪），让弱态度有最低成本的传播载体
+  platform_implications: 平台的产品形态（信息流、短视频）系统性制造低卷入环境，使外周线索成为平台内容的主导说服货币；算法对线索丰富内容（高互动信号）的偏好进一步强化该结构，深度内容需另辟产品形态。
+  related_nodes:
+  - elaboration_likelihood_model
+  - central_route_processing
+  - social_proof
+  - source_credibility_model
+  - processing_fluency
+  - affect_heuristic
+  source_ids:
+  - S34
+  - S35
+  last_verified: '2026-09-09'
+  provenance:
+    primary_sources:
+    - S34
+    - S35
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-005
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: inoculation_theory
+  canonical_name_en: Inoculation Theory
+  canonical_name_zh: 预防接种理论
+  aliases:
+  - 态度接种
+  - attitudinal inoculation
+  - McGuire 注射预防
+  domain: persuasion
+  definition: McGuire 提出的态度免疫机制：像疫苗接种一样，预先暴露于弱化的反面论点（并予以反驳）能使态度获得抵抗力，比单纯正面教育更能抵御后续的强说服攻击。含两个成分：威胁成分（预警存在攻击）与反驳成分（预演应对）。
+  core_claim: 经历过弱化攻击并成功反驳的态度会获得针对同类更强攻击的免疫力；无抵抗过程的单纯正面灌输反而留下易感面。
+  mechanism: 接种通过两条路径起效：（1）动机路径——威胁成分让个体意识到自己态度存在被攻击风险，激发防御动机；（2）能力路径——反驳预演提供论点库与反驳脚本，遇到真实攻击时可直接调用。这与预防医学的减毒疫苗逻辑同构：弱剂量的病原体激发免疫反应。单纯的正面灌输（只讲正面论据）使态度像温室植物——未经挑战，遇到第一个反面论点即崩塌。
+  causal_chain: 弱化反面论点暴露 → 威胁感知（态度可被攻击）+ 反驳预演 → 免疫力形成 → 遭遇强攻击时启动既有反驳脚本 → 态度存活
+  variables:
+    inputs:
+    - 弱化的反面论点
+    - 反驳示范或自主反驳机会
+    - 攻击预警
+    moderators:
+    - 接种与攻击的时间间隔
+    - 攻击强度与类型匹配度
+    - 受众原有态度强度
+    mediators:
+    - 防御动机
+    - 反驳论点库的可得性
+    - 态度确定性
+    outputs:
+    - 态度抗性（抵御后续攻击）
+    - 反驳技能
+    - （有时）态度强化（比接种前更强）
+  evidence:
+    supporting:
+    - McGuire 与 Papageorgis 的经典文化 Truism 接种实验：接种组比单纯支持组更能抵御后续强攻击
+    - 健康传播领域的应用研究：接种有效抵御营销话术（如反吸烟、防操纵消费教育）
+    - 政治与谣言领域的预注射研究：先接触弱化形式的错误信息+反驳，显著提升后续辨识与抵抗
+    conflicting:
+    - 接种针对同类型攻击最有效，跨类型攻击的免疫迁移有限
+    - 过强或不当的接种剂量可能反向灌输（先入为主的反面论点未被反驳掉）
+    replication:
+    - 基础范式在多领域（健康、政治、营销防御）重复
+    - 效应大小中等，对接种实施的精细度敏感
+    meta_analysis:
+    - 接种干预的元整合支持其对态度抵抗的平均效应，健康与政治传播领域证据较丰富
+  evidence_grade: B+
+  boundary_conditions:
+  - 接种的反面论点须弱化且附带有效反驳（或反驳机会）
+  - 攻击类型与接种内容匹配时免疫最强
+  - 受众有基本的态度基础与理解能力
+  failure_conditions:
+  - 只暴露反面论点不反驳（变成反向宣传）
+  - 攻击类型与接种不匹配（新类型攻击穿透）
+  - 受众原有态度极弱（无从接种）
+  common_misinterpretations:
+  - 把接种等同于『提前打好预防针式骂醒』——威胁与恐吓不是接种，接种的核心是反驳预演
+  - 混淆接种与单纯正反两方面呈现（two-sided message）：后者只是信息结构，前者必须包含抵抗过程
+  ethical_risks:
+  - 利用接种机制给用户预先植入对竞争者或批评者的免疫（营销滥用的预防接种）
+  - 用反向接种固化错误信念（预先歪曲批评再预反驳）
+  examples:
+    original_cases:
+    - McGuire 与 Papageorgis 的文化 Truism 接种系列实验（说服研究经典；一手 EP 未建，S35 为目录级、无接种内容）
+    research_cases:
+    - 文化 Truism（刷牙有益等常识）的攻击-接种实验
+    - 健康传播中的反营销接种研究
+    modern_cases:
+    - 辟谣的预注射（prebunking）实践：先给弱化版谣言+拆解，再遇真谣言时免疫
+    - 媒体素养教育中的话术识别训练
+    - 社群对常见骗局的定期免疫教育（识别杀猪盘、资金盘的剧本拆解）
+  communication_implications: 对易被攻击的内容（新方法、反共识观点），与其等被攻击后灭火，不如主动『自曝弱点并反驳』——预接种内容兼具可信度（承认局限）与免疫功能；辟谣场景优先
+    prebunking 优于事后 debunk。
+  community_implications: 社群应建立定期免疫机制：拆解行业内常见套路与话术（弱化版+反_script），成员遇外部收割时自带防御脚本；这是社群提供的核心隐性价值之一（信任资产的保护层）。
+  content_applications:
+    body: 主动呈现最强反方观点并给出反驳（『有人说这方法不行，因为X——但数据是Y』）——接种+可信度双重收益
+    comments: 预判常见质疑并提前在评论区置顶回复（接种式答疑），新读者看到的是已被反驳的攻击而非裸露的弱点
+    opening: 开场预警+预演：『这篇文章发布前，我已经收到三个反对意见，先来回应它们』
+    title: 标题用反共识框架引发防御动机：『为什么这个被骂的方法其实是有效的』
+  platform_implications: 平台的信息流加速谣言与攻击的到达，事后辟谣的传播天然慢于谣言（misinformation_velocity）；prebunking 类内容（接种式媒体素养）是平台治理的新方向，视频化的弱化谣言拆解是主要形态。
+  related_nodes:
+  - fear_appeals_eppm
+  - psychological_reactance
+  - misinformation_velocity
+  - central_route_processing
+  - self_persuasion
+  - attitude_strength_accessibility
+  source_ids:
+  - S35
+  - S36
+  - S34
+  - S194
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: McGuire & Papageorgis 接种实验一手 EP 未建；S36 仅载相邻的预先警示策略（第 37-38 章），S35 为目录级；2026-09-09
+      一手 EP 已建（S194）
+    downgrade_upgrade_reason: 2026-09 反向审计：内容来自记忆蒸馏，待建 EP 后升级（B+ → C）
+  last_verified: '2026-09-09'
+  provenance:
+    primary_sources:
+    - S194
+    supporting_evidence:
+    - S36
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: foot_in_the_door
+  canonical_name_en: Foot-in-the-Door Technique
+  canonical_name_zh: 登门槛技术
+  aliases:
+  - 先小后大策略
+  - FITD
+  domain: persuasion
+  definition: Freedman 与 Fraser 1966 年报告的顺从技术：先提出一个小请求（多数人会答应），随后再提出更大的目标请求，答应率显著高于直接提大请求。其机制主要被解释为自我知觉（self-perception）与承诺一致性：小请求更新了『我是参与者』的自我形象。
+  core_claim: 小请求先行能提升后续大请求的答应率，但效应中等且高度依赖两个请求的被知觉一致性与时间间隔。
+  mechanism: 答应小请求后，个体推断自己是『愿意帮忙/参与的人』（自我知觉：从行为反推态度），该自我形象使后续同方向的更大请求变成自我一致性行为；同时小请求建立的关系与互动情境降低了拒绝大请求的社会成本（已互动过，拒绝显得不一致）。注意与自我知觉理论的绑定：当外部理由明显（有偿）时自我归因失效，铺垫效应消失。
+  causal_chain: 小请求被答应 → 自我形象更新（我是参与的人） → 后续同方向大请求 → 与自我形象一致 → 答应率提升
+  variables:
+    inputs:
+    - 初始小请求（低成本、高答应率）
+    - 后续目标请求
+    - 两请求的时间与情境安排
+    moderators:
+    - 两请求的被知觉相关性
+    - 时间间隔（过长失效）
+    - 小请求的外部理由（有偿则失效）
+    - 请求者一致性
+    mediators:
+    - 自我形象更新
+    - 承诺一致性压力
+    - 互动关系建立
+    outputs:
+    - 大请求答应率提升
+    - 行为惯性启动
+    - 参与阶梯的第一级
+  evidence:
+    supporting:
+    - Freedman 与 Fraser 1966 的经典实验：先答应贴小告示的家庭，两周后同意在前院竖大广告牌的比例显著更高
+    - 自我知觉机制的系列验证：外部理由明显时铺垫效应消失
+    - 公益与营销场景中的多次应用研究
+    conflicting:
+    - 元整合显示平均效应量偏小且异质性高，部分复制未达显著
+    - 两请求被知觉为不相关时效应消失
+    - 间隔过长或请求者变化时效应衰减
+    replication:
+    - 基本范式重复成功但幅度不稳，属稳健但中小效应
+    - 边界条件（一致性知觉、外部理由）的调节作用获得支持
+    meta_analysis:
+    - FITD 的元分析证实平均正向效应量小到中等，依赖边界条件满足
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 两请求被知觉为同方向、同议题（一致性）
+  - 小请求无外部奖励（保持自愿归因）
+  - 间隔适中（数天到两周级）
+  failure_conditions:
+  - 小请求有偿或被识破为套路（自我归因失效）
+  - 两请求方向不一致（贴环保小告示后推销付费会员）
+  - 间隔太长（自我形象衰减）
+  common_misinterpretations:
+  - 把任何『先要一点再要更多』当 FITD——机制核心是自我形象更新，无归因价值的连环加码只是套路
+  - 忽视效应量现实：FITD 是中小效应技术，不是点石成金
+  ethical_risks:
+  - 设计诱导性小请求链逐步套牢用户（dark pattern 的一种）
+  - 利用帮助者的自我形象实施道德绑架式加码
+  examples:
+    original_cases:
+    - Freedman 与 Fraser 1966 的广告牌实验（说服研究经典，S21）
+    research_cases:
+    - 小告示-大广告牌实验
+    - 外部理由对 FITD 的削弱实验
+    modern_cases:
+    - 社群运营的参与阶梯：先邀请点赞/评论，再邀请进群，再邀请活动，最后付费
+    - 产品试用-订阅的转化路径
+    - 内容互动：先关注，再进群，再买课
+  communication_implications: 设计内容的行动路径时把最小可答应行为前置（点个赞、留个言、做个小测试），且确保无外部奖励、与核心议题方向一致；小请求与大请求之间保持主题连贯，让自我形象沿同一方向升级。
+  community_implications: 社群的参与阶梯是 FITD 的制度化：设计 3-5 级小到大的参与行为（点赞→评论→投稿→主持活动→付费深度参与），每级保持价值方向一致；把第一级门槛压到极低是冷启动的关键。
+  content_applications:
+    cta: CTA 阶梯化：本期内容只求一个最小行动（收藏或一条评论），下期自然升级（进群、打卡）
+    body: 小测试/小清单作为内容嵌入（读者已在完成小请求），文末的更大请求接受度自然提高
+    comments: 评论互动的最小化设计：提供一个可以一句话回答的问题，降低首答门槛
+  platform_implications: 平台的引导组件（先关注再解锁、试看再付费）内置了 FITD 逻辑；算法对新用户的冷启动内容推荐也在寻找『第一级小请求』（易完成、高互动的内容形态）。
+  related_nodes:
+  - commitment_consistency
+  - door_in_the_face
+  - self_persuasion
+  - participation_ladder
+  - cognitive_dissonance
+  - endowed_progress_effect
+  source_ids:
+  - S21
+  - S35
+  - S31
+  last_verified: '2026-09-09'
+  provenance:
+    primary_sources:
+    - S21
+    - S35
+    - S31
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-001
+    platform_sources:
+    - bilibili:S4
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: door_in_the_face
+  canonical_name_en: Door-in-the-Face Technique
+  canonical_name_zh: 留面子技术
+  aliases:
+  - DITF
+  - 以退为进策略
+  domain: persuasion
+  definition: Cialdini 等报告的互惠式顺从技术：先提出一个几乎必被拒绝的大请求，随后退让到真实的目标请求；被请求者因对方的『让步』产生回报义务感（互惠规范中的让步-互惠变体），答应率显著高于直接提目标请求。
+  core_claim: 被知觉为真诚让步的请求缩退能激活互惠压力，提升真实请求的答应率——但缩退必须被归因为请求者的善意让步而非套路。
+  mechanism: 大请求被拒后，请求者提出小请求，被知觉为一种让步（concession）；互惠规范要求回报他人的让步，于是『我也退一步』答应小请求。关键条件：（1）大请求必须大到必被拒但不能离谱（离谱会破坏真诚归因）；（2）缩退须由同一请求者提出（让步的归因连贯）；（3）时间紧凑（让步的互惠压力有时效）。与
+    FITD 方向相反：FITD 从小到大使自我形象升级，DITF 从大到小利用互惠让步。
+  causal_chain: 大请求被拒 → 请求者退让到目标请求 → 让步被知觉 → 互惠回报压力 → 答应目标请求
+  variables:
+    inputs:
+    - 初始大请求（合理但必被拒）
+    - 目标请求
+    - 缩退的呈现方式
+    moderators:
+    - 大请求的合理性边界
+    - 缩退的真诚归因
+    - 两请求的间隔
+    - 请求者一致性
+    mediators:
+    - 让步知觉
+    - 互惠义务感（对让步的回报）
+    - 社会责任感知
+    outputs:
+    - 目标请求答应率提升
+    - （被识破时）愧疚转为愤怒
+    - 关系层面的互惠平衡
+  evidence:
+    supporting:
+    - Cialdini 等的青少年辅导员请求实验：先请求做两年无偿辅导员（被拒），再退到陪孩子逛一次动物园，答应率显著高于直接请求
+    - 让步-互惠机制的系列验证：让步被明确知觉时效果最强
+    - 慈善与销售场景中的多次应用研究
+    conflicting:
+    - 元整合显示效应量小且不稳定，部分复制接近零
+    - 大请求离谱时反而触发警戒与不信任
+    - 被识破为套路（先开天价再打折）时反噬
+    replication:
+    - 基本范式可复制但幅度波动大，属条件依赖的技术
+    - 让步归因的调节作用获得多研究支持
+    meta_analysis:
+    - DITF 的元分析显示平均效应量为小且异质性高，边界条件（真诚归因、紧凑时间）决定成败
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 大请求合理且真的会被拒（不能离谱）
+  - 缩退被归因为请求者的真诚让步（非脚本）
+  - 两请求由同一人紧凑提出
+  failure_conditions:
+  - 大请求离谱（『先要一百万再要一百』破坏真诚归因）
+  - 缩退被识破为预设剧本（定价套路）
+  - 间隔过长（让步的互惠压力衰减）
+  common_misinterpretations:
+  - 把『先报高价再打折』当 DITF——销售中的锚定+折扣是定价策略且被广泛识破，与真诚让步归因的 DITF 机制不同
+  - 与 FITD 混淆：DITF 靠互惠（回报让步），FITD 靠自我形象（我是参与者）
+  ethical_risks:
+  - 预设剧本式的虚假让步操纵（营销中的标准折扣话术滥用）
+  - 利用互惠压力在关系不对等场景（上下级、求助场景）逼迫使对方答应
+  examples:
+    original_cases:
+    - Cialdini 等的动物园陪同请求实验（经典文献，未建包）
+    research_cases:
+    - 青少年辅导员-动物园请求实验
+    - 让步归因的操纵实验
+    modern_cases:
+    - 募捐场景：先请求大额（被拒）再请求小额
+    - 商务合作：先提超出预期的全面方案，再退到核心合作
+    - 反面：直播间的『原价999现价99』被普遍识破为脚本
+  communication_implications: 真实让步的呈现（我真的为你们降了门槛/加了权益）比虚构折扣有效——关键是让步的真诚归因：主动披露让步成本（我为此放弃了什么）能强化互惠归因；被识破的剧本式让步比不让步更糟。
+  community_implications: 社群运营中的真诚让步要可见其成本：从全员开放改为限额、从免费改为收费是涨价，但为特定成员保留旧权益是让步——让步的成本可见性决定互惠归因的强度。
+  content_applications:
+    cta: CTA 呈现真实让步：『完整陪跑要上万，但我把方法论部分免费放出来了』——让步可见且成本真实
+    body: 合作提案式内容：先呈现完整版理想方案，再退到本期可行的最小版本——读者感知让步
+    comments: 对读者的要求先高后低：『本想请大家都交作业，考虑到时间，一人一句话也行』
+  platform_implications: 平台电商的折扣结构（划线价）是对 DITF 逻辑的滥用化，已引发监管介入（真实成交价规则）；社群与内容场景中，真诚让步的叙事（权益的真实缩减与恢复）仍是有较可信的互惠杠杆。
+  related_nodes:
+  - reciprocity_norm
+  - foot_in_the_door
+  - commitment_consistency
+  - anchoring_effect
+  - psychological_reactance
+  - social_proof
+  source_ids:
+  - S32
+  - S35
+  - S31
+  - S36
+  last_verified: '2026-09-09'
+  provenance:
+    primary_sources:
+    - S32
+    - S35
+    - S31
+    - S36
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: fear_appeals_eppm
+  canonical_name_en: Fear Appeals / EPPM (Extended Parallel Process Model)
+  canonical_name_zh: 恐惧诉求与扩展平行过程模型（EPPM）
+  aliases:
+  - EPPM
+  - 威胁×效能模型
+  - 保护动机理论的扩展
+  domain: persuasion
+  definition: Witte 1992 年提出的 EPPM 模型：恐惧诉求的效果由威胁（threat：严重性+易感性）与效能（efficacy：自我效能+反应效能）的交互决定。高效能+高威胁产生危险控制（采纳建议行为）；低效能+高威胁产生恐惧控制（防御性回避、否认——,message
+    被拒绝以保护心理而非解决问题）。
+  core_claim: 恐惧唤起本身不产生行为改变：威胁决定动机强度，效能决定动机方向；只给威胁不给效能路径的信息触发恐惧控制的反效果。
+  mechanism: 威胁评估（这事严重吗、会轮到我吗）与效能评估（我做得来吗、做了有用吗）双 appraisal：当威胁高且效能高，恐惧转化为对危险的处置（danger control，采纳建议）；当威胁高而效能低，不可承受的恐惧触发防御机制（否认、回避、愤怒反击，fear
+    control——处理恐惧而非危险）。低威胁时动机不足，无行为改变。故恐吓式内容（疾病恐怖图、财务崩溃叙事）若不配『可执行的具体步骤』，会系统性触发回避而非行动。
+  causal_chain: 威胁线索 → 威胁 appraisal（严重性×易感性） → 恐惧唤起 → 效能 appraisal（自我效能×反应效能） → 高效能源：危险控制（行动）；低效能：恐惧控制（否认/回避/逆反）
+  variables:
+    inputs:
+    - 威胁信息（严重性+易感性线索）
+    - 效能信息（行为可行性与有效性的证据）
+    moderators:
+    - 受众既有效能感
+    - 议题的威胁真实性
+    - 防御机制特质（否认倾向）
+    mediators:
+    - 恐惧情绪唤起
+    - 威胁与效能的双 appraisal 过程
+    outputs:
+    - 危险控制：信息接受与保护行为；恐惧控制：防御性回避、否认、信息拒绝、感知操纵愤怒"
+  evidence:
+    supporting:
+    - Witte 1992 提出 EPPM 后的系列实验：威胁×效能交互对信息接受与行为意向的系统性影响
+    - 健康传播领域的大量应用研究（防艾、防癌筛查、戒烟）支持恐惧控制方向的反效果
+    - 恐惧诉求元分析（多个独立元分析）支持：恐惧诉求平均有效，但必须伴随效能信息，且高恐惧配低效能产生反效果
+    conflicting:
+    - 威胁-效能交互的精确形式（阈值vs 连续）存在理论争议
+    - 强恐惧的长期行为维持证据弱于短期意向
+    - 个体差异（特质焦虑、否认风格）调节反应方向
+    replication:
+    - 『无效能路径的纯威胁信息触发防御回避』在多领域重复
+    - 健康领域效应较稳健，商业与政治领域的复制较少
+    meta_analysis:
+    - 多个恐惧诉求元分析支持平均正效应且强调效能信息的必要性（该领域是说服研究中元分析证据最丰富的方向之一）
+  evidence_grade: B+
+  boundary_conditions:
+  - 威胁须被感知为真实且与受众相关（易感性成立）
+  - 必须同时提供可执行且被感知有效的行为路径（高效能）
+  - 受众无强烈的既定否认防御
+  failure_conditions:
+  - 高威胁+低效能（纯恐吓）触发恐惧控制：否认、回避、攻击信源
+  - 低威胁（议题无切身性）无动机唤起
+  - 效能建议过于困难或昂贵（自我效能崩塌）
+  common_misinterpretations:
+  - 以为越吓越有效——恐吓必须配效能路径，否则直接触发回避
+  - 把回避数据（点赞收藏了）当成功——收藏可能是恐惧控制的回避仪式
+  ethical_risks:
+  - 制造虚假威胁（夸大风险）胁迫消费
+  - 利用恐惧控制状态（无助）推销虚假解决方案（医疗、财务骗局的标准结构）
+  examples:
+    original_cases:
+    - Witte 1992 的 EPPM 模型（健康传播与说服研究传统）
+    - 恐惧诉求研究的长期传统（从 Janis 的早期实验到健康传播应用）
+    research_cases:
+    - HIV 预防的威胁×效能实验（Witte 的系列应用研究）
+    - 防癌筛查信息的恐惧控制反效果研究
+    - 恐惧诉求元分析
+    modern_cases:
+    - 健康科普的恐吓式标题（不转发给家人就…）反而降低阅读
+    - 财务焦虑营销（通胀要吃掉你的存款）不配行动路径只产出焦虑
+    - 反例：附带具体操作清单的恐吓式内容（三步自查）转化率高
+  communication_implications: 恐惧类内容的铁律：威胁与效能必须成对出现，且效能信息要具体可执行（做什么、怎么做、多久见效）；威胁适度（易感但可防御）比极限恐吓更有效；预判恐惧控制的信号（收藏不看、礼貌点头）并针对性降低效能门槛。
+  community_implications: 社群内的风险教育（市场风险、健康风险）要走『威胁+工具』结构：先呈现真实风险，立即给自查清单与互助验证机制；纯风险话题（晒亏损、报忧）若无工具配套会系统性降低成员活跃（回避社群本身）。
+  content_applications:
+    title: 标题威胁适度且承诺路径：『你的XX正在被忽视，三个自查动作帮你止损』——威胁+效能并置
+    body: 结构执行 1:3 原则——威胁陈述占 1，效能路径（具体步骤、工具、案例）占 3
+    cta: CTA 是效能的具象化：给出今天可完成的第一步（具体到分钟级），而非『重视起来』
+    comments: 对焦虑评论回应效能（给工具、给陪伴），阻断恐惧控制的方向
+  platform_implications: 平台的情绪算法偏好恐惧类内容的高互动，但恐惧控制下的互动（收藏、转发的焦虑仪式）不等于行为改变；平台对医疗、金融恐吓营销的治理正在收紧，效能信息的真实性成为合规审查点。
+  related_nodes:
+  - psychological_reactance
+  - self_efficacy
+  - emotional_arousal
+  - central_route_processing
+  - scarcity_mindset
+  - implementation_intentions
+  source_ids:
+  - S35
+  - S36
+  - S21
+  - S148
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Witte & Allen 2000 恐惧诉求 meta（S148，abstract_only：高效能时有效、低效能时反效；K 未见于摘要层）+ Pratkanis
+      & Aronson《Age of Propaganda》（S36，book 级：恐惧诱导技术章节）+ Perloff（S35）
+    effect_size: 恐惧诉求需配高效能信息才有效；低效能时引发防御/回避（反效）
+    replication_status: EPPM 框架多研究支持；Witte & Allen meta 为基准证据
+    context_dependency: 威胁感知×效能感知四象限决定接受/防御/恐惧控制
+    downgrade_upgrade_reason: 2026-09 实取 S36 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S36
+    - S148
+    supporting_evidence:
+    - S35
+    - S21
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-013
+    - CASE-FAL-014
+    - CASE-FAL-035
+    - CASE-FAL-036
+    - CASE-FAL-055
+    - CASE-FAL-056
+    - CASE-FAL-064
+    - CASE-FAL-065
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: psychological_reactance
+  canonical_name_en: Psychological Reactance
+  canonical_name_zh: 心理逆反
+  aliases:
+  - 逆反心理
+  - reactance theory
+  - Brehm 逆反理论
+  domain: persuasion
+  definition: Brehm 1966 年提出的理论：当自由的被知觉（选择、行动、观点自由）被威胁或消除时，个体产生恢复自由的动机状态（reactance），表现为做被禁止的事、贬低被强推的选项、敌意对抗说服源。是警告标签、禁令与高压销售常反效果的机制解释。
+  core_claim: 对自由的威胁（而非内容本身）触发逆反：恢复自由的动机可压倒理性自利，使人做出与建议相反的行为。
+  mechanism: 个体对『我有权选择』有稳定预期；当感知到该自由被剥夺（被命令、被禁止、被强推），产生恢复自由的驱力——通过直接恢复（做被禁的事）、间接恢复（幻想、攻击威胁源）或重申自由（做相反的事）来消解。威胁线索包括命令式语言（必须、只能）、限选（二选一施压）、说教式断言、明显的操纵企图。逆反强度与自由的重要性和威胁的明确性成正比。
+  causal_chain: 自由被知觉为受威胁 → 逆反动机唤起 → 恢复自由行为（反向行动/攻击信源/贬低选项） → 说服反效果
+  variables:
+    inputs:
+    - 命令式/限制性信息
+    - 选择自由被削弱的线索
+    - 明显的操纵企图
+    moderators:
+    - 被威胁自由的重要性
+    - 个体特质逆反敏感度
+    - 年龄段（青少年期更敏感）
+    - 文化（个体主义文化更强）
+    mediators:
+    - 自由被剥夺的知觉
+    - 愤怒情绪
+    - 恢复自由的动机
+    outputs:
+    - 反向行为（禁酒令下的酒消费）
+    - 信源敌意与信任下降
+    - 选项贬低
+    - 信息拒绝"
+  evidence:
+    supporting:
+    - Brehm 的逆反理论系列实验：消除选择引发对被禁选项的偏好提升
+    - 警告标签与禁令的反效果研究（脏话标签、禁播内容的需求上升）
+    - 高压销售与硬性 CTA 的说服反效果实验（S32 综述）
+    - 恢复选择权（如『你可以拒绝』一句话）显著降低对抗并提升顺从（reactance 减弱的干预研究）
+    conflicting:
+    - 逆反的测量方法存在争议（自我报告与行为测量的分离）
+    - 效应量总体偏小到中等，强威胁情境才稳定显现
+    - 并非所有人都有同等逆反敏感度
+    replication:
+    - 基本范式（自由威胁→偏好反向）在多研究重复
+    - 恢复选择权的缓解效应获得较稳健支持
+    meta_analysis:
+    - 心理逆反的元整合支持威胁自由引发反向动机的核心主张，效应量中等
+  evidence_grade: A-
+  boundary_conditions:
+  - 被威胁的自由对个体重要（选择权、自主感）
+  - 威胁线索明确（被命令、被限制）
+  - 受众有表达与行动的出口（无处反抗时逆反内化为疏离）
+  failure_conditions:
+  - 信息不含自由威胁（纯陈述事实与选项）
+  - 受众低逆反敏感或高信任关系
+  - 自由本身对受众不重要
+  common_misinterpretations:
+  - 把一切反对意见都归为逆反——很多反对是理性或身份性的；逆反特指自由被威胁的反向动机
+  - 以为逆反是青少年特质——成人对被操控的逆反同样强烈（尤其在营销警觉高的领域）
+  ethical_risks:
+  - 利用假性逆反营销（故意禁售、饥饿营销的『不让买』剧本）
+  - 以逆反机制诱导青少年接触有害内容（禁果效应的恶意利用）
+  examples:
+    original_cases:
+    - Brehm 的逆反理论（S32 综述引述）
+    - Cialdini《Influence》对限制引发渴望的讨论（稀缺与禁令章节）
+    research_cases:
+    - 消除选择引发偏好反转的实验
+    - 警告标签的反效果研究
+    - 恢复选择权降低对抗的干预实验
+    modern_cases:
+    - 『仅限今日』高压逼单引发的流失
+    - 平台强制弹窗与关注引导的抵触
+    - 『不看后悔』式标题的信任损耗
+    - 家长式健康劝导（你必须戒糖）触发对着干
+  communication_implications: 把命令式语言（必须、马上、否则）替换为选择框架（你可以决定、两种路径供选）；主动授予拒绝权（『看不看随你』）是降低逆反、提升接受的低成本手段；高压
+    CTA 在高警觉受众中是负资产。
+  community_implications: 社群规则的存在会制造逆反面：以选择式规则（想遵守的进核心群）替代命令式规则（全员必须打卡）；对成员的引导走『邀请+自主』结构，管理员频繁使用强制语气是活跃度下降的常见被忽视原因。
+  content_applications:
+    cta: CTA 授予拒绝权：『点不点随你，但我建议先看前三段』——恢复选择权的句式显著降低对抗并提升行动
+    title: 标题避免命令式（你必须知道）与威胁式（不看后悔），用邀请式（值得一看）与好奇式（为什么……）
+    body: 呈现两条路径（做与不做的各自后果），让读者自己选——选择框架比单一强推的逆反小且说服深
+    comments: 对不同意见者回应选择权（『你说的也是一种活法』），公开尊重选择能安抚围观者的逆反警戒
+  platform_implications: 平台的强制组件（弹窗、强制关注、摇一摇跳转）是逆反的制度化制造机，已成为监管整治对象；产品设计中『可跳过、可关闭』的自主感组件正在成为体验竞争点（与 personalized_persuasion
+    的隐私边界呼应）。
+  related_nodes:
+  - fear_appeals_eppm
+  - self_determination_needs
+  - commitment_consistency
+  - norm_messaging_effects
+  - scarcity_mindset
+  - door_in_the_face
+  source_ids:
+  - S32
+  - S35
+  - S21
+  - S112
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Rains 2013 meta（S112 已实取摘要：K=20/N=4942）
+    effect_size: 逆反=自由威胁→愤怒+反驳（intertwined model 最优拟合）
+    replication_status: 交织模型被 2025 最新 meta（Li & Shi）延续验证
+    context_dependency: 语言控制性等消息特征调节逆反强度
+    downgrade_upgrade_reason: 2026-09 补充一手 meta 证据（S112），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S112
+    supporting_evidence:
+    - S32
+    - S35
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-003
+    - CASE-CRS-012
+    - CASE-CRS-014
+    - CASE-FAL-002
+    - CASE-PLT-028
+    - CASE-PLT-030
+    platform_sources:
+    - bilibili:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: sleeper_effect
+  canonical_name_en: Sleeper Effect
+  canonical_name_zh: 睡眠者效应
+  aliases:
+  - ' sleeper effect'
+  - 延迟说服效应
+  domain: persuasion
+  definition: Hovland 学派发现的现象：低可信信源传递的信息在即时测量中说服力弱，但随着时间推移与信源淡忘，其说服力不降反升（信息与折扣线索解耦）；效应存在但有严格边界条件，是说服研究中最常被误引用的发现之一。
+  core_claim: 当受众忘记信源但记住信息时，信源的折扣作用消失——但这需要信源被淡忘且信息本身被加工记忆，条件苛刻，不应作为策略依赖。
+  mechanism: 信息与信源在记忆中最初绑定存储（低可信→折扣）；随时间推移，来源标签先于内容被遗忘（来源记忆的衰减快于内容记忆），内容单独存活且失去折扣——态度随时间向信息方向移动。严格成立条件：初始折扣足够强（信源确实被质疑）、延迟足够长、且信息本身被深度加工过（否则整体遗忘，无『上升』可言）。
+  causal_chain: 低可信信源+被加工的信息 → 即时折扣（说服弱） → 时间推移 → 信源先于内容被遗忘 → 折扣消失 → 延迟态度上升
+  variables:
+    inputs:
+    - 低可信信源的信息
+    - 信息加工深度
+    - 延迟时间
+    moderators:
+    - 信源与内容的记忆衰减差
+    - 初始折扣强度
+    - 内容的可记忆性（具体、故事化）
+    mediators:
+    - 来源记忆与内容记忆的解耦
+    - 折扣线索的遗忘
+    outputs:
+    - 延迟态度改变
+    - （多数情况下）随时间的整体遗忘"
+  evidence:
+    supporting:
+    - Hovland 学派的原始发现：低可信条件下的延迟态度上升（一手 EP 未建，S34/S35 实载无此内容）
+    - 来源记忆快于内容记忆衰减的认知证据
+    - 特定条件下的重复验证：强折扣+深加工+长延迟
+    conflicting:
+    - 总体证据状态：效应存在但脆弱，多数尝试复制失败或只能部分复制
+    - 效应被引用的频率远超其可靠成立的频率——营销中的『先留印象不管真假』依赖是对该效应的滥用
+    replication:
+    - 系统综述（如 Kumkale 与 Albarracín 方向的整合研究）确认：仅在折扣强且内容被加工的条件下可重复，总体是条件性效应
+    - 无条件引用该效应（『假的先说了也会变真』）不成立
+    meta_analysis:
+    - 对 sleeper effect 的整合分析（Kumkale 与 Albarracín 传统）支持条件性存在，反对普遍性解读
+  evidence_grade: B+
+  boundary_conditions:
+  - 信源折扣在初始足够强（受众真的不信这个信源）
+  - 信息被深度加工且可记忆（具体、有故事性）
+  - 延迟期足够长且无新信息覆盖
+  failure_conditions:
+  - 信源被持续提醒（可回溯的信源标签）
+  - 信息本身浅加工快速遗忘（整体遗忘而非解耦）
+  - 后续信息覆盖或被反驳
+  common_misinterpretations:
+  - 营销中最常见滥用：『先留下印象，真假以后没人记得』——多数真实场景是整体遗忘而非选择遗忘信源
+  - 把 sleeper effect 当『负面公关也会赢』的依据——效果需要严格条件，多数负面信息连同信源一起被记住（声誉系统反而强化绑定）
+  ethical_risks:
+  - 以『时间会洗白』为策略散布失实信息（依赖一个大概率不成立的效应）
+  - 利用延迟测量的话术设计（先入为主的污染）
+  examples:
+    original_cases:
+    - Hovland 学派的信源可信度-延迟测量研究（一手 EP 未建，记忆蒸馏）
+    research_cases:
+    - 低可信信源信息的延迟态度测量实验
+    - 来源-内容记忆解耦的认知研究
+    modern_cases:
+    - 争议人物的言论被截图传播后脱离语境发酵（反向的解耦——内容存活、语境丢失）
+    - 辟谣信息反而加深原谣言记忆的争议（与谣言研究的关联现象）
+  communication_implications: 不应将策略押在 sleeper effect 上（条件苛刻且不可控）；其反向启示更有价值：重要信息的信源要可回溯（防解耦失真），对有害信息要在信源-内容绑定期间反驳（趁折扣线索还在）。
+  community_implications: 社群的集体记忆依赖可回溯记录（精华区、引用链）而非成员的个体记忆——制度化的信源绑定是对 sleeper effect 式失真的防御；对社群内流传的外部信息，第一时间标注信源可信度是治理基本功。
+  content_applications:
+    evidence: 证据与信源紧绑定呈现（链接、截图、时间戳），防止内容脱离信源后的失真传播
+    title: 标题避免依赖『先声夺人后补证据』的结构——多数场景是整体遗忘而非睡眠者上升
+    body: 对可能被断章传播的核心论断，主动预置语境说明（本结论的前提是X），提高解耦后的存活保真度
+  platform_implications: 平台的截图转发结构天然制造信源-内容解耦（内容脱离原始语境传播），这既是有害信息失真的通道，也是内容创作者（金句、切片）的传播杠杆——溯源机制（provenance_verification）是对这一解耦的制度化对冲。
+  related_nodes:
+  - source_credibility_model
+  - misinformation_velocity
+  - memory_sins
+  - gist_vs_verbatim_memory
+  - trust_calibration
+  source_ids:
+  - S35
+  - S34
+  - S195
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Hovland 延迟测量与 Kumkale & Albarracín 元分析一手 EP 均未建；S34（ELM 全书实取）与 S35（18 章目录实取）均无
+      sleeper effect 内容；2026-09-09 一手 EP 已建（S195）
+    downgrade_upgrade_reason: 2026-09 反向审计：内容来自记忆蒸馏，待建 EP 后升级（B → C）
+  last_verified: '2026-09-09'
+  provenance:
+    primary_sources:
+    - S195
+    supporting_evidence:
+    - S34
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: self_persuasion
+  canonical_name_en: Self-Persuasion
+  canonical_name_zh: 自我说服
+  aliases:
+  - 自我生成说服
+  - self-generated persuasion
+  - role-playing 说服效应
+  domain: persuasion
+  definition: 个体通过自己生成论点、扮演态度角色或为自己得出结论而发生的说服——说服源是自我而非外部。从 Aronson 与 Janis 的角色扮演实验到自我生成论点研究，证据显示自我生成的论证比接收同样内容的外部论证产生更强的态度改变。
+  core_claim: 人们更相信与自己得出的结论（哪怕引导过程被设计）；说服的最强形态是让对方以为是自己想通的。
+  mechanism: 三个通道：（1）认知投入——生成的论点经历了自己的认知检验，被归因为自己的想法（无外部归因折扣）；（2）一致性压力——公开或内在化的自我陈述触发承诺一致性；（3）角色扮演——在角色中行为（为新立场辩护）经自我知觉反推态度（我这么卖力辩护，说明我真信）。与中心路径加工的区别：中心路径是审视外来论据，自我说服是生成论据——后者多了一层『我的想法』的归因保护。
+  causal_chain: 引导性任务（提问/角色/辩论任务） → 受众自己生成论点或扮演立场 → 自我归因（这是我说的） → 态度向生成内容对齐 → 强且持久的态度改变
+  variables:
+    inputs:
+    - 引导性提问
+    - 角色扮演任务
+    - 辩论任务（为己方立场辩护）
+    - 选择权的赋予
+    moderators:
+    - 生成过程的自主感
+    - 任务的方向引导隐蔽性
+    - 受众的表达能力
+    mediators:
+    - 自我归因
+    - 认知投入深度
+    - 一致性压力
+    outputs:
+    - 强态度改变（强于被动接收）
+    - 行为预测力
+    - （过度引导被识破时）逆反与被操纵感"
+  evidence:
+    supporting:
+    - Aronson 与 Janis 的角色扮演实验：为不熟悉立场写文章/演讲者，态度向该方向显著改变（经典文献，未建包）
+    - 自我生成论点与被动接收同样论点的对比研究：生成组的更强态度改变
+    - 苏格拉底式提问传统（经典文献，未建包）
+    conflicting:
+    - 生成质量差（想不出好论点）时效果弱于优质外部论证
+    - 引导痕迹过明显触发被操纵警觉与逆反
+    replication:
+    - 角色扮演与自我生成说服的基本效应在多研究重复
+    - 效应量中等，对引导设计质量敏感
+    meta_analysis:
+    - 主动生成vs 被动接收说服的元整合支持生成优势（认知反应传统）
+  evidence_grade: B+
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 受众能生成合理论点（有素材与能力）
+  - 引导过程保有自主感（非明显操纵）
+  - 议题与受众有基础相关性（否则无从生成）
+  failure_conditions:
+  - 受众无从生成（零知识冷启动）——此时需要先给外部论据
+  - 引导被识破（明显的钓鱼式提问）触发逆反
+  - 生成的论点反方向（引导失控产出反对论点）
+  common_misinterpretations:
+  - 把自我说服等同于『套路提问』——机械化的引导式问题（你想不想变好？想！）是话术，真自我说服需要真实的生成与探索空间
+  - 忽视风险面：自我说服机制同样被邪教与传销利用（让学员自己说出道理）
+  ethical_risks:
+  - 操纵性引导设计（预设结论的钓鱼问题链）
+  - 利用角色扮演使人内化损害自身利益的立场（传销的自我合理化）
+  examples:
+    original_cases:
+    - Aronson 与 Janis 的角色扮演说服实验（经典文献，未建包）
+    - 认知反应传统中的自我生成论点研究
+    research_cases:
+    - 为陌生立场写文章后的态度改变实验
+    - 自我生成论点vs 被动阅读的对比实验
+    modern_cases:
+    - 教练式销售（提问让客户自己说出需求）
+    - 社群的复盘文化（自己写总结=自我说服）
+    - 打卡与公开立誓（自我承诺+一致性）
+  communication_implications: 内容的最高形态不是陈述而是提问：把核心结论转化为读者自己回答的问题（你觉得哪种更适合你？）；留白与填空结构（你来补全这个清单）比完整陈述产生更强的认同。
+  community_implications: 社群的最强说服场景是成员共创：让成员自己写方法、讲经验、主持讨论——运营者退为提问者与结构设计者；成员在共创中完成自我说服，其态度强度远超被动接受运营结论。
+  content_applications:
+    body: 以问题链推进正文：每节以设问开头、案例后留思考题——读者的回答就是自我生成的论点
+    cta: CTA 转化为承诺句式：『在评论区写下你打算从哪一步开始』——写下的承诺经自我说服强化
+    opening: 开场提问替代断言：『你觉得这件事的最大障碍是什么？先别看下文，想 10 秒』
+    comments: 楼主用追问深化评论（你为什么这么判断？），让评论者完成二次自我生成
+  platform_implications: 平台的互动组件（投票、问答、弹幕）是自我说服的规模化基础设施；UGC 生态的本质是让用户在生成内容中完成对自己的说服——这是用户原创内容比官方内容更有说服力的机制根源。
+  related_nodes:
+  - central_route_processing
+  - commitment_consistency
+  - cognitive_dissonance
+  - rhetorical_question_engagement
+  - elaboration_likelihood_model
+  - foot_in_the_door
+  - participation_ladder
+  source_ids:
+  - S35
+  last_verified: '2026-09-09'
+  provenance:
+    primary_sources:
+    - S35
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: pre_suasion_attention_channeling
+  canonical_name_en: 'Pre-Suasion: Attention Channeling'
+  canonical_name_zh: 预说服（先导注意引导）
+  aliases:
+  - pre-suasion
+  - 先导注意力引导
+  - privileged moment for persuasion
+  domain: persuasion
+  definition: Cialdini 在《Pre-Suasion》中提出的概念：在说服信息呈现之前，先导性引导（提问、情境、线索）将注意力锚定于某些联想，使后续说服在已被预备的心理土壤上进行——『重要的不是说什么，而是先让什么被想到』。
+  core_claim: 先导注意引导改变说服的接受度；但部分底层证据（priming 类）在复制危机中大幅缩水，该框架的实操价值需按条件谨慎使用。
+  mechanism: 注意即筛选：被引导到前景的联想成为解释后续信息的框架。两类相对稳健的通道：（1）注意与关联性引导——问『你觉得自己乐于尝试新事物吗』激活开放自我图式，使后续创新产品推荐更顺；（2）稀缺与未完成（Zeigarnik）的注意锁定。而部分经典通道（如行为
+    priming：环境线索直接激活行为的部分早期证据）在大规模复制项目中失败——引用与使用该框架时必须区分通道的稳健性。
+  causal_chain: 先导线索/提问 → 注意与联想被锚定 → 后续信息在激活的框架下被解释 → 说服接受度提升（通道稳健时）
+  variables:
+    inputs:
+    - 先导提问
+    - 情境与场景线索
+    - 序位安排（什么先呈现）
+    moderators:
+    - 通道类型（注意引导vs 行为 priming——后者证据弱）
+    - 引导的自然度（被识破失效）
+    - 个体差异（自我意识水平）
+    mediators:
+    - 注意锚定
+    - 联想可达性（accessibility）
+    - 解释框架的激活
+    outputs:
+    - 说服接受度提升
+    - 议题相关联想的优先级
+    - （通道不稳时）效应不可重复
+  evidence:
+    supporting:
+    - Cialdini《Pre-Suasion》整合的注意引导案例与实验（S33）
+    - 关联性提问提升后续信息接受的研究（自我图式激活方向）
+    - 注意与记忆的认知基础（注意瓶颈、可达性）本身是 A 级证据
+    conflicting:
+    - 行为 priming 的大规模复制失败（复制危机核心案例之一，见 EVIDENCE.md：E→谨慎）
+    - 先导效应的幅度对情境与个体差异敏感，营销外推常夸大
+    - 部分书中引用的原始研究本身在复制复核中被降级
+    replication:
+    - 注意引导与联想可达性的通道有认知心理学稳健基础
+    - 『先导线索直接改变行为』的强主张复制失败——使用时必须限定在注意/联想/框架通道
+    meta_analysis:
+    - priming 类的大规模注册复制项目（多团队协作）报告效应远小于原始文献，行为 priming 基本不可重复
+  evidence_grade: C
+  boundary_conditions:
+  - 限于注意引导与联想激活通道（问什么让受众想到什么）
+  - 引导自然且不被识破为操纵
+  - 后续信息与被激活的联想真实相关（否则落差反噬）
+  failure_conditions:
+  - 依赖行为 priming 类通道（复制失败的证据基础）
+  - 引导被识破（『他在给我下套』触发逆反）
+  - 先导框架与后续内容脱节（联想错位）
+  common_misinterpretations:
+  - 把 pre-suasion 当万能前置咒语——其稳健部分（注意引导、提问锚定）价值真实，但其引用的部分 priming 证据已崩塌
+  - 忽视通道区分：『先问开放性问题再推销』（注意引导，可用）与『放个信任符号在页面让人自动变诚实』（行为 priming，不可靠）是两回事
+  ethical_risks:
+  - 隐蔽的操纵性引导（预埋联想再收割，且受众全程无察觉）
+  - 利用注意锁定制造虚假的『重要时刻』（伪稀缺的先导铺垫）
+  examples:
+    original_cases:
+    - Cialdini《Pre-Suasion》的先导注意框架（S33）
+    research_cases:
+    - 关联性自我图式提问的先导实验（S33 引述）
+    - 注意瓶颈与联想可达性的认知基础研究
+    modern_cases:
+    - 落地页先问痛点问题再给方案（提问式开头）
+    - 直播间先讨论『选品的坑』再上链接
+    - 标题以痛点疑问开头，正文承接
+  communication_implications: 稳健用法：内容开头的问题决定读者的注意方向——问『你有没有过X经历』比断言『X很常见』更能激活相关联想；先导引导与正文主张必须同向，否则识破即反噬。不可依赖：环境符号自动改变行为的
+    priming 式设计。
+  community_implications: 社群的议程设置就是制度化的 pre-suasion：先讨论什么话题决定了成员的联想与判断框架；运营者对『本周先抛什么问题』的选择本身就是说服设计，应与社群真实价值同向使用。
+  content_applications:
+    opening: 开场以同向提问锚定注意：『你上一次认真复盘是什么时候？』（先激活复盘的自我联想，再谈方法论）
+    title: 标题用疑问先导：『为什么高手都在做X？』——注意锚定在X与高手的关联上
+    body: 关键论点前先铺垫其联想物（讲复利前先讲时间的不可逆），让论点落在已激活的土壤上
+    visual: 视觉先导与主题同向（金融内容先呈现时间/成长意象而非混乱图表），但不依赖符号的『自动效应』
+  platform_implications: 平台的封面、前3秒、标题卡是 pre-suasion 的制度化入口；算法用完播率惩罚先导失当（联想错位即跳出）——平台以数据反馈强制了先导与内容的对齐，这是对
+    pre-suasion 滥用的自然约束。
+  related_nodes:
+  - selective_attention
+  - top_down_attention_guidance
+  - elaboration_likelihood_model
+  - attitude_strength_accessibility
+  - framing_effects
+  - curiosity_gap
+  source_ids:
+  - S33
+  - S01
+  - S34
+  - S126
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Cialdini《Pre-Suasion》（S33）+ Doyen et al. 2012 行为启动复制失败（S126，paper 级，OA 全文：实验
+      1 失败/实验 2 期望效应）
+    effect_size: 注意/联想通道稳健；行为 priming 类通道复制失败（E→谨慎）
+    replication_status: 注意引导与联想可达性有认知基础；『先导线索直接改变行为』未获复制
+    context_dependency: 限注意引导与联想激活通道；引导被识破即失效
+    downgrade_upgrade_reason: 2026-09 补充 S126（行为启动复制失败）作为通道区分的关键边界证据，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S33
+    supporting_evidence:
+    - S126
+    - S01
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: long

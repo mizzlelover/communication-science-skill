@@ -1,0 +1,25 @@
+# Evidence Package — S48 Tim Wu 2016（The Attention Merchants）
+# 标准格式。access_level 如实标注。
+source_id: S48
+title: "The Attention Merchants: The Epic Scramble to Get Inside Our Heads"
+authors: "Tim Wu"
+year: 2016
+journal: Knopf（专著）
+doi: "无 DOI（专著）"
+url: "https://www.blinkist.com/en/books/the-attention-merchants-en"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：Blinkist 摘要（注意力收割史：Benjamin Day 便士报/专利药广告/广播/电视/互联网）+ 学术综述（注意力商品化非硅谷发明，而是媒介史反复模式）+ 中文解读（'你不是用户，你是产品'）"
+research_question: "注意力如何被商业化收割？'注意力商人'的历史演进与模式是什么？"
+core_claims:
+  - "注意力收割史：从 1833 年便士报（Benjamin Day 以广告补贴低价报纸）经专利药广告/广播赞助/电视到互联网——制胜之道始终是'找到未被收割的时空，收集尚未被收割的意识'"
+  - "核心论点：美国文化被注意力商人系统性殖民；对该殖民的偶发反抗是最具文化生产力的时刻"
+  - "免费互联网的真相：你不是用户，而是产品——你的时间与关注被转售给广告商（数据化精准广告）"
+  - "注意力经济不仅是经济的也是政治的：分心有利于增强平台权力、削弱其他所有人"
+method: "注意力经济史（媒介史+商业史综合，从便士报到 Google）"
+results: "（历史+批判）注意力经济史的决定性叙述；'注意力商人'概念标准词汇"
+limitations: "历史叙述（非实证研究）；'文化殖民'强判断有争议"
+boundary_conditions: "适用于注意力商业模式的历史理解与平台批判"
+relevant_nodes: [attention_economics, algorithmic_amplification, attention_capacity_limits]
+notes: "attention_economics 的一手历史来源（book 级）。便士报起源/产品即用户为公开标准内容，未编造。"
+last_verified: "2026-09"

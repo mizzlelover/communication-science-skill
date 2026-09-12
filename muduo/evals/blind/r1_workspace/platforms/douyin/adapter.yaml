@@ -1,0 +1,177 @@
+platform_name: 抖音（Douyin）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础（2026-09 实取官方材料后更新）：品类治理与未成年人保护等有官方文档支持
+  （L1：社区自律公约/巨量引擎规则中心）；流量池逐级放大、完播率权重、Dou+ 加热等
+  仍为行业共识（L3，官方未公开算法细节；Dou+/挑战赛/直播推荐等原标 official_rule 的
+  '产品存在'条目本次实取未获官方文档直接支持，已降级标注为 L3）。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {source: "《抖音社区自律公约》https://aweme.snssdk.com/falcon/fe_douyin_security_react/self_discipline_convention/?hide_nav_bar=1", source_owner: "抖音（北京抖音信息服务有限公司）", source_type: official, claim_supported: "鼓励原创优质内容与真人出镜、避免虚假人设；不当营销与虚假宣传、恶意导流治理；未成年人保护（第八部分）；作弊行为与垃圾信息治理；违规处罚（删除/屏蔽/禁言/封禁）", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "抖音创作者中心 https://creator.douyin.com/", source_owner: "抖音", source_type: official, claim_supported: "创作者官方服务平台存在（内容管理、数据洞察、变现对接、热点榜单）", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: medium}
+  - {source: "巨量千川规则中心（巨量引擎帮助中心）https://support.oceanengine.com/support/?pageId=229&spaceId=295", source_owner: "巨量引擎（字节跳动）", source_type: official, claim_supported: "电商/品类投放准入与禁投规则、治理公告（如品类准入规范、内容投放治理）", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: medium}
+
+content_units:
+  - "短视频（竖屏为主）"
+  - "图文（幻灯片式，2022 年后推出）"
+  - "直播"
+  - "中视频/横屏内容（权重较低 [industry_consensus]）"
+
+dominant_user_intent:
+  - "打发时间（绝对主流：休闲刷，无任务目标）"
+  - "被动发现（被推荐激发的潜在需求）"
+  - "主动搜索（增长中，但心智弱于搜索平台）"
+
+distribution_model: >-
+  算法分发绝对主导：单列沉浸信息流，关注与搜索为辅。
+  流量池逐级放大机制——新视频进入初始流量池，按数据表现决定是否推入更大池
+  [industry_consensus-官方未公开，"8 级流量池"等具体层级均为 experience_speculation]。
+
+recommendation_model: >-
+  以完播/复播、互动率、转粉率为核心信号的加权推荐 [industry_consensus-权重黑箱]；
+  任何"权重百分比"传言不可引用。爆款本质是 recommendation_feedback_loop：
+  数据好→更多曝光→更多数据。
+
+social_graph_characteristics: >-
+  极弱关系：关注关系对分发影响小，陌生人内容占绝对主体；
+  "涨粉不等于播放"是该平台最反直觉也最重要的结构特征 [industry_consensus]。
+
+content_lifecycle: >-
+  爆发式衰减：小时到数天；爆款靠推荐滚雪球，但衰减同样快；
+  搜索长尾存在但弱于小红书/知乎。内容是"流量事件"而非"资产"——
+  长青性需靠系列化与主页沉淀弥补。
+  [industry_consensus-行为观察]
+
+primary_entry_points:
+  - "全屏推荐流（默认首页，注意力唯一战场）"
+  - "关注页"
+  - "搜索"
+  - "同城"
+  - "直播入口"
+
+attention_environment: >-
+  全屏沉浸单列：无选择权，但保留 0.5-1 秒的滑动否决权——
+  注意力是唯一货币，每一秒都在被重新决定去留（attention_economics 的极端形态）。
+  [industry_consensus-公开产品形态+行为观察]
+
+user_behavior: >-
+  低戒备高流动：用户不给第二次机会；
+  静音场景少（抖音默认有声，与海外 TikTok 的静音文化不同 [industry_consensus]）；
+  评论区停留是常见行为——"评论区比视频好看"。
+
+interaction_signals:
+  - "完播率/平均播放时长：最重信号方向 [industry_consensus]"
+  - "复播/循环播放：强正向信号 [industry_consensus]"
+  - "点赞：态度，量大但权重低于完播 [industry_consensus]"
+  - "评论：讨论深度，权重高于点赞 [industry_consensus]"
+  - "分享：扩散+站外导流价值 [industry_consensus-方向]"
+  - "关注转化：单视频带来的涨粉（转粉率）[industry_consensus]"
+
+sharing_mechanism: >-
+  站内转发（私信/动态）顺畅；站外分享到微信受口令码限制
+  [industry_consensus-产品形态]；"保存视频+微信发送"是常见暗路径，
+  也带来搬运与去水印治理问题。
+
+search_mechanism: >-
+  搜索增长迅速但用户心智仍以"刷"为主 [industry_consensus]；
+  标题文案、话题、字幕 OCR、语音识别都参与索引 [industry_consensus]；
+  "抖音 SEO"是真实存在但被夸大的方向——量级与搜索平台不可比。
+
+community_mechanism: >-
+  评论区玩梗文化（热评是二次内容）、粉丝团/直播灯牌、挑战赛话题聚合；
+  社群感弱于 B 站——粉丝关系更多依附于单条爆款而非账号人格
+  （parasocial_relationship 较浅）。[industry_consensus-社区观察]
+
+algorithmic_features:
+  - "流量池逐级推荐 [industry_consensus-机制方向，层级细节不可考]"
+  - "Dou+ 付费加热 [L3-原标official_rule，2026-09 实取未获官方文档直接支持（产品公开可见，加热机制官方未公开）]"
+  - "话题挑战赛与热点 BGM 聚合 [L3-原标official_rule，2026-09 实取未获官方文档直接支持（挑战赛为公开产品形态）]"
+  - "直播推荐流与电商货架 [L3-原标official_rule，2026-09 实取未获官方文档直接支持（直播/电商为公开产品形态）]"
+
+content_constraints:
+  - "[industry_consensus] 视频时长上限随账号与年份多次放宽（从 15 秒到分钟级），以平台最新公告为准"
+  - "[industry_consensus] 文案在信息流中约 55 字后截断（以实际显示为准）"
+  - "[official_rule-品类治理见 S3 巨量引擎规则中心（品类准入/禁投规则）] 电商/医疗/金融等品类内容受专项规范治理（以最新规则为准）"
+
+title_role: >-
+  弱化但非无用：全屏流中标题是左下角辅助信息；在搜索结果、
+  主页浏览与"标题留人"（文案悬念）场景仍有作用——
+  标题从"点击开关"退化为"补充说明+搜索接口"。[industry_consensus-行为观察]
+
+cover_role: >-
+  弱化：单列全屏无封面网格；封面主要影响主页观感与搜索结果缩略图，
+  对推荐流点击几乎无影响——这是与 B 站/YouTube 的本质区别。
+  [industry_consensus-产品形态+行为观察]
+
+opening_role: >-
+  极重：前 3 秒钩子的流行不是玄学，而是滑动否决权的直接后果——
+  开场决定完播分布，完播决定分发 [industry_consensus-机制]。
+  边界：与内容无关的假钩子（标题党式开场）会引发中途流失与信任折价，
+  完播与转化反而下降 [industry_consensus]。
+
+tag_role: >-
+  话题标签参与内容理解与挑战赛聚合 [L3-原标official_rule，2026-09 实取未获官方文档直接支持（挑战赛为公开产品形态）]；
+  对分发的实际权重未公开——标签是分类信号不是流量卡 [industry_consensus]。
+
+comment_role: >-
+  热评文化：评论区是内容的延伸现场与二次传播点；
+  置顶评论可引导讨论方向；"留评论钩子"（故意留破绽/提问）是常见策略
+  [industry_consensus]，但刻意引战损伤账号氛围。
+
+follow_role: >-
+  关注=进入关注页与直播提醒，但对推荐流量影响有限 [industry_consensus]；
+  涨粉的意义在直播转化与电商复购，而非内容播放的保证。
+
+risk_factors:
+  - "[industry_consensus] 完播率导向诱导短平快空心化：流量高但信任与转化浅（Short-term Performance ≠ Long-term Value）"
+  - "[industry_consensus] 同质化模仿的审美疲劳：一个模板爆了全员抄，衰减极快（hedonic_adaptation）"
+  - "[industry_consensus] 搬运/违规限流：去重与治理机制惩罚伪原创 [industry_consensus-治理方向，S1 公约'鼓励原创优质内容'方向一致]"
+  - "[official_rule-未成年人保护见 S1 公约第八部分，品类治理见 S3 巨量引擎规则中心] 品类合规（电商/健康/教育）与未成年人保护治理（以最新规则为准）"
+  - "[industry_consensus] 热点依赖：内容策略绑定 BGM/挑战赛热点，平台热点周期不可控"
+
+known_platform_patterns:
+  - pattern: "前 3 秒钩子（悬念/冲突/反常识开场）"
+    mechanism_links: [bottom_up_attention_capture, curiosity_gap, zeigarnik_effect]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1（背景参考，完播/分发机制官方未公开）"
+    last_verified: "2026-09"
+    note: "机制：滑动否决权下，开场必须在 1 秒内制造'未闭合缺口'留住拇指。边界：钩子必须被正文兑现——假钩子触发信任折价与完播下滑；慢热型深度内容在此平台天然吃亏，需要用'内容化钩子'而非'营销化钩子'。"
+  - pattern: "节奏压缩与信息密度控制（无废镜头）"
+    mechanism_links: [attention_capacity_limits, peak_end_rule, prediction_error]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1（背景参考，内容节奏机制官方未公开）"
+    last_verified: "2026-09"
+    note: "每 3-5 秒一次信息更新对抗流失；结尾反转/升华拉高峰值体验促复播。边界：过度压缩牺牲理解（intrinsic_cognitive_load），教学类内容需要降速。"
+  - pattern: "大字幕与关键词强调"
+    mechanism_links: [dual_process_theory, extraneous_cognitive_load, visual_hierarchy]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1（背景参考，内容表达机制官方未公开）"
+    last_verified: "2026-09"
+    note: "口播+字幕双通道冗余编码降低理解负荷；关键词大字引导视线。"
+  - pattern: "评论区钩子（留白提问/故意留破绽）"
+    mechanism_links: [rhetorical_question_engagement, social_proof, schema_violation]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1（背景参考，评论加权机制官方未公开）"
+    last_verified: "2026-09"
+    note: "评论加权高于点赞 [industry_consensus]，互动钩子提升讨论量。边界：刻意错误引战短期有效，长期损伤专业信任。"
+  - pattern: "热点 BGM/挑战赛蹭聚合流量"
+    mechanism_links: [algorithmic_amplification, mere_exposure, social_proof]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1/S2（背景参考，挑战赛为公开产品形态，聚合权重官方未公开）"
+    last_verified: "2026-09"
+    note: "热点话题自带聚合页流量与熟悉度红利。边界：热点与账号定位错位会稀释人群画像。"
+  - pattern: "口播人设的持续出镜（真人 IP）"
+    mechanism_links: [parasocial_relationship, mere_exposure, authenticity_perception]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: "S1（公约明确'提倡记录美好生活、建议真人出镜或讲解、避免虚假人设'，方向一致；'拟社会熟悉感支撑转化'机制本身为行业共识）"
+    last_verified: "2026-09"
+    note: "重复出镜建立拟社会熟悉感与信任，支撑直播/电商转化；纯素材混剪账号难沉淀人格资产。"
+
+confidence: medium

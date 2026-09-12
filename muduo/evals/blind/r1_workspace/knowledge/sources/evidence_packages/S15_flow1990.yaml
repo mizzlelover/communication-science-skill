@@ -1,0 +1,25 @@
+# Evidence Package — S15 Csikszentmihalyi 1990（Flow）
+# 标准格式。access_level 如实标注。
+source_id: S15
+title: "Flow: The Psychology of Optimal Experience"
+authors: "Mihaly Csikszentmihalyi"
+year: 1990
+journal: Harper & Row（专著）
+doi: "无 DOI（专著）"
+url: "https://wiki.mbalib.com/zh-tw/%E6%B6%8C%E6%B5%81%E7%90%86%E8%AE%BA"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "心流理论核心经多源交叉实取：MBA 智库词条（9 成分/8 状态区/挑战-技能平衡）+ 学术文献（9 维度清单/ESM 经验取样）+ 中文专著解读（行动-意识融合/时间扭曲/自得其乐 autotelic）+ 运动心理书籍（挑战-技能平衡与流畅状态）"
+research_question: "人何时体验到最优体验（心流）？其构成成分与前提条件是什么？"
+core_claims:
+  - "心流=挑战与技能平衡、目标清晰、反馈即时条件下产生的全神贯注体验：行动-意识融合、时间感扭曲、自我意识减弱、活动本身即目的（autotelic）"
+  - "三前提条件：清晰目标、即时反馈（micro-feedback）、挑战-技能平衡；八通道模型：挑战/技能双维（无聊/焦虑/心流分区）"
+  - "九成分：挑战-技能平衡、行动-意识整合、清晰目标、清晰反馈、注意集中、掌控感、自我意识消失、时间扭曲、自得其乐"
+  - "方法论：经验取样法（ESM）在真实生活（攀岩/艺术/外科/工作）中捕捉该状态；跨文化普适"
+method: "经验取样研究（ESM）+ 跨领域访谈（艺术家/运动员/外科医生等）+ 理论综合"
+results: "（理论+方法）心流成为积极心理学与动机研究核心概念；ESM 为体验研究标准方法"
+limitations: "主观报告为主，客观测量与因果操纵有限；挑战-技能双通道的具体边界被后续修正"
+boundary_conditions: "任务需有目标结构与可感知反馈；个体需具备基本技能并自愿投入"
+relevant_nodes: [flow_state, self_determination_needs, attention_capacity_limits, self_efficacy]
+notes: "flow_state 的一手来源（book 级）。9 成分与三前提为公开标准内容，未编造。"
+last_verified: "2026-09"

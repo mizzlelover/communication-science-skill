@@ -1,0 +1,22 @@
+# Evidence Package — S233（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S233
+title: Experimental Study of Informal Rewards in Peer Production
+authors: Michael Restivo; Arnout van de Rijt
+year: 2012
+journal: PLOS ONE 7(3):e34358
+doi: 10.1371/journal.pone.0034358
+url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034358
+access_level: abstract_only
+research_status: annotated
+content_obtained: RePEc 摘要逐字实读（2026-09-11）；PLOS ONE 为 OA 期刊
+research_question: 非正式荣誉（地位信号）是否因果地影响同侪生产中的个体投入？
+core_claims:
+- 随机实验：向维基百科产量前 1% 贡献者中随机指派'barnstar'（社区荣誉奖）
+- 与对照组比较：获奖者生产率提升 60%，且再获社区其他成员 barnstar 的可能性提高 6 倍——非正式奖励显著影响个体努力
+method: 随机实验（随机指派荣誉奖励）
+limitations: 单一维基百科情境；荣誉形式特定
+boundary_conditions: 适用于有可见贡献记录与荣誉机制的社区
+relevant_nodes:
+- status_systems
+notes: status_systems 一手实证：地位/荣誉信号因果地提升贡献——'贡献可被累积可见并激励投入'的实验证据。真实数字 60%/6 倍。
+last_verified: 2026-09

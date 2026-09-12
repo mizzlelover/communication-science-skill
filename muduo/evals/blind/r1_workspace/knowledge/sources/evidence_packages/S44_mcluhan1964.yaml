@@ -1,0 +1,26 @@
+# Evidence Package — S44 McLuhan 1964（Understanding Media）
+# 标准格式。access_level 如实标注。
+source_id: S44
+title: "Understanding Media: The Extensions of Man"
+authors: "Marshall McLuhan"
+year: 1964
+journal: McGraw-Hill（专著）
+doi: "无 DOI（专著）"
+url: "https://mcluhan.org/the-medium-is-the-message/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心概念经多源交叉实取：McLuhan.org（媒介即讯息/媒介作为人的延伸/热媒介与冷媒介）+ 学术课程笔记（媒介形态决定文化整合方式/感知环境）+ 中文百科（延伸理论/热冷媒介/地球村）"
+research_question: "媒介技术如何塑造人的感知、意识与文化？传播的形式为何比内容更重要？"
+core_claims:
+  - "媒介即讯息（the medium is the message）：传播形式比内容更能改变人类感知与行为——每种媒介创造独特的感知环境（印刷/广播/电视/互联网各有不同效应）"
+  - "媒介是人的延伸（extensions of man）：媒介延伸五官与身体（眼镜延伸视觉/轮子延伸脚/衣服延伸皮肤）；延伸同时伴随'自我截除'（感官麻木）"
+  - "热媒介/冷媒介：高清晰度（热，需少参与）vs 低清晰度（冷，需高参与）——决定受众参与方式与文化效果"
+  - "地球村（global village）：电子媒介压缩时空，使世界重新部落化"
+  - "批判社会科学家只测内容效果而忽视媒介本身的效应（对小效果范式的批评）"
+method: "媒介生态学理论专著（感知/历史/文化分析）"
+results: "（理论奠基）媒介即讯息/热冷媒介成为媒介研究标志性概念"
+limitations: "论证性/格言式（非实证研究）；部分论断（如对'原始社会'的表述）受现代批评"
+boundary_conditions: "适用于理解媒介形态的宏观文化效应；微观内容效果需其他理论"
+relevant_nodes: [attention_economics, figure_ground_separation]
+notes: "媒介理论奠基（book 级）。媒介即讯息/热冷媒介为公开标准内容，未编造。"
+last_verified: "2026-09"

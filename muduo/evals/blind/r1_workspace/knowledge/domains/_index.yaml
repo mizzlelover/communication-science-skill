@@ -1,0 +1,165 @@
+# Domains Index — 32 个一级知识域（含 AI 新增模块）
+# 每个域的节点存于 knowledge/mechanisms/<domain_id>.yaml
+domains:
+  - id: attention
+    name_en: Attention
+    name_zh: 注意
+    scope: 信息流环境中什么决定注意的分配与捕获
+    nodes: [selective_attention, attention_capacity_limits, bottom_up_attention_capture, top_down_attention_guidance, inattentional_blindness, attention_residue, cocktail_party_effect]
+  - id: perception
+    name_en: Perception
+    name_zh: 感知
+    scope: 视觉组织与知觉特性如何影响第一眼判断
+    nodes: [gestalt_grouping, visual_hierarchy, figure_ground_separation, facial_attention_priority, color_emotion_associations, mere_exposure]
+  - id: cognitive_load
+    name_en: Cognitive Load
+    name_zh: 认知负荷
+    scope: 心智带宽限制与信息设计的负荷管理
+    nodes: [working_memory_limits, intrinsic_cognitive_load, extraneous_cognitive_load, germane_load_learning, information_overload, seductive_details_effect]
+  - id: processing_fluency
+    name_en: Processing Fluency
+    name_zh: 处理流畅性
+    scope: 加工难易如何变成真实感、好感与可信度
+    nodes: [processing_fluency, fluency_truth_effect, rhyme_as_reason, name_pronunciability, disfluency_deep_processing]
+  - id: memory
+    name_en: Memory
+    name_zh: 记忆
+    scope: 编码、保留与提取——什么被记住、什么被遗忘
+    nodes: [encoding_specificity, serial_position_effect, von_restorff_effect, zeigarnik_effect, testing_effect, spaced_repetition, gist_vs_verbatim_memory, peak_end_rule, memory_sins]
+  - id: prediction_surprise
+    name_en: Prediction & Surprise
+    name_zh: 预测与意外
+    scope: 预测误差、好奇与悬念的认知引擎
+    nodes: [prediction_error, curiosity_gap, schema_violation, novelty_preference, suspense_structure]
+  - id: emotion
+    name_en: Emotion
+    name_zh: 情绪
+    scope: 情绪如何驱动注意、记忆、判断与分享
+    nodes: [emotional_arousal, affect_heuristic, discrete_emotion_sharing_profiles, emotional_contagion, mood_congruence, empathy_induced_helping]
+  - id: motivation
+    name_en: Motivation
+    name_zh: 动机
+    scope: 内在动机、目标与自我效能的行为引擎
+    nodes: [self_determination_needs, intrinsic_extrinsic_motivation, goal_gradient_effect, goal_setting_effectiveness, implementation_intentions, self_efficacy, flow_state]
+  - id: reward
+    name_en: Reward
+    name_zh: 奖励
+    scope: 奖励结构与多巴胺系统的真实机制
+    nodes: [variable_ratio_reward, reward_prediction_dopamine, immediate_vs_delayed_rewards, endowed_progress_effect, hedonic_adaptation]
+  - id: habit
+    name_en: Habit
+    name_zh: 习惯
+    scope: 习惯回路与行为设计的机制基础
+    nodes: [habit_loop_cue_routine_reward, behavior_model_bmap, hook_model, friction_reduction, context_cue_stability]
+  - id: decision_making
+    name_en: Decision Making
+    name_zh: 决策
+    scope: 双系统、启发式与判断偏差
+    nodes: [dual_process_theory, satisficing, choice_overload, default_option_effect, anchoring_effect, availability_heuristic, representativeness_heuristic, status_quo_bias]
+  - id: behavioral_economics
+    name_en: Behavioral Economics
+    name_zh: 行为经济学
+    scope: 价值判断的非理性结构（损失厌恶、框架、稀缺等）
+    nodes: [loss_aversion, scarcity_mindset, endowment_effect, mental_accounting, gain_loss_framing, present_bias, fairness_preferences, nudge_mechanism, sunk_cost_fallacy]
+  - id: identity
+    name_en: Identity
+    name_zh: 身份认同
+    scope: 社会认同、自我呈现与身份信号
+    nodes: [social_identity_theory, self_categorization, identity_signaling, self_presentation_impression_management, identity_protective_cognition, in_group_favoritism]
+  - id: social_comparison
+    name_en: Social Comparison
+    name_zh: 社会比较
+    scope: 上行/下行比较与相对位置的动机效应
+    nodes: [upward_social_comparison, downward_social_comparison, relative_deprivation, fear_of_missing_out]
+  - id: social_proof
+    name_en: Social Proof
+    name_zh: 社会认同（从众证据）
+    scope: 他人行为如何成为我们的信息
+    nodes: [social_proof, descriptive_injunctive_norms, conformity_asch, informational_influence, normative_influence, pluralistic_ignorance, minority_influence]
+  - id: social_norms
+    name_en: Social Norms
+    name_zh: 社会规范
+    scope: 规范的感知、传达、执行与互惠
+    nodes: [norm_perception_accuracy, norm_messaging_effects, norm_enforcement_reputation, reciprocity_norm, commitment_consistency]
+  - id: trust
+    name_en: Trust
+    name_zh: 信任
+    scope: 信任的形成、校准与信号
+    nodes: [trust_calibration, source_credibility_model, authenticity_perception, trust_signals_content, reputation_systems, provenance_verification]
+  - id: authority
+    name_en: Authority
+    name_zh: 权威
+    scope: 权威影响的机制、符号与滥用
+    nodes: [authority_influence, credentialing_symbols, pseudo_authority]
+  - id: persuasion
+    name_en: Persuasion
+    name_zh: 说服
+    scope: ELM 路径、顺从技术与抗拒
+    nodes: [elaboration_likelihood_model, central_route_processing, peripheral_route_processing, inoculation_theory, foot_in_the_door, door_in_the_face, fear_appeals_eppm, psychological_reactance, sleeper_effect, self_persuasion, pre_suasion_attention_channeling]
+  - id: attitude_change
+    name_en: Attitude Change
+    name_zh: 态度改变
+    scope: 态度的形成、强度与行为差距
+    nodes: [cognitive_dissonance, attitude_strength_accessibility, commitment_escalation, attitude_behavior_gap]
+  - id: framing
+    name_en: Framing
+    name_zh: 框架
+    scope: 信息呈现方式如何改变判断
+    nodes: [framing_effects, metaphor_framing, negation_ironic_rebound, emphasis_vs_equivalence_framing]
+  - id: narrative
+    name_en: Narrative
+    name_zh: 叙事
+    scope: 故事传输、角色认同与叙事说服
+    nodes: [narrative_transportation, story_character_identification, anecdote_vs_statistics, dramatic_arc_structure, parasocial_relationship]
+  - id: language_rhetoric
+    name_en: Language & Rhetoric
+    name_zh: 语言与修辞
+    scope: 词汇选择、具体性与三诉求
+    nodes: [ethos_pathos_logos, concreteness_in_language, specificity_effect, pronoun_perspective_effects, rhetorical_question_engagement, verb_concreteness_action_language, politeness_face_theory]
+  - id: diffusion
+    name_en: Diffusion
+    name_zh: 扩散
+    scope: 创新扩散、口碑与病毒传播的结构
+    nodes: [diffusion_of_innovations, adopter_categories, chasm_crossing, critical_mass_threshold, two_step_flow, opinion_leadership, word_of_mouth_drivers, stepps_sharing_framework, viral_coefficient, gatekeeping_dynamics]
+  - id: network_effects
+    name_en: Network Effects
+    name_zh: 网络效应
+    scope: 网络结构如何决定传播路径
+    nodes: [weak_ties_strength, strong_ties_support, homophily, network_density, structural_holes_bridging, network_threshold_models, small_world_property, preferential_attachment, network_exposure_effects]
+  - id: complex_contagion
+    name_en: Complex Contagion
+    name_zh: 复杂传染
+    scope: 行为为何需要多重社会确认
+    nodes: [complex_contagion, social_reinforcement, wide_bridges]
+  - id: community
+    name_en: Community
+    name_zh: 社群
+    scope: 社群的结构要素与生命周期
+    nodes: [sense_of_community, third_place, community_boundaries, newcomer_onboarding, participation_ladder, community_rituals, status_systems, community_governance, reciprocity_exchange_networks, collective_identity_narrative]
+  - id: belonging
+    name_en: Belonging
+    name_zh: 归属
+    scope: 归属需要、排斥与集体情感
+    nodes: [need_to_belong, belonging_uncertainty, ostracism_effects, collective_effervescence]
+  - id: brand_consumer
+    name_en: Brand & Consumer Behavior
+    name_zh: 品牌与消费者行为
+    scope: 品牌记忆结构、定位与购买决策
+    nodes: [mental_availability, distinctive_brand_assets, positioning_mechanism, jobs_to_be_done, permission_opt_in_mechanics, long_tail_demand, perceived_purchase_risk, double_jeopardy_law, category_entry_points]
+  - id: platform_algorithmic
+    name_en: Platform & Algorithmic Mediation
+    name_zh: 平台与算法中介
+    scope: 算法分发、平台权力与注意力经济
+    nodes: [algorithmic_amplification, recommendation_feedback_loop, engagement_optimization_bias, filter_bubble_echo_chambers, ranking_signal_weighting, cold_start_dynamics, creator_incentive_structures, moderation_governance, attention_economics, algorithmic_gaming, platform_power_gatekeeping]
+  - id: ai_information_environment
+    name_en: AI Information Environment
+    name_zh: AI 信息环境（新增模块）
+    scope: AI 改变信息生产成本、供给量、个性化与信任结构后，传播机制如何变化
+    nodes: [ai_content_saturation, synthetic_media_trust, personalized_persuasion, ai_information_intermediaries, zero_click_information, answer_engine_visibility, content_provenance, authenticity_premium, human_ai_co_creation, misinformation_velocity, bot_amplified_social_proof, hyperpersonalization_privacy]
+    module_doc: knowledge/domains/ai_information_environment/overview.md
+  - id: comprehension
+    name_en: Comprehension & Argumentation
+    name_zh: 长文阅读理解与论证（Long-form Intelligence 增量 v1.1）
+    scope: 长阅读中的组块、觅食、疲劳、图式建构、提取线索、论证结构与概念一致性
+    nodes: [chunking, information_foraging, information_scent, cognitive_fatigue, schema_formation, retrieval_cue_design, argumentation_structure, conceptual_coherence]
+    module_doc: knowledge/longform/

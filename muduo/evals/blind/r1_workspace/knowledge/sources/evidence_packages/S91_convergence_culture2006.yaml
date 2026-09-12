@@ -1,0 +1,26 @@
+# Evidence Package — S91 Jenkins 2006（Convergence Culture）
+# 标准格式。access_level 如实标注。
+source_id: S91
+title: "Convergence Culture: Where Old and New Media Collide"
+authors: "Henry Jenkins"
+year: 2006
+journal: New York University Press（专著）
+doi: "无 DOI（专著）"
+url: "https://ohmymedia.com/2008/04/03/782/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心概念经多源交叉实取：约克大学课堂摘要（三大概念定义 + The Matrix 跨媒体叙事案例，含『collective intelligence is a shared or group intelligence』引文）+ ohmymedia 中文摘译（Jenkins 原文逐段译介：融合之定义、collective intelligence 源自法国赛博理论家 Pierre Lévy、企业融合与草根融合并存）+ mediaprojects.ucoz 全书摘要（Survivor Spoilers/Harry Potter 粉丝/美国偶像案例）+ SAGE 期刊综述（Girardin & Roult 2020，将 Jenkins 框架用于体育社交媒体研究）"
+research_question: "新旧媒体碰撞之际，融合文化如何运作？参与式文化与集体智慧如何改变媒体权力关系？"
+core_claims:
+  - "融合（convergence）= 内容跨多种媒体平台的流动、多种媒体产业间的合作、以及媒介受众在不同平台间的迁移行为；它不仅是技术过程，更是文化转型"
+  - "参与式文化（participatory culture）：公众不仅是媒体消费者，也是生产者与贡献者；消费者的积极参与是内容跨媒体传播与扩散的驱动之一"
+  - "集体智慧（collective intelligence，借用 Pierre Lévy 的术语）：无人能知天下事、人人各知某些事，汇集资源与技巧形成的群体智能，可被看作媒介权力的另类来源（an alternative source of media power）"
+  - "融合既是自上而下的企业驱动过程，也是自下而上的消费者驱动过程；企业融合与草根融合并存，公司仍比任何单个消费者甚至消费者群体握有更大权力"
+  - "跨媒体叙事（transmedia storytelling）是回应融合的新美学：故事在多个平台展开、每个文本对整体做出独特贡献（以《黑客帝国》宇宙为典型例证）"
+method: "文化研究学术著作（民族志式多案例分析：Survivor 剧透社区、美国偶像、The Matrix、星球大战粉丝创作、Harry Potter 粉丝与媒介素养）"
+results: "（文化研究理论框架）融合文化/参与式文化/集体智慧成为媒介研究的标准词汇，被大量后续学术文献应用（如 Girardin & Roult 2020）"
+limitations: "论证性/案例性研究（非实验）；案例集中于 2000 年代早期美国流行文化；摘要作者亦指出其未充分预见社交网络平台与用户生成内容生态"
+boundary_conditions: "适用于媒介融合与粉丝参与语境；对平台算法高度中介化的当代信息环境需结合平台机制更新"
+relevant_nodes: [platform_power_gatekeeping, algorithmic_amplification, collective_identity_narrative]
+notes: "融合文化/参与式文化/集体智慧的文化研究经典（book 级）。participatory_culture 与 collective_intelligence 未在机制库建节点故未引用，以 platform_power_gatekeeping（企业 vs 草根融合的权力冲突）与 algorithmic_amplification 替代对接。概念经多源交叉确认，未编造。"
+last_verified: "2026-09"

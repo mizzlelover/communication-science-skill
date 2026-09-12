@@ -1,0 +1,25 @@
+# Evidence Package — S124 Centola et al. 2018（临界质量实验）
+# 标准格式。access_level 如实标注。
+source_id: S124
+title: "Experimental Evidence for Tipping Points in Social Convention"
+authors: "Damon Centola; Joshua Becker; Devon Brackbill; Andrea Baronchelli"
+year: 2018
+journal: Science 360(6393), 1116-1119
+doi: "10.1126/science.aas8827"
+url: "https://pubmed.ncbi.nlm.nih.gov/29880688/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "PubMed Free article 全文摘要 + 正文引言摘录（lab PDF 镜像）+ Scientific American 深度报道 + 多篇二手解读确认实验设计与数字"
+research_question: "社会规范/协调均衡中，少数派需要达到多大规模（critical mass）才能触发全面翻转（tipping point）？"
+core_claims:
+  - "存在可实证的临界点：当坚定少数派达到临界规模时，能一致推翻已确立的协调均衡；未达临界则完全无效"
+  - "194 人命名博弈实验：受试随机配对为照片命名，一致得奖——先建立全组惯例，再注入'坚定少数'尝试颠覆；少数规模从 15% 到 35% 系统变化"
+  - "临界规模中位阈值约 25%（各组 15-35%）：低于 25% 时少数仅能影响平均 6% 的其他人；超过 25% 时能转化其余 72-100%"
+  - "临界规模会随情境的理论可辨识特征变化，不是普适常数"
+method: "在线人工协调实验（194 名志愿者，10 组，命名博弈 + 系统注入不同规模少数派）+ 与演化博弈论临界质量理论对照"
+results: "临界质量动力学在真实协调系统中可复现；少数派靠坚持（commitment）而非资源/权威改变惯例"
+limitations: "实验为人工协调系统（命名惯例），外推到现实社会规范变革需谨慎；阈值范围（15-35%）与情境特征相关"
+boundary_conditions: "少数派需坚定一致；社会系统存在协调均衡；阈值随情境理论特征（替代方案、价值结构）变化"
+relevant_nodes: [critical_mass_threshold, social_reinforcement, complex_contagion]
+notes: "critical_mass_threshold 的一手论文来源（paper 级）。S58《How Behavior Spreads》的配套实验论文。真实数据：25% 中位阈值 / 6% vs 72-100%，未编造。"
+last_verified: "2026-09"

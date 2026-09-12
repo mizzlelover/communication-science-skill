@@ -1,0 +1,25 @@
+# Evidence Package — S93 Pariser 2011（The Filter Bubble）
+# 标准格式。access_level 如实标注。
+source_id: S93
+title: "The Filter Bubble: What the Internet Is Hiding from You"
+authors: "Eli Pariser"
+year: 2011
+journal: Penguin Press（专著）
+doi: "无 DOI（专著）"
+url: "https://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心概念经多源交叉实取：TED 演讲全文要点 + datafield.dev 开放教材第 21 章（概念起源/机制/过滤气泡 vs 回音室/研究现实）+ 教学论文（Magin 2024，对概念夸张的批判 + 模拟研究未复现极端气泡）+ 实证文献综述（Bakshy 2015 约 8%；Hannak 2013 约 11.7%；Bail 2018 反直觉）"
+research_question: "算法个性化如何收窄人们的信息环境？过滤气泡对民主有何影响？"
+core_claims:
+  - "过滤气泡=算法个性化把每个用户放进个人化信息宇宙：内容根据历史行为选择，匹配兴趣并强化既有观点"
+  - "起源：2010 年作者发现 Facebook 算法悄悄把他的保守派朋友从信息流中过滤掉（他的信息环境由算法对其『想要什么』的模型塑造）"
+  - "后果担忧：碎片化与极化；对个人与民主有害"
+  - "后续实证现实：模拟研究未能在实验环境复现极端隔离气泡；Bakshy 等 2015 估计算法使跨阵营政治内容暴露减少约 8%（个体选择另减 4%）；搜索个性化约 11.7%（Hannak 2013）；Bail 2018 发现让被试接触对立观点反而增加极化——『茧房』实际强度远低于流行叙事"
+method: "互联网活动家基于个人观察与媒体研究的通俗专著（非学术实验）"
+results: "（概念提出）'filter bubble'成为算法个性化讨论的标准词汇；其经验强度后续被大量实证检验"
+limitations: "原书为论述性通俗著作；'茧房'强度的实证结论混合，原书叙事被后续研究部分修正——见 evidence/classic_rechecks"
+boundary_conditions: "个性化算法主导的被动消费场景；用户主动搜索与多源使用会打破气泡；美国两极化语境为特殊案例"
+relevant_nodes: [filter_bubble_echo_chambers, recommendation_feedback_loop, selective_attention, personalized_persuasion]
+notes: "filter_bubble_echo_chambers 的概念起源来源（book 级）；如实保留后续实证的混合结论（见节点 conflicting 字段）。"
+last_verified: "2026-09"

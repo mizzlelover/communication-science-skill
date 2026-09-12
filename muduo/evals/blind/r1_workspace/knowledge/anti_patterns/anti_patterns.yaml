@@ -1,0 +1,155 @@
+# Anti-Patterns — 反模式库（§ 实践风险层）
+# 定位：反模式 ≠ 机制无效。每条反模式所挂钩的机制本身有证据支撑（见 evidence_grade_of_the_mechanism），
+#       反模式是"对该机制的滥用/越界使用"，其短期有效性恰恰来自机制，长期损害也来自机制的副作用与反噬。
+# long_term_harms 维度固定为 trust / brand / retention / platform_risk，只列适用的维度，每项 1 句展开。
+# 机制 ID 仅使用本库 mechanisms 清单中的 ID；机制证据等级参照 EVIDENCE.md。
+
+- anti_pattern_id: AP-001
+  name_en: Fake Scarcity
+  name_zh: 虚假稀缺
+  definition: 通过虚构的限量、限时、剩余库存等信号制造稀缺感，诱导即时决策；供给实际并不受限，稀缺信息与客观事实不符。
+  why_short_term_works: "挂钩机制：scarcity_mindset + loss_aversion。稀缺信号触发带宽收窄与'错过即损失'的损失框架，用户减少比较与拖延，决策速度显著加快。"
+  long_term_harms:
+    - "trust: 虚假限量被比价工具或复购用户识破后，信任损耗会迁移到品牌的全部价格与促销信息上。"
+    - "brand: '永远在最后一天促销'会固化套路化印象，削弱品牌资产中的可信维度。"
+    - "retention: 被稀缺催促下单的用户后悔率更高，退货、投诉与流失集中在这一人群。"
+    - "platform_risk: 虚构促销信息违反广告法规与电商平台宣传规范，可能被判定虚假营销并限流、处罚。"
+  detection_heuristics: "倒计时结束后价格与供给是否真的恢复常态？'仅剩 N 件'是否与可验证库存一致？同一个'限量'是否每隔一个周期原样重现？"
+  mechanisms: [scarcity_mindset, loss_aversion]
+  ethical_note: "真实稀缺（真实限量、真实档期截止）是正当信息；虚假稀缺是对信息与事实关系的伪造，属于欺骗而非说服。"
+  evidence_grade_of_the_mechanism: "B（scarcity 带宽税为 B/C；loss_aversion 为 B）"
+
+- anti_pattern_id: AP-002
+  name_en: Clickbait
+  name_zh: 标题党
+  definition: 标题承诺远超正文兑现的信息量或情绪强度（悬念缺口滥用、极端断言、断章取义），以点击率为唯一优化目标，承诺与兑现之间存在系统性差额。
+  why_short_term_works: "挂钩机制：curiosity_gap + emotional_arousal。信息缺口引发好奇张力、情绪化标题抬升唤起优先级，在信息流的瞬时选择中稳定抢占点击。"
+  long_term_harms:
+    - "trust: 预期违背逐次累积，受众形成'点开即失望'的来源级不信任，点开率结构性下滑。"
+    - "brand: 账号或媒体的可信度资产被透支，优质合作方与平台都会按'标题党'标签重新定价。"
+    - "retention: 好奇驱动的点击不产生内容认同，涨粉质量差，粉丝活性与复访率长期偏低。"
+    - "platform_risk: 主流平台已建立标题党识别与降权规则，累计违规触发限流或封禁。"
+  detection_heuristics: "标题的信息承诺能否在正文前三分之一兑现？删掉标题党元素后正文还剩多少独立价值？评论区是否高频出现'被骗进来了'类表达？"
+  mechanisms: [curiosity_gap, zeigarnik_effect, emotional_arousal]
+  ethical_note: "制造信息缺口是正当的内容技巧；承诺—兑现差额越大，越接近对注意力资源的欺诈性获取，且伤害会外溢到整个内容生态的信任水位。"
+  evidence_grade_of_the_mechanism: "B"
+
+- anti_pattern_id: AP-003
+  name_en: Manufactured Outrage
+  name_zh: 制造愤怒
+  definition: 刻意放大、剪辑或扭曲事实以触发愤怒等高唤起道德情绪，借愤怒的分享倾向获取分发；对立与敌意本身成为产品。
+  why_short_term_works: "挂钩机制：discrete_emotion_sharing_profiles + emotional_arousal。愤怒是高唤起且外指向的情绪，显著提升转发与站队行为，道德情绪还会压低核查动机。"
+  long_term_harms:
+    - "trust: 一旦被证实断章取义，账号会被归入'操纵情绪'类来源，且愤怒受众的忠诚以敌我划界维系，极不稳定。"
+    - "brand: 品牌借愤怒议题营销时，站位错误或翻车的代价远高于常规内容，且会被长期翻旧账。"
+    - "retention: 愤怒受众订阅的是'下一个敌人'而非内容价值，议题轮换后留存断崖式下跌。"
+    - "platform_risk: 平台对煽动性内容有专门治理线，高唤起仇恨类内容的算法与政策环境持续收紧。"
+  detection_heuristics: "原始素材与呈现版本之间是否存在剪裁导致的结论反转？情绪结论是否先于事实出现（先给愤怒再给'证据'）？评论区互动是否以攻击人群为主而非讨论内容？"
+  mechanisms: [emotional_arousal, discrete_emotion_sharing_profiles, affect_heuristic]
+  ethical_note: "对真实不公的正当愤怒有社会价值；'制造'指无中生有或以流量为目的放大敌意，属于对公共讨论资源的消耗与对受众情绪的剥削。"
+  evidence_grade_of_the_mechanism: "B"
+
+- anti_pattern_id: AP-004
+  name_en: False Social Proof
+  name_zh: 虚假社会认同
+  definition: 用购买或伪造的数据（假粉丝、假评论、假销量榜、水军好评）虚构'多数人在做/多数人认可'的描述性规范信号。
+  why_short_term_works: "挂钩机制：social_proof + bot_amplified_social_proof。不确定情境下人们以他人行为为决策捷径，伪造的规范信号直接收割这一认知捷径，绕过内容本身的检验。"
+  long_term_harms:
+    - "trust: 造假被平台公告、媒体曝光或比价工具识破后触发全面信任清算，连真实好评也会被怀疑。"
+    - "brand: 品牌与'刷量'标签绑定后，后续正常营销内容也会被默认打折解读。"
+    - "retention: 假数据吸引的是算法而非真实用户，真实留存与转化无法同步，形成数据泡沫。"
+    - "platform_risk: 平台风控批量封禁与追缴，账号、店铺与投放账户资产可能一夜清零。"
+  detection_heuristics: "互动结构是否异常（评论模板化、粉丝画像与内容领域错位、好评时间高度聚集）？第三方流量监测与平台后台数据是否长期不一致？账号历史是否存在'数据断崖'（封号前兆）？"
+  mechanisms: [social_proof, bot_amplified_social_proof]
+  ethical_note: "伪造社会认同同时欺骗用户与平台，是最典型的双重违规反模式；合法路径是呈现真实但代表性好的证据（真实评价、可核验销量）。"
+  evidence_grade_of_the_mechanism: "A-"
+
+- anti_pattern_id: AP-005
+  name_en: Manipulative Urgency
+  name_zh: 操纵性紧迫
+  definition: 用伪造或循环重置的截止时间（'最后 X 小时'常年挂着）人为压缩决策窗口，抑制比较、搜索与思考。
+  why_short_term_works: "挂钩机制：present_bias + loss_aversion。人为时间压力放大即时性偏好并激活损失框架，把'再想想'改写为'现在就买'。"
+  long_term_harms:
+    - "trust: 期限被证伪一次（狼来了效应），此后所有真实促销的真实时限都会被怀疑。"
+    - "brand: 与套路化促销绑定，损害定价体系的可信度与品牌的专业形象。"
+    - "retention: 紧迫感成交的订单后悔率与客服成本更高，退订与差评集中在冲动下单人群。"
+    - "platform_risk: 虚假限时促销属于典型虚假宣传情形，是电商平台规则与监管的重点处罚对象。"
+  detection_heuristics: "截止时间过后是否原样恢复并重新开始计时？紧迫提示是否覆盖或挤占了价格、条款等关键决策信息？是否对所有用户、所有时段展示同一个'倒计时'？"
+  mechanisms: [present_bias, loss_aversion, scarcity_mindset]
+  ethical_note: "真实截止时间（库存、档期、报名期）是正当约束；把截止时间做成常设装置，则构成对用户决策自由的系统性干扰。"
+  evidence_grade_of_the_mechanism: "B"
+
+- anti_pattern_id: AP-006
+  name_en: Misleading Authority
+  name_zh: 误导性权威
+  definition: 借用与主张无关的头衔、机构背书或'专家'身份（乃至虚构权威来源），为论证赋权；权威符号与主张内容不匹配。
+  why_short_term_works: "挂钩机制：pseudo_authority + source_credibility_model。受众以头衔与机构符号为可信度捷径，'白大褂实验室'式的符号本身即可提升说服力，无需真实专业匹配。"
+  long_term_harms:
+    - "trust: 背书被核查打假后，可信度反噬叠加'曾被冒用'的二次伤害，来源修复成本极高。"
+    - "brand: 科技、健康、金融类品牌踩此雷后进入监管与媒体的持续关注名单。"
+    - "retention: 依靠权威幻象获客的产品，复购依赖真实效果兑现，预期落差导致高流失。"
+    - "platform_risk: 虚假资质宣传受广告法约束，平台对医疗、金融、教育品类的资质审核最为严格。"
+  detection_heuristics: "头衔领域与主张领域是否一致？引用的'研究/机构'能否定位到可验证出处？背书者是否存在真实使用与长期一致立场，还是纯商业站台？"
+  mechanisms: [authority_influence, pseudo_authority, source_credibility_model]
+  ethical_note: "真实专家意见有信息价值；误导性权威是身份信号的伪造，滥用的是整个社会分工建立的信任基础设施。"
+  evidence_grade_of_the_mechanism: "B"
+
+- anti_pattern_id: AP-007
+  name_en: Fear Exploitation
+  name_zh: 恐惧剥削
+  definition: 放大威胁、夸大易感性与后果严重性，且不提供有效的应对路径，以恐惧驱动转化（保险、医美、教育、知识付费常见变体）。
+  why_short_term_works: "挂钩机制：fear_appeals_eppm + availability_heuristic。威胁信息天然抢占注意，生动化极端案例提高感知易得性，恐惧唤起推动'消除威胁'的行动倾向。"
+  long_term_harms:
+    - "trust: 威胁被证实夸大后，用户以'贩卖焦虑'归因整个品类，形成行业性信任折价。"
+    - "brand: 与'焦虑营销'绑定的品牌很难再转向正向价值叙事，叙事弹性永久受损。"
+    - "retention: 恐惧驱动的购买缺少正向使用动机，满意度、完课率与续费均偏差。"
+    - "platform_risk: 健康与安全类夸大恐吓是广告法与平台治理的高压线，整改与下架风险高。"
+  detection_heuristics: "威胁陈述是否给出可核查的发生概率？恐吓之后是否提供清晰可执行的应对方案（自我效能/反应效能），还是只留下购买链接？是否反复引用同一类极端个案作为普遍风险？"
+  mechanisms: [fear_appeals_eppm, affect_heuristic, availability_heuristic]
+  ethical_note: "EPPM 的正当用法是'威胁真实 + 效能充分'；只给威胁不给出路，是把风险沟通工具降格为情绪勒索，且效能缺失时受众会转向否认与回避，连短期效果都不可靠。"
+  evidence_grade_of_the_mechanism: "B"
+
+- anti_pattern_id: AP-008
+  name_en: Dark Pattern
+  name_zh: 暗黑模式
+  definition: 利用界面与流程设计（默认勾选、隐藏取消入口、强迫连续订阅、确认羞辱、误导性按钮）制造不对称摩擦，诱导用户做出非本意选择。
+  why_short_term_works: "挂钩机制：default_option_effect + friction_reduction。默认项与行动成本的微小不对称即可大幅改变行为结果，且多数用户不会逐项核查流程细节。"
+  long_term_harms:
+    - "trust: 用户发现'取消比订阅难'后，负面情绪直接指向品牌而非界面，且难以通过补偿修复。"
+    - "brand: 消保监管与媒体曝光（订阅陷阱类报道）带来的声誉成本远超短期订阅收入。"
+    - "retention: 靠摩擦滞留的用户没有使用意愿，退订后净推荐值为负并外溢到口碑渠道。"
+    - "platform_risk: 主要应用商店与多国立法已将暗黑模式列为处罚对象（如订阅一键取消要求），合规风险持续上升。"
+  detection_heuristics: "取消/退订路径的步数是否显著多于开通路径？关键选项是否默认勾选或被弱化呈现？确认页是否存在情绪化措辞（'不，我不想省钱'式按钮）？"
+  mechanisms: [default_option_effect, friction_reduction, nudge_mechanism, present_bias]
+  ethical_note: "nudge 的伦理边界在于'透明且保留自由退出'；暗黑模式以降低透明度、制造退出摩擦为手段，是 nudge 的越界形态，也是机制滥用中最接近违法的一档。"
+  evidence_grade_of_the_mechanism: "B（default 效应证据较强，nudge 平均效应已降级为 C）"
+
+- anti_pattern_id: AP-009
+  name_en: Astroturfing
+  name_zh: 草根伪装
+  definition: 组织或雇佣人员冒充普通用户，制造'自发'的口碑、评分、评论与话题热度（水军、自导自演测评、伪装素人种草）。
+  why_short_term_works: "挂钩机制：social_proof + word_of_mouth_drivers。'真实用户'身份让说服绕过受众对商业信源的防御，同伴证言的可信度溢价被直接盗用。"
+  long_term_harms:
+    - "trust: 一次大规模曝光（扒皮帖、媒体调查）即可让品牌背上'水军'标签，真实好评一并失效。"
+    - "brand: 涉及虚假宣传的合规风险，且竞对与用户社区会长期留存证据反复引用。"
+    - "retention: 伪装口碑吸引的用户预期与真实产品错位，转化后的落差集中爆发为差评。"
+    - "platform_risk: 水军识别是平台重点治理方向，关联账号矩阵可能被连坐封禁。"
+  detection_heuristics: "发言账号是否注册时间集中、行为序列雷同、缺乏历史生活痕迹？好评是否短期密集出现且高度同质？社区真实情绪分布（访谈、私域反馈）与公开舆论是否明显背离？"
+  mechanisms: [social_proof, word_of_mouth_drivers, bot_amplified_social_proof]
+  ethical_note: "冒充用户身份属于身份伪造；即使被推广的内容本身为真，手段已破坏评测与口碑生态的公共信任，属于外部性最大的反模式之一。"
+  evidence_grade_of_the_mechanism: "A-"
+
+- anti_pattern_id: AP-010
+  name_en: Engagement Bait
+  name_zh: 互动诱饵
+  definition: 用'点赞才能看结果''@ 三位好友''转发抽奖'等外部诱因直接索取互动，以刷高算法权重信号；互动请求与内容价值脱钩。
+  why_short_term_works: "挂钩机制：reciprocity_norm + variable_ratio_reward。小额互惠请求（点赞交朋友）与抽奖的不确定奖励能在短期内拉升互动量，骗取分发系统的输入信号。"
+  long_term_harms:
+    - "trust: 用户识别出'互动税'后对发布者产生被利用感，互动意愿反而被抑制。"
+    - "brand: 内容被归类为流量套路，稀释品牌内容的专业形象与内容资产价值。"
+    - "retention: 诱饵互动不产生内容消费深度，粉丝质量差，互动率随诱饵失效而回落。"
+    - "platform_risk: 主流平台明确将互动诱饵列为降权对象，重复使用会被系统性压制分发。"
+  detection_heuristics: "互动请求是否与内容价值脱钩（不互动就看不全、答不了）？互动量与完读/完播、复访等深度指标是否长期背离？评论区是否充满'蹲''来了'式占位回复？"
+  mechanisms: [reciprocity_norm, normative_influence, variable_ratio_reward]
+  ethical_note: "邀请互动本身正当（提问、征集故事、投票）；诱饵的区别在于用外部利益置换真实反馈，污染的是推荐系统赖以工作的信号基础，最终反噬自身分发。"
+  evidence_grade_of_the_mechanism: "B"

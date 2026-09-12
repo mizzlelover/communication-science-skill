@@ -1,0 +1,24 @@
+# Evidence Package — S155 Hunt 1995（The Subtlety of Distinctiveness: What von Restorff Really Did）
+# 标准格式。access_level 如实标注。
+source_id: S155
+title: "The Subtlety of Distinctiveness: What von Restorff Really Did"
+authors: "R. Reed Hunt"
+year: 1995
+journal: "Psychonomic Bulletin & Review 2(1): 105-112"
+doi: "10.3758/BF03214414"
+url: "https://pubmed.ncbi.nlm.nih.gov/24203592/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：PubMed 官方摘要全文（PMID 24203592，实抓）：「现代隔离效应理论强调知觉显著性与差异注意为必要；von Restorff（其论文无英文版）的证据表明知觉显著性并非必需；她主张差异不足以产生隔离效应、必须在相似性语境中考虑；distinctiveness 须与 similarity 构念联用」；渠道2：ResearchGate 论文 PDF 前几页（实抓，DOI 10.3758/BF03214414）——作者注（Psychonomic Society 1993 会议报告、Andrea Dorsch 翻译 von Restorff 原文）、von Restorff 生平（Köhler 实验室博士后、1933 毕业论文）、1933 论文背景与原文引文（「Millions of people remain in the same work situations...」）、「THE VON RESTORFF EFFECT AND DISTINCTIVENESS」章节开头；渠道3：MacLeod 2020 综述（PMID 32291585，实抓）确认 von Restorff（Psychologische Forschung, 18, 299-342, 1933）原论文与效应谱系"
+research_question: "von Restorff（1933）原论文到底做了什么？当代「独特性=知觉显著性」的隔离效应理论是否误读了她？知觉显著性是否为隔离效应的必要条件？"
+core_claims:
+  - "现代理论把隔离效应归因于知觉显著性与对隔离项的差异注意；但 von Restorff 的（无英文版的）原论文证据表明知觉显著性并非隔离效应所必需"
+  - "von Restorff 主张：隔离项与周围项的差异本身不足以产生隔离效应，必须在相似性（similarity）的语境中理解差异的作用"
+  - "独特性（distinctiveness）作为理论构念在缺乏知觉显著性时仍有描述力，但必须与相似性构念联用才能充分解释隔离效应（以及可能的其他记忆现象）"
+method: "理论/历史再分析论文（1993 年 Psychonomic Society 会议报告）：重新阅读并翻译 von Restorff 1933 德文原文（译者为 Andrea Dorsch），对照现代独特性研究传统做文本与理论再分析"
+results: "指出现代「独特性=知觉显著性」的解读是对 von Restorff 的误读：她的实验（字母/数字混合、语义类别等）证明无显著知觉差异的隔离同样产生记忆优势，差异的作用依赖背景相似性"
+limitations: "本包获取摘要全文 + 论文正文前几页实质摘录（ResearchGate 全文 PDF 不完整，正文中后段未获取）；von Restorff 原文为德文且无英文版（Hunt 提供翻译，URL 见其作者注）；「独特性须与相似性联用」为理论主张，后续实证（如 Dunlosky, Hunt & Clark 2000）继续检验显著性必要性"
+boundary_conditions: "隔离效应依赖背景同质性——在都试图特异的市场中必须升级特异维度；异类属性最好与品牌/要义语义相关；应用上：差异化必须绑定可识别资产，为异而异的猎奇（vampire creativity）与全行业同一化特异均无效"
+relevant_nodes: [von_restorff_effect]
+notes: "对 von Restorff 效应的当代再解读（paper 级，substantial_excerpt）。摘要全文 + 正文实质摘录两源获取；明确纠正「隔离效应=知觉显著性」的流行误读（与 memory.yaml von_restorff_effect 节点的机制描述一致）。支撑 memory.yaml von_restorff_effect。"
+last_verified: "2026-09"

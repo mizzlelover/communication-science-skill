@@ -1,0 +1,11 @@
+# Evidence Package 墓碑 — S122 Goffman 1959（The Presentation of Self in Everyday Life）
+# T1 同书重复登记合并（2026-09-09）：S122 与 S24 为同一本书（Doubleday Anchor 1959；首版 1956 苏格兰）。
+# 保留方：S24（core_30 正规登记，annotated，substantial_excerpt：CVCC 讲稿+于海精读笔记+学术论文+豆瓣详评多源实取，
+# 含四策略与批评面）；本包原为 abstract_only 结构确认级，content_obtained 为 S24 子集。
+# 原 EP 内容见 git 历史（本文件合并前版本）；引用一律使用 S24。
+source_id: S122
+merge_status: MERGED_INTO
+merged_into: S24
+merged_date: "2026-09-09"
+merge_reason: "同书重复登记（title/authors/year/出版社同一）；S24 content_obtained 更实质（四策略+批评面）。全部节点引用已重定向至 S24。"
+relevant_nodes: []

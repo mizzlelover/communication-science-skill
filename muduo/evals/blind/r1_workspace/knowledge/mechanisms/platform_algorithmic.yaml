@@ -1,0 +1,1375 @@
+# platform_algorithmic — 平台与算法中介（Platform & Algorithmic Mediation）
+domain: platform_algorithmic
+nodes:
+- id: algorithmic_amplification
+  canonical_name_en: Algorithmic Amplification
+  canonical_name_zh: 算法放大
+  aliases:
+  - algorithmic distribution
+  - 算法分发
+  domain: platform_algorithmic
+  definition: 平台推荐系统根据内容的早期表现信号（点击、完播、互动等）决定是否将其推送给更大范围用户的过程。它是一种动态曝光分配机制：内容不是一次性发布给全部粉丝，而是在逐级放大的"流量池"中被持续评估。
+  core_claim: 在算法分发环境中，内容的初始互动信号会非线性地决定其最终曝光量，早期信号质量比总粉丝规模更能预测传播结果（后半句为从业者观察，非所引 EP 直接结论）。
+  mechanism: 推荐系统无法预先知道内容质量，只能用早期受众的真实反馈作为代理指标。表现好的内容获得更大测试人群，表现差的内容被压低。这使传播结果呈现重尾分布：少数内容获得绝大部分曝光，多数内容几乎不可见。注意：算法本身不"判定"内容好坏，它只放大它观测到的互动信号——信号的构造方式决定了什么被放大。
+  causal_chain: 小范围初始曝光 → 互动信号测量 → 信号达标 → 更大范围曝光 → 再次测量 → 持续放大或衰减
+  variables:
+    inputs:
+    - 初始曝光人群
+    - 内容的即时互动信号
+    - 内容发布时间
+    moderators:
+    - 平台的目标函数（互动/停留/交易）
+    - 账号历史权重
+    - 内容品类竞争强度
+    mediators:
+    - 互动信号
+    - 负反馈信号（划走/举报/不看）
+    outputs:
+    - 最终曝光量
+    - 传播曲线形状
+  evidence:
+    supporting:
+    - 平台公开的创作与推荐机制说明（各平台创作者中心）
+    - 对社交平台内容分布重尾结构的网络科学研究（如 Watts、Barabási 方向的流行度分布研究）
+    - S99 The Chaos Machine 记录的算法放大案例调查
+    - S56 Everything Is Obvious 音乐实验室实验：可见他人反馈使流行度与内容质量脱钩（从众/传播顺序权重远超内容质量），传播结果难以早期预测
+    - S147 Bakshy 2015 一手研究：算法排序使跨阵营内容暴露较时间排序约减 15%
+    conflicting:
+    - 各平台实际权重不公开，外部研究只能间接推断
+    - 平台会主动调整策略，外部结论时效性差
+    replication:
+    - 重尾分布的宏观结构在多平台观察中稳定；具体单条内容的放大路径不可复现
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 适用于算法分发占比高的平台
+  - 对纯订阅/关注分发平台（如 RSS、邮件列表）解释力弱
+  - 初始流量池机制在抖音类平台最典型，微博热搜类平台遵循不同逻辑
+  failure_conditions:
+  - 付费投流可直接购买曝光，绕过自然放大路径
+  - 账号权重高时初始信号要求降低
+  - 小众品类的互动信号天然偏低，可能被系统性压低而非质量问题
+  common_misinterpretations:
+  - 把'算法推荐'当成黑箱命运，放弃分析可控信号
+  - 认为算法能识别内容质量——它只识别互动信号
+  - 把单次爆款归因于算法偏好而忽略发布时间、初始人群等变量
+  ethical_risks:
+  - 放大机制天然偏好情绪化、极端化内容（见 engagement_optimization_bias）
+  - 创作者可能为迎合信号而牺牲准确性与伦理
+  examples:
+    original_cases: []
+    research_cases:
+    - 对 Twitter/X 等平台内容流行度的网络观测研究显示流行度分布高度重尾且难以早期预测（Watts 方向）
+    modern_cases:
+    - 短视频平台流量池逐级晋级
+    - 公众号'在看/转发'影响二次分发
+    - 小红书笔记的搜索+推荐双路径
+  communication_implications: 内容策略必须区分"给人看"与"给算法看"两个层面：先保证初始人群的互动信号（点击、完播、互动），再谈大盘传播。标题/封面/开场承担信号引爆功能。
+  community_implications: 社群冷启动期内容难以获得算法放大，需先靠私域与关系链导入初始互动。
+  content_applications:
+    title: 标题同时服务人类好奇心与算法点击率信号，但不可欺骗（点开即跳出会被负反馈惩罚）
+    opening: 开场必须在前几秒/前几行给出继续的理由，完播与读完全文是核心正信号
+    body: 中段设置'再看一下'的信息点以维持停留信号
+    cta: 明确的互动引导可提升评论率，但诱导互动违反多数平台规则（official_rule 类风险）
+  platform_implications: 不同平台的目标函数不同：短视频平台偏完播与停留，图文社区偏收藏与搜索匹配，社交平台偏转发。同一内容在不同平台的放大路径完全不同——这正是平台适配器存在的原因。
+  related_nodes:
+  - recommendation_feedback_loop
+  - engagement_optimization_bias
+  - ranking_signal_weighting
+  - cold_start_dynamics
+  - attention_economics
+  conflicting_nodes: []
+  source_ids:
+  - S92
+  - S95
+  - S99
+  - S56
+  - S147
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Aral 2020《The Hype Machine》（S92，book 级，substantial_excerpt：炒作机器三部曲/2018 Science
+      假新闻）+ van Dijck 2018（S95，平台化框架）
+    effect_size: 算法放大互动信号→重尾曝光分布；假新闻因新颖性与情绪反应传播更快更深
+    replication_status: 重尾分布宏观结构多平台稳定；具体放大路径不可复现
+    context_dependency: 算法分发占比高的平台；纯订阅/关系分发平台解释力弱
+    downgrade_upgrade_reason: 2026-09 实取 S92/S95 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S92
+    supporting_evidence:
+    - S95
+    - S99
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-011
+    - CASE-BRD-021
+    - CASE-BRD-022
+    - CASE-BRD-027
+    - CASE-CNT-027
+    - CASE-CNT-028
+    - CASE-CNT-029
+    - CASE-CNT-030
+    - CASE-CRS-005
+    - CASE-CRS-007
+    - CASE-CRS-008
+    - CASE-CRS-010
+    - CASE-CRS-016
+    - CASE-CRS-017
+    - CASE-FAL-001
+    - CASE-FAL-007
+    - CASE-FAL-008
+    - CASE-FAL-009
+    - CASE-FAL-027
+    - CASE-FAL-047
+    - CASE-FAL-085
+    - CASE-FAL-087
+    - CASE-GRW-015
+    - CASE-PLT-001
+    - CASE-PLT-003
+    - CASE-PLT-006
+    - CASE-PLT-016
+    - CASE-PLT-017
+    - CASE-PLT-019
+    - CASE-PLT-021
+    - CASE-PLT-024
+    - CASE-PLT-035
+    - CASE-PLT-044
+    - CASE-PLT-046
+    platform_sources:
+    - douyin:S1
+    - douyin:S2
+    - weibo:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: recommendation_feedback_loop
+  canonical_name_en: Recommendation Feedback Loop
+  canonical_name_zh: 推荐反馈循环
+  aliases:
+  - 算法回环
+  - personalization loop
+  domain: platform_algorithmic
+  definition: 用户行为训练推荐模型、推荐结果又塑造用户后续行为，二者互相强化的闭环系统。用户刷到什么会继续看什么，继续看什么就更可能被再推荐什么。
+  core_claim: 推荐系统与用户行为形成自增强闭环，使个体信息环境随时间收敛于系统认为该用户偏好的局部区域。
+  mechanism: 推荐模型以历史行为为输入预测下一步内容；用户点击/停留又成为新的训练信号。短时间内该循环提升体验（越刷越准），长期则产生路径依赖：探索性内容获得的曝光机会递减，用户兴趣被部分"锁死"。对创作者同理：历史爆款主题会获得更多同类推荐机会，形成选题路径依赖。
+  causal_chain: 历史行为 → 推荐输出 → 用户反馈 → 模型更新 → 更强化同类推荐
+  variables:
+    inputs:
+    - 用户行为历史
+    - 内容特征
+    - 相似用户行为
+    moderators:
+    - 探索机制（exploration/exploitation 平衡）
+    - 用户新行为与历史的偏离度
+    mediators:
+    - 点击与停留信号
+    outputs:
+    - 个体信息环境收敛
+    - 创作者选题路径依赖
+  evidence:
+    supporting:
+    - 推荐系统文献中的过滤器与信息茧房建模研究
+    - S93 The Filter Bubble 的概念论证
+    - S100 Filterworld 对算法同质化文化的观察
+    conflicting:
+    - 实证上'茧房'强度存在争议：多项研究显示算法也可能增加多样化暴露（取决于度量方式与平台）
+    - 用户主动搜索会打破循环
+    replication:
+    - 回环存在性获得广泛接受；'茧房'的强度与普遍性结论不一致
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 被动消费场景最强
+  - 有强搜索/主动关注习惯的用户循环被打破
+  - 跨平台多来源使用者受影响小
+  failure_conditions:
+  - 用户兴趣转变且系统捕捉到偏离信号
+  - 平台刻意引入多样性干预（部分平台有探索位）
+  - 线下关系链推荐（如视频号社交叠加）稀释纯算法回环
+  common_misinterpretations:
+  - 把回环当成铁笼——用户搜索行为与主动关注是主要逃生通道
+  - 把信息茧房完全归咎于算法而忽略用户自主选择（selective exposure）的贡献
+  ethical_risks:
+  - 极端化内容经由回环放大
+  - 创作者被回环绑架：偏离既往选题即流量下滑
+  examples:
+    original_cases: []
+    research_cases:
+    - 对推荐系统暴露多样性的观察研究结论不一（方向性引用）
+    modern_cases:
+    - 抖音兴趣电商的'越刷越准'
+    - 小红书搜索词沉淀改变后续内容供给
+    - B站推荐位与追更行为互相强化
+  communication_implications: 内容要让算法"读懂你是谁"：垂直度、标签一致性、稳定选题会累积推荐资产；跨域跳转要付出回环重置成本。
+  community_implications: 社群内容若长期同质，成员信息环境收敛，易陷入内部回音；需设计跨域内容与外部触点。
+  content_applications:
+    body: 垂直深耕积累推荐资产，跨界内容用新账号或明确的新系列承接
+    title: 保持标题关键词与内容领域一致，减少信号噪声
+    comments: 引导评论区围绕主题展开，避免跑题稀释信号
+  platform_implications: 平台常在回环中加入探索流量与新内容冷启动扶持，创造者可利用"新内容扶持期"。
+  related_nodes:
+  - algorithmic_amplification
+  - filter_bubble_echo_chambers
+  - engagement_optimization_bias
+  - cold_start_dynamics
+  conflicting_nodes: []
+  source_ids:
+  - S92
+  - S93
+  - S95
+  - S100
+  - S147
+  provenance:
+    primary_sources:
+    - S92
+    - S93
+    - S95
+    - S100
+    - S147
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-032
+    - CASE-PLT-038
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: engagement_optimization_bias
+  canonical_name_en: Engagement Optimization Bias
+  canonical_name_zh: 互动优化偏差
+  aliases:
+  - engagement bias
+  - 注意力经济的外部性
+  domain: platform_algorithmic
+  definition: 当平台以互动量（点击、评论、停留）作为优化目标时，系统会系统性地偏好更能激起即时反应的内容形态——情绪强烈、立场鲜明、冲突显著、信息差大——而不一定偏好更准确、更有价值的内容。
+  core_claim: 目标函数决定放大结果：以互动为目标函数的推荐系统会系统性放大高唤醒、高冲突内容，这是结构性现象而非个别运营失误。
+  mechanism: 人类注意力对威胁、冲突、道德违反有自下而上的优先捕获（bottom_up_attention_capture），高唤醒情绪又促进分享（emotional_arousal）。当这些心理倾向被目标函数捕获并当作信号使用时，系统无须任何人刻意作恶，就会在统计上偏向此类内容。这解释了为何极端化内容在算法平台获得不成比例的曝光。
+  causal_chain: 人类注意与情绪偏向 → 互动信号差异 → 目标函数放大高互动内容 → 内容生态向高唤醒漂移
+  variables:
+    inputs:
+    - 平台目标函数定义
+    - 用户互动行为分布
+    moderators:
+    - 平台是否引入质量/权威性权重
+    - 负反馈与举报机制强度
+    - 内容品类（新闻vs娱乐）
+    mediators:
+    - emotional_arousal
+    - bottom_up_attention_capture
+    outputs:
+    - 内容生态情绪化漂移
+    - 极化加剧
+    - 低质量内容挤占曝光
+  evidence:
+    supporting:
+    - S99 The Chaos Machine 对算法放大极化的跨平台调查
+    - S92 The Hype Machine 中关于社交平台情绪与传播关系的实验研究
+    - 离散情绪与分享关系的研究（如 awe/anger 促进分享的方向）
+    - S107 Kramer 2014：Facebook 对约 68 万用户 News Feed 情绪内容的大规模操纵实验，证明平台可大规模调节信息流情绪倾向（按 EP notes 要求并行引用：PNAS
+      Editorial Expression of Concern 伦理关注声明，涉及知情同意与大规模无明确同意干预的伦理边界）
+    conflicting:
+    - 平台会阶段性调整目标函数（加入'有价值停留'等指标），偏差随之变化
+    - 并非所有品类同幅漂移：工具类、教程类内容受影响小
+    replication:
+    - 方向性结论在多个平台重复观察到；具体幅度因平台与时期差异大
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 新闻政治品类最显著
+  - 娱乐/工具/知识品类偏差弱得多
+  - 有强编辑/审核层的平台部分缓解
+  failure_conditions:
+  - 平台目标函数改为留存/满意类指标
+  - 付费墙/订阅制平台（收入直接来自用户而非注意力转售）结构不同
+  - 强社区规范的小环境（如垂直论坛）自我纠偏
+  common_misinterpretations:
+  - 把生态偏差当成'用户就爱看这个'的必然——它同时是目标函数的产物
+  - 以此论证'只能做标题党'——偏差描述的是统计倾向，不构成个体策略的正当性
+  ethical_risks:
+  - 为迎合偏差制造愤怒与焦虑（manufactured outrage）属于反模式库条目
+  - 公共讨论质量受损的外部性
+  examples:
+    original_cases:
+    - S99 记录的多平台极端内容放大案例（调查报道性质）
+    research_cases:
+    - 情绪唤醒度与在线分享率的实证关系研究（Berger & Milkman 方向）
+    modern_cases:
+    - 热点事件中情绪对立内容的曝光优势
+    - 财经/健康领域'焦虑标题'的流量溢价
+  communication_implications: 理解偏差存在后有两种合法用法：a) 在合理范围内提高内容的情绪价值与立场清晰度；b) 反向机会——在高唤醒红海中提供冷静、可信赖的内容，借助 authenticity_premium
+    差异化。禁止制造虚假愤怒。
+  community_implications: 社群运营需主动设置规范缓冲算法偏差：鼓励长思考内容、惩罚互喷，否则社群互动被高唤醒冲突占据。
+  content_applications:
+    title: 可提升唤醒但不得伪造事实；愤怒标题的短期信号收益换长期信任损耗
+    opening: 开头呈现真实冲突或张力（而非虚假冲突）是合规的高唤醒来源
+    emotion: 使用真实案例唤起共情而非编造恐惧
+    comments: 预设立场问题引导表达，但避免群体攻击性话题
+  platform_implications: 各平台对此偏差的治理策略不同（权重调整、降权标签、事实核查），平台适配时需评估当前治理强度。
+  related_nodes:
+  - algorithmic_amplification
+  - emotional_arousal
+  - bottom_up_attention_capture
+  - attention_economics
+  - misinformation_velocity
+  conflicting_nodes: []
+  source_ids:
+  - S92
+  - S99
+  - S59
+  - S45
+  - S107
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Fisher 2022《The Chaos Machine》（S99，engagement 优化与愤怒放大调查）+ Aral 2020（S92，算法加权）+
+      Berger 2013（S59，高唤醒内容）
+    effect_size: engagement 加权放大高互动/高唤醒内容（平台内部调查+实证研究）
+    replication_status: engagement 偏差为多来源观察记录（2020-2022 平台文件/调查报道）
+    context_dependency: 平台权重/内容类型/治理强度调制
+    downgrade_upgrade_reason: 2026-09 实取 S99 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S99
+    supporting_evidence:
+    - S92
+    - S59
+    - S45
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-054
+    - CASE-FAL-009
+    - CASE-FAL-026
+    - CASE-FAL-041
+    - CASE-FAL-045
+    - CASE-FAL-061
+    - CASE-FAL-070
+    - CASE-FAL-071
+    - CASE-FAL-076
+    - CASE-FAL-078
+    - CASE-FAL-085
+    - CASE-FAL-087
+    - CASE-FAL-089
+    - CASE-FAL-092
+    - CASE-FAL-095
+    - CASE-FAL-096
+    - CASE-PLT-001
+    - CASE-PLT-003
+    - CASE-PLT-011
+    - CASE-PLT-024
+    - CASE-PLT-046
+    - CASE-PLT-048
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: filter_bubble_echo_chambers
+  canonical_name_en: Filter Bubbles and Echo Chambers
+  canonical_name_zh: 过滤气泡与回音室
+  aliases:
+  - information cocoon 信息茧房
+  domain: platform_algorithmic
+  definition: 过滤气泡指算法个性化过滤使用户难以见到不同观点的现象（Pariser 2011 提出的概念）；回音室指同质观点在封闭群体内反复回响强化的社会结构。两者常被混用但机制不同：前者是算法过程，后者是社会过程。
+  core_claim: 算法个性化与社会同质性都可能收窄信息环境，但实证证据显示其实际强度远低于流行叙事，且两者的贡献需要分开评估。
+  mechanism: 过滤气泡假设推荐系统过滤掉分歧内容；回音室机制则依赖同质连接（homophily）与群体规范使异见被沉默或排斥。二者的实证检验结果混合：S147 一手数据显示算法排序使跨阵营内容暴露较时间排序约减
+    15%，但个体选择（用户主动关注同温层）的贡献大于算法过滤；S93 侧的模拟研究则未复现极端隔离气泡（两 EP 口径存在差异，待进一步一手核验）。即"茧房"更多是人的选择性接触与算法的叠加结果，而非算法单独造成。
+  causal_chain: 同质连接 + 选择性接触 → 观点同质化 → 规范强化 →（叠加算法个性化）→ 信息环境收窄
+  variables:
+    inputs:
+    - 用户的主动关注与搜索行为
+    - 推荐系统的多样性设计
+    moderators:
+    - 平台分发模型（社交分发vs算法分发）
+    - 议题政治化程度
+    - 用户教育水平与媒介素养
+    mediators:
+    - 选择性接触 selective exposure
+    - homophily
+    outputs:
+    - 观点极化程度
+    - 跨阵营理解下降（在强场景下）
+  evidence:
+    supporting:
+    - S93 The Filter Bubble 的概念论证
+    - 同质连接与政治极化关系的观察研究（Bakshy 等对 Facebook 信息暴露的研究显示个体选择是重要贡献者）
+    - 选择性接触理论的长期证据
+    conflicting:
+    - 模拟研究未复现极端隔离气泡（S93）；算法削减幅度小于个体选择（S147）——两 EP 结论不同，如实并列，待进一步一手核验
+    - '''回音室''在普通用户中的普遍性被高估，多数用户接触面比假设更杂'
+    - 议题类型差异大：政治强议题茧房效应明显，日常生活议题几乎不存在
+    replication:
+    - '''概念存在''被接受；''强度与普遍性''结论不一致，是活跃争议区'
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 政治极化议题、强身份标签内容中效应最明显
+  - 唯一信息源用户、重度被动消费用户更易受影响
+  failure_conditions:
+  - 主动搜索与跨平台使用者
+  - 社交分发为主的平台（朋友圈、微信群）中机制转变为人际回音而非算法回音
+  - 低政治化生活内容
+  common_misinterpretations:
+  - 把'信息茧房'当成普遍铁律到处套用——日常生活内容几乎不存在
+  - 把回音室完全归因算法而忽略用户自身选择性接触（这是营销者最常犯的归因错误）
+  - 用茧房概念论证'不需要考虑观点多样性'
+  ethical_risks:
+  - 利用茧房效应向封闭群体投放单一叙事属于操纵（astroturfing 邻接风险）
+  - 营销中刻意隔离用户信息来源损害长期信任
+  examples:
+    original_cases:
+    - S93 对 Google 个性化搜索的观察（2011）
+    research_cases:
+    - Bakshy 等基于 Facebook 数据的跨意识形态信息暴露研究
+    - 对 Twitter 回音室的观测研究显示多数用户并非完全同温层
+    modern_cases:
+    - 微信群内观点反复同化（人际回音室）
+    - 算法'猜你喜欢'与用户搜索并存的双轨信息环境
+  communication_implications: 破圈内容要主动设计"跨泡触点"：蹭跨圈话题、借助弱连接转发、优化搜索词（搜索是出泡通道）。同时不要高估茧房——内容失败常被错误归因于茧房。
+  community_implications: 社群要有意识引入异质视角（外脑、辩论、跨社群连线），否则人际回音室使集体判断质量下降。
+  content_applications:
+    title: 借跨圈层关键词触达气泡外用户
+    body: 呈现对立观点的公允转述可提升可信度（inoculation_theory 邻接）
+    sharing: 给转发者提供'表达观点而非站队攻击'的转发言口
+  platform_implications: 社交分发平台（朋友圈/视频号）茧房机制是人际的；算法平台是信号回环的。适配策略不同：前者靠关系链破局，后者靠搜索与探索流量。
+  related_nodes:
+  - recommendation_feedback_loop
+  - homophily
+  - selective_attention
+  - social_identity_theory
+  - algorithmic_amplification
+  conflicting_nodes:
+  - homophily
+  source_ids:
+  - S93
+  - S147
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Pariser 2011《The Filter Bubble》（S93，book 级，substantial_excerpt：概念起源）+ Bakshy
+      2015 一手研究（S147，paper 级，substantial_excerpt：算法排序使跨阵营内容较时间排序约减 15%、跨阵营内容点击通过率约低 70%、个体选择贡献大于算法）+ 后续实证（Hannak
+      2013 约 11.7%；Bail 2018 反直觉）
+    effect_size: 算法排序使跨阵营内容暴露约减 15%、跨阵营内容点击通过率约再低 70%（S147 一手口径）；S93 综述侧数字为 8%/4%，与一手 EP 不一致，待进一步一手核验；个体选择贡献大于算法
+    replication_status: S93 侧：模拟研究未复现极端隔离气泡；S147 侧：算法削减实测存在但幅度有限——两 EP 结论不同，如实并列，待进一步一手核验
+    context_dependency: 被动消费场景最强；用户主动搜索/多源使用打破气泡；美国两极化语境特殊
+    downgrade_upgrade_reason: 2026-09 实取 S93 概念起源 + 如实纳入后续实证混合证据，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09
+      反向审计改按 S147 一手口径（15%/70%），S93 综述数字（8%/4%）与一手 EP 并列标注不一致
+  provenance:
+    primary_sources:
+    - S93
+    supporting_evidence:
+    - S147
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S147
+    - S208
+    - S53
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: ranking_signal_weighting
+  canonical_name_en: Ranking Signal Weighting
+  canonical_name_zh: 排序信号权重
+  aliases:
+  - ranking factors
+  - 算法权重
+  domain: platform_algorithmic
+  definition: 推荐系统对各类行为信号（完播率、点赞、评论、转发、收藏、关注转化、负反馈等）赋予不同权重以决定内容排序的原则性描述。此节点只刻画信号类别学，不声明任何具体平台的内部权重数值。
+  core_claim: 不同平台因目标函数不同，对信号类别的权重排序不同；理解某平台的信号语义是内容适配的前提。
+  mechanism: 平台把目标函数（停留、互动、交易、社交活跃）分解为可观测的代理信号，并按其对目标的预测力赋权。如短视频平台的核心信号是完播与停留（时长型平台），图文种草平台的核心信号是收藏与搜索点击（决策型平台），社交平台的核心信号是转发与评论（关系型平台）。权重还会随品类、时段、账号层级动态调整。
+  causal_chain: 平台目标函数 → 代理信号选择 → 信号权重分配 → 内容排序结果
+  variables:
+    inputs:
+    - 内容的多维互动信号
+    - 账号历史
+    - 内容特征（文本/视觉）
+    moderators:
+    - 平台商业目标
+    - 品类
+    - 时段与流量池
+    mediators:
+    - 用户即时行为
+    outputs:
+    - 内容分发排序
+  evidence:
+    supporting:
+    - 平台公开的创作者指南会披露信号语义方向（official_rule 层）
+    - 平台算法开源快照（如 X 的推荐算法开源）提供部分信号权重方向
+    - 推荐系统通用文献（协同过滤、多目标排序）
+    conflicting:
+    - 具体权重数值不公开且频繁调整，任何精确数值宣称都不可靠
+    - 不同品类的实际权重不同，通用指南只能给方向
+    replication:
+    - 信号类别学稳定；数值权重不可复现验证
+    meta_analysis: []
+  evidence_grade: C
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 适用于以机器排序为主的平台
+  - 对纯人工编辑分发场景解释力弱
+  - 本节点是原则层，平台具体状态必须查 platform adapter 与官方公告
+  failure_conditions:
+  - 平台策略调整后旧结论失效
+  - 用 A 平台信号语义直接套 B 平台
+  - 把行业猜测当成官方权重
+  common_misinterpretations:
+  - '''收藏权重最高''这类断言脱离平台与时期，多为经验推测'
+  - 把公开指南的营销话术当成算法规则
+  - 以为堆砌某个信号（如诱导点赞）可以稳定起量——平台会反博弈
+  ethical_risks:
+  - 针对信号造假（刷量）违反平台规则并损害生态
+  - 误导客户按不实权重承诺效果
+  examples:
+    original_cases: []
+    research_cases:
+    - X 平台推荐算法开源仓库披露的信号构成（verified_observation 层）
+    modern_cases:
+    - 小红书收藏率与搜索流量的强关联（行业共识）
+    - 抖音完播率的优化导向（官方公开方向）
+  communication_implications: 做平台适配时第一步是确认该平台"什么行为算成功"：决策型平台优化收藏与搜索命中，时长型平台优化完播，关系型平台优化转发评论。同一内容在各平台应重构信号设计。
+  community_implications: 社群平台化运营时，理解平台信号决定引流策略：搜索型平台靠关键词布局，推荐型平台靠互动率。
+  content_applications:
+    title: 标题优化目标随平台信号语义变化：搜索平台嵌关键词，推荐平台造好奇
+    opening: 时长型平台把最有价值点前置以保完播
+    cta: 引导与平台核心信号一致的行为（种草平台引导收藏而非点赞）
+  platform_implications: 平台 adapter 的 interaction_signals 字段即此节点的平台实例化。平台权重信息一律标注 fact_type 与时间。
+  related_nodes:
+  - algorithmic_amplification
+  - engagement_optimization_bias
+  - recommendation_feedback_loop
+  - algorithmic_gaming
+  conflicting_nodes: []
+  source_ids:
+  - S92
+  - S95
+  - S96
+  - S224
+  - S225
+  provenance:
+    primary_sources:
+    - S92
+    - S95
+    - S96
+    - S224
+    - S225
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-001
+    - CASE-PLT-003
+    - CASE-PLT-010
+    - CASE-PLT-012
+    - CASE-PLT-016
+    - CASE-PLT-020
+    - CASE-PLT-048
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: cold_start_dynamics
+  canonical_name_en: Cold Start Dynamics
+  canonical_name_zh: 冷启动动态
+  aliases:
+  - cold start problem
+  - 冷启动
+  domain: platform_algorithmic
+  definition: 新账号、新内容或新产品在缺乏行为数据时，系统无法评估其价值而给予极低曝光的结构性困境；以及破解该困境的策略空间（初始种子用户、相似人群外扩、付费加速等）。
+  core_claim: 冷启动期的传播策略与成熟期完全不同：核心不是内容优化而是"制造初始信号"，包括精准种子人群与互动密度。
+  mechanism: 推荐系统依赖历史数据做匹配，新对象无数据可依，只能按内容特征与账号特征做粗匹配试探。此时初始曝光人群是否精准、互动密度是否高于基准线，直接决定是否进入放大通道（algorithmic_amplification）。产品层面同理：网络效应产品在用户不足时无法提供价值，需先解决"单边可用"（Chen,
+    S97）。
+  causal_chain: 无历史数据 → 特征试探性匹配 → 小流量测试 → 互动密度达标 → 进入推荐通道
+  variables:
+    inputs:
+    - 账号/产品历史数据量
+    - 内容特征完备度（标题/标签/封面）
+    - 初始人群精准度
+    moderators:
+    - 平台新号扶持政策
+    - 品类竞争密度
+    - 私域可导入流量
+    mediators:
+    - 初始互动密度
+    - 互动人群与目标人群的重合度
+    outputs:
+    - 是否突破冷启动
+    - 推荐标签收敛速度
+  evidence:
+    supporting:
+    - S97 The Cold Start Problem 对网络产品冷启动的系统分析
+    - S96 Platform Revolution 中平台冷启动章节
+    - 平台官方的新号扶持与内容冷启动说明（official_rule 层）
+    conflicting:
+    - 扶持政策各平台差异大且频繁调整
+    - 买量冷启动在低信任品类可能带来负面信号（高点击低转化）
+    replication:
+    - 结构性困境普遍成立；具体扶持机制随平台变化
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 有网络效应的产品/社群最明显
+  - 工具型单边产品冷启动压力小
+  - 自带私域流量的账号可用导入策略绕过部分困境
+  failure_conditions:
+  - 用买量泛流量做种子——互动密度虚高但标签混乱，反而污染推荐
+  - 冷启动期频繁更换内容方向，标签永不收敛
+  - 把冷启动期的低数据归因为内容质量差而全盘推翻策略
+  common_misinterpretations:
+  - 把冷启动期数据当成熟期数据解读
+  - 认为粉丝量解决冷启动——标签错位时大号同样扑街
+  - 忽视'初始人群精准度'这个最大杠杆
+  ethical_risks:
+  - 刷量买粉制造虚假初始信号，破坏系统与自身标签
+  examples:
+    original_cases:
+    - S97 中 dating 产品与网络产品的冷启动案例（Tinder 校园推广等实践案例）
+    research_cases: []
+    modern_cases:
+    - 新账号用垂直内容连续发布收敛标签
+    - 品牌自播用私域导入首批观众冲互动密度
+  communication_implications: 冷启动内容应优先保证"对一小群人极度相关"而非"对所有人有点相关"：具体人群、具体问题、具体场景，让初始互动密度高于基准。
+  community_implications: 社群冷启动遵循相同逻辑：先服务好 10 个精准成员（制造初始互动与口碑信号），而非拉 500 个泛成员（寂静群）。
+  content_applications:
+    title: 标题包含目标人群身份词，提升初始人群精准命中
+    opening: 第一屏显式声明'这条内容是给谁的'
+    body: 垂直深耕直到账号标签稳定，再考虑扩域
+  platform_implications: 各平台新号扶持与标签收敛机制不同（见各 adapter 的 distribution_model），跨平台冷启动不可复制粘贴。
+  related_nodes:
+  - algorithmic_amplification
+  - critical_mass_threshold
+  - ranking_signal_weighting
+  - social_proof
+  conflicting_nodes: []
+  source_ids:
+  - S96
+  - S97
+  - S124
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Parker 等 2016《Platform Revolution》（S96，鸡生蛋八策略）+ Chen 2021《The Cold Start Problem》（S97，五阶段/原子网络/困难侧/三效合一）
+    effect_size: 先做密小市场再复制；困难侧优先（行业案例方向一致，D 级实践成分）
+    replication_status: 冷启动策略为平台实践共识；多为案例证据
+    context_dependency: 网络效应强度/供需结构调制；跨平台冷启动不可复制粘贴
+    downgrade_upgrade_reason: 2026-09 实取 S96/S97 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S97
+    - S124
+    supporting_evidence:
+    - S96
+    last_verified: 2026-09
+    case_sources:
+    - CASE-GRW-015
+    - CASE-PLT-017
+    - CASE-PLT-034
+    - CASE-PLT-035
+    - CASE-PLT-044
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: creator_incentive_structures
+  canonical_name_en: Creator Incentive Structures
+  canonical_name_zh: 创作者激励结构
+  aliases:
+  - 创作者经济
+  - creator economy
+  domain: platform_algorithmic
+  definition: 平台与市场为创作者提供的变现路径（流量分成、广告、电商带货、知识付费、打赏、接单）及其反向塑造内容形态的机制。
+  core_claim: 变现结构决定内容形态：佣金驱动的内容偏向转化话术，流量分成驱动的内容偏向时长与互动，私域驱动的内容偏向信任积累——创作者不是'选择'风格，而是被激励结构筛选。
+  mechanism: 创作者对激励敏感：哪条变现路径的边际收益高，内容就向其形态漂移。流量分成模式（按播放/时长计费）鼓励拉长时长与连续钩子；电商模式鼓励强卖点与逼单结构；打赏/订阅模式鼓励人格化与陪伴感；接单模式鼓励稳定人设与专业标签。平台通过调节激励结构即可大规模改变生态内容形态，无需直接命令。
+  causal_chain: 平台激励规则 → 创作者理性响应 → 内容形态漂移 → 用户预期变化 → 平台再调整规则
+  variables:
+    inputs:
+    - 平台变现工具组合
+    - 分成比例
+    - 准入门槛
+    moderators:
+    - 品类变现效率差异
+    - 创作者规模层级（头部/腰部/新人路径不同）
+    mediators:
+    - 创作者的内容-收益函数
+    outputs:
+    - 内容形态分布
+    - 平台生态质量
+  evidence:
+    supporting:
+    - S95 The Platform Society 对平台经济架构的分析
+    - S92 The Hype Machine 中关于平台商业模式的讨论
+    - S48 The Attention Merchants 的注意力商业逻辑
+    - S100 Filterworld：创作者内化算法——在分享前预演内容将如何被算法表现、选择可能流行的而非冒险的选题（文化评论级证据）
+    conflicting:
+    - 人格化创作者可能主动牺牲变现效率换取调性
+    - 不同层级创作者的最优策略差异大，单一结论易过度概括
+    replication:
+    - 激励响应方向在多平台观察一致；具体形态随平台政策快速变化
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 商业化程度高的平台显著
+  - 兴趣驱动非变现创作者受影响小
+  - 规则变动窗口期行为混乱
+  failure_conditions:
+  - 平台突然改版激励规则
+  - 监管介入（如广告标识要求）改变变现形态
+  - 多平台分发稀释单一激励绑定
+  common_misinterpretations:
+  - 把创作者内容选择全归因于个人品味而忽略激励筛选
+  - 以为激励只影响头部——新人路径同样被塑造
+  - 忽视平台'规则即生态'：改一条分成规则等于改全站内容
+  ethical_risks:
+  - 带货激励催生夸大宣传与软广不标（监管风险）
+  - 知识付费激励催生焦虑营销（反模式库条目）
+  examples:
+    original_cases: []
+    research_cases: []
+    modern_cases:
+    - 视频号创作者转向直播带货的内容迁移
+    - B站充电与商单并行的中间路线
+    - 公众号读者赞赏与私域转化的组合
+  communication_implications: 做内容策略必须先问"这个账号靠什么赚钱"：变现路径决定内容结构、更新频率与平台选择。为品牌做投放时，识别创作者的激励类型可预判其内容倾向与合规风险。
+  community_implications: 社群运营者设计成员激励同理：积分/地位/权限等激励结构决定成员行为（status_systems 的运营对应物）。
+  content_applications:
+    cta: CTA 类型应与变现路径一致：带货内容引导购买链路，私域内容引导关注与入群
+    body: 流量分成型内容设计'继续看'结构；转化型内容设计'立即用'结构
+  platform_implications: 各平台变现工具不同（视频号微信生态闭环、抖音电商闭环、B站充电、小红书蒲公英），适配时把激励结构纳入平台选择依据。
+  related_nodes:
+  - engagement_optimization_bias
+  - algorithmic_gaming
+  - status_systems
+  - attention_economics
+  conflicting_nodes: []
+  source_ids:
+  - S48
+  - S92
+  - S95
+  - S100
+  - S227
+  provenance:
+    primary_sources:
+    - S48
+    - S92
+    - S95
+    - S100
+    - S227
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-022
+    - CASE-COM-033
+    - CASE-COM-036
+    - CASE-COM-037
+    - CASE-COM-050
+    - CASE-COM-051
+    - CASE-COM-052
+    - CASE-COM-058
+    - CASE-COM-059
+    - CASE-COM-081
+    - CASE-PLT-001
+    - CASE-PLT-010
+    - CASE-PLT-011
+    - CASE-PLT-014
+    - CASE-PLT-016
+    - CASE-PLT-017
+    - CASE-PLT-018
+    - CASE-PLT-019
+    - CASE-PLT-020
+    - CASE-PLT-022
+    - CASE-PLT-024
+    - CASE-PLT-025
+    - CASE-PLT-027
+    - CASE-PLT-030
+    - CASE-PLT-031
+    - CASE-PLT-032
+    - CASE-PLT-033
+    - CASE-PLT-037
+    - CASE-PLT-038
+    - CASE-PLT-039
+    - CASE-PLT-046
+    - CASE-PLT-050
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: moderation_governance
+  canonical_name_en: Moderation and Platform Governance
+  canonical_name_zh: 内容治理与平台治理
+  aliases:
+  - content moderation
+  - 平台审核
+  domain: platform_algorithmic
+  definition: 平台通过规则、算法审核、人工复审与社区自治来决定哪些内容可发布、可分发、可变现的治理体系，及其对内容生态的塑造作用。
+  core_claim: 治理不是事后清洁工而是生态塑造力：审核标准与执行强度决定了什么内容值得被生产，进而改变整个内容供给的形态。
+  mechanism: 创作者对"什么会被限流/封禁/不可变现"形成预期并提前自我审查（chilling effect 寒蝉效应）；同时平台对特定品类的扶持与豁免（如官方活动流量）构成正向引导。治理边界模糊或不透明的领域（灰色地带）成为博弈区。Gillespie（S94）指出：平台'决定什么可以被人看见'，这正是其核心权力。
+  causal_chain: 治理规则 → 创作者预期 → 自我审查与品类迁移 → 内容供给形态变化
+  variables:
+    inputs:
+    - 平台规则文本
+    - 审核技术（机审+人审）
+    - 监管环境
+    moderators:
+    - 规则透明度
+    - 申诉机制效率
+    - 品类敏感性
+    mediators:
+    - 创作者风险预期
+    outputs:
+    - 内容品类分布
+    - 擦边内容博弈
+    - 合规内容占比
+  evidence:
+    supporting:
+    - S94 Custodians of the Internet 对审核机制的系统研究
+    - S95 The Platform Society 的治理架构分析
+    conflicting:
+    - 规则文本与执行存在落差，外部只能观察执行结果
+    - 不同市场（中美欧）治理逻辑差异大，不可通约
+    replication:
+    - 治理影响生态的方向性结论稳定；具体边界持续变动
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 强监管品类（医疗/金融/教育）效应最强
+  - UGC 社区比 PGC 平台治理压力更大
+  - 灰色地带的界定随政策快速变动
+  failure_conditions:
+  - 平台审核资源不足时规则名存实亡
+  - 跨国平台属地化执行差异
+  - 重大公共事件期临时规则覆盖常规规则
+  common_misinterpretations:
+  - 把治理当成静态规则清单——它是持续博弈的动态边界
+  - 以为'没被删'等于合规——限流、不可变现是更常见的软治理
+  - 忽视品类差异：同一话术在娱乐区安全、在健康区违规
+  ethical_risks:
+  - 利用治理盲区生产擦边内容（平台与法律双重风险）
+  - 治理标准不透明本身构成权力滥用风险（S95 的批判视角；搜索引擎偏见批判见 S98，对接 platform_power_gatekeeping）
+  examples:
+    original_cases:
+    - S94 中各平台审核实践的分析案例
+    research_cases: []
+    modern_cases:
+    - 医疗健康内容在多平台的资质要求
+    - 广告标识新规下的软广治理
+    - 未成年人保护规则对内容形态的影响
+  communication_implications: 内容策略必须含治理合规层：高危品类（医疗、金融、教育、儿童）需要资质与话术降级方案；把合规视为设计约束而非事后补救。
+  community_implications: 社群治理与平台治理同构：明确的社区规范+透明执行+申诉通道，是社群长期健康的结构条件（community_governance）。
+  content_applications:
+    body: 敏感品类用'一般性信息+引导专业咨询'结构，避免绝对化疗效/收益表述
+    title: 标题规避绝对化用语与夸大承诺（平台审核高频命中区）
+  platform_implications: 各平台治理强度与重点不同，adapter 的 risk_factors 字段承载平台实例；发布前核对当前规则是流程强制步骤。
+  related_nodes:
+  - platform_power_gatekeeping
+  - community_governance
+  - creator_incentive_structures
+  - provenance_verification
+  conflicting_nodes: []
+  source_ids:
+  - S94
+  - S95
+  - S226
+  - S228
+  - S229
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Gillespie 2018《Custodians of the Internet》（S94，book 级，substantial_excerpt：所有平台都审核/中立平台是迷思/审核构成性功能）+
+      van Dijck 2018（S95，平台化框架）
+    effect_size: 审核决策塑造社会规范与公共话语；审核生态含人工劳动与算法过滤
+    replication_status: 平台审核机制在主流平台普遍存在；具体规则与治理强度因平台而异
+    context_dependency: 规则+人工+算法混合审核的主流平台；去中心化平台结构不同
+    downgrade_upgrade_reason: 2026-09 实取 S94 核心论证，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S94
+    - S226
+    - S228
+    - S229
+    supporting_evidence:
+    - S95
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-CNT-011
+    - CASE-CNT-013
+    - CASE-CNT-017
+    - CASE-CNT-018
+    - CASE-CNT-020
+    - CASE-COM-013
+    - CASE-COM-015
+    - CASE-COM-017
+    - CASE-COM-028
+    - CASE-COM-032
+    - CASE-COM-035
+    - CASE-COM-036
+    - CASE-COM-037
+    - CASE-COM-041
+    - CASE-COM-042
+    - CASE-COM-043
+    - CASE-COM-044
+    - CASE-COM-045
+    - CASE-COM-054
+    - CASE-COM-055
+    - CASE-COM-056
+    - CASE-COM-057
+    - CASE-COM-061
+    - CASE-COM-062
+    - CASE-COM-070
+    - CASE-COM-071
+    - CASE-COM-072
+    - CASE-COM-074
+    - CASE-COM-075
+    - CASE-COM-076
+    - CASE-COM-077
+    - CASE-COM-080
+    - CASE-COM-081
+    - CASE-COM-084
+    - CASE-COM-085
+    - CASE-COM-086
+    - CASE-COM-087
+    - CASE-COM-093
+    - CASE-COM-094
+    - CASE-COM-098
+    - CASE-COM-099
+    - CASE-FAL-002
+    - CASE-FAL-025
+    - CASE-FAL-026
+    - CASE-FAL-029
+    - CASE-FAL-030
+    - CASE-FAL-037
+    - CASE-FAL-038
+    - CASE-FAL-040
+    - CASE-FAL-041
+    - CASE-FAL-042
+    - CASE-FAL-043
+    - CASE-FAL-045
+    - CASE-FAL-046
+    - CASE-FAL-048
+    - CASE-FAL-049
+    - CASE-FAL-057
+    - CASE-FAL-058
+    - CASE-FAL-059
+    - CASE-FAL-060
+    - CASE-FAL-061
+    - CASE-FAL-062
+    - CASE-FAL-065
+    - CASE-FAL-066
+    - CASE-FAL-067
+    - CASE-FAL-068
+    - CASE-FAL-069
+    - CASE-FAL-070
+    - CASE-FAL-072
+    - CASE-FAL-073
+    - CASE-FAL-074
+    - CASE-FAL-075
+    - CASE-FAL-076
+    - CASE-FAL-079
+    - CASE-FAL-081
+    - CASE-FAL-083
+    - CASE-FAL-084
+    - CASE-FAL-085
+    - CASE-FAL-086
+    - CASE-FAL-088
+    - CASE-FAL-094
+    - CASE-FAL-095
+    - CASE-FAL-097
+    - CASE-FAL-098
+    - CASE-FAL-100
+    - CASE-PLT-004
+    - CASE-PLT-006
+    - CASE-PLT-008
+    - CASE-PLT-009
+    - CASE-PLT-013
+    - CASE-PLT-015
+    - CASE-PLT-018
+    - CASE-PLT-028
+    - CASE-PLT-033
+    - CASE-PLT-040
+    - CASE-PLT-043
+    - CASE-PLT-045
+    - CASE-PLT-049
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: attention_economics
+  canonical_name_en: Attention Economics
+  canonical_name_zh: 注意力经济学
+  aliases:
+  - attention scarcity
+  - 注意力稀缺
+  domain: platform_algorithmic
+  definition: 把注意力视为稀缺资源、把内容生产视为对注意力的竞争性收割的经济分析框架。源自 Herbert Simon 的洞见：信息的丰富造成注意力的贫乏。
+  core_claim: 内容供给越过剩，单条内容获得注意力的成本越高，注意力的"筛选层"（平台、算法、AI 中介）越掌握定价权。
+  mechanism: 人类信息处理带宽恒定（attention_capacity_limits），而内容供给以指数增长，供需失衡使注意力单价上升。平台通过控制分发获得"注意力税"；创作者被迫在"争夺初始注意"上加大投入（更强的钩子、封面、标题）。Tim
+    Wu（S48）把这一逻辑追溯为现代媒介史的主线：从报纸到广播到信息流，商业模式始终是注意力的收割与转售。
+  causal_chain: 带宽恒定 + 供给爆炸 → 注意力稀缺加剧 → 筛选层权力上升 → 内容方竞争性内卷
+  variables:
+    inputs:
+    - 内容供给总量
+    - 用户可用时长
+    moderators:
+    - 筛选层效率（算法/AI 是否降低搜寻成本）
+    - 内容品类饱和度
+    mediators:
+    - 分发权配置
+    outputs:
+    - 单内容获客成本上升
+    - 头部集中
+    - 钩子军备竞赛
+  evidence:
+    supporting:
+    - Herbert Simon 1971 关于注意力经济的经典论述
+    - S48 The Attention Merchants 的商业史论证
+    - S49 The Shallows 关于深度注意被侵蚀的证据综述
+    conflicting:
+    - AI 答案中介可能降低搜寻成本、改变（而非单纯加剧）竞争形态（见 ai_information_intermediaries）
+    - 长尾理论曾预测供给过剩利好小众——实际头部集中度仍高（S80 及其后续修正）
+    replication:
+    - 稀缺方向稳定成立；结构性后果仍在演化
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 适用于开放竞争的内容市场
+  - 封闭私域（会员制/订阅制）中注意力交易形态不同
+  - 强品牌内容受稀缺冲击小于无品牌内容（mental_availability 缓冲）
+  failure_conditions:
+  - 用户总时长停止增长且再分配（存量博弈）时，结论从'变贵'转为'转移'
+  - 新型分发层出现时竞争规则重置
+  common_misinterpretations:
+  - '''注意力经济''被当成涨粉话术而失去分析含义'
+  - 以为稀缺只是'更难'——它同时改变权力结构（筛选层＞生产层）
+  - 忽视注意力质量差异：深度注意与碎片注意价值完全不同
+  ethical_risks:
+  - 注意力收割逻辑滑向成瘾设计（variable_ratio_reward 滥用）与 dark pattern
+  - 以焦虑为杠杆夺取注意力（反模式库条目）
+  examples:
+    original_cases:
+    - Herbert Simon 的原始论述（信息消耗注意力）
+    research_cases:
+    - Gloria Mark 对知识工作者注意片段化的长期观测（S03）
+    modern_cases:
+    - 信息流对传统媒体的广告收入转移
+    - '''黄金三秒''军备竞赛'
+  communication_implications: 在注意力稀缺框架下，内容价值公式=被选中的概率×选中后交付的价值。前者靠分发层优化（标题/封面/算法适配），后者靠留存与信任（长期资产）。只优化前者=短期博弈，只优化后者=没有入场券。
+  community_implications: 社群的本质是把"竞争来的注意力"转化为"留存的关系资产"（从 Reach 到 Community 的跨越，见 Virality≠Community）。
+  content_applications:
+    title: 把标题视为注意力市场的定价工具：相关性承诺越具体，点击成本越低
+    opening: 首屏兑现标题承诺，避免透支注意力信任
+    cta: 争夺'下次再来'（关注/收藏）比争夺单次点击更具资产价值
+  platform_implications: 平台即注意力市场：分发模型=市场结构。adapter 层分析某平台注意力竞争强度（content_lifecycle 与流量池机制）。
+  related_nodes:
+  - attention_capacity_limits
+  - algorithmic_amplification
+  - creator_incentive_structures
+  - mental_availability
+  - ai_information_intermediaries
+  conflicting_nodes: []
+  source_ids:
+  - S03
+  - S48
+  - S49
+  - S80
+  - S45
+  - S185
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Tim Wu 2016《The Attention Merchants》（S48，book 级：注意力收割史/便士报起源）+ Postman 1985（S45，娱乐化）+
+      Carr 2010（S49，中断系统）
+    effect_size: 注意力商业结构（信息充裕→注意稀缺）；平台以注意转售为收入模式
+    replication_status: 注意力商品化模式多平台重复（媒介史反复模式）；'文化殖民'强判断有争议
+    context_dependency: 广告支撑的免费平台最强；订阅/付费墙平台结构不同
+    downgrade_upgrade_reason: 2026-09 实取 S48/S45/S49 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S48
+    supporting_evidence:
+    - S45
+    - S49
+    - S185
+    - S03
+    - S80
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-CNT-011
+    - CASE-CNT-013
+    - CASE-CNT-014
+    - CASE-COM-028
+    - CASE-COM-029
+    - CASE-COM-073
+    - CASE-COM-076
+    - CASE-COM-088
+    - CASE-COM-089
+    - CASE-COM-092
+    - CASE-COM-093
+    - CASE-COM-094
+    - CASE-CRS-003
+    - CASE-CRS-004
+    - CASE-CRS-007
+    - CASE-CRS-009
+    - CASE-CRS-012
+    - CASE-CRS-017
+    - CASE-FAL-024
+    - CASE-FAL-025
+    - CASE-FAL-028
+    - CASE-FAL-031
+    - CASE-FAL-038
+    - CASE-FAL-042
+    - CASE-FAL-046
+    - CASE-FAL-057
+    - CASE-FAL-058
+    - CASE-FAL-062
+    - CASE-FAL-064
+    - CASE-FAL-066
+    - CASE-FAL-070
+    - CASE-FAL-071
+    - CASE-FAL-073
+    - CASE-FAL-076
+    - CASE-FAL-077
+    - CASE-FAL-081
+    - CASE-FAL-089
+    - CASE-FAL-091
+    - CASE-FAL-096
+    - CASE-FAL-099
+    - CASE-PLT-006
+    - CASE-PLT-007
+    - CASE-PLT-008
+    - CASE-PLT-009
+    - CASE-PLT-011
+    - CASE-PLT-012
+    - CASE-PLT-013
+    - CASE-PLT-015
+    - CASE-PLT-016
+    - CASE-PLT-017
+    - CASE-PLT-018
+    - CASE-PLT-020
+    - CASE-PLT-021
+    - CASE-PLT-022
+    - CASE-PLT-023
+    - CASE-PLT-027
+    - CASE-PLT-038
+    platform_sources:
+    - weibo:S1
+    - weibo:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: algorithmic_gaming
+  canonical_name_en: Algorithmic Gaming
+  canonical_name_zh: 算法博弈
+  aliases:
+  - gaming the algorithm
+  - 逆向工程算法
+  domain: platform_algorithmic
+  definition: 创作者、营销方与黑灰产针对平台算法信号进行策略性操纵（标签堆砌、标题党、互赞群、刷量、诱导互动），以及平台随之进行的反操纵升级，构成的持续攻防动态。
+  core_claim: 任何可被测量的信号都会被博弈，平台与博弈者的军备竞赛使纯技巧红利持续衰减；可持续优势只能来自信号背后真实价值的兑现。
+  mechanism: 算法以代理信号做决策，Goodhart 定律随之生效：当代理指标成为目标，它就不再是好的度量。创作者把资源从"做好内容"转移到"制造信号"（互赞群、诱导、关键词堆砌），信号与真实价值的相关性下降，平台被迫加入新信号/惩罚机制，博弈者再适应——循环往复。技巧性优势在单次博弈中真实存在，但衰减速度由平台反博弈强度决定。
+  causal_chain: 算法用代理信号 → 博弈者操纵信号 → 信号失真 → 平台升级检测 → 博弈策略失效 → 新一轮博弈
+  variables:
+    inputs:
+    - 算法信号构成（ranking_signal_weighting）
+    - 检测技术强度
+    moderators:
+    - 平台反博弈投入
+    - 博弈策略可见度
+    - 违规成本（限流/封号）
+    mediators:
+    - 信号-价值相关性衰减
+    outputs:
+    - 技巧红利衰减
+    - 平台惩罚风险
+    - 生态信任损耗
+  evidence:
+    supporting:
+    - SEO 行业关键词堆砌被搜索引擎降权的公开历史（verified_observation）
+    - 平台规则文本对诱导互动/刷量的明令禁止（official_rule 层）
+    - Goodhart 定律与指标博弈的社会科学讨论
+    conflicting:
+    - 部分'灰术'在窗口期确实有效——但这不改变其衰减与风险结构
+    - 平台检测能力外部不可知，风险量化困难
+    replication:
+    - 攻防循环方向稳定；单轮博弈结果不可复现
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 信号可低成本伪造的领域博弈最烈（互动量/粉丝数）
+  - 强交易信号（真实成交）伪造成本高，博弈空间小
+  - 平台早期宽容度高于成熟期
+  failure_conditions:
+  - 平台批量识别与连坐处罚
+  - 信号本身改为难伪造指标（如真实复购）
+  - 合规成本低于博弈收益时理性选择退出博弈
+  common_misinterpretations:
+  - 把'别人也在刷'当成正当性论证
+  - 把窗口期红利当成可持续策略写进方法论
+  - 忽视连坐风险：博弈失败惩罚的是整个账号资产而非单条内容
+  ethical_risks:
+  - 刷量与虚假互动直接构成 fake social proof（反模式库条目）
+  - 误导合作方与平台，法律责任风险（虚假宣传）
+  examples:
+    original_cases:
+    - 早期 SEO 关键词堆砌与 Google 反升级史（公开可考）
+    research_cases: []
+    modern_cases:
+    - 短视频平台打击互赞互评群
+    - 电商虚假交易治理
+    - AI 生成内容批量号农与平台原创识别的对抗
+  communication_implications: 方法论定位：短期技巧=指数衰减资产；信号背后真实兑现（标题承诺→内容兑现）=唯一复利项。诊断时若发现账号依赖博弈技巧，应视为风险项而非能力项。
+  community_implications: 社群中刷数据（虚假活跃）同理破坏信任基础设施，宁可小而真。
+  content_applications:
+    title: 标题技巧可用但要与内容兑现闭环，'点开即跳'会被负信号反噬
+    body: 把博弈预算转投内容价值密度
+  platform_implications: 各平台反博弈强度不同（检测技术、处罚梯度），adapter 的 risk_factors 与 known_platform_patterns 记录当前博弈高发区与风险。
+  related_nodes:
+  - ranking_signal_weighting
+  - engagement_optimization_bias
+  - trust_signals_content
+  - bot_amplified_social_proof
+  conflicting_nodes: []
+  source_ids:
+  - S94
+  - S236
+  grade_justification:
+    independent_studies: 实际支撑为平台规则文本（L1 verified_observation/official_rule 层）与 SEO 降权公开历史、Goodhart 定律讨论；S92/S94/S95
+      为背景书系非直接证据，S94 仅作平台反操纵治理背景间接来源
+  provenance:
+    primary_sources:
+    - S94
+    - S236
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-FAL-001
+    - CASE-PLT-010
+    - CASE-PLT-033
+    - CASE-PLT-038
+    - CASE-PLT-042
+    - CASE-PLT-043
+    - CASE-PLT-045
+    - CASE-PLT-048
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+- id: platform_power_gatekeeping
+  canonical_name_en: Platform Power as Gatekeeping
+  canonical_name_zh: 平台权力与守门
+  aliases:
+  - platform gatekeeping
+  - 平台守门人
+  domain: platform_algorithmic
+  definition: 平台通过技术架构、规则设定与算法排序掌握"什么内容被谁看见"的决定权，成为数字时代的新型守门人（gatekeeper）；这一权力如何影响传播结果与公共讨论的机制分析。
+  core_claim: 在平台中介的传播中，内容方不直接掌握分发权：触达是平台授予的、可调整的、随时可撤回的——任何传播策略都必须以'平台权力结构'为边界条件。
+  mechanism: 传统守门人（编辑、频道）被平台取代，但守门功能未消失而是被算法化、规模化为 van Dijck（S95）所说的平台化基础设施。平台的守门手段包括：分发排序（可见性）、变现资格（经济准入）、功能限制（限流/禁评论）、规则解释（治理裁量）。内容方的传播结果=内容质量×平台准入×算法放大系数，后两项完全在平台掌控中。Gillespie（S94）强调：平台'不是管道'，其排序选择即编辑行为。
+  causal_chain: 平台掌握分发基础设施 → 排序与准入规则 = 隐形编辑 → 内容方传播结果受制于平台决策 → 平台规则变动重塑生态
+  variables:
+    inputs:
+    - 平台规则与算法设计
+    - 监管环境
+    - 平台间竞争格局
+    moderators:
+    - 内容方对平台的依赖度（单一平台vs多平台）
+    - 平台商业模式（广告vs订阅）
+    mediators:
+    - 分发权配置
+    - 变现资格
+    outputs:
+    - 内容方权力不对等
+    - 生态级内容形态变迁
+    - 传播不确定性
+  evidence:
+    supporting:
+    - S95 The Platform Society 的平台化理论框架
+    - S94 Custodians of the Internet 的守门人分析
+    - S91 Convergence Culture 与 S90 Spreadable Media 对新旧守门权转移的讨论
+    - S98 Algorithms of Oppression：搜索排序嵌入商业利益与偏见、技术中立是迷思（对象为搜索引擎而非内容审核；自 moderation_governance 移挂的平台把关权力批判）
+    conflicting:
+    - 去中心化方案（自建私域、邮件列表、多平台矩阵）部分稀释平台权力
+    - 头部创作者获得与平台议价的例外权力
+    - 监管介入（数据/互操作法规）重塑权力边界
+    replication:
+    - 权力不对称的结构性结论稳定；具体形态随竞争与监管变化
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 强平台依赖（单一分发渠道）的内容方受影响最大
+  - 多平台矩阵+私域资产结构可对冲
+  - 监管强市场（如中国对平台算法的备案要求）权力边界受约束
+  failure_conditions:
+  - 平台竞争白热化期（拉新）对内容方让利
+  - 内容方掌握独立触达渠道（邮件/APP/社群）时权力再平衡
+  common_misinterpretations:
+  - 把平台规则当成稳定环境做长规划——平台规则是设计变量而非自然常数
+  - 以为内容好就能对抗平台结构——'内容为王'在有界分发权下不成立
+  - 把平台扶持期的红利误认为自身可持续能力
+  ethical_risks:
+  - 平台裁量权不透明的滥用风险（S98 的批判方向）
+  - 内容方反过来迎合平台权力牺牲公共价值
+  examples:
+    original_cases:
+    - S94/S95 中的平台治理与架构分析
+    research_cases: []
+    modern_cases:
+    - 平台改版导致账号流量断崖的行业普遍现象
+    - 外链限制与私域引流规则的演变
+    - 多平台矩阵+微信私域的对冲结构成为行业标配
+  communication_implications: 战略层结论：a) 传播资产要沉淀在平台外可带走的形态（品牌认知、私域关系、邮件/社群列表）；b) 单平台依赖度是风险指标；c) 平台规则变动是传播复盘的外生变量，复盘时必须先剥离。
+  community_implications: 社群是内容方对抗平台权力的核心对冲资产：关系与信任沉淀在自己可控的容器（微信群/知识星球/邮件）中。
+  content_applications:
+    cta: 每条内容设计一个'平台外资产沉淀'动作（关注/入群/搜索品牌词）
+    title: 品牌词露出帮助平台外搜索资产积累（mental_availability 联动）
+  platform_implications: 平台 adapter 的 distribution_model 与 risk_factors 即本节点的实例化；跨平台策略（矩阵）是对冲手段。
+  related_nodes:
+  - moderation_governance
+  - algorithmic_amplification
+  - attention_economics
+  - gatekeeping_dynamics
+  - two_step_flow
+  conflicting_nodes: []
+  source_ids:
+  - S90
+  - S91
+  - S94
+  - S95
+  - S98
+  - S226
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: van Dijck 2018《The Platform Society》（S95，book 级，substantial_excerpt：平台化/数据化/公共价值）+
+      Gillespie 2018（S94）+ Jenkins 2013（S90，可传播性/参与式文化）
+    effect_size: 平台=可编程数字基础设施；审核/排序/分发构成事实上的公共守门；公共价值是平台化竞争焦点
+    replication_status: 平台化框架获广泛接受；守门层级内部具体权重缺乏公开可验证数据
+    context_dependency: 平台生态成熟社会；不同分发模型（算法/社交）守门点位置不同
+    downgrade_upgrade_reason: 2026-09 实取 S95/S94/S90 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S95
+    - S226
+    supporting_evidence:
+    - S90
+    - S91
+    - S94
+    - S98
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-030
+    - CASE-COM-031
+    - CASE-COM-032
+    - CASE-COM-059
+    - CASE-COM-061
+    - CASE-COM-075
+    - CASE-COM-077
+    - CASE-COM-087
+    - CASE-COM-088
+    - CASE-COM-089
+    - CASE-COM-090
+    - CASE-COM-091
+    - CASE-COM-092
+    - CASE-COM-094
+    - CASE-COM-095
+    - CASE-FAL-071
+    - CASE-FAL-092
+    - CASE-PLT-003
+    - CASE-PLT-004
+    - CASE-PLT-005
+    - CASE-PLT-006
+    - CASE-PLT-007
+    - CASE-PLT-008
+    - CASE-PLT-009
+    - CASE-PLT-012
+    - CASE-PLT-013
+    - CASE-PLT-014
+    - CASE-PLT-015
+    - CASE-PLT-018
+    - CASE-PLT-019
+    - CASE-PLT-021
+    - CASE-PLT-022
+    - CASE-PLT-023
+    - CASE-PLT-024
+    - CASE-PLT-025
+    - CASE-PLT-026
+    - CASE-PLT-027
+    - CASE-PLT-028
+    - CASE-PLT-029
+    - CASE-PLT-033
+    - CASE-PLT-044
+    - CASE-PLT-050
+  last_reviewed: 2026-09
+  knowledge_half_life: very_short
+  culture_moderators:
+  - 监管强市场（如中国对平台算法的备案要求）权力边界受约束

@@ -1,0 +1,26 @@
+# Evidence Package — S77 Christensen et al. 2016（Competing Against Luck: The Story of Innovation and Customer Choice）
+# 标准格式。access_level 如实标注。
+source_id: S77
+title: "Competing Against Luck: The Story of Innovation and Customer Choice"
+authors: "Clayton M. Christensen; Taddy Hall; Karen Dillon; David S. Duncan"
+year: 2016
+journal: HarperBusiness（专著）
+doi: "无 DOI（专著）"
+url: "https://online.hbs.edu/blog/post/jobs-to-be-done-examples"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：HBS 官方博客（JTBD 定义/顾客『雇用』产品完成『任务』/75-85% 新产品上市失败/奶昔案例/功能-情感-社会三类任务）+ dygest 全书摘要（job=特定情境中的进步/做得好被续聘、做不好被解雇/奶昔早晚两个不同任务/非消费与 workaround 中的机会）+ youexec 20 条洞见（job 定义/情境决定行为/V8 的竞争者不只是果汁还有生蔬菜/情绪与社会维度）+ eauclairepartners 5 takeaways（hire 产品/情境优于人口属性/Switch Moment/四种竞争力量/非消费驱动创新）+ pulserevops 详解（约 40% 奶昔在早 8:30 前售出/通勤任务细节/午后是父母奖赏孩子的另一任务/4 Forces of Progress：推动力、新方案拉力、对改变的焦虑、现有习惯）"
+research_question: "为什么大多数创新失败？怎样让创新从运气游戏变为可预测的战略？"
+core_claims:
+  - "顾客不是在购买产品，而是在特定情境下『雇用』产品去完成一个进步任务（job）；做得好就被『续聘』，做不好就被『解雇』——理解任务比堆砌功能更能预测创新成败"
+  - "奶昔案例：早上通勤者雇用奶昔完成『让车程有趣并抗饿到午餐』的任务，其竞争者不是其他奶昔而是香蕉、贝果、咖啡与无聊；下午父母购买奶昔是为奖赏孩子——同一 SKU 承载两个完全不同的任务，需两个不同的解决方案"
+  - "分析单位是情境（circumstance）而非人口属性：相同人口画像的人因所处情境不同雇用不同产品；关键问题不是『顾客是谁』而是『顾客在什么情境下想取得什么进步』"
+  - "任务包含功能、情感、社会三个维度；创新机会来自非消费（现有方案太贵/太复杂而完全不消费）、workaround、人们回避的任务与产品的异常使用方式"
+  - "研究『转换时刻』（switch moment）：推动力（对现有方案的不满）+ 新方案的拉力，对抗对改变的焦虑 + 现有习惯的惯性；四力平衡决定新产品是否被雇用"
+method: "创新案例研究 + 深度情境访谈（奶昔等经典案例的 switch moment 访谈传统，含 Bob Moesta 的现场行为观察）"
+results: "（实践理论）JTBD 成为产品创新与需求洞察领域最有影响力的框架之一"
+limitations: "框架的学术检验有限：任务结构缺乏统一测量，『任务稳定性』等命题主要靠案例支撑（C 级实践理论）；与 Ehrenberg-Bass 的『多数购买是习惯性低卷入』视角存在张力"
+boundary_conditions: "适用于转换时刻可识别、情境差异大的品类（创新发现场景）；纯习惯性购买（盐、纸巾）的任务分析价值有限；任务陈述必须包含情境，脱离情境的抽象任务会失效"
+relevant_nodes: [jobs_to_be_done, category_entry_points, perceived_purchase_risk]
+notes: "JTBD 理论系统化之作（book 级）。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

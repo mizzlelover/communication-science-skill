@@ -1,0 +1,24 @@
+# Evidence Package — S109 Scheibehenne 2010
+# 标准格式。access_level 如实标注。
+source_id: S109
+title: "Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload"
+authors: "Benjamin Scheibehenne; Rainer Greifeneder; Peter M. Todd"
+year: 2010
+journal: Journal of Consumer Research 37(3), 409-425
+doi: "10.1086/651235"
+url: "https://ideas.repec.org/a/oup/jconrs/v37y2010i3p409-425.html"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "摘要全文（IDEAS/RePEc 收录，含 meta 统计：63 个条件、50 个已发表/未发表实验、N=5,036）"
+research_question: "选项过多是否导致选择过载（选择动机下降/满意度下降）？"
+core_claims:
+  - "选择过载的 meta 分析：63 个条件、50 个实验、N=5,036"
+  - "平均效应量≈0，但研究间方差显著"
+  - "发现若干潜在的先决条件（preconditions），但未找到充分条件；个别研究提出的一些特异调节变量可能解释何时可靠出现选择过载"
+method: "Meta 分析：63 条件/50 实验（含未发表）/N=5036；估计平均效应+异质性+调节分析"
+results: "平均效应接近零、异质性高；选择过载为情境依赖现象，无普遍充分条件"
+limitations: "正文订阅受限（JCR）；调节变量分析细节需原文"
+boundary_conditions: "选择过载非普适定律，取决于情境/任务/个体特征；'更多选项更好'的效应同样存在"
+relevant_nodes: [choice_overload]
+notes: "EVIDENCE.md 已有结论（choice_overload→B 条件化）的 meta 一手支撑。JCR 正文 FULL TEXT NOT AVAILABLE，未编造效应量。"
+last_verified: "2026-09"

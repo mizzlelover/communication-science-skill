@@ -1,0 +1,25 @@
+# Evidence Package — S37 Fogg 2003（Persuasive Technology）
+# 标准格式。access_level 如实标注。
+source_id: S37
+title: "Persuasive Technology: Using Computers to Change What We Think and Do"
+authors: "B. J. Fogg"
+year: 2003
+journal: Morgan Kaufmann（专著；斯坦福说服技术实验室）
+doi: "无 DOI（专著）"
+url: "https://becisions.com/dictionary/terms/fogg-behavior-model"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：行为模型词条（B=MAP 三要素/行动线/触发器分类：spark/facilitator/signal）+ 中文词条（FBM 三要素）+ 2009 FBM 论文摘要 + 学术综述（captology 领域/captology 定义）"
+research_question: "计算机如何被设计为改变人的态度与行为的说服技术？"
+core_claims:
+  - "说服技术学（captology）：设计计算产品以改变态度与行为（Persuasive Technology Lab，斯坦福）"
+  - "Fogg 行为模型（FBM，B=MAP）：行为发生在动机+能力+触发（prompt）三者同时具备的瞬间；动机与能力可权衡（行动线），触发器分 spark（唤起动机）/facilitator（降低难度）/signal（纯提醒）"
+  - "核心实践启示：动机不可靠难提升，通常提高能力（简化行为）比提高动机更有效"
+  - "该模型为设计启发式（非经检验的定律）；2025 综述：应用该模型的健康干预 RCT 仅 6 项，结果正向但异质、短程"
+method: "设计框架（2009 FBM 论文）+ 说服技术设计案例"
+results: "（设计框架）FBM 成为产品/习惯设计标准模型（Tiny Habits 2019 应用）"
+limitations: "FBM 未经对照检验（行动线未校准）；动机/能力无测量单位——D 级设计框架"
+boundary_conditions: "适用于交互产品行为设计诊断；需与其他行为理论结合"
+relevant_nodes: [behavior_model_bmap, hook_model, variable_ratio_reward]
+notes: "说服技术学奠基（book 级，D 级设计框架）。B=MAP/触发器分类为公开标准内容，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,24 @@
+# Evidence Package — S31 Harkins, Williams & Burger 2017（Oxford Handbook of Social Influence）
+# 标准格式。access_level 如实标注。
+source_id: S31
+title: "The Oxford Handbook of Social Influence"
+authors: "Stephen G. Harkins; Kipling D. Williams; Jerry M. Burger (Eds.)"
+year: 2017
+journal: Oxford University Press（手册；474 页）
+doi: "无 DOI（手册）"
+url: "https://global.oup.com/academic/product/the-oxford-handbook-of-social-influence-9780199859870"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "手册结构与主题经出版社目录实取：26 章六部分（intrapersonal/interpersonal/intragroup/应用/未来）——社会比较/从众/顺从/服从/社会规范/社会促进/排斥/自我呈现/情绪作为影响/社会认同/去个体化/少数派影响/领导力/抵制影响/回音室；含社会媒体中介影响的新方向"
+research_question: "社会影响研究全景：从众/顺从/服从/少数派影响等经典与现代视角的整合是什么？"
+core_claims:
+  - "社会影响研究复兴：覆盖个体内/人际/群体内三层次 + 影响者与受影响的双方效应 + 经典主题的当代再审视"
+  - "关键章节主题：社会比较（Suls & Wheeler）/从众与分歧/顺从经典与当代回顾（Guadagno）/服从（Burger）/社会规范执行（Nolan）/排斥作为影响工具（Williams 方向）/社会认同与影响（Gaffney & Hogg）/去个体化（Spears）/少数派影响/领导力社会心理学/抵制影响/回音室（Byrne）"
+  - "方向性结论：影响从面对面转向社交媒体中介；抵抗影响与回音室成为当代重点"
+method: "权威手册（26 章，各章由领域领军学者撰写）"
+results: "（权威综述）社会影响研究的当前全景与未来方向"
+limitations: "手册为综述性质；各章证据强度需按具体主题评估"
+boundary_conditions: "适用于社会影响的系统理解；按章节对应具体机制"
+relevant_nodes: [conformity_asch, authority_influence, social_proof, minority_influence, normative_influence, ostracism_effects]
+notes: "社会影响域权威手册（handbook 级）。26 章主题为出版社公开目录实取，未编造。"
+last_verified: "2026-09"

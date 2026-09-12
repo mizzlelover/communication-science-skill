@@ -1,0 +1,25 @@
+# Evidence Package — S214 Godden & Baddeley 1975（潜水员情境依存记忆）
+# 标准格式。2026-09-09 T5。access_level 如实标注。
+source_id: S214
+title: "Context-dependent memory in two natural environments: On land and underwater"
+authors: "Duncan R. Godden; Alan D. Baddeley"
+year: 1975
+journal: British Journal of Psychology, 66(3), 325-331
+doi: "10.1111/j.2044-8295.1975.tb01468.x"
+url: "https://doi.org/10.1111/j.2044-8295.1975.tb01468.x"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心数据经 4 个独立源交叉核实（未取得全文）：①期刊页码与 DOI（BJP 66(3):325-331, 10.1111/j.2044-8295.1975.tb01468.x）经 PubMed 系参考文献与多处综述一致；②实验：深海潜水员在陆上或水下 20 英尺学习 40 词表，4 分钟后在同/异环境自由回忆——匹配环境回忆显著更好；③数字口径（中文教科书转载）：匹配回忆 34.6% vs 不匹配 23.6%；英文科普：水下学-水下测比水下学-陆上测多约 40%；④复制与边界：Murre 2021（R Soc Open Sci 8:200724，16 名潜水员 4 分钟延迟）部分复制（方向一致但更弱）；Smith & Vela 2001（Psychon Bull Rev 8:203-220）环境依存记忆元分析：效应存在但受延迟与情境突显性调节"
+research_question: "提取环境与编码环境匹配是否提升自由回忆？"
+core_claims:
+  - "情境依存记忆（context-dependent memory）：编码与提取环境匹配时自由回忆显著更好（潜水员范式）"
+  - "数字：匹配 34.6% vs 不匹配 23.6%（约多 1/3）；方向在多种情境线索（环境/情绪/药物/语言）中重复"
+  - "机制：编码特异性（Tulving）——环境特征成为记忆痕迹一部分，匹配时提取线索充分"
+  - "边界（现代）：Murre 2021 复制效应更弱；Smith & Vela 2001 元分析显示延迟长、情境不突显时效应缩小——效应真实但条件依赖"
+method: "2×2 现场实验（学习环境×测试环境；潜水员水下/陆上，词表听觉呈现，4 分钟延迟自由回忆）"
+results: "（经典）情境依存记忆的标志性现场实验；为 encoding_specificity 提供最著名的自然情境展示"
+limitations: "未取得全文；样本小（约 16-20 人/组）；海洋环境情境极端突显——普通教室的效应幅度更小且部分复制失败"
+boundary_conditions: "自由回忆强、再认弱；情境突显性（与编码任务相关度）是前提；延迟拉长效应缩小；对『换环境学习更好』的教学建议实为多情境编码策略而非本效应的直接推论"
+relevant_nodes: [encoding_specificity]
+notes: "encoding_specificity 节点『Godden & Baddeley 1975 经典文献，未建包』的建包来源。数字多源一致（34.6/23.6 与 40% 两种口径并记），未编造。"
+last_verified: "2026-09"

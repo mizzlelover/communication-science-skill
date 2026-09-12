@@ -1,0 +1,26 @@
+# Evidence Package — S81 Amy Jo Kim 2000（Community Building on the Web）
+# 标准格式。access_level 如实标注。
+source_id: S81
+title: "Community Building on the Web: Secret Strategies for Successful Online Communities"
+authors: "Amy Jo Kim"
+year: 2000
+journal: Peachpit Press（专著；中文译名《网络社区建设》）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/subject/2139552/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 豆瓣书目页载 Amazon.com Review（九大核心策略构成全书骨架、定期活动策略、Motley Fool 帖子评分系统案例）+ 渠道2 flylib 学术书籍《Trust in Knowledge Management and Systems in Organizations》引用 Kim(2000) 九大设计原则与 Nine Design Strategies 明细表（Purpose/Places/Profiles/Roles/Leadership/Rule/Events/Rituals/Subgroups 各含细节条目）+ 渠道3 doc88 学术论文《虚拟学习社区中的核心—边缘结构分析》(2011) 明确『Kim 认为，社区成员一般会经历访客、新手、常规成员、领袖，再到元老这 5 个连续的发展阶段』+ 渠道4 Guild 官方博客将『Community Member Lifecycle by Amy Jo Kim』列为经典成员生命周期模型+ 渠道5 woshipm 作者访谈（游戏机制：积分/反馈/交换/定制可借鉴于社区设计；曾服务 eBay、EA、There.com、Harmonix/MTV）+ 渠道6 grokipedia 词条（community architecture 概念由 Amy Jo Kim 普及：roles、rituals、progression systems 的有意设计）"
+research_question: "网站运营者如何通过设计让陌生访客成长为社区的活跃成员并持续回访？"
+core_claims:
+  - "网络社群建设有九大设计策略，构成全书骨架：1) define and articulate the community's purpose（使命陈述+鲜明站点个性）；2) build flexible and extensible gathering places；3) create meaningful and evolving member profiles；4) provide a range of roles（给常客更多特权、从内部招募领袖与导师）；5) develop a strong leadership program；6) define a clear-yet-flexible rule（行为准则与升级路径）；7) organize and promote cyclic events（定期主题聚会+社区调查）；8) integrate a community with the real world through rituals（庆祝强化社会身份的事件、承认成员重要人生事件）；9) facilitate member-run subgroups（支持子群组+子群竞赛）（flylib 学术引用表格逐条确认；Amazon Review 确认『Nine core strategies form the foundation』）"
+  - "社区成员经历五阶段连续生命周期：访客（visitor）→ 新手（novice）→ 常规成员（regular）→ 领袖（leader）→ 元老（elder）；设计应让每个阶段的成员都有可见的成长路径与角色（doc88 学术论文直接引述；Roles 策略『Offer increased privileges to regulars / Recruit leaders and mentors from within』与 leadership program 对应中间三阶段的制度化设计）"
+  - "定期事件（events）是社区生活自我组织的骨架：『One advocates the establishment of regular events around which community life can organize itself』（Amazon Review）；Rituals 策略要求把社区与真实世界相连——庆祝强化社会身份的事件、承认个人重要事件（flylib 表）"
+  - "游戏机制与社区设计的共通性：积分、反馈、交换、定制等核心游戏机制可用于设计高参与在线社区；作者自称『消除游戏设计与网页设计的鸿沟』，基于为 eBay、EA、There.com、Harmonix/MTV 等设计经验（woshipm 访谈）"
+  - "社区架构（community architecture）即对角色、仪式与进阶系统的有意设计；现代平台 Stack Overflow 的声望积分/徽章、论坛的导师制均是其设计思想的后续体现（grokipedia 词条）"
+method: "从业者设计框架（D 级）：游戏设计师、社会结构与交互设计师（曾任 SUN 软件工程师/UI 设计师、MTV 制片人），基于为 eBay、EA、There.com 等设计线上社区与游戏的一手经验总结的规范性策略清单"
+results: "（早期经典定位）web 1.0 时代首个系统化的在线社群设计手册；成员生命周期与九大策略成为后续社群运营框架（Guild 生命周期模型、地位系统、新人融入设计）的源头之一"
+limitations: "2000 年前后的案例与技术语境（BBS/论坛时代）；九大策略为经验总结与规范建议，无实证检验；『五阶段』在公开转述中偶被误标为 Lave & Wenger（renrendoc/sohu 类文档），doc88 学术论文明确归于 Kim(2000)，以学术引用为准"
+boundary_conditions: "适用于以『成员持续回访与贡献』为目标的在线社区设计；对算法推荐驱动、无固定成员身份的流量平台需修正"
+relevant_nodes: [sense_of_community, community_boundaries, newcomer_onboarding, community_rituals, status_systems, participation_ladder]
+notes: "从业者设计框架（D 级），如实标注。九大设计策略（含 rituals/events/contests/roles/leadership）与五阶段生命周期（visitor→novice→regular→leader→elder）均经学术引用+书评+中文论文多源交叉实取，未编造。『五阶段术语偶被误标为他人』的来源分歧已在 limitations 说明。"
+last_verified: "2026-09"

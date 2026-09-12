@@ -1,0 +1,23 @@
+# Evidence Package — S235（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S235
+title: 'Why consumers hesitate to pay online: Evidence from online transactions'
+authors: Zongwei Li; Jixiang Liu; Jianing Chen; Yanhui Zhang
+year: 2026
+journal: Australian Journal of Management 51(1):147-173
+doi: 10.1177/03128962241312715
+url: https://journals.sagepub.com/doi/10.1177/03128962241312715
+access_level: abstract_only
+research_status: annotated
+content_obtained: IDEAS/RePEc 摘要逐字实读（2026-09-11）
+research_question: 消费者在线结账犹豫的感知风险机制？
+core_claims:
+- 基于感知风险理论、使用淘宝真实交易数据的 logistic 回归：卖家信用评级（代表卖家风险）对购买犹豫有显著负向影响
+- 订单金额（财务风险）与价格离散（产品风险）正向推高结账犹豫；消费者网购经验起调节作用
+- 异质性：买家设备、卖家平台、性别的作用被检验并排除部分非自愿犹豫干扰
+method: 真实交易数据 + logistic 回归
+limitations: 单一平台（淘宝）结账环节
+boundary_conditions: 电商零售情境；跨境/线下未覆盖
+relevant_nodes:
+- perceived_purchase_risk
+notes: perceived_purchase_risk 一手实证：风险维度（卖家/财务/产品）直接驱动购买犹豫——'决策从选最好退回选最不会错'的风险最小化结构获得交易级数据支持。
+last_verified: 2026-09

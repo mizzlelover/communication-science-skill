@@ -1,0 +1,556 @@
+# perception — 知觉（Perception）：信息被"看成什么"决定它意味着什么
+domain: perception
+nodes:
+- id: gestalt_grouping
+  canonical_name_en: Gestalt Grouping
+  canonical_name_zh: 格式塔分组
+  aliases:
+  - 知觉组织
+  - perceptual organization —— 与 visual_hierarchy 的区别：分组是自动的组织规则，层级是人为设计的注意排序
+  domain: perception
+  definition: 视觉系统依据接近、相似、连续、闭合、共同命运等规则（格式塔学派提出）把离散元素自动组织为整体。组织发生在元素分析之前，整体属性不是部分之和。
+  core_claim: 知觉组织先于与独立于意图：元素一旦满足分组规则，就会被作为单一单元自动加工。
+  mechanism: 从预测加工视角（S10）看，大脑用解释成本最低的结构去解释感觉输入，分组规则正是压缩解释的先验。分组完成后，整体作为单元被流畅加工，加工流畅性随之提升（与 processing_fluency
+    连通），这解释了整齐设计的主观舒适感。
+  causal_chain: 离散元素 → 自动分组规则 → 整体单元 → 流畅加工与整体印象
+  variables:
+    inputs:
+    - 空间接近性
+    - 颜色相似性
+    - 运动一致性
+    - 连续轮廓
+    moderators:
+    - 元素密度
+    - 文化与设计经验
+    - 任务要求
+    mediators:
+    - 知觉组织过程
+    outputs:
+    - 单元感知
+    - 美好感
+    - 信息理解结构
+  evidence:
+    supporting:
+    - Wertheimer 1923 对分组规则的经典系统研究
+    - 格式塔学派的知觉组织研究传统（似动、知觉恒常等）
+    conflicting:
+    - 多规则冲突时由强度与任务决定胜负，规则本身没有固定优先级公式
+    replication:
+    - 分组现象稳健，是知觉心理学的教科书内容
+    meta_analysis: []
+  evidence_grade: A
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 规则相互竞争时，最终组织由相对强度与任务决定
+  - 文化与设计经验调节分组偏好（如阅读方向影响连续性判断）
+  failure_conditions:
+  - 元素差异过大或噪声过高时组织失败
+  - 刻意复杂的设计可阻止分组，制造阅读阻力
+  common_misinterpretations:
+  - 把产品放在一起就等于品牌联合——分组是知觉层现象，不自动产生联想层的品牌联结
+  - 以为分组规则是美学观点——它们是知觉系统的自动加工特性
+  ethical_risks:
+  - 利用视觉捆绑让套餐显得便宜，掩盖单件价格比较
+  examples:
+    original_cases:
+    - S40 用简单原则批评复杂设计的案例（SUCCESs 的 S）
+    research_cases:
+    - Wertheimer 的经典图形：相同圆点因接近或相似而被看成行、列或组
+    modern_cases:
+    - 界面卡片式分组、品牌视觉家族化、社交主页九宫格的排版叙事
+  communication_implications: 版式的分组规则决定受众把哪些信息读成一体；把核心卖点与信任要素组成视觉单元，比逐条罗列更易被整体记忆。
+  community_implications: 社群资料页与活动海报的分组设计决定新成员能否快速读懂这个社群是谁、有什么、怎么参与。
+  content_applications:
+    title: 标题与主图构成一个视觉单元
+    opening: 首屏用接近性与相似性把痛点与方案编为一组
+    visual: 用留白与对齐制造分组边界，代替分割线堆砌
+    body: 同类信息聚类呈现，减少切换成本
+  platform_implications: 平台模板化设计（统一卡片、统一字体）依赖分组规则提升浏览流畅度；同质化模板也压缩了品牌的知觉差异空间（S100 的文化均质化问题）。
+  related_nodes:
+  - visual_hierarchy
+  - figure_ground_separation
+  - processing_fluency
+  - concreteness_in_language
+  - distinctive_brand_assets
+  source_ids:
+  - S10
+  - S72
+  - S40
+  - S182
+  provenance:
+    primary_sources:
+    - S10
+    - S72
+    - S40
+    - S182
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+  culture_moderators:
+  - 文化与设计经验调节分组偏好（如阅读方向影响连续性判断）
+- id: visual_hierarchy
+  canonical_name_en: Visual Hierarchy
+  canonical_name_zh: 视觉层级
+  aliases:
+  - 视觉权重排序 —— 与 gestalt_grouping 的区别：分组决定什么被看成一体，层级决定什么先被看见
+  domain: perception
+  definition: 通过大小、对比、位置、留白等手段控制信息被注意与加工的先后顺序的设计原则。它把注意机制（自下而上显著性加自上而下目标）翻译为可操作的版面语言。
+  core_claim: 版面元素的实际阅读顺序由视觉层级决定，设计意图与实际扫描顺序可以一致也可以错位。
+  mechanism: 视觉显著性决定首次注视落点，自上而下的目标决定后续扫描路径；网页眼动研究记录到 F 形等系统性扫描模式（Nielsen F 形/眼动显著性研究，未建包，EP 待补）。层级错位时，设计者以为重要、用户扫不到的信息等于不存在。
+  causal_chain: 版面属性差异 → 显著性梯度 → 扫描路径排序 → 信息获取顺序
+  variables:
+    inputs:
+    - 字号与字重
+    - 对比度
+    - 位置
+    - 留白
+    - 图像
+    moderators:
+    - 用户任务
+    - 阅读设备
+    - 文化阅读习惯
+    mediators:
+    - 显著性梯度
+    - 扫描路径
+    outputs:
+    - 阅读顺序
+    - 关键信息触达率
+    - 转化路径
+  evidence:
+    supporting:
+    - 网页眼动追踪研究记录的系统性扫描模式（如 F 形模式）（Nielsen F 形眼动研究，未建包，EP 待补）
+    - S72 消费者行为教科书中对注意与版面的基础讨论（S72 EP 仅『知觉过程』薄层，对应章节待补读）
+    conflicting:
+    - 扫描模式依赖任务与版面：强目标用户的扫描更像针对性的锚点搜索而非固定模式
+    replication:
+    - 显著性影响首次注视的结论稳健；具体扫描形态因设备与任务而变
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 依赖用户任务：强目标下层级让位于目标驱动扫描
+  - 移动端与桌面端的层级策略不可直接复用
+  failure_conditions:
+  - 所有元素都突出等于没有层级
+  - 层级与阅读逻辑冲突（视觉先看到次信息）导致理解混乱
+  common_misinterpretations:
+  - 重要就要大——过多的重要项互相抵消，反而拉平层级
+  - 把转化按钮做得最大就提升转化——层级需要服务路径而非局部最优
+  ethical_risks:
+  - 层级操纵：把关键成本信息压到视觉底层（小字服务费、默认勾选项）
+  examples:
+    original_cases:
+    - S72 消费者行为教科书『知觉过程』章节中注意与版面的研究讨论（S71 EP 仅载 STP/4P/CBBE，无广告版面与注意内容，其引用已移除）
+    research_cases:
+    - 眼动实验：修改对比与位置后，关键信息的首次注视率与回忆显著改变
+    modern_cases:
+    - 落地页首屏三段式（痛点—方案—行动）、价格锚点的视觉排布
+  communication_implications: 层级是内容的注意力预算表：先把唯一核心信息做到最高权重，再分配剩余预算，而不是平均用力。
+  community_implications: 社群公告、活动页与新人引导都要有明确的层级，否则新成员的首次触达就迷失在均质信息里。
+  content_applications:
+    title: 标题占最高视觉权重，副标题做第二层
+    visual: 一屏只允许一个显著性峰值
+    body: 用字号阶梯（而非加粗滥用）区分主次
+    cta: 行动按钮用对比色占据层级末端的最高优先
+  platform_implications: 平台信息流模板剥夺了长文的层级控制权，封面与标题成为仅剩的两个层级变量，竞争进一步白热化。
+  related_nodes:
+  - gestalt_grouping
+  - bottom_up_attention_capture
+  - figure_ground_separation
+  - selective_attention
+  - distinctive_brand_assets
+  - category_entry_points
+  source_ids:
+  - S72
+  - S48
+  - S182
+  provenance:
+    primary_sources:
+    - S72
+    - S48
+    - S182
+    last_verified: '2026-09-09'
+    platform_sources:
+    - bilibili:S1
+    - douyin:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - youtube:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: figure_ground_separation
+  canonical_name_en: Figure-Ground Separation
+  canonical_name_zh: 图形-背景分离
+  aliases:
+  - 图底关系
+  - figure-ground —— 与 gestalt_grouping 的区别：分组把元素并为整体，图底把视野切分为主体与语境
+  domain: perception
+  definition: 知觉自动把视野划分为被关注的图形与退居背景的背景，Rubin 的可逆花瓶图形是经典展示（Rubin 1915/1921 经典研究，未建包，EP 待补）。被指定为图形的一侧获得形状、边界与记忆，背景只提供语境。McLuhan（S44）把这一概念引入媒介分析：媒介环境常是不被注意的背景，却持续塑造前景内容。
+  core_claim: 图形与背景的划分不对称且自动：只有成为图形的信息才获得细节表征，背景决定图形的含义。
+  mechanism: 边界归属（border ownership）被知觉系统分配给一侧，图形侧获得更精细的编码资源；背景以氛围与语境的方式参与意义建构但通常不被有意识登记。可逆图形显示归属可以翻转，但任一时刻只能有一个前景。
+  causal_chain: 视野组织 → 边界归属分配 → 图形获得精细编码 → 背景提供语境
+  variables:
+    inputs:
+    - 对比度
+    - 轮廓闭合性
+    - 面积与位置
+    moderators:
+    - 注意分配
+    - 语境提示
+    - 观察意图
+    mediators:
+    - 边界归属过程
+    outputs:
+    - 图形识别
+    - 氛围感知
+    - 记忆内容
+  evidence:
+    supporting:
+    - Rubin 1915 的可逆图形经典研究（Rubin 1915/1921，未建包，EP 待补）
+    - 知觉组织研究传统对边界归属的实验分析
+    conflicting:
+    - 可逆图形在两个解释间振荡，说明分离不是一次性静态决策
+    replication:
+    - 现象稳健，属于知觉心理学的经典结论
+    meta_analysis: []
+  evidence_grade: A
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 清晰的设计意图可控制图形归属，双稳态图形除外
+  - 图形需有足够的对比与闭合轮廓才能脱离背景
+  failure_conditions:
+  - 图形背景对比不足时无法有效分离（伪装效应），信息被语境吞没
+  - 过多前景竞争导致归属混乱
+  common_misinterpretations:
+  - 背景不重要——背景定义图形的含义（场景、氛围、可信度）
+  - 以为用户只看主体——背景的音乐、色调、场景在无意识层持续设定预期
+  ethical_risks:
+  - 把风险信息设计成背景（低对比、模糊、快速闪过）
+  examples:
+    original_cases:
+    - S44 对媒介环境塑造内容的基础论述（S44 EP 实载『媒介即讯息/感知环境』，未直接使用图形-背景框架）
+    research_cases:
+    - Rubin 花瓶：同一图形在不同归属下被报告为花瓶或两张人脸（Rubin 经典实验，未建包）
+    modern_cases:
+    - 短视频的背景音乐与场景氛围塑造同一条口播的观感；直播间布景作为信任的背景层
+  communication_implications: 内容的背景层（音乐、色调、场景）不是装饰，而是意义的隐性作者；换背景等于换语境，同文案观感完全不同。
+  community_implications: 社群的空间设计（群名、头像、公告栏氛围）是成员行为的背景，长期塑造参与基调。
+  content_applications:
+    visual: 用低饱和背景衬托唯一高对比主体
+    opening: 先建立场景背景，再让主体登场，语境先于卖点
+    body: 删掉与主体争夺前景的次级图形
+    title: 标题即图形：保证与背景的对比余量
+  platform_implications: 平台的暗色模式、沉浸式全屏播放重构了所有内容的背景条件，同一素材在不同背景设定下的表现差异巨大。
+  related_nodes:
+  - gestalt_grouping
+  - visual_hierarchy
+  - selective_attention
+  - self_presentation_impression_management
+  source_ids:
+  - S44
+  - S72
+  - S219
+  provenance:
+    primary_sources:
+    - S44
+    - S72
+    - S219
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: facial_attention_priority
+  canonical_name_en: Facial Attention Priority
+  canonical_name_zh: 面孔注意优先
+  aliases:
+  - 面孔偏好
+  - face priority —— 与 bottom_up_attention_capture 的区别：面孔是特化的社会刺激通道，不只是普通的显著刺激
+  domain: perception
+  definition: 面孔在注意与知觉中享有特殊优先级：被更快检测、更久注视（「更快检测」有 S184 正立面孔变化检测实验支撑；「更久注视」需眼动 EP 支撑，未建包），并自动触发社会推断（可信度、支配性、情绪）。婴儿出生后即追踪面孔样构型（新生儿面孔偏好研究，未建包），成人眼动显示画面中的面孔最先被注视。
+  core_claim: 面孔是特权的注意与社会信息通道，其加工有专门机制并独立于一般物体加工。
+  mechanism: 发展研究显示新生儿对面孔样构型有先天追踪倾向（新生儿面孔偏好，未建包，EP 待补）；成人知觉系统有专门的面孔加工区（梭状回面孔区 FFA，未建包，EP 待补）；Todorov 等的研究显示极短时间内即可从面孔形成可信度判断（Todorov
+    快速评价系列，未建包，EP 待补）。面孔优先的社会功能是快速识别与评估同类。
+  causal_chain: 面孔出现 → 优先检测与注视 → 自动社会推断 → 情绪与信任反应
+  variables:
+    inputs:
+    - 面孔出现位置
+    - 表情
+    - 眼神方向
+    - 熟悉度
+    moderators:
+    - 任务的社会相关性
+    - 观察者文化
+    - 面孔与受众的相似性
+    mediators:
+    - 面孔检测机制
+    - 社会推断
+    outputs:
+    - 注视偏好
+    - 信任判断
+    - 情绪感染
+  evidence:
+    supporting:
+    - 新生儿面孔追踪的发展心理学研究（未建包，EP 待补）
+    - 面孔加工专门区（FFA）的神经成像发现（未建包，EP 待补）
+    - Todorov 等对面孔快速社会评价的系列研究（未建包，EP 待补）
+    conflicting:
+    - 优先级不等于好感：表情与可信度线索决定情绪方向；异族面孔存在识别精度差异
+    replication:
+    - 面孔检测优先在眼动、脑成像与发展研究中被多方验证
+    meta_analysis: []
+  evidence_grade: A
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 优先级在社会性任务中最强，纯工具任务（找价格标签）时可让位
+  - 面孔自动触发社会推断，但推断内容受语境与刻板印象调节
+  failure_conditions:
+  - 名人面孔可能盖过信息本身——记住脸忘了产品
+  - 过度使用AI生成面孔引发恐怖谷与信任折扣
+  common_misinterpretations:
+  - 放美女图就能带货——注意被捕获但可能完全不指向产品
+  - 把面孔优先等同于长相决定论——表情、眼神与真实性线索比静态颜值更重要
+  ethical_risks:
+  - 误导性封面人脸（标题党用夸张表情骗点击）
+  - deepfake 滥用面孔信任；未经授权的名人面孔商用
+  examples:
+    original_cases:
+    - S72 消费者行为教科书『知觉过程』章节对广告中面孔效应的讨论
+    research_cases:
+    - 眼动实验：多人场景中面孔获得的首次注视与总注视时长系统性高于其他区域（眼动 EP 未建包）
+    modern_cases:
+    - 短视频封面真人表情成为点击率共识；社群运营中创始人头像对信任的铺垫作用
+  communication_implications: 真实面孔是最低成本的信任与注意资产；眼神方向还能引导注意（看向文字或产品），实现注意力的二级引导。
+  community_implications: 社群的真实人脸露出（组织者头像、活动合影）显著降低新人的进入戒备。
+  content_applications:
+    visual: 封面用单张真实面孔加明确眼神方向
+    opening: 开场三秒出现说话人面部特写，建立对象感
+    cta: 结尾用面孔加眼神指向行动按钮或二维码
+  platform_implications: 平台以人脸检测优化封面裁切，算法对含人脸内容的初始曝光存在事实上的偏好；同时合成面孔泛滥正在折损面孔信任。
+  related_nodes:
+  - bottom_up_attention_capture
+  - selective_attention
+  - parasocial_relationship
+  - authenticity_perception
+  - mere_exposure
+  source_ids:
+  - S72
+  - S184
+  provenance:
+    primary_sources:
+    - S72
+    - S184
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: color_emotion_associations
+  canonical_name_en: Color-Emotion Associations
+  canonical_name_zh: 色彩-情绪联想
+  aliases:
+  - 颜色心理学
+  - color psychology —— 注意：网传的普适颜色-情绪对照表无稳定证据，本节点强调联想的文化与语境依赖性
+  domain: perception
+  definition: 特定颜色与情绪或意义之间存在联想倾向（红与唤醒紧迫、蓝与冷静信任），但这些联想部分是习得的，跨文化差异显著，且强烈依赖语境。不存在普适的颜色心理学对照表。
+  core_claim: 颜色-情绪联想真实存在但主要由文化与语境塑造，脱离语境与人群谈颜色效应是伪规律。
+  mechanism: 构造情绪理论（S06）提示情绪类别是建构的，颜色意义经由语言、仪式与个体经验习得；红与血、火的自然统计规律提供底层唤醒倾向（血火统计论断，EP 待补，未建包），文化编码（东方红吉庆、西方红警示）在其上分层。同一红色在促销页与医院页唤起完全不同的解释。
+  causal_chain: 颜色输入 → 自然关联与文化编码叠加 → 语境解释 → 情绪与意义反应
+  variables:
+    inputs:
+    - 色相
+    - 饱和度
+    - 明度
+    moderators:
+    - 文化背景
+    - 品类语境
+    - 个体经验
+    - 年龄与性别
+    mediators:
+    - 习得联想
+    - 唤醒水平
+    outputs:
+    - 情绪反应
+    - 品牌联想
+    - 行为倾向
+  evidence:
+    supporting:
+    - 跨文化颜色-情绪匹配研究显示红等颜色的文化分歧
+    - Elliot 等关于红色与成就、吸引的系列实验
+    - S06 对情绪建构的解释框架
+    conflicting:
+    - 情境效应不稳定：蓝等于信任在金融之外的品类未必成立；部分颜色效应在不同测量方式间不一致
+    replication:
+    - 基础唤醒差异有一定复制；具体语义联想的复制波动大
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 效应强烈依赖品类语境、文化与个体经验
+  - 作为品牌资产的长期颜色一致性比单次颜色心理效应更可靠
+  failure_conditions:
+  - 跨文化投放直接套用本国色彩语义（白色在婚庆与丧仪中的相反含义）
+  - 把颜色当独立变量脱离整体设计使用
+  common_misinterpretations:
+  - 绿色按钮提高转化率的伪精确断言——脱离 A/B 语境的普适结论不可信
+  - 以为颜色有固定的情绪密码表——同一颜色在不同文化中含义相反
+  ethical_risks:
+  - 用红色倒计时与紧迫配色制造虚假稀缺感
+  examples:
+    original_cases:
+    - S72 消费者行为教科书对色彩在营销中应用与局限的讨论（S72 EP 无色彩内容，对应章节待补读）
+    research_cases:
+    - 跨文化比较中红白颜色的相反语义编码；红色对绩效任务的唤醒效应实验
+    modern_cases:
+    - 春节红包与西方促销红标的语义差异；支付宝与 PayPal 的蓝色信任资产
+  communication_implications: 颜色是语境变量而非开关：先确认目标人群的文化编码与使用场景，再让颜色服务于定位的一致性。
+  community_implications: 社群视觉（主题色、勋章、等级色）一旦形成文化资产就应保持稳定，颜色频繁更换等于重置成员的意义系统。
+  content_applications:
+    visual: 主色只承载品牌识别，情绪唤起交给内容与节奏
+    title: 促销场景用暖色高饱和，知识场景用低饱和冷调
+    cta: 行动按钮与背景保持足够对比，勿迷信特定色相
+  platform_implications: 平台的品牌色本身是巨大的联想资产（如各平台开屏色的条件反射），同时模板化配色正在压缩中小品牌的颜色识别空间。
+  related_nodes:
+  - emotional_arousal
+  - mood_congruence
+  - affect_heuristic
+  - visual_hierarchy
+  - distinctive_brand_assets
+  - social_identity_theory
+  source_ids:
+  - S72
+  - S06
+  - S183
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Barrett 2017（S06，情绪构建与颜色-情绪学习）+ Solomon 2017（S72，色彩营销联想；EP 无色彩内容待补读）+ Elliot
+      & Maier 2014（S183，红色与成就/吸引的一手综述）
+    effect_size: 颜色-情绪联想存在但弱于直觉（文化习得，方向性数据）
+    replication_status: 颜色-情绪关联跨文化有差异；效应受语境/明度调制
+    context_dependency: 文化/语境/亮度-饱和度调制；避免迷信单一色相
+    downgrade_upgrade_reason: 2026-09 实取 S06 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S06
+    - S183
+    supporting_evidence:
+    - S72
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-029
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+  culture_moderators:
+  - 效应强烈依赖品类语境、文化与个体经验
+  - 跨文化投放直接套用本国色彩语义（白色在婚庆与丧仪中的相反含义）
+  - 以为颜色有固定的情绪密码表——同一颜色在不同文化中含义相反
+- id: mere_exposure
+  canonical_name_en: Mere Exposure Effect
+  canonical_name_zh: 单纯曝光效应
+  aliases:
+  - 曝光效应
+  - 多看效应
+  - familiarity-liking —— 与 fluency_truth_effect 的区别：本节点是好感层效应，后者是真值判断层效应；两者共享流畅性机制
+  domain: perception
+  definition: 重复接触一个刺激即可提升对它的好感，无需任何内容学习（Zajonc 1968 提出）。重复降低加工不确定性，产生熟悉感，熟悉感被体验为喜欢。
+  core_claim: 重复暴露本身足以提高偏好，情感反应可以先于并独立于认知评估。
+  mechanism: 重复提升知觉流畅性，流畅体验被误归因为对刺激本身的好感（与 processing_fluency 连通）；Zajonc 与 Kunst-Wilson 1980 的阈下重复研究显示暴露甚至可在意识外提升偏好。后续研究（Bornstein
+    的综述与元分析）支持效应稳健，但发现重复强度呈倒 U：过度重复导致厌倦与损耗。
+  causal_chain: 重复暴露 → 知觉流畅性提升 → 误归因为好感 → 偏好上升（过量则衰减）
+  variables:
+    inputs:
+    - 暴露频次
+    - 暴露情境多样性
+    moderators:
+    - 刺激初始效价
+    - 重复间隔
+    - 受众卷入度
+    mediators:
+    - 知觉流畅性
+    - 熟悉感
+    outputs:
+    - 好感度
+    - 品牌回忆
+    - 选择倾向
+  evidence:
+    supporting:
+    - Zajonc 1968 的系列实验；Kunst-Wilson 与 Zajonc 1980 的阈下重复研究
+    - Bornstein 对单纯曝光研究的综述与元分析
+    - S76 强调 reach 与持续触达对品牌成长的证据基础
+    conflicting:
+    - 初始为负面的刺激重复后可能更负面；过度重复产生广告疲劳
+    replication:
+    - 效应被多类刺激（无意义符号、汉字、面孔、旋律）广泛复制，是确凿度最高的心理效应之一
+    meta_analysis:
+    - 元分析支持平均正效应，同时显示重复强度存在最优点（单调重复会衰减）
+  evidence_grade: B+
+  boundary_conditions:
+  - 初始中性或略正面的刺激最有效
+  - 中低频重复加多情境变化优于高频单一情境轰炸
+  failure_conditions:
+  - 高频轰炸导致 wear-out 与反感
+  - 受众已对品牌有强负面印象时，重复强化负面
+  common_misinterpretations:
+  - 刷屏等于品牌建设——没有差异与情境变化的重复产生的是厌倦
+  - 把曝光量当唯一目标——曝光需与记忆结构与购买入口配合
+  ethical_risks:
+  - 用重复制造虚假熟悉冒充可信（熟脸骗局、山寨品牌蹭熟悉感）
+  examples:
+    original_cases:
+    - S76 How Brands Grow 以大样本营销数据支持持续触达优先于精细化定向
+    research_cases:
+    - 无意义符号与陌生面孔的重复偏好实验：仅重复即可提升好感评分
+    modern_cases:
+    - 洗脑广告歌的重复策略；平台信息流的频次控制与疲劳度模型
+  communication_implications: 让品牌以中频、多情境、可识别的方式反复出现，比单条爆款更重要；可识别资产让重复累积为记忆而非噪音。
+  community_implications: 社群的固定栏目与仪式（每周固定活动）本质是制度化的单纯曝光，稳定重复塑造归属感。
+  content_applications:
+    title: 系列化内容用固定视觉钩子（同款封面版式）
+    body: 核心口号与视觉资产在多情境中重复而非同一广告反复投
+    cta: 把品牌名自然嵌入价值内容，提高无压力曝光频次
+  platform_implications: 算法的频次控制（frequency capping）正是在工程化倒 U 曲线；跨平台分散投放改变了重复的情境多样性条件。
+  related_nodes:
+  - mental_availability
+  - processing_fluency
+  - fluency_truth_effect
+  - distinctive_brand_assets
+  - category_entry_points
+  - double_jeopardy_law
+  - hedonic_adaptation
+  conflicting_nodes: []
+  source_ids:
+  - S76
+  - S72
+  - S111
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Bornstein 1989 meta（S111，原文摘要被拦截但有一手佐证链）+ Bornstein & D'Agostino 1992 阈下实验
+    effect_size: 基础效应稳健；阈下知觉刺激效应更大
+    replication_status: meta 级稳定；单调重复衰减（boredom 限制条件）
+    context_dependency: 效应依赖知觉水平与刺激类型；单调重复会衰减
+    downgrade_upgrade_reason: 2026-09 补充一手佐证（S111），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED；2026-09-09 反向审计由
+      A- 降为 B+：Zajonc 1968/Kunst-Wilson & Zajonc 1980 实验未建包，S111 仅摘要级（abstract_only），待建 EP 后回升
+  provenance:
+    primary_sources:
+    - S111
+    supporting_evidence:
+    - S72
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-001
+    - CASE-BRD-007
+    - CASE-BRD-018
+    - CASE-BRD-029
+    - CASE-CNT-002
+    - CASE-CNT-010
+    - CASE-CNT-016
+    - CASE-CNT-030
+    - CASE-CRS-002
+    - CASE-CRS-018
+    - CASE-GRW-007
+    - CASE-GRW-010
+    - CASE-GRW-020
+    platform_sources:
+    - bilibili:S1
+    - douyin:S1
+    - douyin:S2
+    - generic:S1
+    - generic:S2
+    - generic:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long

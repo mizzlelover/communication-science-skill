@@ -1,0 +1,175 @@
+platform_name: 知乎（Zhihu）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：产品形态（问答结构、话题体系、热榜、盐选）为公开可见规则；
+  回答排序与推荐权重为行业共识（官方未完全公开）。
+  社区治理与盐选投稿机制已联网核验《知乎原则》及知乎官方发布内容（2026-09 实取），
+  认证/冒充治理与盐选投稿路径获官方条文佐证；回答排序权重官方仍未公开。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {source: "《知乎原则》（社区管理规定） https://www2.zhihu.com/jubao", source_owner: "知乎", source_type: official, claim_supported: "违规受理范围、不友善行为界定、垃圾广告与恶意行为（含冒充他人）治理及处置措施", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "知乎官方账号「小知」《「展开讲讲」友善沟通，好好说话》 https://zhuanlan.zhihu.com/p/454441032", source_owner: "知乎", source_type: official, claim_supported: "不友善内容严格禁止与不鼓励清单、处置方式、创作者保护计划", published_date: "2022-01（约）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "知乎官方《故事创作者直通车第三期：盐选专栏如何投稿，录用概率高？》 https://zhuanlan.zhihu.com/p/368789315", source_owner: "知乎", source_type: official, claim_supported: "盐选作者平台投稿（www.zhihu.com/creator-salt/welfare）与回答投稿两条官方路径、20个工作日反馈", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "回答（问答主体形态）"
+  - "提问"
+  - "文章（专栏长文）"
+  - "想法（短内容）"
+  - "视频"
+  - "盐选专栏（付费内容，含故事）"
+
+dominant_user_intent:
+  - "主动求解（问题驱动：'怎么办''怎么看''哪个好'）"
+  - "深度阅读（长文容忍度全平台最高）"
+  - "比较决策（多答案对照形成判断）"
+
+distribution_model: >-
+  问题页分发+搜索为主，推荐流为辅：回答的流量由"问题本身的长期搜索需求"
+  决定——选对问题的价值超过写好回答的一半 [industry_consensus]；
+  关注分发与热榜提供补充流量 [official_rule-产品存在]。
+
+recommendation_model: >-
+  回答排序=用户投票/互动+算法混合 [industry_consensus-机制方向，
+  具体权重不公开]；新回答在问题页的位置随互动动态变化；
+  推荐流按兴趣标签分发问题与回答。
+
+social_graph_characteristics: >-
+  专业身份关系：关注答主但不强依赖关系分发；认证体系（职业/学历认证）
+  与创作者徽章构成可信度基础设施 [official_rule-产品存在]；
+  "谢邀"文化反映专业主义的社区规范。
+
+content_lifecycle: >-
+  全平台最长尾：问题页常年被搜索唤醒，老回答数年后仍持续获得流量与转化
+  [industry_consensus]——知乎是"内容资产"属性最强的中文平台；
+  热榜流量则是脉冲式（小时级）。
+
+primary_entry_points:
+  - "首页推荐流"
+  - "搜索（站内+外部搜索引擎导入）"
+  - "热榜"
+  - "问题页"
+  - "关注动态"
+
+attention_environment: >-
+  目的性阅读环境：用户带着问题来，愿意读 3000 字长文——
+  与信息流平台的 3 秒决策完全相反；竞争发生在"答案排序位置"与"首句留人"。
+  [industry_consensus-行为观察]
+
+user_behavior: >-
+  先看高赞再看最新，习惯在多答案间比较；
+  对"编故事"高度警觉（平台多年治理带来的集体免疫 [industry_consensus]）；
+  收藏夹文化成熟（工具化沉淀）。
+
+interaction_signals:
+  - "赞同（赞成票）：核心认可信号，影响排序 [official_rule-排序机制存在，权重不公开]"
+  - "喜欢/收藏：态度与工具价值分层 [industry_consensus-行为观察]"
+  - "评论：争论与补充，争论带来热度也带来立场风险 [industry_consensus-行为观察]"
+  - "分享：站外引用（截图传播到微信生态是常见形态 [industry_consensus]）"
+  - "关注：追答主后续输出 [industry_consensus-行为观察]"
+  - "专业认可徽章：垂类可信度加权 [official_rule-产品存在]"
+
+sharing_mechanism: >-
+  站内分享顺畅；站外传播常以"截图+微信"形态发生（长图段落被摘录转引）；
+  知乎回答在搜索引擎与微信搜一搜中的权重较高 [industry_consensus]，
+  外部搜索导入是重要流量来源。
+
+search_mechanism: >-
+  强 SEO 属性：问题标题即搜索词，回答参与站内与外部搜索引擎排名
+  [industry_consensus]；"选择长期有搜索量的问题回答"是长尾策略的核心
+  （category_entry_points）。
+
+community_mechanism: >-
+  话题广场+圆桌+专业认证构成知识社区结构；
+  答主的专业身份是社区货币（credentialing_symbols）；
+  盐选故事与知识付费构成商业层；社区治理（折叠/反作弊）严格 [official_rule-治理存在]。
+
+algorithmic_features:
+  - "回答排序（投票+算法混合）[industry_consensus]"
+  - "热榜（实时热点聚合）[official_rule-产品存在]"
+  - "推荐流兴趣分发 [industry_consensus]"
+  - "瓦力反作弊/折叠治理 [official_rule-产品存在]"
+
+content_constraints:
+  - "[industry_consensus] 回答与文章无显著字数硬上限（长文自由），以平台最新公告为准"
+  - "[industry_consensus] 问题标题有长度限制（具体数值不引证，以平台最新公告为准）"
+  - "[official_rule] 医疗/法律/金融等领域内容有专项规范与资质要求（以最新规则为准）"
+
+title_role: >-
+  问题标题由提问者决定，答主通常不可修改（可建议编辑 [industry_consensus]）——
+  答主的"标题"职责转移到开头首句；回答者要顺着问题标题的承诺展开，
+  答非所问会被点踩。
+
+cover_role: >-
+  弱角色：文字为主平台，回答默认无封面；文章/视频需封面但点击权重低于
+  视觉平台——封面只需合格，无需惊艳。[industry_consensus-产品形态+行为观察]
+
+opening_role: >-
+  极重：首句决定"有没有料"的判断——"先说结论"是社区广泛认可的开场规范
+  [industry_consensus]；亲身经历式开头（叙事钩子）同样常见有效；
+  长答案需小标题分节维持注意（attention_capacity_limits）。
+
+tag_role: >-
+  话题绑定决定问题分类与推荐路径 [official_rule-产品机制]；
+  添加/编辑话题是社区治理行为，绑定错误话题会损失目标流量。
+
+comment_role: >-
+  评论区是争论现场：抬杠、补充、站队并存；"评论区比回答精彩"是常见现象；
+  答主回复争论的姿态影响围观者的可信度判断（第三方观察效应 [industry_consensus]）。
+
+follow_role: >-
+  关注答主=追其回答与文章；粉丝价值在专业信誉复利——
+  高信誉账号的新回答获得更高的初始信任与排序加成 [industry_consensus]。
+
+risk_factors:
+  - "[industry_consensus] 编故事透支信任：虚构经历被拆穿后账号可信度崩塌（平台治理+用户免疫双重惩罚）"
+  - "[industry_consensus] 软广侵蚀口碑：植入式营销被社区识破的反噬烈度高"
+  - "[official_rule] 垂直领域资质要求（医疗/金融等，以最新规则为准）"
+  - "[industry_consensus] 热榜流量的情绪化：蹭热点带立场带来短期流量与长期站队标签"
+
+known_platform_patterns:
+  - pattern: "先结论后论证（总-分-证据结构）"
+    mechanism_links: [processing_fluency, gist_vs_verbatim_memory, central_route_processing]
+    fact_type: industry_consensus
+    note: "目的性读者先要答案再要论证；结论前置同时服务快速扫读者与深读者。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "专业身份前置（认证/从业经历开头）"
+    mechanism_links: [credentialing_symbols, authority_influence, source_credibility_model]
+    fact_type: industry_consensus
+    note: "冒充他人身份属违规、伪造职业认证受处置为官方规则 [S1：知乎原则]；'从业者声明同时提供权威性与透明度'的行为判断为共识层，伪造成分另触发社区反噬。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "亲身经历叙事（第一人称故事化回答）"
+    mechanism_links: [narrative_transportation, story_character_identification, anecdote_vs_statistics]
+    fact_type: industry_consensus
+    note: "故事降低防御并制造代入；边界：故事必须与数据/逻辑结合，纯故事在知乎的'讲逻辑'规范下易被质疑（anecdote_vs_statistics）。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "长尾选题——回答有持续搜索量的问题"
+    mechanism_links: [answer_engine_visibility, long_tail_demand, category_entry_points]
+    fact_type: industry_consensus
+    note: "选问题的本质是选搜索需求：老问题的长尾流量远超热榜脉冲的短期曝光。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "数据+反直觉观点制造高赞"
+    mechanism_links: [schema_violation, prediction_error, specificity_effect]
+    fact_type: industry_consensus
+    note: "反常识结论+具体数据形成认知冲击；边界：为反而反的伪反直觉会被高赞回答纠错反杀。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "多答案竞争下的'补充式'定位"
+    mechanism_links: [von_restorff_effect, positioning_mechanism]
+    fact_type: industry_consensus
+    note: "在高赞回答已经覆盖主流观点时，提供差异化视角/信息增量的回答更易被记住与投票。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+
+confidence: medium

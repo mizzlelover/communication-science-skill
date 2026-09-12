@@ -1,0 +1,25 @@
+# Evidence Package — S57 Christakis & Fowler 2009（Connected）
+# 标准格式。access_level 如实标注。
+source_id: S57
+title: "Connected: The Surprising Power of Our Social Networks and How They Shape Our Lives"
+authors: "Nicholas A. Christakis; James H. Fowler"
+year: 2009
+journal: Little, Brown（专著）
+doi: "无 DOI（专著）"
+url: "https://wiki.mbalib.com/wiki/%E4%B8%89%E5%BA%A6%E5%BD%B1%E5%93%8D%E5%8A%9B"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：MBA 智库词条（三度影响力原则/强连接引发行为 vs 弱连接传递信息/三原因）+ 哈佛杂志文章（作者 TED 摘要/肥胖 57%/25%/三度衰减）+ 维数统计方法论文（三度规则三种解读/方法学挑战）+ 综述（同质性 vs 传染争论/后续共识）"
+research_question: "社会网络如何影响我们的健康、情绪与行为？影响力能传播多远？"
+core_claims:
+  - "三度影响力规则：行为/特质在社交网络中传播至三度（朋友的朋友的朋友），超过三度效应统计上消失——强连接引发行为，弱连接传递信息"
+  - "标志证据（Framingham 32 年队列）：朋友肥胖使你肥胖风险 +57%、朋友的朋友 +20%、三度 +10%；幸福感传播 +15%；吸烟戒断/投票/离婚等均有三度模式"
+  - "网络放大原则：社会网络放大任何被投入其中的东西（『你播种什么网络就放大什么』）"
+  - "方法学争论：同质性（homophily）与共享环境暴露可能解释部分观察；后续更严格识别（随机网络干预/自然实验）确认行为确实传播，但原始估计可能高估纯传染效应"
+method: "Framingham Heart Study 32 年纵向队列社会网络分析 + 网络科学建模"
+results: "（实证+理论）三度影响力假说成为网络科学与社会传播的著名框架（伴随后续方法学修正）"
+limitations: "原始分析被批评未充分控制同质性/共同环境（Lyons 等）；三度规则为统计模式而非因果铁律——节点保留分级争议"
+boundary_conditions: "强连接网络环境；效应为统计模式、非确定性；需与其他机制（同质性）区分"
+relevant_nodes: [network_exposure_effects, emotional_contagion, social_reinforcement]
+notes: "network_exposure_effects 的配套专著来源（book 级）。57%/25%/10% 与 +15% 为公开数据，未编造；如实保留方法学争议。"
+last_verified: "2026-09"

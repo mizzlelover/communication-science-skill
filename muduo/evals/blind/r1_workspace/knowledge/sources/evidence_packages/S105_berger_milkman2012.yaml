@@ -1,0 +1,26 @@
+# Evidence Package — S105 Berger & Milkman 2012
+# 标准格式。access_level 如实标注。
+source_id: S105
+title: "What Makes Online Content Viral?"
+authors: "Jonah Berger; Katherine L. Milkman"
+year: 2012
+journal: Journal of Marketing Research 49(2), 192-205
+doi: "10.1509/jmr.10.0353"
+url: "https://journals.sagepub.com/doi/full/10.1509/jmr.10.0353"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "摘要全文（SAGE）+ 作者 2013 年 GfK Marketing Intelligence Review 通俗版全文（ProQuest 收录，含引言/方法/结果论述正文片段）"
+research_question: "为什么某些在线内容（广告/视频/新闻）比其他内容更具病毒性？情绪如何驱动分享？"
+core_claims:
+  - "积极内容比消极内容更具病毒性，但情绪与分享的关系超越效价本身"
+  - "生理唤醒（arousal）部分驱动病毒性：高唤醒积极（敬畏 awe）或高唤醒消极（愤怒、焦虑）内容更易传播"
+  - "低唤醒/去激活情绪（如悲伤）的内容传播更少"
+  - "在控制意外性、趣味性、实用价值（均正向关联病毒性）及外部注意力驱动（首页显著位置）后结果依然成立"
+  - "实验进一步证明特定情绪对传播的因果影响，并由激活水平驱动"
+method: "三个月的纽约时报全部文章数据（most-emailed 榜单）+ 情绪编码 + 控制变量回归；补充实验操纵特定情绪验证因果"
+results: "高唤醒情绪（敬畏/愤怒/焦虑）促进分享；悲伤等低唤醒情绪抑制分享；实用/有趣/意外亦正向关联"
+limitations: "NYT 文本类内容为主；情绪由文本编码推断；实验为实验室情境"
+boundary_conditions: "适用于在线新闻/文章类文本内容；情绪唤醒维度（而非单纯效价）是分享的关键驱动"
+relevant_nodes: [stepps_sharing_framework, discrete_emotion_sharing_profiles, emotional_arousal, word_of_mouth_drivers]
+notes: "JMR 原文订阅受限；已通过作者通俗版（GfK 2013，作者亲述方法/结果）补足正文级信息。未编造效应量。"
+last_verified: "2026-09"

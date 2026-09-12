@@ -1,0 +1,25 @@
+# Evidence Package — S230（2026-09-11 第二轮一手实读建包；逐字实读来源见 content_obtained）
+source_id: S230
+title: 'Creating Social Contagion Through Viral Product Design: A Randomized Trial of Peer Influence in
+  Networks'
+authors: Sinan Aral; Dylan Walker
+year: 2011
+journal: Management Science 57(9):1623-1639
+doi: 10.1287/mnsc.1110.1421
+url: https://doi.org/10.1287/mnsc.1110.1421
+access_level: abstract_only
+research_status: annotated
+content_obtained: 完整摘要逐字实读（2026-09-11，上海财经大学学术通讯转载页含全文摘要；DOI 与页码经多源引文核对）
+research_question: 企业能否通过把病毒特征设计进产品来制造口碑式同伴影响与社会传染？
+core_claims:
+- 随机现场实验（Facebook 9,687 名实验用户的 140 万好友）：病毒特征产生可计量识别的同伴影响与社会传染效应
+- 被动广播型病毒特征使同伴影响/传染提升 246%；加入主动个性化特征仅再提升 98%
+- 主动个性化消息单条更有效且与更高参与、持续使用相关，但被动广播使用频次更高、网络内总采用更多
+method: 随机现场实验（Facebook 应用，四种病毒特征设计的系统操纵）
+limitations: 单一 Facebook 应用情境；产品品类特定
+boundary_conditions: 特征设计×使用频次的组合决定总传染量；单条效力与总量存在权衡
+relevant_nodes:
+- viral_coefficient
+notes: viral_coefficient 一手实证（'产品内建邀请机制可因果地制造同伴传染'）；K>1 阈值判据本身仍为从业者经验——节点 D→C 升级依据（有实验研究依据，情境有限）。真实数字
+  1.4M/9,687/246%/98%。
+last_verified: 2026-09

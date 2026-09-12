@@ -1,0 +1,27 @@
+# Evidence Package — S74 Aaker 1996（Building Strong Brands）
+# 标准格式。access_level 如实标注。
+source_id: S74
+title: "Building Strong Brands"
+authors: "David A. Aaker"
+year: 1996
+journal: The Free Press（专著；1995 年 12 月首发，多数学术文献引用 1996 年版）
+doi: "无 DOI（专著）"
+url: "https://www.amazon.com/gp/aw/d/B005O315Z2/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：MBA智库百科『阿卡模型』（品牌资产五要素 + 品牌身份 4 象限 12 维 + 核心/延伸身份）+ Amazon 出版方书评（brand equity ten、brand identity 与 brand image 之辨、brand-as-person/organization/symbol 视角、brand system 管理）+ 豆瓣内容简介（同源书评全文中译 + 作者简介）+ Markeview 品牌资产页（Aaker 五支柱详解：品牌认知/感知质量/品牌联想/品牌忠诚/专有资产，含与 Keller CBBE 对比）+ StudyRaid MBA 课程（Aaker 五类核心资产定义 + CBBE 对比）+ HowBrandsAreBuilt（Aaker 品牌识别模型详解：核心/延伸识别要素）+ SmartInsights（品牌识别 4 视角 12 维清单）+ Berkeley Haas 官方教师页（《Building Strong Brands》1995，Aaker Model 被数百家企业使用）"
+research_question: "强势品牌如何被创建、测量并长期管理？品牌资产由哪些要素构成？"
+core_claims:
+  - "品牌资产 = 联结于品牌名称与符号的资产与负债集合，增加或减少产品/服务提供给公司与顾客的价值；资产可正可负（Aaker 定义，Markeview、StudyRaid、wiki.mbalib 多源一致）"
+  - "品牌资产五大类：品牌忠诚、品牌认知（知名度）、感知质量、品牌联想、其他专有资产（专利、商标、渠道关系）；框架适用于战略规划与资产评估（wiki.mbalib、Markeview、StudyRaid 一致）"
+  - "品牌识别系统（Aaker Model）：品牌身份由 4 视角 12 维构成——品牌作为产品（产品范围/属性/质量-价值/使用/用户/原产地）、品牌作为组织（组织属性/本地与全球）、品牌作为人（品牌人格/品牌-客户关系）、品牌作为符号（视觉隐喻/品牌遗产）（wiki.mbalib、SmartInsights、HowBrandsAreBuilt 一致）"
+  - "核心身份 vs 延伸身份：核心身份是品牌中心与永恒本质，进入新市场/新产品时保持稳定；延伸身份提供纹理与完整性，随时间可能升为核心（SmartInsights、wiki.mbalib、HowBrandsAreBuilt 一致）"
+  - "品牌身份（strategy 想要创造的品牌形象）与品牌形象（what we really were）须区分；品牌位置（brand position）是身份中主动沟通的部分；品牌系统（brand system：交织重叠的品牌与子品牌网络）需管理以获得清晰与协同；并引入 Brand Equity Ten 十项指标跨产品与市场测量追踪品牌资产（Amazon 出版方书评 + 豆瓣）"
+  - "打破'只聚焦品牌属性'陷阱：考虑情感利益与自我表达利益，引入品牌-人、品牌-组织、品牌-符号三视角；案例涵盖 Saturn、GE、Kodak、Healthy Choice、McDonald's（Amazon 出版方书评 + 豆瓣）"
+method: "品牌资产与品牌管理专著（管理案例 + 框架建构，品牌三部曲之二：前承 Managing Brand Equity 1991）"
+results: "（奠基框架）'品牌资产鼻祖'作品，Aaker Model 被数百家企业用于构建与管理品牌（Berkeley Haas 官方页）"
+limitations: "实践框架 + 案例复盘，非严格对照实验；品牌资产测量维度存在实践争论"
+boundary_conditions: "适用于品牌资产评估、身份构建与品牌系统管理；五要素框架偏资产评估视角，消费者心理机制需结合 CBBE 等模型"
+relevant_nodes: [distinctive_brand_assets, mental_availability]
+notes: "品牌资产奠基著作（品牌三部曲之二）。五要素/品牌身份 4 视角 12 维/核心-延伸身份/品牌系统为公开标准内容，经 8 个独立渠道交叉确认，未编造。首发 1995-12（Free Press），学术引用常标 1996。"
+last_verified: "2026-09"

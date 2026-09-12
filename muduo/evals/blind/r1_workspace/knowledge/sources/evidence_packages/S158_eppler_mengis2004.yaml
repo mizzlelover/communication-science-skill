@@ -1,0 +1,24 @@
+# Evidence Package — S158 Eppler & Mengis 2004（Information Overload）
+# 标准格式。access_level 如实标注。
+source_id: S158
+title: "The Concept of Information Overload: A Review of Literature from Organization Science, Accounting, Marketing, MIS, and Related Disciplines"
+authors: "Martin J. Eppler; Jeanne Mengis"
+year: 2004
+journal: "The Information Society 20(5): 325-344"
+doi: "10.1080/01972240490507974"
+url: "https://pascal-francis.inist.fr/vibad/index.php?action=getRecordDetail&idt=16179096"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "正文未直接获取。渠道1：PASCAL/INIST 数据库记录（期刊元数据：The Information Society 2004, Vol 20, Num 5, pp 325-344；作者机构 University of Lugano 卢加诺大学；关键词 causes/definition/management/influence）；渠道2：ebrary.net《Information overload theory》（Eppler & Mengis 2004 识别信息过载五类原因）；渠道3：IGI Global 章节 Batista & Marques《An Overview on Information and Communication Overload》（信息过载研究=原因、后果、对策三部分）；渠道4：book118 中文综述《为什么信息超载损害决策？》（定义与倒 U 关系）；渠道5：CSDN 综述（Rötzel 文献计量：Eppler & Mengis 将信息过载研究组织为 原因→症状→对策→原因 的循环框架）。"
+research_question: "信息过载概念如何跨学科界定？其前因（原因）、后果（症状）与应对（对策）分别是什么？"
+core_claims:
+  - "信息过载=需要处理的信息量超过个体/组织信息加工能力的状态，导致决策质量下降、决策时间延长、满意度降低与压力（book118 中文综述引 Eppler & Mengis 2004 定义）"
+  - "原因分五类：组织设计、信息本身的性质（模糊性/新颖性/复杂性）、处理信息的人（态度/资质/经验）、任务与流程（发生频率等）、信息技术的使用或误用（如互联网与 email）（ebrary.net 对 Eppler & Mengis 五类原因的归纳）"
+  - "研究框架按 原因→症状→对策→（再作用于）原因 的循环组织；信息量与决策绩效呈倒 U 形关系，超阈值后更多信息反而损害绩效（CSDN 综述；book118 综述；ebrary.net 引 Schroder, Driver & Streufert 1967 倒 U 模型）"
+method: "跨学科文献综述（组织科学、会计、营销、MIS 及相关学科），整合信息过载的定义、前因、后果与应对措施并构建概念框架"
+results: "给出信息过载的跨学科定义、五类原因、症状（决策质量降低/时间延长/满意度降低/慢性压力）与对策框架；倒 U 关系成为领域共识；成为信息过载研究被引最多的奠基综述之一（ebrary.net；book118 综述）"
+limitations: "综述论文，无一手实验；跨学科整合以广度换深度；后续研究指出领域缺乏统一操作性定义，且对'信息过载损害决策的内部机制'（注意力资源 vs 工作记忆资源）描述笼统（book118 综述）"
+boundary_conditions: "组织决策与信息管理情境为主；有高质量聚合/过滤工具时过载可转化为可用性；专家在熟悉领域的信息处理容量远高于新手（与 cognitive_load.yaml information_overload 节点一致）"
+relevant_nodes: [information_overload]
+notes: "信息过载跨学科综述奠基文献。核心框架（五类原因/倒U/原因-症状-对策循环）经 PASCAL 元数据 + ebrary + IGI 章节 + 中文综述多源交叉确认，未编造。建议：将 S158 计入 cognitive_load.yaml information_overload 节点的 source_ids（当前为 S13/S49/S03）。"
+last_verified: "2026-09"

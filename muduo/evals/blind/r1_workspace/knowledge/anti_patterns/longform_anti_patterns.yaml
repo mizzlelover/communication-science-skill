@@ -1,0 +1,192 @@
+# Long-form Anti-patterns（长文与 AI 写作反模式库）
+# 与 anti_patterns.yaml 同 schema；机制链接引用全库节点。
+- anti_pattern_id: AP-LF-001
+  name_en: AI Semantic Repetition
+  name_zh: AI式语义重复
+  definition: 同一观点以不同措辞反复出现，信息零增量（"AI降低生产成本"的三种说法）。
+  why_short_term_works: "挂钩机制：processing_fluency（A-）；重复表述读起来流畅、显得详尽，逐段生成时每段都'看似有内容'"
+  long_term_harms: ["trust: 读者识破后判定全文注水", "retention: 觅食判断收益递减，中段流失", "platform_risk: 平台低质 AI 内容治理的命中对象"]
+  detection_heuristics: "对疑似组做 Delete Test：剥离措辞后信息增量为零；同一概念的解释出现两次以上"
+  mechanisms: [information_foraging, processing_fluency, ai_content_saturation]
+  ethical_note: 用重复冒充深度属于对读者时间的隐性欺骗
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-002
+  name_en: Background Overload
+  name_zh: 背景过载
+  definition: 开头堆砌大量历史/背景/宏大叙事（"随着时代发展……"），主题迟迟不出现。
+  why_short_term_works: "挂钩机制：写作惯性+ perceived thoroughness；背景显得'铺垫充分'"
+  long_term_harms: ["retention: Entry 阶段（0-10%）每句都在经受离开决策，背景空转直接流失", "trust: 读者怀疑正文价值与背景长度成反比"]
+  detection_heuristics: "thesis 出现位置 > 全文 15%；context 功能节占比 > 20%"
+  mechanisms: [information_foraging, curiosity_gap, attention_capacity_limits]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-003
+  name_en: Concept Dumping
+  name_zh: 概念倾倒
+  definition: 高密度引入新概念/术语，无定义、无锚定、无依赖排序。
+  why_short_term_works: "挂钩机制：术语密度制造专业感（伪权威 credentialing_symbols 的文本版）"
+  long_term_harms: ["retention: schema_formation 失败，读者只剩碎片记忆", "trust: 专业读者识破'术语轰炸下的伪深度'"]
+  detection_heuristics: "单节新概念 > 3 且无类比/案例锚定；用到后文才定义的概念"
+  mechanisms: [schema_formation, working_memory_limits, chunking]
+  ethical_note: 术语轰炸可掩盖论证薄弱
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-004
+  name_en: Evidence Dumping
+  name_zh: 证据倾倒
+  definition: 大量数据/研究/引用堆叠，但不指向任何明确主张，读者自行拼图失败。
+  why_short_term_works: "挂钩机制：数据密度制造严谨错觉（citation decoration 邻接）"
+  long_term_harms: ["trust: 论证图断裂——有证据无论证", "retention: 认知负荷飙升且无收益感"]
+  detection_heuristics: "连续引用/数据段无'这意味着……'承接；evidence 无对应 claim（argument map 孤儿证据）"
+  mechanisms: [argumentation_structure, working_memory_limits, germane_load_learning]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-005
+  name_en: Case Stacking
+  name_zh: 案例堆叠
+  definition: 多个案例证同一主张，第二例起边际信息量趋零（Evidence Redundancy）。
+  why_short_term_works: "挂钩机制：mere_exposure（A-）——重复呈现的熟悉感错觉为'论证充分'"
+  long_term_harms: ["retention: 挤占主线推进时间（案例抢线）", "trust: 被识破为'用数量掩盖质量'"]
+  detection_heuristics: "同一 claim 下案例数 > 2；后例与首例信息增量趋零"
+  mechanisms: [mere_exposure, information_foraging, anecdote_vs_statistics]
+  ethical_note: 案例堆叠常被用于规避补强真正证据的成本
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-006
+  name_en: False Depth
+  name_zh: 伪深度
+  definition: 语言复杂、句式繁复，但无新增观点（Fake Depth）；复杂度是装饰不是内容。
+  why_short_term_works: "挂钩机制：fluency 反直觉利用——难读被误判为深刻（processing_fluency 反向 + pseudo_authority）"
+  long_term_harms: ["trust: 深度读者失望流失并传播负面口碑", "brand: 作者长期智识信誉受损"]
+  detection_heuristics: "Delete Test 通过率低：删掉复杂从句后主张不变；段落无新主张仅换说法"
+  mechanisms: [processing_fluency, pseudo_authority, concreteness_in_language]
+  ethical_note: 复杂度伪装属于智识层面的不诚实
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-007
+  name_en: Delayed Thesis
+  name_zh: 延迟命题
+  definition: 核心命题在全文很晚（>15-20%）才出现，读者长期不知道文章要论证什么。
+  why_short_term_works: "挂钩机制：作者误以为悬念=好奇心（误用 curiosity_gap）；长文的'最后揭晓'在搜寻型阅读中失效"
+  long_term_harms: ["retention: Entry/Model Building 阶段无图式锚点，理解成本全线上升", "trust: 读者感到被拖延（scent 失真）"]
+  detection_heuristics: "central_thesis 一句话抽取失败或出现位置 > 15%（典型情形：8000字文章前三千字无观点）"
+  mechanisms: [information_foraging, information_scent, schema_formation]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-008
+  name_en: Overexplaining
+  name_zh: 过度解释
+  definition: 概念首次定义后反复解释；对已显然的结论展开冗长论证。
+  why_short_term_works: "挂钩机制：作者的安全感需求（怕读者不懂）；机械的'完整性'"
+  long_term_harms: ["retention: 熟练读者被拖慢（密度骤降）", "trust: 被感知为低估读者"]
+  detection_heuristics: "同一概念定义出现 > 1 次；'换句话说'高频出现"
+  mechanisms: [information_foraging, processing_fluency]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-009
+  name_en: Underexplaining
+  name_zh: 解释不足
+  definition: 概念首次使用无定义、跳跃推理无桥梁（warrant 缺失）——与过度解释相反的对称病。
+  why_short_term_works: "挂钩机制：简洁错觉；作者知识诅咒（Curse of Knowledge，S69）——自己懂就以为读者懂"
+  long_term_harms: ["retention: Model Building 阶段图式断裂，后续内容全部建在缺口上", "trust: 论证可信度下降"]
+  detection_heuristics: "概念首现未解释；claim 与 evidence 之间说不出 warrant（argumentation_structure 检查）"
+  mechanisms: [schema_formation, argumentation_structure, chunking]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-010
+  name_en: Narrative Drift
+  name_zh: 叙事漂移
+  definition: 主线被支线/背景/案例劫持，读者忘记自己在读什么（narrative_drift）。
+  why_short_term_works: "挂钩机制：支线内容往往本身有趣（信息觅食被支线 patch 捕获）"
+  long_term_harms: ["retention: 回到主线时读者已换轨", "argument: 论证图分叉，主线被稀释"]
+  detection_heuristics: "连续 2+ 节与主线无推进关系；全文出现平行第二主线"
+  mechanisms: [information_foraging, narrative_transportation, cognitive_fatigue]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-011
+  name_en: Argument Jump
+  name_zh: 论证跳步
+  definition: 从证据直接跳到结论，省略 warrant（桥梁假设）；或跨过必要中间论证。
+  why_short_term_works: "挂钩机制：结论显得'顺理成章'，读者的快速推理（System 1）默认接受"
+  long_term_harms: ["trust: 深读者发现断链后整体可信度崩塌", "platform: 高专业度平台（知乎）反噬明显"]
+  detection_heuristics: "对每个 claim 追问'凭什么这个证据支持它'答不出（argumentation_structure 的 warrant 检查）；conclusion_leap / logical_gap 标记"
+  mechanisms: [argumentation_structure, dual_process_theory, central_route_processing]
+  ethical_note: 隐藏明知不成立的 warrant 属误导性论证
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-012
+  name_en: Premature Conclusion
+  name_zh: 过早结论
+  definition: 在证据与反方未处理完时提前给出强结论；或结论强度超过证据支撑（overclaim）。
+  why_short_term_works: "挂钩机制：强结论的传播吸引力（emotional_arousal 邻接）与确定感（affect_heuristic）"
+  long_term_harms: ["trust: 被后续事实/反例打脸的风险", "argument: 反方层缺失使论证在深读者处失效"]
+  detection_heuristics: "结论无 qualifier；counterargument 三件套（反方/替代解释/边界）全缺"
+  mechanisms: [argumentation_structure, overclaim检查: attitude_behavior_gap, source_credibility_model]
+  ethical_note: 过度声称是最常见的智识不诚实形式
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-013
+  name_en: Summary Repetition
+  name_zh: 复读式结尾
+  definition: 结尾只是把全文/开头再说一遍（Summary Repetition / Conclusion Echo），无新综合。
+  why_short_term_works: "挂钩机制：写作惯性；'首尾呼应'被误解为机械复读"
+  long_term_harms: ["memory: 浪费 peak_end_rule（B）的黄金位——结尾决定整篇记忆评价", "retention: 最后一屏流失读者对全文的价值判断"]
+  detection_heuristics: "结尾段与开头段/中段信息增量为零；无 memory_anchors 显式回收"
+  mechanisms: [peak_end_rule, retrieval_cue_design, gist_vs_verbatim_memory]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-014
+  name_en: Over-sectioning
+  name_zh: 过度分节
+  definition: 碎片化小节（每节两三段）打碎组块，读者整合负担反升。
+  why_short_term_works: "挂钩机制：'结构清晰'的错觉；移动端短屏的机械适应"
+  long_term_harms: ["retention: chunking 失败——组块被切碎，读者持不住结构", "comprehension: 节间关系需要读者自行重建"]
+  detection_heuristics: "平均节长 < 300 字且节间无推进句；小标题无信息量（纯切分）"
+  mechanisms: [chunking, working_memory_limits, information_scent]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-015
+  name_en: Mechanical Transition
+  name_zh: 机械过渡
+  definition: "「接下来我们看看」「此外」「与此同时」式空转连接，不回答『为什么现在讲这个』。"
+  why_short_term_works: "挂钩机制：模板化写作的省力（Empty Transition，AI 写作高发）"
+  long_term_harms: ["retention: 节尾无 Forward Momentum，动力线断裂点", "comprehension: 读者失去论证推进的逻辑感"]
+  detection_heuristics: "空过渡词频次；每节结尾问'翻页理由是什么'答不出（continuation hook 缺失）"
+  mechanisms: [information_foraging, narrative_transportation, curiosity_gap]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-016
+  name_en: Buzzword Density
+  name_zh: 黑话密度
+  definition: 抽象名词高密度（赋能/抓手/闭环/生态），无具体所指（Abstract Inflation 同源）。
+  why_short_term_works: "挂钩机制：圈内黑话的身份信号（identity_signaling）+ 流畅错觉"
+  long_term_harms: ["trust: 信息密度趋零被识破（最差 New Meaning/Cost 比值）", "comprehension: 读者无法把黑话落地为可执行理解"]
+  detection_heuristics: "抽象名词计数/千字；黑话能否替换为具体场景句而不损义"
+  mechanisms: [concreteness_in_language, processing_fluency, information_foraging]
+  ethical_note: 黑话可用于身份认同，但用于掩盖空洞属误导
+  evidence_grade_of_the_mechanism: "B+"
+- anti_pattern_id: AP-LF-017
+  name_en: Citation Decoration
+  name_zh: 引用装饰
+  definition: "「研究表明」高频出现但不说明什么研究、谁做的、可信度如何。"
+  why_short_term_works: "挂钩机制：权威光环的廉价借用（authority_influence 表层激活）"
+  long_term_harms: ["trust: 长文信任系统的核心破坏项", "argument: 证据不可核验 = unsupported_claim 变体"]
+  detection_heuristics: "'研究表明'计数 vs 具体来源计数；引用是否可回溯（verification_required 纪律）"
+  mechanisms: [source_credibility_model, authority_influence, provenance_verification]
+  ethical_note: 无法核实的引用装饰接近学术不端的传播版
+  evidence_grade_of_the_mechanism: "A-"
+- anti_pattern_id: AP-LF-018
+  name_en: Artificial Completeness
+  name_zh: 人工全面感
+  definition: 为显得全面而机械罗列大量维度/清单，维度间无论证关系，多数对主线无贡献。
+  why_short_term_works: "挂钩机制：'全面=专业'的错觉；LLM 生成偏好（逐 token 均匀铺开）"
+  long_term_harms: ["retention: 密度稀释 + 认知负荷上升（information_overload）", "argument: 主线被维度清单淹没"]
+  detection_heuristics: "并列维度 > 5 且无优先级论证；删掉一半维度后核心论证无损"
+  mechanisms: [information_overload, working_memory_limits, argumentation_structure]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "B"
+- anti_pattern_id: AP-LF-019
+  name_en: Symmetry Bias
+  name_zh: 对称偏置
+  definition: 每节结构完全一样（同样的开头句式/要素清单/小节切分），全文呈机械对称。
+  why_short_term_works: "挂钩机制：生成模板的省力；'整齐'被误读为'严谨'（fluency 错觉）"
+  long_term_harms: ["memory: 无区分度→von_restorff_effect（A-）失效，读者记不住任何一节", "trust: AI 生成感（ai_content_saturation 时代的同质化信号）"]
+  detection_heuristics: "相邻节结构同构率；小标题句式是否高度一致"
+  mechanisms: [von_restorff_effect, ai_content_saturation, schema_formation]
+  ethical_note: 无
+  evidence_grade_of_the_mechanism: "A-"

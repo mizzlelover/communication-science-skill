@@ -1,0 +1,427 @@
+# framing — 框架（Framing）：同一事实的呈现方式如何改变判断（信息呈现层机制）
+domain: framing
+nodes:
+- id: framing_effects
+  canonical_name_en: Framing Effects (Message Framing)
+  canonical_name_zh: 沟通框架效应
+  aliases:
+  - 框架效应（信息层）
+  - message framing
+  domain: framing
+  definition: Tversky 与 Kahneman 亚洲疾病问题揭示的效应：同一事实的逻辑等价表述（90% 存活 vs 10% 死亡）产生系统性不同的偏好。注意区分：本节点是信息呈现层的框架（message
+    framing——怎么说），与 A2 域的 gain_loss_framing（前景理论的价值函数层——收益/损失参照点如何改变价值感知）紧密相关但位于不同分析层。
+  core_claim: 逻辑等价的信息呈现方式系统性改变选择与判断——效果由表述激活的参照点与联想决定，而非信息内容本身。
+  mechanism: 表述决定哪些联想与参照点被激活：『90% 存活』把注意锚在生存，『10% 死亡』锚在损失；对结果的编码（收益vs损失）随参照点变化，而人们对损失更敏感。该效应在风险选择（存活率框架）、属性框架（肉质
+    75% 瘦 vs 25% 肥）、目标框架（强调做的好处 vs 不做的坏处）中均出现（三类框架对应 Levin, Schneider & Gaeth 1998 分类，文献常识，已建包 EP S206）。框架效应是理解
+    gain_loss_framing 的传播学入口：前景理论解释为什么，框架研究解释怎么用。
+  causal_chain: 信息呈现方式 → 参照点/联想激活 → 收益或损失的编码 → 价值权重改变 → 偏好与选择系统偏移
+  variables:
+    inputs:
+    - 表述的参照点（收益vs损失）
+    - 表述的具体维度选择
+    - 序位安排
+    moderators:
+    - 受众卷入度（高卷入时框架效应减弱但不消失）
+    - 数字的具象度
+    - 领域专业知识
+    - 加工时间
+    mediators:
+    - 参照点编码
+    - 联想激活
+    - 情绪反应（损失厌恶的情绪基础）
+    outputs:
+    - 风险偏好偏移（收益框架求稳、损失框架冒险）
+    - 属性评价偏移
+    - 接受度差异
+  evidence:
+    supporting:
+    - Tversky 与 Kahneman 的亚洲疾病问题：等价表述下的偏好反转（原始文献未建包；S01 提供参照点依赖的方向级支持）
+    - 属性框架与目标框架的多领域实验（健康传播常见发现：收益框架促预防行为、损失框架促检测行为——文献常识，已建包 EP S206）
+    - 框架效应作为 Kahneman-Nobel 级工作的一部分被广泛综述（S01）
+    conflicting:
+    - 高卷入、高专业知识受众的框架效应减弱
+    - 部分大规模复制的效应量小于原始报告，且存在发表偏差
+    - 框架效应的跨文化稳定性存在争议
+    replication:
+    - 经典范式可复制但幅度波动，属稳健但效应量中等的发现
+    - 健康传播领域的应用复制较充分
+    meta_analysis:
+    - 框架效应的元整合确认平均效应存在且受任务类型与卷入度调节
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 受众不做深度重算（低到中卷入）
+  - 表述的逻辑等价性不被识破（被识破即失效且损伤信任）
+  - 单一参照点主导（多参照点竞争时效应稀释）
+  failure_conditions:
+  - 受众明确对照两种表述（透明化对冲框架）
+  - 高专业受众按实质数字决策
+  - 框架与受众身份/价值观冲突时被拒绝
+  common_misinterpretations:
+  - 把 framing_effects 与 gain_loss_framing 混为一谈——后者是前景理论的价值函数机制（A2 域），前者是呈现层的沟通设计；前者依赖后者但不是一回事
+  - 误以为框架=误导：同一事实的不同真话表述是传播的基本结构，但刻意隐藏关键等价信息则滑向操纵
+  ethical_risks:
+  - 用框架隐藏关键信息（只说 90% 存活不说 10% 死亡的反面信息在医疗场景违规）
+  - 利用损失框架制造焦虑胁迫决策
+  examples:
+    original_cases:
+    - Tversky 与 Kahneman 的亚洲疾病问题（原始文献未建包；S01 方向级支持）
+    - 属性框架案例（75% 瘦肉 vs 25% 肥肉，消费者行为研究传统）
+    research_cases:
+    - 亚洲疾病问题的偏好反转实验
+    - 健康传播中的收益/损失框架匹配研究（检测行为 vs 预防行为的框架适配）
+    modern_cases:
+    - 理财产品的收益表述（『年化可达 8%』vs『可能亏损本金』的框架博弈）
+    - 限时优惠的『错过损失』框架
+    - 健康 App 的『坚持 21 天获得 X』（收益）vs『中断则清零』（损失）设计
+  communication_implications: 呈现同一数据时主动选择参照点：对行动导向内容用收益框架（做了得到什么），对唤醒迟钝的受众用损失框架（不做失去什么）；医疗、金融等强监管领域必须并置双面信息。
+  community_implications: 社群公告与动员信息的框架决定参与率：『本周不参与会错过X』（损失）比『参与可得到X』（收益）唤起更高但焦虑也更高——需按社群情绪水位选择，避免长期损失框架耗竭成员。
+  content_applications:
+    title: 标题选择参照点：『省下 3 小时/周』（收益框架）vs『每周白扔 3 小时』（损失框架）——按目标行为类型选择
+    body: 关键数据先给收益表述再给完整信息：『90% 的用户坚持了下来（10% 未完成的原因是X）』——框架+透明双轨
+    cta: 行动型 CTA 用收益框架（『开始后你会得到』），补救型 CTA 用损失框架（『再等一年，成本是』）
+    evidence: 同一数据主动并置两种表述（给受众框架免疫力），在信任型内容中反而加分
+  platform_implications: 平台的标题竞赛推动框架套利（同一新闻按点击优化表述），加剧同事实的多版本叙事生态；平台的框架透明化工具（事实核查标签、多源对照）是对框架滥用的制度回应。
+  related_nodes:
+  - gain_loss_framing
+  - loss_aversion
+  - metaphor_framing
+  - emphasis_vs_equivalence_framing
+  - anchoring_effect
+  - negation_ironic_rebound
+  - status_quo_bias
+  source_ids:
+  - S01
+  - S206
+  provenance:
+    primary_sources:
+    - S206
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-005
+    - CASE-BRD-015
+    - CASE-BRD-022
+    - CASE-BRD-028
+    - CASE-PLT-030
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: metaphor_framing
+  canonical_name_en: Metaphor Framing
+  canonical_name_zh: 隐喻框架
+  aliases:
+  - 隐喻说服
+  - conceptual metaphor framing
+  domain: framing
+  definition: Lakoff 与 Johnson 的概念隐喻理论在传播中的应用：用隐喻（犯罪是野兽/犯罪是病毒）为议题提供推理结构——隐喻不只是修辞装饰，它携带整套因果推理与应对脚本，系统性改变受众对议题的解释与政策偏好（Thibodeau
+    与 Boroditsky 的犯罪隐喻实验）。
+  core_claim: 选择哪个隐喻就是在选择推理脚本：『犯罪是野兽』导向执法抓捕，『犯罪是病毒』导向治理根源——同一事实，不同隐喻，不同结论。
+  mechanism: 概念隐喻把抽象议题映射到具身体验域（动物-威胁-捕猎 vs 病毒-传播-免疫），激活的源域提供一揽子推理：因果结构（兽性vs传染）、应对方案（围捕vs防疫）、时间预期（一次清除vs长期治理）。受众通常不察觉隐喻在做框架工作（隐喻是『透明的』），因而其影响绕过防御——这与
+    S01 的 WYSIATI（所见即全部，系统1 不追问缺失信息）一致；但效应依赖受众对源域的默认联想，且在提供明确统计证据时可被部分抵消。
+  causal_chain: 隐喻选择 → 源域推理结构激活 → 议题被按源域逻辑理解 → 应对方案偏好偏移
+  variables:
+    inputs:
+    - 隐喻的源域选择
+    - 隐喻在文本中的密度与位置
+    moderators:
+    - 受众对源域的默认联想强度
+    - 是否同时提供统计数据（证据可部分抵消）
+    - 议题的抽象度（越抽象隐喻影响越大）
+    mediators:
+    - 源域推理脚本激活
+    - 因果归因偏移
+    outputs:
+    - 政策/方案偏好偏移
+    - 因果解释改变
+    - 情绪基调改变
+  evidence:
+    supporting:
+    - Thibodeau 与 Boroditsky 2011 的犯罪隐喻实验：『野兽』vs『病毒』框架显著改变受访者提出的治理方案（实验文献，未建包）
+    - Lakoff 与 Johnson 的概念隐喻理论及语言证据（S61）
+    - 政治隐喻框架的后续研究（税收、移民议题）（实验文献，未建包）
+    conflicting:
+    - 部分复制发现效应量比原始报告小且需特定任务条件（开放性方案生成任务中最强，封闭选择题中减弱）（实验文献，未建包）
+    - 明确统计信息在场时隐喻效应显著缩小
+    - 高度争议议题上既有立场压过隐喻框架
+    replication:
+    - 方向性结果可复制但幅度中等且条件依赖
+    - 任务类型的调节作用明确（生成任务>选择任务）（实验文献，未建包）
+    meta_analysis:
+    - 隐喻框架研究的整合综述支持平均效应存在、强调条件依赖
+  evidence_grade: B
+  boundary_conditions:
+  - 议题抽象且缺乏直接经验（隐喻填补推理空白）
+  - 受众生成性加工（开放回答、方案构思）
+  - 源域联想在受众文化中默认成立
+  failure_conditions:
+  - 硬数据在场且被加工（统计压过隐喻）
+  - 议题具体且受众有直接经验
+  - 隐喻陈旧到失效（用滥的比喻不再激活源域）
+  common_misinterpretations:
+  - 把隐喻当纯修辞装饰——它是在选择推理框架，且通常不被受众察觉
+  - 以为换几个漂亮比喻就是隐喻框架：有效隐喻必须携带与目标一致的完整推理结构
+  ethical_risks:
+  - 用敌意隐喻（蟑螂、毒瘤）为去人性化铺路（宣传史的核心教训）
+  - 用战争隐喻制造不必要的恐慌（『与X的战争』叙事通胀）
+  examples:
+    original_cases:
+    - Lakoff 与 Johnson《Metaphors We Live By》（S61）
+    - Lakoff 对政治框架与隐喻的分析（S62）
+    research_cases:
+    - Thibodeau 与 Boroditsky 2011 的犯罪隐喻实验
+    - 健康传播中的战争隐喻（对抗疾病）与旅程隐喻的效果对比研究
+    modern_cases:
+    - 财经内容的市场隐喻：『牛市熊市』（季节性）、『保卫战』（军事）、『水温』（体感）各自引导不同操作预期
+    - 健身行业的『改造身体』vs『照顾身体』隐喻
+    - 教育产品的『弯道超车』（竞争）vs『搭建体系』（建构）隐喻
+  communication_implications: 为核心议题选定一个与你的解决方案同构的隐喻并贯穿使用：卖系统化方法就别用赌局隐喻，卖长期主义就别用抢跑隐喻——隐喻与方案错位会让受众用你的隐喻推理出反对你的结论。
+  community_implications: 社群的身份隐喻塑造成员关系：『家人』（无条件接纳）、『战友』（共同攻坚）、『同路人』（各自成长）引导不同的互助规范与冲突处理方式；换隐喻即换文化，须与治理设计同步。
+  content_applications:
+    body: 选定核心隐喻后贯穿全文（源头一致）：讲投资教育用『航海』（风浪、船、港口），所有小节回扣同一源域
+    title: 标题承载隐喻：『把身体当花园，不是机器』——一个隐喻完成框架与立场声明
+    evidence: 隐喻与数据搭配：先给隐喻建立推理框架，紧跟统计（数据在场可防隐喻过度延展）
+    comments: 在评论区延续隐喻词汇回应（用同源域语言答复），保持框架一致性
+  platform_implications: 平台热梗是自下而上的隐喻洪流（用游戏化隐喻重述一切：刷副本、氪金、爆装备），创作者可借梗获得隐喻的现成推理框架，但热梗隐喻与品牌立场的错位同样会被放大。
+  related_nodes:
+  - framing_effects
+  - emphasis_vs_equivalence_framing
+  - negation_ironic_rebound
+  - ethos_pathos_logos
+  - concreteness_in_language
+  - collective_identity_narrative
+  source_ids:
+  - S61
+  - S62
+  - S01
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Lakoff & Johnson 1980《Metaphors We Live By》（S61，book 级，substantial_excerpt）+
+      Thibodeau & Boroditsky 2011 犯罪隐喻实验
+    effect_size: 概念隐喻结构着推理与行为（ARGUMENT IS WAR）；隐喻框架实验改变政策/方案偏好
+    replication_status: 隐喻框架方向可复制但幅度中等；统计证据在场时效应缩小
+    context_dependency: 议题越抽象隐喻影响越大；源域联想与文化默认相关
+    downgrade_upgrade_reason: 2026-09 实取 S61 概念隐喻理论核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S61
+    supporting_evidence:
+    - S62
+    - S01
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-023
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+  culture_moderators:
+  - 源域联想在受众文化中默认成立
+- id: negation_ironic_rebound
+  canonical_name_en: Negation and Ironic Rebound (White Bear)
+  canonical_name_zh: 否定式反弹（白熊效应）
+  aliases:
+  - ironic process theory
+  - 白熊效应
+  - 讽刺进程理论
+  - 别想大象效应
+  domain: framing
+  definition: Wegner 1987 年的白熊实验揭示的 ironic process（讽刺进程）效应：要求『不要想白熊』的被试反而更多想到白熊——压抑想法需要监控进程持续搜索目标，该搜索本身使目标更可达。Lakoff
+    将其引入政治传播：『别想大象』——否定式提醒恰恰激活被否定的对象。
+  core_claim: 以否定形式呈现的信息（『不要X』）必然激活X的心理表征；禁止与警告常常是最好的广告。
+  mechanism: 思维控制需要双进程（Wegner 1987 的 ironic process theory，已建包 EP S201）：操作性进程执行『想别的』，监控进程检查『还在想白熊吗』。在高认知负荷或疲劳下，操作性进程（费力）先失守，监控进程（自动）持续把白熊带回意识——反弹发生。语言层面同理：理解『不要想X』必须先表征X。因此禁令、警告、否定式标题都在为对象做可达性投资。
+  causal_chain: 否定式指令『别想X』 → 必须先表征X + 监控进程持续核查 → X 可达性不降反升 → 想法反弹/行为反向
+  variables:
+    inputs:
+    - 否定式表述（不要/别/禁止）
+    - 被否定对象的情绪唤起度
+    moderators:
+    - 认知负荷与压力水平（负荷越高反弹越强）
+    - 对象的既有吸引力/威胁性
+    - 替代表象的可得性
+    mediators:
+    - 监控进程的持续搜索
+    - 被禁对象的表征激活
+    outputs:
+    - 想法反弹
+    - 禁忌对象吸引力上升（禁果效应的心理近亲）
+    - 警告被忽略或反向执行
+  evidence:
+    supporting:
+    - Wegner 1987 的白熊实验：压抑指令下的思维反弹（Wegner 1987，已建包 EP S201）
+    - 认知负荷加剧反弹的后续研究（讽刺进程理论系列，已建包 EP S201）
+    - Lakoff 对政治否定式提醒的分析（S62）
+    conflicting:
+    - 反弹主要在压抑任务与高负荷情境中显著；提供具体替代表象可显著缓解
+    - 日常低利害场景的反弹强度有限（不是所有『别想』都反弹）
+    replication:
+    - 白熊范式在多实验室复制成功
+    - 效应边界（负荷、替代策略）的结构获得支持
+    meta_analysis:
+    - 讽刺进程研究的整合综述支持压抑-反弹的基本结构
+  evidence_grade: A-
+  boundary_conditions:
+  - 对象有情绪唤起力或既有吸引力（无聊对象反弹弱）
+  - 认知负荷高或意志资源低时最强
+  - 无具体替代表象被提供
+  failure_conditions:
+  - 提供具体的替代性注意锚（『别想白熊，想小浣熊』部分有效）
+  - 低唤起对象与低负荷情境
+  - 禁令背后有真实外部代价（硬约束下的行为反弹弱于想法反弹）
+  common_misinterpretations:
+  - 把白熊效应与禁果效应混淆——白熊是认知层面的表征反弹，禁果是动机层面的自由威胁反应（reactance）；两者常同时出现但机制不同
+  - 误以为『别想大象』永远反效果：在低唤起、有替代锚的场景中否定式表述是正常且必要的
+  ethical_risks:
+  - 利用禁忌制造吸引力（越禁越火的算法化标题设计）
+  - 以『防止』之名反复呈现有害内容（酒后驾驶警告反复展示事故画面反而造成侵入性意象）
+  examples:
+    original_cases:
+    - Wegner 1987 的白熊实验（认知心理学经典）
+    - Lakoff《Don't Think of an Elephant》对否定式框架的政治分析（S62）
+    research_cases:
+    - 白熊压抑实验
+    - 认知负荷与思维反弹的实验
+    - 警告信息反效果的传播研究
+    modern_cases:
+    - 标题党公式『千万别点』的高点击（禁忌即流量）
+    - 家长式警示语（『不要熬夜』）的无效性——应改为『23 点睡觉的X个好处』
+    - 内容审核删除反而放大传播的『禁令流量』现象
+  communication_implications: 把否定式目标改写为肯定式行为指令：『别亏钱』→『按仓位表执行』；『别焦虑』→『每天只看一次行情』；警告信息必须附带具体替代行动，否则等于为禁忌对象做广告。
+  community_implications: 社群规则同理：『禁止灌水』不如『本周话题贴在此』——给替代出口比设禁令更有效；删帖与禁令会为内容做可达性投资，治理优先用引导与分流。
+  content_applications:
+    title: 标题用肯定式：『三个动作让仓位更稳』替代『千万别做这三件事』（除非刻意使用禁忌流量且能承接）
+    body: 把所有『不要X』改写为『要Y』：否定式清单转换为替代行为清单
+    evidence: 呈现替代方案的有效证据而非只呈现风险（警告+出路才阻断反弹）
+    cta: CTA 指向具体动作（『今晚设置好自动定投』）而非抽象禁止（『别再冲动了』）
+  platform_implications: 平台的『禁止/违规』标签反而成为内容吸引力信号（禁令即热度）；审核机制在压低可见性的同时为对象制造可达性投资——平台治理需要在压制与引导替代之间做组合设计。
+  related_nodes:
+  - framing_effects
+  - metaphor_framing
+  - psychological_reactance
+  - selective_attention
+  - processing_fluency
+  - zeigarnik_effect
+  source_ids:
+  - S62
+  - S61
+  - S201
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Wegner 1987 白熊实验（已建包 EP S201）+ Lakoff 2004《Don't Think of an Elephant!》（S62，book
+      级：否定即激活/框架设定）+ Lakoff 1980 概念隐喻（S61）
+    effect_size: 否定式指令必须表征被否定对象→可达性不降反升；框架设定塑造议题理解
+    replication_status: 白熊范式多实验室复制；禁令在低唤起/有替代锚时部分有效
+    context_dependency: 对象有情绪唤起力/吸引力时反弹最强；具体替代锚可缓解
+    downgrade_upgrade_reason: 2026-09 实取 S62 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S201
+    - S62
+    supporting_evidence:
+    - S61
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: emphasis_vs_equivalence_framing
+  canonical_name_en: Emphasis Framing vs Equivalence Framing
+  canonical_name_zh: 强调框架与等值框架
+  aliases:
+  - issue framing（议题框架）
+  - Levin 分类
+  - 框架的类型学
+  domain: framing
+  definition: Levin, Schneider 与 Gaeth 1998 的框架分类学（分类学文献，未建包）：等值框架（equivalence framing）——同一信息的逻辑等价表述差异（如存活率框架，即
+    framing_effects 的经典形态）；强调框架（emphasis framing）——从复杂现实的不同侧面选取不同子集呈现（讲就业数据讲哪个行业、讲产品讲哪个卖点），不涉及逻辑等价，而涉及选择性呈现。议程设置研究（McCombs
+    传统）的属性议程即强调框架的传播学版本。
+  core_claim: 等值框架改变对同一事实的编码（收益vs损失）；强调框架改变事实的构成（说什么不说什么）——后者影响更大、更隐蔽、也更难从伦理上辩护。
+  mechanism: 等值框架作用于单一信息的编码过程（参照点机制；其心理学基础即前景理论的损失厌恶、确定效应、参照点依赖，S01）；强调框架作用于议题的多侧面筛选：现实有无限属性，选择呈现哪些属性即选择受众推理的材料（越强调经济面，评估越按经济逻辑展开）。强调框架的效果通过属性的可达性与权重改变实现——与议程设置的第二层（属性议程设置）同构。等值框架可被对照识破，强调框架则几乎无法被『对照』，因为未被呈现的侧面不在受众的认知现场。
+  causal_chain: 属性子集选择 → 呈现的侧面获得可达性与权重 → 受众按被强调的侧面推理 → 评价与判断偏移
+  variables:
+    inputs:
+    - 被选择呈现的属性子集
+    - 属性的呈现顺序与篇幅
+    - 等值表述的参照点（等值框架时）
+    moderators:
+    - 受众既有知识与对照信源可得性
+    - 议题的复杂性
+    - 媒介生态的多元性
+    mediators:
+    - 属性可达性
+    - 属性权重分配
+    outputs:
+    - 议题评价改变
+    - 优先级重排
+    - （等值框架时）风险偏好偏移
+    - （强调框架时）议题构成理解改变
+  evidence:
+    supporting:
+    - Levin, Schneider 与 Gaeth 1998 的分类整合（三类框架：risky choice / attribute / goal framing）（分类学文献，未建包）
+    - 属性议程设置的传播学证据（McCombs 传统，S50）
+    - 议程设置研究的量化锚点（S50）：Chapel Hill 研究中媒介报道与公众重要问题判断高度对应（主要项目 r=0.967，次要项目 r=0.979）
+    - 议题框架对政策偏好影响的实验研究
+    conflicting:
+    - 强调框架的效应在有高知识、多信源对照的受众中减弱
+    - 属性选择的影响在极化议题上被身份立场压过
+    replication:
+    - 分类学本身被广泛采纳；等值框架的复制状态同 framing_effects
+    - 强调框架多在议题实验中验证，效应量随议题而异
+    meta_analysis:
+    - 框架研究的整合综述采用并扩展了该分类
+  evidence_grade: B
+  boundary_conditions:
+  - 强调框架：受众缺乏对照信源与领域全景时影响最大
+  - 等值框架：低到中卷入、单参照点主导时
+  - 两者都在议题抽象、信息环境单一时增强
+  failure_conditions:
+  - 受众具备多源对照习惯（强调框架被补全）
+  - 属性间冲突到无法整合（呈现混乱）
+  - 等值框架被透明对照（如双面呈现）
+  common_misinterpretations:
+  - 把两类框架混为一谈——等值框架是『同一事实换个说法』（可对照识破），强调框架是『选择性呈现事实侧面』（更根本、更难识破）
+  - 误以为强调框架就是撒谎：它是任何传播的必然结构（必须选择），伦理关键在选择性是否系统性地误导
+  ethical_risks:
+  - 系统性强调框架构成隐性误导（只讲收益面不讲风险面的推荐内容）
+  - 利用强调框架制造对立叙事（同一事件的对抗性侧面选择）
+  examples:
+    original_cases:
+    - Levin, Schneider 与 Gaeth 1998 的框架分类整合（说服与判断研究传统）
+    - McCombs 的属性议程设置研究（S50）
+    research_cases:
+    - 三类框架的对照实验（risky choice / attribute / goal）
+    - 议题侧面选择对政策偏好影响的实验
+    modern_cases:
+    - 理财产品页面的属性选择：突出历史收益、淡化回撤（强调框架的标准滥用）
+    - 招聘广告的卖点选择（成长空间vs加班文化）
+    - 新闻对同一经济数据的行业侧面选择
+    - 内容创作者的『亮点剪辑』
+  communication_implications: 强调框架是内容策划的本质工作（必须选择侧面），但可信的长期策略是主动披露『我没说什么』：在结尾列出未呈现的反面侧面，把选择性转为透明性——这在等值框架被普遍识破的
+    AI 时代是稀缺信任资产。
+  community_implications: 社群的内容规范应明确强调框架的底线（如理财社群要求晒收益必须同时晒回撤）：成员间的内容竞争会自然滑向选择性呈现的军备竞赛，规范把『披露义务』制度化是社群公信力的基础设施。
+  content_applications:
+    body: 主动披露侧面清单：文末『本文没讨论的三个反面』——把强调框架的必然选择性做成透明度资产
+    title: 标题的侧面选择与正文承诺一致（标题强调A面，正文必须给足A面并标注B面入口）
+    evidence: 证据呈现遵循属性配平：每个强项侧面配一个限制性侧面（披露义务的最低标准）
+    comments: 对『只说好话』的质疑直接附反面链接，公开维护侧面透明
+  platform_implications: 平台的排序与摘要功能本身就是强调框架的机器（标题+首图+前两行决定呈现侧面）；算法优化点击即优化侧面选择——平台的内容治理（如金融内容的强制风险披露位）是对强调框架滥用的制度化对冲。
+  related_nodes:
+  - framing_effects
+  - metaphor_framing
+  - selective_attention
+  - top_down_attention_guidance
+  - trust_signals_content
+  - gatekeeping_dynamics
+  source_ids:
+  - S50
+  - S01
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: McCombs 2004《Setting the Agenda》（S50，book 级，substantial_excerpt，Chapel Hill 研究
+      r=0.967/0.979）+ Levin et al. 1998 框架分类
+    effect_size: 属性议程设置（第二层）：媒介强调的属性转移为公众的『该怎么想』
+    replication_status: 议程设置第一/第二层五十余年间大量复制；属性议程在环境传播等议题中稳健
+    context_dependency: 认知层效果；需较长时距与持续报道；社交媒体时代议程主体多元化
+    downgrade_upgrade_reason: 2026-09 实取 S50 议程设置核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S50
+    supporting_evidence:
+    - S01
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long

@@ -1,0 +1,25 @@
+# Evidence Package — S65 Storr 2019（The Science of Storytelling）
+# 标准格式。access_level 如实标注。
+source_id: S65
+title: "The Science of Storytelling: Why Stories Make Us Human and How to Tell Them Better"
+authors: "Will Storr"
+year: 2019
+journal: Abrams Press（专著）
+doi: "无 DOI（专著）"
+url: "https://www.supersummary.com/the-science-of-storytelling/summary/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：SuperSummary 全书摘要（大脑=叙事处理器/受控幻觉/变化检测/缺陷自我/控制理论/地位博弈）+ 中文解读（《叙事改变人生》：神圣缺陷/英雄化叙事/信息缺口）+ 豆瓣阅读目录（四章结构/首章：以出乎意料的变化吸引注意）"
+research_question: "大脑如何加工故事？好故事的认知科学基础是什么？"
+core_claims:
+  - "大脑是叙事处理器而非逻辑处理器（引 Haidt）：我们体验的世界是大脑构建的'受控幻觉'；故事从'出乎意料的变化'开始，因为感知几乎全基于变化检测"
+  - "角色=有缺陷的自我：每个人（角色）都有一个'控制世界理论'，建立在核心错误（神圣缺陷 Sacred Flaw）之上；故事就是角色面对缺陷被迫'固守旧我 vs 进化新我'的选择"
+  - "大脑是'英雄制造机'：自我美化叙事（道德英雄）使我们固执己见并自我辩护；故事通过地位博弈与道德义愤吸引我们"
+  - "Show don't tell 有效的神经原因：语言触发大脑建模；信息缺口驱动好奇心（Loewenstein）；精确细节产生感官模拟"
+method: "神经科学/进化心理学/叙事理论跨学科综合 + 文学分析（《长日将尽》等）"
+results: "（通俗科学）'人物驱动'写作方法与大脑友好叙事的流行科学权威"
+limitations: "应用性综合（非新实验）；'神圣缺陷'框架为教学工具非检验理论"
+boundary_conditions: "适用于理解叙事认知机制与创作应用；实证检验需逐项研究"
+relevant_nodes: [narrative_transportation, curiosity_gap, suspense_structure, dramatic_arc_structure, seductive_details_effect]
+notes: "叙事认知通俗来源（book 级）。受控幻觉/神圣缺陷/变化检测为公开内容，未编造。"
+last_verified: "2026-09"

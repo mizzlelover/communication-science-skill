@@ -1,0 +1,25 @@
+# Evidence Package — S170 Bass 1969（A New Product Growth for Model Consumer Durables）
+# 标准格式。access_level 如实标注。
+source_id: S170
+title: "A New Product Growth for Model Consumer Durables"
+authors: "Frank M. Bass"
+year: 1969
+journal: "Management Science 15(5): 215-227"
+doi: "10.1287/mnsc.15.5.215"
+url: "https://ideas.repec.org/a/inm/ormnsc/v15y1969i5p215-227.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "① IDEAS/RePEc（INFORMS 官方条目）完整官方摘要：增长模型对 11 种消费耐用品初始购买时点的实证检验、基本假设（首次购买时机与先前购买者数量相关）、创新/模仿行为的行为学依据、对销售峰值与时点的良好预测、彩电销售长期预测；② CSDN wenku 转载原文正文片段（innovators/imitators 定义、五类别聚合、核心假设原文：'The probability that an initial purchase will be made at T given that no purchase has yet been made is a linear function of the number of previous buyers. Thus, P(T) = p + (q/m)Y(T)'）；③ PubMed 文献引用确认 DOI 10.1287/mnsc.15.5.215（Management Science 1969;15(5):215-227）；④ NSTL 国家科技图书文献中心与 IEEE 引用确认卷期页码；⑤ CSDN 博客对 Bass 模型公式 f(t)=[p+q·Y(t)/m]·[m−Y(t)] 与创新者/模仿者双效应的介绍。"
+research_question: "如何为消费耐用品的新产品初始购买时点建立可预测的增长模型？销售增长曲线由什么决定，能否用先验参数预测销售峰值及其出现时点？"
+core_claims:
+  - "基本假设：某消费者在时刻 T 做出首次购买的概率（给定尚未购买）是先前购买者数量的线性函数，即 P(T) = p + (q/m)Y(T)；其中 p 为创新系数（外部影响：广告/媒介等不依赖已采用者的力量），q 为模仿系数（内部影响：口碑/同侪示范，随已采用者数量增长）（官方摘要 + 原文片段）"
+  - "采用者按决策机制分为创新者（不受他人决策影响的自主采用者）与模仿者（受先前采用者影响者）；Rogers 五类别（创新者/早期采用者/早期大众/晚期大众/落后者）中的后四类在模型中被聚合为模仿者（原文片段）"
+  - "模型用 11 种消费耐用品的实证数据检验，能很好预测销售峰值及其出现时点，并对彩色电视机销售做出长期预测（官方摘要）"
+  - "模型产生 S 形扩散曲线：早期由创新者主导（外部影响），加速期由模仿者驱动（内部影响）——是 adopter_categories 与 S 曲线扩散的定量模型化（官方摘要 + 引用文献交叉确认）"
+method: "数学建模（连续时间扩散/微分方程模型：线性影响假设）+ 对 11 种消费耐用品历史销售数据的实证拟合与预测"
+results: "（模型论文）确立 Bass 扩散模型：销售 = 创新效应（p × 剩余潜在者）+ 模仿效应（q × 已采用者比例 × 剩余潜在者）；对销售峰值与时点的预测精度高，成为新产品扩散预测的标准模型"
+limitations: "面向消费耐用品初始购买（无重复购买假设）；参数 p/q 需用早期数据估计，事前预测依赖类比；假设潜在市场 m 固定（后续 Bass-Norton 等扩展处理换代与重复购买）"
+boundary_conditions: "适用于一次性采纳的新产品/新技术扩散（耐用品、创新）；对高频重复购买与网络效应产品，后续文献做了系统性扩展（Peres, Muller & Mahajan 2010 综述）；S 曲线是描述采用分布的模型，不替代营销投入的因果作用"
+relevant_nodes: [adopter_categories, diffusion_of_innovations]
+notes: "Bass 扩散模型原始论文（与 S51 Rogers 的 S 曲线/五类别框架互为表里：Bass 提供数学模型、Rogers 提供社会学框架）。已实取官方摘要 + 原文关键片段 + 多源引用确认，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,24 @@
+# Evidence Package — S163 Leroy 2009（Why Is It So Hard to Do My Work? Attention Residue）
+# 标准格式。access_level 如实标注。
+source_id: S163
+title: "Why Is It So Hard to Do My Work? The Challenge of Attention Residue When Switching between Work Tasks"
+authors: "Sophie Leroy"
+year: 2009
+journal: "Organizational Behavior and Human Decision Processes 109(2): 168-181"
+doi: "10.1016/j.obhdp.2009.04.002"
+url: "https://ideas.repec.org/a/eee/jobhdp/v109y2009i2p168-181.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "RePEc 一手完整摘要（两个实验及核心结论）+ huam.ing 定义引文（attention residue 的原文定义）+ winwithmotivation 与中文科普对实验设计的详细复述（完成/中断条件、词识别测试、时间压力与投入度调节）+ 2018 Leroy & Glomb 后续研究交叉"
+research_question: "多任务工作中，任务切换后前任务如何继续占用注意并损害新任务绩效？"
+core_claims:
+  - "人需要停止思考前一个任务才能完全转移注意并在新任务上表现良好；但从未完成任务转移注意很困难，后续任务绩效受损"
+  - "仅完成前任务不足以实现有效转换——完成前任务时的时间压力（time pressure）是脱离前任务、转向新任务并提升新任务绩效的条件"
+  - "attention residue 定义为：即使已停止任务 A 并正在执行任务 B，关于 A 的认知活动仍在持续"
+method: "两个实验（任务切换范式：主任务→副任务），操纵前任务完成度与完成时的时间压力；以副任务绩效与词识别反应测量残留"
+results: "未完成前任务者新任务表现显著更差（准确率与速度）；完成任务但无时间压力者同样难以脱离；时间压力促进脱离并提升后续表现"
+limitations: "概念较新、独立复制数量有限；残留强度受任务性质调节（例行化任务间切换残留远小于复杂任务）"
+boundary_conditions: "前任务越未完成、越重要，残留越强；明确收尾或书面计划可显著减弱残留；前任务彻底结束后切换残留很小"
+relevant_nodes: [attention_residue]
+notes: "attention_residue 概念的命名论文与一手实验来源；RePEc 完整摘要+多源交叉，未虚标正文级。"
+last_verified: "2026-09"

@@ -1,0 +1,181 @@
+platform_name: 微博（Weibo）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：产品形态（热搜榜、话题双井号、超话、140 字规则、官方抽奖工具）
+  为公开可见规则；推荐与热搜权重、治理细节为行业共识（官方未公开）。
+  社区治理、话题/超话规则与创作者中心已联网核验官方帮助中心及规则页（2026-09 实取），
+  140 字规则载于官方服务协议；热搜权重与抽奖工具细节官方仍未公开。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+platform_sources:
+  - {source: "微博帮助中心《微博创作者中心相关问题》 https://kefu.weibo.com/faqdetail?id=21489", source_owner: "微博", source_type: official, claim_supported: "创作者中心功能结构（创作任务/数据日报/收益中心/创作学院等）、公域与私域流量统计口径", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "《话题管理规定(试行)》超话社区规则页 https://huati.weibo.com/about/rule", source_owner: "微博", source_type: official, claim_supported: "话题/超话主持人机制、话题页管理与违规处置、依据《微博社区公约》制定", published_date: "试行版（未知具体日）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "《博文头条服务协议》 https://pay.biz.weibo.com/serviceagreement", source_owner: "微梦创科（微博）", source_type: official, claim_supported: "微博定义（不超过140字文字+图片/视频）、须遵守《微博社区公约》《微博社区管理规定》", published_date: "未知", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "微博创作者中心官微《治理公告》 https://m.weibo.cn/detail/5320668880045748", source_owner: "微博", source_type: official, claim_supported: "依据《微博社区公约》清理违规内容并对账号阶段性/永久禁言处置、挑动群体对立治理", published_date: "2026（具体日未知）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+content_units:
+  - "短博文（普通用户 140 字内）"
+  - "头条文章（长文）"
+  - "图片（最多 9 张）"
+  - "视频与直播"
+  - "投票"
+  - "超话（兴趣社区）"
+
+dominant_user_intent:
+  - "追热点（事件围观的第一现场）"
+  - "围观讨论（舆论参与、立场表达）"
+  - "名人/兴趣追更（大 V 与超话社区）"
+
+distribution_model: >-
+  热点广场+算法推荐+关注流混合：热搜榜是最大公共注意力入口
+  [official_rule-产品存在，含商业位与治理规则]；热点事件驱动流量脉冲，
+  日常流量靠推荐流与关注关系。转发链是独有的传播主干——
+  内容沿"大 V→粉丝→次级转发"的放射链扩散（two_step_flow 的典型形态）。
+
+recommendation_model: >-
+  互动率驱动的热搜与推荐 [industry_consensus-权重黑箱]；
+  转发权重语义高于一般平台——转发直接把内容推入转发者的关系链
+  （社交分发+算法分发的叠加）。
+
+social_graph_characteristics: >-
+  弱关系媒体网络：单向关注大 V 为主，名人-粉丝放射状结构；
+  陌生人互动默认公开（回复区是公共广场）；
+  大 V 的转发是流量杠杆（opinion_leadership + preferential_attachment）。
+  [industry_consensus-结构观察]
+
+content_lifecycle: >-
+  全平台最短爆发周期：热点窗口常以小时计，24-48 小时后关注度断崖
+  [industry_consensus]；长尾靠搜索与超话沉淀；
+  "热点响应速度"决定流量捕获——迟到即错过。
+
+primary_entry_points:
+  - "首页信息流"
+  - "热搜榜"
+  - "超话社区"
+  - "关注流"
+  - "搜索"
+
+attention_environment: >-
+  快节奏扫读+热点围观：用户在多个事件间跳跃，情绪浓度高——
+  微博是中文互联网的"公共情绪放大器"；品牌与个人都在同一舆论场裸泳。
+  [industry_consensus-行为观察]
+
+user_behavior: >-
+  围观与站队：转发表达立场、评论参与争论、点赞态度表态；
+  截图搬运到微信群/朋友圈是微博内容进入私域的常见路径
+  [industry_consensus]；吃瓜与反转文化让"二次验证"成为习惯。
+
+interaction_signals:
+  - "转发：第一权重信号——扩散型动作，把内容带入新关系链 [industry_consensus-权重观察；转发产品形态见 sharing_mechanism]"
+  - "评论：参与讨论，回复数是热度指标；ratio（回复远多于点赞）常暗示争议 [industry_consensus]"
+  - "点赞：最低成本态度 [industry_consensus-行为观察]"
+  - "阅读量：曝光统计 [official_rule-产品存在]"
+  - "超话签到/发帖：社区黏性信号 [official_rule-产品存在（超话）＋industry_consensus-行为观察]"
+
+sharing_mechanism: >-
+  转发即传播——一键转发（可附评论）是微博的物种特征 [official_rule-产品形态]；
+  站外进入微信生态靠截图/链接（被折叠或口令化 [industry_consensus]）；
+  官方抽奖工具绑定"转发+关注"完成裂变 [official_rule-产品存在]。
+
+search_mechanism: >-
+  热搜榜+实时搜索：事件实时信息枢纽；话题词 #xx# 聚合内容页
+  [official_rule-产品形态]；普通内容的搜索长尾价值有限——
+  搜索心智围绕"正在发生的事"。
+
+community_mechanism: >-
+  超话=兴趣社群（签到、等级、内容聚合 [official_rule-产品存在]）；
+  粉丝打榜与控评文化；大 V 与粉丝强依附（parasocial_relationship）；
+  群体对立结构明显（站队文化，in_group_favoritism 放大）。
+
+algorithmic_features:
+  - "热搜榜（含商业位）[official_rule-产品存在]"
+  - "推荐流（热点优先）[industry_consensus]"
+  - "话题主持人机制 [official_rule-产品存在]"
+  - "热搜治理与内容降权 [official_rule-治理存在，细节不公开]"
+
+content_constraints:
+  - "[official_rule] 普通用户博文 140 字上限，超出需转头条文章或使用会员扩容（以平台最新公告为准）"
+  - "[official_rule] 图片上限 9 张（以平台最新公告为准）"
+  - "[official_rule] 视频时长上限随产品版本调整（以平台最新公告为准）"
+
+title_role: >-
+  首句即标题：信息流只展示前一两行，首句必须自带传播点——
+  被截图转发的往往是首句金句（gist_vs_verbatim_memory）；
+  话题词 #xx# 承担分类与热搜入口职责。
+  [industry_consensus-策略观察；话题词机制 official（见 tag_role/S2）]
+
+cover_role: >-
+  九图首图与视频封面：在转发卡片与信息流中承担视觉锚点；
+  首图决定九宫格的整体观感（visual_hierarchy）。
+  [industry_consensus-策略观察；九图上限官方（见 content_constraints）]
+
+opening_role: >-
+  首句定生死：截断机制下折叠线以上是全部战场；
+  "金句前置+正文展开"的短博文结构广泛有效 [industry_consensus]。
+
+tag_role: >-
+  双井号 #话题# 是微博特有语法 [official_rule-产品形态]：
+  参与话题页聚合与热搜匹配；蹭错热点话题有立场风险。
+
+comment_role: >-
+  评论区=舆论现场：热评排序、楼主回复、控评与反控评；
+  争议性内容的评论区本身就是内容（围观价值）；
+  品牌官微的评论区是公关第一现场。
+  [industry_consensus-行为观察]
+
+follow_role: >-
+  单向关注媒体式追更：粉丝量=话语权资产；
+  大 V 的关注与转发是小账号的流量杠杆（结构性机会 [industry_consensus]）。
+
+risk_factors:
+  - "[industry_consensus] 舆情反噬：热点营销翻车的公开放大效应——微博的传播优势即其风险"
+  - "[industry_consensus] 热点依赖不可持续：脉冲流量无法沉淀，需超话/粉丝关系承接"
+  - "[industry_consensus] 营销号与水军生态：互动数据真实性存疑，投放需甄别（bot_amplified_social_proof）"
+  - "[official_rule] 治理降权与禁言：违规内容的平台处罚（以最新规则为准）"
+
+known_platform_patterns:
+  - pattern: "话题词蹭热搜入口（#热点词#+观点）"
+    mechanism_links: [algorithmic_amplification, attention_economics, availability_heuristic]
+    fact_type: industry_consensus
+    note: "话题/超话主持人机制为官方规则 [S2：话题管理规定]；'热搜词自带聚合页流量与用户既有注意'的入口判断为共识层。边界：与热点无关的硬蹭被用户识别为蹭流量并反噬好感。"
+    evidence_level: L3
+    source_ref: S2
+    last_verified: "2026-09"
+  - pattern: "首句金句化（可截图传播结构）"
+    mechanism_links: [processing_fluency, gist_vs_verbatim_memory, concreteness_in_language]
+    fact_type: industry_consensus
+    note: "微博 140 字定义与截断线为官方规则 [S3：博文头条服务协议]；'金句须在截断线内完成完整语义、被截图是微博内容进入私域传播的主要形态'为共识层判断。"
+    evidence_level: L3
+    source_ref: S3
+    last_verified: "2026-09"
+  - pattern: "转发抽奖激活裂变"
+    mechanism_links: [variable_ratio_reward, viral_coefficient, social_proof]
+    fact_type: industry_consensus
+    note: "官方抽奖工具为产品规则 [official_rule-产品存在]；机制上用不确定性奖励驱动转发链，但参与者多为泛流量，转化存疑。"
+    evidence_level: L3
+    source_ref: S3
+    last_verified: "2026-09"
+    note_evidence_note: "降级说明：原标 official_rule 的官方抽奖工具未在本次实取的官方文档中直接读到（帮助中心与规则页未载明），由产品规则标记降为行业共识 L3。"
+  - pattern: "大 V 转发链扩散（寻找结构洞）"
+    mechanism_links: [opinion_leadership, two_step_flow, structural_holes_bridging]
+    fact_type: industry_consensus
+    note: "内容经关键节点跨越圈层；建立与大 V 的关系链是微博独有的增长杠杆。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "立场表达类内容高转发"
+    mechanism_links: [identity_signaling, discrete_emotion_sharing_profiles, social_identity_theory]
+    fact_type: industry_consensus
+    note: "转发是站队动作，情绪唤起（尤其愤怒/感动）驱动扩散 [industry_consensus-情绪与分享关系为研究领域共识]；边界：立场内容的对立面流量同样巨大，需评估品牌安全。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+  - pattern: "热点 24 小时响应窗口"
+    mechanism_links: [attention_economics, misinformation_velocity, scarcity_mindset]
+    fact_type: industry_consensus
+    note: "热点流量随事件生命周期衰减；响应慢半拍等于白做。边界：热点逆向风险（事件反转）要求内容留有余地。"
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+
+confidence: medium

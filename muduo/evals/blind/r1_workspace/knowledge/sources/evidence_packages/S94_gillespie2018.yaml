@@ -1,0 +1,26 @@
+# Evidence Package — S94 Gillespie 2018（Custodians of the Internet）
+# 标准格式。access_level 如实标注。
+source_id: S94
+title: "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media"
+authors: "Tarleton Gillespie"
+year: 2018
+journal: Yale University Press（专著；288 页）
+doi: "无 DOI（专著）"
+url: "https://tlc.cis.cornell.edu/2018/11/17/tarleton-gillespie-custodians-of-the-internet-platforms-content-moderation-and-the-hidden-decisions-that-shape-social-media-11-13-2018/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论证经多源交叉实取：LSE 书评全文（去神话化/无中立决策/治理机制全景）+ 康奈尔 Tech/Law 研讨会摘要（作者原话：moderation 是平台的本质性/定义性/构成性功能）+ 图书馆目录（章节结构：All platforms moderate / The myth of the neutral platform / Community guidelines / human labor / Facebook breastfeeding / to remove or to filter）"
+research_question: "平台如何决定我们能看到什么？内容审核的本质、机制与社会后果是什么？"
+core_claims:
+  - "所有平台都在审核（All platforms moderate）：开放参与承诺与规则施加之间存在不可调和的内在矛盾"
+  - "『中立平台』是迷思：没有任何审核决策是中立的，都是不同价值系统/规范/目标间的权衡，会放大某些话语、压制另一些"
+  - "审核不是平台的附属功能，而是本质性、定义性、构成性的（essential, definitional, constitutional）——翻转了对平台是什么的理解"
+  - "审核生态包括：社区准则、规模化三方案、人工审核劳动、移除 vs 过滤（to remove or to filter）的架构选择"
+  - "审核塑造社会规范与公共话语，但获得的外部监督远远不足"
+method: "访谈内容审核员/创作者/消费者 + 平台政策分析 + 理论论述"
+results: "（理论+经验）内容审核研究的标准参考；平台治理研究的奠基著作"
+limitations: "专著以美国平台（Facebook/Twitter/YouTube）为主；中国等语境治理模式不同"
+boundary_conditions: "适用于以规则+人工+算法混合审核的主流平台；去中心化平台审核结构不同"
+relevant_nodes: [moderation_governance, platform_power_gatekeeping, gatekeeping_dynamics, community_governance]
+notes: "moderation_governance 的一手来源（book 级）。LSE 书评全文 + 作者研讨会摘要交叉确认，未编造。"
+last_verified: "2026-09"

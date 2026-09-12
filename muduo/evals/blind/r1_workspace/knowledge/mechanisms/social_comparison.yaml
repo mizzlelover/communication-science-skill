@@ -1,0 +1,445 @@
+# social_comparison — 社会比较（Social Comparison）：我们靠"别人"校准自己的处境与欲望
+domain: social_comparison
+nodes:
+- id: upward_social_comparison
+  canonical_name_en: Upward Social Comparison
+  canonical_name_zh: 上行社会比较
+  aliases:
+  - 向上比较
+  domain: social_comparison
+  definition: Festinger 社会比较理论（social comparison theory）的核心方向之一：在缺乏客观标准时，人们通过与更优者比较来评估自身。上行比较可带来激励（『他能我也能』）或威胁（自贬、嫉妒、放弃），方向取决于相似性与可达性。
+  core_claim: 与更优者的比较既可能激励也可能打击——关键差异在于被比较者是否被视为『可到达的相似他人』。
+  mechanism: 自我评估需求驱动人们寻找比较对象；当上行对象与自我相似、其成就被视为可通过努力达到时，比较提供标准与策略，转化为激励与自我提升；当对象被视为异类或差距不可弥合时，比较威胁自我评价，触发嫉妒、自尊防御或向下比较修复。社交媒体把『精选过的他人高光』变成无限供给的比较流，系统性推高上行比较频率。
+  causal_chain: 比较线索暴露 → 相似性判断 → 可达性评估 → 激励（可控差距）或威胁（不可控差距） → 自我评价与行为调整
+  variables:
+    inputs:
+    - 上行比较对象暴露
+    - 差距感知
+    - 对象相似性
+    moderators:
+    - 可达性信念（能否通过努力缩短差距）
+    - 自尊稳定性
+    - 领域相关性
+    - 比较对象可见的幸存者偏差程度
+    mediators:
+    - 嫉妒（善意vs恶性）
+    - 自我效能感
+    - 自我威胁感
+    outputs:
+    - 学习模仿行为
+    - 目标设定上调
+    - 或反之：自尊下降、回避与放弃、补偿性消费
+  evidence:
+    supporting:
+    - 社会比较理论自 Festinger 1954 以来的大量实验与调查研究（S29 手册综合）
+    - 上行比较激励效应：相似且可达时提升自我效能与努力
+    - 上行比较威胁效应：不可达差距引发嫉妒、自尊下降与回避行为
+    conflicting:
+    - 效应方向高度依赖可达性信念，预测需双轨制而非单一方向
+    - 个体比较倾向（social comparison orientation）差异大，平均效应解释力有限
+    replication:
+    - 两大类效应（激励/威胁）在多研究中各自重复
+    - 真实情境中的方向预测准确率中等，依赖对调节变量的准确测量
+    meta_analysis:
+    - 社会比较领域综述整合（S29）支持相似性、可达性作为核心调节变量
+  evidence_grade: B
+  boundary_conditions:
+  - 比较对象与自我在相关领域被知觉为相似时效应明确
+  - 领域对自我定义重要（自我相关领域）时情绪后果更强
+  - 差距存在可见路径（方法论、过程透明）时更可能激励
+  failure_conditions:
+  - 对象被神化或信息全然失真（滤镜、摆拍）时威胁占优
+  - 个体处于自我威胁敏感期（失败后、脆弱期）
+  - 比较流中对象高度异质、无匹配标准时产生混乱而非激励
+  common_misinterpretations:
+  - 误以为『树榜样』必然激励人——不可达榜样主要产出放弃与嫉妒
+  - 忽视平台内容的幸存者偏差：用户比较的是被算法放大的头部样本而非分布全貌
+  ethical_risks:
+  - 贩卖榜样焦虑（同龄人正在抛弃你式话术）
+  - 用失真比较流制造持续性自我威胁以驱动补偿性消费
+  examples:
+    original_cases:
+    - Festinger 1954 社会比较理论对缺乏客观标准时以他人为标尺的论述
+    - S29 手册中比较方向与后果的系统整合
+    research_cases:
+    - 操纵比较对象相似性与可达性的实验：相似可达对象提升努力，不相似对象引发退缩
+    - 社交媒体使用与自尊的关联研究：被动浏览（比较流）与主动互动的效应分离
+    modern_cases:
+    - 小红书『人均年薪百万』式内容引发的相对剥夺与焦虑
+    - 健身 App 的排行榜挑战设计
+    - 晒单文化带来的新手劝退效应
+  communication_implications: 给受众上行对象时必须同时给『路径』：只晒结果不放过程，是把激励做成劝退；『和我一样的普通人』比『天才故事』更有转化力。
+  community_implications: 社群排行榜与案例展示应分层（新手榜、进步榜、过程榜），让每个层级成员都有可达的比较对象；头部案例需绑定可复制路径拆解。
+  content_applications:
+    title: 标题锚定相似性：『一个普通上班族的三个月，不是天赋故事』
+    body: 案例必须含过程与挫折，制造『他和我一样、且路径可见』的结构
+    opening: 开场对冲焦虑：『如果你刷到过那些年入百万的同龄人，先别急着自我攻击——今天讲的是可达版本』
+    comments: 引导成员晒『中间态』成果（第 N 天打卡），替代晒终局，维持可达比较生态
+  platform_implications: 推荐系统按互动偏好持续供给头部高光内容，构成结构性的上行比较流；被动消费占比高的产品形态（刷流）比主动参与形态放大更多比较威胁，平台正在通过 encouraging
+    过程类内容（教程、vlog）部分对冲。
+  related_nodes:
+  - downward_social_comparison
+  - relative_deprivation
+  - fear_of_missing_out
+  - self_efficacy
+  - self_determination_needs
+  - ostracism_effects
+  source_ids:
+  - S29
+  - S21
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Suls & Wheeler 2000《Handbook of Social Comparison》（S29，上行比较理论）+ Aronson 2018（S21）
+    effect_size: 与优于己者比较产生同化/对比情绪（Collins 上行同化）
+    replication_status: 上行比较效应跨情境稳健（自我提升 vs 自我威胁双路径）
+    context_dependency: 可达性/相关性/自尊缓冲调制
+    downgrade_upgrade_reason: 2026-09 实取 S29 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S29
+    supporting_evidence:
+    - S21
+    last_verified: 2026-09
+    case_sources:
+    - CASE-COM-040
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: downward_social_comparison
+  canonical_name_en: Downward Social Comparison
+  canonical_name_zh: 下行社会比较
+  aliases:
+  - 向下比较
+  domain: social_comparison
+  definition: 与处境更差者进行比较的方向：可提升主观幸福感与自我评价（自利性比较，self-enhancement），也常用于威胁应对（『还有人比我更难』）。但在公开场合贬低性使用时具有伤害性与声誉代价。
+  core_claim: 下行比较能修复情绪与自我评价，其有效性取决于比较是私下的自我安抚还是公开的贬损表演。
+  mechanism: 自我提升与威胁应对动机促使个体在受挫后选择性注意更差案例，通过对比恢复掌控感与希望（『我至少还有 X』）。该机制可内隐运作（内容消费：围观他人失败），无需主动贬损他人。但当比较被公开表演时，触发公平与体面规范的反噬，损害比较者形象。
+  causal_chain: 自我威胁或自尊需求 → 选择性注意更差案例 → 对比性评价 → 情绪修复/自尊提升（或公开场景中的声誉反噬）
+  variables:
+    inputs:
+    - 更差案例的暴露可得性
+    - 自我威胁强度
+    moderators:
+    - 共情能力
+    - 比较的公开性
+    - 与被比较者的关系距离
+    - 成败归因方式
+    mediators:
+    - 相对优势感
+    - 感恩情绪
+    - 掌控感恢复
+    outputs:
+    - 主观幸福感提升
+    - 焦虑缓解
+    - 或：共情缺失、轻慢文化、对他人困境的娱乐化
+  evidence:
+    supporting:
+    - 下行比较的应对功能在压力与应对研究传统中获得多研究支持（S29 综合）
+    - 威胁后自我评价修复的实验证据
+    - 围观失败内容（fail 视频）带来情绪改善的调查研究
+    conflicting:
+    - 对高共情者，下行比较伴随内疚而非愉悦
+    - 『幸灾乐祸』式比较与恶意贬损并无稳定幸福感收益
+    replication:
+    - 应对功能方向稳健
+    - 公开贬损场景的负面后果以观察与调查证据为主
+    meta_analysis:
+    - 并入社会比较综述（S29），无独立权威 meta-analysis
+  evidence_grade: B
+  boundary_conditions:
+  - 私下、非贬损性使用时幸福感收益明确
+  - 被比较者不可识别、非身边熟人时道德成本更低
+  - 个体处于需要情绪修复的威胁状态时收益最大
+  failure_conditions:
+  - 公开嘲讽真实可识别的他人时触发声誉与关系反噬
+  - 长期依赖下行比较维持自尊，形成回避成长的心境模式
+  - 被比较者为亲近关系成员时破坏关系
+  common_misinterpretations:
+  - 把下行比较等同于恶意——其核心功能是自我修复，公开贬损只是其中一种（有害的）使用方式
+  - 误以为消费者只爱看『更好的』内容；失败与踩坑内容有真实的情绪功能
+  ethical_risks:
+  - 以真实个体为素材的贬损式内容（猎奇失败者）
+  - 平台算法偏好放大羞辱性对比内容
+  examples:
+    original_cases:
+    - S29 手册中下行比较作为应对策略的理论与证据整合
+    research_cases:
+    - 威胁后暴露下行比较信息以修复自我评价的实验
+    - 幸福感的对比效应调查：收入相对位置比绝对水平更好预测满意度
+    modern_cases:
+    - 『避雷帖』『翻车合集』的消费与安抚功能
+    - 熊市社群里『还有人亏得更多』的互相宽慰
+    - 吐槽老板/甲方的匿名树洞文化
+  communication_implications: 『避坑、翻车、教训』类内容是下行比较的合规产品化：让读者在安全距离外完成比较并获得掌控感；注意把矛头指向事件与方法而非可识别的个人。
+  community_implications: 社群中可设『失败分享』仪式（复盘会、踩坑贴），成员通过他人挫折获得校准而不羞辱任何人；禁止公开点名式贬损以维护心理安全。
+  content_applications:
+    body: 踩坑复盘结构：我当时的错误 → 代价 → 校准清单，把他人失败转化为读者的比较收益
+    opening: 开场给情绪出口：『如果你最近被市场教育了，先看这条——我亏得比你想象的更标准』
+    comments: 用自嘲式楼主回复定调：自嘲而非嘲讽，维持安全比较氛围
+    title: 标题给掌控感：『我踩过的 5 个坑，帮你省下真金白银』
+  platform_implications: 失败与翻车类内容自带高互动，易被推荐加权；平台缺乏『被比较者是否可识别』的判断能力，需要创作者与社群自律来避免羞辱性下行比较的规模化。
+  related_nodes:
+  - upward_social_comparison
+  - self_efficacy
+  - mood_congruence
+  - relative_deprivation
+  - empathy_induced_helping
+  source_ids:
+  - S29
+  - S21
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Suls & Wheeler 2000（S29，下行比较与自我提升）+ Aronson 2018（S21）
+    effect_size: 与劣于己者比较提升情绪（Wills 1981 经典理论，未建包）
+    replication_status: 下行比较效应在威胁情境下方向稳定
+    context_dependency: 自尊威胁/比较维度相关性调制
+    downgrade_upgrade_reason: 2026-09 实取 S29 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S29
+    supporting_evidence:
+    - S21
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: relative_deprivation
+  canonical_name_en: Relative Deprivation
+  canonical_name_zh: 相对剥夺
+  aliases:
+  - 相对匮乏感
+  domain: social_comparison
+  definition: 当人们知觉到自己（或所在群体）的处境劣于某个参照对象（他人或群体的过去/应得状态）并认为这不公平时，产生的愤怒与不满状态。绝对水平不变，参照点改变即可制造剥夺感——它比较的是相对位置而非绝对境况。
+  core_claim: 不满与行动意愿主要由『参照点比较+不公正归因』驱动，而非客观处境本身。
+  mechanism: 相对剥夺需要三个成分：看到更优参照（认知比较）、感到应得更优（应得感）、将差距归因于不公正（归因）。满足后产生怨恨情绪，进而驱动个体层面的补偿行为（努力、消费、退出）或群体层面的集体行动。参照点可来自向上比较、自身过去（预期剥夺）或群体间比较（群际相对剥夺），后者更易转化为集体诉求。
+  causal_chain: 劣于参照对象 → 应得感落空 → 不公正归因 → 怨恨/愤怒 → 个体补偿或集体行动
+  variables:
+    inputs:
+    - 参照对象与差距知觉
+    - 应得信念
+    - 归因方向
+    moderators:
+    - 参照点的可得性与显著度
+    - 群体认同强度（个人vs群际剥夺）
+    - 系统正当化倾向
+    - 改善预期
+    mediators:
+    - 怨恨与愤怒
+    - 不公正感
+    - 效能预期
+    outputs:
+    - 抱怨与负面口碑
+    - 补偿性消费
+    - 退出/转换行为
+    - 集体行动参与
+  evidence:
+    supporting:
+    - 相对剥夺研究传统（从军队士气研究到 Runciman 的个体/群际区分）：相对位置比绝对水平更好预测不满
+    - 收入不平等与主观幸福感的调查证据：相对收入效应稳定
+    - 群际相对剥夺与集体行动意愿的关联研究
+    conflicting:
+    - 许多感到被剥夺者并不行动（需效能感与资源配合）
+    - 系统正当化动机可抑制剥夺感向怨恨的转化
+    replication:
+    - 『相对位置预测不满』的结果在多文化样本中重复
+    - 剥夺感→集体行动的链条受政治情境调节，跨情境稳定性中等
+    meta_analysis:
+    - 无覆盖全域的权威 meta-analysis；以系统综述与研究传统整合为主
+  evidence_grade: B
+  boundary_conditions:
+  - 存在显著且被广泛知晓的参照差距时最强
+  - 差距被解释为不公而非运气或个人选择时最强
+  - 群体认同把个体不满汇聚为群际剥夺时更易集体化
+  failure_conditions:
+  - 参照点不可见或被信息环境隔离时
+  - 差距被归因为努力差异且被受众接受时
+  - 改善通道清晰可见时剥夺感更多转化为个人努力而非怨恨
+  common_misinterpretations:
+  - 误以为改善绝对待遇必然降低不满——若参照点同步上移（如别人涨得更快），剥夺感可能不降反升
+  - 把相对剥夺简单等同于嫉妒，忽视了不公正归因这一必要成分
+  ethical_risks:
+  - 利用制造相对剥夺感营销（『同龄人已经…』）
+  - 政治化操作剥夺叙事煽动对立
+  examples:
+    original_cases:
+    - Runciman 对个体相对剥夺与群际相对剥夺的区分（经典理论，未建包；S29 提供群体比较框架，目录级）
+    - 相对收入与幸福感关系的经典调查发现
+    research_cases:
+    - 操纵参照信息的实验：告知薪资分布后低薪者满意度下降
+    - 群际剥夺与集体行动意愿的调查-实验研究
+    modern_cases:
+    - 『人均财务自由』内容生态下的基民/币民怨气
+    - 房地产牛市末期『上车焦虑』的社会扩散
+    - 员工社群里薪酬透明化后的相对剥夺爆发
+  communication_implications: 相对剥夺是双刃素材：唤起可制造共鸣与行动（『为什么你这么努力还是…』），但长期使用会污染品牌情绪资产；负责任的用法是提供参照校准（真实分布）与改善路径，而非持续灌落差。
+  community_implications: 社群中剥夺感会从个人吐槽演变为集体怨恨，管理者需要：早发现参照性不满（薪酬、收益、待遇话题）、提供事实校准、开放改善通道；忽视将导致意见领袖带走的集体退出。
+  content_applications:
+    body: 使用真实分布数据校准参照点（『实际中位数是…』），把虚构的『人均』叙事替换为可达路径
+    opening: 承认剥夺感再提供路径：『你不是不努力，是参照物出了问题』——先共情落差，再重置参照
+    title: 标题重构参照：『和三年前的自己比』替代『和头部比』
+    comments: 对剥夺情绪帖快速事实回应+路径回应，防止怨气在评论区结晶为集体叙事
+  platform_implications: 算法放大头部样本使全体用户的参照点上移，构成平台层面的相对剥夺发生器；收入、颜值、生活方式赛道尤甚，平台被迫以『真实内容』加权与评论区治理对冲。
+  related_nodes:
+  - upward_social_comparison
+  - social_identity_theory
+  - in_group_favoritism
+  - fairness_preferences
+  - status_systems
+  - ostracism_effects
+  source_ids:
+  - S29
+  - S26
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Suls & Wheeler 2000（S29，群体相对剥夺）+ Haidt 2012（S26，公平与群体）
+    effect_size: 参照群体比较产生不公平感（相对剥夺经典）
+    replication_status: 相对剥夺-集体行动关联多研究支持
+    context_dependency: 参照群体选择/公平敏感性调制
+    downgrade_upgrade_reason: 2026-09 实取 S29 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S29
+    supporting_evidence:
+    - S26
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: long
+- id: fear_of_missing_out
+  canonical_name_en: Fear of Missing Out (FOMO)
+  canonical_name_zh: 错失恐惧（FOMO）
+  aliases:
+  - 错失焦虑
+  - fear of missing out
+  domain: social_comparison
+  definition: 对他人正在经历有益体验而自己缺席的弥散性焦虑（Przybylski 等将其界定为一种动机状态），表现为强烈的保持联结冲动与持续查看行为。FOMO 是上行比较、归属需求与即时可得他人高光信息的交集产物。
+  core_claim: FOMO 由『他人体验可见+自我缺席』的持续组合驱动，其强度预测问题性社交媒体使用而非由平台本身直接决定。
+  mechanism: 归属需求未满足者更易把他人动态解读为『被排除的证据』；社交媒体使他人的体验持续可见且被精选放大，制造无限的机会比较。缺失感经由上行比较与相对剥夺转化为焦虑，焦虑驱动的查看行为获得短暂缓解（负强化），形成『焦虑→查看→更焦虑』的循环。FOMO
+    高者表现出更多错失情境下的不满与更低的基本心理需要满足感。
+  causal_chain: 他人高光体验持续可见 → 缺席比较与归属威胁 → 焦虑唤起 → 强迫性查看/即时响应 → 短暂缓解+长期放大
+  variables:
+    inputs:
+    - 社交线索流暴露（动态、行情、热榜）
+    - 机会窗口信息（限时、限量）
+    moderators:
+    - 基本心理需要满足度（SDT）
+    - 归属需求强度
+    - 自我调节能力
+    - 生活事件（熊市、裁员季）
+    mediators:
+    - 缺席比较
+    - 归属威胁
+    - 焦虑唤起
+    outputs:
+    - 强迫性查看
+    - 限时冲动决策（追高、囤货）
+    - 睡眠与注意力损耗
+    - 社交媒体问题性使用
+  evidence:
+    supporting:
+    - Przybylski 等的 FOMO 量表研究：FOMO 与基本需要满足负相关、与社交媒体问题性使用正相关
+    - FOMO 与情绪、注意力、睡眠关系的多项调查
+    - 限时促销与抢购行为的营销研究支持机会窗口信息对冲动决策的激活
+    conflicting:
+    - 效应强度个体差异极大，FOMO 更像调节机制而非普遍驱力
+    - 因果方向存在争议：是 FOMO 导致重度使用，还是重度使用放大 FOMO
+    replication:
+    - FOMO 与问题性使用的相关结果在多国样本中重复
+    - 实验性因果证据较少，多为相关与日记法研究
+    meta_analysis:
+    - 无权威 meta-analysis；以量表开发研究与传统内的系统综述为主
+  evidence_grade: B+
+  boundary_conditions:
+  - 存在可见的『他人正在受益』线索时被激活（行情上涨、限量开售、活动直播）
+  - 基本心理需要满足度低、归属感弱的个体更强
+  - 机会窗口明确且短暂（倒计时、限量）时行为转化率最高
+  failure_conditions:
+  - 无可见缺席线索的封闭情境
+  - 个体采用实施意图（implementation intentions）与注意力规则自我管理后显著减弱
+  - 长期高 FOMO 人群出现倦怠后的主动戒断（『数字排毒』）
+  common_misinterpretations:
+  - 把 FOMO 当作稳定的用户人格——它是状态性、可被情境设计的动机波动
+  - 误以为 FOMO 只与社交内容有关；行情、热榜、限量等机会型 FOMO 在理财与电商场景更直接驱动决策
+  ethical_risks:
+  - 利用 FOMO 制造虚假稀缺与伪限时诱导冲动决策
+  - 放大错失叙事导致用户财务与心理损害（追高、借贷囤货）
+  examples:
+    original_cases:
+    - Przybylski 等对 FOMO 的界定与量表研究（社会比较与数字媒体研究传统）
+    - S29 手册中比较机制对缺失感情绪的解释框架
+    research_cases:
+    - FOMO 量表与需要满足、社交媒体使用的关联研究
+    - 限时稀缺框架对冲动购买的实验研究
+    modern_cases:
+    - 牛市直播间的『再不上车就晚了』话术
+    - 秒杀、限量联名与会员限时权益设计
+    - 热搜实时榜制造的议题 FOMO
+    - 行程打卡文化（『大家都在这里』）
+  communication_implications: 机会型信息（限时、限量、窗口期）是最强的合规 FOMO 杠杆，但需真实；把『错失』重构为『提醒』（下个窗口预告）可保留唤起而降低敌意。
+  community_implications: 社群活动设计可用窗口机制（限定名额、季节性活动）提高参与，但需给缺席者保留路径（回放、补录、下一期），否则 FOMO 未满足者将累积退出动机。
+  content_applications:
+    title: 标题含明确窗口：『本周五前可领的最后一批名额』（须真实可兑现）
+    cta: CTA 提供双重出口：『现在进，或点这里预约下一期』，唤起但不胁迫
+    body: 呈现真实参与证据（进行中截图、人数进度），把稀缺建立在可验证事实上
+    opening: 承认错失情绪：『你可能已经错过了 X，但真正重要的是 Y』，把 FOMO 转为学习动机
+  platform_implications: 实时热榜、倒计时贴纸、在线人数等平台组件是 FOMO 的制度化基础设施；推荐流中『机会型内容』权重上升期（行情、热点）与用户焦虑指标同步抬升，平台治理需限制虚假稀缺标注。
+  related_nodes:
+  - upward_social_comparison
+  - relative_deprivation
+  - variable_ratio_reward
+  - need_to_belong
+  - algorithmic_amplification
+  - social_proof
+  - present_bias
+  source_ids:
+  - S29
+  - S92
+  - S48
+  - S193
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Przybylski et al. 2013 FOMO 量表研究（一手 EP 未建）+ Aral 2020（S92，算法放大机会内容）+ Tim Wu 2016（S48）；S29
+      为 2000 年手册、无数字时代内容，S92/S48 无 FOMO 量表对应内容；2026-09-09 一手 EP 已建（S193）
+    effect_size: 稀缺/错失信号引发参与焦虑（FOMO 现象；记忆蒸馏，待建 EP 核验）
+    replication_status: FOMO 与问题性使用的相关结果多见于文献（记忆蒸馏，无一手 EP 支撑）
+    context_dependency: 机会显性/竞争感知/归属需求调制
+    downgrade_upgrade_reason: 2026-09 反向审计降级：Przybylski et al. 2013 一手 EP 未建，S29 为 2000 年手册无数字时代内容，S92/S48
+      无对应，内容来自记忆蒸馏，待建 EP 后升级（grade B→C，validation_status 回退 MEMORY_BASED）
+  provenance:
+    primary_sources:
+    - S193
+    supporting_evidence:
+    - S92
+    - S48
+    - S29
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-COM-008
+    - CASE-FAL-003
+    - CASE-FAL-005
+    - CASE-FAL-023
+    - CASE-FAL-024
+    - CASE-FAL-031
+    - CASE-FAL-032
+    - CASE-FAL-035
+    - CASE-FAL-036
+    - CASE-FAL-038
+    - CASE-FAL-043
+    - CASE-FAL-044
+    - CASE-FAL-050
+    - CASE-FAL-051
+    - CASE-FAL-055
+    - CASE-FAL-058
+    - CASE-FAL-061
+    - CASE-FAL-074
+    - CASE-FAL-080
+    - CASE-FAL-081
+    - CASE-FAL-082
+    - CASE-FAL-083
+    - CASE-FAL-084
+    - CASE-FAL-090
+    - CASE-FAL-093
+    - CASE-FAL-094
+    - CASE-FAL-097
+    - CASE-FAL-099
+    - CASE-GRW-006
+    - CASE-PLT-034
+  last_reviewed: 2026-09
+  knowledge_half_life: long

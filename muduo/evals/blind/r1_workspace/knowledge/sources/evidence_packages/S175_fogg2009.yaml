@@ -1,0 +1,26 @@
+# Evidence Package — S175 Fogg 2009（A Behavior Model for Persuasive Design）
+# 标准格式。access_level 如实标注。
+source_id: S175
+title: "A Behavior Model for Persuasive Design"
+authors: "B. J. Fogg"
+year: 2009
+journal: "Proceedings of the 4th International Conference on Persuasive Technology (Persuasive '09), Claremont, CA, USA, ACM, Article 40, pp. 1-7"
+doi: "10.1145/1541948.1541999"
+url: "https://dl.acm.org/doi/10.1145/1541948.1541999"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "ACM Digital Library 作者页面（DOI 10.1145/1541948.1541999 与会议归属确认）+ docin 全文 PDF 预览（Abstract 与模型正文：FBM 三要素 motivation/ability/triggers，行为需三要素同时到位，双轴可视化『动机纵轴×能力横轴』，许可声明页）+ becisions.com 行为科学词典 FBM 词条（action line 激活阈限、动机-能力互补曲线、spark/facilitator/signal 三类提示、动机不可靠→以简化为主）+ 知乎 Fogg 行为模型解读（三要素与六项能力成本因素）+ ICVL 2011 论文对 FBM 的独立转述交叉"
+research_question: "在说服技术（persuasive technology）语境下，人类行为由哪些因素控制？设计师如何系统诊断并促成目标行为？"
+core_claims:
+  - "Fogg 行为模型（FBM）：行为（Behavior）由动机（Motivation）、能力（Ability）、提示（Trigger/Prompt）三个因素共同决定；三者必须在同一时刻同时到位，行为才会发生，任一缺失则行为不发生（docin PDF 摘要 + becisions + 知乎）"
+  - "动机与能力在激活阈限（action line）上互补：行为越简单（能力越足），所需动机越低；行为越难，所需动机越高；提示只在个体处于阈限之上时有效（becisions 词条）"
+  - "动机有三类（愉悦/痛苦、希望/恐惧、社会接纳/排斥）；能力由时间、金钱、体力、脑力、社会偏离、日程习惯等成本构成——实践重心是简化行为而非强行拔高动机，因为动机如波浪不可靠（知乎 + becisions）"
+  - "提示分三类：Spark（对动机不足者注入动机）、Facilitator（对能力不足者降低难度）、Signal（对两者已足者作提醒）（becisions + 知乎 + ICVL 转述）"
+  - "FBM 是面向设计师的实践框架而非检验过的理论：论文以论证与图示引入模型，无实验检验；其影响力经设计实践与 Tiny Habits（S16）传播（becisions 词条明确说明）"
+method: "理论/模型论文（position paper）：提出并图示化 FBM，给出三类提示的分类学与行为改变设计诊断流程；非实证研究"
+results: "（定位）FBM 成为说服技术与行为设计领域的通用框架：三要素同时性是核心命题，简化+提示是比动机更可靠的设计杠杆；后续被行为设计研究与健康干预研究广泛引用"
+limitations: "模型未经严格对照检验（整体框架 C 级证据）；行动线未被标定或证伪；无动机/能力的量化单位；2025 BMC Public Health scoping review 仅找到 6 项符合标准的健康干预应用（becisions 词条记录）"
+boundary_conditions: "适用于单次可触发的目标行为与产品转化设计；对长期动机系统只是近似；提示需在动机-能力阈限之上出现（与 behavior_model_bmap 节点证据等级 C 一致）"
+relevant_nodes: [behavior_model_bmap]
+notes: "behavior_model_bmap 节点（C 级）的论文版一手来源：B=MAP 三要素、action line、三类提示均从 docin PDF 预览与多源交叉实取；模型属性（设计框架非实证定律）如实标注。"
+last_verified: "2026-09"

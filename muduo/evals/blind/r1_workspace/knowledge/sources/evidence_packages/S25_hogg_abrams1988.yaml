@@ -1,0 +1,25 @@
+# Evidence Package — S25 Hogg & Abrams 1988（Social Identifications）
+# 标准格式。access_level 如实标注。
+source_id: S25
+title: "Social Identifications: A Social Psychology of Intergroup Relations and Group Processes"
+authors: "Michael A. Hogg; Dominic Abrams"
+year: 1988
+journal: Routledge（专著；社会认同论综合）
+doi: "无 DOI（专著）"
+url: "https://psychology.iresearchnet.com/social-psychology/social-psychology-theories/social-identity-theory/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：社会认同理论综述（Tajfel 最小群体实验→Turner 自我归类理论→Hogg & Abrams 1988 综合）+ 中文传播论文（自我分类+社会比较两过程）+ 心理学百科（自尊/不确定性减少动机/原型去个性化）"
+research_question: "社会认同如何形成？群体成员身份如何塑造自我概念与群际行为？"
+core_claims:
+  - "社会认同论综合（Tajfel & Turner 框架的系统化）：身份形成含两个过程——自我分类（强调与内群相似、与外群差异）与社会比较（选择能自我强化的维度）"
+  - "自我归类（Turner 1980s）：个体按情境中的原型去个性化（depersonalization），以群体原型校准态度与行为；身份是情境函数的动态过程而非稳定标签"
+  - "动机：自尊维持（positive distinctiveness）与不确定性减少；群体地位受威胁时偏向放大"
+  - "交叉分类（多个群体身份交叉）可降低刻板印象与群际偏见（Hogg & Abrams 后续发展）"
+method: "社会心理学理论综合（Tajfel & Turner 研究传统系统化）+ 实验与跨文化证据整合"
+results: "（理论综合）社会认同视角的标准教科书；将 SIT 与 SCT 整合为统一框架"
+limitations: "理论综合性质；身份动机的个体差异与文化调节需要后续研究细化"
+boundary_conditions: "身份显著性（salience）是关键调节；跨文化（独立/互依自我建构）有差异"
+relevant_nodes: [social_identity_theory, self_categorization, in_group_favoritism, community_boundaries]
+notes: "社会认同/自我归类域的综合教科书（book 级，SIT 域标准参考）。配套一手书章 S120（Tajfel & Turner 1979）已登记。未编造。"
+last_verified: "2026-09"

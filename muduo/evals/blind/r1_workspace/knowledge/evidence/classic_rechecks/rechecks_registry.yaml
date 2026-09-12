@@ -1,0 +1,90 @@
+# Classic Rechecks Registry — 复制危机敏感清单登记
+# 本文件即 EVIDENCE.md「复制危机敏感清单」的正式登记处。
+# 使用规则：命中下列机制的任何建议必须携带修正状态标注。
+# 证据来源：S125/S126/S127/S128/S129/S113/S108 等证据包原文。
+
+rechecks:
+  - id: behavioral_priming
+    node_ref: behavioral_priming
+    original_claim: "语义/语言启动直接驱动行为（老年人走路变慢等）"
+    recheck_verdict: "大规模预注册复制失败（Doyen 2012 等），效应远小于原始报告，部分为期望效应"
+    current_grade: E
+    sources: [S126]
+    usage_rule: "E 级——禁止作为建议依据；仅可用于讨论'为什么该说法不可靠'"
+  - id: ego_depletion
+    node_ref: ego_depletion
+    original_claim: "自控力是可耗竭的肌肉资源"
+    recheck_verdict: "大规模预注册复制失败（Hagger et al. 2016 RRR：23 实验室/2141 人，效应≈0），机制存疑"
+    current_grade: E
+    sources: [S125]
+    usage_rule: "E 级——禁止作为建议依据；经典结论被修正时保留修正"
+  - id: power_posing
+    node_ref: null  # 原 power_posing 节点已删除（激素/行为效应复制失败，反向审计移除）；本条保留为反引入守卫：任何建议不得引用 power posing 激素/行为效应
+    original_claim: "扩张性姿势改变激素水平并提升风险行为"
+    recheck_verdict: "Ranehill 2015（N=200）：激素与行为效应复制失败，自报感受效应保留；原节点已从库中移除（2026-09-09 收口留痕）"
+    current_grade: E
+    sources: [S127]
+    usage_rule: "E 级——禁止作为建议依据"
+  - id: loss_aversion
+    node_ref: loss_aversion
+    original_claim: "损失厌恶是普适铁律，损失效用约为收益 2 倍"
+    recheck_verdict: "存在但幅度有争议、个体差异大（Gal & Rucker 2018 三条批判；Camerer 2024 元分析 607 项，系数 1.955 [1.820, 2.102]；'2:1'是范式参数非普适常数；或主要为框架效应产物）"
+    current_grade: B（降级自 A）
+    sources: [S113, S129]
+    usage_rule: "B 级——建议必须携带边界（小损失/抽象损失不对称较弱；与现状偏差等机制纠缠）"
+  - id: scarcity_bandwidth
+    node_ref: scarcity_mindset
+    original_claim: "稀缺征用带宽，导致认知能力下降"
+    recheck_verdict: "大相关+实验证据，但部分大规模复制效应缩水（Mani 2013 Science 原始 + Carvalho 2016/Shah 2023 边界）"
+    current_grade: B/C
+    sources: [S128]
+    usage_rule: "B/C 级——按具体效应当值携带边界"
+  - id: nudge_average_effect
+    node_ref: nudge_mechanism
+    original_claim: "选择架构干预平均能显著改变行为"
+    recheck_verdict: "Maier et al. 2022：控制发表偏差后效应大幅缩水（b=2.10, BF01>1），部分政策有效"
+    current_grade: C（按具体 nudge 分）
+    sources: [S108]
+    usage_rule: "C 级——按具体 nudge 类型定值，不得引用平均效应作为强建议依据"
+  - id: social_proof_robustness
+    node_ref: social_proof
+    original_claim: "社会认同普遍提升从众/采纳"
+    recheck_verdict: "基础效应稳健，但效果受规范类型与身份匹配调节（Cialdini 框架 + 现场实验）"
+    current_grade: A-
+    sources: [S102, S103, S104, S136]
+    usage_rule: "A- 级——携带规范类型/身份匹配调节边界"
+  - id: mere_exposure_meta
+    node_ref: mere_exposure
+    original_claim: "重复曝光单调提升好感"
+    recheck_verdict: "元分析稳健，但单调重复会衰减（倒 U）；2026-09-09 反向审计：库内 EP 仅摘要级（S111），A- 降 B+ 待建包后回升"
+    current_grade: B+（2026-09-09 降级自 A-）
+    sources: [S111]
+    usage_rule: "B+ 级——携带倒 U 边界；一手实验 EP 待建"
+  - id: emotional_contagion_ethics
+    node_ref: emotional_contagion
+    original_claim: "情绪可在网络中传染"
+    recheck_verdict: "存在；Kramer 2014（约 68 万用户 Feed 实验）有伦理争议（PNAS Editorial Expression of Concern）"
+    current_grade: B
+    sources: [S107]
+    usage_rule: "B 级——引用 Kramer 实验时必须并行伦理声明"
+  - id: choice_overload_conditional
+    node_ref: choice_overload
+    original_claim: "选择越多越瘫痪（果酱实验的通俗版）"
+    recheck_verdict: "Meta-analysis 平均效应≈0，有明确调节变量（Mochon 等）；果酱 24 vs 6 原始文献未建包"
+    current_grade: B（条件化）
+    sources: [S109, S71, S72]
+    usage_rule: "B 级——仅在调节变量在位时引用（专业消费者/时间压力/品类复杂度）"
+  - id: attention_span_8s_rumor
+    node_ref: attention_capacity_limits
+    original_claim: "'人类注意力只有 8 秒，比金鱼还短'"
+    recheck_verdict: "无原始研究支持，为媒体讹传；Gloria Mark 数据被误读；'金鱼注意力'无学术来源"
+    current_grade: 谣言（不采用）
+    sources: []
+    usage_rule: "禁止引用；遇到用户提及时应指出为讹传并给真实数据（Gloria Mark 屏幕注意时长趋势）"
+  - id: peak_end_rule_conditional
+    node_ref: peak_end_rule
+    original_claim: "峰终定律'必然'决定一切体验评价"
+    recheck_verdict: "回顾性评价机制成立（冷压实验摘要级 + 多源复现），但仅适用于有明确情节边界的经历；'必然'表述与跨场景泛化无据"
+    current_grade: B
+    sources: [S153, S01]
+    usage_rule: "B 级——必须携带'有情节边界的经历'边界；SKILL.md 铁律 2 已列为本库复核对象"

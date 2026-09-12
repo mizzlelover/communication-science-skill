@@ -1,0 +1,24 @@
+# Evidence Package — S149 Tulving & Thomson 1973（Encoding Specificity and Retrieval Processes in Episodic Memory）
+# 标准格式。access_level 如实标注。
+source_id: S149
+title: "Encoding Specificity and Retrieval Processes in Episodic Memory"
+authors: "Endel Tulving; Donald M. Thomson"
+year: 1973
+journal: "Psychological Review 80(5): 352-373"
+doi: "10.1037/h0020071"
+url: "https://ir.psych.ac.cn/bitstream/311026/1216/3/%E5%9B%BD%E5%A4%96%E5%85%B3%E4%BA%8E%E5%86%8D%E8%AE%A4%E5%A4%B1%E8%B4%A5%E7%A0%94%E7%A9%B6%E7%9A%84%E7%BB%BC%E8%BF%B0.pdf"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：中科院心理所综述《国外关于再认失败研究的综述》（ir.psych.ac.cn PDF，实抓）对 Tulving & Thomson 1973 实验 1 的详细转述：再认失败范式（RFP，线索-目标词对如 ground-COLD），实验 1 目标词再认概率 P(Rn)=0.26、线索回忆概率 P(Rc)=0.63，实验 1、2 中「能回忆但不能再认」与「能再认但回忆不出」之比为 15:1；渠道2：arabpsychology.com《Encoding Specificity》词条（实抓）转述弱线索实验：编码时出现的冷线索 cold 比未编码但语义更强的 earth 更能引出 GROUND；渠道3：PubMed 引文（PMID 32368019、32368019 引文列表）确认期刊/卷期/DOI"
+research_question: "记忆提取的有效线索由什么决定？提取线索的有效性是绝对的（取决于线索-目标语义联想强度）还是相对的（取决于编码时实际加工了什么信息）？"
+core_claims:
+  - "提取线索的有效性不是绝对的而是相对的：只有编码时加工过的信息才能成为有效提取线索（编码特异性原则）"
+  - "编码时出现的「弱」线索（如词对 cold-GROUND 中的 cold）在回忆中优于未在编码时出现但语义上更强的线索（如 earth）"
+  - "识别失败（recognition failure）：被试能凭线索回忆出目标词却无法在再认测验中识别它——提取条件是记忆可及性的决定因素，与「再认总是优于回忆」的生成-再认（G-R）理论预测相反"
+method: "再认失败范式（RFP）：①词表学习（呈现线索-目标词对，如 ground-COLD，要求记忆大写目标词并注意线索词及线索-目标关系）；②再认测验；③线索回忆；比较再认与线索回忆之间的列联关系"
+results: "实验 1 中目标词再认概率 P(Rn)=0.26、线索回忆概率 P(Rc)=0.63；实验 1、2 中「能回忆但不能再认」与「能再认但回忆不出」之比为 15:1——强再认失败现象；为编码特异性原则提供实验基础"
+limitations: "原文正文未直接获取（APA 付费墙），实验细节经中科院心理所综述（含具体统计量）与第三方词条转述交叉核实；效应受线索-目标联想强度等条件调制（同系列 Thomson & Tulving 1970 train-black 先例；Tulving-Wiseman 函数刻画其边界条件）"
+boundary_conditions: "编码-提取线索重叠是提取前提，但线索还需具备区分性（memory-as-discrimination 观点）；语义线索通常强于物理环境线索；对传播设计：信息要在与未来使用场景相似的情境中编码，并预埋场景词作为提取线索"
+relevant_nodes: [encoding_specificity, retrieval_cue_design]
+notes: "编码特异性原则的奠基论文（paper 级）。APA 正文付费，核心实验数字经中科院心理所综述+第三方词条多源交叉，未编造。支撑 memory.yaml encoding_specificity 与 comprehension.yaml retrieval_cue_design 两节点。"
+last_verified: "2026-09"

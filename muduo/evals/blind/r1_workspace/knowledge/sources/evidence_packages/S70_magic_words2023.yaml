@@ -1,0 +1,24 @@
+# Evidence Package — S70 Berger 2023（Magic Words）
+# 标准格式。access_level 如实标注。
+source_id: S70
+title: "Magic Words: What to Say to Get Your Way"
+authors: "Jonah Berger"
+year: 2023
+journal: HarperCollins（专著，256 页）
+doi: "无 DOI（专著）"
+url: "https://news.uchicago.edu/magic-words-can-what-you-say-help-you-get-your-way"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：芝加哥大学 Big Brains 播客（六类语言/机器学习与计算语言学大数据/'你'vs'我'/could vs should/身份语言）+ 豆瓣简介（六类词提高说服/关系/创造/激励）+ 作者笔记（Contagious 原则：社交货币/诱因/情绪/公开性/实用价值/故事——Berger 传播框架）"
+research_question: "哪些语言形式能提高说服、激励与合作效果？数据驱动能发现什么'魔法词'？"
+core_claims:
+  - "六类语言（身份语言/具体性/连接词/情绪词/简洁/信任类等）能系统提高影响力——基于机器学习+计算语言学+数字化语料（求职信/对话/文案）的大规模分析"
+  - "具体发现：身份语言（'你想要成为什么样的人'）比行动语言更能激励坚持（饮食目标）；'你' vs '我'的选择影响关系与说服；'could' 比 'should' 更激发创造力（自主性）；hedge 词削弱力量"
+  - "同一本书（Contagious）的传播框架（社交货币/诱因/情绪/公开性/实用价值/故事，STEPPS）与 Magic Words 同源：情绪/实用价值驱动分享"
+method: "实证营销科学（大规模数据+实验，Wharton）+ 应用案例"
+results: "（应用实证）数据驱动语言影响力的流行科学代表（D 级实践框架成分）"
+limitations: "公开演示性案例多、完整实验细节少（popular science）；效应量依场景而变"
+boundary_conditions: "适用于语言选择的场景匹配（'锤子与螺丝刀'）；单一语言技巧非万能"
+relevant_nodes: [concreteness_in_language, pronoun_perspective_effects, specificity_effect, verb_concreteness_action_language, disfluency_deep_processing, fluency_truth_effect, name_pronunciability, processing_fluency, rhetorical_question_engagement, rhyme_as_reason, trust_signals_content]
+notes: "数据驱动语言影响来源（book 级）。六类词/身份语言为公开内容，未编造。"
+last_verified: "2026-09"

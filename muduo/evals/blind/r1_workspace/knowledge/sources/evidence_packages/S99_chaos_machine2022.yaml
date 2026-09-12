@@ -1,0 +1,26 @@
+# Evidence Package — S99 Fisher 2022（The Chaos Machine）
+# 标准格式。access_level 如实标注。
+source_id: S99
+title: "The Chaos Machine: The Inside Story of How Social Media Rewired Our Minds and Our World"
+authors: "Max Fisher"
+year: 2022
+journal: Little, Brown and Company（专著，调查报道）
+doi: "无 DOI（专著）"
+url: "https://m.douban.com/book/subject/36149583/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：豆瓣图书简介与多篇短评（engagement 竞速、YouTube 推荐算法把用户导向越来越极端内容、算法利用社交奖励 social reward 与道德愤怒 moral outrage、『极化激励系统』中温和言论被饿死极端言论被喂饱）+ 出版社 Little, Brown 官方简介（Big Tech 的 engagement 竞速、缅甸/斯里兰卡/美国 2020 大选与国会山暴乱、平台以言论自由为名拒绝干预）+ 亚马逊页面编辑评论（NYT Book Review『authoritative and devastating』、The New Yorker：算法系统性地推广激发道德愤怒并凝聚『受威胁感』群体身份的内容）"
+research_question: "社交媒体的 engagement 算法如何利用人类心理弱点、放大愤怒与极端化，从而重塑人的心智与世界？"
+core_claims:
+  - "Facebook、Twitter、YouTube 等社交网络利用用户心理弱点设计算法，以最大化 engagement 与利润为唯一目标，把普通用户推向极端观点乃至极端行动"
+  - "算法并非在寻找『好的内容』，而是在寻找最能激发本能反应的内容：它利用人类进化中的社交奖励（social reward）与道德愤怒（moral outrage）机制，把心理本能转化为利润"
+  - "平台构成『极化激励系统』：温和言论被饿死、极端言论被喂饱；算法系统性地推广激发道德愤怒、以受威胁感凝聚群体身份的内容"
+  - "后果是全球性的：从缅甸、斯里兰卡等地的仇恨言论与暴力外溢，到美国疫情期间、2020 年大选与国会山暴乱；平台自称捍卫言论自由实则追逐利润，拒绝有意义的干预"
+  - "结果是文化转向：人们被极化所依据的不再是基于事实的信念，而是虚假信息、愤怒与恐惧（polarized not by beliefs based on facts, but by misinformation, outrage, and fear）"
+method: "调查报道专著（《纽约时报》国际记者基于多年国际报道 + 平台内部文件与硅谷告密者访谈，跨缅甸/斯里兰卡/美国等多国案例的时间线叙事）"
+results: "（调查报道）对社交平台算法放大极端内容的最全面编年记录之一，获 Helen Bernstein 图书奖新闻类决赛提名"
+limitations: "调查报道的论证形态（叙事+内部文件+个案），因果主张非受控实验；读者书评指出其论点创新性有限、解决方案薄弱；对评论区自我纠正功能等反证着墨少"
+boundary_conditions: "适用于 engagement 排名算法的社交媒体环境；平台政策与监管变化（审核、算法透明度）会改变机制强度；对非英语/非美国语境需调整案例"
+relevant_nodes: [algorithmic_amplification, filter_bubble_echo_chambers, bot_amplified_social_proof]
+notes: "算法放大与极化的调查报道（book 级）。核心论点经出版社简介、NYT Book Review/The New Yorker 书评与豆瓣多篇短评交叉确认，未编造。"
+last_verified: "2026-09"

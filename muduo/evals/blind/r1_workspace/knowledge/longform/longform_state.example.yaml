@@ -1,0 +1,60 @@
+article_id: LF-DEMO
+central_thesis: 演示：社群失败多因身份感缺失
+completed_sections:
+- S1-S4
+- S5
+ap_lf_hits:
+- ap_id: AP-LF-002
+  location: §1
+  signal: context 占比 >20%
+- ap_id: AP-LF-007
+  location: §4
+  signal: thesis 首现 36% > 15%
+- ap_id: AP-LF-003
+  location: §5
+  signal: 单节 6 概念无锚定
+- ap_id: AP-LF-016
+  location: §6
+  signal: 黑话 ≥10/段
+- ap_id: AP-LF-019
+  location: §5-7
+  signal: 三节结构同构
+- ap_id: AP-LF-012
+  location: §4
+  signal: n=1 全称化，无反方层
+- ap_id: AP-LF-013
+  location: §9
+  signal: 结尾信息增量为零
+ap_lf_fixes:
+- ap_id: AP-LF-002
+  action: Cut/Move per §3b 第三列
+  status: done
+  note: S2 执行
+- ap_id: AP-LF-007
+  action: Cut/Move per §3b 第三列
+  status: done
+  note: S2 执行
+- ap_id: AP-LF-016
+  action: Cut/Move per §3b 第三列
+  status: done
+  note: S2 执行
+- ap_id: AP-LF-003
+  action: Rewrite/差异化结构
+  status: done
+  note: S3 执行
+- ap_id: AP-LF-019
+  action: Rewrite/差异化结构
+  status: done
+  note: S3 执行
+- ap_id: AP-LF-013
+  action: Rewrite Closure
+  status: skipped
+  note: 用户选择保留结尾呼应（修辞性重复），理由已确认
+- ap_id: AP-LF-012
+  action: 补 counterargument 三件套
+  status: pending
+  note: 待用户确认边界条件措辞
+open_questions:
+- 诊断框架五问的具体条目
+pending_issues:
+- 咖啡案例的选择效应替代解释待补

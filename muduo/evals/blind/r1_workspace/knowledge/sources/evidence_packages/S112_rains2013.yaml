@@ -1,0 +1,24 @@
+# Evidence Package — S112 Rains 2013
+# 标准格式。access_level 如实标注。
+source_id: S112
+title: "The Nature of Psychological Reactance Revisited: A Meta-Analytic Review"
+authors: "Stephen A. Rains"
+year: 2013
+journal: Human Communication Research 39(1), 47-73
+doi: "10.1111/j.1468-2958.2012.01443.x"
+url: "https://academic.oup.com/hcr/article/39/1/47-73/4093682"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "OUP 摘要全文（K=20, N=4,942；intertwined model 结论）+ 出版元数据"
+research_question: "心理逆反（psychological reactance）的最佳概念模型是什么？逆反可否直接测量？"
+core_claims:
+  - "Brehm 的逆反理论长期以来被视为不可直接测量的动机状态"
+  - "Dillard & Shen 2005 提出逆反可概念化为认知+情感并可直接测量"
+  - "meta 分析（K=20, N=4,942）结果支持'交织模型'（intertwined model）：逆反为以愤怒与反驳（counterarguments）为指标的潜在因素，拟合最优"
+method: "meta 分析（20 研究/4,942 被试）→ 用路径模型检验竞争性逆反概念模型"
+results: "交织模型（anger + counterarguments 作为逆反指标）最佳拟合"
+limitations: "以英文健康传播逆反研究为主；原文正文细节未取（订阅墙）"
+boundary_conditions: "逆反=自由威胁感知→愤怒+反驳→态度/行为抵制；语言控制性等消息特征可调节"
+relevant_nodes: [psychological_reactance]
+notes: "OUP 摘要全文实取 → 从 found 升级为 annotated。2025 最新 meta（Li & Shi 2025, HCR）提供后续效应量补充方向。"
+last_verified: "2026-09"

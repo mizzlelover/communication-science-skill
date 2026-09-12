@@ -1,0 +1,25 @@
+# Evidence Package — S178 Fehr & Schmidt 1999（A Theory of Fairness, Competition, and Cooperation）
+# 标准格式。access_level 如实标注。
+source_id: S178
+title: "A Theory of Fairness, Competition, and Cooperation"
+authors: "Ernst Fehr; Klaus M. Schmidt"
+year: 1999
+journal: "Quarterly Journal of Economics 114(3): 817-868"
+doi: "10.1162/003355399556151"
+url: "https://pdfs.semanticscholar.org/708c/2483f71e7d4aa9c686f9c1599e41cf4afae9.pdf"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：JSTOR 论文页官方摘要（https://www.jstor.org/stable/2586885）；渠道2：IDEAS/RePEc 记录页摘要+完整引文（https://ideas.repec.org/h/lmu/muench/20658.html）；渠道3：Semantic Scholar 公开 PDF（模型与效用函数、最后通牒博弈与市场博弈应用讲解）"
+research_question: "能否用一个简单统一的原理（自我中心的不平等厌恶）解释竞争市场、双边谈判与自愿合作博弈中看似矛盾的公平与自利行为？"
+core_claims:
+  - "引入自我中心不平等厌恶（self-centered inequality aversion）：人们愿意放弃部分物质收益以趋近更公平的结果，且对自身处于不利地位的不平等（α）比处于有利地位的不平等（β）更敏感（α_i ≥ β_i）"
+  - "效用函数 U_i(x) = x_i − α_i·Σmax(x_j−x_i,0)/(n−1) − β_i·Σmax(x_i−x_j,0)/(n−1)，除自利假设外无需其他偏离即可解释大量实验事实"
+  - "经济环境决定公平型与自利型谁主导均衡行为：双边谈判（最后通牒博弈）出现公平分配，竞争市场博弈出现剥削性均衡"
+  - "该模型是结果导向（outcome-based）的公平模型，区别于 Rabin 1995 的意图导向公平模型"
+method: "博弈论建模 + 对最后通牒博弈与竞争性市场博弈的均衡分析（与既有实验证据对照）"
+results: "只要一部分人具有不平等厌恶，最后通牒博弈的公平分配与公共品/竞争市场中的自利行为即可被统一解释；惩罚机会可维持稳定合作"
+limitations: "模型假定公平型与自利型的固定分布，未内生其演化；α、β 参数不随情境变化；结果导向模型无法捕捉意图与互惠动机"
+boundary_conditions: "适用于有分配结果的博弈情境；匿名竞争市场与高关系距离场景中公平约束减弱；均衡结果取决于公平型在群体中的比例与市场结构"
+relevant_nodes: [fairness_preferences, reciprocity_norm, norm_enforcement_reputation, reciprocity_exchange_networks, loss_aversion]
+notes: "公平偏好（不平等厌恶）的形式化奠基论文；核心内容来自公开 PDF 与多源交叉，未编造。"
+last_verified: "2026-09"

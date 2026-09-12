@@ -1,0 +1,206 @@
+platform_name: X（Twitter）
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：280 字符上限、For You/Following 双流、引用转发、Community Notes
+  等产品形态为公开可见规则；2023 年开源的推荐算法快照提供了信号权重方向
+  （但权重随版本持续变化）；订阅制（Premium）改变触达与可见性。
+  2026-09-08 实取：How to Post / How to Repost / Community Notes 页与 CN 指南（S1-S4）。
+  2026-09-10 经 CDP 浏览器实读补强五页：About Articles / About X Premium /
+  How to create a thread / About X Lists / The X Rules（platform_sources），
+  Thread 截断展开机制、Lists 产品功能、Premium reply prioritization 分档、
+  Articles 排版与官方写作指南均升为 L1 官方确认；known_platform_patterns 已按
+  L1-L4 标注，official_rule 标注均有实读官方正文对应，无法实读的已降级为
+  industry_consensus L3 并注明。所有标注以平台最新公告为准，
+  使用 update_platform_knowledge 流程复核。
+
+content_units:
+  - "短帖（免费用户 280 字符内）"
+  - "长帖（Premium 订阅功能，无标题元素）"
+  - "Thread（连续帖串）"
+  - "Articles（文章模块：独立标题＋正文排版，形态接近博客）"
+  - "图片（最多 4 张）/视频/GIF"
+  - "Spaces（语音房）"
+  - "Community Notes（众包事实核查）"
+
+dominant_user_intent:
+  - "实时信息获取（全球事件的第一现场）"
+  - "行业/名人追踪（特定圈层的信息流）"
+  - "观点表达与争论（立场表演的公共广场）"
+
+distribution_model: >-
+  For You 算法流+Following 时间序双流 [official_rule-产品形态]：
+  实时热点与回复互动驱动扩散；引用转发把评论与传播合并为单一动作；
+  转发链+回复区的公共性使其成为"观点竞技场"而非内容消费场。
+
+recommendation_model: >-
+  2023 年开源的算法快照显示回复/引用的权重高于点赞
+  [verified_observation-基于开源快照分析，权重随版本持续变化]；
+  实时性（recency）是重要排序维度 [industry_consensus]。
+
+social_graph_characteristics: >-
+  单向关注+陌生人公共广场：回复区默认公开，无互关门槛——
+  陌生人可直接进入对话；关注列表+Lists 是用户自建的信息源结构
+  [official_rule-产品存在]。
+
+content_lifecycle: >-
+  极短（小时级）：帖子在时间流中的半衰期以小时计；
+  Thread 可沉淀更长尾；搜索与列表提供有限复用。
+  与微博类似，是"实时流"而非"资产库"。
+  [industry_consensus L3-行为观察；双流/Thread 产品形态为公开可见]
+
+primary_entry_points:
+  - "For You（算法流，默认）"
+  - "Following（时间序）"
+  - "Trending（热搜趋势）"
+  - "Lists（自建信息源）"
+  - "Spaces / 通知"
+
+attention_environment: >-
+  极快扫读+高情绪密度：信息以秒级刷新，注意力碎片化到单帖级别；
+  争论性环境的情绪唤起水平高（discrete_emotion_sharing_profiles）。
+  [industry_consensus L3-行为观察]
+
+user_behavior: >-
+  表达>消费：发帖/回复/引用的意愿高于多数平台 [industry_consensus-行为观察]；
+  截图文化（把帖子截到其他平台传播）是跨平台扩散常态 [industry_consensus]；
+  ratio 现象（回复远多于点赞=负面共识信号 [industry_consensus]）。
+
+interaction_signals:
+  - "回复：权重最高的互动 [verified_observation-基于开源算法快照，以最新版本为准]"
+  - "引用转发：扩散+评论合并的动作，权重高 [verified_observation-同上]"
+  - "转发：纯扩散（不加评论的原帖再分发，与引用转发相区别）[official_rule-产品机制 S3]"
+  - "点赞：最低成本认可，权重低 [verified_observation-同上]"
+  - "书签：保留型信号 [verified_observation-基于开源算法快照，以最新版本为准]"
+  - "Community Notes：内容可信度的众包修正 [official_rule-产品存在]"
+
+sharing_mechanism: >-
+  引用转发（quote）是物种特征：表达立场的同时完成传播
+  （official_rule-产品形态）；帖子链接在站外流通顺畅；
+  截图到其他社交平台是常见路径 [industry_consensus]。
+
+search_mechanism: >-
+  实时搜索强：事件关键词+话题标签的实时聚合；
+  老帖搜索价值低——搜索心智围绕"正在发生"。
+  [industry_consensus L3-行为观察]
+
+community_mechanism: >-
+  Communities（兴趣社区）、Spaces（语音共同在场）、Lists（信息源自组织）；
+  圈层结构通过"关注谁"自组织——行业圈/币圈/体育圈各自成场；
+  匿名与大 V 共存的生态独特 [industry_consensus]。
+
+algorithmic_features:
+  - "For You 排序（开源快照揭示的方向，持续演进）[verified_observation]"
+  - "Trending 趋势榜 [official_rule-产品存在]"
+  - "Community Notes 众包核查 [official_rule-产品存在]"
+  - "Premium 订阅的可见性加权：reply prioritization 功能存在且分三档经官方确认 [official_rule-About X Premium 实读]；具体排序权重不公开 [industry_consensus]"
+
+content_constraints:
+  - "[official_rule] 免费用户单帖 280 字符上限（官方公开规则）"
+  - "[official_rule] Premium 用户可发更长帖子（具体额度随订阅档位与版本变化，以平台最新公告为准）"
+  - "[official_rule] 单帖图片上限 4 张（以平台最新公告为准）"
+
+title_role: >-
+  分形态陈述（诊断前必须先确认发布形态）：普通 post/长帖（Premium）无标题元素，
+  首句承担全部信息职责；Thread 的首帖即"标题+承诺"，决定是否被展开阅读
+  （thread 的展开率是独立漏斗 [industry_consensus]）。
+  Articles（文章模块）有独立标题元素，标题在信息流/feed 卡片独立作战、无首帖兜底，
+  必须自带钩子与读者利益 [Articles 产品存在＝官方开发者文档已确认（docs.x.com，2026-09-10 实读）；
+  卡片展开行为＝industry_consensus L3]。
+  两种形态下"标题/首句五项必查＋第二道门"同样适用，但机制载体不同（首句 vs 标题字段）。
+
+cover_role: >-
+  弱角色：图片/视频首帧承担视觉；纯文字帖在本平台是主流——
+  与视觉平台的根本区别。[industry_consensus-行为观察]
+
+opening_role: >-
+  首句定生死：280 字符内"金句/观点/数据"前置；
+  thread 首帖需制造"值得展开"的缺口（curiosity_gap + zeigarnik_effect）。
+  [industry_consensus-策略观察；280 字符约束为 official_rule S1]
+
+tag_role: >-
+  #话题标签聚合与 Trend 参与；权重语义低于微博热搜但实时聚合功能一致
+  [industry_consensus]。
+
+comment_role: >-
+  回复是核心互动（权重最高）：公共辩论文化、ratio 风险、
+  神回复文化并存；回复区是观点交锋的公开剧场——
+  品牌在此发言的容错率低。
+  [verified_observation-回复权重基于开源算法快照；辩论文化与 ratio 为 industry_consensus-行为观察]
+
+follow_role: >-
+  关注+Lists 管理信息源；粉丝数=公共话语权的直接货币。
+  reply prioritization（回复优先）为官方分档权益：Basic 有、Premium 更大、Premium+ 最大
+  [official_rule-About X Premium 实读 2026-09-10；具体排序加权算法不公开，以最新公告为准]。
+  蓝标经审核后显示（Premium/Premium+ 档）。
+
+risk_factors:
+  - "[industry_consensus] 毒性争论与品牌安全：观点内容的对立面反噬烈度高"
+  - "[industry_consensus] 假消息扩散速度：实时平台的纠错滞后于传播（misinformation_velocity）"
+  - "[official_rule-规则页已实读 2026-09-10] 账号封禁依据 X Rules（help.x.com/en/rules-and-policies/x-rules：safety/privacy/authenticity）；'可见性降权'细则未逐条实读，表述以'以平台最新规则为准'为限"
+  - "[industry_consensus] 订阅制改变触达生态：免费内容的可见性受订阅策略影响（platform_power_gatekeeping）"
+  - "[industry_consensus] bot 与水军互动：互动数据的真实性需甄别（bot_amplified_social_proof）"
+
+known_platform_patterns:
+  - pattern: "Articles 长文：标题在 feed 卡片独立作战"
+    mechanism_links: [processing_fluency, curiosity_gap, category_entry_points, information_scent]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: S6
+    last_verified: "2026-09"
+    note: "Articles 为官方产品功能：官方帮助页 About Articles 已实读（accessed 2026-09-10）——仅限 Premium/Premium+/Premium Business/Organizations，支持 headings/粗斜体/列表排版与图片视频 GIF 帖子链接嵌入，编辑需先 unpublish 再 republish。官方写作指南明确建议：'标题要具体、激发好奇、承诺价值，并配强首句钩子'与'结尾有力收尾、提问引发回复'（L1＝官方指南内容本身；策略的实证效应等级仍按机制条目 A-/B 计）。'标题在 feed 卡片独立作战、标题质量决定展开'的行为判断仍为行业共识 L3（官方页未描述分发机制）。边界：Articles 与普通长帖是两种形态，诊断前必须先确认发布形态。备注：Premium 页将 Articles 列于 Premium+ 权益，与 Articles 页'Premium 及以上可用'存在分档表述出入，两页并读从宽处理，待官方澄清。"
+  - pattern: "Thread 拆分长内容（首帖钩子+续帖交付）"
+    mechanism_links: [zeigarnik_effect, curiosity_gap, serial_position_effect]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: S8
+    last_verified: "2026-09"
+    note: "产品机制已官方确认（How to create a thread on X，accessed 2026-09-10）[L1]：Thread＝一人系列连帖；时间线中 4 帖以上截断并显示 Show this thread 展开入口；发布后可追加帖。'首帖钩子决定展开率、🧵/1/n 标记承诺后续'的运营手法与展开行为仍为行业共识 L3。边界：注水续帖消耗展开信任。"
+  - pattern: "引用转发表达立场（quote 作为评论式扩散）"
+    mechanism_links: [self_presentation_impression_management, identity_signaling, informational_influence]
+    fact_type: industry_consensus
+    evidence_level: L2
+    source_ref: S3
+    last_verified: "2026-09"
+    note: "quote 让转发者附加自己的观点——被 quote 的原始内容可能被放大也可能被公开批评；品牌帖被大量负面 quote 是本平台特有风险。产品机制（引用转发可附加评论与媒体、分享给粉丝）经 X Help Center 'How to Repost' 官方确认 [S3]；'表达立场'驱动与负面 quote 风险为行业观察。"
+  - pattern: "观点冲突驱动回复量（互动权重结构）"
+    mechanism_links: [schema_violation, discrete_emotion_sharing_profiles, rhetorical_question_engagement]
+    fact_type: verified_observation
+    evidence_level: L2
+    source_ref: none
+    last_verified: "2026-09"
+    note: "开源快照显示回复权重高 [verified_observation-以最新版本为准]；争议性表达提升回复。边界：毒性互动的反噬与 brand safety 代价高，适用性因账号定位而异。证据基于 2023 年开源算法快照的分析（已验证观察），非官方文档，权重随版本持续变化。"
+  - pattern: "首句金句+数字/反直觉前置"
+    mechanism_links: [processing_fluency, specificity_effect, anchoring_effect]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: S1
+    last_verified: "2026-09"
+    note: "280 字符约束强制压缩表达——具体数字与反常识断言在扫读环境中识别度最高。280 字符约束经官方帮助文档确认 [S1]；'数字/反直觉前置'策略本身为行业共识。"
+  - pattern: "实时热点第一现场响应"
+    mechanism_links: [attention_economics, misinformation_velocity, availability_heuristic]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "事件发生时的即时帖可获得趋势流量；边界：信息未核实的抢发是 ratio 与纠错风险的主要来源。"
+  - pattern: "Lists/圈层自组织的信息分发"
+    mechanism_links: [homophily, weak_ties_strength, structural_holes_bridging]
+    fact_type: official_rule
+    evidence_level: L1
+    source_ref: S9
+    last_verified: "2026-09"
+    note: "产品功能与机制已官方确认（About X Lists，accessed 2026-09-10）[L1]：Lists 可自定义/组织/置顶时间线，公开或私人，可加入他人 Lists，官方提供 Lists 发现与推荐。'圈层自组织的信息分发——跨圈层引用（结构洞）是破圈路径'的行为判断仍为行业共识 L3。"
+
+platform_sources:
+  - {sid: "S1", source: "X Help Center - How to Post（https://help.x.com/en/using-x/how-to-post）", source_owner: "X Corp.", source_type: official, claim_supported: "单帖 280 字符上限；单帖媒体最多 4 个（照片/GIF/视频）；X Premium 长帖（Web 端 25,000 字符）", published_date: "未知（常青帮助页）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {sid: "S2", source: "X Help Center - Community Notes（https://help.x.com/en/using-x/community-notes）", source_owner: "X Corp.", source_type: official, claim_supported: "Community Notes 众包核查机制：贡献者撰写并评分，来自不同视角的贡献者评为 helpful 才公开展示；算法开源可审查", published_date: "未知（常青帮助页）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {sid: "S3", source: "X Help Center - How to Repost（https://help.x.com/en/using-x/how-to-repost）", source_owner: "X Corp.", source_type: official, claim_supported: "Repost 与 Quote 产品机制：引用转发可附加评论与媒体并分享给粉丝；原帖内容不计入引用帖字符限制", published_date: "未知（常青帮助页）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {sid: "S4", source: "Community Notes 官方指南 - Introduction（https://communitynotes.x.com/guide/en/about/introduction）", source_owner: "X Corp.", source_type: official, claim_supported: "Community Notes 目标与多视角共识机制：X 不代写/代审笔记，排名算法开源透明、可公开审查", published_date: "未知（常青指南）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {sid: "S5", source: "X Developer Documentation - Changelog（https://docs.x.com/changelog）", source_owner: "X Corp.", source_type: official, claim_supported: "Articles 为官方产品功能：X API v2 提供 Articles 起草与发布端点（/x-api/articles/introduction）及 Article 元数据读取端点", published_date: "2026-06-11（changelog 条目日期）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S6", source: "X Help Center - About Articles（https://help.x.com/en/using-x/articles）", source_owner: "X Corp.", source_type: official, claim_supported: "Articles 仅限 Premium/Premium+/Premium Business/Premium Organizations；支持 headings、粗斜体、列表等排版与图片/视频/GIF/帖子/链接嵌入；发布后按受众设置可被任何人阅读；编辑需先 unpublish 再 republish；官方写作指南建议：标题要具体/激发好奇/承诺价值并配首句钩子，结构可略读，结尾强收尾并提问引发回复，发布前预告、发布后置顶 24-72 小时、拆 threads 引流、回复早期读者", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S7", source: "X Help Center - About X Premium（https://help.x.com/en/using-x/x-premium）", source_owner: "X Corp.", source_type: official, claim_supported: "Premium 三档（Basic/Premium/Premium+）；reply prioritization 为官方分档权益（Basic 有/Premium 更大/Premium+ 最大）；长帖为 Basic 权益；蓝标经审核后显示；本页将 Articles 列于 Premium+ 权益（与 Articles 页'Premium 及以上可用'存在分档表述出入）", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S8", source: "X Help Center - How to create a thread on X（https://help.x.com/en/using-x/create-a-thread）", source_owner: "X Corp.", source_type: official, claim_supported: "Thread＝一人系列连帖；时间线中 4 帖以上截断并显示 Show this thread 展开入口；发布后可继续追加帖", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S9", source: "X Help Center - About X Lists（https://help.x.com/en/using-x/x-lists）", source_owner: "X Corp.", source_type: official, claim_supported: "Lists 官方功能：自定义/组织/置顶时间线，公开或私人，可加入他人 Lists，官方提供 Lists 发现与推荐", published_date: "未知（常青帮助页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+  - {sid: "S10", source: "X Help Center - The X Rules（https://help.x.com/en/rules-and-policies/x-rules）", source_owner: "X Corp.", source_type: official, claim_supported: "X Rules 官方规则页公开：safety/privacy/authenticity 等规则与账号处置依据", published_date: "未知（常青规则页）", accessed_date: "2026-09-10", freshness: current, confidence: high}
+
+confidence: medium

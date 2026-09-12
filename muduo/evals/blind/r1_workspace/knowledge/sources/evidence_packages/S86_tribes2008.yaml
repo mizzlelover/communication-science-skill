@@ -1,0 +1,26 @@
+# Evidence Package — S86 Godin 2008（Tribes）
+# 标准格式。access_level 如实标注。
+source_id: S86
+title: "Tribes: We Need You to Lead Us"
+authors: "Seth Godin"
+year: 2008
+journal: Portfolio（Penguin Group，专著）
+doi: "无 DOI（专著）"
+url: "https://www.penguinrandomhouse.com/books/300941/tribes-by-seth-godin/9781440644504/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：Penguin Random House 官方书页（建立部落三步法：the desire to change things / the ability to connect a tribe / the willingness to lead；互联网消除了地理、成本与时间障碍）+ Publishers Weekly 书评（部落=a group of people connected to each other, to a leader and to an idea；恐惧批评与犯错阻碍领导）+ USI 图书馆编目摘要（tribes are groups of people aligned around an idea, connected to a leader and to each other）+ TED2009 演讲官方简介（互联网终结大众营销、复兴部落，部落基于共享理念与价值观）"
+research_question: "什么是部落？互联网如何使普通人领导部落成为可能？"
+core_claims:
+  - "部落（tribe）= 围绕一个理念聚集、彼此相连并与领导者相连的一群人（a group of people connected to each other, to a leader and to an idea）"
+  - "互联网终结了大众营销，消除了地理、成本与时间的障碍，使人更容易寻找、组织、领导部落；部落由共享的理念与价值观维系（founded on shared ideas and values）"
+  - "建立部落的三步：渴望改变事物的欲望、连接部落的能力、领导的意愿（desire to change things / ability to connect a tribe / willingness to lead）"
+  - "多数人被『绵羊式行走』（sheepwalking）与对批评、犯错的恐惧束缚而放弃领导；『变革不是请求许可，而是事后请求原谅』（change is made by asking forgiveness, not permission）"
+  - "部落是人类的古老社会单元，基于共享理念与价值观；社交媒体给任何想有所作为的人提供了领导工具，这是当代的增长产业"
+method: "营销思想家的通俗领导力宣言（随笔式短论，147 页；案例+论证，非实证研究）"
+results: "（领导力宣言，D 级）将『部落』概念引入营销与领导力话语的畅销宣言；观点影响力大，论证强度高于证据强度"
+limitations: "论述性宣言，无系统实证数据；Publishers Weekly 书评指出书中『变革靠事后请求原谅』（asking forgiveness, later）的建议在特定企业环境中可能成为丢掉工作的方式"
+boundary_conditions: "适用于以理念聚合的社群/品牌运动与草根动员；对高度科层化组织与强监管行业需修正"
+relevant_nodes: [collective_identity_narrative, need_to_belong, identity_signaling]
+notes: "部落领导力宣言（book 级，D 级论述）。三步法与部落定义经出版社官方页与 Publishers Weekly 交叉确认，未编造。"
+last_verified: "2026-09"

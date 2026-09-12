@@ -1,0 +1,24 @@
+# Evidence Package — S167 Simon 1955（A Behavioral Model of Rational Choice）
+# 标准格式。access_level 如实标注。
+source_id: S167
+title: "A Behavioral Model of Rational Choice"
+authors: "Herbert A. Simon"
+year: 1955
+journal: "Quarterly Journal of Economics 69(1): 99-118"
+doi: "10.2307/1884852"
+url: "https://www.rand.org/pubs/papers/P365.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "RAND P-365（1953 预印本，与 QJE 1955 同文）官方元数据（A model is proposed for the description of rational choice by organisms of limited computational ability）+ NBER 工作论文（Salant & Spenkuch）引述核心模型（顺序评估直至超过抱负水平的满意选项）+ AER 2011（Caplin/Dean/Martin：多数被试顺序搜索、达到满意水平即停）+ PLoS ONE 2022 引文 + 科普中国中文详述（有限理性→满意化替代最优化的论证）+ RePEc 多源元数据交叉。QJE 一手摘要未取得（如实标注）。"
+research_question: "在认知与计算能力有限的约束下，理性选择应如何建模？"
+core_claims:
+  - "决策者并非全知全能的效用最大化者：受有限理性约束，只考察少量备选方案而非穷尽比较"
+  - "满意化（satisficing）：决策者设定抱负水平（aspiration level），顺序评估选项，遇到估计值超过抱负水平的选项即停止选择"
+  - "满意化以可接受的抱负水平替代全局最优化，节省搜索与计算成本；抱负水平随经验与环境动态调整"
+method: "理论模型构建（有限理性行为的正式模型）；后续经 Caplin/Dean/Martin 2011 搜索实验等实证验证"
+results: "有限理性/满意化框架成为行为经济学与组织决策理论的基石；后续实验显示多数被试顺序搜索并在满意水平停止，拒绝无条件最大化"
+limitations: "理论文章，实证验证来自后续研究；高重要性、低比较成本场景中人们仍会近似穷尽搜索"
+boundary_conditions: "选项多、比较成本高、决策可逆的场景最典型；抱负水平受先前经验与参照物影响而漂移"
+relevant_nodes: [satisficing]
+notes: "有限理性与满意化概念的奠基论文（1955 QJE，RAND P-365 预印本可公开获取）；QJE 一手摘要未取得，以 RAND 元数据+NBER/AER 引述+中文详述多源交叉如实标注。"
+last_verified: "2026-09"

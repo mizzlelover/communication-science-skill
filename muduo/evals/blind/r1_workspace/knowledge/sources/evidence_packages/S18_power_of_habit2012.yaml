@@ -1,0 +1,27 @@
+# Evidence Package — S18 Duhigg 2012（The Power of Habit）
+# 标准格式。access_level 如实标注。
+source_id: S18
+title: "The Power of Habit: Why We Do What We Do in Life and Business"
+authors: "Charles Duhigg"
+year: 2012
+journal: Random House（专著，ISBN 9781400069286）
+doi: "无 DOI（专著）"
+url: "https://charlesduhigg.com/the-power-of-habit/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：渠道1 作者官网（charlesduhigg.com，keystone habits、Alcoa/Febreze/Target/Phelps/Schultz/MLK 案例）+ 渠道2 科普解读（successodysseyhub，MIT 老鼠迷宫实验、基底节接管、chunking、40% 日常行为是习惯）+ 渠道3 行为科学媒体（psychologytoday 习惯养成词条：habit loop 概念来源、cue/routine/reward）+ 渠道4 深度摘要（chapterly.ai，cue 五类、黄金法则、信念与 AA、组织与社会习惯）+ 渠道5 中文解读（CSDN/sobrief：渴求、黄金法则、核心习惯、组织习惯、意志力消耗）"
+research_question: "习惯如何在大脑中形成，如何在个人、组织与社会层面运作，以及如何被改变？"
+core_claims:
+  - "习惯回路由三部分构成：线索（cue，触发自动模式并决定用哪个习惯）、惯常行为（routine，行为本身，可为身体/心理/情绪）、奖励（reward，告知大脑该回路是否值得记住）；回路存储于基底节，自动化后前额叶决策参与大幅下降（MIT 老鼠迷宫实验）"
+  - "渴求（craving）是习惯的真正驱动力：线索触发的是对奖励的预期与渴望（多巴胺提前释放），而非奖励本身"
+  - "习惯改变的黄金法则：习惯不能被消除，只能保留同一线索与同一奖励、替换中间的惯常行为（如 AA 用聚会与助人替代饮酒，Pepsodent/Febreze 案例）"
+  - "核心习惯（keystone habits）具有连锁效应：改变一个核心习惯（如运动、整理床铺、组织中的安全文化）会引发其他行为的连锁改变（如 Alcoa 案例）"
+  - "意志力是可消耗的肌肉式资源，可通过习惯化节省；持久改变需要信念（相信自己能改变），群体信念最有力（AA 的集体信念机制）"
+  - "组织与社会也有习惯：危机是重塑组织习惯的契机；社会运动依赖习惯机制的传播（民权运动案例）"
+method: "调查性新闻写作：整合神经科学（基底节、多巴胺）与行为科学研究的科普叙事 + 组织/个人案例（P&G、Target、Alcoa、NFL、医院等）"
+results: "（科普书）将习惯回路、核心习惯、黄金法则、渴求框架化为行为改变语言；成为全球畅销的行为科学普及框架"
+limitations: "科普叙事而非系统实证综述；'40% 以上日常行为是习惯'等数字为引述；习惯回路为简化模型，实证习惯研究（Wood & Rünger 2016、Lally 等 2010）的证据等级更高"
+boundary_conditions: "适用于情境稳定的重复行为；真实习惯形成无普适天数（21 天为商业讹传，Lally 等中位数约 66 天且个体差异极大）；行为复杂或奖励遥远时自动化困难"
+relevant_nodes: [habit_loop_cue_routine_reward, context_cue_stability, reward_prediction_dopamine]
+notes: "习惯回路（cue-routine-reward）科普化的源头著作；与实证习惯研究（S110 Wood & Rünger 2016）证据等级不同，本书记录为科普框架并如实区分。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

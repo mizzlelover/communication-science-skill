@@ -1,0 +1,26 @@
+# Evidence Package — S19 Ross & Nisbett 1991（The Person and the Situation）
+# 标准格式。access_level 如实标注。
+source_id: S19
+title: "The Person and the Situation: Perspectives of Social Psychology"
+authors: "Lee Ross; Richard E. Nisbett"
+year: 1991
+journal: McGraw-Hill（专著）
+doi: "无 DOI（专著）"
+url: "https://book.douban.com/subject/1032501/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：SAGE 社会认知手册章节（Ross & Nisbett 1991 对人格研究的批评/跨情境预测失败）+ 心理学教材（基本归因错误定义/问答游戏实验/文化差异）+ 归因研究综述（FAE/对应偏差/Heider 传统）+ 学术综述（disposicionismo ingenuo）"
+research_question: "行为由人格还是情境决定？为什么人系统性地低估情境力量？"
+core_claims:
+  - "情境主义（situationism）：社会行为更多由情境与人对情境的解读（construal）决定，而非稳定人格特质；半个世纪研究显示用个人特质跨情境预测行为准确率很低"
+  - "基本归因错误（FAE，Ross 1977 命名）：解释他人行为时高估特质、低估情境；解释自己行为时相反（actor-observer 不对称）"
+  - "经典问答游戏实验（Ross et al. 1977）：掷硬币决定提问者/竞猜者角色，观察者却把提问者的表现归因于其『渊博』——情境的角色优势被无视"
+  - "文化差异：FAE 在独立自我建构（西方）更强、互依自我建构（东方）较弱（Miller 1984）"
+  - "Lewin 传统：B = f(P, E)，行为是人与情境的函数"
+method: "社会心理学理论综合（Lewin/Mischel/Heider 传统）+ 经典实验证据"
+results: "（理论奠基）情境主义与基本归因错误成为社会心理学核心立场与概念"
+limitations: "情境主义强主张后续被调节（部分人部分情境可预测，Bem & Allen 1974）；FAE 存在文化差异"
+boundary_conditions: "解释他人行为时最强；有情境信息可诊断时减弱"
+relevant_nodes: [representativeness_heuristic, self_categorization, social_identity_theory, attitude_behavior_gap]
+notes: "基本归因错误/人-情境之争的奠基来源（book 级）。问答游戏实验与 5% 文化差异为公开标准内容，未编造。"
+last_verified: "2026-09"

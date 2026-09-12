@@ -1,0 +1,25 @@
+# Evidence Package — S201 Wegner et al. 1987（白熊效应/思维压抑反弹）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S201
+title: "Paradoxical effects of thought suppression"
+authors: "Daniel M. Wegner; David J. Schneider; Samuel R. Carter; Teri L. White"
+year: 1987
+journal: Journal of Personality and Social Psychology, 53(1), 5-13
+doi: "10.1037/0022-3514.53.1.5"
+url: "https://doi.org/10.1037/0022-3514.53.1.5"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "出版社官方摘要全文实取（PubMed PMID 3612492 + OLB 镜像两处交叉）：实验 1——被试 5 分钟出声报告意识流，要求『不要想白熊』并在想到时按铃；以言语提及与按铃计，被试无法按指令压抑；随后要求该组『想白熊』5 分钟，其白熊思维显著多于一开始就要求想白熊的组。摘要明示：尝试性思维压抑作为自控策略具有悖论效应，甚至可能制造它想对抗的执念。实验 2 复制上述发现，并显示压抑期间给定一个特定分心物（如大众汽车）的被试更少出现后期执念。理论框架（ironic process theory，多源核实）：操作性进程（费力寻找替代思维）与监控进程（自动检查『是否在想』）双系统，负荷下操作进程先失守、监控进程把目标带回意识"
+research_question: "刻意压抑一个念头会产生什么反直觉后果？"
+core_claims:
+  - "压抑悖论：要求『不要想白熊』的被试压抑失败，且随后的白熊思维反弹显著高于基线组"
+  - "双进程机制：操作性进程（费力的分心）+ 监控进程（自动搜索目标）——负荷/疲劳下反弹加剧"
+  - "分心物缓解：给定具体分心目标的被试后期执念更少——替代性思维是可行出路，纯禁令不是"
+  - "应用推论：否定式提醒（『别想大象』『不要紧张』『不要点X』）本身就是对对象的可得性投资"
+method: "两个实验室实验（出声思维流+按铃计数；压抑-反弹设计与分心物操纵）"
+results: "（经典）思维压抑反弹确立；ironic process theory 的实验基石"
+limitations: "未取得全文正文（摘要级+理论框架多源核实）；白熊范式为短时程实验室效应；临床压抑（创伤）外推需谨慎"
+boundary_conditions: "反弹在高认知负荷与压力下更强；具体分心物可显著缓解；对被压抑物已有强情绪联结者效应更强"
+relevant_nodes: [negation_ironic_rebound]
+notes: "negation_ironic_rebound 节点『Wegner 1987 白熊实验，未建包』的建包来源。摘要为官方文本，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,26 @@
+# Evidence Package — S24 Goffman 1959（The Presentation of Self in Everyday Life）
+# 标准格式。access_level 如实标注。
+source_id: S24
+title: "The Presentation of Self in Everyday Life"
+authors: "Erving Goffman"
+year: 1959
+journal: Doubleday Anchor（专著；首版 1956 苏格兰）
+doi: "无 DOI（专著）"
+url: "https://www.cvcc.net.cn/wap.php/lecture/show/id/187.shtml"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：CVCC 印象管理理论讲稿（前台/后台区分+印象管理四策略+应用与批判）+ 于海精读笔记（情境定义/角色表演/后台闯入致情境定义崩塌/拟剧论批评）+ 爱思想学术论文（拟剧二元结构与数字原住民多级前台）+ 豆瓣详评（角色期待/角色冲突/角色适应）"
+research_question: "人们在日常互动中为何以及如何『表演』——通过呈现来管理他人对自己形成的印象？"
+core_claims:
+  - "社会互动=戏剧表演：个体既是演员又是观众，通过前台表演维持符合社会期望的情境定义（situational definition），人人时时处处在演戏"
+  - "前台（front stage）：公开场合展示符合社会期望的理想化形象；后台（back stage）：卸下面具、恢复本我的私密空间；观众未经邀请闯入后台会使情境定义崩塌"
+  - "印象管理四策略：理想化表演（掩饰不符社会标准的行为、强调优点）/误解表演（恭维讨好以获认同与资源）/神秘化表演（保持距离与模糊性以激发好奇）/补救表演（道歉解释以修复受损形象）"
+  - "表达分两类：给与的表达（give，言语符号）与流露的表达（give off，无意泄露），表演的核心是对流露部分的控制；成功表演有赖于观众的配合（老练观众本身也在表演）"
+  - "理论批评：拟剧论提供过于狭隘主观的人性图景；戈夫曼本人承认这只是分析角度之一，社会结构分析优先（《框架分析》）；数字时代前台-后台二元模型被虚拟空间多级前台连续展演重构"
+method: "符号互动论民族志/理论专著（基于苏格兰海岛社区交际网络研究，源自博士论文）"
+results: "（理论）拟剧论成为微观社会学与自我呈现研究的奠基框架，并广泛用于数字时代自我呈现与社交媒体研究"
+limitations: "专著全文未获取（多源精读/解读级）；批评：人性图景狭隘主观、表演隐喻无法覆盖无观众情境、过度印象管理导致真实性危机"
+boundary_conditions: "存在可感知的观众与互动预期时效应最强；前台-后台边界因文化而异（集体主义重群体和谐、个体主义重自我表达）；虚拟空间多级前台叠加使二元模型需扩展"
+relevant_nodes: [self_presentation_impression_management, social_identity_theory, need_to_belong, politeness_face_theory]
+notes: "S24 为本书 core_30 正规登记。2026-09-09 同书重复登记 S122（B3 批次，abstract_only）已并入本包（MERGED_INTO，见 S122 墓碑）。为 self_presentation_impression_management 节点提供奠基证据。核心概念为公开内容，未编造原文引文。"
+last_verified: "2026-09"

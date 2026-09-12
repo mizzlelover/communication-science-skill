@@ -1,0 +1,26 @@
+# Evidence Package — S75 Ries & Trout 1981（Positioning: The Battle for Your Mind）
+# 标准格式。access_level 如实标注。
+source_id: S75
+title: "Positioning: The Battle for Your Mind"
+authors: "Al Ries; Jack Trout"
+year: 1981
+journal: McGraw-Hill（专著）
+doi: "无 DOI（专著）"
+url: "https://www.amazon.com/dp/0071373586"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：Amazon 官方简介（在潜在顾客心智中创建位置、围绕竞争对手弱点与市场定位构建战略、跟随者占据领导者未占的利基、重新定位竞争对手）+ pulserevops 英文逐章摘要（传播过载社会/心智阶梯/先入或开创可先入的品类/重新定位竞品 Tylenol 案例/命名与聚焦）+ jbdon 营销课程摘要（信息过载/心智只接受与既有认知一致的信息/先入为主/Avis『我们是老二』关联定位/7-Up『非可乐』/领导者 4:2:1 份额比/施乐与 IBM 案例）+ 中国海洋大学 OPAC 及豆瓣目录（第4章 心智中的小阶梯/产品阶梯/『关联』定位法/『非可乐』定位法；第6章 领导者的定位；第7章 跟随者的定位；第8章 重新定位竞争对手）+ 中文解读（心智容量有限、抢占心智阶梯、借力头部、对立面定位、细分空位、聚焦定位）"
+research_question: "在传播过载的市场中，品牌如何在潜在顾客心智中占据并守住一个独特位置？"
+core_claims:
+  - "定位不是对产品做的事，而是对潜在顾客心智做的事：传播过载社会中，心智会筛选并过度简化信息，只接受与既有认知一致的内容，营销的战场在心智而非产品本身"
+  - "心智按品类组织成产品阶梯，每类只稳定记住少数品牌（人们记得第一，很难记得第二）；先入者占据默认位置，正面挑战领导者几乎不可能"
+  - "进入心智的最佳方式是第一个进入，或开创一个能成为第一的新品类；无法第一时用关联定位挂靠领导者（Avis『我们是老二，所以我们更努力』、7-Up『非可乐』）"
+  - "领导者要持续强化领先地位、快速回应竞品，并警惕品牌延伸稀释认知；跟随者要寻找心智空位（尺寸/高价/低价/人群/工厂）或重新定位竞争对手（如 Tylenol 重新定位阿司匹林）"
+  - "信息要简化到一句话可复述、长期一致重复；命名是定位的关键执行要素（好名字简单、可记忆、暗示品类）"
+method: "从业者案例复盘（广告业经典：Avis、7-Up、Tylenol、Xerox、IBM、Miller Lite 等定位战役的成败分析）"
+results: "（实践框架）被美国营销学会（2001）评为『有史以来对美国营销影响最大的观念』；开创定位时代"
+limitations: "案例均为事后归因复盘，无对照检验（D 级实践框架）；案例年代久远，需翻译到数字与 AI 时代购买环境"
+boundary_conditions: "适用于心智槽位有限、低卷入重复购买的品类；复杂决策（企业采购/医疗）更依赖证据与关系而非一句话槽位；定位是需多年一致投入的长期资产"
+relevant_nodes: [positioning_mechanism, mental_availability, category_entry_points]
+notes: "定位理论奠基之作（book 级）。核心概念为公开内容，未编造。"
+last_verified: "2026-09"

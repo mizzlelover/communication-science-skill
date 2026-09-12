@@ -1,0 +1,747 @@
+# comprehension — 长文阅读理解与论证（Comprehension & Argumentation）
+domain: comprehension
+nodes:
+- id: chunking
+  canonical_name_en: Chunking
+  canonical_name_zh: 组块化
+  aliases:
+  - 组块
+  - information chunking
+  domain: comprehension
+  definition: 将离散信息单元组织成更高阶的有意义单元，使工作记忆以"组块"而非"元素"计数，从而在容量不变的前提下提升可处理的信息量。Miller (1956) 提出短期记忆 7±2 限制，现代估计修正为约
+    4±1 个组块（S04：现代估计≈4±1，Cowan 2001 未建包）——组块化的价值正在于把 40 个散点压缩成 4 个组块。
+  core_claim: 同等信息量下，以组块形式组织的内容比离散罗列的内容占用更少工作记忆资源、获得更高理解与回忆。
+  mechanism: 工作记忆容量以组块为计数单位（working_memory_limits）。组块化通过两类操作实现：一是利用既有知识把多个元素绑定成一个有意义的模式（如把"标题/封面/开头"绑成"注意力要素"），二是在文本层提供显式的层级信号（小标题、编号、小结）让读者无需自行建构。长文中读者需要自行组块的成本极高，作者不提供组块结构
+    = 把组块成本转嫁给读者。
+  causal_chain: 离散信息 → 组块信号（层级/命名/小结）→ 工作记忆以少量组块持有 → 理解与保持提升
+  variables:
+    inputs:
+    - 信息单元数量
+    - 读者既有知识（决定组块上限）
+    moderators:
+    - 组块信号的显式程度
+    - 组块大小的均匀性
+    - 概念之间的关联强度
+    mediators:
+    - 工作记忆占用
+    outputs:
+    - 理解率
+    - 回忆率
+    - 阅读速度
+  evidence:
+    supporting:
+    - Miller 1956 魔数七与组块概念
+    - Cowan 2001 工作记忆容量约 4 组块的修正
+    - 专家-新手差异研究：专家以大组块记忆棋局（Chase & Simon 方向）
+    conflicting:
+    - 组块大小因读者专业知识而异，作者无法为所有读者提供最优组块
+    - 过度切分（Over-sectioning）会把组块打碎，反而增加整合负担
+    replication:
+    - 容量限制方向多团队稳定复制；7±2 作为固定数字已被 4±1 修正
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 读者具备把元素绑成组块的先备知识时效果最强
+  - 对新手中不熟悉的领域，组块需要作者显式命名与定义
+  - 信息之间无内在关联时强行组块是伪组块
+  failure_conditions:
+  - 组块过多且层级混乱（Over-sectioning 反模式）
+  - 组块命名抽象空泛，读者无法把元素归位
+  - 为切分而切分：每节两三段的碎片化长文
+  common_misinterpretations:
+  - 把'多加小标题'当成组块化——无信息量的标题只是切分不是组块
+  - 以为组块越多越好——组块数量仍受工作记忆限制
+  ethical_risks:
+  - 用碎片化组块掩盖论证薄弱，制造'结构完整'的假象
+  examples:
+    original_cases:
+    - Chase & Simon 棋局记忆研究：大师以棋型组块记忆
+    research_cases: []
+    modern_cases:
+    - 万字长文的'三个框架/五个步骤'式结构设计
+    - 技术文档的编号层级
+  communication_implications: 长文结构设计的第一性问题：读者要持有哪些 3-5 个组块才能跟上全文？小标题=组块命名，小结=组块确认，全文组块数应与 working memory
+    容量同量级。
+  community_implications: 社群长内容（课程/知识库）的模块化同理：模块=组块，降低成员的学习门槛。
+  content_applications:
+    body: 小标题写成'组块名'而非'内容描述'；每章末用 1-2 句小结把本章压缩为一个组块
+    opening: 开篇预告全文组块结构（'本文讲三件事'），为 Model Building 阶段提供脚手架
+    title: 标题可承载最外层组块（数字型标题的部分价值来源）
+  platform_implications: 小红书长文对 chunking 最敏感（chunking/visual breaks 是其 adapter 明示重点）；公众号次之；知乎长文可用段落级组块替代视觉组块。
+  related_nodes:
+  - working_memory_limits
+  - intrinsic_cognitive_load
+  - extraneous_cognitive_load
+  - gist_vs_verbatim_memory
+  - schema_formation
+  conflicting_nodes: []
+  source_ids:
+  - S142
+  - S04
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Baddeley 2007（S04，工作记忆组块容量）+ Miller 1956（S142，full_text：『memory span is a fixed
+      number of chunks』）
+    effect_size: 组块化扩展有效工作记忆容量（Miller 7±2 传统）
+    replication_status: 组块效应在记忆研究稳健（专家-新手差异）
+    context_dependency: 前知识/材料结构/呈现节奏调制
+    downgrade_upgrade_reason: 2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S142
+    - S04
+    supporting_evidence: []
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: information_foraging
+  canonical_name_en: Information Foraging Theory
+  canonical_name_zh: 信息觅食理论
+  aliases:
+  - 信息搜寻理论
+  - information seeking
+  domain: comprehension
+  definition: 把信息获取类比为觅食的适应性理论（Pirolli & Card, 1999，源自最优觅食理论）：读者是"觅食者"，在信息环境中评估"哪片信息区（patch）值得进入、何时离开"，始终以单位时间获取信息的收益最大化为目标。长文对读者而言就是一个
+    patch，读者随时在评估"继续读是否值得"。
+  core_claim: 读者不是"读完全文再评价"，而是在阅读过程中持续做成本收益判断；当感知收益低于离开成本时即弃读——长文的每个部分都在经受这个隐性评审。
+  mechanism: 读者以线索评估各信息区的预期价值（经由 information_scent），进入"高 scent 区"采集信息，收益递减时转移。对长文的推论：a) 文章的价值承诺必须尽早可感知；b)
+    阅读中途的"回报节奏"（案例/结论/工具）决定留存；c) 大段无新信息区 = 低收益 patch = 弃读点。
+  causal_chain: 价值线索 → 预期收益评估 → 进入/继续/离开 patch → 收益递减 → 转移或弃读
+  variables:
+    inputs:
+    - 感知信息收益
+    - 阅读成本（时间/认知努力）
+    - 替代信息源可得性
+    moderators:
+    - 读者的时间预算
+    - 任务紧迫度
+    - 替代渠道（搜索引擎一秒可换一篇）
+    mediators:
+    - information_scent
+    - 信息密度感知
+    outputs:
+    - 完读率
+    - 段落级流失点
+    - 回访率
+  evidence:
+    supporting:
+    - Pirolli & Card 1999 信息觅食理论（PARC，S156）
+    - 数字阅读行为观察：F 形阅读/中断系统（S49）
+    - 信息搜寻行为的成本收益建模文献
+    conflicting:
+    - 娱乐型/叙事型阅读不完全服从成本收益计算（沉浸阅读会延迟离开决策）
+    - 社交义务型阅读（被转发点开）的评估被动机污染
+    replication:
+    - 方向性结论稳定；具体参数（放弃阈值）因人与任务差异大
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 任务导向/搜寻型阅读最强（知乎搜索、文档查阅）
+  - 叙事沉浸与社交场景中减弱
+  - 无替代来源的封闭环境（如内部培训）减弱
+  failure_conditions:
+  - 把觅食模型套到情感叙事文——读者不是在'搜寻'而是在'经历'
+  - 忽视移动端与桌面端成本结构差异
+  common_misinterpretations:
+  - 以为读者会'给文章一个机会'读完再评价——他们随时在离开
+  - 把长文完读率低全归因于'内容不好'——可能是 patch 边界设计问题（无小节回报点）
+  ethical_risks:
+  - 利用 scent 夸大价值诱使进入低价值内容（clickbait 的长文变体）
+  examples:
+    original_cases:
+    - Pirolli & Card 的网页信息搜寻分析
+    research_cases: []
+    modern_cases:
+    - 公众号文章的中段流失
+    - 知乎回答的'先看结论'滚动行为
+  communication_implications: 长文要设计"回报节奏"：每 15-20% 进度安排一个可感知的收获（结论/工具/反转），让读者对"继续读"的预期收益始终为正。
+  community_implications: 知识库/课程长内容同理：模块收益前置，降低成员的"弃坑"率。
+  content_applications:
+    opening: 前 10% 给出全文回报地图（读完你将获得什么），兑现信息觅食的进入决策
+    body: 在 Fatigue Zone 安排高收益 patch（核心框架/案例结论），对冲弃读风险
+    cta: 结尾提供可带走产物（清单/框架图），提高整次觅食的已实现收益
+  platform_implications: 搜索型平台（知乎/小红书）读者觅食性最强，结论前置与关键信息加粗直接作用于 patch 评估；订阅型平台读者预算更宽但同样有阈值。
+  related_nodes:
+  - information_scent
+  - attention_capacity_limits
+  - information_overload
+  - curiosity_gap
+  - cognitive_fatigue
+  conflicting_nodes:
+  - narrative_transportation
+  source_ids:
+  - S156
+  - S49
+  provenance:
+    primary_sources:
+    - S156
+    supporting_evidence:
+    - S49
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S192
+    - S63
+    - S64
+    - S65
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: information_scent
+  canonical_name_en: Information Scent
+  canonical_name_zh: 信息气味
+  aliases:
+  - scent design
+  - 线索设计
+  domain: comprehension
+  definition: 信息觅食理论的操作性概念（Pirolli & Card）：用户通过环境线索（标题、小标题、首句、链接文字、摘要）来预测"该处内容的价值"，这些线索的强度与匹配度即信息气味。Scent
+    强的界面/文本让读者无需读入即可评估前方内容。
+  core_claim: 小标题、首句、过渡句是长文的"气味源"：读者据以决定是否进入下一段/下一节；气味与内容错配会立即损耗信任并引发跳过。
+  mechanism: 读者用文本线索与自身信息需求的相似度（文本对气味强度有主导贡献）估计目标内容价值（information_foraging）。在长文中，读者极少逐字读取——他们沿"标题→小标题→段首句→加粗"的气味路径采样。气味失真（标题党式小标题）短期提升进入率，长期摧毁采样信任：读者学会忽略气味源，正文曝光率反而下降。
+  causal_chain: 线索与需求的匹配 → 预期价值 → 进入/跳过决策 → 采样信任累积或损耗
+  variables:
+    inputs:
+    - 线索与信息需求的相似度
+    - 线索的具体性
+    - 气味源在版面上的显著性
+    moderators:
+    - 读者任务清晰度
+    - 平台阅读模式（扫读vs精读）
+    mediators:
+    - 预期收益估计
+    outputs:
+    - 段落/章节进入率
+    - 跳读模式
+    - 采样信任
+  evidence:
+    supporting:
+    - 信息觅食研究中 scent 对浏览路径的预测（Pirolli & Card 1999，S156）
+    - 可用性研究中'用户扫描而非阅读'的行为观察（F 形阅读：只看第一行/前半段，S49）
+    conflicting:
+    - 强 scent 在叙事型文本中可能打断沉浸（提前剧透削弱悬念）
+    - 气味最优解因读者任务不同而不同
+    replication:
+    - 扫读行为与线索驱动的方向性结论稳定
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 任务导向阅读最有效
+  - 叙事/散文型长文 scent 设计要让位于悬念结构
+  - 熟悉作者的老读者对气味依赖降低（基于声誉决策）
+  failure_conditions:
+  - 气味诱饵化（标题党小标题）→ 采样信任崩塌
+  - 气味过密（每句加粗）→ 信号失效回归噪声
+  common_misinterpretations:
+  - 把'多加小标题'当 scent 设计——气味要预测内容而非装饰结构
+  - 以为 scent 是 SEO 关键词堆砌——那是为机器优化不是为人
+  ethical_risks:
+  - 诱饵式 scent 损耗读者信任（clickbait 邻接反模式）
+  examples:
+    original_cases:
+    - 信息觅食理论的网页导航实验
+    research_cases: []
+    modern_cases:
+    - 万字长文的小标题改写使完读率改善（行业普遍观察）
+    - 知乎回答的结论前置排版
+  communication_implications: 长文的小标题应写成"可独立传达该节主张的句子"（gist 路径），让扫读者沿气味路径也能获得完整价值；正文首句承担段落级 scent。
+  community_implications: 社群知识库的目录/文档标题同理：气味好 = 成员自助检索成功率高。
+  content_applications:
+    body: 小标题改为'本节主张句'；段首句独立可懂；关键结论加粗但每屏不超过一处
+    opening: 首屏即给出全文气味地图（各节要点预告）
+  platform_implications: 知乎/搜索场景 scent 即命中预测；公众号 scent 影响转发时"朋友圈里被扫到的信息"。
+  related_nodes:
+  - information_foraging
+  - gist_vs_verbatim_memory
+  - curiosity_gap
+  - processing_fluency
+  - visual_hierarchy
+  conflicting_nodes:
+  - curiosity_gap
+  source_ids:
+  - S156
+  - S49
+  provenance:
+    primary_sources:
+    - S156
+    supporting_evidence:
+    - S49
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S144
+    - S65
+    platform_sources:
+    - x:S6
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: cognitive_fatigue
+  canonical_name_en: Cognitive Fatigue
+  canonical_name_zh: 认知疲劳
+  aliases:
+  - mental fatigue
+  - 时间任务效应
+  domain: comprehension
+  definition: 随认知任务持续进行而出现的注意与执行功能下降，表现为维持注意越来越费力、错误率上升、对难度的不适感放大。在阅读场景中对应"读得越久越难读"的现象——同样的段落，出现在 60%
+    进度处比出现在 10% 处感知负荷更高。
+  core_claim: 长文的认知成本不是恒定的：读者在 Fatigue Zone（约 40-70% 进度——本文/行业经验值，非 EP 结论）对同等复杂内容的承受力显著低于开头，后段内容必须主动降负荷或提供激励才能维持完读。
+  mechanism: 时间任务效应（time-on-task effect）：持续注意导致调节资源消耗与动机下降，警觉性递减（vigilance decrement，自 Mackworth 1948
+    警觉实验以来的稳定发现——通识，未建包）。注意是有限资源（attention_capacity_limits），维持深度加工的努力感随任务时长增加。注意：与复制失败的 ego depletion
+    不同——本节点只主张"表现随时间下降"的行为层现象，不引入"意志力资源池"假设。
+  causal_chain: 任务持续 → 维持注意的努力感上升 + 警觉下降 → 同等内容的感知负荷放大 → 弃读或跳读
+  variables:
+    inputs:
+    - 任务时长
+    - 任务强度（负荷曲线下的面积）
+    moderators:
+    - 读者动机与兴趣
+    - 内容节奏变化
+    - 休息点/结构点供给
+    mediators:
+    - 努力感
+    - 警觉水平
+    outputs:
+    - 后段弃读
+    - 后段理解率下降
+    - 跳读
+  evidence:
+    supporting:
+    - Mackworth 1948 起的警觉递减研究传统
+    - 时间任务效应在注意任务中的稳定证据（ 多综述方向）
+    - 长内容中途流失的平台行为观察
+    conflicting:
+    - 个体差异极大：动机与兴趣可长时间抵消疲劳
+    - '''资源耗尽''的机制解释受 ego depletion 复制危机牵连——行为现象稳定，资源理论存疑'
+    replication:
+    - 行为层（警觉/表现随时间下降）复制稳定；机制层有争议
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 高动机/叙事沉浸可显著推迟疲劳
+  - 短文（<2000字）影响可忽略
+  - 互动式阅读（边读边做）节奏不同
+  failure_conditions:
+  - 把中途流失全归因疲劳（可能是信息密度低导致的无聊，方向相反）
+  - 用'开头精彩'补偿后段——疲劳在后段，前段过载反而加速耗竭
+  common_misinterpretations:
+  - 与 ego depletion 混用——后者复制失败，本节点只依赖行为层时间任务效应
+  - 以为'写短点'就是解法——读者要的是节奏与回报，不是绝对长度
+  ethical_risks:
+  - 利用疲劳设计套路化钩子链拖读（延迟满足滥用）
+  examples:
+    original_cases:
+    - Mackworth 持续注意实验
+    research_cases:
+    - 长任务警觉递减的多项实验（方向性）
+    modern_cases:
+    - 公众号文章 60-75% 进度的流失峰（行业普遍观察）
+    - B 站中长视频的进度条中部掉队
+  communication_implications: 长文优化必须做"疲劳预算"：40-70% 区间安排案例/类比/小结/转折等低负荷高回报节（Reader Journey Stage 3），把最难的概念放在读者最清醒的位置（前
+    40%）。
+  community_implications: 课程与社群长内容的"中段掉队"同理：在 40-70% 进度设计互动/奖励/阶段成果。
+  content_applications:
+    body: 把第二难的概念移出 Fatigue Zone；在 50% 附近放全文最强的案例或阶段小结
+    opening: 开篇不宜过载——前段高负荷会提前透支疲劳预算
+  platform_implications: 各平台完读统计显示中段流失为普遍现象（adapter 的 content_lifecycle 与 interaction_signals 可核对）；分段发布/章节化是结构性对策。
+  related_nodes:
+  - attention_capacity_limits
+  - information_foraging
+  - information_overload
+  - flow_state
+  - working_memory_limits
+  conflicting_nodes:
+  - flow_state
+  source_ids:
+  - S02
+  - S03
+  - S49
+  - S125
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Mackworth 1948 起的警觉递减研究传统 + Hagger et al. 2016 ego depletion RRR（S125，paper 级：23
+      实验室/2141 人效应≈0，作为边界证据）
+    effect_size: 时间任务效应稳健（行为层）；单一『意志力资源池』机制被 RRR 削弱
+    replication_status: 行为层（警觉/表现随时间下降）复制稳定；机制层有争议（ego depletion 复制失败）
+    context_dependency: 高动机/叙事沉浸推迟疲劳；短文本影响可忽略
+    downgrade_upgrade_reason: 2026-09 补充 S125（ego depletion RRR）作为机制边界证据，明确节点只依赖行为层时间任务效应，由 MEMORY_BASED
+      升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S125
+    supporting_evidence:
+    - S02
+    - S49
+    - S03
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S14
+    - S15
+    - S174
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: schema_formation
+  canonical_name_en: Schema Formation
+  canonical_name_zh: 图式形成
+  aliases:
+  - 心智模型构建
+  - mental model building
+  - 图式建构
+  domain: comprehension
+  definition: 读者在阅读中逐步建构和组织知识结构（图式/心智模型）的过程：把新信息挂接到既有知识结构上，形成可迁移的整体理解。与 schema_violation（利用既有图式的预期违背）相对，本节点关注图式的**新建与扩充**如何发生在长阅读中。
+  core_claim: 长文的理解质量取决于读者的图式建构是否成功：概念按依赖顺序引入、有锚定案例、彼此连接成网络时，读者形成可复用心智模型；否则只剩碎片记忆。
+  mechanism: 理解 = 把文本命题整合进连贯的心理表征（Kintsch 构建整合模型方向，S157）：表层文本 → 命网络 → 情境模型。图式形成的条件：概念以依赖序呈现（先定义后应用）、新概念有锚定（类比/案例/对比）、跨节概念被显式连接（"这正是第二节说的X在Y场景的表现"）。缺失时读者只能靠表层记忆，读完即忘（gist_vs_verbatim_memory）。
+  causal_chain: 概念按依赖序引入 → 锚定与连接 → 情境模型建构 → 可迁移理解与长期保持
+  variables:
+    inputs:
+    - 概念的依赖顺序
+    - 锚定材料（类比/案例/图示）供给
+    - 跨节连接信号
+    moderators:
+    - 读者先备知识
+    - 概念的抽象层级
+    mediators:
+    - 情境模型连贯性
+    outputs:
+    - 迁移应用能力
+    - 长期保持
+    - 综合评价质量
+  evidence:
+    supporting:
+    - Kintsch 构建整合模型与文本理解研究传统（S157）
+    - Bartlett 1932 图式概念的起源（通识，已建包 EP S204）
+    - 专家-新手差异：专家的图式支撑组块化理解
+    conflicting:
+    - 先备知识差异大时单一呈现顺序无法对所有人最优
+    - 过度锚定（只用单一案例）会造成图式窄化
+    replication:
+    - 文本理解的多成分表征框架有长期研究积累
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 教育型/方法论型长文最关键
+  - 观点评论型文章对图式要求较低（只需要立场与证据）
+  - 读者先备知识充足时可加速略过定义
+  failure_conditions:
+  - 概念乱序引入（用到 §3 概念时其定义在 §7）——读者被迫回翻或放弃
+  - 概念堆叠无锚定（concept_dumping）
+  - 跨节概念从不显式连接，读者自行拼图失败
+  common_misinterpretations:
+  - 以为读者会'读到后面自然懂'——图式建构失败的记忆是逐字碎片，无法支撑后文理解
+  - 把图式形成等同于'解释术语'——解释只是锚定的一种
+  ethical_risks:
+  - 利用读者图式缺口制造权威感（术语轰炸下的伪深度）
+  examples:
+    original_cases:
+    - Bartlett 的幽灵之战实验：记忆被既有图式重构（Bartlett 1932，通识，已建包 EP S204）
+    research_cases:
+    - Kintsch 系列的文本理解研究（方向性）
+    modern_cases:
+    - 方法论长文'先框架后展开'的结构
+    - 教育型长文的先行组织者（advance organizer）设计
+  communication_implications: 长文开篇应给出全文的先行组织者（框架预告），概念按依赖序引入，跨节显式回连——这是 Model Building 阶段（10-40%）的核心工程。
+  community_implications: 社群知识库的课程设计同理：模块间依赖显式化，防止成员碎片拼凑。
+  content_applications:
+    opening: 用 1 段做先行组织者：全文概念的地图与依赖关系
+    body: 每个新概念配一个锚定（类比/案例/对比）；跨节引用时显式回连（'即第二节的X'）
+  platform_implications: 教育类内容在知乎/B站的长尾检索中，图式完整性决定收藏与回访（testing_effect 的应用空间）。
+  related_nodes:
+  - chunking
+  - working_memory_limits
+  - gist_vs_verbatim_memory
+  - schema_violation
+  - germane_load_learning
+  - conceptual_coherence
+  conflicting_nodes: []
+  source_ids:
+  - S160
+  - S157
+  - S10
+  - S04
+  - S63
+  - S204
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Baddeley 2007（S04，工作记忆与图式）+ Clark 2016（S10，预测加工与图式）+ Bruner 1986（S63，叙事图式）
+    effect_size: 图式提供理解脚手架并加速后续学习（经典认知发现）
+    replication_status: 图式-学习加速关系在阅读与问题解决研究中稳健
+    context_dependency: 图式可用性/材料与图式匹配度调制
+    downgrade_upgrade_reason: 2026-09 实取 S04 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S204
+    - S160
+    - S157
+    supporting_evidence:
+    - S04
+    - S10
+    - S63
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-009
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: retrieval_cue_design
+  canonical_name_en: Retrieval Cue Design
+  canonical_name_zh: 提取线索设计
+  aliases:
+  - 记忆锚点设计
+  - memory anchor design
+  domain: comprehension
+  definition: 在内容中主动植入未来可被回忆的线索——框架名、关键词、对比句、图像化类比、结论句——使读者在阅读结束后的真实场景中能重新提取文章内容。是 encoding_specificity（A-）在内容设计层的应用节点：提取取决于提取场景与编码场景的线索匹配。
+  core_claim: 「读完能记住 3-5 件事」不是靠读者努力，而是靠作者设计的提取线索：线索与读者未来使用场景越匹配、越具区分性，记忆锚点越有效。
+  mechanism: 记忆提取由线索驱动（encoding_specificity）：编码时与语义、情境绑定的线索在日后出现时触发提取。内容设计的推论：a) 锚点必须是"读者未来会遇到什么，文章里就预埋什么"（场景化线索）；b)
+    区分性提升提取（von_restorff_effect）；c) 框架/口诀式压缩降低提取负荷（chunking 联动）；d) 多线索冗余（同一锚点用关键词+对比+案例三种编码）提高命中率。
+  causal_chain: 设计区分性线索 + 场景匹配 → 编码时绑定 → 未来场景线索出现 → 提取成功 → 回访/引用/转发
+  variables:
+    inputs:
+    - 锚点数量（3-5 为宜）
+    - 线索区分性
+    - 与读者未来场景的匹配度
+    moderators:
+    - 读者的使用动机
+    - 编码时的注意水平
+    mediators:
+    - 编码-提取匹配度
+    outputs:
+    - 回忆率
+    - 引用率
+    - 回访率
+  evidence:
+    supporting:
+    - encoding specificity / transfer-appropriate processing 研究传统（Tulving 方向）
+    - von Restorff 隔离效应
+    - testing_effect：检索练习强化保持
+    conflicting:
+    - 锚点过多互相竞争（>5 个记忆目标相互干扰）
+    - 作者设计的锚点未必匹配读者真实使用场景
+    replication:
+    - 编码特异性与测试效应方向稳定
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 教育/方法论/工具型长文收益最大
+  - 观点评论型文章的锚点=立场句与金句
+  - 读者无未来使用场景时（纯娱乐阅读）锚点价值低
+  failure_conditions:
+  - 锚点堆砌（全文 15 个'记住这一点'）相互干扰
+  - 锚点抽象无区分（'要重视用户思维'这类不可提取的口号）
+  common_misinterpretations:
+  - 把'加粗金句'当记忆设计——区分性与场景匹配才是核心，加粗只是显著化
+  - 锚点=摘要——摘要是压缩回顾，锚点是预埋提取
+  ethical_risks:
+  - 用口号式伪锚点制造'学到很多'的错觉（知识付费常见话术）
+  examples:
+    original_cases: []
+    research_cases:
+    - 编码特异性实验：编码/提取环境匹配提升回忆（方向性）
+    modern_cases:
+    - 方法论文章的'三个字口诀'
+    - B 站知识视频的章节锚点与'记住这个'式设计
+  communication_implications: 长文收尾必须显式完成 Memory Design：列出全文 3-5 个 memory_anchors，并保证每个锚点在文中已有区分性编码（框架名/对比/类比至少一种）。
+  community_implications: 社群内容运营中，锚点即"社群黑话"：共享锚点降低成员间沟通成本并强化身份。
+  content_applications:
+    body: 为每个核心概念造一个区分性表达（命名/对比/类比三选一）
+    conclusion: 结尾显式回收 3-5 个锚点（Synthesis 型 Closure），完成最后一次编码
+    title: 标题可承载第一锚点（未来在信息流中再次触发的线索）
+  platform_implications: 收藏导向平台（小红书/知乎）的 save 行为本质是"外挂锚点"：save value 强的内容替读者完成锚点存储。
+  related_nodes:
+  - encoding_specificity
+  - von_restorff_effect
+  - chunking
+  - testing_effect
+  - gist_vs_verbatim_memory
+  conflicting_nodes: []
+  source_ids:
+  - S149
+  - S40
+  - S05
+  provenance:
+    primary_sources:
+    - S149
+    supporting_evidence:
+    - S40
+    - S05
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: argumentation_structure
+  canonical_name_en: Argumentation Structure (Toulmin Model)
+  canonical_name_zh: 论证结构（图尔敏模型）
+  aliases:
+  - Toulmin argumentation
+  - 论证要素
+  domain: comprehension
+  definition: Stephen Toulmin (1958)《The Uses of Argument》提出的论证要素模型：主张（claim）需要依据（ground/data）支撑，而依据到主张的推理依赖正当理由（warrant）——通常未被言明的桥梁假设；warrant
+    又需支援（backing）、限定（qualifier）与反驳预留（rebuttal）配合。它是分析长文论证完整性的标准工具。
+  core_claim: 长文论证质量的问题多数不在"没有证据"，而在 warrant 缺失或失效——证据与主张之间的桥梁假设没有被说明、不成立或不普适。
+  mechanism: 读者接受一个主张需要：data 可信 + warrant 成立 + 无未处理的 rebuttal。诊断映射：unsupported_claim 常为缺 data；logical_gap
+    常为缺 warrant（证据A与主张B之间隐含的桥梁假设未被陈述或站不住）；conclusion_leap 常为 qualifier 缺失（全称化限定词丢失）；overclaim 即 rebuttal
+    层被忽略。长文的优势是有空间把 warrant 显式化——但 AI 生成文本恰恰常省略 warrant 直接从数据跳结论。
+  causal_chain: data + 显式 warrant + qualifier + rebuttal 处理 → 读者接受主张；缺环 → 论证缺陷
+  variables:
+    inputs:
+    - 主张清单
+    - 证据清单
+    - 隐含假设的可陈述性
+    moderators:
+    - 读者对领域的先备 warrant 熟悉度
+    - 文章类型（research 要求显式 warrant，essay 可部分隐含）
+    mediators:
+    - 论证完整性
+    outputs:
+    - 说服力（中心路径）
+    - 可信度
+    - 反驳抵抗力
+  evidence:
+    supporting:
+    - Toulmin 1958 论证模型及其在论辩/写作教育中的广泛应用（核心框架，未建包）
+    - 非形式逻辑与论证图式研究传统
+    conflicting:
+    - 文学性/评论文体中省略 warrant 是修辞选择，不总是缺陷
+    - 模型对情感-身份驱动型说服的解释力有限（那是 identity 与 emotion 的领地）
+    replication:
+    - 作为分析框架被跨领域采用；非实证效应模型
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - research/consulting/educational 型长文必须显式 warrant
+  - story_essay 型以 narrative_transportation 为主，warrant 要求放宽
+  - 读者共同体共享 warrant 时可省略（学术写作对同行省略常识桥梁）
+  failure_conditions:
+  - ' warrant 过度显式化把文章变成教科书（对目标读者是冗余）'
+  - 用复杂 warrant 掩盖薄弱 data（伪严谨）
+  common_misinterpretations:
+  - 把'有引用有数据'当论证完整——data 不等于 warrant，桥梁假设才是最常断的地方
+  - 把 rebuttal 当示弱——限定与反驳预留是论证强度的来源
+  ethical_risks:
+  - 明知 warrant 不成立仍隐藏之（误导性论证，Age of Propaganda 的宣传技法之一）
+  examples:
+    original_cases:
+    - Toulmin 原著中的法律论证分析
+    research_cases: []
+    modern_cases:
+    - 咨询报告的'数据→结论'跳步
+    - 深度长文省略'为什么这个数据支持这个结论'的桥梁
+  communication_implications: 长文诊断的核心问题之一：对每个 Claim 追问 warrant——"凭什么这个证据支持这个结论？"；写作时把关键 warrant 显式化一段，说服力（central_route_processing）显著提升。
+  community_implications: 社群共创内容（行业报告等）的论证审计用同一模型，防止集体写作中的断链。
+  content_applications:
+    body: 关键 Claim 后补 warrant 段：'这个证据之所以支持这个结论，是因为……（桥梁假设）'
+    evidence: 证据呈现后加 qualifier（'在X条件下/大致/对Y人群'）防 overclaim
+  platform_implications: 知乎长文的 Question-Fit 场景中 warrant 显式度决定专业声誉；公众号读者 warrant 可部分隐含但桥要留痕。
+  related_nodes:
+  - elaboration_likelihood_model
+  - central_route_processing
+  - anecdote_vs_statistics
+  - source_credibility_model
+  - inoculation_theory
+  conflicting_nodes:
+  - narrative_transportation
+  source_ids:
+  - S66
+  - S34
+  - S35
+  - S69
+  - S119
+  - S36
+  validation_status: MEMORY_BASED
+  grade_justification:
+    independent_studies: 核心理论框架（Toulmin 1958）一手 EP 未建，现引 EP 仅相邻概念（修辞/ELM/诅咒知识），内容来自记忆蒸馏，待建 EP 后升级；S34/S35/S119
+      仅支持 warrant 显式化提升中央路径说服力这一外围主张
+    effect_size: 非实证效应模型，无效应量
+    replication_status: 作为分析框架被跨领域采用，非复制对象
+    context_dependency: 文体与读者共同体共享 warrant 的程度调制
+    downgrade_upgrade_reason: 2026-09-09 节点反向审计（A6）：核心理论框架（Toulmin 1958）一手 EP 未建，现引 EP 仅相邻概念（S66 修辞三诉求/S34·S35·S119
+      ELM/S69 诅咒知识），无 warrant 内容，由 B 降为 C、回退 MEMORY_BASED，待建 EP 后升级
+  provenance:
+    primary_sources:
+    - S66
+    - S34
+    - S35
+    - S69
+    - S119
+    - S36
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S192
+    - S63
+    - S64
+    - S65
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: conceptual_coherence
+  canonical_name_en: Conceptual Coherence
+  canonical_name_zh: 概念一致性
+  aliases:
+  - 术语一致性
+  - 概念系统自洽
+  domain: comprehension
+  definition: 长文中同一概念在全文范围内保持"名、义、层级"三稳定的性质：一个概念一个名字（名）、定义前后一致（义）、与其他概念的包含/并列关系不漂移（层级）。概念一致性是读者心智模型（schema_formation）得以建构的文本侧前提。
+  core_claim: 概念名、义、层级的任何漂移都会迫使读者重建图式；长文的概念系统若不自洽，读者负载的不是内容而是作者的混乱。
+  mechanism: 读者把每个术语绑定到图式节点上；同义换名迫使读者判断"是否同一物"（working memory 消耗 + 歧义风险）；定义漂移则造成图式冲突，读者要么费力调和要么放弃连贯理解。AI
+    生成文本的高发问题：每次生成独立措辞（synonym 漂移），且不同节可能对同一概念给出微妙不同的定义。诊断工具即 concept_registry：追踪每个 term 的首现、定义、别名、使用节。
+  causal_chain: 概念名/义/层级漂移 → 图式冲突与歧义 → 理解成本上升或连贯理解放弃
+  variables:
+    inputs:
+    - 术语变体数量
+    - 定义漂移次数
+    - 概念层级关系稳定性
+    moderators:
+    - 概念在文中的核心程度
+    - 读者专业度
+    mediators:
+    - schema 冲突
+    outputs:
+    - 理解成本
+    - 歧义误读
+    - 专业可信度感知
+  evidence:
+    supporting:
+    - 文本连贯性研究：参照一致性与指称连贯是可读性的核心成分（Kintsch 方向，S157 / Halliday & Hasan 衔接理论方向）
+    - 恰当的语境（图式）是理解的前提（Bransford & Johnson 1972，S160）
+    conflicting:
+    - 修辞性变体（刻意换称以避免单调）在熟练读者处可接受——需与意外漂移区分
+    - 跨章节面向不同读者的分层写作（每章重新定义）是有意设计
+    replication:
+    - 连贯性与可读性的关系有长期研究积累
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 方法论/教育/研究型长文要求最严
+  - 评论文中修辞性变体是风格资产
+  - 读者高度专业时可容忍更多省略与变体
+  failure_conditions:
+  - 把'术语一致性'执行成机械重复——修辞性变体与无意漂移要分开处理
+  - 概念层级混乱却不自知（把子类当并列项）
+  common_misinterpretations:
+  - 以为读者能从上下文推断术语指同——长文中推断成本随距离放大
+  - 用同义词词典式替换来'提升文采'——在概念层制造漂移
+  ethical_risks:
+  - 用术语漂移模糊承诺（定义随论证需要而变——移动球门式诡辩）
+  examples:
+    original_cases: []
+    research_cases:
+    - 语篇衔接与连贯的语言学研究（方向性）
+    modern_cases:
+    - AI 长文中同一概念每节换一个说法的典型症状
+    - 多人合写报告的术语分叉
+  communication_implications: 长文优化必须产出 concept_registry 并执行统一决策（选一个 canonical 名，别名标注）；跨节回连时用统一名（retrieval_cue_design
+    的前提）。
+  community_implications: 社群共创知识库需要术语表守门，否则集体写作必然漂移。
+  content_applications:
+    body: 全文选定 canonical 术语；首次出现给定义并加别名括注，此后只用 canonical 名
+    opening: 核心概念在开篇统一定义一次
+  platform_implications: 搜索型平台（知乎）术语一致性还影响关键词命中（scent 与 SEO 的交集）。
+  related_nodes:
+  - schema_formation
+  - chunking
+  - working_memory_limits
+  - retrieval_cue_design
+  - processing_fluency
+  conflicting_nodes: []
+  source_ids:
+  - S157
+  - S160
+  provenance:
+    primary_sources:
+    - S157
+    supporting_evidence:
+    - S160
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long

@@ -1,0 +1,24 @@
+# Evidence Package — S119 Petty & Cacioppo 1986（ELM）
+# 标准格式。access_level 如实标注。
+source_id: S119
+title: "The Elaboration Likelihood Model of Persuasion"
+authors: "Richard E. Petty; John T. Cacioppo"
+year: 1986
+journal: Advances in Experimental Social Psychology 19, 123-205
+doi: "10.1016/S0065-2601(08)60214-2"
+url: "https://scispace.com/papers/the-elaboration-likelihood-model-of-persuasion-3y2y5dyvfe"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "章节摘要（scispace，双路径陈述）+ 大量后续引用（含 2017 中文 PX 案例应用、2023 自我说服研究）确认两条路径与详尽度概念"
+research_question: "说服如何发生？变量如何在中央/外周两条路径间起作用？"
+core_claims:
+  - "两条说服路径：中央路径（对论点深思熟虑的精细加工）vs 外周路径（情感联想/情境线索的简单推断）"
+  - "详尽化可能性（elaboration likelihood）决定走哪条路径：动机与能力高→中央路径，论据质量主导；低→外周路径，线索主导"
+  - "同一变量可经由增加/减少对信息论点的审视来影响说服（核心假设）"
+method: "理论章节（AESP Vol.19）+ 整合大量态度改变实验的冲突结果"
+results: "（综述）ELM 将态度改变文献中大量矛盾结果统一到『变量如何影响精细加工』框架下"
+limitations: "章节全文订阅受限；ELM 为元理论，具体预测依赖变量分析"
+boundary_conditions: "中央路径需动机+能力；高卷入/重要议题走中央，低卷入/边缘线索走外周"
+relevant_nodes: [dual_process_theory, source_credibility_model, central_route_processing, peripheral_route_processing]
+notes: "S34 图书对应的经典章节论文级登记；ELM 是 attitude/persuasion 域枢纽理论。scispace 摘要级获取。"
+last_verified: "2026-09"

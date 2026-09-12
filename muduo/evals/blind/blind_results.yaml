@@ -1,0 +1,611 @@
+# 外部盲测 R2 评分结果（pack_20260912_sample32 · 33 案）
+# R1 执行环境：Codex 净室 /Users/a1-6/muduo_r1_workspace，模型 gpt-5.6-luna（2026-09-11 会话记录留痕）
+# R2 评分：Trae 主仓库，按 evals/rubrics/rubric.md 九维 × 0-2；每 5 案增量落盘
+# 字段：blind: true 标识外部盲测；deductions 记录每个 <2 分维度的扣分原因
+# 人工签名状态：模型预分草稿，待人工抽查 5-8 条复核后签字
+# 2026-09-12 R2 口径复核：按 BLIND_TEST_GUIDE「判分看机制是否被正确且具体地使用，
+#   不要求答案出现内部机制 ID」与 rubric theory_accuracy 定义重审 11 个 1 分案：
+#   9 案（PLT-002/PST-001/VID-001/VID-002/STL-001/THY-001/TND-001/TIT-002/TIT-007）
+#   点名机制的核心职能被自然语言或相邻同义机制正确、有区分度地覆盖，订正为 18 分；
+#   2 案（LFRE-001 fluency_truth_effect、LFGZ-001 curiosity_gap）为机制特有职能实质
+#   缺位（非缺名），维持 17 分并改写扣分理由。REG-001 回归二值硬门维持 passed=false。
+
+- case_id: CAU-001
+  answer_summary: 明确拒绝预算 100% 转投流，指出"在看"口径不明、曝光≠互动，古装剧官抖与 2 万粉知识号属跨品类不可外推；用选择性注意、算法放大、排序信号权重（C 级并拒绝推断具体权重）、平台守门机制还原"触达→行为信号→再分发"链条，给指标分层表与"自然 vs 合规投流"增量对照实验，主动排除刷量并给平台治理提示。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: COM-001
+  answer_summary: 不接受"发红包刺激"前提，先做结构诊断：规范缺口（描述性/指令性规范 A、规范执行与声誉 A-）、回应与地位回路缺失、无固定节律；测算 0.48% 发言率但拒绝单点归因。给六项公告使用说明、新人 48 小时路径、三版可直接发送的红包文案（红包降级为结构修复后的一次性感谢）、0-2/2-6 周/长期分阶段动作与观测指标，并提示外在激励挤出边界。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: COM-002
+  answer_summary: 拒绝"话题不好"表面归因，十层体检定位地位回路断裂与高概率星型结构（标注需用成员回复矩阵核验）；用地位系统、互惠交换网络、网络密度、参与阶梯（C 级注明非普适比例）论证"换题不改结构等于换一个无人承接的问题"，给基线表、轮值回应、非排名认可、统一模板下的主题对照设计与自愿分层方案。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: FLR-001
+  answer_summary: 拒绝全面转型，识别单条爆款报道被当成行业趋势（可得性 A、代表性 B、损失厌恶 B 并注明幅度争议）、AI 内容饱和仅 C 级；报道数字只作用户输入不作基率。给三路径取舍表与 14 天 3×3 账号内对照（AI 线/真人线/基线线）、绿黄红灯指标和扩量前置条件，伦理段排除伪造数据、极端淘汰叙事与侵权，AI 标识要求按最新规则核实。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LNG-001
+  answer_summary: 逐个数出开头十余个未定义术语并按存储/结构/工作流/理论/节奏分层，判定工作记忆（A）+信息过载（B）叠加、结构成本转嫁读者，五阶段地图被框架清单遮蔽；给八节新结构、删除/合并/移动表、负荷节奏曲线、证据补强清单与三个候选标题，全程区分"已见命中/待全文核对"，对 E 级非流畅深加工与 C 级相关负荷主动注明争议不可作建议依据。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LNG-002
+  answer_summary: 判定"不是读不顺而是不可扫"，拒绝把 620 阅读单点归因于文章、列出缺失指标与对照实验设计；价值后置（信息觅食 B、信息气味 B）与段落墙（组块化 A-、工作记忆 A，含新手/专家边界）诊断准确；给首屏改写示例与"现场症状—结构误区—方法自检"分节方向，标题五项核查与公众号标题/摘要/封面适配齐备，明确结构重排待确认。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 1
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 17
+  passed: true
+  deductions:
+    actionability: expected_behavior 第 3 点要求给一段"改写前后对照示例"，R1 只提供改后首屏示例与分节方向，未做原文段落的前后对照，完整结构重排也标注待确认；可操作但未完全达到"可直接执行的改法/示例"满分线。
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFMC-001
+  answer_summary: 精确命中证据—结论断层：n=2 演示数据不支撑"必然+40%""任何企业一年内"；逐字拆穿"周期缩短约三成→速度+40%"的口径跳步（含 1/0.7≈42.9% 换算前提说明），要求降级或补 warrant、补反方三件套；拒绝强化绝对化、零编造数据，给 5 个带证据边界的候选标题、论证图、证据卡模板、知乎适配与 P0-P3 编辑计划，结构确认前不进入逐句润色。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFMC-002
+  answer_summary: 定位"入口价值缺失+信任论证不足"而非标题文风问题：全文从 Solution 讲起、问题层整体缺位（SCQA 缺失，信息觅食 B 说明任务型读者首句即断 scent），指出"三步标题 vs 四节操作小标题"结构承诺风险、演示数据被写成"完整方法"；要求先补真实问题层再谈方法、不补造案例，给原结构/新结构对照与 Cut/Merge/Move/Expand 计划，待用户确认后才施工。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFBR-001
+  answer_summary: 先做文体判定：thought leadership 文不套用"背景—方法—发现—建议"研究体，麦肯锡版式不能替代数据链；诊断 unsupported_claim（"我确信/毫无疑问/我可以预言"断言链 vs 两轶事+演示数据），给思想文式修复（补 warrant、划边界、宏观预测降为待验证判断），明确不要求大样本实证、不编造引用、不写"行业首创"；完整保留"按项目重组/以能力为节点"原创概念与创始人锋利声音，给 5 候选标题与公众号适配。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFAI-001
+  answer_summary: 识别三处同义改写为同一 AI Semantic Repetition 重复组（剥离措辞后信息增量为零），做成组比对表：以 §3 句"成本/速度"最具体为锚点、§1 降为限定入口命题、§6 删除重复或转为有依据的未来推论，明确最低压缩两处、拒绝逐句润色保留；解释逐段独立生成的复发风险与 ai_content_saturation（C 级低置信）环境解释，拒绝据三句推断平台限流，19 项反模式逐条区分命中/疑似/待核，标题与知乎适配证据分层完整。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFED-001
+  answer_summary: 命中概念依赖倒置三处（损失函数/梯度 §7 定义却 §2 使用、过拟合 §6 却 §4 使用、训练集划分 §6 却 §5 使用），论证图逐处标"学习链断开/顺序倒置/跨节补前提"；按 schema_formation 出 Original vs Proposed 七节对照表与最小施工顺序，术语表降为检索入口不承担首讲；明确拒绝"后文会讲"脚注方案（新手工作记忆挂不住未定义术语），也拒绝删除必要复杂度，只移动不删概念；19 项反模式逐条走查，结构确认前不进逐句润色，知乎文章/回答双形态适配。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFME-001
+  answer_summary: 开篇即排除"读者记忆力差"归因，P0 判第 2 节 concept_dumping（15+ 异质概念并列、名词式解释、无依赖序无案例锚定），用工作记忆/组块化/图式形成论证"新手不能被要求自行分类建网"；点出概念层级伪装（模型/指标/状态/工具混列）与北极星-OMTM 同义核对；给六功能块重排（上位组块地图→最小必需集→案例串概念）、Cut/Merge/Move/Expand 计划与负荷曲线，未提供章节全程标"待核验"不臆测，公众号八字段适配齐备。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFRE-001
+  answer_summary: 发布前证据闸门：11 处"研究表明"判 citation decoration（只是权威语气不可回溯）、6 个同向成功案例判 case stacking（无选择标准/反例/底稿，幸存者偏差方向由反方段点出）、"可见…核心变量"判从相关到因果的 conclusion_leap；建 C1-C4→C0 证据链表与逐条口径缺口清单，要求补来源或降级为作者观察/项目经验，明确禁止补造文献；给证据闸门/结构重排/定位降级三选项与验收标准，平台建议与证据层严格分开。
+  scores:
+    theory_accuracy: 1
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 17
+  passed: true
+  deductions:
+    theory_accuracy: expected 要求用 fluency_truth_effect 解释"研究表明"为何能制造可信错觉。R1 对 11 处"研究表明"只走 source_credibility_model 一条路径（信源不可回溯=权威语气失效，已具名 A- 带高卷入边界），anecdote_vs_statistics 亦具名准确；但未运用 fluency_truth_effect 的特有原理——句式的高流畅性与反复暴露会被加工系统误归因为"真实/可信"，这与"信源是否可查"是两条独立失效路径。R1 仅在标题门禁处引用 processing_fluency 且明确限定于标题，未回接到正文伪引用诊断。理论无张冠李戴、方向正确，但该点机制解释不完整，按 rubric"部分正确"给 1 分；此项不是因未写内部 ID 扣分（指南规定不要求具名），而是该机制职能实质缺位。
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFRE-002
+  answer_summary: 冻结术语先于换词：登记三词 23 次交替与三处定义漂移（§1"无需额外付费"关系总和→§4 会员+社群+企微触点总和→§6 另含品牌认知与情感联结，外延不一致），指出对象/数量/价值三个分析层级被混用、三类触点可能交叉不能直接相加；要求先选一个主术语、其余仅有独立对象/指标时才保留、逐处登记后回填全文；"决定成败"按证据不足降级，明确不替作者裁定外部标准哪个唯一正确，未提供章节全部标待核。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFGZ-001
+  answer_summary: 判 delayed_thesis 型 P0：核心命题最迟约 37%（第 3 节末）才出现、前 3200 字为背景铺垫，并主动核对材料内部 28%/37% 位置口径矛盾；命题前移列第一优先级（前 10% 内出现+三维地图+背景压缩为导语），用 information_foraging（B，带叙事沉浸边界）与 information_scent 解释前段每段独立经受离开判断，渠道编年史/宏大套话/匿名案例逐条做删除测试与归位；结构方案交确认、诊断阶段不碰句子，三候选标题过五项检查，L1/L3 平台事实分层清楚。
+  scores:
+    theory_accuracy: 1
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 17
+  passed: true
+  deductions:
+    theory_accuracy: expected 要求用 information_foraging 与 curiosity_gap 两条机制并列解释前三千字流失。R1 把 information_foraging（B，带叙事沉浸边界）与 information_scent（B）用得准确、区分度清晰，前段流失的"收益—成本比较 + 价值线索弱"这一族解释完整；但 curiosity_gap 特有的另一族心理力量——前段应先打开一个读者意识到自己答不上来的认知缺口（"为什么只把渠道做对反而做不好私域"），用想知道答案的张力牵引——未被提出。R1 的命题前移理由全部落在"先给结论/三维地图/读者收益"（给气味、降离开成本），反常性也归给 emotional_arousal，叙事段还对悬念手法保留。理论无错误无张冠李戴，但 expected 点名的并列机制有一族职能缺位、前段流失解释少一个维度，按 rubric"部分正确"给 1 分；此项不是因未写机制 ID（指南规定不要求具名），而是缺口驱力原理实质未运用。
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: LFGZ-002
+  answer_summary: P0 判"全文抽不出一句话中心命题"、七节并列主题只是资料库不是论证；产出工作命题+4 条 supporting claims 的论证图，明确现有图"是主题地图不是论证图"，把正反例数据（复购提升/客单+60%/活跃<3%）要求各贴一个主张、保留差异最大的正反对照而非罗列；argumentation_structure（C）与 chunking（A-）带边界引用，四部分新结构把并列话题归并为设计关系/经营关系/证据反例/落地承接；数字逐条列口径缺口并降级，Macro before Micro、四选项交用户确认。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: OVC-001
+  answer_summary: 拒绝"必然翻倍"入文案：峰终定律（B，有条件）只解释边界清晰经历的回顾评价，不能单独推实际复购增幅，全程体验差时情绪设计反噬信任；区分复购意愿与实际复购率，无基线/样本/窗口/对照不写任何百分比；给推荐/精简/有数据三档可直接替换文案与 A-B 验证出口，另以 source_credibility（A-）指出夸大承诺损伤可信赖性，公众号 L1/L3 分层与三候选标题齐备。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: PLT-001
+  answer_summary: 拒绝"复制正文再配图"：小红书"搜索—收藏"任务不能替代公众号"打开—阅读—订阅"任务，收藏/赞≈67% 只说明决策备用信号、不外推公众号表现；三个点名机制全具名（mental_availability B+、category_entry_points B+、concreteness B+）并各带边界，清单工具性与预算锚点保留，标题去关键词堆叠改价值承诺、首段三问、正文分组补筛选方法与口径、订阅 CTA 以持续栏目为前提；主动给版权 L1 核验（运营规范链接）与不承诺打开率的对照验证出口。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: PLT-002
+  answer_summary: 可以拆但禁止按字数三等分：先抽三条发现各自闭合“问题—发现—材料—桥梁—边界—回报”链才可独立成篇，陌生读者不为系列依赖补背景；区分 Reach/Follow 目标差，每篇重做封面（一封面一发现）、独立钩子结论可搜索可收藏，给 A/B/C 三结构方案与方案 A 八段骨架；九个 adapter 字段名显式引用（title/cover/opening/search/interaction/lifecycle/follow/sharing/constraints），L3 纪律严格（1000 字/18 图旧标注不当硬规则、导流限制），无原文全程不虚构三条发现内容。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: PLH-001
+  answer_summary: 直接证伪"官方公布 70/20/10"：截至 2026-09 无证据抖音官方公布过该配比，排序信号权重（C）只支持多信号加权原则、推不出具体百分比，70/20/10 应标"未确认"不得标 L1；algorithm_amplification（B+）说明早期反馈触发放大但受六因素影响、"流量池逐级放大/完播重要"仅 L3，algorithm_gaming（B）预警固定配比诱导刷代理指标；不给自有权重配比，给逐字纠偏版文案、官方原文核验要求与"对照测试只能检验相关性"的验证边界，附创作者中心与自律公约链接。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: PST-001
+  answer_summary: 漏斗精准定位曝光→点击层（18.5万曝光充足、CTR1.1%对自身基线4.8%、点击后互动率持平），明确暂不重写正文；封面诊断杂乱实拍无视觉层级（bottom_up A、visual_hierarchy B 具名带边界），标题诊断抽象自指词、缺身份与场景（identity_signaling、category_entry_points、specificity、concreteness 具名）；数据链表、外生变量排除表、封面/标题单变量测试方案、下次观测指标表与四条复盘边界完整，明确历史基线非严格对照、不引跨账号标准、不伪造数字与焦虑钩子。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: PST-002
+  answer_summary: 入口层短板判定准确（12万展示、2.3%对半年均值7.1%、读完率正常为反证，拒绝先删短4000字）；标题"观察与思考"零信息差诊断引用 curiosity_gap（B）、concreteness（B+），封面无字诊断引用 bottom_up（A），三个 key_mechanisms 全具名；先核对展示入口口径（订阅/看一看/转发/搜一搜）再归因，14维评分表对无正文维度一律"暂不评分"不虚构，四个候选标题均以反直觉利润发现为核且反复要求正文兑现与数据授权核查，验证顺序与平台L3纪律完整。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: REG-001
+  answer_summary: 明确判定标题不建议直接使用：抽象名词连续堆叠（生态化/协同/赋能/全域/范式）读者无法形成画面，具名引用 processing_fluency（A-，含高卷入采购场景作用下降的边界）、concreteness（B+）、curiosity_gap（B）、top_down（A）、specificity（B）；五项必查逐条过，给4个具体化候选标题（企业服务采购决策人+判断/选择动作+增长结果）并推荐候选1，全部以正文真实兑现为前提、不补造数字；L3平台纪律与"不预测打开率"边界齐备。但 expected 第4条必须项——内部战略文件/投资人材料语境下抽象框架词另有语用、不可一刀切——全文未出现。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 1
+    ethical_safety: 2
+    writing_quality: 2
+  total: 17
+  passed: false
+  deductions:
+    overclaiming: 诊断结论"不建议直接使用"与4个改写候选均未限定外部公域传播语境，缺少 expected 第4条明确要求的语用边界（抽象框架词在内部战略文件/投资人材料中承担视野与野心功能、不可一刀切），建议存在轻度普适化；效果声称与证据边界本身诚实（不承诺打开率、L3标注完整），故扣 1 分不给 0。
+    regression_gate: regression.yaml 案例级纪律为"expected_behavior 每条必须/不得即判定项，任一必须项缺失即记失败"；R1 满足前3条（抽象堆砌+processing_fluency、具体化改写含对象动作结果、非无机制空评）但缺失第4条语境边界，R2 人工签名按回归二值门判 passed=false。run_evals.py 仅按总分≥14计算会显示通过，最终报告以本人工判定为准记录回归子集1例失败。
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: REG-002
+  answer_summary: 四项必须全部满足：先做漏斗定位——9%点击说明注意力环节已通过、标题封面完成本职，首查项是标题/摘要/封面承诺是否在首屏兑现（"而不是先把标题写得更刺激"），引用 information_foraging（B）属 expected 允许的一致性机制；明确先做只改首屏的对照验证再动笔，把工作记忆/流畅性假设标为待验证、不预设"内容太长"；拒绝在无正文时凭空改写（只给方括号施工骨架），下一步明确要求提供标题摘要与开头300-500字；11秒口径、外生变量与不承诺提升的边界完整。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: VID-001
+  answer_summary: 精准定位"看到→前3秒"短板（4秒均播、78%三秒流失支持价值交付过晚假设，同时声明非全因文案、首帧声音选题时机须对照）；诊断自我介绍式开场无信息缺口、单句塞入身份主题经历承诺超工作记忆，具名引用 top_down_attention_guidance（A）、curiosity_gap（B）、working_memory_limits（A）；给推荐版/故事版两版可直接录稿，【具体错误】占位强制填正文事实、身份后置，抖音全屏单列0.5-1秒滑走与"开场极重"L3标注、两版对照测试、禁假钩子与承诺兑现边界齐备。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: VID-002
+  answer_summary: 明确拒绝"改更狠结尾"的归因：点击6.2%高、5秒留存81%、30秒跌至19%加"标题党/就这？"评论构成承诺—兑现断裂证据链，点赞率正常不抵消留存短板；具名引用 schema_violation（B）解释预期被打破的失望、clickbait（B）承诺差额透支信任、peak_end_rule（B）论证结尾追不回30秒前流失的人、emotional_arousal（B）非留存修复器；给完整二选一路径（有真实2万路径→前30秒交付含适用前提/第一单来源/核算的完整方法；只有类型心态→降承诺为"先别被月入2万带跑"并同步补判断标准），加码结尾只会加剧错配；A/B对照、收入承诺合规L1、不补假截图的边界完整。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: STL-001
+  answer_summary: 拒绝"爆了=策略验证成功"：三条爆量加20万涨粉只证明流量事件与关注转化发生过，触达/爆发/关注/留存必须分开看，爆量≠留存、涨粉≠信任；具名引用 attention_economics（A-）、habit_loop（B，一次关注不等于习惯）、anecdote_vs_statistics（B，三条可能是幸存者样本须以全量发布为分母）、algorithmic_amplification（B+，放大信号非质量判定）、recommendation_feedback_loop（B）、algorithmic_gaming（B）；给原汇报/修正汇报逐字对照、获粉视频分组的7/30日回访取关测量（明确窗口为自设口径非平台标准）、单变量复测升级"可复制假设"的条件链，付费买粉核验与L3纪律齐备，四个反模式全部避开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: THY-001
+  answer_summary: 开篇即拒绝把恐惧拉高一倍与"再不学就被时代淘汰"，判定"所有爆款都要焦虑、只有焦虑才转发"是把有条件现象夸大为必要条件；正确区分高唤醒≠焦虑——敬畏、惊叹、兴奋等正性高唤醒同样促分享；具名引用 emotional_arousal（B，放大器非发动机、操纵感识别后反抑制分享）、EPPM 恐惧诉求（B+，威胁×效能四条件，高威胁低效能进入恐惧控制导致否认回避攻击信源）、psychological_reactance（A-，"再不…就…"威胁自主触发逆反）、fear_exploitation（B）、STEPPS（B）；给"真实有限风险提示+选择工具+利他分享理由"替代结构与3个候选标题（均以正文可核查证据与及时兑现为前提），不全面否定情绪设计。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: THY-002
+  answer_summary: 明确证伪"8秒注意力/比金鱼短"：无原始研究支持的媒体讹传，准确引用 Gloria Mark 2023 的真实数据（屏幕平均注意2004年约2.5分钟→2012年75秒→近期约47秒）并指出这是特定环境与测量方法下的平均行为、非生物容量，更不能反推3秒红线；真实机制以 attention_capacity_limits（A，容量受任务/动机/唤醒/熟练度调节、人可连续数小时深度投入）+selective_attention/bottom_up/top_down（均A、带边界）替代，把实践结论重述为"首个可见单元回答是什么/与我何关/继续看得什么，3秒仅待验证观察窗口"，给改前改后逐句对照与A/B验证出口，三个反模式全部避开。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: TND-001
+  answer_summary: 拒绝"七个理论各写两句凑专业"：无原文封面评论与行为数据时4.6万赞只是结果信号，理论名数量≠分析质量，七个概念全部降级为待核查候选、正式拆解最多保留2-3个有具体画面/句子/评论/数据支撑的机制；对七个候选逐一给出机制定义+激活条件+影响行为+证据等级+边界+竞争机制完整六要素卡，并主动防概念混淆（social proof≠social identity theory、scarcity mindset 为C级带宽税非"小众限时"统称、loss aversion 非固定两倍且需明确参照点、framing 与损失厌恶机制不同、peak_end 救不了弥散差体验、zeigarnik 吊胃口≠未完成承诺），假设性示例明确标注"非这篇事实"，单条爆款不推普适规律。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: TIT-001
+  answer_summary: 诊断"个人成长/认知能力/提升/思考"抽象名词堆砌、读者1秒无画面（processing_fluency A- 具名），正文3个具体方法与复盘模板未被标题利用违背 specificity_effect（B 具名），concreteness（B+）等七机制带边界引用；给4个候选（职场新人拖延自救3个亲测方法等）覆盖身份词+问题词+搜索词"拖延"+数量，逐条做点击/收藏/搜索取舍对比表与推荐，封面两行大字与首屏兑现要求配套；边界完整——"亲测"不外推普遍疗效、数字与正文截图一致、不写"彻底戒掉/100%有效"、L3平台纪律、无数据只做中低置信预期。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: TIT-002
+  answer_summary: 诊断"理财入门指南"四点全中：入门泛化、目标人群认不出与我有关（identity_signaling B 具名），"指南"宣告式无信息差，"理财"竞争大词需嵌长尾词（候选均用"第一笔10万/攒到10万"人群自我归类语言而非作者视角）；4个候选均承载4步顺序/风险表等正文可收藏资产，逐条给适用/不适用条件与兑现检查，明确"别急着定投"不能写成绝对禁令；金融合规边界超额（不搬运收益率、禁稳赚保本闭眼买、风险表非个人理财建议、演示数据口径），收藏目标下主动不制造焦虑。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna
+- case_id: TIT-007
+  answer_summary: 诊断原标题完全缺失"凉拌菜/一人食/做法"搜索词、只有季节情绪无法命中搜索场景；明确小红书封面承担情绪画面、标题承担关键词与结果承诺的职能分工，且未宣告原标题全错（"有季节感、不是内容没价值"），给出"保留原标题作情绪副句"的下一步选项；4个候选承载6道/合计30分钟/2-8元食材成本/采购清单等高收藏点，逐项做兑现与口径检查（30分钟必须写明6道合计、2-8元须统一食材口径并标注是否含调味料）；9宫格缩略图信息拥挤风险、封面大字方案、正文首行与标题承诺对齐、不堆标签的搜索词自然复现建议齐备。
+  scores:
+    theory_accuracy: 2
+    evidence_accuracy: 2
+    diagnostic_quality: 2
+    actionability: 2
+    platform_fit: 2
+    specificity: 2
+    overclaiming: 2
+    ethical_safety: 2
+    writing_quality: 2
+  total: 18
+  passed: true
+  deductions: null
+  red_line_fail: false
+  blind: true
+  model: gpt-5.6-luna

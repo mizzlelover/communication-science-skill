@@ -1,0 +1,26 @@
+# Evidence Package — S132 Thaler 1985（Mental Accounting and Consumer Choice）
+# 标准格式。access_level 如实标注。
+source_id: S132
+title: "Mental Accounting and Consumer Choice"
+authors: "Richard H. Thaler"
+year: 1985
+journal: "Marketing Science 4(3): 199-214"
+doi: "10.1287/mksc.4.3.199"
+url: "https://ideas.repec.org/a/inm/ormksc/v27y2008i1p15-25.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "IDEAS/RePEc 官方摘要（2008 年 Marketing Science 27(1):15-25 官方重印版条目，含原文官方摘要全文，DOI 10.1287/mksc.1070.0330，标注无下载限制但 pubsonline 被 Cloudflare 拦截未取到正文）+ MBA 智库百科心理账户条目（对 1985 论文核心概念的系统阐述：非替代性、值函数与得失编码规则、享乐主义加工、支付分离/预算）+ Cambridge《Scope insensitivity and mental accounting》综述交叉确认（Thaler 1985 首次提出心理账户理论解释非标准行为）"
+research_question: "消费者的购买决策能否用标准的微观经济学效用最大化模型解释？心理账户系统如何使决策系统性违背货币可替代性与理性经济法则？"
+core_claims:
+  - "提出以认知心理学与微观经济学混合的消费者行为模型：起点是用前景理论价值函数对得失组合进行心理编码，再用新概念 transaction utility（交易效用）评估购买（购买评价 = 获得效用 + 交易效用），并纳入家庭预算过程以完成心理账户刻画"
+  - "心理账户的非替代性（non-fungibility）：不同账户的钱不能完全替代，来源与用途决定其心理价值——同额工资、年终奖与彩票奖金被区别对待（百科示例：已花 50 元看篮球赛者更可能放弃再花 50 元，而收到 50 元停车罚单者不受影响）"
+  - "得失编码规则（享乐主义编辑 hedonic editing）：两笔盈利应分开、两笔损失应合并、大得小失应整合（冲淡损失）、小得大失需视差额大小决定分合——心理运算是追求情感满意最大化而非效用最大化"
+  - "支付与消费的分离（payment decoupling）：预先支付使购买与消费感受分开，消费时痛苦减弱，导致超支（电话包月、健身年费例）——后续 Gourville & Soman 的支付贬值(payment depreciation)即由此发展"
+  - "心理账户导致违背最简单理性法则的决策，且这种隐性记账系统在小到个人家庭、大到企业集团普遍存在；对营销（尤其定价）有直接启示（折扣表述、折换购买：换购 56% vs 直接购买 44%）"
+method: "理论建模（认知心理学概念+微观经济学框架）+ 实验/示例例证（心理账户分类、得失编码、预算约束下的选择行为）"
+results: "确立了心理账户理论：非替代性、交易效用、享乐主义编辑与预算过程；说明消费者对等值货币按账户区别对待的系统性模式；给出定价与促销的营销推论"
+limitations: "论文为理论建构为主，单个实验证据有限；享乐编辑规则的边界（哪些组合真正被分开/合并）由后续研究（如 Thaler & Johnson 1990、Fishburn & Luce 1995）细化与部分修正"
+boundary_conditions: "适用于消费决策与定价情境；核心机制是金钱的非可替代性与参照点依赖的得失编码；后续扩展至投资（行为资产组合理论）、信贷、折扣与时间账户等领域"
+relevant_nodes: [mental_accounting, gain_loss_framing, present_bias]
+notes: "心理账户理论奠基论文（transaction utility 提出）。官方摘要+百科+学术综述多源交叉确认核心结论，pubsonline 全文被拦截未取到正文，已如实标注。"
+last_verified: "2026-09"

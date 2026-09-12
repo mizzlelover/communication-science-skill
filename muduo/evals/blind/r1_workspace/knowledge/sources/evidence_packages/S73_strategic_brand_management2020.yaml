@@ -1,0 +1,26 @@
+# Evidence Package — S73 Keller & Swaminathan 2020（Strategic Brand Management 5th ed）
+# 标准格式。access_level 如实标注。
+source_id: S73
+title: "Strategic Brand Management: Building, Measuring, and Managing Brand Equity (5th ed., Global Edition)"
+authors: "Kevin Lane Keller; Vanitha Swaminathan"
+year: 2020
+journal: Pearson Education Limited（教材专著，Global Edition 621 页；美国版 5th ed. 2019）
+doi: "无 DOI（专著）"
+url: "https://www.pearson.com/en-gb/subject-catalog/p/strategic-brand-management-building-measuring-and-managing-brand-equity-global-edition/P200000004606/9781292436456"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：Pearson 出版社目录（5th ed. 全书 16 章目录，含第 3 章 Brand Resonance and Brand Value Chain 专章、数字化品牌章节，确认 Swaminathan 加入为合著者）+ Qualtrics 品牌管理页（CBBE 金字塔四层：身份/含义/响应/共鸣及每层构成）+ Advergize 品牌共鸣页（四层金字塔层级问题 + 共鸣四维度：行为忠诚/态度依恋/社区感/主动参与）+ Markeview 品牌资产页（Keller 1993 框架四层与 CBBE 定义）+ StudyRaid MBA 课程（CBBE 金字塔四阶段六块）+ RePEc/Palgrave Lindemann 章节（品牌价值链四要素：营销项目投入/顾客心智/市场表现/股东价值）+ 中文课程 PPT（品牌价值链四阶段推演）+ 深圳技术大学图书馆 OPAC（2020 Global Edition 书目信息）"
+research_question: "品牌资产如何从消费者心智视角被定义、测量并管理，从而建立持久的品牌？"
+core_claims:
+  - "CBBE 模型从消费者视角定义品牌资产（品牌知识对消费者响应品牌营销的差异化效应）；品牌知名度与品牌形象共同构成品牌知识，驱动消费者差异化反应（Markeview、StudyRaid、中文 PPT 多源一致）"
+  - "品牌共鸣金字塔（Brand Resonance Pyramid）四层六块逐级构建：Level 1 身份（salience，who are you）→ Level 2 含义（performance 性能 + imagery 意象，what are you）→ Level 3 响应（judgments 判断 + feelings 感受，what about you）→ Level 4 共鸣（resonance，关系/连接）；每级是上一级的前提，达顶即顾客成为倡导者（Qualtrics、Advergize、StudyRaid、Markeview 一致）"
+  - "品牌共鸣含四个可测维度：行为忠诚、态度依恋、社区感、主动参与——共鸣不仅是重复购买，而是深度的心理连接与主动投入（Advergize 详述）"
+  - "品牌价值链（Brand Value Chain）将品牌价值拆解为四环节：营销项目投入（marketing program investments）→ 顾客心智（customer mindset）→ 市场表现（brand performance）→ 股东价值（shareholder value），强调品牌建设的系统性与长期性（RePEc Lindemann 章节 + 中文课程 PPT）"
+  - "第 5 版由 Swaminathan 加入为合著者，突出数字化品牌时代挑战；首版 1998 出版，被称'品牌圣经'（Pearson 出版社目录 + Amazon 作者简介）"
+method: "品牌管理教科书框架（消费者心智视角的 CBBE 理论 + 案例教学，5 版迭代）"
+results: "（权威框架）全球最被广泛使用的品牌管理标准教材（'branding 圣经'）"
+limitations: "教科书整合框架，非单一实证研究；金字塔各级证据强度需回溯原始研究（Keller 1993/2001 等）"
+boundary_conditions: "适用于品牌资产的系统构建与测量；CBBE 以消费者心智为分析单位，财务/市场表现指标需结合其他模型（如 Aaker 资产视角、品牌价值链）"
+relevant_nodes: [positioning_mechanism, mental_availability, distinctive_brand_assets]
+notes: "品牌管理标准教科书。CBBE 四层金字塔/共鸣四维度/品牌价值链为公开标准内容，经 8 个独立渠道交叉确认，未编造。Global Edition 2020（图书馆 OPAC 证实），美国版 5th 2019，新 Global Edition 2023。"
+last_verified: "2026-09"

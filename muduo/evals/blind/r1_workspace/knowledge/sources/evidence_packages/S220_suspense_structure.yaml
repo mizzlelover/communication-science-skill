@@ -1,0 +1,22 @@
+# Evidence Package — S220（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S220
+title: Neural evidence that suspense narrows attentional focus
+authors: M. A. Bezdek; R. J. Gerrig; W. G. Wenzel; J. Shin; K. Pirog Revill; E. H. Schumacher
+year: 2015
+journal: Neuroscience 303:338-345
+doi: 10.1016/j.neuroscience.2015.06.055
+url: https://pubmed.ncbi.nlm.nih.gov/26143014/
+access_level: abstract_only
+research_status: annotated
+content_obtained: PubMed 摘要逐字实读（2026-09-11）；PMID 26143014
+research_question: 叙事悬念升高是否动态收窄视觉注意的空间范围？
+core_claims:
+- fMRI：观看叙事影片时，悬念升高引起外周视觉处理区（前距状沟）活动降低、默认网络节点活动降低
+- 同时中央（叙事相关）视觉处理区与额顶注意网络活动升高——自然istic 刺激下早期视觉加工因叙事语境发生动态空间调谐
+method: fMRI + 自然叙事影片 + 外周闪烁棋盘格探针
+limitations: 影片片段（实验室叙事）；悬念由主观评级操作化
+boundary_conditions: 视觉通道；悬念强度随时间变化的设计
+relevant_nodes:
+- suspense_structure
+notes: suspense_structure 机制主张（悬念管理注意分配）的一手神经证据：'悬念收窄注意'字面级匹配。这是 D→C 升级的依据（有实验研究依据，情境有限）。
+last_verified: 2026-09

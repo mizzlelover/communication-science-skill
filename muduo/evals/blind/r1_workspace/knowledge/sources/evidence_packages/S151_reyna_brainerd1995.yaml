@@ -1,0 +1,24 @@
+# Evidence Package — S151 Reyna & Brainerd 1995（Fuzzy-Trace Theory: An Interim Synthesis）
+# 标准格式。access_level 如实标注。
+source_id: S151
+title: "Fuzzy-Trace Theory: An Interim Synthesis"
+authors: "Valerie F. Reyna; Charles J. Brainerd"
+year: 1995
+journal: "Learning and Individual Differences 7(1): 1-75"
+doi: "10.1016/1041-6080(95)90031-4"
+url: "http://dianda.cqvip.com/Qikan/Article/Detail?id=9485864"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "渠道1：scispace 期刊页（Learning and Individual Differences, ISSN 1041-6080，实抓）确认论文、机构（University of Arizona）与 DOI 10.1016/1041-6080(95)90031-4，TL;DR：「Four areas of experimentation are considered in which research under the aegis of fuzzy-trace theory is in progress: suggestibility and false memories; judgment and decision making; the development of forgetting; and the development of retrieval」；渠道2：《模糊痕迹理论：对经典认知发展理论的挑战》（心理科学 2004, 27(2):489-492，实抓）中文综述转述理论核心与应用域；渠道3：Psicologia em Estudo 2011 论文（ResearchGate PDF，实抓）葡语综述转述双痕迹理论（memória literal 逐字 vs memória da essência 要旨，两系统并行编码）；多条 CSCD 引文确认卷期 7(1):1-75"
+research_question: "如何统一解释推理与记忆发展中大量反经典发现（错误记忆、框架效应、推理错觉、遗忘的发展）？经验是否并行留下两种独立痕迹（逐字与要旨），且二者遵循不同遗忘规律并在判断中权重不同？"
+core_claims:
+  - "经验并行编码两种独立痕迹：逐字痕迹（verbatim，表面细节，精确但快速衰退）与要旨痕迹（gist，意义/模式/主旨，抗衰退并支撑推理）"
+  - "判断与决策主要由要旨驱动而非逐字细节——为框架效应、错误记忆（要旨再认）、推理错觉提供统一记忆层解释"
+  - "论文为模糊痕迹理论做阶段性综合（interim synthesis），统合四个实验领域：可暗示性与错误记忆、判断与决策、遗忘的发展、提取的发展"
+method: "理论综合论文（阶段性 synthesis，75 页长文）：整合记忆/推理/发展心理学的实验证据，提出双痕迹框架并对四个领域做统合解释"
+results: "确立要旨优先（gist is the grist）的核心命题：随时间推移要旨痕迹更持久并在判断中占主导，逐字痕迹短暂但精确——细节丢失是常态而非故障"
+limitations: "本包仅获取 TL;DR/摘要级信息与综述转述，未获取正文全文；原文属理论综合并引发同卷评论与回应（Bjorklund 1995、Ackerman 1995 等评论文构成完整论辩场域），本包未覆盖评论方"
+boundary_conditions: "延迟越长、任务越偏评价，要旨主导越明显；数字敏感决策（价格/剂量/条款）不能依赖受众记忆细节；对内容设计：为要旨设计（受众带走的唯一一句话），细节转为可查附录"
+relevant_nodes: [gist_vs_verbatim_memory]
+notes: "模糊痕迹理论的阶段性综合论文（paper 级，abstract_only）。DOI 与卷期 7(1):1-75 经 scispace 与多篇中文核心期刊引文核实；核心理论内容经中英葡三语综述交叉转述，未编造。支撑 memory.yaml gist_vs_verbatim_memory。"
+last_verified: "2026-09"

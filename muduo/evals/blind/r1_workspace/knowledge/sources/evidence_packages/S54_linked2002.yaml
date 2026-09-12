@@ -1,0 +1,26 @@
+# Evidence Package — S54 Barabási 2002（Linked）
+# 标准格式。access_level 如实标注。
+source_id: S54
+title: "Linked: The New Science of Networks"
+authors: "Albert-László Barabási"
+year: 2002
+journal: Perseus Books（专著）
+doi: "无 DOI（专著）"
+url: "https://m.sohu.com/a/1023979593_122066678/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心概念经多源交叉实取：中文深度解读（无标度网络/幂律分布/优先连接/BA 模型/鲁棒性与脆弱性）+ 学术综述（scale-free 定义/富者愈富/BA 模型）+ getAbstract 摘要（图论史/Königsberg 桥）"
+research_question: "真实网络（万维网/社交/代谢）遵循什么普遍法则？枢纽节点如何产生？"
+core_claims:
+  - "无标度网络（scale-free）：真实网络度分布呈幂律——少数枢纽节点拥有海量连接、绝大多数节点连接很少（二八法则的数学形式），不同于随机网络的泊松分布"
+  - "优先连接（preferential attachment，BA 模型）：新节点更倾向连接已有高连接节点——'富者愈富'的马太效应；增长+优先连接两大机制产生枢纽"
+  - "拓扑决定功能：网络结构（而非节点个体）决定系统行为；链接才是主角"
+  - "鲁棒性与脆弱性：无标度网络对随机故障鲁棒（普通节点失效影响小）、对枢纽针对性攻击脆弱（移除少数枢纽全网崩溃）"
+  - "理解网络法则可预测传播/头部效应/生态闭环等现实现象"
+method: "网络科学开创性研究（万维网/引用/代谢网络实证）+ 科普叙事"
+results: "（实证+理论）无标度网络/优先连接成为网络科学核心概念（开创之作）"
+limitations: "科普性质（无公式）；幂律普适性在部分网络有边界讨论"
+boundary_conditions: "适用于增长型网络（新节点持续加入）；静态/小网络需谨慎"
+relevant_nodes: [preferential_attachment, small_world_property, algorithmic_amplification]
+notes: "优先连接/无标度网络的开创来源（book 级）。BA 模型/幂律为公开标准内容，未编造。"
+last_verified: "2026-09"

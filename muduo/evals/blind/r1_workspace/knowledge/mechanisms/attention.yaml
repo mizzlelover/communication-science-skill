@@ -1,0 +1,673 @@
+# attention — 注意（Attention）：信息流环境中什么决定"停不停"
+domain: attention
+nodes:
+- id: selective_attention
+  canonical_name_en: Selective Attention
+  canonical_name_zh: 选择性注意
+  aliases:
+  - 注意选择
+  - focused attention —— 与 inattentional_blindness 的区别：本节点是主动选择过程，视盲是选择失败的后果
+  domain: attention
+  definition: 当多个信息源同时竞争时，认知系统只对其中一部分进行深度加工，其余被过滤或衰减。经典注意理论（Broadbent 过滤模型、Treisman 衰减模型）把注意刻画为一道闸门，决定哪些信息能进入后续加工。它是注意力经济的最底层约束。
+  core_claim: 在信息过载环境中，未被注意选择的内容对后续认知、记忆与行为几乎没有贡献。
+  mechanism: 注意资源有限（见 attention_capacity_limits），大脑依据两类信号做取舍：刺激本身的显著性与当前目标的相关性。被选中的信息获得更深加工并进入工作记忆，未选中信息被抑制或衰减为背景。选择完成后，人对其余信息表现出系统性的看不见，即使信息客观上就在眼前。
+  causal_chain: 信息竞争 → 选择性过滤 → 被选内容进入深加工与记忆 → 未选内容被抑制
+  variables:
+    inputs:
+    - 刺激显著性
+    - 目标相关性
+    - 当前任务
+    moderators:
+    - 专业训练
+    - 动机水平
+    - 认知负荷
+    - 环境噪音
+    mediators:
+    - 注意资源分配
+    - 工作记忆编码
+    outputs:
+    - 加工深度
+    - 记忆形成
+    - 行为响应
+  evidence:
+    supporting:
+    - 经典双耳分听研究（Cherry 1953）显示人们只能有效追随其中一个语音通道
+    - Neisser 的选择性观看实验表明目标事件之外的动作几乎不被察觉
+    - Kahneman《Attention and Effort》（S02）建立容量与分配的资源模型
+    conflicting:
+    - 早期选择与晚期选择之争：未注意通道中仍有少量语义加工（如自己的名字被听到），说明过滤器并不完全
+    replication:
+    - 现象本身被各范式反复验证；争议集中在过滤发生的位置而非现象是否存在
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 任务高度熟练后可部分自动化并行，选择代价下降
+  - 多通道信息互补（画面与语音一致）时切换与过滤成本降低
+  failure_conditions:
+  - 极强显著性刺激（巨响、闪烁、突发）可打断目标驱动的选择
+  - 低负载状态下资源富余，未被注意的信息也会获得部分加工
+  common_misinterpretations:
+  - 默认用户会看到我发布的所有内容——实际上大量信息从未被注意选择
+  - 人类注意力只有 8 秒／不如金鱼——无原始研究支持的媒体讹传，不得引用
+  ethical_risks:
+  - 利用选择性注意隐藏关键信息（小字免责条款、暗色模式的次要按钮）
+  examples:
+    original_cases:
+    - S09《The Invisible Gorilla》以看不见的大猩猩展示选择性注意的盲区
+    research_cases:
+    - Simons 与 Chabris 1999 的隐形大猩猩实验：让被试数传球次数，相当比例的被试未察觉穿过画面的装扮大猩猩
+    modern_cases:
+    - 信息流产品中，用户对推荐位以外的界面元素几乎没有记忆
+  communication_implications: 内容竞争首先是注意选择的竞争。标题、封面与首屏承担赢得选择的全部压力，正文质量再高也救不回未被选择的内容。
+  community_implications: 社群公告若淹没在日常消息里，等于没有发布；需要设计让关键信息赢得成员的选择。
+  content_applications:
+    title: 标题给出明确的目标信号，帮助目标驱动的注意选择
+    opening: 首句建立与我有关的关联感，降低被过滤的概率
+    body: 一次只推进一个论点，避免多任务式信息竞争
+    cta: 收尾只保留单一明确动作，避免注意力出口分散
+  platform_implications: 平台以滑动与跳过行为作为注意选择的代理指标，反向强化显著性的军备竞赛；信息流插入位依赖位置而非内容赢得注意。
+  related_nodes:
+  - attention_capacity_limits
+  - bottom_up_attention_capture
+  - top_down_attention_guidance
+  - inattentional_blindness
+  - cocktail_party_effect
+  - pre_suasion_attention_channeling
+  - filter_bubble_echo_chambers
+  source_ids:
+  - S02
+  - S09
+  - S03
+  - S141
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Kahneman 1973《Attention and Effort》（S02，容量理论）+ Chabris & Simons 2010《The Invisible
+      Gorilla》（S09，选择性/视盲）+ Mark 2023（S03，数字环境注意时长与切换成本）
+    effect_size: 注意选择受显著性与自我相关调制；数字环境切换成本为分钟级
+    replication_status: 选择性注意力为最稳健注意现象之一；数字环境数据有现场测量支持
+    context_dependency: 受唤醒/任务卷入/信息显著性调制
+    downgrade_upgrade_reason: 2026-09 实取 S02/S09/S03 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S02
+    supporting_evidence:
+    - S09
+    - S03
+    last_verified: 2026-09
+    platform_sources:
+    - generic:S1
+    - generic:S2
+    - generic:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: attention_capacity_limits
+  canonical_name_en: Attention Capacity Limits
+  canonical_name_zh: 注意容量限制
+  aliases:
+  - 注意力资源有限性
+  - attentional resources —— 与 working_memory_limits 的区别：本节点是注意资源总量约束，后者是保持与操纵信息的结构约束
+  domain: attention
+  definition: 注意是有限容量的资源，同时进行的任务会相互竞争并导致性能下降。Kahneman 1973 年的《Attention and Effort》提出容量与分配模型，工作记忆研究进一步量化了这一约束；稀缺状态会进一步压缩可用带宽。
+  core_claim: 同时加工的任务总量存在硬上限，超限后性能系统性下降，而非在任务间均匀分摊。
+  mechanism: 中枢资源有限，分配由当前意图、目标与唤醒水平共同决定。多任务时资源被切分，每个任务所得不足，任务切换本身还产生切换成本。Miller 1956 对即时记忆的经典估计为 7±2 个组块，Cowan
+    之后修正为约 4 个组块，说明容量约束跨越任务类型普遍存在。
+  causal_chain: 任务数量超限 → 资源切分与切换成本 → 单任务性能下降 → 错误率与遗漏上升
+  variables:
+    inputs:
+    - 并发任务数量
+    - 任务复杂度
+    - 唤醒水平
+    moderators:
+    - 任务熟练度
+    - 动机
+    - 时间压力
+    - 稀缺状态
+    mediators:
+    - 资源分配策略
+    - 任务切换成本
+    outputs:
+    - 任务绩效
+    - 错误率
+    - 深度加工比例
+  evidence:
+    supporting:
+    - Kahneman 1973 的双任务范式系统显示资源竞争
+    - Miller 1956 与 Cowan 2001 对记忆容量的经典估计
+    - S13 记录的稀缺状态带宽税研究（丰收前后农民认知表现对比）
+    conflicting:
+    - 瓶颈位置存在争论（知觉级还是反应级）；自评的多任务能力与实测表现常不一致
+    replication:
+    - 容量约束与切换成本被大量独立团队复制
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 高度自动化的任务（走路加聊天）可低代价并行
+  - 不同感觉通道且都低负载的任务可近似并行
+  failure_conditions:
+  - 高负载任务叠加必然降级，声称自己是多任务高手者实测多为错觉
+  - 稀缺或压力状态下有效容量进一步缩水
+  common_misinterpretations:
+  - 8 秒注意力与金鱼比较——媒体讹传，学术上无出处，禁用
+  - 年轻用户天生更擅长多任务——缺乏可靠证据
+  ethical_risks:
+  - 注意力商业刻意推动多任务与持续切换以增加曝光机会，牺牲用户认知健康
+  examples:
+    original_cases:
+    - S02 的注意力分配模型；S13 对稀缺如何征税认知带宽的分析
+    research_cases:
+    - 双任务干扰实验：第二任务加入后第一任务的反应时与准确率系统性变差
+    modern_cases:
+    - 边看视频边刷手机的双屏行为，两者记忆均明显下降
+  communication_implications: 内容必须为被压缩的注意力设计：一次一个核心信息，把并行任务当作默认环境而非例外。
+  community_implications: 社群运营避免高频多线轰炸，重要事项需要独占的注意窗口。
+  content_applications:
+    title: 一屏一个重点，把次要信息降级为可展开的详情
+    opening: 用低认知成本的方式进入，不要求先记住多个前提
+    body: 分段给台阶，每段只占用一个容量单位
+    cta: 给出最低成本的下一步动作
+  platform_implications: 平台的并发多任务环境系统性压低单条内容的可加工深度，长内容必须自带结构化的分段与摘要。
+  related_nodes:
+  - working_memory_limits
+  - selective_attention
+  - information_overload
+  - intrinsic_cognitive_load
+  - dual_process_theory
+  - scarcity_mindset
+  - attention_economics
+  source_ids:
+  - S02
+  - S13
+  - S04
+  - S03
+  - S161
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Kahneman 1973 Attention and Effort（S02，多源交叉实取：4 个独立中文教育/科普渠道交叉确认容量分配模型）+ 容量有限注意模型经典框架
+    effect_size: 注意力为有限容量资源；唤醒调节容量（佐证级）
+    replication_status: 容量模型为经典框架；多资源模型（Wickens）对其扩展
+    context_dependency: 任务负荷与唤醒共同决定可用容量
+    downgrade_upgrade_reason: 2026-09-09 primary_sources 改为 S02（annotated，多源交叉实取），同书 S117（found 级）佐证标注保留；2026-09-09
+      同书重复登记合并 S117→S02（S02 为 annotated 实质版），引用重定向至 S02，S117 标 MERGED_INTO 移出注册表
+  provenance:
+    primary_sources:
+    - S02
+    supporting_evidence:
+    - S04
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-PLT-001
+    platform_sources:
+    - douyin:S1
+    - generic:S1
+    - generic:S2
+    - generic:S3
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: bottom_up_attention_capture
+  canonical_name_en: Bottom-up Attention Capture
+  canonical_name_zh: 自下而上注意捕获
+  aliases:
+  - 刺激驱动注意
+  - stimulus-driven capture —— 与 top_down_attention_guidance 相对：前者由刺激属性驱动，后者由目标与预期驱动
+  domain: attention
+  definition: 刺激的物理显著性（亮度、对比、运动、尺寸、突发性）能够不依赖当前意图地自动夺取注意。显著性是视觉系统并行计算的特征，突发事件还会经由进化上保守的警报通路优先处理。
+  core_claim: 显著性高的刺激会在无意图条件下捕获注意，捕获后原任务被短暂中断。
+  mechanism: 视觉系统先并行扫描各特征维度上的独特性（singleton），独特者形成显著性峰值并吸引首次注视；突变与运动信号与威胁检测通路相连（见 S08），具有加工优先权。捕获后需要付出重新定向的代价，原任务的绩效短暂受损。
+  causal_chain: 刺激显著性突出 → 自动捕获 → 注意短暂偏离目标 → 重新定向成本
+  variables:
+    inputs:
+    - 对比度
+    - 运动
+    - 突现
+    - 尺寸
+    - 色彩独特性
+    moderators:
+    - 知觉负载
+    - 用户目标强度
+    - 刺激与目标的相关性
+    mediators:
+    - 显著性图计算
+    - 警觉系统激活
+    outputs:
+    - 首次注视落点
+    - 注视时长
+    - 任务中断
+  evidence:
+    supporting:
+    - 视觉搜索范式中的单例捕获系列研究（Theeuwes 等）
+    - Yarbus 的眼动经典研究显示任务改变扫描路径，但显著刺激仍能插入捕获
+    - 面孔与威胁刺激的检测优先级研究
+    conflicting:
+    - 知觉负载理论（Lavie，S161）：高知觉负载削弱自下而上注意捕获，说明捕获并非绝对；负载操纵与显示中额外项目数量的混淆存在争论（Tsal & Benoni 2010 负载/稀释之争）
+    replication:
+    - 突现（onset）刺激的捕获效应稳健；颜色单例等静态特征的捕获存在条件争议
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 背景均匀、单一异类刺激时捕获最强
+  - 用户处于搜索或低负载状态时易被捕获
+  failure_conditions:
+  - 高知觉负载下捕获减弱（用户埋头干活时横幅无效）
+  - ' banner blindness：位置固定、长期重复的显著元素被习得性忽略'
+  common_misinterpretations:
+  - 越花哨越好——多元素互相争夺显著性会彼此抵消，并抬高后续内容的捕获阈值
+  - 捕获等于兴趣——被捕获不等于被喜欢，强刺激可引发回避与反感
+  ethical_risks:
+  - 伪突发与警报式设计制造焦虑（假红点、假倒计时）
+  - 弹窗与自动播放视频劫持注意
+  examples:
+    original_cases:
+    - S48 描述的注意力商业不断升级显著性竞争的历史
+    research_cases:
+    - 视觉搜索实验：带突现边框的分心物显著减慢目标搜索
+    modern_cases:
+    - App 角标红点、信息流自动播放、电商大促页面的动态贴片
+  communication_implications: 封面与首图的显著性决定冷启动的生死；但显著性要服务于定位，与品牌无关的炫技只会制造一次性围观。
+  community_implications: 群公告可用一次性强提示（@全体、置顶变色），但滥用会训练成员集体忽略。
+  content_applications:
+    title: 封面用单一高对比焦点，避免多主体平分显著性
+    opening: 前两秒出现运动或突变元素（数字跳变、画面切入）
+    visual: 信息层级中只保留一个显著性峰值
+    cta: 把行动按钮做成页面上唯一的强显著元素
+  platform_implications: 推荐系统以早期停留行为奖励显著性设计，形成刺激通胀：所有人的阈值同步抬高，平均显著性收益递减。
+  related_nodes:
+  - top_down_attention_guidance
+  - selective_attention
+  - von_restorff_effect
+  - facial_attention_priority
+  - inattentional_blindness
+  - algorithmic_amplification
+  - attention_economics
+  source_ids:
+  - S09
+  - S08
+  - S48
+  - S141
+  - S161
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: LeDoux 1996《The Emotional Brain》（S08，威胁通路的自下而上捕获）+ Chabris & Simons 2010（S09，显著性）+
+      Tim Wu 2016（S48，注意力商业）
+    effect_size: 高显著性/威胁性刺激捕获注意（经典注意捕获现象）
+    replication_status: 注意捕获效应跨范式稳健（视觉搜索/威胁优先）
+    context_dependency: 目标相关性/刺激显著度/任务负荷调制
+    downgrade_upgrade_reason: 2026-09 实取 S08 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S08
+    supporting_evidence:
+    - S09
+    - S48
+    last_verified: 2026-09
+    case_sources:
+    - CASE-PLT-047
+    platform_sources:
+    - douyin:S1
+    - generic:S1
+    - generic:S2
+    - generic:S3
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: top_down_attention_guidance
+  canonical_name_en: Top-down Attention Guidance
+  canonical_name_zh: 自上而下注意引导
+  aliases:
+  - 目标驱动注意
+  - endogenous attention —— 与 bottom_up_attention_capture 相对；与 pre_suasion_attention_channeling 的关系：后者是把引导前置为说服策略的实践应用
+  domain: attention
+  definition: 注意被当前目标、预期与语言提示主动引导到特定位置与特征。同一画面，任务不同的人看到不同的东西：引导决定采样方向，先于内容评估发生。
+  core_claim: 注意分配由目标与预期先验引导，改变受众的任务设定就能改变其看见的内容。
+  mechanism: 背侧注意网络（Corbetta 与 Shulman 的经典区分）负责依据目标维持与转移注意；预测加工框架（S10）中先验决定从环境采样什么。语言提示是廉价的引导工具——先提出的问题会变成受众的搜索目标，这正是议程设置（S50）在注意层面的微观机制。
+  causal_chain: 目标或提示 → 注意引导模板 → 选择性采样 → 符合预期的信息被看见
+  variables:
+    inputs:
+    - 任务指令
+    - 提问
+    - 搜索意图
+    - 先验知识
+    moderators:
+    - 目标强度
+    - 专业知识
+    - 提示与受众目标的匹配度
+    mediators:
+    - 注意模板
+    - 眼动扫描路径
+    outputs:
+    - 信息获取顺序
+    - 对特定属性的敏感度
+  evidence:
+    supporting:
+    - Yarbus 的经典眼动研究：同一幅画，不同任务指令产生截然不同的注视模式
+    - Corbetta 与 Shulman 对目标驱动与刺激驱动双系统的综述
+    - S162 的条件性捕获实验：注意捕获受任务诱发的注意控制设置调节，而非单纯由刺激物理显著性决定——突现线索只对突现目标产生代价，颜色线索只对颜色目标产生代价
+    - S33 的注意力铺垫案例与 S50 的议程设置研究传统
+    conflicting:
+    - 显著性捕获并非无条件绕过引导：S162 显示捕获仅在与任务相关属性一致时发生；与任务设定无关的极强突现刺激仍可捕获（Theeuwes 传统），两路线之争延续；提示与真实目标无关时引导失效
+    replication:
+    - 目标驱动注意的实验室证据稳健；自然场景中的引导强度依任务而变
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 用户带有明确目标（搜索、比价）时引导最强（S47 使用与满足研究：受众是主动的、有目的的媒体使用者）
+  - 无目标浏览时退化为自下而上驱动
+  failure_conditions:
+  - 引导问题超出受众关切，形成无效铺垫
+  - 先验错误导致系统性看错——引导是一把双刃剑
+  common_misinterpretations:
+  - 注意力可以被无限操纵——引导只能改变采样方向，不能凭空创造动机
+  - 把议程设置理解为直接改变观点——它的第一层效应是改变想什么，而非怎么想
+  ethical_risks:
+  - 舆论操纵：通过设置讨论议题引导集体注意，绕过对议题本身的审查
+  - 先导性问题诱导结论（引导式调研）
+  examples:
+    original_cases:
+    - S33 开篇的注意力铺垫实验与案例；S50 的议程设置经典研究
+    research_cases:
+    - Yarbus 要求被试分别估计画中人物年龄或财富，眼动路径随任务完全改变
+    modern_cases:
+    - 电商详情页先提出用户痛点问题再展示卖点；搜索意图与内容关键词的对位设计
+  communication_implications: 提问是最强的注意力工具——受众带着你给的问题去读正文，等于替你完成了注意力的预分配。
+  community_implications: 社群议题的提出方式决定讨论走向；定期抛出共同问题本身就是社区注意力的治理工具。
+  content_applications:
+    title: 标题以问题形式预装搜索目标
+    opening: 先让读者产生一个具体疑问，再开始给信息
+    body: 按照提问—证据—回答的结构组织段落
+    cta: 以一个待回答的问题收尾，引导进入评论区或下一条内容
+  platform_implications: 搜索平台把用户意图变成显性的注意引导模板；推荐平台则用弱目标浏览环境放大自下而上机制的权重。
+  related_nodes:
+  - selective_attention
+  - bottom_up_attention_capture
+  - pre_suasion_attention_channeling
+  - category_entry_points
+  - curiosity_gap
+  - framing_effects
+  source_ids:
+  - S02
+  - S10
+  - S33
+  - S50
+  - S47
+  - S162
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Cialdini 2016《Pre-Suasion》（S33，先导注意引导）+ Kahneman 1973（S02，目标驱动的选择性）+ Clark 2016（S10，精度加权注意）
+    effect_size: 目标与先导线索引导注意分配（经典 top-down 效应）
+    replication_status: 目标导向注意为注意研究稳健发现；先导注意引导有实验支持
+    context_dependency: 目标清晰度/线索一致性/环境干扰调制
+    downgrade_upgrade_reason: 2026-09 实取 S33 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S33
+    supporting_evidence:
+    - S02
+    - S10
+    - S50
+    - S47
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: inattentional_blindness
+  canonical_name_en: Inattentional Blindness
+  canonical_name_zh: 无意视盲
+  aliases:
+  - 不注意视盲
+  - 非注意盲视 —— 与 selective_attention 的区别：视盲强调未被注意的信息完全无法进入意识报告这一后果
+  domain: attention
+  definition: 当注意被占用时，视野内非常显眼的刺激也不会被有意识察觉。最著名的展示是隐形大猩猩实验：专注数传球的人看不见走过画面中间的装扮大猩猩。看过的东西未必被看见——注意而非视网膜决定意识内容。
+  core_claim: 未被注意分配的显眼刺激不会进入有意识察觉，无论其物理显著性多高。
+  mechanism: 注意是意识报告的瓶颈：未被选择的刺激可能在初级皮层有部分加工，但因缺乏注意增益而无法形成稳定的有意识表征。该效应与眼动无关——即使眼睛注视过该位置，仍可报告未见，说明视盲发生在注意与意识层面而非光学层面。
+  causal_chain: 注意被任务占用 → 未注意刺激缺乏增益 → 无法形成意识表征 → 事后报告未见
+  variables:
+    inputs:
+    - 任务负载
+    - 刺激显著性
+    - 刺激与任务的语义关系
+    moderators:
+    - 任务熟悉度
+    - 并行任务数量
+    - 刺激位置与注视点的关系
+    mediators:
+    - 注意增益
+    - 意识表征形成
+    outputs:
+    - 察觉率
+    - 事后记忆
+  evidence:
+    supporting:
+    - Simons 与 Chabris 1999 的持续性无意视盲实验（S09 的实验基础）
+    - Neisser 1970 年代的选择性观看双事件范式
+    conflicting:
+    - 完全无加工有争议：未察觉刺激仍可能留下微弱的残余影响（无意识加工研究）
+    replication:
+    - 核心现象被多种范式（视、听通道）稳健复制，成为注意研究的教学标准案例
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 负载越高越易发生；主任务越投入视盲越彻底
+  - 与眼动落点无关——注视过仍可能没看见
+  failure_conditions:
+  - 刺激与任务语义高度相关（如自己的名字、自己的品牌）时察觉率上升
+  - 极显著的异类刺激在低负载下通常会被察觉
+  common_misinterpretations:
+  - 只要出现在屏幕上用户就会看到——视盲说明呈现不等于被看见
+  - 把视盲当作视觉问题——它是注意问题，换更大的屏幕无解
+  ethical_risks:
+  - 界面设计利用视盲隐藏关键信息（自动续费勾选、价格拆分项）
+  examples:
+    original_cases:
+    - S09 整本书围绕六大注意错觉展开，视盲是其中最著名的一个
+    research_cases:
+    - 隐形大猩猩实验：专注数传球者中相当比例未报告看到大猩猩
+    modern_cases:
+    - 用户专注填写表单时对页面顶部的安全提示视而不见；开车看导航时错过行人
+  communication_implications: 不要假设曝光等于抵达；关键信息必须嵌入受众当前的任务流，或抢占其注意主任务的位置。
+  community_implications: 重要规则若不在成员正在参与的活动流中出现，就会被系统性无视。
+  content_applications:
+    title: 把关键信息绑定到用户当前任务，而非并列放置
+    opening: 开场即锁定一个具体任务感，避免用户注意游离
+    body: 在用户注意力的高峰位置放置核心主张，而非页尾补充
+    cta: 避免在同一屏放置多个竞争任务
+  platform_implications: 插屏与浮层正是利用任务占用制造视盲以夹带信息；平台规范与广告可见性标准本质上是对视盲的商业化套利。
+  related_nodes:
+  - selective_attention
+  - attention_capacity_limits
+  - bottom_up_attention_capture
+  - cocktail_party_effect
+  source_ids:
+  - S09
+  - S02
+  - S141
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Chabris & Simons 2010《The Invisible Gorilla》（S09，1999 大猩猩实验 + 2024 eLife 边界研究）+
+      Kahneman 1973（S02，容量有限模型）
+    effect_size: 计数任务下约半数被试未察觉显著对象（持续性无意视盲）
+    replication_status: 无意视盲效应多实验室/现场重复；2024 大样本研究细化「完全视盲」边界
+    context_dependency: 任务负荷/对象显著性/期望调制效应强度
+    downgrade_upgrade_reason: 2026-09 实取 S09 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S09
+    supporting_evidence:
+    - S02
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: attention_residue
+  canonical_name_en: Attention Residue
+  canonical_name_zh: 注意残留
+  aliases:
+  - 注意力残留 —— 与 attention_capacity_limits 的区别：本节点解释切换后绩效下降的残留来源；与 zeigarnik_effect 的关系：后者是未完成任务的记忆与动机效应，前者是其在任务切换中的资源后果
+  domain: attention
+  definition: 任务切换后，前一任务未完成的部分继续占用注意资源，降低对新任务的投入，这一现象由 Leroy 的研究命名并系统化。多任务不是并行，而是带着残留的串行。
+  core_claim: 切换后的绩效下降部分来自前一任务的残留激活，而非仅仅是切换的瞬态成本。
+  mechanism: 未完成的目标保持认知激活（与蔡格尼克效应同族），切换后需要认知努力去抑制；S03 的数字工作观察显示知识工作者高频切换后难以回到深度状态，残留使每项任务都在低投入水平运行。
+  causal_chain: 任务中断或切换 → 未完成目标保持激活 → 资源被残留占用 → 新任务投入不足
+  variables:
+    inputs:
+    - 任务切换频率
+    - 前任务完成度
+    - 前任务重要性
+    moderators:
+    - 收尾仪式
+    - 任务边界清晰度
+    - 个体工作记忆容量
+    mediators:
+    - 未完成目标的持续激活
+    - 抑制努力
+    outputs:
+    - 新任务绩效
+    - 深度工作时长
+    - 错误率
+  evidence:
+    supporting:
+    - Leroy 2009 的任务切换实验提出并验证注意力残留概念
+    - S03 对数字环境中高频切换与注意力碎片化的实地观察
+    conflicting:
+    - 残留强度受任务性质调节：例行化任务间切换的残留远小于复杂任务
+    replication:
+    - 概念较新，独立复制数量有限，多为实验室与现场研究的组合证据
+    meta_analysis: []
+  evidence_grade: B
+  boundary_conditions:
+  - 前任务越未完成、越重要，残留越强
+  - 明确的完成仪式或书面收尾能显著减弱残留
+  - S163：完成前任务不必然消除残留——完成时无时间压力者同样难以脱离，时间压力是脱离前任务并改善新任务绩效的条件
+  failure_conditions:
+  - 前任务彻底结束后切换，残留很小
+  - 极熟练例行任务之间的切换几乎无残留
+  common_misinterpretations:
+  - 多任务等于高效并行——实测多为残留状态下的串行降级
+  - 以为回复一条消息只需几秒——脱离主任务的心理成本远大于时间成本
+  ethical_risks:
+  - 平台以高频通知把用户切成碎片以最大化广告曝光机会
+  examples:
+    original_cases:
+    - S03 记录的知识工作者在通知环境中的高频任务切换观察
+    research_cases:
+    - Leroy 的实验：被中断组在后续任务上的表现劣于允许完成组的被试
+    modern_cases:
+    - 开会时回消息，会后仍惦记消息内容；一边带娃一边工作的高错率
+  communication_implications: 长内容需要在设计上容忍残留——段落自含小结、可中断可续读，因为受众几乎必然带着残留来读你。
+  community_implications: 社群活动设计要给成员提供清晰的开始与结束边界，帮助清空残留再进入下一段参与。
+  content_applications:
+    title: 小节自带结论，支持碎片化续读
+    opening: 用一个完成后的小任务（如回答是或否）帮助读者清空残留进入正文
+    body: 每节末尾给一句话收束，降低未完成感的累积
+    cta: 在单一场景中给出唯一动作，避免跨应用的多出口
+  platform_implications: 通知系统是残留的批量制造者；深色模式的专注模式与聚合通知本质是对残留成本的修复。
+  related_nodes:
+  - attention_capacity_limits
+  - working_memory_limits
+  - zeigarnik_effect
+  - hook_model
+  - information_overload
+  - attention_economics
+  source_ids:
+  - S03
+  - S02
+  - S163
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Mark 2023《Attention Span》（S03，打断后约 23 分钟回到原任务/自我打断约半）+ Kahneman 1973（S02，容量分配）
+    effect_size: 任务切换残留成本为分钟级（外部打断约 23 分钟回到原任务）
+    replication_status: 切换成本在 HCI/认知领域多源复现
+    context_dependency: 任务复杂度/目标强度调制残留时长
+    downgrade_upgrade_reason: 2026-09 实取 S03 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S03
+    supporting_evidence:
+    - S02
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: cocktail_party_effect
+  canonical_name_en: Cocktail Party Effect
+  canonical_name_zh: 鸡尾酒会效应
+  aliases:
+  - 鸡尾酒会问题
+  - cocktail party problem —— 与 selective_attention 的区别：本节点强调听觉通道的选择聚焦与自我相关信号的穿透现象
+  domain: attention
+  definition: 在嘈杂的多说话人环境中，人能选择性追随一个语音流，同时会对未注意流中的自我相关信号（如自己的名字）作出反应。Cherry 1953 的双耳分听研究奠基，Moray 1959 发现未注意耳中的自己名字会穿透（Cherry
+    1953／Moray 1959 为经典文献，未建 EP；S02 提供双耳分听实验传统背景）。
+  core_claim: 听觉注意可高效聚焦于单一语音流（S02 容量模型的经验基础）；自我相关信号的低阈值穿透为双耳分听传统级支持，Moray 1959 为经典文献（未建 EP）。
+  mechanism: 双耳分听实验显示，被追随耳的内容可以复述，非追随耳只剩物理特征（性别、音调）被登记；但自我参照信息有特殊优先级，名字等信号能穿透过滤并引发定向反应。这说明过滤器对高个人相关性信息留有旁路。
+  causal_chain: 多流语音竞争 → 选择聚焦单一流 → 非流信息仅登记物理特征 → 自我相关信号穿透引发反应
+  variables:
+    inputs:
+    - 多语音流竞争
+    - 目标流信号质量
+    moderators:
+    - 语音流相似度
+    - 个体负载
+    - 自我相关性
+    mediators:
+    - 听觉选择性注意
+    - 自我参照加工
+    outputs:
+    - 追随内容理解
+    - 未注意内容记忆（几乎为零）
+    - 定向反应
+  evidence:
+    supporting:
+    - Cherry 1953 的双耳分听实验确立现象（经典文献，未建 EP）
+    - Moray 1959 发现未注意通道中自己的名字被察觉（经典文献，未建 EP）
+    conflicting:
+    - 语义穿透程度有限：除自我相关信息外，未注意流的语义几乎不加工
+    replication:
+    - 现象稳健，是听觉注意研究的标准范式
+    meta_analysis: []
+  evidence_grade: A
+  boundary_conditions:
+  - 穿透主要发生于自我相关或高显著信号
+  - 语义分析程度随负载升高而下降
+  failure_conditions:
+  - 极高负载下名字穿透率也下降
+  - 信号高度相似（同性别同音色）时追随错误增多
+  common_misinterpretations:
+  - 用户在后台播放播客等于接收了内容——未注意内容几乎不形成记忆
+  - 以为重复播放就能被听到——被听到与被注意是两回事
+  ethical_risks:
+  - 用用户姓名做个性化触发的操纵感风险（过度直呼其名）
+  examples:
+    original_cases:
+    - S02 的双耳分听/选择性注意实验传统（容量模型的经验基础）
+    research_cases:
+    - 双耳分听：追随耳复述良好，未注意耳仅能报告说话人性别等物理特征
+    modern_cases:
+    - 群聊里只有被 @ 的消息才让人抬头——平台用 @ 机制复现了名字穿透
+  communication_implications: 在嘈杂信息环境中，自我相关性是最强的穿透器：点名、分群、个性化场景都是现代版的名字穿透。
+  community_implications: 社群运营中，@、昵称、专属称呼是低成本高收益的注意唤起手段，但要节制以避免操纵感。
+  content_applications:
+    title: 让标题对特定人群点名（身份标签式开头）
+    opening: 用你是那种……的人建立自我相关性
+    body: 分段用不同人群的例子，让每个读者都遇到自己的名字时刻
+    cta: 邀请读者以自己身份留言（如 XX 行业的朋友扣 1）
+  platform_implications: 平台的个性化推荐本质是把名字穿透扩展到兴趣层：只有自我相关的内容能穿透信息流噪音。
+  related_nodes:
+  - selective_attention
+  - bottom_up_attention_capture
+  - attention_capacity_limits
+  - identity_signaling
+  source_ids:
+  - S02
+  - S09
+  - S141
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Kahneman 1973（S02，选择性注意容量）+ Chabris & Simons 2010（S09，注意错觉与自我相关性）
+    effect_size: 自我相关刺激（如名字）穿透选择性过滤器
+    replication_status: 鸡尾酒会效应为注意研究经典稳健现象
+    context_dependency: 显著性/自我相关/注意负荷调制效应
+    downgrade_upgrade_reason: 2026-09 实取 S02/S09 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S02
+    supporting_evidence:
+    - S09
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long

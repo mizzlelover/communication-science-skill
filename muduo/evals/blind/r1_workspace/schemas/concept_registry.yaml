@@ -1,0 +1,25 @@
+# Concept Registry Schema（概念注册表：长文概念一致性控制）
+type: object
+required: [concepts]
+properties:
+  concepts:
+    type: array
+    items:
+      type: object
+      required: [term, first_appearance]
+      properties:
+        term:             {type: string, description: "canonical 英文/核心词"}
+        zh:               {type: string}
+        first_appearance: {type: string, description: "首次出现的 section_id"}
+        definition:       {type: string, description: "文内定义（若有）"}
+        aliases:          {type: array, items: {type: string}, description: "文中出现过的其他叫法"}
+        sections_used:    {type: array, items: {type: string}}
+        issues:
+          type: array
+          items:
+            type: string
+            enum: [multiple_names, multiple_meanings, unexplained_first_use, shifting_definition, unexplained_abbreviation, hierarchy_confusion]
+            description: "六类概念一致性问题"
+  notes:
+    type: string
+    description: "整体判断：概念系统是否自洽；建议统一哪个叫法"

@@ -1,0 +1,25 @@
+# Evidence Package — S204 Bartlett 1932（图式与重构记忆）
+# 标准格式。2026-09-09 T4。access_level 如实标注。
+source_id: S204
+title: "Remembering: A Study in Experimental and Social Psychology"
+authors: "Frederic C. Bartlett"
+year: 1932
+journal: Cambridge University Press（专著）
+doi: "10.1017/CBO9780511759225"
+url: "https://doi.org/10.1017/CBO9780511759225"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "核心方法与发现经 4 个独立源交叉核实（未取得专著全文）：①《幽灵战争》实验细节：英国被试阅读北美印第安民间故事，用系列再生（serial reproduction，人传人）与重复再生（repeated reproduction，间隔数日/周/月/年多次回忆）两种方法追踪变化（豆瓣详评+教学参考源一致）；②变化规律三型：省略（幽灵等超自然细节最先被弃）、理性化同化（独木舟→船、猎海豹→钓鱼、超自然伤口→普通伤）、平化（原约 330 词缩至约 180 词）——变化方向与被试文化图式一致；③理论：记忆是依据图式的主动建构（reconstruction）而非回放；④现代校正：Ost 等 2022（Memory 30(6):775-783）指出图式理论被误读为『记忆必然不可靠』——对熟悉/流传良好的材料（都市传说）记忆相对可靠，与 Bartlett 原意一致"
+research_question: "记忆保留了什么、改变了什么？文化图式如何塑造再现？"
+core_claims:
+  - "记忆是图式引导的主动建构：回忆时以既有知识/文化预期填补与重塑，而非逐字回放"
+  - "系列再生的收敛规律：省略不熟悉细节→理性化同化→平化变短——传播链上内容向接受方文化典型漂移"
+  - "图式与材料匹配度决定失真程度：材料越贴合接受方图式，传播越稳定（Ost 2022 复核支持）"
+  - "对传播的推论：跨图式传播必然发生语义漂移——品牌故事/案例的传播链条需要预写『图式友好』的核心句"
+method: "质性实验传统：系列再生 + 重复再生（《幽灵战争》民间故事等多材料）"
+results: "（理论奠基）图式概念与重构记忆传统；为 schema_formation 节点提供原始来源"
+limitations: "未取得全文；方法 informal（无控制组、指示不标准化）；被试为剑桥学生"
+boundary_conditions: "对跨文化/跨图式材料失真最大；对文化内熟悉材料记忆相对稳定；个体差异（图式丰富度）调节"
+relevant_nodes: [schema_formation]
+notes: "schema_formation 节点的奠基 EP。实验细节多源一致（含现代复核边界），未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,35 @@
+# Evidence Package — S135 Bond & Smith 1996（Culture and Conformity Meta-Analysis）
+# 标准格式。access_level 如实标注。
+source_id: S135
+title: "Culture and Conformity: A Meta-Analysis of Studies Using Asch's (1952b, 1956) Line Judgment Task"
+authors: "Rod Bond; Peter B. Smith"
+year: 1996
+journal: "Psychological Bulletin 119(1): 111-137"
+doi: "10.1037/0033-2909.119.1.111"
+url: "https://www.britannica.com/topic/conformity/Normative-influence"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "一手 APA 全文/摘要被拦截（PsycNet，Semantic Scholar openAccessPdf=CLOSED）；实际内容取自 4 个独立来源交叉验证：①Britannica『conformity』条目（17 国、collectivist 文化从众更高）②文化心理学文章 xing528.com（133 研究/17 国/平均从众率约 25%/四项调节变量）③bilibili 科普（133 研究、17 国、collectivist 国斐济/日本/巴西 vs 个体主义国美国/英国/法国）④多篇 PubMed 收录论文引用记录确认 DOI 与页码；Semantic Scholar API 确认作者/年份"
+research_question: "跨文化背景下，使用 Asch 线段判断任务的从众研究结果如何？个体主义/集体主义文化维度与任务特征在多大程度上预测从众水平？"
+number_of_studies: 133
+sample: "17 个国家的 Asch 线段判断任务研究（被试总量未在一手来源取得，不编造具体 N）"
+main_effect: "平均从众率约 25%（Asch 原始实验基线约 35%；Bond & Smith meta 综合平均 25%，来源 xing528.com 二手综合，精确效应量 d 未取得一手原文核验）"
+heterogeneity: "不同文化背景下的从众率存在明显差异（高异质性）；集体主义国家的参与者比个体主义国家参与者从众更高（Britannica）"
+moderators:
+  - "群体规模（较大时从众率较高）"
+  - "群体文化同质性（较高时从众率较高）"
+  - "被试女性比例（较高时从众率较高）"
+  - "样本集体主义文化维度得分（较高时从众率较高）"
+  - "边界案例：日本研究显示其从众低于美国，被归因于内/外群体划分差异"
+core_claims:
+  - "对 17 个国家共 133 项使用 Asch 线段判断任务研究的元分析：平均从众率约为 25%"
+  - "文化价值观与从众相关：集体主义文化的人比个体主义文化的人表现出更多从众（people in collectivist cultures displayed more conformity than did people in individualist cultures）"
+  - "集体主义国家（斐济、日本、巴西）参与者在社会压力下更易接受错误答案；个体主义国家（美国、英国、法国）参与者更多坚持正确选择"
+  - "从众率受群体规模、文化同质性、被试性别构成与集体主义得分调节"
+method: "元分析（meta-analysis）：综合 133 项 Asch 线段判断任务研究，按国家（17 国）的文化维度（个体主义-集体主义）与研究特征（群体规模、同质性、性别构成等）编码分析"
+results: "文化维度预测从众水平：collectivist 文化从众更高；平均从众率约 25%；群体规模、文化同质性、女性比例、集体主义得分为调节变量"
+limitations: "精确效应量 d、总样本量与异质性统计量未取得一手原文核验（本包数字来自多源二手交叉，方向一致但精确值待补）；样本主要为实验室学生被试，且覆盖至 1990 年代中期"
+boundary_conditions: "适用于实验室线段判断范式；从众率随时代、任务公开性与情境变化；解释文化效应时需注意内外群体划分等边界条件"
+relevant_nodes: [conformity_asch, normative_influence, descriptive_injunctive_norms]
+notes: "Gate A 一手 meta：Asch 从众范式跨文化的决定性定量证据。133 研究/17 国/平均从众率 25%/collectivist 更高均多源交叉可溯源；精确 d 值未取得一手来源故未编造，标注为待补。"
+last_verified: "2026-09"

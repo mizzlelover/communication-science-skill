@@ -1,0 +1,25 @@
+# Evidence Package — S114 Reber, Schwarz & Winkielman 2004
+# 标准格式。access_level 如实标注。
+source_id: S114
+title: "Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?"
+authors: "Rolf Reber; Norbert Schwarz; Piotr Winkielman"
+year: 2004
+journal: Personality and Social Psychology Review 8(4), 364-382
+doi: "10.1207/s15327957pspr0804_3"
+url: "https://pubmed.ncbi.nlm.nih.gov/15582859/"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "PubMed 完整摘要 + HandWiki 理论综述（四基本假设：客观特征→流畅度/流畅度本身享乐标记/feelings-as-information 判断通路/预期与归因调节倒 U）"
+research_question: "美感愉悦是否来自知觉者的加工体验（加工流畅度）而非刺激客观属性本身？"
+core_claims:
+  - "审美愉悦是加工流畅度的函数：物体加工越流畅，审美反应越积极"
+  - "图形良好性、图形-背景对比、刺激重复、对称、原型性等已知影响审美判断的变量，其效应可追溯到加工流畅度的变化"
+  - "视觉/语义启动等提高加工流畅度的变量同样提升审美愉悦判断"
+  - "流畅度效应被预期与归因调节：无预期时作用强（来源未知的流畅惊喜）；可归因于无关来源时被折扣"
+method: "综述（Pers Soc Psychol Rev）+ 整合多领域实证（美学/社会认知/营销）"
+results: "（综述）审美=知觉者加工体验的函数；解释先天/后天偏好、原型与抽象偏好、美-真关系"
+limitations: "综述非新实验；'主观流畅感 vs 客观流畅'的区分被后续研究进一步细化"
+boundary_conditions: "流畅-愉悦联结在无预期、来源不可归因时最强；过度简单可被识破来源而打折扣（倒 U）"
+relevant_nodes: [processing_fluency, fluency_truth_effect, mere_exposure]
+notes: "PubMed 摘要全文 + 理论综述双源。processing_fluency 节点（度 23 枢纽）的奠基综述。"
+last_verified: "2026-09"

@@ -1,0 +1,458 @@
+# processing_fluency — 处理流畅性（Processing Fluency）：加工的难易如何被误读为对象的好坏
+domain: processing_fluency
+nodes:
+- id: processing_fluency
+  canonical_name_en: Processing Fluency
+  canonical_name_zh: 处理流畅性
+  aliases:
+  - 认知流畅性
+  - cognitive ease —— 与 disfluency_deep_processing 相反主张，两者是同一现象的两面；与 mere_exposure 的关系：重复是流畅性的常见来源之一
+  domain: processing_fluency
+  definition: 加工刺激时的主观容易程度（源于字体清晰、语言简单、对称、押韵、重复等）被系统性误读为对象本身的积极属性——更真、更美、更可信。Reber 等的研究传统确立了流畅性作为独立判断线索的地位，S01
+    把它纳入系统 1 的认知放松机制。
+  core_claim: 加工越顺畅，评价越正面——即使流畅性的来源与对象品质完全无关。
+  mechanism: 大脑把流畅的加工体验当作刺激的属性而非自身状态的属性（误归因，misattribution），与 S01 的认知放松与紧张轴对应；流畅性是多来源信号的叠加（知觉、语言、记忆、社会），各来源共同汇入同一个好感的证据池。当受众被提示流畅性的真实来源时，误归因会失效。
+  causal_chain: 低加工成本 → 流畅体验 → 误归因为对象属性 → 更正面的真值与好感判断
+  variables:
+    inputs:
+    - 字体可读性
+    - 语言简单度
+    - 对称与押韵
+    - 先前暴露
+    moderators:
+    - 判断动机
+    - 对流畅来源的知晓
+    - 情境预期
+    mediators:
+    - 主观容易感
+    - 积极情感微激活
+    outputs:
+    - 真值判断
+    - 好感度
+    - 风险感知下降
+  evidence:
+    supporting:
+    - Reber、Winkielman 与 Schwarz 1998 的知觉流畅性影响评价实验
+    - Whittlesea 的幻忆（illusion of familiarity）范式
+    - S01 对认知放松与认知紧张的系统论述
+    conflicting:
+    - 高判断动机或有明确外部线索时，流畅性效应减弱或反转
+    replication:
+    - 基础误归因效应稳健；具体边界（知识水平、动机）的研究持续细化
+    meta_analysis: []
+  evidence_grade: A-
+  boundary_conditions:
+  - 主要作用于低卷入、快速判断情境
+  - 受众知晓流畅来源后效应消失（可被提醒抵消）
+  failure_conditions:
+  - 高卷入决策（大额购买、关键投票）中权重下降
+  - 流畅的来源与语境冲突时产生警觉而非好感
+  common_misinterpretations:
+  - 读起来顺口等于内容正确——流畅性判断与真值无关，只是主观信号
+  - 把文案优化等同于内容优化——流畅性只能放大已有内容的评价，不能替代价值
+  ethical_risks:
+  - 用流畅性包装低质信息（伪科普的顺口表达、精修的营销话术）
+  - 利用误归因销售与内容品质无关的溢价
+  examples:
+    original_cases:
+    - S01 的认知放松章节：熟悉的、清晰的、押韵的陈述被更快接受
+    research_cases:
+    - 同一陈述分别以高可读与低可读字体呈现，高可读组给予更积极的真值与美感评分
+    modern_cases:
+    - 详情页的白底大字排版；品牌 slogan 刻意追求音韵；极简设计风潮的美感溢价
+  communication_implications: 流畅性是内容的第一层税前收益：同样的观点，呈现得越顺，被接受的概率越高；但它是放大器不是发动机，内容价值必须独立成立。
+  community_implications: 社群的新人引导材料要把流畅性做到极致，第一印象的加工阻力直接决定进入率。
+  content_applications:
+    title: 标题避免生僻字与歧义，一眼读顺
+    opening: 首段用最简单的句式，先让人读得动
+    body: 段落短、逻辑词显性，降低全文加工成本
+    cta: 行动文案用直白动词，不加修饰
+  platform_implications: 平台的沉浸式单列流本身就是流畅性工程——零切换成本喂养系统 1；这让需要认知紧张的深度内容在竞争中结构性吃亏。
+  related_nodes:
+  - fluency_truth_effect
+  - rhyme_as_reason
+  - name_pronunciability
+  - mere_exposure
+  - gestalt_grouping
+  - affect_heuristic
+  - dual_process_theory
+  conflicting_nodes:
+  - disfluency_deep_processing
+  source_ids:
+  - S01
+  - S70
+  - S72
+  - S114
+  - S143
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Reber, Schwarz & Winkielman 2004 综述（S114 已实取摘要+理论四假设）
+    effect_size: 加工流畅度→积极审美/判断的效应在美学/社会认知/营销多领域稳定
+    replication_status: 流畅-愉悦联结大量复制；被预期/归因调节（倒 U）
+    context_dependency: 无预期、来源不可归因时最强；过度简单可被识破
+    downgrade_upgrade_reason: 2026-09 补充一手综述证据（S114），由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S114
+    supporting_evidence:
+    - S01
+    - S70
+    last_verified: 2026-09
+    conflicting_evidence:
+    - S01
+    - S143
+    - S70
+    case_sources:
+    - CASE-BRD-029
+    - CASE-CNT-002
+    - CASE-CNT-003
+    platform_sources:
+    - bilibili:S1
+    - weibo:S3
+    - x:S1
+    - x:S6
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - youtube:S3
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: fluency_truth_effect
+  canonical_name_en: Illusory Truth Effect (Fluency-based Truthiness)
+  canonical_name_zh: 流畅性致真错觉（虚幻真相效应）
+  aliases:
+  - 虚幻真相
+  - illusory truth —— 与 availability_heuristic 的区别：易得性是提取容易度影响频率与概率判断，本效应是重复造成的知觉流畅性影响真值判断
+  domain: processing_fluency
+  definition: 重复陈述更易被判断为真。Hasher、Goldstein 与 Toppino 1977 首次系统报告；后续研究显示即使人们初始明知为假、或已被明确更正，重复仍会推高主观真值。这是错误信息传播最核心的认知机制之一。
+  core_claim: 单纯重复即可提高陈述的主观真值，且这一效应在已知为假的情况下也不会完全消失。
+  mechanism: 重复提高知觉与概念流畅性，真值判断把流畅误归因为证据强度——感觉像真即被判定为真。与 mere_exposure 共享机制但输出不同：那里输出好感，这里输出真值。重复与更正之间的时间间隔越长，效应越强，这解释了辟谣的困难。
+  causal_chain: 重复接触 → 流畅性提升 → 误归因为证据 → 主观真值上升
+  variables:
+    inputs:
+    - 重复次数
+    - 重复时间分布
+    - 知识水平
+    moderators:
+    - 与已有知识的一致性
+    - 判断时间压力
+    - 更正时机
+    mediators:
+    - 知觉与概念流畅性
+    outputs:
+    - 主观真值
+    - 分享倾向
+    - 记忆持久性
+  evidence:
+    supporting:
+    - Hasher、Goldstein 与 Toppino 1977 的首证实验
+    - Dechêne 等对真值效应的元分析综述
+    - 后续研究显示知识不能完全保护判断不被重复侵蚀
+    conflicting:
+    - 高知识领域内效应减弱；重复与判断间隔极短或极长时效应变化
+    replication:
+    - 效应在实验室与部分现场研究中稳健复制，是错误信息研究的支柱发现
+    meta_analysis:
+    - 元分析确认平均效应为正，且受知识一致性等调节
+  evidence_grade: A-
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 对知识感强的主题效应减弱但未消失
+  - 重复与判断间隔适中时最强（太近无遗忘，太远流畅性衰减）
+  failure_conditions:
+  - 高警觉状态（明确被提醒重复即误导）下效应被抵消
+  - 反驳信息若同样被重复，也可能反向获得真值加成
+  common_misinterpretations:
+  - 辟谣一遍就完事——重复谣言的辟谣文可能反而强化谣言的真值感
+  - 以为只有无知者受影响——知识不能完全免疫，只能减弱
+  ethical_risks:
+  - 谣言工厂的策略性重复（bot 矩阵、多账号复读）直接利用本机制
+  - 政治与商业抹黑中的谎言复读策略
+  examples:
+    original_cases:
+    - S92 对错误信息在社交媒体传播速度的实验研究背景
+    research_cases:
+    - 真伪陈述混合呈现的判断实验：重复出现的陈述真值评分系统性上升
+    modern_cases:
+    - 重要的事说三遍的梗文化；健康谣言在家族群的周期性复读
+  communication_implications: 辟谣的黄金法则是用流畅的新叙事替代旧叙事，而不是重复旧叙事加否定词；传播设计中要规划重复的是正确版本。
+  community_implications: 社群辟谣需要多次、跨触点的重复更正，并避免转发原谣言截图（重复即喂养）。
+  content_applications:
+    title: 标题直接陈述正确事实，不用否定句复述谣言
+    body: 更正信息以独立叙事呈现，把谣言压缩为一句脚注
+    opening: 先给正确模型再谈错误版本，让正确版本占据流畅性优势
+    evidence: 重复关键事实至少三次（间隔分布）以建立真值
+  platform_implications: 平台的谣言标签与降权是对本机制的工程对抗；但去重策略与辟谣触达的时间差仍是结构性难题。
+  related_nodes:
+  - processing_fluency
+  - availability_heuristic
+  - mere_exposure
+  - misinformation_velocity
+  - negation_ironic_rebound
+  - bot_amplified_social_proof
+  source_ids:
+  - S01
+  - S92
+  - S70
+  provenance:
+    primary_sources:
+    - S01
+    - S92
+    - S70
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-007
+    - CASE-FAL-033
+    - CASE-FAL-034
+    - CASE-FAL-052
+    - CASE-FAL-053
+    - CASE-FAL-054
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: rhyme_as_reason
+  canonical_name_en: Rhyme-as-Reason Effect (Keats Heuristic)
+  canonical_name_zh: 押韵即有理效应
+  aliases:
+  - 凯茨启发式
+  - Keats heuristic —— 与 fluency_truth_effect 的区别：押韵是语音形式层面的流畅性来源，是真值效应的一个特例通道
+  domain: processing_fluency
+  definition: 押韵的陈述被评价为比语义相同但不押韵的陈述更准确。McGlone 与 Tofighbakhsh 2000 用非洲谚语材料展示了这一效应，称之为凯茨启发式——美即真（Beauty
+    is truth）的语音版。
+  core_claim: 语音形式的规律性（押韵）被误归因为语义正确性，形式美直接换算成可信度。
+  mechanism: 押韵降低语音加工难度，产生流畅体验；与所有流畅性来源一样，该体验被误归因为内容属性。关键在于效应独立于语义：押韵的空话仍比不押韵的同义表述更可信，说明判断者并没有真正评估语义。
+  causal_chain: 押韵 → 语音加工流畅 → 误归因为准确性 → 可信度上升
+  variables:
+    inputs:
+    - 押韵与否
+    - 音韵规律性
+    moderators:
+    - 陈述熟悉度
+    - 受众背景知识
+    - 判断时间压力
+    mediators:
+    - 语音流畅性
+    outputs:
+    - 准确性评价
+    - 可信度
+    - 传播性
+  evidence:
+    supporting:
+    - McGlone 与 Tofighbakhsh 2000 的非洲谚语判断实验
+    conflicting:
+    - 效应限于不熟悉的陈述；受众有背景知识时减弱
+    replication:
+    - 原始范式直接复制有限，多作为流畅性家族的概念性证据被引用
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 主要对陌生陈述起效，熟悉谚语已携带既有可信度
+  - 快节奏、低卷入判断环境最强
+  failure_conditions:
+  - 强行押韵损害语义时适得其反（音义冲突触发警觉）
+  - 受众文化中该韵律无积极联想
+  common_misinterpretations:
+  - 押韵等于可信——它只影响判断，不改变真假，顺口溜谣言正是反向利用
+  - 把押韵当万能文案术——语义空洞的押韵只能支撑一次性传播
+  ethical_risks:
+  - 伪健康信息的顺口溜化传播（三句韵文式偏方）
+  examples:
+    original_cases:
+    - S70 讨论语言形式对说服的影响时引用押韵效应
+    research_cases:
+    - 谚语实验：押韵版本（如 woes unite foes）被评得更准，尽管语义与不押韵版本相同
+    modern_cases:
+    - 经典广告顺口溜的长期记忆资产；营销号用韵文包装观点
+  communication_implications: 在低卷入场景（线下口号、音频广告、社群口号）中，押韵是低成本的记忆与可信度杠杆；高卷入内容则要把资源还给论证。
+  community_implications: 社群口号与仪式用语押韵化能显著提升复述率与身份认同，但要确保内容本身站得住。
+  content_applications:
+    title: 标题主张可用对仗或押韵压缩（在不过度牺牲语义时）
+    cta: 行动口号控制在一句韵文内
+    body: 用韵文做章节小结的锚点，不用韵文承载复杂论证
+  platform_implications: 音频与直播场景放大语音形式的作用；平台口播文化让韵律资产的回报高于纯文本时代。
+  related_nodes:
+  - processing_fluency
+  - fluency_truth_effect
+  - concreteness_in_language
+  - name_pronunciability
+  - metaphor_framing
+  source_ids:
+  - S70
+  - S01
+  - S143
+  provenance:
+    primary_sources:
+    - S70
+    - S01
+    - S143
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+  culture_moderators:
+  - 受众文化中该韵律无积极联想
+- id: name_pronunciability
+  canonical_name_en: Name Pronunciability
+  canonical_name_zh: 名称可发音性
+  aliases:
+  - 名称流畅性
+  - phonological fluency —— 与 rhyme_as_reason 的区别：可发音性针对名称本身的发音容易度，押韵针对语句形式规律
+  domain: processing_fluency
+  definition: 名称与代码的可发音性（发音容易度）影响好感、风险感知乃至信任判断。Alter 与 Oppenheimer 2006 的研究显示，易发音的虚构公司名与股票代码获得更积极的评价与短期市场表现。
+  core_claim: 名称越易发音，初始评价越正面——发音流畅性在低信息情境中充当品质代理。
+  mechanism: 发音需要动用语音回路，可发音性高的名称加工更流畅，流畅被归因为对象的可信与安全；对新异名称影响最大，因为熟悉名称已有稳定的记忆表征与情感标签，流畅性效应饱和。
+  causal_chain: 易发音名称 → 语音加工流畅 → 误归因为品质 → 好感与信任上升
+  variables:
+    inputs:
+    - 音节结构
+    - 发音规则符合度
+    - 名称长度
+    moderators:
+    - 名称新颖度
+    - 受众语言背景
+    - 接触语境
+    mediators:
+    - 语音流畅性
+    outputs:
+    - 好感度
+    - 可信度
+    - 选择倾向
+  evidence:
+    supporting:
+    - Alter 与 Oppenheimer 2006 对虚构公司名与真实股票代码的系列研究
+    conflicting:
+    - 长期效果依赖真实品质信号；名称熟悉后流畅性差异消失
+    replication:
+    - 流畅性影响评价的总方向与更广的流畅性文献一致；市场层面证据为相关性证据
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 主要作用于首次接触与低信息情境
+  - 跨语言市场需按目标语言的发音系统重新评估
+  failure_conditions:
+  - 强行音译产生负面谐音（进入新市场未查本地语义）
+  - 名称易读但品牌体验差时，流畅性反而加速负面口碑
+  common_misinterpretations:
+  - 名字决定品牌成败——它只影响初始评价窗口，长期由产品与心智可用性决定
+  - 以为起个洋名就高级——本地发音流畅度才是关键变量
+  ethical_risks:
+  - 骗子公司起顺口可信的名字冒充本土或权威机构
+  examples:
+    original_cases:
+    - S70 对词汇选择如何影响评价的讨论
+    research_cases:
+    - 股票代码实验：可发音代码（如 KAR 对比 RDO）的虚构公司被评更正面，真实市场数据呈同方向相关
+    modern_cases:
+    - 出海品牌刻意取双音节易读英文名；国内新消费品牌命名趋同于简单双字
+  communication_implications: 名字是第一个流畅性触点：品牌名、栏目名、社群名都应在目标人群语言里脱口而出，并在所有触点保持同一读音。
+  community_implications: 社群昵称规范与群名直接影响新人检索与转介绍的发音成本——可念出来的社群才容易被推荐。
+  content_applications:
+    title: 栏目名控制在两到三个音节
+    cta: 行动指令里的产品或活动名确保易读
+    body: 关键概念自造词时给出发音提示，降低复读与转述成本
+  platform_implications: 平台搜索与联想输入对易读名称更友好（拼写容错高），可发音性间接影响被搜到的概率。
+  related_nodes:
+  - processing_fluency
+  - fluency_truth_effect
+  - distinctive_brand_assets
+  - mental_availability
+  source_ids:
+  - S70
+  - S01
+  - S143
+  provenance:
+    primary_sources:
+    - S70
+    - S01
+    - S143
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long
+- id: disfluency_deep_processing
+  canonical_name_en: Disfluency Leads to Deeper Processing
+  canonical_name_zh: 非流畅促进深加工（复制争议）
+  aliases:
+  - 必要难度滥用版
+  - 丑字体效应 —— 与 processing_fluency 的关系：本节点是反流畅性主张，目前复制状态堪忧，默认不得作为建议依据
+  domain: processing_fluency
+  definition: 该主张认为刻意降低加工流畅性（难读字体、背景噪音、模糊呈现）会迫使受众切换到更系统化的加工模式，从而提升任务表现与记忆。源自 Alter 等的元认知困难研究与 Diemand-Yauman
+    等的教学字体实验。
+  core_claim: 适度非流畅性触发更审慎的加工并改善学习结果——该主张目前存在严重复制争议，按 E 级处理。
+  mechanism: 声称的机制是非流畅体验被解读为此任务需要认真，从而激活分析式加工（S01 的认知紧张轴）；预测是难读条件下的推理与记忆成绩上升。问题在于该解读依赖受众的元认知误归因，而误归因恰是最不稳定的环节。
+  causal_chain: 非流畅呈现 → 元认知困难信号 → （声称）分析式加工激活 → 成绩提升（复制存疑）
+  variables:
+    inputs:
+    - 字体可读性
+    - 噪音水平
+    - 呈现模糊度
+    moderators:
+    - 加工动机
+    - 任务类型
+    - 受众水平
+    mediators:
+    - 元认知困难解读
+    - 加工模式切换
+    outputs:
+    - 推理成绩
+    - 记忆成绩（争议中）
+  evidence:
+    supporting:
+    - Alter、Oppenheimer、Epley 与 Eyre 2007 前后的元认知困难实验
+    - Diemand-Yauman、Oppenheimer 与 Vaughan 2011 的教室字体实验
+    conflicting:
+    - 多项独立复制尝试（含预注册研究）未能稳定再现原效应
+    - 部分研究发现相反方向：难读文本降低学习动机与坚持时间
+    replication:
+    - 登记为复制争议节点：原始实验室效应与真实课堂效应之间存在明显落差，效应可能由新颖性或样本特征驱动；在更可靠的证据出现前，本节点仅用于讨论为什么该说法不可靠
+    meta_analysis: []
+  evidence_grade: E
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 即使效应真实，也仅存在于已有加工动机的受众与适度非流畅范围内
+  - 对必须完整阅读的功利性文本，可读性研究强烈支持高流畅
+  failure_conditions:
+  - 低动机受众遇到非流畅直接放弃——完读率与转化双输
+  - 把非流畅当作深度滤镜，实际筛掉的是耐心而非不加思考者
+  common_misinterpretations:
+  - 把内容做难读显得高级、能筛选真思考者——对营销与传播场景大概率只降低完读率
+  - 把 Bjork 的必要难度错当成呈现难读——必要难度指提取与练习难度，不是字体难度
+  ethical_risks:
+  - 劝退式设计伪装严谨，实际上只是筛选出忍耐力高的付费者
+  examples:
+    original_cases:
+    - S01 对认知紧张与系统 2 激活的论述是该主张的理论背景
+    research_cases:
+    - 字体实验：难读字体的学习材料组报告了更好的测验成绩，但后续独立复制结果分歧
+    modern_cases:
+    - 知识产品的硬核排版风潮（评价为伪需求）；以高密度难读文本冒充学术严谨的营销内容
+  communication_implications: 在证据落定前，不要为传播场景设计非流畅内容；若目标真的是深思，用提问与自测（testing_effect）比用丑字体可靠得多。
+  community_implications: 社群学习材料坚持高可读性，深度的实现靠任务设计而非呈现障碍。
+  content_applications:
+    body: 保持高可读；把难度放进练习与提问，而不是放进字体
+    cta: 用自测题制造有益的提取难度
+  platform_implications: 平台完读率与停留指标会直接惩罚非流畅设计，使该主张在真实流量环境中更难以成立。
+  related_nodes:
+  - processing_fluency
+  - germane_load_learning
+  - extraneous_cognitive_load
+  - dual_process_theory
+  conflicting_nodes:
+  - processing_fluency
+  source_ids:
+  - S01
+  - S70
+  - S143
+  provenance:
+    primary_sources:
+    - S01
+    - S70
+    - S143
+    last_verified: '2026-09-09'
+    conflicting_evidence:
+    - S01
+    - S114
+    - S143
+    - S70
+    - S72
+  last_reviewed: 2026-09
+  knowledge_half_life: very_long

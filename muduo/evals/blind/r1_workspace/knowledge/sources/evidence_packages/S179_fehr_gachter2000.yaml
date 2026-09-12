@@ -1,0 +1,25 @@
+# Evidence Package — S179 Fehr & Gächter 2000（Cooperation and Punishment in Public Goods Experiments）
+# 标准格式。access_level 如实标注。
+source_id: S179
+title: "Cooperation and Punishment in Public Goods Experiments"
+authors: "Ernst Fehr; Simon Gächter"
+year: 2000
+journal: "American Economic Review 90(4): 980-994"
+doi: "10.1257/aer.90.4.980"
+url: "https://ideas.repec.org/a/aea/aecrev/v90y2000i4p980-994.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "渠道1：IDEAS/RePEc AER 记录页官方摘要（含四项核心发现）；渠道2：多篇后续论文与评论引用核对（Cambridge 期刊文章、Binmore 2011 方法论评论、MPI 工作报告等，DOI 与卷期页码一致）"
+research_question: "当惩罚对惩罚者本人有成本且无直接物质收益时，公共品博弈中的搭便车者是否会被惩罚？惩罚机会能否维持合作？"
+core_claims:
+  - "即使惩罚有成本且无物质回报，搭便车者也会被大量惩罚（利他惩罚）"
+  - "偏离群体合作标准越多的搭便车者受到越重的惩罚"
+  - "存在成本惩罚机会时，潜在搭便车者面临可信威胁，合作水平大幅上升，接近完全合作"
+  - "搭便车引发合作者的强烈负性情绪，情绪强度随偏离程度增加——情绪是可信威胁的保证者（emotions as guarantors of credible threats）"
+method: "公共品自愿捐献博弈实验（含惩罚选项），比较有/无惩罚机会条件下的合作水平"
+results: "有惩罚机会时几乎可达成并维持完全合作，而标准自利理性假设下应无合作；惩罚由负性情绪驱动"
+limitations: "实验情境（学生被试、实验室博弈）；惩罚机制在匿名大群体及反社会惩罚条件下的外推需谨慎"
+boundary_conditions: "小群体、可识别搭便车者、惩罚成本可控时机制最强；跨文化差异显著（后续 Herrmann 等 2008 发现反社会惩罚的文化差异）"
+relevant_nodes: [reciprocity_exchange_networks, fairness_preferences, reciprocity_norm, norm_enforcement_reputation, community_governance]
+notes: "利他惩罚与互惠规范/惩罚机制的实验奠基文献；核心内容来自官方摘要与多源交叉，未编造。"
+last_verified: "2026-09"

@@ -1,0 +1,26 @@
+# Evidence Package — S85 Millington 2012（Buzzing Communities）
+# 标准格式。access_level 如实标注。
+source_id: S85
+title: "Buzzing Communities: How to Build Bigger, Better, and More Active Online Communities"
+authors: "Richard Millington"
+year: 2012
+journal: FeverBee（自助出版，专著）
+doi: "无 DOI（专著）"
+url: "https://m.zhangyue.com/readbook/13203408/9.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：中文教材（掌阅电子书 1.1.3 节『虚拟社区的生命周期』，直接引用 Millington 2012 四阶段生命周期及各阶段管理任务）+ 豆瓣读书笔记（书评人记录书中阶段框架 inception/est/mature/mitosis 与创立期『拉人、新建话题、建立关系、炒热话题』四大任务、strategy-data-theory-obj 方法）+ FeverBee 官网方法论文章（作者本人在《The Proven Path》中把成功社区路径概念化为生命周期，founders→hardcore enthusiasts 分组）"
+research_question: "在线社群从创立到消亡经历哪些阶段？每个阶段管理者应采取什么干预策略、测量什么指标？"
+core_claims:
+  - "在线社区生命周期分四个阶段：创立期、成长期、成熟期、消亡期（英文阶段名据读书笔记为 inception / establishment / maturity / mitosis）"
+  - "创立期以一对一互动为主：管理者大部分时间用来建立由活跃成员组成的核心小组，核心任务为发展潜在成员、邀请加入并鼓励活跃、确定基调和风格、招募培养核心群体"
+  - "成长期交互由成员自主产生，管理重心转向增加培养核心成员、增加活动加深社区意识、继续增长战略、增加社区工具；可对积极参与者给予身份奖励（徽章、职位称号）"
+  - "成熟期并非自我维持：成员需求满足后可能离开使社区退回创立/成长阶段，故需持续吸收新成员、加强核心成员培养、评估优化流程"
+  - "各阶段须遵循 strategy / data / theory / objectives 组合开展管理（据书评笔记）"
+method: "社群咨询公司 FeverBee 创始人的从业者实践框架专著（基于其社区咨询实践的经验归纳，含测量与 ROI 方法）"
+results: "（从业者实践框架，D 级）社群生命周期与分阶段干预策略的经典实践参考，四阶段框架被中文教材直接引用"
+limitations: "经验归纳型框架（非系统实证研究，D 级证据）；案例偏欧美在线社区；阶段边界与时长（如创立期约 1-9 个月）为经验法则而非严格测量"
+boundary_conditions: "适用于以兴趣/共同需求聚合的在线社群运营与治理；对平台算法高度中介化的新兴社群需结合平台机制修正"
+relevant_nodes: [community_governance, community_rituals, participation_ladder, identity_signaling]
+notes: "社群生命周期与干预策略的从业者参考书（book 级）。四阶段框架与创立期任务经中文教材直接引用与书评交叉确认，未编造。"
+last_verified: "2026-09"

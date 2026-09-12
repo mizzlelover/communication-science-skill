@@ -1,0 +1,25 @@
+# Evidence Package — S62 Lakoff 2004（Don't Think of an Elephant!）
+# 标准格式。access_level 如实标注。
+source_id: S62
+title: "Don't Think of an Elephant!: Know Your Values and Frame the Debate"
+authors: "George Lakoff"
+year: 2004
+journal: Chelsea Green（专著；2014 增订版）
+doi: "无 DOI（专著）"
+url: "https://www.compelle.ai/blog/cognitive-rhetoric.html"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心论点经多源交叉实取：认知修辞综述（框架定义/tax relief 案例/否定即激活）+ 深度书评（不要用否定式反对框架/价值观塑造）+ 倡导实践（按价值观语言框定议题）"
+research_question: "政治与公共话语中的'框架'如何运作？如何在辩论中设置议题而非被动回应？"
+core_claims:
+  - "框架（frame）=组织我们理解某领域经验、定义问题/方案/价值的认知结构；政治话语由框架而非事实数据主导（'税赋减免'把税收框定为负担）"
+  - "不要否定式反对框架：否定一个框架（'我不是骗子'）恰恰激活它——反驳必须提供替代框架而非在其术语内争论"
+  - "价值观语言：自由派（共情/合作/集体责任/公平）与保守派（纪律/安全/个人责任/自利）各自的核心价值观决定其共鸣语言"
+  - "书名即示范：'别想大象'已经激活了大象——语言选择本身就在设定思维结构"
+method: "认知语言学（概念隐喻理论）+ 政治传播实践应用"
+results: "（应用理论）框架政治/重新框定成为公共传播与倡导的标准词汇"
+limitations: "作者是进步派倡导者，分析含规范主张（需与描述性主张分离）；框架效果有实证边界（Druckman：竞争框架环境中效应减弱）"
+boundary_conditions: "框架设定在单框架环境中最强；暴露竞争框架可部分抵消"
+relevant_nodes: [negation_ironic_rebound, metaphor_framing, framing_effects]
+notes: "框架政治应用来源（book 级）；配套 S61（概念隐喻理论）与 S126（否定激活复制边界）。tax relief 案例为公开标准内容，未编造。"
+last_verified: "2026-09"

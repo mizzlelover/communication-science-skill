@@ -1,0 +1,25 @@
+# Evidence Package — S217（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S217
+title: Google users are less likely to click on links when an AI summary appears in the results
+authors: Athena Chapekis; Anna Lieb（Pew Research Center）
+year: 2025
+journal: Pew Research Center Short Read（2025-07-22）
+doi: ''
+url: https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/
+access_level: full_text
+research_status: annotated
+content_obtained: Pew 官方报告全文逐字实读（2026-09-11）
+research_question: AI 摘要出现时用户的点击与浏览行为如何变化？
+core_claims:
+- 数据：900 名美国成年人 2025 年 3 月浏览记录，68,879 次唯一 Google 搜索（12,593 次触发 AI 摘要，约 18%）
+- 有 AI 摘要时用户点击传统结果链接的比例 8%，无摘要时 15%（约两倍）；点击 AI 摘要内引用链接仅 1%
+- 有 AI 摘要的页面 26% 直接结束浏览会话，无摘要为 16%
+- 88% 的 AI 摘要引用 3 个以上来源；Wikipedia/YouTube/Reddit 为最高频被引来源（合计占 AI 摘要来源 15%）
+method: 面板浏览数据（KnowledgePanel Digital 追踪）+ 第三方抓取同查询结果页对照
+limitations: 仅 Google；美国用户；结果页为 2025-04-07~17 抓取快照，AI 摘要随时间变化
+boundary_conditions: 描述性行为数据，非因果实验；不外推到非问答类查询
+relevant_nodes:
+- zero_click_information
+- answer_engine_visibility
+notes: zero_click_information 直接实证（触达与访问脱钩）；answer_engine_visibility 的'被引用在场'前提（88% 摘要引用 3+ 来源）。真实数字全部来自官方原文。
+last_verified: 2026-09

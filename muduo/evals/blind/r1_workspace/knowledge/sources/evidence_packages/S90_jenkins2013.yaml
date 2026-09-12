@@ -1,0 +1,26 @@
+# Evidence Package — S90 Jenkins, Ford & Green 2013（Spreadable Media）
+# 标准格式。access_level 如实标注。
+source_id: S90
+title: "Spreadable Media: Creating Value and Meaning in a Networked Culture"
+authors: "Henry Jenkins; Sam Ford; Joshua Green"
+year: 2013
+journal: New York University Press（专著；开放获取 DOI）
+doi: "10.3983/twc.2014.0633"
+url: "https://muse.jhu.edu/pub/193/monograph/chapter/749941"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心概念经多源交叉实取：NYU 出版社开放摘要 + Project MUSE 引言全文（Why Media Spreads）+ 学术综述（distribution vs circulation / participatory culture / 反病毒隐喻）+ 健康传播应用研究"
+research_question: "在数字网络中，媒体内容如何流通？『传播』与『分发』的差别是什么？"
+core_claims:
+  - "『如果它不传播，它就死了』——从分发（distribution，生产方控制）转向流通（circulation，自上而下与自下而上混合驱动）"
+  - "spreadability（可传播性）vs stickiness（粘性）：后者把注意聚拢在中心化场所，前者让内容经由正式/非正式网络广泛扩散"
+  - "『病毒式传播』是迷思：病毒隐喻暗示内容能自我复制，抹杀了人的能动性；实际是受众在塑造、分享、重构、混编内容"
+  - "参与式文化（participatory culture，Jenkins 1992 提出）：受众不是被动接收者，而是在社群与网络内主动流通内容"
+  - "价值与意义在流通中由受众共同创造；公司需要从『听见』转向『倾听』"
+method: "文化研究专著（影视/音乐/游戏/漫画/跨媒体叙事多行业案例，美与全球）"
+results: "（理论框架）可传播性框架成为理解分享文化的标准词汇，反驳『病毒』与『影响者』神话"
+limitations: "专著为论证性/案例性（非实验）；概念偏文化研究，可操作化程度低于传播学实证传统"
+boundary_conditions: "适用于数字网络流通语境；对中心化管制/封闭平台环境需修正"
+relevant_nodes: [platform_power_gatekeeping, word_of_mouth_drivers]
+notes: "参与式文化/可传播性的理论来源（book 级）。『going viral is a myth』论点经学术引用交叉确认，未编造。"
+last_verified: "2026-09"

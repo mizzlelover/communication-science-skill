@@ -1,0 +1,25 @@
+# Evidence Package — S110 Wood & Rünger 2016
+# 标准格式。access_level 如实标注。
+source_id: S110
+title: "Psychology of Habit"
+authors: "Wendy Wood; Dennis Rünger"
+year: 2016
+journal: Annual Review of Psychology 67, 289-314
+doi: "10.1146/annurev-psych-122414-033417"
+url: "https://www.annualreviews.org/docserver/fulltext/psych/67/1/annurev-psych-122414-033417.pdf"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "Annual Reviews 官方 PDF 全文开头（作者/关键词/摘要/完整目录/引言全文，经 guest 直链实际访问）+ PubMed 摘要"
+research_question: "习惯的认知、动机与神经生物学属性是什么？习惯如何与有意识目标追求交互？"
+core_claims:
+  - "习惯是人们在重复情境中重复同一反应形成的自动行为倾向"
+  - "习惯与有意识目标追求以三种方式交互：①习惯在目标追求中形成（重复同一反应）②计算模型显示习惯与目标追求协同引导行动，习惯是高效默认模式 ③人们常从习惯执行频率推断行为必属有意"
+  - "习惯自动性由情境线索触发；可通过改变环境/摩擦干预习惯"
+  - "综述覆盖习惯自动性、形成机制（联想+奖赏学习）、测量、计算模型、神经机制、压力/成瘾、改变干预"
+method: "Annual Review of Psychology 综述：整合认知、动机、计算（model-free RL）、神经影像证据"
+results: "（综述）习惯=线索驱动的自动反应，是行为改变的默认高效通道；习惯强度=行为频率×情境一致性"
+limitations: "综述非新实验；测量方法（习惯强度量表）效度有讨论"
+boundary_conditions: "习惯形成需情境稳定+行为重复；改变需环境重组（减少线索）或摩擦调整"
+relevant_nodes: [habit_loop_cue_routine_reward, context_cue_stability]
+notes: "Annual Reviews 官方 PDF 实际抓取（含引言全文与完整目录）→ 从 found 升级为 annotated（substantial_excerpt，引言+目录级）。"
+last_verified: "2026-09"

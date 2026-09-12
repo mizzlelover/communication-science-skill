@@ -1,0 +1,24 @@
+# Evidence Package — S102 Goldstein 2008
+# 标准格式。access_level 如实标注。
+source_id: S102
+title: "A Room with a Viewpoint: Using Social Norms to Motivate Environmental Conservation in Hotels"
+authors: "Noah J. Goldstein; Robert B. Cialdini; Vladas Griskevicius"
+year: 2008
+journal: Journal of Consumer Research 35(3), 472-482
+doi: "10.1086/586910"
+url: "https://ideas.repec.org/a/oup/jconrs/v35y2008i3p472-482.html"
+access_level: abstract_only
+research_status: annotated
+content_obtained: "摘要全文（IDEAS/RePEc 收录）+ 出版信息；JCR 正文受订阅墙限制，未取得全文正文"
+research_question: "酒店环保提示牌如何更有效地促使客人重复使用毛巾？"
+core_claims:
+  - "使用描述性规范（'多数客人会重复使用毛巾'）的提示牌优于传统纯环保呼吁提示牌"
+  - "当规范信息描述与个体当下情境最匹配的行为（provincial norms，'本房间多数客人重复使用毛巾'）时效果最强"
+  - "两个现场实验证实该效应"
+method: "两个现场实验：在真实酒店客房浴室轮换投放不同版本的提示牌，以毛巾重复使用率为因变量"
+results: "描述性规范版优于环保呼吁版；'本房间'（provincial）版优于泛化描述性规范版"
+limitations: "酒店场景单一；未取得原文未核验具体效应量；季节/客群波动未在此登记中核实"
+boundary_conditions: "规范信息需与受众当下情境匹配；适用于亲环境等低成本、可见行为"
+relevant_nodes: [social_proof, descriptive_injunctive_norms, norm_messaging_effects]
+notes: "JCR 全文订阅受限 → FULL TEXT NOT AVAILABLE（正文）；已如实降级：以摘要+二级引用构建，未编造样本量与效应量。CASE-RES-001 的一手支撑来源。"
+last_verified: "2026-09"

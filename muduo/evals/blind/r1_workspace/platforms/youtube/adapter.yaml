@@ -1,0 +1,182 @@
+platform_name: YouTube
+last_updated: "2026-09"
+fact_confidence_summary: >-
+  信息基础：官方创作者指南公开讨论 CTR/观看时长/满意度等信号方向、
+  标题 100 字符与上传时长规则见官方帮助文档（方向可靠、数值随版本微调）；
+  推荐系统细节仍为行业共识。2026-09 对官方来源实取：YouTube 官方博客
+  推荐系统长文、YouTube Help 上传页与标签页、How YouTube Works 官方说明已
+  实际抓取核实（platform_sources S1-S4）；known_platform_patterns 已按
+  L1-L4 标注证据级别，原标 official_rule 但无官方文档支持的标注已降级并注明。
+  所有标注以平台最新公告为准，使用 update_platform_knowledge 流程复核。
+
+content_units:
+  - "长视频（横屏为主，分钟到小时级）"
+  - "Shorts（竖屏短视频）"
+  - "直播与首播（Premiere）"
+  - "社区帖子（图文/投票）"
+  - "播客化内容（音频场景）"
+
+dominant_user_intent:
+  - "主动学习/解决问题（how-to/教程/评测的全球首选入口）"
+  - "休闲娱乐（长视频沉浸观看）"
+  - "追更订阅（频道忠诚度全平台最高）"
+
+distribution_model: >-
+  搜索+订阅双主导，推荐流为辅：搜索长青是核心竞争力——
+  视频数年后仍被查询唤醒（"长青资产"平台 [industry_consensus]）；
+  订阅提供稳定触达；Shorts 是独立的推荐流量池。
+
+recommendation_model: >-
+  官方创作者指南公开说明推荐系统考虑点击率、观看时长与用户满意度调查
+  [official_rule-官方公开方向，具体权重不公开]；
+  长视频以观看时长为核心方向，Shorts 以完播与互动为方向 [industry_consensus]。
+
+social_graph_characteristics: >-
+  订阅制单向关系：订阅+铃铛=通知许可（permission_opt_in_mechanics）；
+  频道与粉丝的长期关系是平台核心资产结构（parasocial_relationship 最成熟的平台之一）。
+  [official_rule-产品形态（订阅/铃铛产品机制公开可见）＋industry_consensus-关系观察]
+
+content_lifecycle: >-
+  全平台最强长青性：优质视频可持续获得搜索与推荐流量数年
+  [industry_consensus]；"发布即资产"的复利结构与抖音式流量事件形成根本对比；
+  热点内容同样存在但非主体心智。
+
+primary_entry_points:
+  - "搜索（全球第二大搜索引擎的定位 [industry_consensus-广为流传的行业表述]）"
+  - "首页推荐流"
+  - "订阅流"
+  - "Shorts 流"
+  - "相关视频侧边栏（长视频的续接流量）"
+
+attention_environment: >-
+  目的性+休闲混合：桌面/TV 端大屏观看占比高 [industry_consensus-观察]；
+  用户带着"看什么"的意图进入，标题+缩略图是点击前唯一信息——
+  点击决策比信息流平台更审慎，但一旦点开观看时长容忍度更高。
+
+user_behavior: >-
+  教程场景的"边看边做"；倍速观看习惯成熟；
+  评论区深度讨论多；订阅用户对频道的更新有仪式化期待。
+  [industry_consensus-行为观察]
+
+interaction_signals:
+  - "观看时长/平均观看时长：官方公开的推荐信号方向 [official_rule-官方指南公开讨论]"
+  - "满意度调查（官方问卷）：官方公开的质量信号 [official_rule-产品存在]"
+  - "赞/踩、分享、评论：互动分层 [industry_consensus-行为观察]"
+  - "订阅+铃铛：通知许可与关系承诺 [industry_consensus-行为观察]"
+  - "CTR：官方公开的推荐考量项 [official_rule-官方指南公开讨论]"
+
+sharing_mechanism: >-
+  链接开放生态：跨平台分享最顺畅（时间戳分享、嵌入播放器
+  [official_rule-产品存在]）；是其他平台内容引用/转载的主要源头——
+  YouTube 链接在微信、X、Reddit 等场景流通无阻碍。
+
+search_mechanism: >-
+  搜索引擎级心智：标题/描述/标签/字幕/章节都参与索引
+  [official_rule-官方指南说明标签作用有限，标题描述字幕更关键]；
+  章节（Chapters）结构让视频在 Google 搜索中可被定位到具体段落
+  [industry_consensus]。
+
+community_mechanism: >-
+  频道社区帖子（投票/图文）维系非视频触达；评论区按点赞排序沉淀高价值讨论；
+  频道会员制提供付费分层 [official_rule-产品存在]；
+  弹幕文化弱（评论区为主）。
+
+algorithmic_features:
+  - "首页/Suggested 推荐流 [official_rule-产品存在]"
+  - "Shorts 独立推荐池 [official_rule-产品存在]"
+  - "章节与字幕索引 [official_rule-产品存在]"
+  - "YouTube Partner 创作者分成 [official_rule-产品存在]"
+
+content_constraints:
+  - "[official_rule] 标题 100 字符上限（官方帮助文档，以平台最新公告为准）"
+  - "[official_rule] 描述 5000 字符上限（官方帮助文档，以平台最新公告为准）"
+  - "[official_rule] 未验证账号上传上限 15 分钟，验证后大幅放宽（官方帮助文档，以平台最新公告为准）"
+  - "[official_rule] 儿童内容（Made for Kids）标记受专项规则约束（以最新规则为准）"
+
+title_role: >-
+  搜索结果与推荐卡片的关键承诺：与缩略图互补分工——标题给关键词与
+  价值陈述，缩略图给情绪与反差（两者重复则浪费一路信息 [industry_consensus]）；
+  100 字符上限内前段关键词最重要。
+
+cover_role: >-
+  缩略图=CTR 第二决定要素：选择式环境中封面与标题共同决定点击
+  （visual_hierarchy + curiosity_gap）；官方创作者指南公开建议制作
+  准确且有吸引力的缩略图 [official_rule-官方公开建议方向]。
+
+opening_role: >-
+  官方创作者指南公开建议前置钩子——开头快速确认视频价值
+  [official_rule-官方公开建议方向]；长视频前 15-30 秒决定留存曲线，
+  "开头承诺+结构预告"是成熟做法 [industry_consensus]。
+
+tag_role: >-
+  官方明确表示标签对推荐作用极小 [official_rule-官方公开声明]；
+  标题/描述/字幕才是搜索索引主体——这是与中文平台"标签玄学"的重要反差。
+
+comment_role: >-
+  深度讨论区：点赞排序沉淀高价值评论；置顶评论引导方向；
+  创作者回复强化订阅关系（parasocial_relationship）。
+  [industry_consensus-社区观察]
+
+follow_role: >-
+  订阅+铃铛=长期触达承诺：频道资产的核心；
+  订阅者对推荐系统也有正向信号意义 [industry_consensus]；
+  10 万/百万订阅是创作者行业的公认里程碑（credentialing_symbols）。
+
+risk_factors:
+  - "[industry_consensus] 广告收益波动：广告主政策与 demonetization（黄标）影响收入稳定性"
+  - "[official_rule] 版权系统（Content ID）自动判罚（以最新规则为准）"
+  - "[official_rule] 儿童内容与广告合规（COPPA 等专项规则，以最新规则为准）"
+  - "[industry_consensus] 算法调整导致流量波动：推荐系统变化可让频道流量突变（platform_power_gatekeeping）"
+  - "[industry_consensus] AI 生成内容的低质饱和：平台上合成内容激增，真人可信内容稀缺性上升（ai_content_saturation + authenticity_premium）"
+
+known_platform_patterns:
+  - pattern: "标题+缩略图互补分工（不重复信息）"
+    mechanism_links: [visual_hierarchy, curiosity_gap, processing_fluency]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: S3
+    last_verified: "2026-09"
+    note: "官方帮助文档确认标题/缩略图/描述是发现的关键元数据、标签作用极小 [S3]；'缩略图负责情绪捕获、标题负责信息承诺的互补分工'策略本身为行业共识。"
+  - pattern: "前 15-30 秒 hook+结构预告"
+    mechanism_links: [top_down_attention_guidance, zeigarnik_effect, goal_gradient_effect]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "本次实取的官方文档（推荐系统博客/帮助中心）未直接载明'开头钩子/结构预告'建议，无官方文档直接支持，降为 L3 行业共识；待官方创作者指南实读后再评估升级。机制上是把'值得看完'的理由前置。"
+  - pattern: "章节分段（Chapters）与关键词命名"
+    mechanism_links: [answer_engine_visibility, processing_fluency, encoding_specificity]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "章节让长视频可被检索与跳转，同时服务站内索引与 Google 搜索展示 [industry_consensus]。"
+  - pattern: "播放列表与系列化养连续观看"
+    mechanism_links: [flow_state, habit_loop_cue_routine_reward, mere_exposure]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "连续自动播放降低流失摩擦；系列结构把单次观看转为追更习惯。"
+  - pattern: "长青选题策略（how-to/评测/对比）"
+    mechanism_links: [long_tail_demand, category_entry_points, jobs_to_be_done]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "围绕持续存在的任务需求（jobs_to_be_done）选题，让内容成为多年资产——与热点脉冲型平台形成策略分野。"
+  - pattern: "Shorts 引流长视频（双池联动）"
+    mechanism_links: [friction_reduction, cold_start_dynamics, algorithmic_amplification]
+    fact_type: industry_consensus
+    evidence_level: L3
+    source_ref: none
+    last_verified: "2026-09"
+    note: "Shorts 低门槛获客、长视频承接深度关系；官方提供关联功能 [official_rule-产品存在]。边界：Shorts 受众与长视频受众的偏好可能不一致，转化率因频道而异。Shorts 为官方产品（帮助中心存在对应主题），但本次未抓到关联功能官方正文，维持行业共识级别。"
+
+platform_sources:
+  - {source: "YouTube 官方博客 - On YouTube's recommendation system（https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/）", source_owner: "Google/YouTube", source_type: official, claim_supported: "推荐系统考虑点击、观看时长、满意度调查、分享、点赞/点踩等信号；首页与 Up Next 为两大推荐位；低质/边界内容会被降权", published_date: "2021-09-15", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "YouTube Help - Upload videos（https://support.google.com/youtube/answer/57407）", source_owner: "Google/YouTube", source_type: official, claim_supported: "视频标题 100 字符上限；描述 5,000 字符上限；官方指引验证账号以优化上传处理", published_date: "未知（常青帮助页）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "YouTube Help - Add tags to your YouTube videos（https://support.google.com/youtube/answer/146402）", source_owner: "Google/YouTube", source_type: official, claim_supported: "标签对视频发现的作用极小；标题/缩略图/描述是更重要的发现元数据", published_date: "未知（常青帮助页）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+  - {source: "YouTube 官方 - How YouTube Works: Recommendations（https://www.youtube.com/howyoutubeworks/product-features/recommendations/）", source_owner: "Google/YouTube", source_type: official, claim_supported: "推荐系统基于观看行为、点赞/点踩、订阅与满意度调查；结合频道声誉与外部评估者质量判断；首页与 Up Next 推荐位", published_date: "未知（常青官方说明）", accessed_date: "2026-09-08", freshness: current, confidence: high}
+
+confidence: medium

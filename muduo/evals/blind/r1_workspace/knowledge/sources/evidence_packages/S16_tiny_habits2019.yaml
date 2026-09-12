@@ -1,0 +1,26 @@
+# Evidence Package — S16 B. J. Fogg 2019（Tiny Habits）
+# 标准格式。access_level 如实标注。
+source_id: S16
+title: "Tiny Habits: The Small Changes That Change Everything"
+authors: "B. J. Fogg"
+year: 2019
+journal: Houghton Mifflin Harcourt（专著）
+doi: "无 DOI（专著）"
+url: "https://www.tinyhabits.com/"
+access_level: substantial_excerpt
+research_status: annotated
+content_obtained: "核心框架经多源交叉实取：Fogg 官网 tinyhabits.com（作者/斯坦福行为设计实验室/Tiny Habits 方法定位）+ habit-streak.com 方法详解（B=MAP 三要素/三类动机/六个能力因素/三类提示/Tiny Habits Recipe 配方句式）+ 小宇宙播客中文解读（锚点/微行为/庆祝/情绪创造习惯/戒坏习惯要『解开』）+ datafield.dev 心理学教材配套书目（recipe 结构 anchor+tiny behavior+celebration，庆祝为技术机制）"
+research_question: "为什么大多数人改变行为失败，以及如何通过『小到无法拒绝』的行为设计让改变持久发生？"
+core_claims:
+  - "B=MAP 行为模型：行为（Behavior）在动机（Motivation）、能力（Ability）、提示（Prompt）三者同时到位时发生，任一要素缺失行为就不发生（habit-streak；小宇宙；datafield.dev）"
+  - "动机不可靠（感觉/预期/归属三类核心动机随时波动），可靠的设计是提升能力——把行为缩到 30 秒内可完成，让『简单到无法拒绝』；能力由时间、金钱、体力、脑力、社交偏离、日程打断六个因素决定（habit-streak）"
+  - "Tiny Habits Recipe 配方：『After I [锚点], I will [微行为], then I [庆祝]』——把新行为锚定到既有稳定日常动作（如刷完牙后），行为缩小到最小版本，完成后立即庆祝（habit-streak；datafield.dev；小宇宙）"
+  - "庆祝是技术机制而非心理安慰：完成微行为后的即时积极情绪（握拳、心里说『太棒了』）让大脑释放多巴胺，把行为与『感觉好』绑定——创造习惯的不是重复而是情绪（datafield.dev；小宇宙）"
+  - "戒除坏习惯要『解开』（从最容易的小结开始逐个拆解）而非『打破』；改变失败不是人的错而是方法错了（小宇宙）"
+method: "从业者实践框架：斯坦福行为设计实验室 20 余年研究与数万人教练经验提炼的方法体系（D 级实践框架）"
+results: "（定位）B=MAP 与 Tiny Habits 成为行为设计领域的通用入门框架，被产品设计与习惯养成广泛引用"
+limitations: "整体模型缺乏系统性独立实证检验；『庆祝/情绪创造习惯』为从业者主张，属 D 级证据（对比 Lally 2010 等习惯研究）；书中宣称数据（如 6 万人、1,900+ 引用）来自作者自述"
+boundary_conditions: "适用于单次可触发的简单目标行为；对强动机冲突或结构性障碍（如贫困）仅边缘修补；锚点需稳定可及"
+relevant_nodes: [behavior_model_bmap, context_cue_stability, friction_reduction, verb_concreteness_action_language]
+notes: "从业者实践框架（D 级），与节点 evidence_grade C（B=MAP 整体模型检验有限）一致。核心概念（B=MAP 三要素、锚点-微行为-庆祝配方）均出自上述公开来源，未编造。"
+last_verified: "2026-09"

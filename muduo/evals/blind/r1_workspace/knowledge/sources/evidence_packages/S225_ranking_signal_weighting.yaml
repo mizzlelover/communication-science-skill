@@ -1,0 +1,22 @@
+# Evidence Package — S225（2026-09-11 一手实读建包；逐字实读来源见 content_obtained）
+source_id: S225
+title: On YouTube's recommendation system（官方博客）
+authors: YouTube（Google）
+year: 2021
+journal: YouTube Official Blog（2021-09-15）
+doi: ''
+url: https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/
+access_level: full_text
+research_status: annotated
+content_obtained: 本项目 2026-09-08 官方实读（platform_sources S1 in platforms/youtube，claim_supported 在案）
+research_question: YouTube 推荐系统考虑哪些信号？
+core_claims:
+- 官方公开：推荐系统考虑点击、观看时长、满意度调查、分享、点赞/点踩等信号
+- 首页与 Up Next 为两大推荐位；低质/边界内容会被降权
+method: 官方政策说明
+limitations: 信号类型公开、权重不公开
+boundary_conditions: 随版本演进
+relevant_nodes:
+- ranking_signal_weighting
+notes: 跨平台信号差异官方一手证据之二（TikTok 完播导向 vs YouTube 时长/满意度导向——节点主张'不同平台因目标函数不同对信号权重排序不同'的直接文档证据）。
+last_verified: 2026-09

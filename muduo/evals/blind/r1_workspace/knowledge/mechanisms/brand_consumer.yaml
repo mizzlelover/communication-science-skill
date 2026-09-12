@@ -1,0 +1,902 @@
+# brand_consumer — 品牌与消费者（Brand & Consumer）：心理可得性、购买结构与需求分布
+domain: brand_consumer
+nodes:
+- id: mental_availability
+  canonical_name_en: Mental Availability
+  canonical_name_zh: 心理可得性
+  aliases:
+  - 心智可得性
+  - mental penetration（心智渗透）
+  domain: brand_consumer
+  definition: 心理可得性（mental availability）是 Ehrenberg-Bass Institute（Byron Sharp《How Brands Grow》综合）基于大样本购买数据提出的概念：品牌被消费者在购买情境中「想起来」的容易程度与丰富程度——不是被记住，而是在正确的情境中被激活。它由品类进入点（category
+    entry points）网络的广度决定：品牌与越多购买情境建立联想，被想起的概率越大。
+  core_claim: 品牌增长主要由心理可得性（购买时被想起的概率×情境广度）驱动，而非忠诚度提升；约 50-80% 的销量来自购买频率很低的顾客（S76），且 80/20 被帕累托修正——头部 20%
+    客户贡献约 50%+ 而非 80%（S76）；增长的杠杆是触达更多浅度购买者并提高情境激活广度。
+  mechanism: 消费者的品类购买大多是低卷入、记忆驱动的决策：面对货架或搜索框时，被激活的品牌集合（retrieval cue 触发的联想网络）直接决定进入考虑范围的品牌。心理可得性高 = 品牌被存储在更多购买情境线索之下（「早餐缺奶→想起
+    A」「朋友聚会→想起 B」）。Sharp 指出多数品类的购买者是轻购买者（偶尔买一次），因此增长来自「让更多人偶尔想起并买一次」，而非让少数铁粉买得更多——这构成对传统忠诚度营销的直接修正。
+  causal_chain: 情境线索暴露 + 一致的 distinctive assets → 品牌联想网络建立 → 购买情境激活概率↑ → 进入考虑集 → 偶尔购买累积为市场份额增长
+  variables:
+    inputs:
+    - 广告触达与频率
+    - 品类进入点联想的建立与维护
+    - distinctive assets 的使用一致性
+    moderators:
+    - 品类购买频率
+    - 品牌规模（大品牌天然高可得性）
+    - 竞品的声音份额
+    mediators:
+    - 品牌联想的情境覆盖广度
+    - 记忆激活容易度
+    outputs:
+    - 考虑集进入率
+    - 市场份额
+    - 购买者数量（渗透率）
+  evidence:
+    supporting:
+    - Ehrenberg-Bass 基于多国、多品类大样本扫描数据的发现：市场份额与心智渗透高度相关，购买频率分布呈双危机模式（书籍综合，见 double_jeopardy_law）
+    - 购买者结构分析显示轻购买者贡献了品牌增长的多数增量（大样本数据传统）
+    conflicting:
+    - 「忠诚度完全不重要」是过度简化：在高卷入、高风险与 B2B 品类中，重度客户策略仍占重要地位（营销研究讨论）
+    - 心智可得性的测量（联想网络广度）在实践上仍有难度，多依赖品牌追踪调查（方法讨论）
+    replication:
+    - 双危机定律与渗透主导增长的模式在大量品类的重复扫描数据中稳定复现
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 证据基础是快消品等重复购买品类；对耐用品、服务与高单价品类的适用性需谨慎
+  - 心理可得性以「物理可得性」（渠道铺货）为前提：买不到的品牌再有名也不产生销售
+  failure_conditions:
+  - 追求知名度而非情境激活：高知名但无购买线索联想（「知道这个牌子但想不起什么时候买它」）不产生增长
+  - 频繁更换品牌资产与定位信息：联想网络被反复重置，可得性积累被自我清零
+  common_misinterpretations:
+  - 「品牌=占领心智」——Ehrenberg-Bass 的重点是激活结构（什么情境想起你）而非印象强度（人们多熟悉你）；无情境锚点的知名度是空转资产
+  - 把 mental_availability 与 brand awareness 混为一谈：awareness 测「认得」，availability 测「在购买时刻被想起」；后者才是行为相关变量
+  ethical_risks:
+  - 高频率心智轰炸对儿童与弱势群体的剥削性广告问题
+  examples:
+    original_cases:
+    - 《How Brands Grow》基于大样本数据对品牌增长模式的重新论述（Ehrenberg-Bass 传统）
+    research_cases:
+    - 多品类扫描面板数据中份额与渗透的关系重复验证（数据研究传统）
+    modern_cases:
+    - 饮料品牌全年场景化投放（火锅配、加班配、出游配）扩大进入点覆盖
+    - 电商搜索关键词布局本质是数字货架上的心理可得性竞争
+  communication_implications: 内容策略应围绕品类进入点组织（一个内容绑定一个使用/购买情境），而非围绕品牌主张堆砌；所有触点重复使用一致的 distinctive assets，让每次曝光都在加深同一网络。
+  community_implications: 社群内容定期把品牌与成员的真实使用情境绑定（成员故事：什么时刻用上了）；社群是低成本制造情境联想的场所——比广告更具体、更可信。
+  content_applications:
+    body: 正文以具体情境开头（「周五晚带娃出行时」），把品牌锚定在使用时刻而非抽象卖点
+    narrative: 用户故事保留完整情境细节（时间、地点、契机），情境是联想网络的存储键
+    sharing: 分享物突出品牌 distinctive assets（色彩、slogan、角色），确保转发也在积累资产一致性
+    comments: 置顶「你上一次在什么场景用它」的提问，评论区成为进入点联想的素材库
+  platform_implications: 搜索框与推荐位是数字时代的货架：心理可得性直接表现为搜索词联想与品牌词流量；平台的进入点也从「场景」扩展为「搜索意图」（原则性判断）。
+  related_nodes:
+  - double_jeopardy_law
+  - distinctive_brand_assets
+  - category_entry_points
+  - mere_exposure
+  - positioning_mechanism
+  source_ids:
+  - S76
+  - S71
+  - S73
+  - S168
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Sharp 2010《How Brands Grow》（S76，book 级，Ehrenberg-Bass 大样本：渗透主导增长/心理可得性）+ Kotler
+      & Keller 2016（S71，STP/CBBE）+ Keller 2020（S73，CBBE 品牌共鸣金字塔）；S168（Dirichlet 基准）为引用链级、无公开摘要，仅作背景引用，不支撑细节
+    effect_size: 心智渗透与市场份额高度相关；轻购买者贡献多数增量
+    replication_status: 渗透主导增长与双危机规律在多品类扫描数据中稳定复现（Ehrenberg-Bass 传统）
+    context_dependency: 以物理可得性（渠道铺货）为前提；高卷入/耐用品品类适用性需谨慎
+    downgrade_upgrade_reason: 2026-09 实取 S76/S71/S73 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S76
+    supporting_evidence:
+    - S71
+    - S73
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-002
+    - CASE-BRD-007
+    - CASE-BRD-011
+    - CASE-BRD-025
+    - CASE-CRS-018
+    - CASE-PLT-002
+    - CASE-PLT-047
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: distinctive_brand_assets
+  canonical_name_en: Distinctive Brand Assets
+  canonical_name_zh: 独特性品牌资产
+  domain: brand_consumer
+  definition: 独特性品牌资产（distinctive brand assets，Ehrenberg-Bass 概念）指能被稳定归因于单一品牌的独特识别元素：颜色、logo、形状、声音、角色、slogan、包装结构。其作用不是「美学」而是识别效率：在低注意力的购买瞬间，让品牌无需文字标注即被认出并归因（看半秒就知道是谁），从而把广告暴露转化为心理可得性积累。
+  core_claim: 品牌资产的价值在于「独特且一致」：独特性保证归因正确（想起的是你而不是竞品），一致性保证每次暴露都在同一网络上累积；两者共同决定广告暴露转化为心智资产存储的效率。
+  mechanism: 低卷入环境中的广告暴露是短暂的（秒级、伴随干扰、注意力分散），只有被「归因正确」的暴露才能写入品牌记忆。独特资产的作用机制：先以高显著性元素（独特颜色、旋律、角色）捕获 bottom-up
+    注意，再通过重复配对（资产与品牌同现）建立自动化的「资产→品牌」联想。资产的一致性决定联想强度：频繁改版等于把积累清零。这与 mere_exposure 的机制相通，但增加了归因要求——不仅被看到，还要被认出是你。
+  causal_chain: 独特元素暴露 → 自动归因到品牌 → 资产-品牌联想强化 → 购买情境中资产激活品牌 → 心理可得性提升
+  variables:
+    inputs:
+    - 资产的独特性
+    - 使用一致性
+    - 暴露频率
+    moderators:
+    - 品类惯例（差异化空间）
+    - 媒介的资产承载能力（音频/视频/静态）
+    - 竞品模仿
+    mediators:
+    - 归因正确率
+    - 联想强度
+    outputs:
+    - 无标注识别率
+    - 心理可得性
+    - 广告暴露的转化效率
+  evidence:
+    supporting:
+    - Ehrenberg-Bass 对独特资产识别与效果的研究传统（S76 实载「独特性资产通过长期一致使用积累识别与记忆」；fame/uniqueness/consistency 三维测量出自 Ehrenberg-Bass
+      后续资产追踪文献（Romaniuk 传统），未见于 S76/S74 现有 EP，待补 EP 后再引）
+    - 品牌追踪调查中资产识别率与市场份额的相关（行业数据方向一致）
+    conflicting:
+    - 创意行业的「品牌刷新」冲动与一致性要求存在持续张力（实践争论）
+    replication:
+    - 「一致独特资产提升识别与归因」在品牌资产追踪研究中方向稳定；具体资产的量化贡献差异大
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 资产必须「独特于品类」：全行业通用的元素（品类共有色）无法归因
+  - 适用于低注意力暴露环境（信息流、户外、货架）；高卷入决策更多依赖论据而非识别捷径
+  failure_conditions:
+  - 频繁重新设计 VI 与 slogan（每次改版都是记忆清零重启）
+  - 资产独特但不被喜欢或与品类核心冲突（识别了但引发负面联想）
+  common_misinterpretations:
+  - 「品牌资产=视觉识别系统」——资产还包括声音、旋律、角色、形状、包装动作等非视觉通道；多通道资产在注意力分散环境中更稳健
+  - 把 distinctive_brand_assets 与差异化（differentiation）混为一谈：Ehrenberg-Bass 研究传统的结论是品牌在功能上鲜有真正差异化（该论断出自其后续资产追踪文献，未见于
+    S76/S74 现有 EP，引用需注明），distinctiveness 解决的是「被认出」问题而非「与众不同」问题
+  ethical_risks:
+  - 资产化利用心理脆弱群体敏感的元素（制造儿童恐惧与渴望的卡通资产）
+  examples:
+    original_cases:
+    - 《How Brands Grow》对知名品牌资产一致性与识别效率的分析
+    research_cases:
+    - Ehrenberg-Bass 后续资产追踪文献（Romaniuk 传统）对 fame/uniqueness/consistency 三维测量的应用研究（三维测量框架未见于 S76/S74 现有
+      EP，待补 EP 后再引）
+    modern_cases:
+    - 短视频 3 秒内出品牌色与旋律的「前 3 秒资产化」做法
+    - 品牌声音 logo 在播客广告中的纯音频识别应用
+  communication_implications: 内容的第一屏与最后屏必须承载品牌资产（先归因后内容）；跨平台保持资产呈现的一致性比单条内容的创意惊艳更重要。
+  community_implications: 为社群设计专属资产（固定梗图、专属称呼、视觉模板）：社群资产的识别效率决定社群文化能否对外传播而不失归属（认得出是哪个社群的梗）。
+  content_applications:
+    body: 固定栏目使用固定版式与开场元素，栏目本身的资产化提升系列辨识度
+    visual: 所有内容的视觉系统统一使用品牌资产（色、形、角标），无标注也可被归因
+    sharing: 分享卡片把品牌资产作为设计母版，让每次转发都在做资产广告
+    comments: 官方回复使用固定的语气与符号签名，评论区也资产化
+  platform_implications: 平台的静音播放、三秒划走环境惩罚「延迟归因」内容：资产必须前置于叙事（先认出再讲故事）而非片尾揭示（原则性判断）。
+  related_nodes:
+  - mental_availability
+  - mere_exposure
+  - processing_fluency
+  - category_entry_points
+  - visual_hierarchy
+  source_ids:
+  - S76
+  - S74
+  - S73
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Sharp 2010（S76：独特性资产通过一致使用积累识别与记忆）+ Aaker 1996（S74：品牌资产五要素/品牌识别系统）+ Keller 2020（S73：CBBE
+      品牌知识）
+    effect_size: 无标注识别率与心理可得性正相关；资产一致性决定联想累积
+    replication_status: 「独特一致资产提升识别与归因」在品牌追踪研究中方向稳定；具体资产量化贡献差异大
+    context_dependency: 资产须独特于品类（品类共有元素无法归因）；高卷入决策更多依赖论据而非识别捷径
+    downgrade_upgrade_reason: 2026-09 实取 S76/S74/S73 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S76
+    supporting_evidence:
+    - S74
+    - S73
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-001
+    - CASE-BRD-006
+    - CASE-BRD-009
+    - CASE-BRD-011
+    - CASE-BRD-015
+    - CASE-BRD-016
+    - CASE-BRD-017
+    - CASE-BRD-018
+    - CASE-BRD-021
+    - CASE-BRD-022
+    - CASE-BRD-023
+    - CASE-BRD-025
+    - CASE-BRD-026
+    - CASE-BRD-028
+    - CASE-BRD-029
+    platform_sources:
+    - bilibili:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: positioning_mechanism
+  canonical_name_en: Positioning Mechanism
+  canonical_name_zh: 定位机制
+  domain: brand_consumer
+  definition: '定位（positioning）由 Al Ries 与 Jack Trout 在 1970 年代《广告时代》系列文章及《Positioning: The Battle for
+    Your Mind》中提出：传播过载环境中，营销的战场不在工厂与货架，而在潜在顾客的心智——品牌必须在品类心智阶梯上占据一个清晰、有利且未被占据的位置。它是对消费者类别化认知与可得性结构的实践应用框架。'
+  core_claim: 心智对品类信息的容量极其有限（每个品类通常只稳定记住少数品牌），品牌应通过简化的、与既有认知挂钩的定位语句，占据品类阶梯上的一个具体位置，而非追求全面优势。
+  mechanism: 定位机制建立在两个认知现实之上：（1）类别化存储：心智按品类（category）归档品牌，消费者以「品类→需求触发→品牌检索」的顺序决策；（2）容量限制：每个品类的活跃记忆槽位极少，且先进入者占据默认位置。因此定位的操作是：选择品类与参照系（在什么品类里竞争）、绑定既有认知（挂靠消费者已知的锚点）、占据一个词或一种属性（简化到一句话可复述）、并保持长期一致（槽位的占用需要重复维护）。与其改变心智，不如利用心智中已存在的结构。
+  causal_chain: 选择参照品类 + 绑定既有认知 + 简化定位语 → 品类检索时被激活 → 槽位占用与巩固 → 购买情境中的默认地位
+  variables:
+    inputs:
+    - 品类参照系选择
+    - 定位语句的简化度
+    - 与既有认知的匹配度
+    moderators:
+    - 品类心智槽位的占用情况
+    - 竞品定位的重叠度
+    - 传播预算与持久性
+    mediators:
+    - 品类联想建立
+    - 记忆槽位占用
+    outputs:
+    - 品类检索激活率
+    - 考虑集位置
+    - 定位语的可复述性
+  evidence:
+    supporting:
+    - Ries & Trout 的定位理论及其大量案例复盘（从业者经典）
+    - 与 Ehrenberg-Bass 的品类进入点研究在「情境激活」逻辑上相通（理论呼应）
+    - 类别化认知与记忆容量限制的认知心理学基础（确证的认知机制）
+    conflicting:
+    - 「占领一个词」在多品类延伸与复杂购买中解释力有限；过度简化可能牺牲品牌延展性（营销学术讨论）
+    - 定位的成功案例存在事后归因风险（幸存者偏差，实践框架通病）
+    replication:
+    - 作为实践框架被广泛使用五十年；无严格对照检验，属从业者经验（按 EVIDENCE.md 须显式标注）
+    meta_analysis: []
+  evidence_grade: D
+  boundary_conditions:
+  - 适用于心智槽位有限、低卷入重复购买的品类；复杂决策（企业采购、医疗）更依赖证据与关系而非一句话槽位
+  - 定位是长期资产：需要多年一致的传播投入才能占用并保持槽位
+  failure_conditions:
+  - 定位语内部视角化（技术黑话而非消费者认知锚点），无法被检索
+  - 频繁重新定位：每次改动都放弃已占用的槽位
+  common_misinterpretations:
+  - 「定位=广告语」——广告语是表达，定位是选择在哪个品类、对谁、占哪个位置的决策；先有位置再有语句
+  - 把 positioning_mechanism 当作实证定律引用——它是优秀的实践框架（D 级），其底层认知机制（类别化、容量限制、可得性）才是有实证支持的 A/B 级知识
+  ethical_risks:
+  - 定位中的恐惧诉求与身份贬低（「不用 X 的人不专业」）
+  examples:
+    original_cases:
+    - Ries & Trout 书中对租车、可乐、航空等行业定位战役的案例复盘
+    research_cases: []
+    modern_cases:
+    - 新能源车企的品类卡位（「家庭 SUV」「智驾第一梯队」）
+    - SaaS 产品的「For X 场景的 Y 替代品」定位句式
+  communication_implications: 所有内容围绕定位语展开并保持一致性：一个品牌在一个时期只讲一个位置；内容矩阵检验标准是「看完十条内容，用户能否用一句话说出你是谁」。
+  community_implications: 社群定位同样适用：明确「什么人的什么场景社群」（而非「兴趣大杂烩」）；社群的品类参照与差异化主张决定拉新话术与内容边界。
+  content_applications:
+    body: 正文结构呼应定位：反复在相同位置出现定位语（开头锚定、结尾复述）
+    narrative: 用户故事必须佐证定位（故事主角与场景对准目标位置），偏离定位的 UGC 慎重放大
+    sharing: 分享物承载定位语与资产，让转发参与槽位巩固
+    comments: 官方回复中自然重复定位关键词，评论区也是记忆 repetitions 的场所
+  platform_implications: 搜索与推荐平台的品类词（category keywords）是数字心智槽位：定位词的搜索联想与占位（品牌专区、百科条目）是定位工作的数字化延伸（原则性判断）。
+  related_nodes:
+  - mental_availability
+  - category_entry_points
+  - anchoring_effect
+  - framing_effects
+  - chasm_crossing
+  source_ids:
+  - S75
+  - S71
+  - S76
+  - S73
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Ries & Trout 1981《Positioning》（S75，D 级实践框架：心智阶梯/品类槽位/先入与关联定位）+ Kotler & Keller
+      2016（S71，STP 中的定位）；S76 的渗透主导与独特性资产发现与差异化定位主张存在张力（EP 未实取其差异化批判章节）
+    effect_size: 作为实践框架被广泛使用五十年；无严格对照检验（按 EVIDENCE.md 显式标注 D 级）
+    replication_status: 不适用（从业者框架）；底层认知机制（类别化/容量限制/可得性）有实证支持
+    context_dependency: 适用于心智槽位有限的低卷入重复购买品类；复杂决策（企业采购/医疗）依赖证据与关系
+    downgrade_upgrade_reason: 2026-09 实取 S75/S71/S76 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S75
+    supporting_evidence:
+    - S71
+    - S76
+    - S73
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-002
+    - CASE-BRD-005
+    - CASE-BRD-007
+    - CASE-BRD-009
+    - CASE-BRD-016
+    - CASE-PLT-047
+    platform_sources:
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: jobs_to_be_done
+  canonical_name_en: Jobs to Be Done
+  canonical_name_zh: 待办任务
+  aliases:
+  - JTBD
+  - 焦点转移（switch 追问）
+  domain: brand_consumer
+  definition: 待办任务（Jobs to Be Done）由 Clayton Christensen 及合作者在《Competing Against Luck》等著作中理论化：顾客不是在「购买产品」，而是在特定情境下「雇用」（hire）产品去完成一个进步任务（job）——功能性、情感性与社会性维度的复合任务。经典的牛奶昔案例（早晨通勤者雇用奶昔打发无聊车程并抗饿）是其核心教学案例。
+  core_claim: 产品的被选用由情境任务而非人口属性或产品特征预测：理解「顾客在什么情境下想取得什么进步、现有方案的不足」，是发现创新机会与增长的关键；任务相对稳定，完成任务的方案持续更迭。
+  mechanism: JTBD 的因果逻辑：情境（situation）触发任务（我想从这里到那里取得进步），任务的完成受功能、情感、社会三重维度驱动，而现有方案（包括「不消费」）存在摩擦与不满，当新方案的任务完成度/成本比显著更优时发生「转换」（switch）。因此分析单位不是用户画像而是「情境-任务-方案」三元组：同一用户在不同情境雇用不同产品，不同用户在相同情境雇用相同产品。需求洞察的对象是任务结构，不是人群统计。
+  causal_chain: 情境触发 → 进步任务被定义（功能/情感/社会） → 现有方案的摩擦积累 → 新方案以更优任务完成度被雇用 → 转换发生
+  variables:
+    inputs:
+    - 情境描述
+    - 任务的进步定义
+    - 现有方案的不满与代价
+    moderators:
+    - 转换成本（习惯、学习、关系）
+    - 新旧方案的可比性
+    - 情境频率
+    mediators:
+    - 任务完成度感知
+    - 转换动机（push of 旧不满 + pull of 新想象）
+    outputs:
+    - 雇用/解雇决策
+    - 使用情境黏性
+    - 创新机会识别
+  evidence:
+    supporting:
+    - Christensen 学派对奶昔等经典案例的深度访谈与复盘（书籍案例）
+    - 深度访谈法（switch moment 访谈）在产品发现实践中的有效性支持（实践证据）
+    conflicting:
+    - JTBD 作为理论框架的学术检验有限：任务结构缺乏统一测量，「任务稳定性」等命题主要靠案例支撑（学术讨论）
+    - 与 Ehrenberg-Bass 的品类购买习惯视角存在张力：多数购买是习惯性低卷入，而非可叙述的任务求解（框架间争论）
+    replication:
+    - 作为洞察方法被广泛使用；无严格实证复制传统，属 C 级实践理论
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 适用于转换时刻可识别、情境差异大的品类（创新发现场景）；纯习惯性购买（盐、纸巾）的任务分析价值有限
+  - 任务陈述必须包含情境（「当……时我想……」），脱离情境的任务抽象会失效
+  failure_conditions:
+  - 把 JTBD 做成功能清单（「用户需要一个更快的马」陷阱：任务层面的洞察被方案层面的提问替代）
+  - 人口属性与任务混淆：按人群设计而非按情境任务设计
+  common_misinterpretations:
+  - 「JTBD=用户需求调研」——JTBD 的独特性在于分析单位是情境任务而非用户；用传统问卷问「你想要什么」恰恰绕过了任务结构
+  - 把 job 等同于功能：job 总是包含情感与社会维度（「在同事面前显得专业」与「备份文件」是同一任务的不可分割部分）
+  ethical_risks:
+  - 利用情感与社会维度的任务（身份焦虑、地位竞争）做剥削性产品钩子
+  examples:
+    original_cases:
+    - 《Competing Against Luck》中的牛奶昔案例（通勤者雇用奶昔完成「无聊车程+抗饿」任务）
+    research_cases: []
+    modern_cases:
+    - Airbnb 对「不像游客地旅行」任务的雇用
+    - 知识付费被雇用完成「通勤时间不浪费」的情感任务
+    - 便利店咖啡雇用「体面且不耽误下一件事」的职场任务
+  communication_implications: 内容以情境任务为标题与开头（「当你不得不在周五晚交报告时」），而非产品功能；用户证言应完整呈现情境-不满-转换的过程叙事。
+  community_implications: 社群定位可用任务语言描述（「帮助完成 X 任务的人」）；社群内容按成员的真实任务场景组织（模板库、场景方案库），而非按产品功能分类。
+  content_applications:
+    body: 正文采用「情境→任务→摩擦→更好的完成方式」结构，让读者在情境描述中自我代入
+    narrative: 用户故事完整呈现 switch 时刻（之前用什么、不满在哪、现在如何），switch 叙事是 JTBD 的天然内容形态
+    sharing: 分享物按任务场景命名（「周五交报告救急包」），被检索与被转发的都是任务语言
+    comments: 官方提问用任务语言（「你一般在什么时候遇到这个问题」）收集情境素材
+  platform_implications: 搜索行为直接暴露任务语言：搜索词是任务的自然语言表达，平台 SEO/内容策略应围绕任务短语而非产品参数组织（原则性判断）。
+  related_nodes:
+  - category_entry_points
+  - perceived_purchase_risk
+  - long_tail_demand
+  - self_determination_needs
+  - choice_overload
+  source_ids:
+  - S77
+  - S72
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Christensen 2016《Competing Against Luck》（S77，book 级：雇用隐喻/奶昔案例/情境任务）+ Solomon
+      2017（S72，消费者行为的情境-任务视角）
+    effect_size: 任务完成度/成本比显著更优时发生转换（案例研究传统）
+    replication_status: JTBD 作为洞察方法被广泛使用；无严格实证复制传统（C 级实践理论，如实标注）
+    context_dependency: 适用于转换时刻可识别、情境差异大的品类；纯习惯性购买（盐/纸巾）任务分析价值有限
+    downgrade_upgrade_reason: 2026-09 实取 S77 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S77
+    supporting_evidence:
+    - S72
+    last_verified: 2026-09
+    case_sources:
+    - CASE-BRD-024
+    - CASE-PLT-047
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: permission_opt_in_mechanics
+  canonical_name_en: Permission Marketing / Opt-in Mechanics
+  canonical_name_zh: 许可机制
+  aliases:
+  - 许可营销
+  - opt-in（许可式订阅）
+  domain: brand_consumer
+  definition: 许可机制（permission marketing / opt-in）由 Seth Godin 在 1999 年提出：在注意力稀缺环境中，营销的核心资产是「获得许可」——消费者主动同意接受你的信息（订阅、关注、入会）。许可是一次可升级、可撤销的注意力交换：以有价值的内容换取渐进式的接触许可，从陌生人逐级推进为顾客与拥趸。
+  core_claim: 主动授予的注意力在质量与转化上系统性优于被打断获得的注意力；许可资产的可累积性与可撤销性（消费者随时收回）构成对营销质量的结构性约束。
+  mechanism: 许可机制的运行逻辑是注意力交易：消费者以稀缺的注意力交换有价值的东西（信息、娱乐、服务），且交易是渐进的（Godin 五级许可阶梯：情境好奇→品牌信任→个人关系→销售点→静脉式订阅）。许可的价值在于「预期性」：被期待的信息被深度加工，被容忍的信息被忽略，被打断的信息引发反感。许可也是可逆的：每次不合格的接触都在消耗已积累的许可（退订、取关即撤资）。Godin
+    的框架早于 GDPR 等法规，但与后来消费者数据权利的立法方向一致。
+  causal_chain: 提供真实价值 → 消费者授予接触许可 → 被期待的沟通 → 信任与偏好深化 → 更高层级许可 → 转化与关系资产
+  variables:
+    inputs:
+    - 交换物的感知价值
+    - 许可的获取方式（显式 opt-in vs 预勾选）
+    - 接触频率与质量
+    moderators:
+    - 行业信任基线
+    - 退出成本（退订难度）
+    - 信息超载程度
+    mediators:
+    - 预期性（被期待 vs 被打断）
+    - 信任累积/消耗
+    outputs:
+    - 打开与响应率
+    - 许可层级升级
+    - 退订/取关率
+    - 客户终身价值
+  evidence:
+    supporting:
+    - Godin 的框架及直接营销行业的响应率证据（被期待的邮件 vs 冷邮件的转化差异是行业共识）（实践证据）
+    - 邮件营销与推送的 opt-in 研究显示显式许可与参与度的正相关（行业研究，方向一致）
+    conflicting:
+    - 许可的低成本获取（一键关注）也降低了许可的含金量：关注≠许可，浅层许可的转化率持续走低（实践复盘）
+    - GDPR 后的研究显示许多「许可」仍是在欺骗性设计下获得的（dark patterns 讨论）
+    replication:
+    - 「许可式接触优于打断式接触」在响应率层面方向稳定；具体幅度因行业与许可深度差异大
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 许可的价值依赖交换物的真实价值：无价值的内容即使被许可也会被习惯性忽略
+  - 适用于可重复沟通的场景（邮件、私域、订阅）；一次性购买场景的许可意义有限
+  failure_conditions:
+  - 把许可当成一次性门票：获取许可后立即高频推销，许可被快速撤回
+  - 欺骗性获取（预勾选、捆绑同意）：合规风险与信任崩塌
+  common_misinterpretations:
+  - 「拿到联系方式=拿到许可」——联系方式是渠道，许可是关系；从渠道向列表群发是对许可的透支
+  - 把 permission_opt_in_mechanics 与订阅漏斗混为一谈：漏斗是操作流程，许可机制是注意力交换的资产逻辑
+  ethical_risks:
+  - 许可的获取与维持中使用 dark patterns（隐藏退订、误导性勾选）
+  - 以模糊目的获取许可后用于完全不同的用途（目的漂移）
+  examples:
+    original_cases:
+    - Godin《Permission Marketing》中的渐进式许可案例（如通过免费内容逐级获取沟通许可）
+    research_cases: []
+    modern_cases:
+    - Newsletter 订阅与「付费墙 Newsletter」的许可经济
+    - 微信服务号/企业微信的 opt-in 私域运营
+    - App 推送的许可分级管理
+  communication_implications: 传播策略应设计「许可阶梯」：从轻许可（关注）到深许可（订阅/入会）逐级邀请，每级交换明确价值；所有接触以「是否被期待」为质量标准。
+  community_implications: 入群即许可：以入群价值承诺换取许可，并兑现承诺；社群内的信息发布尊重许可层级（不是所有消息都值得全员@）。
+  content_applications:
+    body: 正文结尾提供「更深的许可交换」（订阅完整指南/加入讨论群），而非直接销售
+    cta: CTA 用许可语言（「想持续收到这类内容吗」）替代打断语言（「立即购买」）
+    sharing: 分享行为本身是第三方许可的萌芽：分享物携带「值得你许可」的价值证明
+    comments: 回复为订阅者提供额外价值（专属资料、优先答疑），兑现许可的层级特权
+  platform_implications: 平台把许可机制产品化（关注、订阅、通知开关）；算法分发时代许可的价值反而上升——被许可的触达不受算法波动影响，是自有渠道的本质优势（原则性判断）。
+  related_nodes:
+  - attention_economics
+  - trust_calibration
+  - commitment_consistency
+  - perceived_purchase_risk
+  - hyperpersonalization_privacy
+  source_ids:
+  - S79
+  - S48
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Godin 1999《Permission Marketing》（S79，五级许可阶梯/名单即资产）+ Tim Wu 2016（S48，注意力商业史）
+    effect_size: 许可式接触优于打断式接触（响应率方向稳定）
+    replication_status: 『被期待的信息被深加工』为营销行业共识；许可深浅影响转化（实践证据）
+    context_dependency: 许可价值依赖交换物真实价值；浅层许可（一键关注）含金量低
+    downgrade_upgrade_reason: 2026-09 实取 S79 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S79
+    supporting_evidence:
+    - S48
+    last_verified: '2026-09-09'
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: long_tail_demand
+  canonical_name_en: Long Tail Demand
+  canonical_name_zh: 长尾需求
+  aliases:
+  - 长尾理论
+  - the long tail
+  domain: brand_consumer
+  definition: 长尾需求（long tail）由 Chris Anderson 于 2004 年提出并在 2006 年成书：当分销与库存成本足够低（数字化交付、聚合平台）时，大量小众品类的需求总和可与头部畅销品匹敌——需求分布的「尾巴」从经济上变得可服务。典型例子是流媒体曲库与电商长尾
+    SKU。
+  core_claim: 数字渠道把需求分布的尾部变得经济可服务：聚合平台可以通过服务海量小众需求获得可观总量；但头部集中并未消失——后续证据显示头部内容的消费份额在流媒体时代不降反升，长尾是补充而非替代。
+  mechanism: 长尾的经济学条件：库存与分销的边际成本趋近于零（数字商品）、搜索与推荐成本足够低（找到长尾商品的成本下降）、以及生产工具民主化（尾部供给增加）。满足时，原本因货架有限而被截断的需求尾部被释放。但需注意后续修正：Anderson
+    的乐观叙事之后，多项平台数据显示头部集中度反而上升（爆款占据总消费的份额在流媒体时代更高），同时推荐算法既可以帮助尾部曝光、也可能强化头部（见 preferential_attachment 与
+    ranking_signal_weighting 的张力）。真实的图景是「头部更强 + 尾部总量可观」的双层结构。
+  causal_chain: 分销/搜索成本下降 + 供给民主化 → 尾部需求被释放与服务 → 聚合总量可观；同时可见性机制（推荐/口碑）→ 头部进一步集中
+  variables:
+    inputs:
+    - 库存与分销成本
+    - 搜索与推荐效率
+    - 尾部供给量
+    moderators:
+    - 品类的数字化程度
+    - 推荐算法的集中化倾向
+    - 消费者的探索 vs 从众倾向
+    mediators:
+    - 可发现性（discoverability）
+    - 转化摩擦
+    outputs:
+    - 尾部总消费份额
+    - 头部集中度
+    - 平台商品丰富度的价值
+  evidence:
+    supporting:
+    - Anderson 的原始论证与早期平台数据（书籍）
+    - 平台经济研究确认聚合长尾的总量价值（如流媒体曲库、电商 SKU 经济，方向一致）
+    conflicting:
+    - 对头部集中度的后续测量显示流媒体时代爆款份额上升，「长尾革命」的预测被系统性修正（多平台数据分析，包括对 Anderson 原始数据集的再分析传统）
+    replication:
+    - 「长尾可服务」成立；「长尾将胜过头部」不成立——这是该节点最重要的证据修正，必须随附
+    meta_analysis: []
+  evidence_grade: C
+  boundary_conditions:
+  - 长尾经济性依赖近零边际成本：实体商品与服务（库存、履约成本高）的尾部释放有限
+  - 尾部需求需要可发现性机制（搜索、推荐、社群）配套，否则供给存在但消费不发生
+  failure_conditions:
+  - 把「上架即有销量」当长尾逻辑：无发现机制的长尾只是库存噪音
+  - 以长尾叙事回避头部内容建设的竞争必要性（平台与品牌常犯）
+  common_misinterpretations:
+  - 「长尾理论说小众就是未来」——原书及后续证据的核心修正恰恰是：头部更强了，长尾是补充经济；引用时必须携带这一修正
+  - 把 long_tail_demand 与 niche community 混淆：长尾是需求分布与渠道经济学概念，小众社群是社群结构概念；长尾需求常由小众社群服务，但两者层面不同
+  ethical_risks:
+  - 长尾的推荐机制可能把用户锁进极端小众（激进内容、病态兴趣的尾部服务）
+  examples:
+    original_cases:
+    - Anderson 对亚马逊、Netflix（DVD 时代）、iTunes 长尾销售的早期数据分析
+    research_cases:
+    - 对流媒体音乐消费分布的后续研究：头部集中度上升，修正原始长尾预测（方向一致的多平台研究）
+    modern_cases:
+    - 小众垂类内容（历史、手工、学术科普）在聚合平台的可观总量
+    - B 站/YouTube 中腰部创作者生态：头部更强但腰部总量构成平台价值主体
+  communication_implications: 内容策略采用「头部获客 + 长尾留存」双层结构：用头部话题获得初始流量，用长尾深度内容建立不可替代性；长尾内容的检索流量（SEO）更稳定持久。
+  community_implications: 垂类社群是长尾需求的服务基础设施：当一个话题小到算法不值得推荐时，社群成为其唯一的发现与分发机制——这是垂类社群的护城河。
+  content_applications:
+    body: 在头部话题爆款后系统化铺设长尾变体（细分场景、进阶问题），承接爆款唤醒的长尾需求
+    sharing: 长尾内容配检索友好的标题（具体关键词），分享与搜索双通道获客
+    comments: 评论区的问题即长尾需求清单：把高赞提问转化为下一篇长尾内容
+  platform_implications: 平台在头部（流量效率）与长尾（多样性价值、创作者留存）间的算法取舍直接决定长尾的可服务性；这是平台设计而非自然规律（原则性判断）。
+  related_nodes:
+  - preferential_attachment
+  - ranking_signal_weighting
+  - jobs_to_be_done
+  - algorithmic_amplification
+  - community_boundaries
+  source_ids:
+  - S80
+  - S231
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Anderson 2006《The Long Tail》（S80，长尾曲线/三种力量）+ Elberse 2008 实证修正（头部集中；S80 内嵌修正链证据）
+    effect_size: 长尾『可服务』成立（亚马逊 1/4 销售额来自尾部）；『长尾胜过头部』被修正（Elberse）
+    replication_status: 长尾效应在数字货架中方向成立；头部集中度随平台算法强化（2025 流媒体数据）
+    context_dependency: 平台推荐/搜索的基础设施决定长尾可服务性；算法取舍非自然规律
+    downgrade_upgrade_reason: 2026-09 实取 S80 核心内容及 Elberse 修正链，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S80
+    - S231
+    supporting_evidence: []
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-030
+    - CASE-GRW-011
+    - CASE-PLT-002
+    - CASE-PLT-037
+    platform_sources:
+    - generic:S2
+    - generic:S3
+    - tiktok:S1
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: perceived_purchase_risk
+  canonical_name_en: Perceived Purchase Risk
+  canonical_name_zh: 购买感知风险
+  domain: brand_consumer
+  definition: 购买感知风险（perceived purchase risk）指消费者在购买决策中感知到的潜在损失类型与程度。消费者研究区分多维风险：功能风险（不好用）、财务风险（买贵/损失）、社会风险（别人怎么看）、心理风险（自我形象受损）、时间风险（更换成本）。感知风险升高时，消费者转向信息搜寻、口碑依赖、品牌选择（把品牌当风险保险）或推迟购买。
+  core_claim: 购买决策的核心结构之一是风险最小化而非收益最大化：当感知风险超过个体承受阈值时，决策从「选最好的」退回「选最不会错的」；降低感知风险（保证、证据、退出机制）比增加功能说服更能转化高风险品类的购买。
+  mechanism: 高风险感知激活审慎的信息加工路径（类似 ELM 的 central route）：消费者寻求证据（评论、背书、试用）、参照他人行为（social proof 作为风险保险）、偏向知名品牌（品牌作为风险缓释的启发式）或干脆推迟。风险维度因品类与情境而不同（送礼场景社会风险主导，自用场景功能风险主导），有效的风险缓释必须针对主导风险维度：无理由退货解决财务风险，但解决不了送礼场景的社会风险。
+  causal_chain: 感知风险升高 → 审慎加工 + 信息搜寻 + 从众启发 → 品牌倾向/推迟决策；针对性的风险缓释信号 → 主导风险维度被消解 → 转化推进
+  variables:
+    inputs:
+    - 价格与不可逆性
+    - 信息不对称程度
+    - 品类的新颖度
+    moderators:
+    - 个体风险偏好
+    - 购买情境（自用/送礼/公开）
+    - 既有品牌信任
+    mediators:
+    - 主导风险维度的激活
+    - 证据可信度评估
+    outputs:
+    - 信息搜寻行为
+    - 品牌选择倾向
+    - 购买/推迟
+    - 口碑依赖度
+  evidence:
+    supporting:
+    - 消费者行为研究中多维风险结构与风险缓释策略的稳定发现（消费者研究传统，教科书综合；注：五维风险清单与风险缓释框架为教材传统综合，S71/S72 EP 未实取该章节，暂未实取一手 EP，待补 Solomon/Kotler
+      感知风险章节或 Cox & Bauer 原始文献 EP；S77 EP 的 relevant_nodes 覆盖本节点可作桥接）
+    - 在线评论对感知风险与购买意愿的调节作用研究（电商研究，方向一致）
+    conflicting:
+    - 风险感知的行为影响在高卷入品类显著；低卷入冲动购买中风险结构的作用弱（消费者研究讨论）
+    replication:
+    - 多维风险结构与「风险缓释提升转化」的方向在多品类重复；最优缓释组合因主导风险维度而异
+    meta_analysis: []
+  evidence_grade: B
+  validation_status: PARTIALLY_VALIDATED
+  boundary_conditions:
+  - 适用于可感知损失显著的购买（价格高、不可逆、社会可见）；快消低价新品尝试几乎无风险结构
+  - 风险缓释必须匹配主导维度：错配的保证（用退货政策解决社会风险）无效
+  failure_conditions:
+  - 只堆功能卖点不处理风险：高感知风险下功能信息被怀疑动机折扣（为什么这么卖力）
+  - 虚假的风险缓释承诺（退货刁难、质保缩水）：被识破后信任不可逆受损
+  common_misinterpretations:
+  - 「转化率低是因为卖点不够」——高风险品类的转化瓶颈常是风险未缓释，而非价值未传达；先诊断主导风险维度再决定内容策略
+  - 把 perceived_purchase_risk 与 fear_appeals 混淆：前者是购买决策中的风险结构（消费者视角的损失预期），后者是传播信息中的恐惧诉求设计（说服策略）
+  ethical_risks:
+  - 人为制造或放大感知风险（恐惧营销）再以产品为解药
+  - 利用信息不对称掩盖真实风险（隐藏条款、模糊质保）
+  examples:
+    original_cases:
+    - 消费者行为教材对多维风险与风险缓释策略的经典论述（Cox 与 Bauer 等人的研究传统）
+    research_cases:
+    - 在线评论数量与质量对感知风险的降低及购买意愿的提升研究（电商研究，方向一致）
+    modern_cases:
+    - 高客单护肤品的「先试用小样」策略（功能风险缓释）
+    - B2B SaaS 的案例研究白皮书（财务与职业风险缓释）
+    - 直播间的「不行就退」话术（财务风险缓释的话术化）
+  communication_implications: 内容中针对主导风险提供具体缓释证据：真实用户结果（功能）、无理由退货与价保（财务）、他人可见的使用常态（社会）、权威背书与透明成分（心理）；风险话术与功能话术分层呈现。
+  community_implications: 社群是天然的风险缓释机制：成员的真实使用反馈、老成员的答疑、公开的吐槽与回应，构成比广告可信度高的风险证据库；运营应鼓励「缺点也讲」的真实反馈以增强整个社群的可信度。
+  content_applications:
+    body: 正文包含「谁不适合买」的反向筛选段落（诚实处理风险反而提升信任与转化质量）
+    evidence: 证据区针对主导风险组织：前后对比（功能）、价保政策（财务）、多人场景图（社会）、检测报告（心理）
+    narrative: 用户故事呈现「我当初也担心 X，结果……」的风险-消解叙事
+    comments: 官方对质疑评论的认真回应（而非删除）是风险缓释最可信的公开表演
+  platform_implications: 平台的评分、退货保障、假一赔十等机制是制度化风险缓释；平台信誉体系的强度决定高风险品类（珠宝、母婴、保健品）能否在线上规模化（原则性判断）。
+  related_nodes:
+  - social_proof
+  - source_credibility_model
+  - trust_signals_content
+  - jobs_to_be_done
+  - permission_opt_in_mechanics
+  source_ids:
+  - S72
+  - S71
+  - S235
+  provenance:
+    primary_sources:
+    - S72
+    - S71
+    - S235
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-CRS-019
+    - CASE-FAL-033
+    - CASE-FAL-034
+    - CASE-FAL-035
+    - CASE-FAL-048
+    - CASE-FAL-049
+    - CASE-FAL-050
+    - CASE-FAL-052
+    - CASE-FAL-053
+    - CASE-FAL-054
+    - CASE-FAL-055
+    - CASE-FAL-056
+    - CASE-FAL-063
+    - CASE-FAL-064
+    - CASE-FAL-065
+    - CASE-FAL-097
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: double_jeopardy_law
+  canonical_name_en: Double Jeopardy Law
+  canonical_name_zh: 双危机定律
+  aliases:
+  - 双危险定律
+  - 双重危机
+  domain: brand_consumer
+  definition: 双危机定律（double jeopardy law）由 Andrew Ehrenberg 提出、Byron Sharp 在《How Brands Grow》中综合推广：市场份额较小的品牌遭受双重劣势——不仅购买者更少（第一重危机），而且其购买者的购买频率与忠诚度也更低（第二重危机）。小品牌不是拥有「更小但更忠诚」的客群，而是拥有更小且更不忠诚的客群。
+  core_claim: 品牌间的购买者行为差异主要由市场份额这一单一变量解释：小品牌的购买者买得更少、忠诚行为（独占购买、复购频率、态度忠诚）全面更弱；「小而美的小众忠诚品牌」在重复购买数据中系统性稀缺。
+  mechanism: 双危机的统计根源在于购买行为的随机性与品类结构：品牌的购买者主要来自品类的「浅层偶发购买者」池，购买行为近似带品牌份额权重的随机过程（Dirichlet 模型传统）。市场份额决定品牌从品类购买池中被抽中的概率；小品牌被抽中次数少，其购买者自然表现出更低频率与更弱独占（因为是同一批品类购买者的偶发选择）。因此小品牌的「忠诚度低」不是品牌失败，而是购买结构的数学结果——但这同时意味着靠「深耕忠诚」翻盘的空间远小于预期，增长的主路径是扩大购买者基数。
+  causal_chain: 小市场份额 → 从品类购买池被抽中概率低 → 购买者少且人均购买频率低 → 双危机；增长需扩大被抽中的基数（渗透）而非提升既有购买者频率
+  variables:
+    inputs:
+    - 品牌市场份额
+    - 品类总购买频率
+    - 品牌在心智与渠道的可得性
+    moderators:
+    - 品类特征（购买频率、碎片化程度）
+    - 品牌间真实的差异化程度
+    mediators:
+    - 品类购买池中的被选择概率（Dirichlet 过程）
+    outputs:
+    - 购买者数量
+    - 人均购买频率
+    - 独占购买率
+    - 态度忠诚指标
+  evidence:
+    supporting:
+    - Ehrenberg 及 Ehrenberg-Bass 学派对多国、多品类、长时间跨度扫描数据的大量重复验证（数据研究传统，这是该定律的核心证据形态）
+    - 《How Brands Grow》中的综合呈现：小品牌的忠诚度劣势跨品类稳定出现
+    conflicting:
+    - 真正的差异化利基品牌（功能独特、亚文化绑定）在部分数据中偏离双危机模式（「真正的利基」讨论）
+    - 服务与小样本新兴品类中的适用性证据较弱（数据条件限制）
+    replication:
+    - 在快消、零售、耐用品与部分服务品类的重复扫描数据中高度稳定复现，是营销科学中最稳健的经验规律之一
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 基于重复购买品类的扫描数据；耐用品与低频高卷入品类的检验证据较少
+  - 描述市场结构规律，不否认个别通过强差异化偏离定律的品牌存在（它们是少数且难以事前识别）
+  failure_conditions:
+  - 以「提升忠诚度」为核心的小品牌增长策略：在双危机结构下，小品牌的忠诚天花板天然更低，深耕策略的增长空间被数学结构限制
+  - 把定律误读为「小品牌不可能成功」：定律描述的是结构约束，通过扩大渗透（新购买者）突破的路径依然成立
+  common_misinterpretations:
+  - 「我的小品牌粉丝特别忠诚」——双危机的证据恰恰表明这通常是错觉：小品牌的重复购买数据几乎总是显示更低的忠诚；确有例外但事前无法识别
+  - 把 double_jeopardy_law 与 80/20 法则混为一谈：80/20 描述单品牌内部的购买集中度，双危机描述品牌间的结构关系（大小品牌的行为差异）；两者在 Ehrenberg-Bass
+    数据中都已检验——80/20 的「重度用户贡献 80%」被证实为夸大（重度用户贡献远低于神话版本）
+  ethical_risks:
+  - 以定律为依据否定中小品牌的生存价值（定律描述结构，不设价值判断）
+  examples:
+    original_cases:
+    - Ehrenberg 学派对英美德多品类洗涤剂、饮料等的购买面板数据分析（研究传统）
+    research_cases:
+    - Dirichlet 模型对品牌购买的拟合与预测研究（营销学传统，方向一致）
+    modern_cases:
+    - 电商数据中新品牌复购率普遍低于成熟品牌的现象
+    - 「小众品牌粉丝更忠诚」的营销迷思在数据面前的系统性证伪
+  communication_implications: 内容与投放策略应以触达新购买者（渗透）为第一目标：把「让没用过的人第一次试」置于「让老用户买更多」之前；内容矩阵覆盖浅层受众，而非在铁粉圈层内做深度饱和。
+  community_implications: 对品牌社群的规模预期要现实：小品牌的社群天然更小、更不活跃（双危机在社群数据中的投影）；社群运营的核心价值是提高渗透（成员带来新用户）而非仅服务存量忠诚。
+  content_applications:
+    body: 正文面向「第一次听说我们的人」写作（自足的背景与低门槛入口），而非默认读者都是老粉
+    sharing: 分享机制优先服务拉新（新人体面版分享物），转化设计以首次购买为核心漏斗
+    comments: 对新提问者的耐心回应是渗透策略的评论区版本（每个新提问者代表一批沉默的同类）
+  platform_implications: 平台的品牌词搜索、推荐位与旗舰店结构共同构成数字货架上的可得性分配，直接决定被抽中概率；平台的「扶新」机制是小品牌对抗双危机的结构性变量（原则性判断）。
+  related_nodes:
+  - mental_availability
+  - category_entry_points
+  - preferential_attachment
+  - long_tail_demand
+  - positioning_mechanism
+  source_ids:
+  - S76
+  - S71
+  - S168
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Sharp 2010《How Brands Grow》（S76，book 级，Ehrenberg-Bass 大样本：双危机定律综合呈现）+ Kotler
+      & Keller 2016（S71，教科书引用）
+    effect_size: 小品牌购买者更少且购买频率/忠诚更低；跨品类稳定（营销科学最稳健经验规律之一）
+    replication_status: 在快消/零售/耐用品/部分服务的重复扫描数据中高度稳定复现（Dirichlet 模型传统）
+    context_dependency: 基于重复购买品类；耐用品与低频高卷入品类检验较少；个别强差异化品牌可偏离
+    downgrade_upgrade_reason: 2026-09 实取 S76 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S76
+    supporting_evidence:
+    - S71
+    last_verified: 2026-09
+  last_reviewed: 2026-09
+  knowledge_half_life: medium
+- id: category_entry_points
+  canonical_name_en: Category Entry Points
+  canonical_name_zh: 品类进入点
+  aliases:
+  - CEP
+  - 品类进入线索
+  domain: brand_consumer
+  definition: 品类进入点（category entry points, CEPs）是 Ehrenberg-Bass 的核心操作概念：触发消费者想起并进入某品类购买的情境、需求、时机与场景（「早上没精神→咖啡」「朋友生日→礼物」「周末聚餐→酒水」）。品牌的心理可得性由其与品类进入点的联想广度与强度决定——被多少种进入点情境下的消费者想起。
+  core_claim: 品牌增长的直接杠杆是扩大并巩固与品类进入点的联想网络：在越多的购买触发情境中被想起，心智渗透越高；CEP 联想广度决定心智渗透并与市场份额正相关（S76）。
+  mechanism: 消费者的品类购买由情境线索触发，而非由品类需求自觉启动：进入点（时间、场合、情绪、人群、问题）是记忆检索的钥匙。品牌与进入点的联想通过「品牌信息 × 进入点情境」的重复配对建立（广告把品牌绑定到场景，内容把品牌绑定到问题）。联想网络越大（覆盖越多进入点）且越强（每个联想的检索容易度越高），品牌在随机出现的购买情境中被激活的概率越大。这也是
+    mental_availability 的测量与操作化路径：数品牌被多少 CEP 激活。
+  causal_chain: 品牌信息 × 进入点情境重复配对 → CEP-品牌联想建立 → 购买情境中品牌被检索 → 进入考虑集并购买 → 心智渗透与份额增长
+  variables:
+    inputs:
+    - 进入点情境的覆盖广度
+    - 品牌与情境的配对一致性
+    - 暴露频率
+    moderators:
+    - 品类进入点总量与碎片化程度
+    - 竞品的 CEP 占位情况
+    - 媒介的场景承载能力
+    mediators:
+    - CEP 联想强度
+    - 检索容易度
+    outputs:
+    - 心智渗透率
+    - 考虑集进入率
+    - 市场份额
+  evidence:
+    supporting:
+    - Ehrenberg-Bass 对 CEP 与心智渗透、市场份额关系的研究（《How Brands Grow》及 Romaniuk 等人的研究传统）
+    - CEP 联想数量预测品牌被考虑的概率（品牌追踪研究，方向一致）
+    conflicting:
+    - CEP 优先的策略对强差异化/亚文化品牌的适用性讨论（利基路径与广度路径之争）
+    replication:
+    - 「CEP 联想广度与市场份额正相关」在多品类品牌追踪数据中方向稳定
+    meta_analysis: []
+  evidence_grade: B+
+  boundary_conditions:
+  - 需要品类存在可识别的多个进入点（碎片化情境品类最有效：食品、饮料、日化）
+  - CEP 建设是长期重复投入：短期campaign 无法建立稳定检索联想
+  failure_conditions:
+  - 品牌信息与进入点情境的配对含糊（漂亮但无场景的广告）：曝光不建立 CEP 联想
+  - 频繁变换绑定的进入点（今天绑定早餐明天绑定加班）：单个联想强度无法累积
+  common_misinterpretations:
+  - 「CEP=使用场景」——进入点不仅包括使用场景，还包括问题、时机、人群、情绪等一切触发品类进入的线索；用「场景」一词会窄化 CEP 清单
+  - 把 category_entry_points 与 jobs_to_be_done 混淆：JTBD 是个体情境任务的深度洞察框架（为什么雇用），CEP 是品牌层面的联想广度策略（在多少触发点被想起）；JTBD
+    帮你选准任务，CEP 帮你铺满触点，两者互补而非替代
+  ethical_risks:
+  - 将品牌绑定到焦虑、匮乏等负面情绪进入点（放大不安以触发购买）
+  examples:
+    original_cases:
+    - Ehrenberg-Bass 研究中对咖啡、啤酒等品类进入点清单与品牌联想的分析传统
+    research_cases:
+    - Romaniuk 等人对 CEP 数量与品牌增长关系的品牌追踪研究（方向一致）
+    modern_cases:
+    - 饮料品牌全年按节点铺设场景内容（春节聚餐、夏日运动、加班深夜）
+    - 内容营销的关键词策略按「问题触发词」而非产品词组织（「周五晚吃什么」而非「预制菜品牌」）
+  communication_implications: 内容矩阵按 CEP 清单组织：为品牌识别 20-50 个进入点，逐个生产绑定内容并监测各 CEP 的检索联想变化；每条内容只绑定一个进入点，宁多勿混。
+  community_implications: 社群运营按成员的 CEP 时刻组织活动（早八打卡、周五复盘、季末规划）：社群日程本身就是成员生活节奏中的进入点植入。
+  content_applications:
+    body: 正文开头显式呈现进入点情境（时间+场合+情绪），结尾复现同一情境巩固配对
+    narrative: 用户故事保留完整的进入点触发叙事（「那天加班到十点……」）
+    sharing: 按不同 CEP 制作多版本分享物，让转发发生在正确的情境（朋友圈晚安卡 vs 工作日午餐卡）
+    comments: 评论区征集「你通常在什么时候想起/需要这个」，UGC 直接扩充 CEP 清单
+  platform_implications: 搜索联想词、场景化推荐（「看了火锅视频推饮料」）是平台的 CEP 基础设施；平台的场景识别能力越强，CEP 策略的数字化执行效率越高（原则性判断）。
+  related_nodes:
+  - mental_availability
+  - distinctive_brand_assets
+  - double_jeopardy_law
+  - jobs_to_be_done
+  - encoding_specificity
+  source_ids:
+  - S76
+  - S71
+  - S168
+  validation_status: PARTIALLY_VALIDATED
+  grade_justification:
+    independent_studies: Sharp 2010（S76，CEP 与心理可得性的操作化）+ Kotler & Keller 2016（S71，市场细分-目标-定位框架对接）
+    effect_size: CEP 联想广度与市场份额正相关（品牌追踪研究方向一致）
+    replication_status: 「CEP 联想广度与心智渗透正相关」在多品类追踪数据中方向稳定
+    context_dependency: 适用于存在可识别多进入点的碎片化情境品类（食品/饮料/日化）；CEP 建设是长期重复投入
+    downgrade_upgrade_reason: 2026-09 实取 S76 核心内容，由 MEMORY_BASED 升级为 PARTIALLY_VALIDATED
+  provenance:
+    primary_sources:
+    - S76
+    supporting_evidence:
+    - S71
+    last_verified: '2026-09-09'
+    case_sources:
+    - CASE-BRD-007
+    - CASE-BRD-011
+    - CASE-BRD-023
+    - CASE-BRD-026
+    - CASE-PLT-002
+    - CASE-PLT-009
+    - CASE-PLT-025
+    - CASE-PLT-047
+    platform_sources:
+    - tiktok:S1
+    - x:S6
+    - xiaohongshu:S1
+    - xiaohongshu:S2
+    - zhihu:S1
+  last_reviewed: 2026-09
+  knowledge_half_life: medium

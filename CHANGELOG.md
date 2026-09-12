@@ -6,6 +6,10 @@
 内部需求文档与未发布草稿已从公开仓库移除并完成 git 历史改写；演示 PDF 移至
 Release 附件。对外口径：外部双盲测 33 案（红线 0 · 17.88/18 · 回归 10/10）。
 
+发布收尾（接力补完）：GitHub Release v1.0.0 补建并上传 muduo-v1-deck.pdf（15.3MB）；
+gh-pages 分支 CNAME 文件曾丢失致官网 404（Pages cname 置空），已补回 CNAME 并重建，
+官网恢复 200（HTTPS 强制保持开启，DNS CNAME → mizzlelover.github.io 核验完好）。
+
 ## 2026-09-12（六）· 首轮外部盲测执行 + REG-001 回归门修复
 
 R1 = gpt-5.6-luna（Codex 净室，仓库外隔离）· R2 = Doubao Seed evolving（Trae）·
